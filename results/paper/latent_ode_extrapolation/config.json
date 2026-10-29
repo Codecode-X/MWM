@@ -1,0 +1,20 @@
+{
+  "model": "latent_ode",
+  "task": "extrapolation",
+  "data": "data/raw/synthetic_icu_data.csv",
+  "output": "results/paper/latent_ode_extrapolation",
+  "epochs": 20,
+  "batch_size": 10,
+  "latent": 20,
+  "hidden": 40,
+  "width": 50,
+  "layers": 3,
+  "samples": 3,
+  "lr": 0.001,
+  "variance": 0.01,
+  "classification_weight": 0.0,
+  "observed_fraction": 0.5,
+  "seed": 42,
+  "device": "cpu",
+  "threads": 1
+}

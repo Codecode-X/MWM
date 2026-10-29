@@ -1,0 +1,20 @@
+{
+  "model": "ode_rnn",
+  "task": "interpolation",
+  "data": "/home/xjh/projects/LatentODE/results/swanlab_monitoring/checks/tiny_icu.csv",
+  "output": "/home/xjh/projects/LatentODE/results/swanlab_monitoring/checks/base/ode_rnn",
+  "epochs": 1,
+  "batch_size": 8,
+  "latent": 4,
+  "hidden": 8,
+  "width": 8,
+  "layers": 1,
+  "samples": 1,
+  "lr": 0.001,
+  "variance": 0.01,
+  "classification_weight": 0.0,
+  "observed_fraction": 0.5,
+  "seed": 42,
+  "device": "cuda",
+  "threads": 1
+}

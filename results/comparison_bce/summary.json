@@ -1,0 +1,776 @@
+{
+  "runs": [
+    {
+      "model": "legacy_transformer",
+      "seed": 0,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 15,
+      "parameters": 126767,
+      "threshold": 0.5889371037483215,
+      "runtime": {
+        "tensor_device": "cpu",
+        "cuda_visible_devices": null,
+        "gpu_name": null
+      },
+      "validation": {
+        "auroc": 0.8800000000000001,
+        "ap": 0.6861904761904761,
+        "brier": 0.23227205692455613,
+        "accuracy": 0.8666666666666667,
+        "f1": 0.8333333333333334,
+        "precision": 0.7142857142857143,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 0.8,
+        "ap": 0.5628571428571428,
+        "brier": 0.16727478955773406,
+        "accuracy": 0.7333333333333333,
+        "f1": 0.6,
+        "precision": 0.6,
+        "recall": 0.6
+      },
+      "test_fixed_05": {
+        "auroc": 0.8,
+        "ap": 0.5628571428571428,
+        "brier": 0.16727478955773406,
+        "accuracy": 0.7333333333333333,
+        "f1": 0.7142857142857143,
+        "precision": 0.5555555555555556,
+        "recall": 1.0
+      }
+    },
+    {
+      "model": "latent_ode",
+      "seed": 0,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 19,
+      "parameters": 32727,
+      "threshold": 0.2954302430152893,
+      "runtime": {
+        "tensor_device": "cpu",
+        "cuda_visible_devices": null,
+        "gpu_name": null
+      },
+      "validation": {
+        "auroc": 0.78,
+        "ap": 0.6676190476190476,
+        "brier": 0.21464060316249572,
+        "accuracy": 0.7333333333333333,
+        "f1": 0.6666666666666666,
+        "precision": 0.5714285714285714,
+        "recall": 0.8
+      },
+      "test": {
+        "auroc": 0.27999999999999997,
+        "ap": 0.27591297591297587,
+        "brier": 0.23167072310006287,
+        "accuracy": 0.26666666666666666,
+        "f1": 0.15384615384615385,
+        "precision": 0.125,
+        "recall": 0.2
+      },
+      "test_fixed_05": {
+        "auroc": 0.27999999999999997,
+        "ap": 0.27591297591297587,
+        "brier": 0.23167072310006287,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "model": "ode_rnn",
+      "seed": 0,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 7,
+      "parameters": 15877,
+      "threshold": 0.3637790083885193,
+      "runtime": {
+        "tensor_device": "cpu",
+        "cuda_visible_devices": null,
+        "gpu_name": null
+      },
+      "validation": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.21338420708955871,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 0.88,
+        "ap": 0.8444444444444443,
+        "brier": 0.21826893671315487,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "test_fixed_05": {
+        "auroc": 0.88,
+        "ap": 0.8444444444444443,
+        "brier": 0.21826893671315487,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "model": "legacy_transformer",
+      "seed": 1,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 18,
+      "parameters": 126767,
+      "threshold": 0.3044005036354065,
+      "runtime": {
+        "tensor_device": "cpu",
+        "cuda_visible_devices": null,
+        "gpu_name": null
+      },
+      "validation": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.08453186533685078,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.05119153934146937,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test_fixed_05": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.05119153934146937,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    },
+    {
+      "model": "latent_ode",
+      "seed": 1,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 7,
+      "parameters": 32727,
+      "threshold": 0.31219810247421265,
+      "runtime": {
+        "tensor_device": "cpu",
+        "cuda_visible_devices": null,
+        "gpu_name": null
+      },
+      "validation": {
+        "auroc": 0.78,
+        "ap": 0.8266666666666667,
+        "brier": 0.22116251954084915,
+        "accuracy": 0.8666666666666667,
+        "f1": 0.8,
+        "precision": 0.8,
+        "recall": 0.8
+      },
+      "test": {
+        "auroc": 0.52,
+        "ap": 0.3785897435897436,
+        "brier": 0.22276084315393868,
+        "accuracy": 0.5333333333333333,
+        "f1": 0.46153846153846156,
+        "precision": 0.375,
+        "recall": 0.6
+      },
+      "test_fixed_05": {
+        "auroc": 0.52,
+        "ap": 0.3785897435897436,
+        "brier": 0.22276084315393868,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "model": "ode_rnn",
+      "seed": 1,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 9,
+      "parameters": 15877,
+      "threshold": 0.34029620885849,
+      "runtime": {
+        "tensor_device": "cpu",
+        "cuda_visible_devices": null,
+        "gpu_name": null
+      },
+      "validation": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.21583727551546392,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 0.94,
+        "ap": 0.925,
+        "brier": 0.21746694109903267,
+        "accuracy": 0.8666666666666667,
+        "f1": 0.75,
+        "precision": 1.0,
+        "recall": 0.6
+      },
+      "test_fixed_05": {
+        "auroc": 0.94,
+        "ap": 0.925,
+        "brier": 0.21746694109903267,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "model": "legacy_transformer",
+      "seed": 2,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 14,
+      "parameters": 126767,
+      "threshold": 0.5,
+      "runtime": {
+        "tensor_device": "cpu",
+        "cuda_visible_devices": null,
+        "gpu_name": null
+      },
+      "validation": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.04568980726998231,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.030265890218961738,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test_fixed_05": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.030265890218961738,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    },
+    {
+      "model": "latent_ode",
+      "seed": 2,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 14,
+      "parameters": 32727,
+      "threshold": 0.29928499460220337,
+      "runtime": {
+        "tensor_device": "cpu",
+        "cuda_visible_devices": null,
+        "gpu_name": null
+      },
+      "validation": {
+        "auroc": 0.9,
+        "ap": 0.71,
+        "brier": 0.21843996966368587,
+        "accuracy": 0.9333333333333333,
+        "f1": 0.9090909090909091,
+        "precision": 0.8333333333333334,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 0.4,
+        "ap": 0.33930735930735934,
+        "brier": 0.22472521280464405,
+        "accuracy": 0.3333333333333333,
+        "f1": 0.2857142857142857,
+        "precision": 0.2222222222222222,
+        "recall": 0.4
+      },
+      "test_fixed_05": {
+        "auroc": 0.4,
+        "ap": 0.33930735930735934,
+        "brier": 0.22472521280464405,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "model": "ode_rnn",
+      "seed": 2,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 9,
+      "parameters": 15877,
+      "threshold": 0.32320383191108704,
+      "runtime": {
+        "tensor_device": "cpu",
+        "cuda_visible_devices": null,
+        "gpu_name": null
+      },
+      "validation": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.21466427559831736,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 0.76,
+        "ap": 0.7176190476190476,
+        "brier": 0.2194366840743573,
+        "accuracy": 0.8,
+        "f1": 0.5714285714285714,
+        "precision": 1.0,
+        "recall": 0.4
+      },
+      "test_fixed_05": {
+        "auroc": 0.76,
+        "ap": 0.7176190476190476,
+        "brier": 0.2194366840743573,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "model": "legacy_transformer",
+      "seed": 3,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 16,
+      "parameters": 126767,
+      "threshold": 0.5,
+      "runtime": {
+        "tensor_device": "cpu",
+        "cuda_visible_devices": null,
+        "gpu_name": null
+      },
+      "validation": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.028232465799956266,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.015171949389796413,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test_fixed_05": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.015171949389796413,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    },
+    {
+      "model": "latent_ode",
+      "seed": 3,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 14,
+      "parameters": 32727,
+      "threshold": 0.329135924577713,
+      "runtime": {
+        "tensor_device": "cpu",
+        "cuda_visible_devices": null,
+        "gpu_name": null
+      },
+      "validation": {
+        "auroc": 0.9,
+        "ap": 0.7861904761904761,
+        "brier": 0.21351188044274813,
+        "accuracy": 0.8666666666666667,
+        "f1": 0.8333333333333334,
+        "precision": 0.7142857142857143,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 0.26,
+        "ap": 0.2726406926406927,
+        "brier": 0.22599195999821303,
+        "accuracy": 0.4,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "test_fixed_05": {
+        "auroc": 0.26,
+        "ap": 0.2726406926406927,
+        "brier": 0.22599195999821303,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "model": "ode_rnn",
+      "seed": 3,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 7,
+      "parameters": 15877,
+      "threshold": 0.3160583972930908,
+      "runtime": {
+        "tensor_device": "cpu",
+        "cuda_visible_devices": null,
+        "gpu_name": null
+      },
+      "validation": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.21805636801242353,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 0.8200000000000001,
+        "ap": 0.8166666666666667,
+        "brier": 0.2207629058437274,
+        "accuracy": 0.7333333333333333,
+        "f1": 0.3333333333333333,
+        "precision": 1.0,
+        "recall": 0.2
+      },
+      "test_fixed_05": {
+        "auroc": 0.8200000000000001,
+        "ap": 0.8166666666666667,
+        "brier": 0.2207629058437274,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "model": "legacy_transformer",
+      "seed": 4,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 17,
+      "parameters": 126767,
+      "threshold": 0.4182959496974945,
+      "runtime": {
+        "tensor_device": "cpu",
+        "cuda_visible_devices": null,
+        "gpu_name": null
+      },
+      "validation": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.09888739057699061,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.14089133541073567,
+        "accuracy": 0.8666666666666667,
+        "f1": 0.75,
+        "precision": 1.0,
+        "recall": 0.6
+      },
+      "test_fixed_05": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.14089133541073567,
+        "accuracy": 0.8666666666666667,
+        "f1": 0.75,
+        "precision": 1.0,
+        "recall": 0.6
+      }
+    },
+    {
+      "model": "latent_ode",
+      "seed": 4,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 9,
+      "parameters": 32727,
+      "threshold": 0.3089451491832733,
+      "runtime": {
+        "tensor_device": "cpu",
+        "cuda_visible_devices": null,
+        "gpu_name": null
+      },
+      "validation": {
+        "auroc": 0.7,
+        "ap": 0.4866666666666666,
+        "brier": 0.22146119203503217,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "precision": 0.5,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 0.13999999999999999,
+        "ap": 0.24335497835497835,
+        "brier": 0.22658765470566902,
+        "accuracy": 0.26666666666666666,
+        "f1": 0.35294117647058826,
+        "precision": 0.25,
+        "recall": 0.6
+      },
+      "test_fixed_05": {
+        "auroc": 0.13999999999999999,
+        "ap": 0.24335497835497835,
+        "brier": 0.22658765470566902,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "model": "ode_rnn",
+      "seed": 4,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 10,
+      "parameters": 15877,
+      "threshold": 0.3377963602542877,
+      "runtime": {
+        "tensor_device": "cpu",
+        "cuda_visible_devices": null,
+        "gpu_name": null
+      },
+      "validation": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.21547653443704515,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 0.74,
+        "ap": 0.650952380952381,
+        "brier": 0.21968193128592872,
+        "accuracy": 0.7333333333333333,
+        "f1": 0.3333333333333333,
+        "precision": 1.0,
+        "recall": 0.2
+      },
+      "test_fixed_05": {
+        "auroc": 0.74,
+        "ap": 0.650952380952381,
+        "brier": 0.21968193128592872,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    }
+  ],
+  "summary": {
+    "legacy_transformer": {
+      "n_training_seeds": 5,
+      "test": {
+        "auroc": {
+          "mean": 0.96,
+          "std": 0.08944271909999157
+        },
+        "ap": {
+          "mean": 0.9125714285714285,
+          "std": 0.1954962288899816
+        },
+        "brier": {
+          "mean": 0.08095910078373944,
+          "std": 0.06860417165892359
+        },
+        "accuracy": {
+          "mean": 0.9199999999999999,
+          "std": 0.1192569587999888
+        },
+        "f1": {
+          "mean": 0.8699999999999999,
+          "std": 0.1857417562100671
+        },
+        "precision": {
+          "mean": 0.9199999999999999,
+          "std": 0.1788854381999832
+        },
+        "recall": {
+          "mean": 0.8400000000000001,
+          "std": 0.21908902300206645
+        }
+      },
+      "parameters": 126767
+    },
+    "latent_ode": {
+      "n_training_seeds": 5,
+      "test": {
+        "auroc": {
+          "mean": 0.32,
+          "std": 0.1449137674618944
+        },
+        "ap": {
+          "mean": 0.30196114996115,
+          "std": 0.055316273946018374
+        },
+        "brier": {
+          "mean": 0.22634727875250554,
+          "std": 0.003317254511619161
+        },
+        "accuracy": {
+          "mean": 0.36,
+          "std": 0.1115546702045434
+        },
+        "f1": {
+          "mean": 0.25080801551389786,
+          "std": 0.17913906219199766
+        },
+        "precision": {
+          "mean": 0.19444444444444445,
+          "std": 0.14061428285636518
+        },
+        "recall": {
+          "mean": 0.36000000000000004,
+          "std": 0.2607680962081059
+        }
+      },
+      "parameters": 32727
+    },
+    "ode_rnn": {
+      "n_training_seeds": 5,
+      "test": {
+        "auroc": {
+          "mean": 0.8280000000000001,
+          "std": 0.08318653737234168
+        },
+        "ap": {
+          "mean": 0.7909365079365079,
+          "std": 0.10778354006617277
+        },
+        "brier": {
+          "mean": 0.21912347980324015,
+          "std": 0.0012818002074758673
+        },
+        "accuracy": {
+          "mean": 0.76,
+          "std": 0.07601169500660923
+        },
+        "f1": {
+          "mean": 0.3976190476190476,
+          "std": 0.2831732240695295
+        },
+        "precision": {
+          "mean": 0.8,
+          "std": 0.44721359549995804
+        },
+        "recall": {
+          "mean": 0.27999999999999997,
+          "std": 0.22803508501982758
+        }
+      },
+      "parameters": 15877
+    }
+  },
+  "paired_differences": {
+    "latent_ode minus legacy_transformer": {
+      "auroc": {
+        "mean": -0.6399999999999999,
+        "std": 0.15811388300841897,
+        "n_pairs": 5
+      },
+      "ap": {
+        "mean": -0.6106102786102785,
+        "std": 0.18864060819475859,
+        "n_pairs": 5
+      },
+      "brier": {
+        "mean": 0.14538817796876607,
+        "std": 0.06613927531393497,
+        "n_pairs": 5
+      }
+    },
+    "ode_rnn minus legacy_transformer": {
+      "auroc": {
+        "mean": -0.132,
+        "std": 0.1418449858119771,
+        "n_pairs": 5
+      },
+      "ap": {
+        "mean": -0.12163492063492065,
+        "std": 0.24805518164684512,
+        "n_pairs": 5
+      },
+      "brier": {
+        "mean": 0.13816437901950077,
+        "std": 0.06903282325534936,
+        "n_pairs": 5
+      }
+    },
+    "latent_ode minus ode_rnn": {
+      "auroc": {
+        "mean": -0.508,
+        "std": 0.1109954954040929,
+        "n_pairs": 5
+      },
+      "ap": {
+        "mean": -0.4889753579753579,
+        "std": 0.08877968801691326,
+        "n_pairs": 5
+      },
+      "brier": {
+        "mean": 0.007223798949265342,
+        "std": 0.003525531182026941,
+        "n_pairs": 5
+      }
+    }
+  }
+}

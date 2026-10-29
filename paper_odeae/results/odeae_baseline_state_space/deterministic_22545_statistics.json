@@ -1,0 +1,63 @@
+{
+  "checkpoint": "/home/xjh/projects/LatentODE/paper_odeae/results/capacity_matched/deterministic_22545/seed_0/best.pt",
+  "checkpoint_sha256": "0b3b7a8cb83da2f582ed83ed705065a12e3f125a327dd617c4c5994c2e216814",
+  "epoch": 76,
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "parameters": 22545,
+  "physical_gpu": "1",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "model_device": "cuda:0",
+  "state_device": "cuda:0",
+  "pca_device": "cuda:0",
+  "field_device": "cuda:0",
+  "prefix_states": 17165,
+  "counts_by_split": {
+    "train": 12544,
+    "validation": 2219,
+    "test": 2402
+  },
+  "pca_fit": "train only, unscaled, all prefix cutoffs equally weighted",
+  "model": "deterministic_22545",
+  "has_probabilistic_posterior": false,
+  "state_semantics": "generator trajectory captured at history cutoff, from deterministic initial state",
+  "encoder_state_dim": 6,
+  "generator_state_dim": 6,
+  "shared_field": false,
+  "pca_variance_ratio": [
+    0.3652322292327881,
+    0.18040362000465393,
+    0.14628224074840546,
+    0.11433538794517517,
+    0.1065799817442894,
+    0.08716658502817154
+  ],
+  "state_variance_retained_2d": 0.5456358194351196,
+  "velocity_energy_retained_2d": 0.11684783548116684,
+  "generator_speed_median": 0.2998473644256592,
+  "checks": [
+    "decoder-hook states exactly reproduce original cutoff predictions; first state equals deterministic initial state"
+  ],
+  "initial_state_pca_variance_ratio": [
+    0.3849254548549652,
+    0.16455495357513428,
+    0.14606168866157532,
+    0.12893620133399963,
+    0.09791634231805801,
+    0.07760541141033173
+  ],
+  "train_initial_state_std_by_dimension": [
+    1.500643253326416,
+    1.7201842069625854,
+    2.537562608718872,
+    1.3784724473953247,
+    1.782745122909546,
+    1.7659612894058228
+  ],
+  "train_total_initial_state_variation": 19.8471736907959,
+  "velocity_aligned_projection": {
+    "fit": "training velocities; uncentered SVD, includes mean flow",
+    "velocity_energy_retained_2d": 0.999491810798645,
+    "train_state_variance_retained_2d": 0.4325256049633026,
+    "device": "cuda:0"
+  }
+}

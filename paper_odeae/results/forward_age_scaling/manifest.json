@@ -1,0 +1,254 @@
+{
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "dataset": "/home/xjh/projects/LatentODE/paper_odeae/cache/local_available.pkl",
+  "jobs": [
+    {
+      "name": "baseline",
+      "family": "reference",
+      "parameters": 22545,
+      "changes": {},
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/baseline.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/baseline/seed_0"
+    },
+    {
+      "name": "shared_tied",
+      "family": "sharing",
+      "parameters": 21005,
+      "changes": {
+        "shared_vector_field": true
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/shared_tied.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/shared_tied/seed_0"
+    },
+    {
+      "name": "shared_tied_l2x2",
+      "family": "sharing_regularization_control",
+      "parameters": 21005,
+      "changes": {
+        "shared_vector_field": true,
+        "shared_l2_multiplier": 2.0
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/shared_tied_l2x2.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/shared_tied_l2x2/seed_0"
+    },
+    {
+      "name": "shared_matched",
+      "family": "sharing_parameter_control",
+      "parameters": 22545,
+      "changes": {
+        "shared_vector_field": true,
+        "mlp_width": 159,
+        "ode_width": 188
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/shared_matched.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/shared_matched/seed_0"
+    },
+    {
+      "name": "init_2x",
+      "family": "allocation_2x",
+      "parameters": 45049,
+      "changes": {
+        "init_width": 2967
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/init_2x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/init_2x/seed_0"
+    },
+    {
+      "name": "update_2x",
+      "family": "allocation_2x",
+      "parameters": 45051,
+      "changes": {
+        "update_width": 517
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/update_2x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/update_2x/seed_0"
+    },
+    {
+      "name": "decoder_2x",
+      "family": "allocation_2x",
+      "parameters": 45057,
+      "changes": {
+        "decoder_width": 556
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/decoder_2x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/decoder_2x/seed_0"
+    },
+    {
+      "name": "encoder_ode_2x",
+      "family": "allocation_2x",
+      "parameters": 45048,
+      "changes": {
+        "encoder_ode_width": 1849
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/encoder_ode_2x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/encoder_ode_2x/seed_0"
+    },
+    {
+      "name": "generator_ode_2x",
+      "family": "allocation_2x",
+      "parameters": 45048,
+      "changes": {
+        "generator_ode_width": 1849
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/generator_ode_2x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/generator_ode_2x/seed_0"
+    },
+    {
+      "name": "both_odes_2x",
+      "family": "allocation_2x",
+      "parameters": 45035,
+      "changes": {
+        "ode_width": 983
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/both_odes_2x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/both_odes_2x/seed_0"
+    },
+    {
+      "name": "all_mlps_2x",
+      "family": "allocation_2x",
+      "parameters": 45099,
+      "changes": {
+        "mlp_width": 333
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/all_mlps_2x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/all_mlps_2x/seed_0"
+    },
+    {
+      "name": "all_networks_2x",
+      "family": "allocation_2x",
+      "parameters": 45017,
+      "changes": {
+        "mlp_width": 308,
+        "ode_width": 236
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/all_networks_2x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/all_networks_2x/seed_0"
+    },
+    {
+      "name": "init_4x",
+      "family": "dose_response_4x",
+      "parameters": 90177,
+      "changes": {
+        "init_width": 8608
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/init_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/init_4x/seed_0"
+    },
+    {
+      "name": "update_4x",
+      "family": "dose_response_4x",
+      "parameters": 90187,
+      "changes": {
+        "update_width": 1245
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/update_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/update_4x/seed_0"
+    },
+    {
+      "name": "decoder_4x",
+      "family": "dose_response_4x",
+      "parameters": 90193,
+      "changes": {
+        "decoder_width": 1362
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/decoder_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/decoder_4x/seed_0"
+    },
+    {
+      "name": "encoder_ode_4x",
+      "family": "dose_response_4x",
+      "parameters": 90184,
+      "changes": {
+        "encoder_ode_width": 5321
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/encoder_ode_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/encoder_ode_4x/seed_0"
+    },
+    {
+      "name": "generator_ode_4x",
+      "family": "dose_response_4x",
+      "parameters": 90184,
+      "changes": {
+        "generator_ode_width": 5321
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/generator_ode_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/generator_ode_4x/seed_0"
+    },
+    {
+      "name": "both_odes_4x",
+      "family": "dose_response_4x",
+      "parameters": 90171,
+      "changes": {
+        "ode_width": 2719
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/both_odes_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/both_odes_4x/seed_0"
+    },
+    {
+      "name": "all_mlps_4x",
+      "family": "dose_response_4x",
+      "parameters": 90207,
+      "changes": {
+        "mlp_width": 691
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/all_mlps_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/all_mlps_4x/seed_0"
+    },
+    {
+      "name": "all_networks_4x",
+      "family": "dose_response_4x",
+      "parameters": 89961,
+      "changes": {
+        "mlp_width": 616,
+        "ode_width": 472
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/all_networks_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/all_networks_4x/seed_0"
+    },
+    {
+      "name": "latent_12",
+      "family": "latent_fixed_width",
+      "parameters": 29097,
+      "changes": {
+        "latent": 12
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/latent_12.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/latent_12/seed_0"
+    },
+    {
+      "name": "latent_24",
+      "family": "latent_fixed_width",
+      "parameters": 42201,
+      "changes": {
+        "latent": 24
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/latent_24.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/latent_24/seed_0"
+    },
+    {
+      "name": "latent_48",
+      "family": "latent_fixed_width",
+      "parameters": 68409,
+      "changes": {
+        "latent": 48
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/latent_48.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/latent_48/seed_0"
+    },
+    {
+      "name": "latent_24_matched",
+      "family": "latent_parameter_control",
+      "parameters": 22545,
+      "changes": {
+        "latent": 24,
+        "mlp_width": 77,
+        "ode_width": 73
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/latent_24_matched.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/latent_24_matched/seed_0"
+    }
+  ],
+  "seed": 0,
+  "execution": "four independent single-GPU workers; global batch 32 for each job",
+  "selection": "checkpoint by validation overall; model ranking by validation forecast of that checkpoint; test descriptive only"
+}

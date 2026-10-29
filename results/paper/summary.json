@@ -1,0 +1,230 @@
+[
+  {
+    "experiment": "results/paper/latent_ode_extrapolation",
+    "model": "latent_ode",
+    "task": "extrapolation",
+    "classification_weight": 0.0,
+    "epochs": 20,
+    "seed": 42,
+    "baseline_validation": {
+      "loss": 1976.367431640625,
+      "nll": 1973.9209798177083,
+      "kl": 2.446465015411377,
+      "bce": 0.0,
+      "mse": 0.2722570985555649,
+      "patients": 15,
+      "observed_scalars": 1680
+    },
+    "best_epoch": 11,
+    "validation": {
+      "loss": -9.908376057942709,
+      "nll": -47.71800104777018,
+      "kl": 37.809624989827476,
+      "bce": 0.0,
+      "mse": 0.01789694337972573,
+      "patients": 15,
+      "observed_scalars": 1680
+    },
+    "test": {
+      "loss": 6.920979817708333,
+      "nll": -30.734394073486328,
+      "kl": 37.655373891194664,
+      "bce": 0.0,
+      "mse": 0.020270682058282315,
+      "patients": 15,
+      "observed_scalars": 1512
+    }
+  },
+  {
+    "experiment": "results/paper/latent_ode_interpolation",
+    "model": "latent_ode",
+    "task": "interpolation",
+    "classification_weight": 0.0,
+    "epochs": 20,
+    "seed": 42,
+    "baseline_validation": {
+      "loss": 3941.4661458333335,
+      "nll": 3939.0169270833335,
+      "kl": 2.449233055114746,
+      "bce": 0.0,
+      "mse": 0.27582778508150124,
+      "patients": 15,
+      "observed_scalars": 3318
+    },
+    "best_epoch": 19,
+    "validation": {
+      "loss": -73.51932271321614,
+      "nll": -113.82977040608723,
+      "kl": 40.310447692871094,
+      "bce": 0.0,
+      "mse": 0.01668635791144039,
+      "patients": 15,
+      "observed_scalars": 3318
+    },
+    "test": {
+      "loss": -49.63351058959961,
+      "nll": -89.52943674723308,
+      "kl": 39.89592615763346,
+      "bce": 0.0,
+      "mse": 0.017852791252009795,
+      "patients": 15,
+      "observed_scalars": 2970
+    }
+  },
+  {
+    "experiment": "results/paper/ode_rnn_extrapolation",
+    "model": "ode_rnn",
+    "task": "extrapolation",
+    "classification_weight": 0.0,
+    "epochs": 20,
+    "seed": 42,
+    "baseline_validation": {
+      "loss": 1655.6231282552083,
+      "nll": 1655.6231282552083,
+      "kl": 0.0,
+      "bce": 0.0,
+      "mse": 0.3233199260064534,
+      "patients": 15,
+      "observed_scalars": 1680
+    },
+    "best_epoch": 20,
+    "validation": {
+      "loss": -59.1322987874349,
+      "nll": -59.1322987874349,
+      "kl": 0.0,
+      "bce": 0.0,
+      "mse": 0.017113592342606614,
+      "patients": 15,
+      "observed_scalars": 1680
+    },
+    "test": {
+      "loss": -36.30438359578451,
+      "nll": -36.30438359578451,
+      "kl": 0.0,
+      "bce": 0.0,
+      "mse": 0.020469681322870272,
+      "patients": 15,
+      "observed_scalars": 1512
+    }
+  },
+  {
+    "experiment": "results/paper/ode_rnn_interpolation",
+    "model": "ode_rnn",
+    "task": "interpolation",
+    "classification_weight": 0.0,
+    "epochs": 20,
+    "seed": 42,
+    "baseline_validation": {
+      "loss": 2985.2013346354165,
+      "nll": 2985.2013346354165,
+      "kl": 0.0,
+      "bce": 0.0,
+      "mse": 0.2975826210613492,
+      "patients": 15,
+      "observed_scalars": 3318
+    },
+    "best_epoch": 19,
+    "validation": {
+      "loss": -80.01614379882812,
+      "nll": -80.01614379882812,
+      "kl": 0.0,
+      "bce": 0.0,
+      "mse": 0.020438199556326565,
+      "patients": 15,
+      "observed_scalars": 3318
+    },
+    "test": {
+      "loss": -62.074265797932945,
+      "nll": -62.074265797932945,
+      "kl": 0.0,
+      "bce": 0.0,
+      "mse": 0.02140280134373843,
+      "patients": 15,
+      "observed_scalars": 2970
+    }
+  },
+  {
+    "experiment": "results/paper_classification/latent_ode",
+    "model": "latent_ode",
+    "task": "interpolation",
+    "classification_weight": 100.0,
+    "epochs": 20,
+    "seed": 42,
+    "baseline_validation": {
+      "loss": 4008.986328125,
+      "nll": 3938.4461263020835,
+      "kl": 2.4481326738993325,
+      "bce": 0.6809215744336446,
+      "mse": 0.2758285354209852,
+      "patients": 15,
+      "observed_scalars": 3318,
+      "auroc": 0.66,
+      "auprc": 0.6666666666666667
+    },
+    "best_epoch": 19,
+    "validation": {
+      "loss": -9.395401000976562,
+      "nll": -114.6592305501302,
+      "kl": 41.20264180501302,
+      "bce": 0.6406118869781494,
+      "mse": 0.01667357292733615,
+      "patients": 15,
+      "observed_scalars": 3318,
+      "auroc": 0.46,
+      "auprc": 0.34653679653679653
+    },
+    "test": {
+      "loss": 11.446062723795572,
+      "nll": -93.05808003743489,
+      "kl": 41.04948425292969,
+      "bce": 0.6345465779304504,
+      "mse": 0.017581852446451333,
+      "patients": 15,
+      "observed_scalars": 2970,
+      "auroc": 0.72,
+      "auprc": 0.6190476190476191
+    }
+  },
+  {
+    "experiment": "results/paper_classification/ode_rnn",
+    "model": "ode_rnn",
+    "task": "interpolation",
+    "classification_weight": 100.0,
+    "epochs": 20,
+    "seed": 42,
+    "baseline_validation": {
+      "loss": 3085.1742350260415,
+      "nll": 3017.3291829427085,
+      "kl": 0.0,
+      "bce": 0.6784497499465942,
+      "mse": 0.3004875235919711,
+      "patients": 15,
+      "observed_scalars": 3318,
+      "auroc": 0.9400000000000001,
+      "auprc": 0.8766666666666667
+    },
+    "best_epoch": 19,
+    "validation": {
+      "loss": -23.70226542154948,
+      "nll": -84.1925048828125,
+      "kl": 0.0,
+      "bce": 0.6049024065335592,
+      "mse": 0.020060589254091057,
+      "patients": 15,
+      "observed_scalars": 3318,
+      "auroc": 0.98,
+      "auprc": 0.9666666666666666
+    },
+    "test": {
+      "loss": -18.433673858642578,
+      "nll": -77.54981994628906,
+      "kl": 0.0,
+      "bce": 0.5911614696184794,
+      "mse": 0.01983961754977101,
+      "patients": 15,
+      "observed_scalars": 2970,
+      "auroc": 1.0,
+      "auprc": 1.0
+    }
+  }
+]

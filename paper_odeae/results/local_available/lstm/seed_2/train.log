@@ -1,0 +1,43 @@
+swanlab: Tracking run with swanlab version 0.10.3
+swanlab: 💾 Run data saved at /home/xjh/projects/LatentODE/swanlog/run-20261027_073310-ajte4fs4
+swanlab: 🌟 Run `swanlab watch /home/xjh/projects/LatentODE/swanlog` to view SwanLab Experiment Dashboard
+{"epoch": 1, "train_loss": 4.3382024667700945, "validation_overall": 4.002331122404511}
+{"epoch": 2, "train_loss": 3.874644219267125, "validation_overall": 3.980361243720299}
+{"epoch": 3, "train_loss": 3.8626357116261305, "validation_overall": 3.9792191579580996}
+{"epoch": 4, "train_loss": 3.827331914585464, "validation_overall": 3.9323001588240873}
+{"epoch": 5, "train_loss": 3.812915634135811, "validation_overall": 3.9175395823686388}
+{"epoch": 6, "train_loss": 3.8054144984605363, "validation_overall": 3.912999512773929}
+{"epoch": 7, "train_loss": 3.805316375834601, "validation_overall": 3.90894755305532}
+swanlab: KeyboardInterrupt by user
+swanlab: 🌟 Run `swanlab watch /home/xjh/projects/LatentODE/swanlog` to view SwanLab Experiment Dashboard
+2026-10-27 07:35:59.359 | WARNING  | swanlab.sdk.internal.run:finish:863 - SwanLab Run has already finished or has not started.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/xjh/projects/LatentODE/paper_odeae/train.py", line 145, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/xjh/projects/LatentODE/paper_odeae/train.py", line 105, in main
+    out=model(b,sample=True)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/projects/LatentODE/paper_odeae/models.py", line 89, in forward
+    proposed,pc=self.generator_cell(ages[:,i,None]/100.,(z,cell))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/rnn.py", line 1705, in forward
+    ret = _VF.lstm_cell(
+          ^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/run/__init__.py", line 210, in _handle_sigint
+    self._original_sigint_handler(signum, frame)
+KeyboardInterrupt

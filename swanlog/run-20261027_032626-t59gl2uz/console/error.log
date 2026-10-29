@@ -1,0 +1,14 @@
+2026-10-27 07:35:59.390905
+KeyboardInterrupt by user
+File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/xjh/projects/LatentODE/paper_odeae/train.py", line 145, in <module>
+    if __name__=='__main__':main()
+  File "/home/xjh/projects/LatentODE/paper_odeae/train.py", line 111, in main
+    loss.backward();grad_norm=torch.nn.utils.clip_grad_norm_(model.parameters(),10.,error_if_nonfinite=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/_tensor.py", line 581, in backward
+    torch.autograd.backward(
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/autograd/__init__.py", line 347, in backward
+    _engine_run_backward(
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass

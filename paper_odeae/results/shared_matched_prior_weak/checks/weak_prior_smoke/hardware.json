@@ -1,0 +1,45 @@
+{
+  "physical_gpu": "0,1,2,3",
+  "parameter_device": "cuda:0",
+  "parameters": 22545,
+  "trainable_parameters": 22545,
+  "world_size": 4,
+  "global_batch_size": 32,
+  "per_gpu_batch_size": 8,
+  "workers": [
+    {
+      "rank": 0,
+      "physical_gpu": "0",
+      "parameter_device": "cuda:0",
+      "gpu_name": "NVIDIA GeForce RTX 4090"
+    },
+    {
+      "rank": 1,
+      "physical_gpu": "1",
+      "parameter_device": "cuda:0",
+      "gpu_name": "NVIDIA GeForce RTX 4090"
+    },
+    {
+      "rank": 2,
+      "physical_gpu": "2",
+      "parameter_device": "cuda:0",
+      "gpu_name": "NVIDIA GeForce RTX 4090"
+    },
+    {
+      "rank": 3,
+      "physical_gpu": "3",
+      "parameter_device": "cuda:0",
+      "gpu_name": "NVIDIA GeForce RTX 4090"
+    }
+  ],
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.5.1+cu121",
+  "encoder_direction": "forward",
+  "encoder_initialization": "age",
+  "generator_anchor": "history cutoff",
+  "shared_vector_field": true,
+  "prior_weight": 0.01,
+  "collect_prior_predictions": true,
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "loss_reduction": "global field counts; world-size-scaled local reconstruction; DDP mean gradients"
+}

@@ -1,0 +1,37 @@
+{
+  "jobs": [
+    {
+      "name": "both",
+      "prior_weight": 0.01,
+      "jacobian_weight": 0.01,
+      "physical_gpu": 1,
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/latent2x_loss_ablation/configs/both.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/latent2x_loss_ablation/both/seed_0"
+    },
+    {
+      "name": "weak_prior",
+      "prior_weight": 0.01,
+      "jacobian_weight": 0.0,
+      "physical_gpu": 2,
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/latent2x_loss_ablation/configs/weak_prior.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/latent2x_loss_ablation/weak_prior/seed_0"
+    },
+    {
+      "name": "jacobian",
+      "prior_weight": 0.0,
+      "jacobian_weight": 0.01,
+      "physical_gpu": 3,
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/latent2x_loss_ablation/configs/jacobian.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/latent2x_loss_ablation/jacobian/seed_0"
+    }
+  ],
+  "baseline": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_latent_scaling/latent_2x/seed_0",
+  "baseline_config_sha256": "6d78b3cc6aa0314fcfc6a4337f8dee04404b69bd4aa8a933a2f3b6d084e83aae",
+  "parameters": 44875,
+  "latent": 28,
+  "baseline_retrained": false,
+  "dataset": "/home/xjh/projects/LatentODE/paper_odeae/cache/local_available.pkl",
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "selection": "original validation overall reconstruction; added losses excluded from selection score",
+  "execution": "three independent single-GPU jobs: both=1, prior=2, jacobian=3; original baseline continues on GPU0"
+}

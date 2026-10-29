@@ -1,0 +1,37 @@
+Running preprocessing; seed=42; torch=2.5.1+cu121
+============================================================
+STEP 2: DATA PREPROCESSING PIPELINE
+============================================================
+
+[OK] Loaded 3518 measurements from 100 patients
+[OK] Created 100 patient sequences
+    - Avg length: 35.2 measurements
+    - Min/Max length: 20/69
+[OK] Added temporal features (deltas, periodic encoding)
+[OK] Data split: Train=70, Val=14, Test=16
+    - Train adverse rate: 31.43%
+    - Val adverse rate: 35.71%
+    - Test adverse rate: 31.25%
+[OK] Fitted scaler on training set and normalized all sequences
+[OK] Saved processed data to data/processed
+
+============================================================
+STEP 2 COMPLETE - SUCCESS
+============================================================
+
+Processed data ready for Neural ODE training!
+
+============================================================
+Testing DataLoader...
+============================================================
+[OK] Created dataloaders (batch_size=16)
+    - Train batches: 5
+    - Val batches: 1
+    - Test batches: 1
+
+Sample Batch:
+  - Times shape: torch.Size([16, 51])
+  - Vitals shape: torch.Size([16, 51, 6])
+  - Masks shape: torch.Size([16, 51])
+  - Labels shape: torch.Size([16, 1])
+  - Positive samples: 3/16

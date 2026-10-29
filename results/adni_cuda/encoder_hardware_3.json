@@ -1,0 +1,31 @@
+{
+  "physical_gpu": "3",
+  "parameter_device": "cuda:0",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "shard": 3,
+  "weights_sha256": "2824951eaef30e115929b89bec72342380b08d14792bda1449974ac849e497c0",
+  "image_shape": [
+    1,
+    96,
+    96,
+    96
+  ],
+  "pooling": "global average, 512 dims",
+  "missing_checkpoint_keys": [
+    "conv_seg.0.weight",
+    "conv_seg.0.bias",
+    "conv_seg.1.weight",
+    "conv_seg.1.bias",
+    "conv_seg.1.running_mean",
+    "conv_seg.1.running_var",
+    "conv_seg.3.weight",
+    "conv_seg.4.weight",
+    "conv_seg.4.bias",
+    "conv_seg.4.running_mean",
+    "conv_seg.4.running_var",
+    "conv_seg.6.weight"
+  ],
+  "unexpected_checkpoint_keys": [],
+  "input_device": "cuda:0",
+  "output_device": "cuda:0"
+}

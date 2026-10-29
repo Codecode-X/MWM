@@ -1,0 +1,60 @@
+{
+  "name": "Forward age 22545",
+  "status": "in_progress_checkpoint",
+  "run": "direction_ablation/forward_age_from22545/seed_0",
+  "checkpoint_epoch": 84,
+  "checked_at": "2026-10-28T06:32:12.247947+00:00",
+  "physical_gpu": 0,
+  "parameter_device": "cuda:0",
+  "trainable_parameters": 22545,
+  "patients": 64,
+  "prefixes": 347,
+  "batches": 11,
+  "batch_size": 32,
+  "rtol": 0.0001,
+  "atol": 1e-06,
+  "time_unit": "year",
+  "instrumentation_prediction_difference": 0.0,
+  "wall_seconds_with_concurrent_training": 1.7870718460762873,
+  "total": {
+    "integration_calls": 356,
+    "nonzero_integrations": 323,
+    "zero_interval_calls": 33,
+    "accepted_steps": 646,
+    "rejected_steps": 0,
+    "nfe": 4522,
+    "accepted_steps_per_nonzero_solve": 2.0,
+    "accepted_step_histogram": {
+      "2": 323
+    },
+    "active_patient_step_equivalents": 6582
+  },
+  "by_phase": {
+    "encoder": {
+      "integration_calls": 116,
+      "nonzero_integrations": 105,
+      "zero_interval_calls": 11,
+      "accepted_steps": 210,
+      "rejected_steps": 0,
+      "nfe": 1470,
+      "accepted_steps_per_nonzero_solve": 2.0,
+      "accepted_step_histogram": {
+        "2": 105
+      },
+      "active_patient_step_equivalents": 2194
+    },
+    "generator": {
+      "integration_calls": 240,
+      "nonzero_integrations": 218,
+      "zero_interval_calls": 22,
+      "accepted_steps": 436,
+      "rejected_steps": 0,
+      "nfe": 3052,
+      "accepted_steps_per_nonzero_solve": 2.0,
+      "accepted_step_histogram": {
+        "2": 218
+      },
+      "active_patient_step_equivalents": 4388
+    }
+  }
+}

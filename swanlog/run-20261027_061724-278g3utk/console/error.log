@@ -1,0 +1,20 @@
+2026-10-27 07:35:59.352498
+KeyboardInterrupt by user
+File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/xjh/projects/LatentODE/paper_odeae/train.py", line 145, in <module>
+    if __name__=='__main__':main()
+  File "/home/xjh/projects/LatentODE/paper_odeae/train.py", line 105, in main
+    out=model(b,sample=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/xjh/projects/LatentODE/paper_odeae/models.py", line 74, in forward
+    evolved=self.solve(self.backward_ode,h,delta)
+  File "/home/xjh/projects/LatentODE/paper_odeae/models.py", line 52, in solve
+    return integrate(func,h,delta,self.rtol,self.atol)
+  File "/home/xjh/projects/LatentODE/paper_odeae/solver.py", line 29, in integrate
+    candidate = y+step*sum(b*k for b,k in zip(TABLEAU['b_sol'],stages))
+  File "/home/xjh/projects/LatentODE/paper_odeae/solver.py", line 29, in <genexpr>
+    candidate = y+step*sum(b*k for b,k in zip(TABLEAU['b_sol'],stages))

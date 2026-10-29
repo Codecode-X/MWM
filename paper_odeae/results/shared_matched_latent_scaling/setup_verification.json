@@ -1,0 +1,71 @@
+{
+  "runs": [
+    {
+      "name": "latent_8x",
+      "latent": 161,
+      "parameters": 179870,
+      "physical_gpu": "0",
+      "actual_tensor_devices": {
+        "values": "cuda:0",
+        "ages": "cuda:0",
+        "mask": "cuda:0",
+        "context_mask": "cuda:0"
+      },
+      "smoke_status": "cuda_smoke_passed",
+      "checkpoint_reload_difference": 0,
+      "formal_swanlab": {
+        "mode": "local",
+        "status": "running",
+        "family": "odeae_reproduction",
+        "training_seed": 0,
+        "log_dir": "/home/xjh/projects/LatentODE/swanlog",
+        "physical_gpu": "0",
+        "parameter_device": "cuda:0",
+        "model_parameters": 179870,
+        "run_id": "v5ybrzfn",
+        "experiment_name": "odeae_reproduction-0-latent_8x-seed_0",
+        "sdk_version": "0.10.3"
+      }
+    },
+    {
+      "name": "latent_16x",
+      "latent": 339,
+      "parameters": 360540,
+      "physical_gpu": "3",
+      "actual_tensor_devices": {
+        "values": "cuda:0",
+        "ages": "cuda:0",
+        "mask": "cuda:0",
+        "context_mask": "cuda:0"
+      },
+      "smoke_status": "cuda_smoke_passed",
+      "checkpoint_reload_difference": 0,
+      "formal_swanlab": {
+        "mode": "local",
+        "status": "running",
+        "family": "odeae_reproduction",
+        "training_seed": 0,
+        "log_dir": "/home/xjh/projects/LatentODE/swanlog",
+        "physical_gpu": "3",
+        "parameter_device": "cuda:0",
+        "model_parameters": 360540,
+        "run_id": "bpi73n1l",
+        "experiment_name": "odeae_reproduction-0-latent_16x-seed_0",
+        "sdk_version": "0.10.3"
+      }
+    }
+  ],
+  "frozen_source_identical_to_latent4x": true,
+  "all_source_hashes_verified": true,
+  "references_retrained": false,
+  "command_executed": "bash scripts/run_shared_matched_latent_scaling.sh",
+  "queue": {
+    "pid": 1780878,
+    "start_time": "78334376",
+    "status": "running",
+    "physical_gpus": [
+      0,
+      3
+    ]
+  }
+}

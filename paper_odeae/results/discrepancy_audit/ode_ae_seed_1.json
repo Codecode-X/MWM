@@ -1,0 +1,53 @@
+{
+  "model": "ode_ae",
+  "seed": 1,
+  "checkpoint_epoch": 128,
+  "physical_gpu": "1",
+  "parameter_device": "cuda:0",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "validation_patients": 64,
+  "prefixes": 331,
+  "posterior_mu_rms": 0.3276712894439697,
+  "posterior_mu_std_across_prefixes": [
+    0.02897603064775467,
+    0.7951645255088806,
+    0.0439322292804718,
+    0.03945305570960045,
+    0.04985663294792175,
+    0.046042460948228836
+  ],
+  "posterior_mu_covariance_eigenvalues": [
+    6.251240847632289e-05,
+    0.00013016756565775722,
+    0.0007857492309994996,
+    0.0025822469033300877,
+    0.00428788224235177,
+    0.6333696842193604
+  ],
+  "largest_mu_variance_fraction": 0.9877598285675049,
+  "posterior_std_mean": 0.9510674476623535,
+  "posterior_kl_per_prefix": 0.4217202067375183,
+  "ode_l2": 0.13920141756534576,
+  "scores": {
+    "mean": {
+      "mse": 0.8369243972689171,
+      "cce": 2.16770719309081,
+      "overall": 3.004631590359727
+    },
+    "sample": {
+      "mse": 0.852540432026067,
+      "cce": 2.5039293360089028,
+      "overall": 3.35646976803497
+    },
+    "no_context": {
+      "mse": 0.8515746367027046,
+      "cce": 3.7227474423362823,
+      "overall": 4.574322079038987
+    }
+  },
+  "tolerance_check": {
+    "regular": 3.004631590359727,
+    "tighter": 3.004631590359727,
+    "absolute_difference": 0.0
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "checkpoint": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/shared_matched/seed_0/best.pt",
+  "checkpoint_sha256": "f13ab3dae0a2be7da6c9aee971e162b63ae998373a2e48af65bd6fd758acf0b8",
+  "checkpoint_epoch": 56,
+  "dataset": "/home/xjh/projects/LatentODE/paper_odeae/cache/local_available.pkl",
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "source_states": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_state_space",
+  "source_states_sha256": "96c264bd6b406e7ca0effd070cdc26a46df371b20c3d3063650f855bbd54328d",
+  "source_metadata_sha256": "a9e152362d3f4f75db6750d1fc27fb78a28d4b7e656faa933b9eb3d4901fbab0",
+  "script_sha256": "b0bd448d107dbd061996f9b1dba1d147a2c091f1208d411c130bd132d86cc91c",
+  "physical_gpu": "3",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "devices": {
+    "model": "cuda:0",
+    "states": "cuda:0",
+    "autodiff": "cuda:0",
+    "ode_rollout": "cuda:0",
+    "pca_projection": "cuda:0"
+  },
+  "parameters": 22545,
+  "latent_dimensions": 6,
+  "new_learnable_parameters": 0,
+  "training_performed": false,
+  "checkpoint_parameters_unchanged": true,
+  "test_patients": 414,
+  "test_states": 2402,
+  "eligible_first_mci_patients": 210,
+  "pca_fit": "existing train-only PCA; basis and signs reused exactly",
+  "pca_state_variance_retained": 0.5301412343978882,
+  "diagnosis_output_slice": [
+    12,
+    15
+  ],
+  "head_class_order": [
+    "CN",
+    "MCI",
+    "Dementia"
+  ],
+  "derivative_method": "torch.autograd.grad(s.sum(), z), contracted with original f(z)",
+  "double_finite_difference_max_error": 5.935825719838306e-10,
+  "truncated_history_vs_cached_max_error": 1.6689300537109375e-06,
+  "future_information_isolation": "full record vs history-only record: bitwise identical endpoint encoding",
+  "monthly_vs_direct_ode_max_state_errors": {
+    "6": 7.152557373046875e-07,
+    "12": 9.5367431640625e-07,
+    "24": 1.1920928955078125e-06,
+    "36": 1.1920928955078125e-06,
+    "60": 1.9073486328125e-06
+  },
+  "integration_step_output": "monthly; original adaptive Tsit5 inside every interval",
+  "ode_time_unit": "year; requested month/12",
+  "label_time_unit": "calendar-month difference on existing quarter-end visit dates",
+  "cohort_origin": "earliest observed MCI, no previously observed Dementia, one origin per patient across all horizons",
+  "cohort_endpoint_support": "both groups require diagnosis at horizon through horizon+6 calendar months",
+  "cohort_converter": "first observed Dementia after origin at or before horizon",
+  "cohort_stable": "all observed diagnoses after origin through first supporting visit are MCI",
+  "no_future_updates": true
+}

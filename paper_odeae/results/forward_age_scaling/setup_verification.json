@@ -1,0 +1,42 @@
+{
+  "cuda_unit_tests_passed": 13,
+  "configuration_subtests": 24,
+  "representative_smokes": [
+    {
+      "variant": "baseline",
+      "physical_gpu": "0",
+      "device": "cuda:0",
+      "parameters": 22545,
+      "checkpoint_reload_difference": 0.0,
+      "swanlab_status": "success"
+    },
+    {
+      "variant": "shared_tied",
+      "physical_gpu": "1",
+      "device": "cuda:0",
+      "parameters": 21005,
+      "checkpoint_reload_difference": 0.0,
+      "swanlab_status": "success"
+    },
+    {
+      "variant": "both_odes_4x",
+      "physical_gpu": "2",
+      "device": "cuda:0",
+      "parameters": 90171,
+      "checkpoint_reload_difference": 0.0,
+      "swanlab_status": "success"
+    },
+    {
+      "variant": "latent_48",
+      "physical_gpu": "3",
+      "device": "cuda:0",
+      "parameters": 68409,
+      "checkpoint_reload_difference": 0.0,
+      "swanlab_status": "success"
+    }
+  ],
+  "bash_command_executed": "bash scripts/run_forward_age_scaling.sh",
+  "queue_pid": 1188349,
+  "queue_status": "waiting_for_existing_queue",
+  "source_snapshot_frozen": true
+}

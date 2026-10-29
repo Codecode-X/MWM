@@ -1,0 +1,51 @@
+{
+  "pid": 708796,
+  "process_start_time": "66961181",
+  "status": "complete",
+  "control": "/home/xjh/projects/LatentODE/paper_odeae/results/capacity_matched/deterministic_22545/seed_0",
+  "control_pid": 673133,
+  "control_process_start_time": "66809019",
+  "requested_at": "2026-10-28T00:37:40.269743+00:00",
+  "jobs": [
+    {
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/configs/deterministic_forward_age_from22545.json",
+      "output": "paper_odeae/results/direction_ablation/forward_age_from22545/seed_0",
+      "encoder_initialization": "age",
+      "target_parameters": 22545,
+      "status": "complete"
+    },
+    {
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/configs/deterministic_forward_from22545.json",
+      "output": "paper_odeae/results/direction_ablation/forward_from22545/seed_0",
+      "encoder_initialization": "zero",
+      "target_parameters": 21307,
+      "status": "complete"
+    }
+  ],
+  "reason": "wait for the four-GPU control to release GPUs 0,1,2,3",
+  "updated_at": "2026-10-28T16:06:44.556666+00:00",
+  "matching_settings": [
+    "latent",
+    "ode_width",
+    "mlp_width",
+    "lr",
+    "lr_decay",
+    "lr_decay_steps",
+    "mse_weight",
+    "cce_weight",
+    "kl_weight",
+    "l2_weight",
+    "max_epochs",
+    "min_epochs",
+    "patience",
+    "batch_size",
+    "input_dropout",
+    "normalization",
+    "rtol",
+    "atol",
+    "seed",
+    "model",
+    "data",
+    "scope"
+  ]
+}

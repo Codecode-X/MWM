@@ -1,0 +1,24 @@
+{
+  "checkpoints": "weak_prior best epoch70; same SHA across state/A/B",
+  "cuda": "state/A physical2; B physical3",
+  "cuda_unit_tests": "3 passed",
+  "temporal_isolation": "exact equality in A/B",
+  "clinical_derivative_error": 6.382909478741539e-10,
+  "B_forecast_equivalence": {
+    "checked_origins": 8,
+    "max_direct_vs_original_mmse_difference": 3.814697265625e-06,
+    "max_independent_cached_state_difference": 9.5367431640625e-07,
+    "future_value_isolation": "exact equality"
+  },
+  "A_rate_arithmetic": "all 152144 marker-interval rows checked",
+  "B_forecast_arithmetic": "all 12302 origins checked",
+  "paired_cohorts": {
+    "same_dataset": true,
+    "same_state_metadata": true,
+    "same_MMSE_test_intervals_and_targets": true,
+    "same_test_patients": true,
+    "model_training_performed": false
+  },
+  "all_report_links_and_comparison_figures": "verified",
+  "training_performed": false
+}

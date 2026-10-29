@@ -1,0 +1,81 @@
+[
+  {
+    "model": "legacy_transformer",
+    "capacity": "base",
+    "total_parameters": 126767,
+    "bce_parameters_with_gradient": 120105,
+    "parameters_without_gradient": [
+      "decoder.net.0.weight",
+      "decoder.net.0.bias",
+      "decoder.net.3.weight",
+      "decoder.net.3.bias",
+      "decoder.net.6.weight",
+      "decoder.net.6.bias"
+    ],
+    "tensor_device": "cuda:0",
+    "physical_gpu": 0,
+    "gpu_name": "NVIDIA GeForce RTX 4090"
+  },
+  {
+    "model": "latent_ode",
+    "capacity": "base",
+    "total_parameters": 32727,
+    "bce_parameters_with_gradient": 25431,
+    "parameters_without_gradient": [
+      "ode.net.0.weight",
+      "ode.net.0.bias",
+      "ode.net.2.weight",
+      "ode.net.2.bias",
+      "ode.net.4.weight",
+      "ode.net.4.bias",
+      "ode.net.6.weight",
+      "ode.net.6.bias",
+      "decoder.weight",
+      "decoder.bias"
+    ],
+    "tensor_device": "cuda:0",
+    "physical_gpu": 0,
+    "gpu_name": "NVIDIA GeForce RTX 4090"
+  },
+  {
+    "model": "ode_rnn",
+    "capacity": "base",
+    "total_parameters": 15877,
+    "bce_parameters_with_gradient": 15877,
+    "parameters_without_gradient": [],
+    "tensor_device": "cuda:0",
+    "physical_gpu": 0,
+    "gpu_name": "NVIDIA GeForce RTX 4090"
+  },
+  {
+    "model": "latent_ode",
+    "capacity": "matched",
+    "total_parameters": 126766,
+    "bce_parameters_with_gradient": 119470,
+    "parameters_without_gradient": [
+      "ode.net.0.weight",
+      "ode.net.0.bias",
+      "ode.net.2.weight",
+      "ode.net.2.bias",
+      "ode.net.4.weight",
+      "ode.net.4.bias",
+      "ode.net.6.weight",
+      "ode.net.6.bias",
+      "decoder.weight",
+      "decoder.bias"
+    ],
+    "tensor_device": "cuda:0",
+    "physical_gpu": 0,
+    "gpu_name": "NVIDIA GeForce RTX 4090"
+  },
+  {
+    "model": "ode_rnn",
+    "capacity": "matched",
+    "total_parameters": 126997,
+    "bce_parameters_with_gradient": 126997,
+    "parameters_without_gradient": [],
+    "tensor_device": "cuda:0",
+    "physical_gpu": 0,
+    "gpu_name": "NVIDIA GeForce RTX 4090"
+  }
+]

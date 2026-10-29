@@ -1,0 +1,39 @@
+{
+  "model_checks": [
+    {
+      "model": "shared_matched",
+      "factorization_max_error": 1.1920928955078125e-07,
+      "quadrature_endpoint_max_error": 1.7121434211730957e-05,
+      "endpoint_vs_experiment_A_max_error": 1.996755599975586e-05,
+      "autograd_gradient_check": "passed",
+      "all_states": 17165,
+      "test_intervals": 1086,
+      "checkpoint_sha256": "f13ab3dae0a2be7da6c9aee971e162b63ae998373a2e48af65bd6fd758acf0b8",
+      "physical_gpu": "2",
+      "device": "cuda:0"
+    },
+    {
+      "model": "weak_prior",
+      "factorization_max_error": 1.1920928955078125e-07,
+      "quadrature_endpoint_max_error": 1.5892088413238525e-05,
+      "endpoint_vs_experiment_A_max_error": 2.831593155860901e-05,
+      "autograd_gradient_check": "passed",
+      "all_states": 17165,
+      "test_intervals": 1086,
+      "checkpoint_sha256": "8ee9fa3280d07172759cdf476e5082829c6af45194ce9ec6fd7c7b30d3a090d2",
+      "physical_gpu": "3",
+      "device": "cuda:0"
+    }
+  ],
+  "cuda_unit_test": "same speed and head sensitivity with parallel/opposite/tangent directions passed on GPU3",
+  "all_state_factorizations": "verified",
+  "quadrature_nodes": 16,
+  "all_1086_interval_integrals": "verified for each model",
+  "gap_accounting_identity": "verified",
+  "all_artifacts_and_links": "verified",
+  "training_performed": false,
+  "source_sha256": {
+    "mmse_rate_mechanism.py": "d853601a2b51153e6616d0d80e9f1b7553443c2690b49c3fed28a5e5581ace57",
+    "report_mmse_mechanism.py": "acd54c30eda0aaacd07ddd5cbc6964f829202975dc74afa7509168a2423ceefc"
+  }
+}

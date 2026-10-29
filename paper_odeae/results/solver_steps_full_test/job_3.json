@@ -1,0 +1,60 @@
+{
+  "name": "Latent ODE native",
+  "status": "completed_checkpoint",
+  "run": "baselines_full/native/latent_ode/seed_0",
+  "checkpoint_epoch": 29,
+  "checked_at": "2026-10-28T06:33:12.956710+00:00",
+  "physical_gpu": 3,
+  "parameter_device": "cuda:0",
+  "trainable_parameters": 62065,
+  "patients": 414,
+  "prefixes": 2402,
+  "batches": 76,
+  "batch_size": 32,
+  "rtol": 0.0001,
+  "atol": 1e-06,
+  "time_unit": "decade",
+  "instrumentation_prediction_difference": 0.0,
+  "wall_seconds_with_concurrent_training": 9.898883884074166,
+  "total": {
+    "integration_calls": 1596,
+    "nonzero_integrations": 1596,
+    "zero_interval_calls": 0,
+    "accepted_steps": 3192,
+    "rejected_steps": 0,
+    "nfe": 22344,
+    "accepted_steps_per_nonzero_solve": 2.0,
+    "accepted_step_histogram": {
+      "2": 1596
+    },
+    "active_patient_step_equivalents": 52930
+  },
+  "by_phase": {
+    "encoder": {
+      "integration_calls": 741,
+      "nonzero_integrations": 741,
+      "zero_interval_calls": 0,
+      "accepted_steps": 1482,
+      "rejected_steps": 0,
+      "nfe": 10374,
+      "accepted_steps_per_nonzero_solve": 2.0,
+      "accepted_step_histogram": {
+        "2": 741
+      },
+      "active_patient_step_equivalents": 16318
+    },
+    "generator": {
+      "integration_calls": 855,
+      "nonzero_integrations": 855,
+      "zero_interval_calls": 0,
+      "accepted_steps": 1710,
+      "rejected_steps": 0,
+      "nfe": 11970,
+      "accepted_steps_per_nonzero_solve": 2.0,
+      "accepted_step_histogram": {
+        "2": 855
+      },
+      "active_patient_step_equivalents": 36612
+    }
+  }
+}

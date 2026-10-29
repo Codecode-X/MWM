@@ -1,0 +1,141 @@
+{
+  "dataset_counts": {
+    "train": {
+      "patients": 2093,
+      "quarter_visits": 12544,
+      "prefixes": 12544,
+      "prefix_weighted_target_visits": 102350
+    },
+    "validation": {
+      "patients": 393,
+      "quarter_visits": 2219,
+      "prefixes": 2219,
+      "prefix_weighted_target_visits": 16761
+    },
+    "test": {
+      "patients": 414,
+      "quarter_visits": 2402,
+      "prefixes": 2402,
+      "prefix_weighted_target_visits": 18720
+    }
+  },
+  "population_constant_reference": {
+    "validation": {
+      "mse": 1.0316560420876644,
+      "cce": 2.951107356293843,
+      "overall": 3.9827633983815067,
+      "per_field": {
+        "sex": 0.701409964910288,
+        "age": 0.02798886345387815,
+        "marital_status": 0.9101967875183677,
+        "education_years": 0.02880733977871797,
+        "handedness": 0.30454572207692404,
+        "diagnosis": 1.034954881788263,
+        "mmse": 0.014619521008683172,
+        "cdrsb": 0.02202569443043271,
+        "avtot1": 0.01925897128733366,
+        "adas_q1": 0.0341712558583258,
+        "adas_q2": 0.01233844934496452,
+        "adas_q3": 0.01812688528154518,
+        "adas_q4": 0.08604874765641707,
+        "adas_q5": 0.011198808467754066,
+        "adas_q6": 0.013744958616284572,
+        "adas_q7": 0.03102190706179543,
+        "adas_q8": 0.07286305110507826,
+        "adas_q9": 0.017255572845192572,
+        "adas_q10": 0.0088149794344609,
+        "adas_q11": 0.016382867548144067,
+        "adas_q12": 0.007957679728307993,
+        "adas_q13": 0.0509033504495323,
+        "clock": 0.04629486100617784,
+        "digit_forward": 0.032716123209683395,
+        "digit_forward_length": 0.05152481866639052,
+        "digit_backward": 0.040754434237149584,
+        "digit_backward_length": 0.06994818063366597,
+        "category_animals": 0.021676732709006646,
+        "category_animals_perseveration": 0.0022333335670752857,
+        "category_animals_intrusion": 0.00015501434795578282,
+        "category_vegetables": 0.026980413004586864,
+        "category_vegetables_perseveration": 0.0200302953222985,
+        "category_vegetables_intrusion": 0.0012290081509570556,
+        "amyloid_cortical_suvr": 0.023850531843501412,
+        "tau_cortical_suvr": 0.005257008981271184,
+        "hippocampal_volume_change_percent": 0.004850836742351849,
+        "apoe4_count": 0.10092843915330231,
+        "csf_abeta42": 0.02919695481964057,
+        "csf_abeta40": 0.03475980143957348,
+        "csf_ptau": 0.02574035089622769
+      }
+    },
+    "test": {
+      "mse": 0.9095515621458905,
+      "cce": 2.857892200141403,
+      "overall": 3.7674437622872934,
+      "per_field": {
+        "sex": 0.7009729116029334,
+        "age": 0.02437949697841215,
+        "marital_status": 0.779620377784712,
+        "education_years": 0.028562939072037254,
+        "handedness": 0.377520419756176,
+        "diagnosis": 0.9997784909975816,
+        "mmse": 0.011132552797126414,
+        "cdrsb": 0.019975287265506757,
+        "avtot1": 0.01925090733365488,
+        "adas_q1": 0.03398580524746386,
+        "adas_q2": 0.009582404779399981,
+        "adas_q3": 0.01763650113248558,
+        "adas_q4": 0.08491783120664231,
+        "adas_q5": 0.008402789391785733,
+        "adas_q6": 0.008112130774366217,
+        "adas_q7": 0.025859382898504882,
+        "adas_q8": 0.05943642446650327,
+        "adas_q9": 0.010688986113066222,
+        "adas_q10": 0.0073167484966866975,
+        "adas_q11": 0.01893861146855998,
+        "adas_q12": 0.006148010887835986,
+        "adas_q13": 0.042303964211357716,
+        "clock": 0.035123274992267785,
+        "digit_forward": 0.031748670387118996,
+        "digit_forward_length": 0.05159372346102778,
+        "digit_backward": 0.03539978011234654,
+        "digit_backward_length": 0.06132010207348848,
+        "category_animals": 0.017729828375311764,
+        "category_animals_perseveration": 0.002180649398874316,
+        "category_animals_intrusion": 0.00012742842759428747,
+        "category_vegetables": 0.022431424953136696,
+        "category_vegetables_perseveration": 0.017615229191353592,
+        "category_vegetables_intrusion": 0.0013142413811062638,
+        "amyloid_cortical_suvr": 0.019930786529591644,
+        "tau_cortical_suvr": 0.0028833319190220393,
+        "hippocampal_volume_change_percent": 0.004790545104987132,
+        "apoe4_count": 0.09322240168193541,
+        "csf_abeta42": 0.02625890278564465,
+        "csf_abeta40": 0.03228655413660921,
+        "csf_ptau": 0.016963912713078056
+      }
+    }
+  },
+  "fixed_prediction_unit_conversion": {
+    "deterministic/seed_0": {
+      "reported_minmax_mse": 0.5909852986505859,
+      "same_prediction_mse_in_train_sd_units": 21.961539457689074
+    },
+    "lstm/seed_0": {
+      "reported_minmax_mse": 0.8784958287716925,
+      "same_prediction_mse_in_train_sd_units": 28.33106863720066
+    },
+    "lstm/seed_1": {
+      "reported_minmax_mse": 0.8737681653345996,
+      "same_prediction_mse_in_train_sd_units": 28.19222040569974
+    },
+    "ode_ae/seed_0": {
+      "reported_minmax_mse": 0.899463559412397,
+      "same_prediction_mse_in_train_sd_units": 29.05068858082734
+    },
+    "ode_ae/seed_1": {
+      "reported_minmax_mse": 0.9005870190546355,
+      "same_prediction_mse_in_train_sd_units": 29.07408133855498
+    }
+  },
+  "note": "Statistical reference from training-set prefix-weighted means/frequencies; unit conversion does not retrain and does not identify the original normalization."
+}

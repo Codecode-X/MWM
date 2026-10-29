@@ -1,0 +1,57 @@
+{
+  "jobs": [
+    {
+      "name": "latent_8x",
+      "factor": 8,
+      "latent": 161,
+      "parameters": 179870,
+      "physical_gpu": 0,
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_latent_scaling/configs/latent_8x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_latent_scaling/latent_8x/seed_0"
+    },
+    {
+      "name": "latent_16x",
+      "factor": 16,
+      "latent": 339,
+      "parameters": 360540,
+      "physical_gpu": 3,
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_latent_scaling/configs/latent_16x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_latent_scaling/latent_16x/seed_0"
+    }
+  ],
+  "references": [
+    {
+      "name": "shared_matched",
+      "source": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/shared_matched/seed_0",
+      "copied": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_latent_scaling/references/shared_matched",
+      "metrics_sha256": "f1d274f5a645a56b383614de596797ac986981c95ff3a6c2b490a8c0f37c7570"
+    },
+    {
+      "name": "latent_4x",
+      "source": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_scaling_4x/latent_4x/seed_0",
+      "copied": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_latent_scaling/references/latent_4x",
+      "metrics_sha256": "56c8f88b29b33d2baea80f75dc5b469a3b1aee6aacae2312d908eb6b90b35d15"
+    }
+  ],
+  "seed": 0,
+  "dataset": "/home/xjh/projects/LatentODE/paper_odeae/cache/local_available.pkl",
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "hidden_mlp_width": 159,
+  "shared_ode_width": 188,
+  "source_snapshot": "exact copy of latent4x training pipeline",
+  "source_hashes": {
+    "paper_odeae/__init__.py": "1da58c3b8b61e93c35610307090bac8a0e6b6ee1e1c1c3b00b0b8d4968eda37d",
+    "paper_odeae/train.py": "a3c0f8ef8eed7b558b2ca6bbd6657bf46f3284dac1f4fbe6bcc1218a1f8adc1b",
+    "paper_odeae/models.py": "194b676ae0ec727d2887b5d3903a20f007a23eae23d719d20d6662302f4132c5",
+    "paper_odeae/data.py": "e147266ff180655c353858cf7b4481f45d7163a0118df757e3064902d0e16295",
+    "paper_odeae/solver.py": "c69c6a3b637e9303cc5d9afbda3b59c31e6195dadcd95efff6ec81c1519da55b",
+    "paper_odeae/reference/features46.json": "3cdce2d849494d3c6e1bb33d6822c2fb273b0882bb45d71f51783c7e57a0ef27",
+    "paper_odeae/reference/tsit5_tableau.json": "e316ce7ae258bfe6470732fbe6df84452bebfeebeea887730d52c0b82354397c",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/tracking.py": "efd445872289f3a9a6629bf8e29f370dc5b82babb95459072972bb8e973d5717",
+    "src/swanlab_local.py": "154ccb47f1b74dbc1e12bec983e7683a4c6ee8dbd85766e9aa93aef21c4b21ab"
+  },
+  "reference_retrained": false,
+  "selection": "original validation overall reconstruction",
+  "execution": "independent single-GPU jobs, latent8x GPU0; latent16x GPU3"
+}

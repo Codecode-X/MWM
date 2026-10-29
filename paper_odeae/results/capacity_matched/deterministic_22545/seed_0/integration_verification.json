@@ -1,0 +1,86 @@
+{
+  "checked_at": "2026-10-28T00:13:36.624639+00:00",
+  "parameter_match": 22545,
+  "physical_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "global_batch_size": 32,
+  "per_gpu_batch_size": 8,
+  "single_vs_ddp_update_check": {
+    "single_gpu_device": "cuda:0",
+    "world_size": 4,
+    "global_batch_size": 32,
+    "single_gpu_loss": 12.908282279968262,
+    "distributed_loss": 12.908282279968262,
+    "loss_difference": 0.0,
+    "max_parameter_difference_after_sgd": 1.4901161193847656e-08
+  },
+  "single_vs_ddp_evaluation_check": {
+    "single_gpu_device": "cuda:0",
+    "physical_gpu": "0",
+    "parameters": 22545,
+    "score_differences_single_gpu_vs_ddp": {
+      "validation/interpolation": 3.4134878035274596e-08,
+      "validation/forecast": 1.3825258005084606e-07,
+      "validation/overall": 3.0280358664924734e-08,
+      "test/interpolation": 6.136738939233055e-08,
+      "test/forecast": 8.110351679135874e-08,
+      "test/overall": 9.135407275095986e-08
+    },
+    "observation_counts_match": true
+  },
+  "actual_device_records": [
+    {
+      "rank": 0,
+      "physical_gpu": "0",
+      "tensors": {
+        "values": "cuda:0",
+        "ages": "cuda:0",
+        "mask": "cuda:0",
+        "context_mask": "cuda:0"
+      },
+      "prediction": "cuda:0",
+      "parameter_device": "cuda:0"
+    },
+    {
+      "rank": 1,
+      "physical_gpu": "1",
+      "tensors": {
+        "values": "cuda:0",
+        "ages": "cuda:0",
+        "mask": "cuda:0",
+        "context_mask": "cuda:0"
+      },
+      "prediction": "cuda:0",
+      "parameter_device": "cuda:0"
+    },
+    {
+      "rank": 2,
+      "physical_gpu": "2",
+      "tensors": {
+        "values": "cuda:0",
+        "ages": "cuda:0",
+        "mask": "cuda:0",
+        "context_mask": "cuda:0"
+      },
+      "prediction": "cuda:0",
+      "parameter_device": "cuda:0"
+    },
+    {
+      "rank": 3,
+      "physical_gpu": "3",
+      "tensors": {
+        "values": "cuda:0",
+        "ages": "cuda:0",
+        "mask": "cuda:0",
+        "context_mask": "cuda:0"
+      },
+      "prediction": "cuda:0",
+      "parameter_device": "cuda:0"
+    }
+  ],
+  "status": "formal_training_running"
+}

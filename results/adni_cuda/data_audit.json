@@ -1,0 +1,20 @@
+{
+  "patient_counts": {
+    "train": 1677,
+    "validation": 312,
+    "test": 324
+  },
+  "patient_disjoint": true,
+  "prepared_sha256": "66c1d78c0bd536b01046a80bc4fa8723d8071445fb900f302f70fc242b240d6a",
+  "feature_count": 58,
+  "selected_eligible_T1": 2301,
+  "successfully_encoded_eligible": 2267,
+  "failed_eligible": 34,
+  "no_selected_T1_eligible": 12,
+  "failure_reasons": {
+    "ValueError: too few DICOM slices": 34
+  },
+  "normalization_fit_split": "train",
+  "PCA_fit_split": "train",
+  "feature_extraction": "one earliest recognized T1 per eligible patient, frozen MedicalNet on 4 CUDA GPUs"
+}

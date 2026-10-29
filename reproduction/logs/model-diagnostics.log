@@ -1,0 +1,74 @@
+/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/transformer.py:502: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. (Triggered internally at ../aten/src/ATen/NestedTensorImpl.cpp:178.)
+  output = torch._nested_tensor_from_mask(
+[OK] Created dataloaders (batch_size=32)
+    - Train batches: 3
+    - Val batches: 1
+    - Test batches: 1
+{
+  "val_raw_auroc_20_seeds": {
+    "values": [
+      0.8444444444444444,
+      0.5333333333333333,
+      0.688888888888889,
+      0.7333333333333334,
+      0.3555555555555556,
+      0.7111111111111111,
+      0.6444444444444445,
+      0.7333333333333334,
+      0.9111111111111111,
+      0.7333333333333334,
+      0.8222222222222223,
+      0.7333333333333334,
+      0.9111111111111111,
+      0.6444444444444444,
+      0.9111111111111111,
+      0.37777777777777777,
+      0.6444444444444445,
+      0.6888888888888889,
+      0.8,
+      0.8888888888888888
+    ],
+    "mean": 0.7155555555555556,
+    "std": 0.1540562667772179,
+    "min": 0.3555555555555556,
+    "max": 0.9111111111111111
+  },
+  "test_raw_auroc_20_seeds": {
+    "values": [
+      0.5818181818181818,
+      0.6363636363636364,
+      0.7636363636363637,
+      0.7818181818181819,
+      0.8545454545454545,
+      0.5272727272727272,
+      0.7818181818181819,
+      0.9090909090909091,
+      0.8545454545454546,
+      0.5272727272727272,
+      0.7818181818181819,
+      0.6727272727272727,
+      0.8363636363636363,
+      0.8727272727272728,
+      0.7090909090909091,
+      0.7636363636363637,
+      0.6363636363636364,
+      0.5454545454545454,
+      0.7272727272727273,
+      0.8
+    ],
+    "mean": 0.7281818181818183,
+    "std": 0.11606139725974482,
+    "min": 0.5272727272727272,
+    "max": 0.9090909090909091
+  },
+  "val_mean_latent_raw_auroc": 1.0,
+  "test_mean_latent_raw_auroc": 1.0,
+  "mean_latent_single_vs_batch_max_prob_diff": 0.06642472743988037,
+  "test_global_end_hours": 68.33999633789062,
+  "test_first_patient_end_hours": 34.099998474121094,
+  "reconstruction_valid_patients_per_training_batch": [
+    1,
+    1,
+    1
+  ]
+}

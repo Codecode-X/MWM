@@ -1,0 +1,41 @@
+{
+  "model": "latent_ode",
+  "seed": 1,
+  "split_seed": 42,
+  "objective": "bce",
+  "best_epoch": 7,
+  "parameters": 32727,
+  "threshold": 0.31219810247421265,
+  "runtime": {
+    "tensor_device": "cpu",
+    "cuda_visible_devices": null,
+    "gpu_name": null
+  },
+  "validation": {
+    "auroc": 0.78,
+    "ap": 0.8266666666666667,
+    "brier": 0.22116251954084915,
+    "accuracy": 0.8666666666666667,
+    "f1": 0.8,
+    "precision": 0.8,
+    "recall": 0.8
+  },
+  "test": {
+    "auroc": 0.52,
+    "ap": 0.3785897435897436,
+    "brier": 0.22276084315393868,
+    "accuracy": 0.5333333333333333,
+    "f1": 0.46153846153846156,
+    "precision": 0.375,
+    "recall": 0.6
+  },
+  "test_fixed_05": {
+    "auroc": 0.52,
+    "ap": 0.3785897435897436,
+    "brier": 0.22276084315393868,
+    "accuracy": 0.6666666666666666,
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0
+  }
+}

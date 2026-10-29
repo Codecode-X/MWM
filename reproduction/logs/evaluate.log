@@ -1,0 +1,82 @@
+Running evaluate; seed=42; torch=2.5.1+cu121
+============================================================
+STEP 6: ADVANCED ENHANCEMENTS
+============================================================
+
+[OK] Device: cuda
+
+[1/7] Loading model...
+
+[2/7] Loading data...
+[OK] Created dataloaders (batch_size=32)
+    - Train batches: 3
+    - Val batches: 1
+    - Test batches: 1
+
+[3/7] Visualizing attention weights...
+/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/transformer.py:502: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. (Triggered internally at ../aten/src/ATen/NestedTensorImpl.cpp:178.)
+  output = torch._nested_tensor_from_mask(
+
+[4/7] Predicting patient trajectory...
+[OK] Saved patient_trajectory.png
+
+[5/7] Visualizing latent space...
+Computing t-SNE (this may take a minute)...
+[OK] Saved latent_space_tsne.png
+
+[6/7] Visualizing ODE dynamics...
+[OK] Saved ode_dynamics.png
+
+[7/7] Computing feature importance...
+[OK] Saved feature_importance.png
+
+[7.5/7] Calibrating on validation and evaluating on test set...
+[OK] Fitted Platt scaling (LogisticRegression)
+[OK] Selected threshold on val: 0.01 (F1=0.5263)
+[OK] Saved calibration plot -> results/calibration_plot.png
+[OK] Saved calibrated test metrics -> results/test_evaluation_calibrated.txt
+[OK] Saved ROC curve -> results/roc_curve_calibrated.png
+[OK] Saved PR curve -> results/pr_curve_calibrated.png
+
+============================================================
+REAL-TIME INFERENCE DEMO
+============================================================
+
+Patient ID: 77
+Observations: 28 measurements
+Time range: 1.6 - 34.1 hours
+True label: No Adverse Event
+
+--- MODEL PREDICTION ---
+Risk Score: 0.6371 (63.71%)
+Uncertainty: 0.1404
+Prediction: HIGH RISK - Adverse Event Likely
+
+⚠️  WARNING: Elevated risk - monitor closely
+
+============================================================
+
+============================================================
+STEP 6 COMPLETE - SUCCESS
+============================================================
+
+New visualizations saved:
+  - attention_weights.png
+  - patient_trajectory.png
+  - latent_space_tsne.png
+  - ode_dynamics.png
+  - feature_importance.png
+
+============================================================
+PROJECT COMPLETE!
+============================================================
+
+Your Neural ODE project includes:
+  ✓ Transformer encoder
+  ✓ Augmented Neural ODE
+  ✓ Evidential classifier
+  ✓ Comprehensive evaluation
+  ✓ Advanced visualizations
+  ✓ Real-time inference
+
+Ready for GitHub! 🚀

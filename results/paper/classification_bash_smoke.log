@@ -1,0 +1,85 @@
+{"epoch": 1, "train_loss": 3029.4045758928573, "validation": {"loss": 2632.1975911458335, "nll": 2563.92529296875, "kl": 3.2608350912729898, "bce": 0.6501163840293884, "mse": 0.16923575725736498, "patients": 15, "observed_scalars": 3318, "auroc": 0.58, "auprc": 0.6115384615384616}}
+{
+  "baseline_validation": {
+    "loss": 4008.986328125,
+    "nll": 3938.4461263020835,
+    "kl": 2.4481326738993325,
+    "bce": 0.6809215744336446,
+    "mse": 0.2758285354209852,
+    "patients": 15,
+    "observed_scalars": 3318,
+    "auroc": 0.66,
+    "auprc": 0.6666666666666667
+  },
+  "best_epoch": 1,
+  "validation": {
+    "loss": 2632.1975911458335,
+    "nll": 2563.92529296875,
+    "kl": 3.2608350912729898,
+    "bce": 0.6501163840293884,
+    "mse": 0.16923575725736498,
+    "patients": 15,
+    "observed_scalars": 3318,
+    "auroc": 0.58,
+    "auprc": 0.6115384615384616
+  },
+  "test": {
+    "loss": 2363.4219563802085,
+    "nll": 2294.9480794270835,
+    "kl": 3.2626168727874756,
+    "bce": 0.6521122058232626,
+    "mse": 0.17108601111956317,
+    "patients": 15,
+    "observed_scalars": 2970,
+    "auroc": 0.52,
+    "auprc": 0.39547619047619054
+  }
+}
+{"epoch": 1, "train_loss": 2514.339826311384, "validation": {"loss": 1785.8951416015625, "nll": 1720.9980875651042, "kl": 0.0, "bce": 0.6489705443382263, "mse": 0.18327855101869076, "patients": 15, "observed_scalars": 3318, "auroc": 0.76, "auprc": 0.7}}
+{
+  "baseline_validation": {
+    "loss": 3085.1742350260415,
+    "nll": 3017.3291829427085,
+    "kl": 0.0,
+    "bce": 0.6784497499465942,
+    "mse": 0.3004875235919711,
+    "patients": 15,
+    "observed_scalars": 3318,
+    "auroc": 0.9400000000000001,
+    "auprc": 0.8766666666666667
+  },
+  "best_epoch": 1,
+  "validation": {
+    "loss": 1785.8951416015625,
+    "nll": 1720.9980875651042,
+    "kl": 0.0,
+    "bce": 0.6489705443382263,
+    "mse": 0.18327855101869076,
+    "patients": 15,
+    "observed_scalars": 3318,
+    "auroc": 0.76,
+    "auprc": 0.7
+  },
+  "test": {
+    "loss": 1575.53662109375,
+    "nll": 1510.878173828125,
+    "kl": 0.0,
+    "bce": 0.6465843915939331,
+    "mse": 0.18028689222504393,
+    "patients": 15,
+    "observed_scalars": 2970,
+    "auroc": 0.8999999999999999,
+    "auprc": 0.835
+  }
+}
+# Synthetic ICU experiments
+
+Validation MSE selects the checkpoint. MSE is in training-set min-max units.
+
+| Experiment | Best epoch | Initial val MSE | Best val MSE | Test MSE | Test AUROC | Test AUPRC |
+|---|---:|---:|---:|---:|---:|---:|
+| /tmp/latentode-classification-smoke/latent_ode | 1 | 0.275829 | 0.169236 | 0.171086 | 0.5200 | 0.3955 |
+| /tmp/latentode-classification-smoke/ode_rnn | 1 | 0.300488 | 0.183279 | 0.180287 | 0.9000 | 0.8350 |
+OK /tmp/latentode-classification-smoke/latent_ode: 1 epochs, best=1, replay identical
+OK /tmp/latentode-classification-smoke/ode_rnn: 1 epochs, best=1, replay identical
+Validated 2 experiments

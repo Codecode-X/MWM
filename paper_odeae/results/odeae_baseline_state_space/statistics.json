@@ -1,0 +1,74 @@
+{
+  "checkpoint": "/home/xjh/projects/LatentODE/paper_odeae/results/local_available/ode_ae/seed_0/best.pt",
+  "checkpoint_sha256": "6a160abccd9a96f1c1f1471354f83024fae38724dde07c714ee1d424f86a51bf",
+  "epoch": 50,
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "parameters": 3003,
+  "physical_gpu": "1",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "model_device": "cuda:0",
+  "state_device": "cuda:0",
+  "pca_device": "cuda:0",
+  "field_device": "cuda:0",
+  "prefix_states": 17165,
+  "counts_by_split": {
+    "train": 12544,
+    "validation": 2219,
+    "test": 2402
+  },
+  "pca_fit": "train only, unscaled, all prefix cutoffs equally weighted",
+  "state_semantics": "deterministic generator trajectory from initial posterior mean, captured at history cutoff",
+  "encoder_state_dim": 12,
+  "generator_state_dim": 6,
+  "shared_field": false,
+  "pca_variance_ratio": [
+    0.6722770929336548,
+    0.3272623121738434,
+    0.00040281168185174465,
+    2.7006015443475917e-05,
+    1.9539682398317382e-05,
+    1.1239286322961561e-05
+  ],
+  "state_variance_retained_2d": 0.9995393753051758,
+  "velocity_energy_retained_2d": 0.9999890923500061,
+  "initial_mean_pca_variance_ratio": [
+    0.9952866435050964,
+    0.004126730374991894,
+    0.00047551371972076595,
+    5.625973790301941e-05,
+    3.420169377932325e-05,
+    2.0630619474104606e-05
+  ],
+  "train_posterior_mean_std_by_dimension": [
+    0.7779248356819153,
+    0.024246156215667725,
+    0.022528519853949547,
+    0.02055654302239418,
+    0.020166192203760147,
+    0.043403517454862595
+  ],
+  "train_average_posterior_std_by_dimension": [
+    0.7458140254020691,
+    1.014906406402588,
+    1.002566933631897,
+    0.999743640422821,
+    0.9963985681533813,
+    0.9951991438865662
+  ],
+  "average_projected_initial_covariance": [
+    [
+      0.5603025555610657,
+      -0.0030439402908086777
+    ],
+    [
+      -0.0030439412221312523,
+      0.9982424974441528
+    ]
+  ],
+  "train_total_mean_variation": 0.6089755892753601,
+  "train_total_posterior_variance": 5.5778961181640625,
+  "generator_speed_median": 0.32332998514175415,
+  "checks": [
+    "decoder-hook states exactly reproduce original cutoff predictions; first state equals posterior mean"
+  ]
+}

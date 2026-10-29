@@ -1,0 +1,152 @@
+ablation:
+  desc: ''
+  sort: 27
+  value: forward_age sharing and parameter allocation; see study design
+ablation_family:
+  desc: ''
+  sort: 32
+  value: allocation_2x
+atol:
+  desc: ''
+  sort: 17
+  value: 1.0e-06
+batch_size:
+  desc: ''
+  sort: 13
+  value: 32
+capacity_change:
+  desc: ''
+  sort: 24
+  value: '{"generator_ode_width": 1849}'
+cce_weight:
+  desc: ''
+  sort: 7
+  value: 1.0
+data:
+  desc: ''
+  sort: 20
+  value: /home/xjh/projects/LatentODE/paper_odeae/cache/local_available.pkl
+encoder_direction:
+  desc: ''
+  sort: 26
+  value: forward
+encoder_initialization:
+  desc: ''
+  sort: 28
+  value: age
+generator_ode_width:
+  desc: ''
+  sort: 29
+  value: 1849
+input_dropout:
+  desc: ''
+  sort: 14
+  value: 0.1
+kl_weight:
+  desc: ''
+  sort: 8
+  value: 1.0
+l2_weight:
+  desc: ''
+  sort: 9
+  value: 0.02
+latent:
+  desc: ''
+  sort: 0
+  value: 6
+lr:
+  desc: ''
+  sort: 3
+  value: 0.003
+lr_decay:
+  desc: ''
+  sort: 4
+  value: 0.97
+lr_decay_steps:
+  desc: ''
+  sort: 5
+  value: 2000
+max_epochs:
+  desc: ''
+  sort: 10
+  value: 300
+min_epochs:
+  desc: ''
+  sort: 11
+  value: 50
+mlp_width:
+  desc: ''
+  sort: 2
+  value: 154
+model:
+  desc: ''
+  sort: 19
+  value: deterministic
+model_parameters:
+  desc: ''
+  sort: 37
+  value: 45048
+mse_weight:
+  desc: ''
+  sort: 6
+  value: 1.0
+normalization:
+  desc: ''
+  sort: 15
+  value: train_minmax
+ode_width:
+  desc: ''
+  sort: 1
+  value: 118
+output:
+  desc: ''
+  sort: 21
+  value: /home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/generator_ode_2x/seed_0
+parameter_device:
+  desc: ''
+  sort: 36
+  value: cuda:0
+patience:
+  desc: ''
+  sort: 12
+  value: 40
+physical_gpu:
+  desc: ''
+  sort: 35
+  value: '3'
+rtol:
+  desc: ''
+  sort: 16
+  value: 0.0001
+scope:
+  desc: ''
+  sort: 22
+  value: local_available
+seed:
+  desc: ''
+  sort: 18
+  value: 0
+smoke:
+  desc: ''
+  sort: 25
+  value: false
+study:
+  desc: ''
+  sort: 30
+  value: forward_age_scaling
+target_parameters:
+  desc: ''
+  sort: 23
+  value: 45048
+tracking_family:
+  desc: ''
+  sort: 33
+  value: odeae_reproduction
+training_seed:
+  desc: ''
+  sort: 34
+  value: 0
+variant:
+  desc: ''
+  sort: 31
+  value: generator_ode_2x

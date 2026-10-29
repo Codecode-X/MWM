@@ -1,0 +1,1854 @@
+Diagnostic log bound to file: /home/xjh/projects/LatentODE/swanlog/run-20261027_031953-eqxm3xf4/debug/debug.log
+2026-10-27 03:19:55.022 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.project_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.project_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 513, in _create_column
+    add_multi_chart(tag_id=tag_id, chart_id=chart_id)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/utils/chart.py", line 215, in add_multi_chart
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:19:55.097 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:19:55.115 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:19:55.130 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:19:55.145 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:19:55.160 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:19:55.175 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:19:55.190 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:19:55.204 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:19:55.219 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:19:55.236 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:19:55.252 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:19:55.767 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/run/components/consumer/__init__.py", line 161, in _run
+    event = self._queue.get(timeout=self._flush_timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:20:05.135 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/run/components/consumer/__init__.py", line 161, in _run
+    event = self._queue.get(timeout=self._flush_timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:20:25.264 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/run/components/consumer/__init__.py", line 161, in _run
+    event = self._queue.get(timeout=self._flush_timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:20:45.416 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/run/components/consumer/__init__.py", line 161, in _run
+    event = self._queue.get(timeout=self._flush_timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:21:05.516 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/run/components/consumer/__init__.py", line 161, in _run
+    event = self._queue.get(timeout=self._flush_timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:21:25.641 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/run/components/consumer/__init__.py", line 161, in _run
+    event = self._queue.get(timeout=self._flush_timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:21:45.764 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/run/components/consumer/__init__.py", line 161, in _run
+    event = self._queue.get(timeout=self._flush_timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:22:05.891 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/run/components/consumer/__init__.py", line 161, in _run
+    event = self._queue.get(timeout=self._flush_timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:22:26.017 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/run/components/consumer/__init__.py", line 161, in _run
+    event = self._queue.get(timeout=self._flush_timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:22:46.162 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/run/components/consumer/__init__.py", line 161, in _run
+    event = self._queue.get(timeout=self._flush_timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:23:06.292 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/run/components/consumer/__init__.py", line 161, in _run
+    event = self._queue.get(timeout=self._flush_timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:23:26.479 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/run/components/consumer/__init__.py", line 161, in _run
+    event = self._queue.get(timeout=self._flush_timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:23:46.547 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/run/components/consumer/__init__.py", line 161, in _run
+    event = self._queue.get(timeout=self._flush_timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:24:06.672 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/run/components/consumer/__init__.py", line 161, in _run
+    event = self._queue.get(timeout=self._flush_timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在
+2026-10-27 03:24:26.767 | ERROR    | swanlab.sdk.internal.pkg.safe:block:101 - Error executing 'on_scalar_flush' in callback 'SwanLabLocalCallbacker': Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/run/components/consumer/__init__.py", line 161, in _run
+    event = self._queue.get(timeout=self._flush_timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+sqlite3.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 141, in create
+    return super().create(
+           ^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 120, in create
+    return super().create(**query)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6748, in create
+    inst.save(force_insert=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/model.py", line 104, in save
+    super().save(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 6958, in save
+    pk = self.insert(**field_dict).execute()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2036, in inner
+    return method(self, database, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2107, in execute
+    return self._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2912, in _execute
+    return super(Insert, self)._execute(database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 2625, in _execute
+    cursor = database.execute(self)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3330, in execute
+    return self.execute_sql(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3320, in execute_sql
+    with __exception_wrapper__:
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3088, in __exit__
+    reraise(new_type, new_type(exc_value, *exc_args), traceback)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 196, in reraise
+    raise value.with_traceback(tb)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/peewee.py", line 3322, in execute_sql
+    cursor.execute(sql, params or ())
+peewee.IntegrityError: UNIQUE constraint failed: chart.name, chart.experiment_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/pkg/safe/__init__.py", line 98, in block
+    yield
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/sdk/internal/context/components/callbacker/__init__.py", line 65, in dispatcher
+    getattr(cb, name)(*args, **kwargs)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 397, in on_scalar_flush
+    self._handle_metric(record, scalar=True)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 438, in _handle_metric
+    self._create_column(record, ctx)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanlab/deprecated/local.py", line 487, in _create_column
+    chart = Chart.create(
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/swanboard/db/models/charts.py", line 153, in create
+    raise ExistedError("图表已存在")
+swanboard.db.error.ExistedError: 图表已存在

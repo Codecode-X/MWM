@@ -1,0 +1,41 @@
+{
+  "model": "latent_ode",
+  "seed": 3,
+  "split_seed": 42,
+  "objective": "native",
+  "best_epoch": 6,
+  "parameters": 126766,
+  "threshold": 0.29377222061157227,
+  "runtime": {
+    "tensor_device": "cuda:0",
+    "cuda_visible_devices": "2",
+    "gpu_name": "NVIDIA GeForce RTX 4090"
+  },
+  "validation": {
+    "auroc": 0.66,
+    "ap": 0.569047619047619,
+    "brier": 0.2233959975606071,
+    "accuracy": 0.6666666666666666,
+    "f1": 0.6153846153846154,
+    "precision": 0.5,
+    "recall": 0.8
+  },
+  "test": {
+    "auroc": 0.42000000000000004,
+    "ap": 0.41630036630036626,
+    "brier": 0.22385095266404462,
+    "accuracy": 0.26666666666666666,
+    "f1": 0.26666666666666666,
+    "precision": 0.2,
+    "recall": 0.4
+  },
+  "test_fixed_05": {
+    "auroc": 0.42000000000000004,
+    "ap": 0.41630036630036626,
+    "brier": 0.22385095266404462,
+    "accuracy": 0.6666666666666666,
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0
+  }
+}

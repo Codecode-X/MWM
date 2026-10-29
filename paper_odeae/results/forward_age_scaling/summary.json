@@ -1,0 +1,468 @@
+{
+  "updated_at": "2026-10-29T01:39:29.275312+00:00",
+  "queue_status": "stopped_by_user",
+  "runs": [
+    {
+      "name": "baseline",
+      "family": "reference",
+      "parameters": 22545,
+      "changes": {},
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/baseline.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/baseline/seed_0",
+      "status": "complete",
+      "epochs": 164,
+      "best_epoch": 124,
+      "validation_overall": 0.9198576772950195,
+      "validation_forecast": 1.2621729592884199,
+      "best_training_components": {
+        "mse": 0.5280808806419373,
+        "cce": 0.3073846399784088,
+        "kl": 0.0,
+        "ode_l2": 0.37343621253967285,
+        "gradient_norm": 2.7422945499420166,
+        "weighted_ode_l2": 0.0074687242507934576
+      },
+      "mean_epoch_seconds": 145.7365069523952,
+      "peak_memory_bytes": 36858368,
+      "budget_limited": false,
+      "best_near_budget_end": false,
+      "test": {
+        "interpolation": 0.630991682638372,
+        "forecast": 1.1668954533318963,
+        "overall": 0.8658347429157363
+      },
+      "elapsed_seconds": 23925.243007373996,
+      "checkpoint_reload_difference": 0.0,
+      "validation_forecast_gain": 0.0
+    },
+    {
+      "name": "shared_tied",
+      "family": "sharing",
+      "parameters": 21005,
+      "changes": {
+        "shared_vector_field": true
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/shared_tied.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/shared_tied/seed_0",
+      "status": "complete",
+      "epochs": 160,
+      "best_epoch": 120,
+      "validation_overall": 0.9055592458636974,
+      "validation_forecast": 1.2146852763537956,
+      "best_training_components": {
+        "mse": 0.5258216857910156,
+        "cce": 0.3034857511520386,
+        "kl": 0.0,
+        "ode_l2": 0.376276433467865,
+        "gradient_norm": 2.86868953704834,
+        "weighted_ode_l2": 0.0075255286693573
+      },
+      "mean_epoch_seconds": 137.82075606151847,
+      "peak_memory_bytes": 36836864,
+      "budget_limited": false,
+      "best_near_budget_end": false,
+      "test": {
+        "interpolation": 0.6416926457157696,
+        "forecast": 1.1469362162451502,
+        "overall": 0.8615591357495496
+      },
+      "elapsed_seconds": 22074.293216449092,
+      "checkpoint_reload_difference": 0.0,
+      "validation_forecast_gain": 0.04748768293462424
+    },
+    {
+      "name": "shared_tied_l2x2",
+      "family": "sharing_regularization_control",
+      "parameters": 21005,
+      "changes": {
+        "shared_vector_field": true,
+        "shared_l2_multiplier": 2.0
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/shared_tied_l2x2.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/shared_tied_l2x2/seed_0",
+      "status": "complete",
+      "epochs": 182,
+      "best_epoch": 142,
+      "validation_overall": 0.9103670152793744,
+      "validation_forecast": 1.2611322814308525,
+      "best_training_components": {
+        "mse": 0.5200368165969849,
+        "cce": 0.3000809848308563,
+        "kl": 0.0,
+        "ode_l2": 0.4378189444541931,
+        "gradient_norm": 3.014810562133789,
+        "weighted_ode_l2": 0.008756378889083863
+      },
+      "mean_epoch_seconds": 134.88899406715575,
+      "peak_memory_bytes": 36836864,
+      "budget_limited": false,
+      "best_near_budget_end": false,
+      "test": {
+        "interpolation": 0.6338358076308188,
+        "forecast": 1.1438388012944318,
+        "overall": 0.8569163629431116
+      },
+      "elapsed_seconds": 24575.19702769397,
+      "checkpoint_reload_difference": 0.0,
+      "validation_forecast_gain": 0.0010406778575673403
+    },
+    {
+      "name": "shared_matched",
+      "family": "sharing_parameter_control",
+      "parameters": 22545,
+      "changes": {
+        "shared_vector_field": true,
+        "mlp_width": 159,
+        "ode_width": 188
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/shared_matched.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/shared_matched/seed_0",
+      "status": "complete",
+      "epochs": 96,
+      "best_epoch": 56,
+      "validation_overall": 0.8872216464004927,
+      "validation_forecast": 1.161297940862891,
+      "best_training_components": {
+        "mse": 0.5675057768821716,
+        "cce": 0.3322708308696747,
+        "kl": 0.0,
+        "ode_l2": 0.4246106445789337,
+        "gradient_norm": 2.6182892322540283,
+        "weighted_ode_l2": 0.008492212891578674
+      },
+      "mean_epoch_seconds": 147.76031408448034,
+      "peak_memory_bytes": 44890112,
+      "budget_limited": false,
+      "best_near_budget_end": false,
+      "test": {
+        "interpolation": 0.627253720494563,
+        "forecast": 1.1392620325790372,
+        "overall": 0.8506282777189398
+      },
+      "elapsed_seconds": 14203.198393445928,
+      "checkpoint_reload_difference": 0.0,
+      "validation_forecast_gain": 0.10087501842552893
+    },
+    {
+      "name": "init_2x",
+      "family": "allocation_2x",
+      "parameters": 45049,
+      "changes": {
+        "init_width": 2967
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/init_2x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/init_2x/seed_0",
+      "status": "complete",
+      "epochs": 121,
+      "best_epoch": 81,
+      "validation_overall": 0.899876104933191,
+      "validation_forecast": 1.1887168356718167,
+      "best_training_components": {
+        "mse": 0.5506411194801331,
+        "cce": 0.3257911801338196,
+        "kl": 0.0,
+        "ode_l2": 0.35918861627578735,
+        "gradient_norm": 2.5469415187835693,
+        "weighted_ode_l2": 0.007183772325515747
+      },
+      "mean_epoch_seconds": 148.71338865671245,
+      "peak_memory_bytes": 37431296,
+      "budget_limited": false,
+      "best_near_budget_end": false,
+      "test": {
+        "interpolation": 0.660826683102655,
+        "forecast": 1.1357691263160916,
+        "overall": 0.867328383258176
+      },
+      "elapsed_seconds": 18014.69179715996,
+      "checkpoint_reload_difference": 0.0,
+      "validation_forecast_gain": 0.07345612361660314,
+      "gain_per_10k_parameters": 0.03264136314282045
+    },
+    {
+      "name": "update_2x",
+      "family": "allocation_2x",
+      "parameters": 45051,
+      "changes": {
+        "update_width": 517
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/update_2x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/update_2x/seed_0",
+      "status": "stopped_by_user",
+      "epochs": 86,
+      "best_epoch": 78,
+      "validation_overall": 0.9013307257925851,
+      "validation_forecast": 1.207609396779183,
+      "best_training_components": {
+        "mse": 0.5508870482444763,
+        "cce": 0.3197735846042633,
+        "kl": 0.0,
+        "ode_l2": 0.4472455680370331,
+        "gradient_norm": 2.6281003952026367,
+        "weighted_ode_l2": 0.008944911360740661
+      },
+      "mean_epoch_seconds": 140.64024016253654,
+      "peak_memory_bytes": 37959680,
+      "budget_limited": false,
+      "best_near_budget_end": false,
+      "validation_forecast_gain": 0.054563562509236885,
+      "gain_per_10k_parameters": 0.0242440071577521
+    },
+    {
+      "name": "decoder_2x",
+      "family": "allocation_2x",
+      "parameters": 45057,
+      "changes": {
+        "decoder_width": 556
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/decoder_2x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/decoder_2x/seed_0",
+      "status": "stopped_by_user",
+      "epochs": 74,
+      "best_epoch": 73,
+      "validation_overall": 0.9051563105915201,
+      "validation_forecast": 1.2117304887367726,
+      "best_training_components": {
+        "mse": 0.5670323371887207,
+        "cce": 0.34090518951416016,
+        "kl": 0.0,
+        "ode_l2": 0.30639663338661194,
+        "gradient_norm": 2.681229591369629,
+        "weighted_ode_l2": 0.006127932667732239
+      },
+      "mean_epoch_seconds": 139.37201387741968,
+      "peak_memory_bytes": 39299072,
+      "budget_limited": false,
+      "best_near_budget_end": false,
+      "validation_forecast_gain": 0.0504424705516473,
+      "gain_per_10k_parameters": 0.0224069254404972
+    },
+    {
+      "name": "encoder_ode_2x",
+      "family": "allocation_2x",
+      "parameters": 45048,
+      "changes": {
+        "encoder_ode_width": 1849
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/encoder_ode_2x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/encoder_ode_2x/seed_0",
+      "status": "stopped_by_user",
+      "epochs": 70,
+      "best_epoch": 44,
+      "validation_overall": 0.9107256591722086,
+      "validation_forecast": 1.206008122603092,
+      "best_training_components": {
+        "mse": 0.5796962380409241,
+        "cce": 0.3693336844444275,
+        "kl": 0.0,
+        "ode_l2": 0.95301753282547,
+        "gradient_norm": 2.7772116661071777,
+        "weighted_ode_l2": 0.0190603506565094
+      },
+      "mean_epoch_seconds": 137.76640057215533,
+      "peak_memory_bytes": 251323904,
+      "budget_limited": false,
+      "best_near_budget_end": false,
+      "validation_forecast_gain": 0.05616483668532779,
+      "gain_per_10k_parameters": 0.024958821795017457
+    },
+    {
+      "name": "generator_ode_2x",
+      "family": "allocation_2x",
+      "parameters": 45048,
+      "changes": {
+        "generator_ode_width": 1849
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/generator_ode_2x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/generator_ode_2x/seed_0",
+      "status": "stopped_by_user",
+      "epochs": 13,
+      "best_epoch": 10,
+      "validation_overall": 1.0042006535551231,
+      "validation_forecast": 1.299623215699777,
+      "best_training_components": {
+        "mse": 0.6545964479446411,
+        "cce": 0.42428460717201233,
+        "kl": 0.0,
+        "ode_l2": 0.5170115828514099,
+        "gradient_norm": 3.0898094177246094,
+        "weighted_ode_l2": 0.0103402316570282
+      },
+      "mean_epoch_seconds": 154.95186136960268,
+      "peak_memory_bytes": 257627136,
+      "budget_limited": false,
+      "best_near_budget_end": false,
+      "validation_forecast_gain": -0.03745025641135702,
+      "gain_per_10k_parameters": -0.016642339426457372
+    },
+    {
+      "name": "both_odes_2x",
+      "family": "allocation_2x",
+      "parameters": 45035,
+      "changes": {
+        "ode_width": 983
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/both_odes_2x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/both_odes_2x/seed_0",
+      "status": "cancelled_by_user"
+    },
+    {
+      "name": "all_mlps_2x",
+      "family": "allocation_2x",
+      "parameters": 45099,
+      "changes": {
+        "mlp_width": 333
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/all_mlps_2x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/all_mlps_2x/seed_0",
+      "status": "cancelled_by_user"
+    },
+    {
+      "name": "all_networks_2x",
+      "family": "allocation_2x",
+      "parameters": 45017,
+      "changes": {
+        "mlp_width": 308,
+        "ode_width": 236
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/all_networks_2x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/all_networks_2x/seed_0",
+      "status": "cancelled_by_user"
+    },
+    {
+      "name": "init_4x",
+      "family": "dose_response_4x",
+      "parameters": 90177,
+      "changes": {
+        "init_width": 8608
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/init_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/init_4x/seed_0",
+      "status": "cancelled_by_user"
+    },
+    {
+      "name": "update_4x",
+      "family": "dose_response_4x",
+      "parameters": 90187,
+      "changes": {
+        "update_width": 1245
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/update_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/update_4x/seed_0",
+      "status": "cancelled_by_user"
+    },
+    {
+      "name": "decoder_4x",
+      "family": "dose_response_4x",
+      "parameters": 90193,
+      "changes": {
+        "decoder_width": 1362
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/decoder_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/decoder_4x/seed_0",
+      "status": "cancelled_by_user"
+    },
+    {
+      "name": "encoder_ode_4x",
+      "family": "dose_response_4x",
+      "parameters": 90184,
+      "changes": {
+        "encoder_ode_width": 5321
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/encoder_ode_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/encoder_ode_4x/seed_0",
+      "status": "cancelled_by_user"
+    },
+    {
+      "name": "generator_ode_4x",
+      "family": "dose_response_4x",
+      "parameters": 90184,
+      "changes": {
+        "generator_ode_width": 5321
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/generator_ode_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/generator_ode_4x/seed_0",
+      "status": "cancelled_by_user"
+    },
+    {
+      "name": "both_odes_4x",
+      "family": "dose_response_4x",
+      "parameters": 90171,
+      "changes": {
+        "ode_width": 2719
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/both_odes_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/both_odes_4x/seed_0",
+      "status": "cancelled_by_user"
+    },
+    {
+      "name": "all_mlps_4x",
+      "family": "dose_response_4x",
+      "parameters": 90207,
+      "changes": {
+        "mlp_width": 691
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/all_mlps_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/all_mlps_4x/seed_0",
+      "status": "cancelled_by_user"
+    },
+    {
+      "name": "all_networks_4x",
+      "family": "dose_response_4x",
+      "parameters": 89961,
+      "changes": {
+        "mlp_width": 616,
+        "ode_width": 472
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/all_networks_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/all_networks_4x/seed_0",
+      "status": "cancelled_by_user"
+    },
+    {
+      "name": "latent_12",
+      "family": "latent_fixed_width",
+      "parameters": 29097,
+      "changes": {
+        "latent": 12
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/latent_12.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/latent_12/seed_0",
+      "status": "cancelled_by_user"
+    },
+    {
+      "name": "latent_24",
+      "family": "latent_fixed_width",
+      "parameters": 42201,
+      "changes": {
+        "latent": 24
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/latent_24.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/latent_24/seed_0",
+      "status": "cancelled_by_user"
+    },
+    {
+      "name": "latent_48",
+      "family": "latent_fixed_width",
+      "parameters": 68409,
+      "changes": {
+        "latent": 48
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/latent_48.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/latent_48/seed_0",
+      "status": "cancelled_by_user"
+    },
+    {
+      "name": "latent_24_matched",
+      "family": "latent_parameter_control",
+      "parameters": 22545,
+      "changes": {
+        "latent": 24,
+        "mlp_width": 77,
+        "ode_width": 73
+      },
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/configs/latent_24_matched.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/latent_24_matched/seed_0",
+      "status": "cancelled_by_user"
+    }
+  ]
+}

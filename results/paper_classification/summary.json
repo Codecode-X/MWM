@@ -1,0 +1,86 @@
+[
+  {
+    "experiment": "results/paper_classification/latent_ode",
+    "model": "latent_ode",
+    "task": "interpolation",
+    "classification_weight": 100.0,
+    "epochs": 20,
+    "seed": 42,
+    "baseline_validation": {
+      "loss": 4008.986328125,
+      "nll": 3938.4461263020835,
+      "kl": 2.4481326738993325,
+      "bce": 0.6809215744336446,
+      "mse": 0.2758285354209852,
+      "patients": 15,
+      "observed_scalars": 3318,
+      "auroc": 0.66,
+      "auprc": 0.6666666666666667
+    },
+    "best_epoch": 19,
+    "validation": {
+      "loss": -9.395401000976562,
+      "nll": -114.6592305501302,
+      "kl": 41.20264180501302,
+      "bce": 0.6406118869781494,
+      "mse": 0.01667357292733615,
+      "patients": 15,
+      "observed_scalars": 3318,
+      "auroc": 0.46,
+      "auprc": 0.34653679653679653
+    },
+    "test": {
+      "loss": 11.446062723795572,
+      "nll": -93.05808003743489,
+      "kl": 41.04948425292969,
+      "bce": 0.6345465779304504,
+      "mse": 0.017581852446451333,
+      "patients": 15,
+      "observed_scalars": 2970,
+      "auroc": 0.72,
+      "auprc": 0.6190476190476191
+    }
+  },
+  {
+    "experiment": "results/paper_classification/ode_rnn",
+    "model": "ode_rnn",
+    "task": "interpolation",
+    "classification_weight": 100.0,
+    "epochs": 20,
+    "seed": 42,
+    "baseline_validation": {
+      "loss": 3085.1742350260415,
+      "nll": 3017.3291829427085,
+      "kl": 0.0,
+      "bce": 0.6784497499465942,
+      "mse": 0.3004875235919711,
+      "patients": 15,
+      "observed_scalars": 3318,
+      "auroc": 0.9400000000000001,
+      "auprc": 0.8766666666666667
+    },
+    "best_epoch": 19,
+    "validation": {
+      "loss": -23.70226542154948,
+      "nll": -84.1925048828125,
+      "kl": 0.0,
+      "bce": 0.6049024065335592,
+      "mse": 0.020060589254091057,
+      "patients": 15,
+      "observed_scalars": 3318,
+      "auroc": 0.98,
+      "auprc": 0.9666666666666666
+    },
+    "test": {
+      "loss": -18.433673858642578,
+      "nll": -77.54981994628906,
+      "kl": 0.0,
+      "bce": 0.5911614696184794,
+      "mse": 0.01983961754977101,
+      "patients": 15,
+      "observed_scalars": 2970,
+      "auroc": 1.0,
+      "auprc": 1.0
+    }
+  }
+]

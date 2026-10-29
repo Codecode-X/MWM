@@ -1,0 +1,149 @@
+ablation:
+  desc: ''
+  sort: 27
+  value: age INIT preserved; chronological history assimilation; cutoff-anchored past
+    reconstruction and future forecasting
+atol:
+  desc: ''
+  sort: 17
+  value: 1.0e-06
+batch_size:
+  desc: ''
+  sort: 13
+  value: 32
+capacity_change:
+  desc: ''
+  sort: 24
+  value: latent remains 6; only MLP and ODE hidden widths increase
+cce_weight:
+  desc: ''
+  sort: 7
+  value: 1.0
+data:
+  desc: ''
+  sort: 20
+  value: paper_odeae/cache/local_available.pkl
+distributed_world_size:
+  desc: ''
+  sort: 29
+  value: 4
+encoder_direction:
+  desc: ''
+  sort: 26
+  value: forward
+encoder_initialization:
+  desc: ''
+  sort: 28
+  value: age
+input_dropout:
+  desc: ''
+  sort: 14
+  value: 0.1
+kl_weight:
+  desc: ''
+  sort: 8
+  value: 1.0
+l2_weight:
+  desc: ''
+  sort: 9
+  value: 0.02
+latent:
+  desc: ''
+  sort: 0
+  value: 6
+lr:
+  desc: ''
+  sort: 3
+  value: 0.003
+lr_decay:
+  desc: ''
+  sort: 4
+  value: 0.97
+lr_decay_steps:
+  desc: ''
+  sort: 5
+  value: 2000
+max_epochs:
+  desc: ''
+  sort: 10
+  value: 1
+min_epochs:
+  desc: ''
+  sort: 11
+  value: 0
+mlp_width:
+  desc: ''
+  sort: 2
+  value: 154
+model:
+  desc: ''
+  sort: 19
+  value: deterministic
+model_parameters:
+  desc: ''
+  sort: 35
+  value: 22545
+mse_weight:
+  desc: ''
+  sort: 6
+  value: 1.0
+normalization:
+  desc: ''
+  sort: 15
+  value: train_minmax
+ode_width:
+  desc: ''
+  sort: 1
+  value: 118
+output:
+  desc: ''
+  sort: 21
+  value: /home/xjh/projects/LatentODE/paper_odeae/results/direction_ablation/checks/age/smoke
+parameter_device:
+  desc: ''
+  sort: 34
+  value: cuda:0
+patience:
+  desc: ''
+  sort: 12
+  value: 1
+physical_gpu:
+  desc: ''
+  sort: 33
+  value: '0'
+physical_gpus:
+  desc: ''
+  sort: 30
+  value:
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+rtol:
+  desc: ''
+  sort: 16
+  value: 0.0001
+scope:
+  desc: ''
+  sort: 22
+  value: local_available
+seed:
+  desc: ''
+  sort: 18
+  value: 0
+smoke:
+  desc: ''
+  sort: 25
+  value: true
+target_parameters:
+  desc: ''
+  sort: 23
+  value: 22545
+tracking_family:
+  desc: ''
+  sort: 31
+  value: odeae_capacity_match
+training_seed:
+  desc: ''
+  sort: 32
+  value: 0

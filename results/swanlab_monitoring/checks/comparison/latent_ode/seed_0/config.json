@@ -1,0 +1,39 @@
+{
+  "data": "/home/xjh/projects/LatentODE/results/swanlab_monitoring/checks/tiny_icu.csv",
+  "output": "/home/xjh/projects/LatentODE/results/swanlab_monitoring/checks/comparison",
+  "models": [
+    "legacy_transformer",
+    "latent_ode",
+    "ode_rnn"
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "split_seed": 42,
+  "epochs": 1,
+  "batch_size": 8,
+  "lr": 0.001,
+  "weight_decay": 0.0,
+  "clip_grad": 10.0,
+  "train_samples": 1,
+  "eval_samples": 1,
+  "eval_mode": "mc",
+  "eval_seed": 1000000,
+  "objective": "bce",
+  "latent": 4,
+  "hidden": 8,
+  "width": 8,
+  "layers": 1,
+  "device": "cuda",
+  "threads": 1,
+  "paper_time_boundaries": [
+    0.0,
+    1.0
+  ],
+  "model": "latent_ode",
+  "training_seed": 0
+}

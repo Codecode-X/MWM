@@ -1,0 +1,119 @@
+swanlab: Tracking run with swanlab version 0.10.3
+swanlab: 💾 Run data saved at 
+/home/xjh/projects/LatentODE/swanlog/run-20261027_032824-s315kw0b
+swanlab: 🌟 Run `swanlab watch /home/xjh/projects/LatentODE/swanlog` to view 
+SwanLab Experiment Dashboard
+{"epoch": 1, "train_loss": 576.2396240234375, "validation": {"loss": 348.7397766113281, "nll": 347.94677734375, "kl": 0.7929952144622803, "bce": 0.0, "mse": 0.3176285922527313, "patients": 4, "observed_scalars": 96}}
+{
+  "baseline_validation": {
+    "loss": 351.7217102050781,
+    "nll": 350.95361328125,
+    "kl": 0.7680943012237549,
+    "bce": 0.0,
+    "mse": 0.3201342821121216,
+    "patients": 4,
+    "observed_scalars": 96
+  },
+  "best_epoch": 1,
+  "validation": {
+    "loss": 348.7397766113281,
+    "nll": 347.94677734375,
+    "kl": 0.7929952144622803,
+    "bce": 0.0,
+    "mse": 0.3176285922527313,
+    "patients": 4,
+    "observed_scalars": 96
+  },
+  "test": {
+    "loss": 279.20843505859375,
+    "nll": 278.417724609375,
+    "kl": 0.790712296962738,
+    "bce": 0.0,
+    "mse": 0.2596876919269562,
+    "patients": 4,
+    "observed_scalars": 96
+  }
+}
+swanlab: 🌟 Run `swanlab watch /home/xjh/projects/LatentODE/swanlog` to view 
+SwanLab Experiment Dashboard
+swanlab: Tracking run with swanlab version 0.10.3
+swanlab: 💾 Run data saved at 
+/home/xjh/projects/LatentODE/swanlog/run-20261027_032838-wxrgsbxk
+swanlab: 🌟 Run `swanlab watch /home/xjh/projects/LatentODE/swanlog` to view 
+SwanLab Experiment Dashboard
+{"epoch": 1, "train_loss": 319.1289825439453, "validation": {"loss": 310.5091552734375, "nll": 310.5091552734375, "kl": 0.0, "bce": 0.0, "mse": 0.28643059730529785, "patients": 4, "observed_scalars": 96}}
+{
+  "baseline_validation": {
+    "loss": 316.85589599609375,
+    "nll": 316.85589599609375,
+    "kl": 0.0,
+    "bce": 0.0,
+    "mse": 0.2917194664478302,
+    "patients": 4,
+    "observed_scalars": 96
+  },
+  "best_epoch": 1,
+  "validation": {
+    "loss": 310.5091552734375,
+    "nll": 310.5091552734375,
+    "kl": 0.0,
+    "bce": 0.0,
+    "mse": 0.28643059730529785,
+    "patients": 4,
+    "observed_scalars": 96
+  },
+  "test": {
+    "loss": 240.263916015625,
+    "nll": 240.263916015625,
+    "kl": 0.0,
+    "bce": 0.0,
+    "mse": 0.22789286077022552,
+    "patients": 4,
+    "observed_scalars": 96
+  }
+}
+swanlab: 🌟 Run `swanlab watch /home/xjh/projects/LatentODE/swanlog` to view 
+SwanLab Experiment Dashboard
+
+[INFO] Class distribution:
+  - Negative samples: 2.0 (50.0%)
+  - Positive samples: 2.0 (50.0%)
+  - Class weights: neg=1.00, pos=1.00
+[INFO] Replaced train DataLoader with WeightedRandomSampler (balanced batches)
+
+============================================================
+IMPROVED TRAINING WITH FIXES
+============================================================
+
+Fixes applied:
+  ✓ Learning rate: 5e-4 (was 1e-5)
+  ✓ Class-weighted loss
+  ✓ Higher classification weight (2.0x)
+  ✓ Reduced KL weight (0.01)
+  ✓ Better gradient clipping (5.0)
+swanlab: Tracking run with swanlab version 0.10.3
+swanlab: 💾 Run data saved at 
+/home/xjh/projects/LatentODE/swanlog/run-20261027_032855-duvjeolw
+swanlab: 🌟 Run `swanlab watch /home/xjh/projects/LatentODE/swanlog` to view 
+SwanLab Experiment Dashboard
+Epoch 1:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 1:   0%|          | 0/1 [00:00<?, ?it/s, loss=1.6138, class=0.7919]Epoch 1: 100%|██████████| 1/1 [00:00<00:00,  1.04it/s, loss=1.6138, class=0.7919]Epoch 1: 100%|██████████| 1/1 [00:00<00:00,  1.04it/s, loss=1.6138, class=0.7919]
+/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/transformer.py:502: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. (Triggered internally at ../aten/src/ATen/NestedTensorImpl.cpp:178.)
+  output = torch._nested_tensor_from_mask(
+
+Epoch 1/1
+  Train - Loss: 1.6138, Class: 0.7919
+  Val   - Loss: 1.3737, AUROC: 1.0000, Sens: 1.0000
+  [SAVED] models/best_model.pt
+  [NEW BEST AUROC]
+/home/xjh/projects/LatentODE/legacy/train.py:305: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  chk = torch.load(best_path, map_location=self.device)
+
+[RESTORED] Loaded best model from models/best_model.pt (epoch 1)
+
+============================================================
+TRAINING COMPLETE
+============================================================
+Best Val AUROC: 1.0000
+[OK] Saved training history
+swanlab: 🌟 Run `swanlab watch /home/xjh/projects/LatentODE/swanlog` to view 
+SwanLab Experiment Dashboard

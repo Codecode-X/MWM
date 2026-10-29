@@ -1,0 +1,50 @@
+{
+  "parameters": 44875,
+  "latent": 28,
+  "physical_gpu": 0,
+  "smoke_hardware": {
+    "physical_gpu": "0",
+    "gpu_name": "NVIDIA GeForce RTX 4090",
+    "parameter_device": "cuda:0",
+    "parameters": 44875,
+    "trainable_parameters": 44875,
+    "torch_version": "2.5.1+cu121",
+    "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+    "model_source_sha256": "194b676ae0ec727d2887b5d3903a20f007a23eae23d719d20d6662302f4132c5",
+    "shared_vector_field": true,
+    "parameter_breakdown": {
+      "init": 4798,
+      "decoder": 12451,
+      "update": 16882,
+      "backward_ode": 10744
+    },
+    "encoder_initialization": "age",
+    "generator_anchor": "history cutoff",
+    "actual_tensor_devices": {
+      "values": "cuda:0",
+      "ages": "cuda:0",
+      "mask": "cuda:0",
+      "context_mask": "cuda:0"
+    },
+    "prediction_device": "cuda:0"
+  },
+  "smoke_status": "cuda_smoke_passed",
+  "checkpoint_reload_difference": 0.0,
+  "formal_swanlab": {
+    "mode": "local",
+    "status": "running",
+    "family": "odeae_reproduction",
+    "training_seed": 0,
+    "log_dir": "/home/xjh/projects/LatentODE/swanlog",
+    "physical_gpu": "0",
+    "parameter_device": "cuda:0",
+    "model_parameters": 44875,
+    "run_id": "uuvb2doc",
+    "experiment_name": "odeae_reproduction-0-latent_2x-seed_0",
+    "sdk_version": "0.10.3"
+  },
+  "source_snapshot_identical_to_latent4x": true,
+  "completed_8x_16x_metrics_unchanged": true,
+  "previous_manifest_and_summary_archived": true,
+  "command": "bash scripts/run_shared_matched_latent_scaling.sh"
+}

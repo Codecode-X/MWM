@@ -1,0 +1,28 @@
+{
+  "jobs": [
+    {
+      "name": "control",
+      "prior_weight": 0.0,
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_prior_weak/configs/control.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_prior_weak/control/seed_0"
+    },
+    {
+      "name": "weak_prior",
+      "prior_weight": 0.01,
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_prior_weak/configs/weak_prior.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_prior_weak/weak_prior/seed_0"
+    }
+  ],
+  "reference": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/shared_matched/seed_0",
+  "dataset": "/home/xjh/projects/LatentODE/paper_odeae/cache/local_available.pkl",
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "parameters": 22545,
+  "physical_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "execution": "paired four-GPU DDP runs, seed 0, global batch 32",
+  "selection": "unchanged validation overall reconstruction; prior loss not added to selection score"
+}

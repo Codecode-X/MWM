@@ -1,0 +1,18 @@
+/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/transformer.py:502: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. (Triggered internally at ../aten/src/ATen/NestedTensorImpl.cpp:178.)
+  output = torch._nested_tensor_from_mask(
+# Three-model classification comparison
+
+Mean ± sample standard deviation (ddof=1) across independent training seeds, fixed patient split.
+Threshold selected on validation F1. AUROC/AP do not depend on the threshold.
+
+| Model | Seeds | Parameters | AUROC | AP | Brier | Accuracy | F1 | Precision | Recall |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| legacy_transformer | 2 | 1 | 0.5000 ± 0.1414 | 0.5000 ± 0.1414 | 0.5000 ± 0.1414 | 0.5000 ± 0.1414 | 0.5000 ± 0.1414 | 0.5000 ± 0.1414 | 0.5000 ± 0.1414 |
+| latent_ode | 2 | 1 | 0.7500 ± 0.2121 | 0.7500 ± 0.2121 | 0.7500 ± 0.2121 | 0.7500 ± 0.2121 | 0.7500 ± 0.2121 | 0.7500 ± 0.2121 | 0.7500 ± 0.2121 |
+
+This estimates training randomness on one fixed split; it is not cross-validation or a clinical generalization estimate.
+Native auxiliary losses and parameter counts differ; use --objective bce for a shared classification-loss ablation.
+----------------------------------------------------------------------
+Ran 35 tests in 6.883s
+
+OK

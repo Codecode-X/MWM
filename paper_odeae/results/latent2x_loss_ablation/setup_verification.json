@@ -1,0 +1,121 @@
+{
+  "verified_at": "2026-10-29T15:33:03.931391+00:00",
+  "cuda_tests": {
+    "command": "CUDA_VISIBLE_DEVICES=1 /home/xjh/miniforge3/envs/ode/bin/python -m unittest paper_odeae.tests.test_latent2x_losses -v",
+    "tests_passed": 2,
+    "frozen_baseline_predictions_and_gradients_exact": true,
+    "full_28_by_28_jacobian_value_and_weight_gradient_checked": true
+  },
+  "protected_baseline_settings": [
+    "latent",
+    "ode_width",
+    "mlp_width",
+    "lr",
+    "lr_decay",
+    "lr_decay_steps",
+    "mse_weight",
+    "cce_weight",
+    "kl_weight",
+    "l2_weight",
+    "max_epochs",
+    "min_epochs",
+    "patience",
+    "batch_size",
+    "input_dropout",
+    "normalization",
+    "rtol",
+    "atol",
+    "seed",
+    "model",
+    "data",
+    "scope",
+    "target_parameters",
+    "encoder_direction",
+    "encoder_initialization",
+    "shared_vector_field"
+  ],
+  "baseline_retrained": false,
+  "runs": [
+    {
+      "name": "both",
+      "physical_gpu": "1",
+      "parameters": 44875,
+      "actual_tensor_devices": {
+        "values": "cuda:0",
+        "ages": "cuda:0",
+        "mask": "cuda:0",
+        "context_mask": "cuda:0"
+      },
+      "loss_component_sum_error": 4.5061111375588325e-07,
+      "checkpoint_reload_difference": 0.0,
+      "smoke_status": "cuda_smoke_passed",
+      "formal_swanlab": {
+        "mode": "local",
+        "status": "running",
+        "family": "odeae_reproduction",
+        "training_seed": 0,
+        "log_dir": "/home/xjh/projects/LatentODE/swanlog",
+        "physical_gpu": "1",
+        "parameter_device": "cuda:0",
+        "model_parameters": 44875,
+        "run_id": "9tkw9spj",
+        "experiment_name": "odeae_reproduction-0-both-seed_0",
+        "sdk_version": "0.10.3"
+      }
+    },
+    {
+      "name": "weak_prior",
+      "physical_gpu": "2",
+      "parameters": 44875,
+      "actual_tensor_devices": {
+        "values": "cuda:0",
+        "ages": "cuda:0",
+        "mask": "cuda:0",
+        "context_mask": "cuda:0"
+      },
+      "loss_component_sum_error": 3.218650812542023e-07,
+      "checkpoint_reload_difference": 0.0,
+      "smoke_status": "cuda_smoke_passed",
+      "formal_swanlab": {
+        "mode": "local",
+        "status": "running",
+        "family": "odeae_reproduction",
+        "training_seed": 0,
+        "log_dir": "/home/xjh/projects/LatentODE/swanlog",
+        "physical_gpu": "2",
+        "parameter_device": "cuda:0",
+        "model_parameters": 44875,
+        "run_id": "21j3v6tw",
+        "experiment_name": "odeae_reproduction-0-weak_prior-seed_0",
+        "sdk_version": "0.10.3"
+      }
+    },
+    {
+      "name": "jacobian",
+      "physical_gpu": "3",
+      "parameters": 44875,
+      "actual_tensor_devices": {
+        "values": "cuda:0",
+        "ages": "cuda:0",
+        "mask": "cuda:0",
+        "context_mask": "cuda:0"
+      },
+      "loss_component_sum_error": 2.7328729679254593e-07,
+      "checkpoint_reload_difference": 0.0,
+      "smoke_status": "cuda_smoke_passed",
+      "formal_swanlab": {
+        "mode": "local",
+        "status": "running",
+        "family": "odeae_reproduction",
+        "training_seed": 0,
+        "log_dir": "/home/xjh/projects/LatentODE/swanlog",
+        "physical_gpu": "3",
+        "parameter_device": "cuda:0",
+        "model_parameters": 44875,
+        "run_id": "gyw7th87",
+        "experiment_name": "odeae_reproduction-0-jacobian-seed_0",
+        "sdk_version": "0.10.3"
+      }
+    }
+  ]
+}

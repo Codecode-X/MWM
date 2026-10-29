@@ -1,0 +1,39 @@
+{
+  "data": "data/raw/synthetic_icu_data.csv",
+  "output": "results/comparison_bce",
+  "models": [
+    "legacy_transformer",
+    "latent_ode",
+    "ode_rnn"
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "split_seed": 42,
+  "epochs": 20,
+  "batch_size": 10,
+  "lr": 0.001,
+  "weight_decay": 0.0,
+  "clip_grad": 10.0,
+  "train_samples": 3,
+  "eval_samples": 32,
+  "eval_mode": "mc",
+  "eval_seed": 1000000,
+  "objective": "bce",
+  "latent": 20,
+  "hidden": 40,
+  "width": 50,
+  "layers": 3,
+  "device": "cpu",
+  "threads": 1,
+  "paper_time_boundaries": [
+    0.0,
+    1.0
+  ],
+  "model": "legacy_transformer",
+  "training_seed": 0
+}

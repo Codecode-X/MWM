@@ -1,0 +1,776 @@
+{
+  "runs": [
+    {
+      "model": "latent_ode",
+      "seed": 0,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 19,
+      "parameters": 32727,
+      "threshold": 0.3055075407028198,
+      "runtime": {
+        "tensor_device": "cuda:0",
+        "cuda_visible_devices": "1",
+        "gpu_name": "NVIDIA GeForce RTX 4090"
+      },
+      "validation": {
+        "auroc": 0.72,
+        "ap": 0.5666666666666667,
+        "brier": 0.21518028581190146,
+        "accuracy": 0.8,
+        "f1": 0.6666666666666666,
+        "precision": 0.75,
+        "recall": 0.6
+      },
+      "test": {
+        "auroc": 0.4,
+        "ap": 0.3535897435897436,
+        "brier": 0.2275469589180071,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "test_fixed_05": {
+        "auroc": 0.4,
+        "ap": 0.3535897435897436,
+        "brier": 0.2275469589180071,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "model": "legacy_transformer",
+      "seed": 0,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 13,
+      "parameters": 126767,
+      "threshold": 0.4678282141685486,
+      "runtime": {
+        "tensor_device": "cuda:0",
+        "cuda_visible_devices": "3",
+        "gpu_name": "NVIDIA GeForce RTX 4090"
+      },
+      "validation": {
+        "auroc": 0.9,
+        "ap": 0.7861904761904761,
+        "brier": 0.16650030466858926,
+        "accuracy": 0.8666666666666667,
+        "f1": 0.8333333333333334,
+        "precision": 0.7142857142857143,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 0.7000000000000001,
+        "ap": 0.706923076923077,
+        "brier": 0.20173614564369605,
+        "accuracy": 0.7333333333333333,
+        "f1": 0.3333333333333333,
+        "precision": 1.0,
+        "recall": 0.2
+      },
+      "test_fixed_05": {
+        "auroc": 0.7000000000000001,
+        "ap": 0.706923076923077,
+        "brier": 0.20173614564369605,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "model": "ode_rnn",
+      "seed": 0,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 7,
+      "parameters": 15877,
+      "threshold": 0.35469555854797363,
+      "runtime": {
+        "tensor_device": "cuda:0",
+        "cuda_visible_devices": "3",
+        "gpu_name": "NVIDIA GeForce RTX 4090"
+      },
+      "validation": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.21487828434595588,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 0.8200000000000001,
+        "ap": 0.6977777777777778,
+        "brier": 0.21945176792090013,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "test_fixed_05": {
+        "auroc": 0.8200000000000001,
+        "ap": 0.6977777777777778,
+        "brier": 0.21945176792090013,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "model": "latent_ode",
+      "seed": 1,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 19,
+      "parameters": 32727,
+      "threshold": 0.3273603916168213,
+      "runtime": {
+        "tensor_device": "cuda:0",
+        "cuda_visible_devices": "0",
+        "gpu_name": "NVIDIA GeForce RTX 4090"
+      },
+      "validation": {
+        "auroc": 0.8,
+        "ap": 0.6166666666666666,
+        "brier": 0.21526913201217912,
+        "accuracy": 0.8,
+        "f1": 0.7272727272727273,
+        "precision": 0.6666666666666666,
+        "recall": 0.8
+      },
+      "test": {
+        "auroc": 0.24,
+        "ap": 0.26565656565656565,
+        "brier": 0.22725560613665377,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "test_fixed_05": {
+        "auroc": 0.24,
+        "ap": 0.26565656565656565,
+        "brier": 0.22725560613665377,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "model": "legacy_transformer",
+      "seed": 1,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 16,
+      "parameters": 126767,
+      "threshold": 0.5,
+      "runtime": {
+        "tensor_device": "cuda:0",
+        "cuda_visible_devices": "0",
+        "gpu_name": "NVIDIA GeForce RTX 4090"
+      },
+      "validation": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.03130463402805585,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.02476484811538845,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test_fixed_05": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.02476484811538845,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    },
+    {
+      "model": "ode_rnn",
+      "seed": 1,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 11,
+      "parameters": 15877,
+      "threshold": 0.31836384534835815,
+      "runtime": {
+        "tensor_device": "cuda:0",
+        "cuda_visible_devices": "2",
+        "gpu_name": "NVIDIA GeForce RTX 4090"
+      },
+      "validation": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.21456082949477892,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 0.8200000000000001,
+        "ap": 0.8166666666666667,
+        "brier": 0.2184265755754371,
+        "accuracy": 0.8,
+        "f1": 0.6666666666666666,
+        "precision": 0.75,
+        "recall": 0.6
+      },
+      "test_fixed_05": {
+        "auroc": 0.8200000000000001,
+        "ap": 0.8166666666666667,
+        "brier": 0.2184265755754371,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "model": "latent_ode",
+      "seed": 2,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 13,
+      "parameters": 32727,
+      "threshold": 0.3119683861732483,
+      "runtime": {
+        "tensor_device": "cuda:0",
+        "cuda_visible_devices": "2",
+        "gpu_name": "NVIDIA GeForce RTX 4090"
+      },
+      "validation": {
+        "auroc": 0.7,
+        "ap": 0.6655122655122655,
+        "brier": 0.21775100118036553,
+        "accuracy": 0.6,
+        "f1": 0.625,
+        "precision": 0.45454545454545453,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 0.62,
+        "ap": 0.6353174603174603,
+        "brier": 0.22188567457375033,
+        "accuracy": 0.4666666666666667,
+        "f1": 0.3333333333333333,
+        "precision": 0.2857142857142857,
+        "recall": 0.4
+      },
+      "test_fixed_05": {
+        "auroc": 0.62,
+        "ap": 0.6353174603174603,
+        "brier": 0.22188567457375033,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "model": "legacy_transformer",
+      "seed": 2,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 14,
+      "parameters": 126767,
+      "threshold": 0.7979145050048828,
+      "runtime": {
+        "tensor_device": "cuda:0",
+        "cuda_visible_devices": "2",
+        "gpu_name": "NVIDIA GeForce RTX 4090"
+      },
+      "validation": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.06462054287391653,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.0443921598720581,
+        "accuracy": 0.9333333333333333,
+        "f1": 0.8888888888888888,
+        "precision": 1.0,
+        "recall": 0.8
+      },
+      "test_fixed_05": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.0443921598720581,
+        "accuracy": 0.9333333333333333,
+        "f1": 0.9090909090909091,
+        "precision": 0.8333333333333334,
+        "recall": 1.0
+      }
+    },
+    {
+      "model": "ode_rnn",
+      "seed": 2,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 6,
+      "parameters": 15877,
+      "threshold": 0.34059450030326843,
+      "runtime": {
+        "tensor_device": "cuda:0",
+        "cuda_visible_devices": "3",
+        "gpu_name": "NVIDIA GeForce RTX 4090"
+      },
+      "validation": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.217101696019678,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 0.8200000000000001,
+        "ap": 0.8166666666666667,
+        "brier": 0.2194153570648871,
+        "accuracy": 0.8,
+        "f1": 0.5714285714285714,
+        "precision": 1.0,
+        "recall": 0.4
+      },
+      "test_fixed_05": {
+        "auroc": 0.8200000000000001,
+        "ap": 0.8166666666666667,
+        "brier": 0.2194153570648871,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "model": "latent_ode",
+      "seed": 3,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 12,
+      "parameters": 32727,
+      "threshold": 0.32030975818634033,
+      "runtime": {
+        "tensor_device": "cuda:0",
+        "cuda_visible_devices": "1",
+        "gpu_name": "NVIDIA GeForce RTX 4090"
+      },
+      "validation": {
+        "auroc": 0.76,
+        "ap": 0.7,
+        "brier": 0.218614316641164,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "precision": 0.5,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 0.48,
+        "ap": 0.35904761904761906,
+        "brier": 0.22416395237332126,
+        "accuracy": 0.4,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "test_fixed_05": {
+        "auroc": 0.48,
+        "ap": 0.35904761904761906,
+        "brier": 0.22416395237332126,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "model": "legacy_transformer",
+      "seed": 3,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 14,
+      "parameters": 126767,
+      "threshold": 0.6340795755386353,
+      "runtime": {
+        "tensor_device": "cuda:0",
+        "cuda_visible_devices": "0",
+        "gpu_name": "NVIDIA GeForce RTX 4090"
+      },
+      "validation": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.10275555349608902,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 0.98,
+        "ap": 0.9666666666666666,
+        "brier": 0.10798741960596417,
+        "accuracy": 0.7333333333333333,
+        "f1": 0.3333333333333333,
+        "precision": 1.0,
+        "recall": 0.2
+      },
+      "test_fixed_05": {
+        "auroc": 0.98,
+        "ap": 0.9666666666666666,
+        "brier": 0.10798741960596417,
+        "accuracy": 0.8666666666666667,
+        "f1": 0.8333333333333334,
+        "precision": 0.7142857142857143,
+        "recall": 1.0
+      }
+    },
+    {
+      "model": "ode_rnn",
+      "seed": 3,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 8,
+      "parameters": 15877,
+      "threshold": 0.32063937187194824,
+      "runtime": {
+        "tensor_device": "cuda:0",
+        "cuda_visible_devices": "0",
+        "gpu_name": "NVIDIA GeForce RTX 4090"
+      },
+      "validation": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.21906697506616368,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 0.94,
+        "ap": 0.925,
+        "brier": 0.2207546824300414,
+        "accuracy": 0.7333333333333333,
+        "f1": 0.3333333333333333,
+        "precision": 1.0,
+        "recall": 0.2
+      },
+      "test_fixed_05": {
+        "auroc": 0.94,
+        "ap": 0.925,
+        "brier": 0.2207546824300414,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "model": "latent_ode",
+      "seed": 4,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 17,
+      "parameters": 32727,
+      "threshold": 0.3210068643093109,
+      "runtime": {
+        "tensor_device": "cuda:0",
+        "cuda_visible_devices": "1",
+        "gpu_name": "NVIDIA GeForce RTX 4090"
+      },
+      "validation": {
+        "auroc": 0.8800000000000001,
+        "ap": 0.6861904761904761,
+        "brier": 0.21366685673671876,
+        "accuracy": 0.8666666666666667,
+        "f1": 0.8333333333333334,
+        "precision": 0.7142857142857143,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 0.33999999999999997,
+        "ap": 0.3092463092463092,
+        "brier": 0.2253019604079454,
+        "accuracy": 0.4666666666666667,
+        "f1": 0.2,
+        "precision": 0.2,
+        "recall": 0.2
+      },
+      "test_fixed_05": {
+        "auroc": 0.33999999999999997,
+        "ap": 0.3092463092463092,
+        "brier": 0.2253019604079454,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "model": "legacy_transformer",
+      "seed": 4,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 15,
+      "parameters": 126767,
+      "threshold": 0.19783619046211243,
+      "runtime": {
+        "tensor_device": "cuda:0",
+        "cuda_visible_devices": "3",
+        "gpu_name": "NVIDIA GeForce RTX 4090"
+      },
+      "validation": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.14641978225959734,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.12467373255636606,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test_fixed_05": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.12467373255636606,
+        "accuracy": 0.8,
+        "f1": 0.5714285714285714,
+        "precision": 1.0,
+        "recall": 0.4
+      }
+    },
+    {
+      "model": "ode_rnn",
+      "seed": 4,
+      "split_seed": 42,
+      "objective": "bce",
+      "best_epoch": 12,
+      "parameters": 15877,
+      "threshold": 0.33225780725479126,
+      "runtime": {
+        "tensor_device": "cuda:0",
+        "cuda_visible_devices": "3",
+        "gpu_name": "NVIDIA GeForce RTX 4090"
+      },
+      "validation": {
+        "auroc": 1.0,
+        "ap": 1.0,
+        "brier": 0.21461597091022705,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test": {
+        "auroc": 0.68,
+        "ap": 0.5776190476190477,
+        "brier": 0.22036239741768474,
+        "accuracy": 0.7333333333333333,
+        "f1": 0.3333333333333333,
+        "precision": 1.0,
+        "recall": 0.2
+      },
+      "test_fixed_05": {
+        "auroc": 0.68,
+        "ap": 0.5776190476190477,
+        "brier": 0.22036239741768474,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    }
+  ],
+  "summary": {
+    "legacy_transformer": {
+      "n_training_seeds": 5,
+      "test": {
+        "auroc": {
+          "mean": 0.9359999999999999,
+          "std": 0.13221195104830724
+        },
+        "ap": {
+          "mean": 0.9347179487179487,
+          "std": 0.12815660620251487
+        },
+        "brier": {
+          "mean": 0.10071086115869457,
+          "std": 0.07030801630241172
+        },
+        "accuracy": {
+          "mean": 0.8800000000000001,
+          "std": 0.13662601021279466
+        },
+        "f1": {
+          "mean": 0.7111111111111111,
+          "std": 0.3478327964999673
+        },
+        "precision": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "recall": {
+          "mean": 0.64,
+          "std": 0.4098780306383839
+        }
+      },
+      "parameters": 126767
+    },
+    "latent_ode": {
+      "n_training_seeds": 5,
+      "test": {
+        "auroc": {
+          "mean": 0.41600000000000004,
+          "std": 0.1438054240979804
+        },
+        "ap": {
+          "mean": 0.38457153957153956,
+          "std": 0.14517189837967656
+        },
+        "brier": {
+          "mean": 0.22523083048193557,
+          "std": 0.0023343909162456024
+        },
+        "accuracy": {
+          "mean": 0.5333333333333333,
+          "std": 0.1247219128924647
+        },
+        "f1": {
+          "mean": 0.10666666666666666,
+          "std": 0.1534781924429512
+        },
+        "precision": {
+          "mean": 0.09714285714285714,
+          "std": 0.13642670155786654
+        },
+        "recall": {
+          "mean": 0.12000000000000002,
+          "std": 0.1788854381999832
+        }
+      },
+      "parameters": 32727
+    },
+    "ode_rnn": {
+      "n_training_seeds": 5,
+      "test": {
+        "auroc": {
+          "mean": 0.8160000000000001,
+          "std": 0.09208691546577068
+        },
+        "ap": {
+          "mean": 0.7667460317460317,
+          "std": 0.13281010337158528
+        },
+        "brier": {
+          "mean": 0.2196821560817901,
+          "std": 0.0009101900722905788
+        },
+        "accuracy": {
+          "mean": 0.7466666666666667,
+          "std": 0.055777335102271744
+        },
+        "f1": {
+          "mean": 0.38095238095238093,
+          "std": 0.2586376307428622
+        },
+        "precision": {
+          "mean": 0.75,
+          "std": 0.4330127018922193
+        },
+        "recall": {
+          "mean": 0.27999999999999997,
+          "std": 0.22803508501982758
+        }
+      },
+      "parameters": 15877
+    }
+  },
+  "paired_differences": {
+    "latent_ode minus legacy_transformer": {
+      "auroc": {
+        "mean": -0.52,
+        "std": 0.19078784028338913,
+        "n_pairs": 5
+      },
+      "ap": {
+        "mean": -0.5501464091464092,
+        "std": 0.18037065281867795,
+        "n_pairs": 5
+      },
+      "brier": {
+        "mean": 0.12451996932324101,
+        "std": 0.0694074313963526,
+        "n_pairs": 5
+      }
+    },
+    "ode_rnn minus legacy_transformer": {
+      "auroc": {
+        "mean": -0.11999999999999997,
+        "std": 0.16673332000533064,
+        "n_pairs": 5
+      },
+      "ap": {
+        "mean": -0.16797191697191693,
+        "std": 0.1630757602373264,
+        "n_pairs": 5
+      },
+      "brier": {
+        "mean": 0.11897129492309552,
+        "std": 0.06991737727572457,
+        "n_pairs": 5
+      }
+    },
+    "latent_ode minus ode_rnn": {
+      "auroc": {
+        "mean": -0.4,
+        "std": 0.1414213562373095,
+        "n_pairs": 5
+      },
+      "ap": {
+        "mean": -0.38217449217449223,
+        "std": 0.1710295155814256,
+        "n_pairs": 5
+      },
+      "brier": {
+        "mean": 0.005548674400145481,
+        "std": 0.002813797816647963,
+        "n_pairs": 5
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "pca_variance_ratio": [
+    0.3644700050354004,
+    0.1656712293624878,
+    0.16053922474384308,
+    0.13297247886657715,
+    0.10093124210834503,
+    0.07541576027870178
+  ],
+  "state_variance_retained_2d": 0.5301412343978882,
+  "velocity_energy_retained_2d": 0.6961917877197266,
+  "speed_6d_median": 0.2898279130458832,
+  "speed_projected_median": 0.241535946726799,
+  "grid_supported_fraction": 0.7399553656578064,
+  "local_direction_coherence_median": 0.9890151619911194,
+  "checkpoint": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/shared_matched/seed_0/best.pt",
+  "checkpoint_sha256": "f13ab3dae0a2be7da6c9aee971e162b63ae998373a2e48af65bd6fd758acf0b8",
+  "checkpoint_epoch": 56,
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "physical_gpu": "0",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "model_device": "cuda:0",
+  "state_device": "cuda:0",
+  "pca_device": "cuda:0",
+  "field_device": "cuda:0",
+  "prefix_endpoint_states": 17165,
+  "patients": 2900,
+  "counts_by_split": {
+    "train": 12544,
+    "validation": 2219,
+    "test": 2402
+  },
+  "pca_fit_split": "train only; visits weighted equally",
+  "trajectory_selection": "first eligible test subject ID per last-visit diagnosis; >=4 visits",
+  "encoder_equivalence_check": "exact equality to original forward mu on first batch"
+}

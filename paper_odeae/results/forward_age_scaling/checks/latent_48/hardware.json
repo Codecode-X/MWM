@@ -1,0 +1,27 @@
+{
+  "physical_gpu": "3",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "parameter_device": "cuda:0",
+  "parameters": 68409,
+  "trainable_parameters": 68409,
+  "torch_version": "2.5.1+cu121",
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "model_source_sha256": "194b676ae0ec727d2887b5d3903a20f007a23eae23d719d20d6662302f4132c5",
+  "shared_vector_field": false,
+  "parameter_breakdown": {
+    "init": 7748,
+    "decoder": 15141,
+    "update": 22532,
+    "backward_ode": 11494,
+    "forward_ode": 11494
+  },
+  "encoder_initialization": "age",
+  "generator_anchor": "history cutoff",
+  "actual_tensor_devices": {
+    "values": "cuda:0",
+    "ages": "cuda:0",
+    "mask": "cuda:0",
+    "context_mask": "cuda:0"
+  },
+  "prediction_device": "cuda:0"
+}

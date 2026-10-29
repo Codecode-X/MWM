@@ -1,0 +1,89 @@
+/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/transformer.py:502: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. (Triggered internally at ../aten/src/ATen/NestedTensorImpl.cpp:178.)
+  output = torch._nested_tensor_from_mask(
+/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/transformer.py:502: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. (Triggered internally at ../aten/src/ATen/NestedTensorImpl.cpp:178.)
+  output = torch._nested_tensor_from_mask(
+{"model": "legacy_transformer", "seed": 0, "epoch": 1, "train_loss": 1.7260935476848058, "validation": {"auroc": 0.5000000000000001, "ap": 0.399047619047619, "brier": 0.23563033770682468, "accuracy": 0.6666666666666666, "f1": 0.0, "precision": 0.0, "recall": 0.0}}
+{"model": "legacy_transformer", "seed": 1, "epoch": 1, "train_loss": 1.6235553877694267, "validation": {"auroc": 0.7, "ap": 0.5109090909090909, "brier": 0.2330153036075106, "accuracy": 0.6666666666666666, "f1": 0.0, "precision": 0.0, "recall": 0.0}}
+{"model": "legacy_transformer", "seed": 0, "split_seed": 42, "objective": "native", "best_epoch": 1, "parameters": 126767, "threshold": 0.4464009404182434, "runtime": {"tensor_device": "cuda:0", "cuda_visible_devices": "0", "gpu_name": "NVIDIA GeForce RTX 4090"}, "validation": {"auroc": 0.5000000000000001, "ap": 0.399047619047619, "brier": 0.23563033770682468, "accuracy": 0.5333333333333333, "f1": 0.5333333333333333, "precision": 0.4, "recall": 0.8}, "test": {"auroc": 0.54, "ap": 0.4293040293040292, "brier": 0.23594964800250687, "accuracy": 0.4, "f1": 0.47058823529411764, "precision": 0.3333333333333333, "recall": 0.8}, "test_fixed_05": {"auroc": 0.54, "ap": 0.4293040293040292, "brier": 0.23594964800250687, "accuracy": 0.6666666666666666, "f1": 0.0, "precision": 0.0, "recall": 0.0}}
+# Three-model classification comparison
+
+Mean ± sample standard deviation (ddof=1) across independent training seeds, fixed patient split.
+Threshold selected on validation F1. AUROC/AP do not depend on the threshold.
+
+| Model | Seeds | Parameters | AUROC | AP | Brier | Accuracy | F1 | Precision | Recall |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| legacy_transformer | 1 | 126767 | 0.5400 (std unavailable) | 0.4293 (std unavailable) | 0.2359 (std unavailable) | 0.4000 (std unavailable) | 0.4706 (std unavailable) | 0.3333 (std unavailable) | 0.8000 (std unavailable) |
+
+This estimates training randomness on one fixed split; it is not cross-validation or a clinical generalization estimate.
+Native auxiliary losses and parameter counts differ; use --objective bce for a shared classification-loss ablation.
+{"model": "legacy_transformer", "seed": 1, "split_seed": 42, "objective": "native", "best_epoch": 1, "parameters": 126767, "threshold": 0.44351059198379517, "runtime": {"tensor_device": "cuda:0", "cuda_visible_devices": "3", "gpu_name": "NVIDIA GeForce RTX 4090"}, "validation": {"auroc": 0.7, "ap": 0.5109090909090909, "brier": 0.2330153036075106, "accuracy": 0.6, "f1": 0.625, "precision": 0.45454545454545453, "recall": 1.0}, "test": {"auroc": 0.42000000000000004, "ap": 0.3369230769230769, "brier": 0.23554297276221056, "accuracy": 0.4, "f1": 0.47058823529411764, "precision": 0.3333333333333333, "recall": 0.8}, "test_fixed_05": {"auroc": 0.42000000000000004, "ap": 0.3369230769230769, "brier": 0.23554297276221056, "accuracy": 0.6666666666666666, "f1": 0.0, "precision": 0.0, "recall": 0.0}}
+# Three-model classification comparison
+
+Mean ± sample standard deviation (ddof=1) across independent training seeds, fixed patient split.
+Threshold selected on validation F1. AUROC/AP do not depend on the threshold.
+
+| Model | Seeds | Parameters | AUROC | AP | Brier | Accuracy | F1 | Precision | Recall |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| legacy_transformer | 2 | 126767 | 0.4800 ± 0.0849 | 0.3831 ± 0.0653 | 0.2357 ± 0.0003 | 0.4000 ± 0.0000 | 0.4706 ± 0.0000 | 0.3333 ± 0.0000 | 0.8000 ± 0.0000 |
+
+This estimates training randomness on one fixed split; it is not cross-validation or a clinical generalization estimate.
+Native auxiliary losses and parameter counts differ; use --objective bce for a shared classification-loss ablation.
+{"model": "ode_rnn", "seed": 0, "epoch": 1, "train_loss": 1736.175502232143, "validation": {"auroc": 1.0, "ap": 1.0, "brier": 0.2331254485240504, "accuracy": 0.6666666666666666, "f1": 0.0, "precision": 0.0, "recall": 0.0}}
+{"model": "latent_ode", "seed": 0, "epoch": 1, "train_loss": 3562.4712262834823, "validation": {"auroc": 0.44000000000000006, "ap": 0.46320346320346323, "brier": 0.23998948224477978, "accuracy": 0.6666666666666666, "f1": 0.0, "precision": 0.0, "recall": 0.0}}
+{"model": "ode_rnn", "seed": 1, "epoch": 1, "train_loss": 2719.775704520089, "validation": {"auroc": 0.6799999999999999, "ap": 0.676923076923077, "brier": 0.23633107840862705, "accuracy": 0.6666666666666666, "f1": 0.0, "precision": 0.0, "recall": 0.0}}
+{"model": "latent_ode", "seed": 1, "epoch": 1, "train_loss": 4535.829833984375, "validation": {"auroc": 0.5800000000000001, "ap": 0.429047619047619, "brier": 0.2298740906617023, "accuracy": 0.6666666666666666, "f1": 0.0, "precision": 0.0, "recall": 0.0}}
+{"model": "ode_rnn", "seed": 0, "split_seed": 42, "objective": "native", "best_epoch": 1, "parameters": 15877, "threshold": 0.44817817211151123, "runtime": {"tensor_device": "cuda:0", "cuda_visible_devices": "2", "gpu_name": "NVIDIA GeForce RTX 4090"}, "validation": {"auroc": 1.0, "ap": 1.0, "brier": 0.2331254485240504, "accuracy": 1.0, "f1": 1.0, "precision": 1.0, "recall": 1.0}, "test": {"auroc": 0.9600000000000001, "ap": 0.9428571428571428, "brier": 0.23338008086644385, "accuracy": 0.8666666666666667, "f1": 0.8, "precision": 0.8, "recall": 0.8}, "test_fixed_05": {"auroc": 0.9600000000000001, "ap": 0.9428571428571428, "brier": 0.23338008086644385, "accuracy": 0.6666666666666666, "f1": 0.0, "precision": 0.0, "recall": 0.0}}
+# Three-model classification comparison
+
+Mean ± sample standard deviation (ddof=1) across independent training seeds, fixed patient split.
+Threshold selected on validation F1. AUROC/AP do not depend on the threshold.
+
+| Model | Seeds | Parameters | AUROC | AP | Brier | Accuracy | F1 | Precision | Recall |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| legacy_transformer | 2 | 126767 | 0.4800 ± 0.0849 | 0.3831 ± 0.0653 | 0.2357 ± 0.0003 | 0.4000 ± 0.0000 | 0.4706 ± 0.0000 | 0.3333 ± 0.0000 | 0.8000 ± 0.0000 |
+| ode_rnn | 1 | 15877 | 0.9600 (std unavailable) | 0.9429 (std unavailable) | 0.2334 (std unavailable) | 0.8667 (std unavailable) | 0.8000 (std unavailable) | 0.8000 (std unavailable) | 0.8000 (std unavailable) |
+
+This estimates training randomness on one fixed split; it is not cross-validation or a clinical generalization estimate.
+Native auxiliary losses and parameter counts differ; use --objective bce for a shared classification-loss ablation.
+{"model": "latent_ode", "seed": 0, "split_seed": 42, "objective": "native", "best_epoch": 1, "parameters": 32727, "threshold": 0.4529041051864624, "runtime": {"tensor_device": "cuda:0", "cuda_visible_devices": "1", "gpu_name": "NVIDIA GeForce RTX 4090"}, "validation": {"auroc": 0.44000000000000006, "ap": 0.46320346320346323, "brier": 0.23998948224477978, "accuracy": 0.4666666666666667, "f1": 0.5, "precision": 0.36363636363636365, "recall": 0.8}, "test": {"auroc": 0.4, "ap": 0.3263170163170163, "brier": 0.24006075024675713, "accuracy": 0.3333333333333333, "f1": 0.2857142857142857, "precision": 0.2222222222222222, "recall": 0.4}, "test_fixed_05": {"auroc": 0.4, "ap": 0.3263170163170163, "brier": 0.24006075024675713, "accuracy": 0.6666666666666666, "f1": 0.0, "precision": 0.0, "recall": 0.0}}
+# Three-model classification comparison
+
+Mean ± sample standard deviation (ddof=1) across independent training seeds, fixed patient split.
+Threshold selected on validation F1. AUROC/AP do not depend on the threshold.
+
+| Model | Seeds | Parameters | AUROC | AP | Brier | Accuracy | F1 | Precision | Recall |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| legacy_transformer | 2 | 126767 | 0.4800 ± 0.0849 | 0.3831 ± 0.0653 | 0.2357 ± 0.0003 | 0.4000 ± 0.0000 | 0.4706 ± 0.0000 | 0.3333 ± 0.0000 | 0.8000 ± 0.0000 |
+| latent_ode | 1 | 32727 | 0.4000 (std unavailable) | 0.3263 (std unavailable) | 0.2401 (std unavailable) | 0.3333 (std unavailable) | 0.2857 (std unavailable) | 0.2222 (std unavailable) | 0.4000 (std unavailable) |
+| ode_rnn | 1 | 15877 | 0.9600 (std unavailable) | 0.9429 (std unavailable) | 0.2334 (std unavailable) | 0.8667 (std unavailable) | 0.8000 (std unavailable) | 0.8000 (std unavailable) | 0.8000 (std unavailable) |
+
+This estimates training randomness on one fixed split; it is not cross-validation or a clinical generalization estimate.
+Native auxiliary losses and parameter counts differ; use --objective bce for a shared classification-loss ablation.
+{"model": "ode_rnn", "seed": 1, "split_seed": 42, "objective": "native", "best_epoch": 1, "parameters": 15877, "threshold": 0.4572221338748932, "runtime": {"tensor_device": "cuda:0", "cuda_visible_devices": "3", "gpu_name": "NVIDIA GeForce RTX 4090"}, "validation": {"auroc": 0.6799999999999999, "ap": 0.676923076923077, "brier": 0.23633107840862705, "accuracy": 0.7333333333333333, "f1": 0.6, "precision": 0.6, "recall": 0.6}, "test": {"auroc": 0.6200000000000001, "ap": 0.5299999999999999, "brier": 0.2368337894467888, "accuracy": 0.7333333333333333, "f1": 0.5, "precision": 0.6666666666666666, "recall": 0.4}, "test_fixed_05": {"auroc": 0.6200000000000001, "ap": 0.5299999999999999, "brier": 0.2368337894467888, "accuracy": 0.6666666666666666, "f1": 0.0, "precision": 0.0, "recall": 0.0}}
+# Three-model classification comparison
+
+Mean ± sample standard deviation (ddof=1) across independent training seeds, fixed patient split.
+Threshold selected on validation F1. AUROC/AP do not depend on the threshold.
+
+| Model | Seeds | Parameters | AUROC | AP | Brier | Accuracy | F1 | Precision | Recall |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| legacy_transformer | 2 | 126767 | 0.4800 ± 0.0849 | 0.3831 ± 0.0653 | 0.2357 ± 0.0003 | 0.4000 ± 0.0000 | 0.4706 ± 0.0000 | 0.3333 ± 0.0000 | 0.8000 ± 0.0000 |
+| latent_ode | 1 | 32727 | 0.4000 (std unavailable) | 0.3263 (std unavailable) | 0.2401 (std unavailable) | 0.3333 (std unavailable) | 0.2857 (std unavailable) | 0.2222 (std unavailable) | 0.4000 (std unavailable) |
+| ode_rnn | 2 | 15877 | 0.7900 ± 0.2404 | 0.7364 ± 0.2919 | 0.2351 ± 0.0024 | 0.8000 ± 0.0943 | 0.6500 ± 0.2121 | 0.7333 ± 0.0943 | 0.6000 ± 0.2828 |
+
+This estimates training randomness on one fixed split; it is not cross-validation or a clinical generalization estimate.
+Native auxiliary losses and parameter counts differ; use --objective bce for a shared classification-loss ablation.
+{"model": "latent_ode", "seed": 1, "split_seed": 42, "objective": "native", "best_epoch": 1, "parameters": 32727, "threshold": 0.4247713088989258, "runtime": {"tensor_device": "cuda:0", "cuda_visible_devices": "0", "gpu_name": "NVIDIA GeForce RTX 4090"}, "validation": {"auroc": 0.5800000000000001, "ap": 0.429047619047619, "brier": 0.2298740906617023, "accuracy": 0.5333333333333333, "f1": 0.5882352941176471, "precision": 0.4166666666666667, "recall": 1.0}, "test": {"auroc": 0.54, "ap": 0.6047619047619048, "brier": 0.23120880527634674, "accuracy": 0.4666666666666667, "f1": 0.42857142857142855, "precision": 0.3333333333333333, "recall": 0.6}, "test_fixed_05": {"auroc": 0.54, "ap": 0.6047619047619048, "brier": 0.23120880527634674, "accuracy": 0.6666666666666666, "f1": 0.0, "precision": 0.0, "recall": 0.0}}
+# Three-model classification comparison
+
+Mean ± sample standard deviation (ddof=1) across independent training seeds, fixed patient split.
+Threshold selected on validation F1. AUROC/AP do not depend on the threshold.
+
+| Model | Seeds | Parameters | AUROC | AP | Brier | Accuracy | F1 | Precision | Recall |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| legacy_transformer | 2 | 126767 | 0.4800 ± 0.0849 | 0.3831 ± 0.0653 | 0.2357 ± 0.0003 | 0.4000 ± 0.0000 | 0.4706 ± 0.0000 | 0.3333 ± 0.0000 | 0.8000 ± 0.0000 |
+| latent_ode | 2 | 32727 | 0.4700 ± 0.0990 | 0.4655 ± 0.1969 | 0.2356 ± 0.0063 | 0.4000 ± 0.0943 | 0.3571 ± 0.1010 | 0.2778 ± 0.0786 | 0.5000 ± 0.1414 |
+| ode_rnn | 2 | 15877 | 0.7900 ± 0.2404 | 0.7364 ± 0.2919 | 0.2351 ± 0.0024 | 0.8000 ± 0.0943 | 0.6500 ± 0.2121 | 0.7333 ± 0.0943 | 0.6000 ± 0.2828 |
+
+This estimates training randomness on one fixed split; it is not cross-validation or a clinical generalization estimate.
+Native auxiliary losses and parameter counts differ; use --objective bce for a shared classification-loss ablation.

@@ -1,0 +1,51 @@
+{
+  "baseline_commit": "e3752ce",
+  "baseline_tag": "baseline-before-capacity-scaling-20261020",
+  "epochs": 20,
+  "training_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "physical_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "jobs": 8,
+  "device": "cuda",
+  "variants": {
+    "legacy_transformer": {
+      "parameters": 126767
+    },
+    "latent_ode_base": {
+      "latent": 20,
+      "recognition_hidden": 40,
+      "width": 50,
+      "layers": 3,
+      "parameters": 32727
+    },
+    "latent_ode_matched": {
+      "latent": 20,
+      "recognition_hidden": 143,
+      "width": 50,
+      "layers": 3,
+      "parameters": 126766
+    },
+    "ode_rnn_base": {
+      "state": 20,
+      "width": 50,
+      "layers": 3,
+      "parameters": 15877
+    },
+    "ode_rnn_matched": {
+      "state": 140,
+      "width": 50,
+      "layers": 3,
+      "parameters": 126997
+    }
+  }
+}

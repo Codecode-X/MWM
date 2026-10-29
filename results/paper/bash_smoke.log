@@ -1,0 +1,170 @@
+test_context_does_not_expose_targets (test_paper_models.DataTests.test_context_does_not_expose_targets) ... ok
+test_extrapolation_alignment_preserves_intervals (test_paper_models.DataTests.test_extrapolation_alignment_preserves_intervals) ... ok
+test_split_scaling_and_reproducibility (test_paper_models.DataTests.test_split_scaling_and_reproducibility) ... ok
+test_union_mapping_and_no_mask_on_absent_times (test_paper_models.DataTests.test_union_mapping_and_no_mask_on_absent_times) ... ok
+test_kl_zero_at_prior_and_classification_uses_labels (test_paper_models.LossTests.test_kl_zero_at_prior_and_classification_uses_labels) ... ok
+test_likelihood_and_kl_against_torch_distributions (test_paper_models.LossTests.test_likelihood_and_kl_against_torch_distributions) ... ok
+test_mask_denominator_counts_features (test_paper_models.LossTests.test_mask_denominator_counts_features) ... ok
+test_batch_independence (test_paper_models.ModelTests.test_batch_independence) ... ok
+test_checkpoint_roundtrip (test_paper_models.ModelTests.test_checkpoint_roundtrip) ... ok
+test_decode_before_and_after_posterior_anchor (test_paper_models.ModelTests.test_decode_before_and_after_posterior_anchor) ... ok
+test_elapsed_time_changes_recurrent_predictions (test_paper_models.ModelTests.test_elapsed_time_changes_recurrent_predictions) ... ok
+test_empty_union_timestamp_no_rnn_jump (test_paper_models.ModelTests.test_empty_union_timestamp_no_rnn_jump) ... ok
+test_forecast_rollout_no_future_values (test_paper_models.ModelTests.test_forecast_rollout_no_future_values) ... ok
+test_generative_anchor_and_query_order (test_paper_models.ModelTests.test_generative_anchor_and_query_order) ... ok
+test_invalid_inputs_rejected (test_paper_models.ModelTests.test_invalid_inputs_rejected) ... ok
+test_masked_nan_never_changes_output (test_paper_models.ModelTests.test_masked_nan_never_changes_output) ... ok
+test_no_target_leakage_causal_ode_rnn (test_paper_models.ModelTests.test_no_target_leakage_causal_ode_rnn) ... ok
+test_overfit_small_sequence (test_paper_models.ModelTests.test_overfit_small_sequence) ... ok
+test_reparameterization_statistics (test_paper_models.ModelTests.test_reparameterization_statistics) ... ok
+test_shapes_and_gradients_both_models (test_paper_models.ModelTests.test_shapes_and_gradients_both_models) ... ok
+test_single_observation (test_paper_models.ModelTests.test_single_observation) ... ok
+test_constant_forward_backward_and_singleton (test_paper_models.NumericalTests.test_constant_forward_backward_and_singleton) ... ok
+test_encoder_direction (test_paper_models.NumericalTests.test_encoder_direction) ... ok
+test_exponential_and_parameter_gradient (test_paper_models.NumericalTests.test_exponential_and_parameter_gradient) ... ok
+test_gru_exact_equations_and_missing_skip (test_paper_models.NumericalTests.test_gru_exact_equations_and_missing_skip) ... ok
+test_invalid_solver_times (test_paper_models.NumericalTests.test_invalid_solver_times) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 3.558s
+
+OK
+{"epoch": 1, "train_loss": 2952.495535714286, "validation": {"loss": 2556.5851236979165, "nll": 2553.30712890625, "kl": 3.278041044871012, "bce": 0.0, "mse": 0.1683190366889857, "patients": 15, "observed_scalars": 3318}}
+{
+  "baseline_validation": {
+    "loss": 3941.4661458333335,
+    "nll": 3939.0169270833335,
+    "kl": 2.449233055114746,
+    "bce": 0.0,
+    "mse": 0.27582778508150124,
+    "patients": 15,
+    "observed_scalars": 3318
+  },
+  "best_epoch": 1,
+  "validation": {
+    "loss": 2556.5851236979165,
+    "nll": 2553.30712890625,
+    "kl": 3.278041044871012,
+    "bce": 0.0,
+    "mse": 0.1683190366889857,
+    "patients": 15,
+    "observed_scalars": 3318
+  },
+  "test": {
+    "loss": 2286.3361002604165,
+    "nll": 2283.0591634114585,
+    "kl": 3.276999076207479,
+    "bce": 0.0,
+    "mse": 0.1700325431245746,
+    "patients": 15,
+    "observed_scalars": 2970
+  }
+}
+{"epoch": 1, "train_loss": 2447.3537946428573, "validation": {"loss": 1696.0077718098958, "nll": 1696.0077718098958, "kl": 0.0, "bce": 0.0, "mse": 0.18101902777635598, "patients": 15, "observed_scalars": 3318}}
+{
+  "baseline_validation": {
+    "loss": 2985.2013346354165,
+    "nll": 2985.2013346354165,
+    "kl": 0.0,
+    "bce": 0.0,
+    "mse": 0.2975826210613492,
+    "patients": 15,
+    "observed_scalars": 3318
+  },
+  "best_epoch": 1,
+  "validation": {
+    "loss": 1696.0077718098958,
+    "nll": 1696.0077718098958,
+    "kl": 0.0,
+    "bce": 0.0,
+    "mse": 0.18101902777635598,
+    "patients": 15,
+    "observed_scalars": 3318
+  },
+  "test": {
+    "loss": 1500.7357991536458,
+    "nll": 1500.7357991536458,
+    "kl": 0.0,
+    "bce": 0.0,
+    "mse": 0.17926239889077467,
+    "patients": 15,
+    "observed_scalars": 2970
+  }
+}
+{"epoch": 1, "train_loss": 1501.0872628348213, "validation": {"loss": 1308.5467122395833, "nll": 1305.2812906901042, "kl": 3.2654314041137695, "bce": 0.0, "mse": 0.16860168895551136, "patients": 15, "observed_scalars": 1680}}
+{
+  "baseline_validation": {
+    "loss": 1976.367431640625,
+    "nll": 1973.9209798177083,
+    "kl": 2.446465015411377,
+    "bce": 0.0,
+    "mse": 0.2722570985555649,
+    "patients": 15,
+    "observed_scalars": 1680
+  },
+  "best_epoch": 1,
+  "validation": {
+    "loss": 1308.5467122395833,
+    "nll": 1305.2812906901042,
+    "kl": 3.2654314041137695,
+    "bce": 0.0,
+    "mse": 0.16860168895551136,
+    "patients": 15,
+    "observed_scalars": 1680
+  },
+  "test": {
+    "loss": 1203.9710286458333,
+    "nll": 1200.7117919921875,
+    "kl": 3.259225050608317,
+    "bce": 0.0,
+    "mse": 0.1755464029690576,
+    "patients": 15,
+    "observed_scalars": 1512
+  }
+}
+{"epoch": 1, "train_loss": 2443.797921316964, "validation": {"loss": 981.4609375, "nll": 981.4609375, "kl": 0.0, "bce": 0.0, "mse": 0.20293380788394383, "patients": 15, "observed_scalars": 1680}}
+{
+  "baseline_validation": {
+    "loss": 1655.6231282552083,
+    "nll": 1655.6231282552083,
+    "kl": 0.0,
+    "bce": 0.0,
+    "mse": 0.3233199260064534,
+    "patients": 15,
+    "observed_scalars": 1680
+  },
+  "best_epoch": 1,
+  "validation": {
+    "loss": 981.4609375,
+    "nll": 981.4609375,
+    "kl": 0.0,
+    "bce": 0.0,
+    "mse": 0.20293380788394383,
+    "patients": 15,
+    "observed_scalars": 1680
+  },
+  "test": {
+    "loss": 904.0174153645834,
+    "nll": 904.0174153645834,
+    "kl": 0.0,
+    "bce": 0.0,
+    "mse": 0.20704146054765535,
+    "patients": 15,
+    "observed_scalars": 1512
+  }
+}
+# Synthetic ICU experiments
+
+Validation MSE selects the checkpoint. MSE is in training-set min-max units.
+
+| Experiment | Best epoch | Initial val MSE | Best val MSE | Test MSE | Test AUROC | Test AUPRC |
+|---|---:|---:|---:|---:|---:|---:|
+| /tmp/latentode-bash-smoke/latent_ode_extrapolation | 1 | 0.272257 | 0.168602 | 0.175546 | — | — |
+| /tmp/latentode-bash-smoke/latent_ode_interpolation | 1 | 0.275828 | 0.168319 | 0.170033 | — | — |
+| /tmp/latentode-bash-smoke/ode_rnn_extrapolation | 1 | 0.323320 | 0.202934 | 0.207041 | — | — |
+| /tmp/latentode-bash-smoke/ode_rnn_interpolation | 1 | 0.297583 | 0.181019 | 0.179262 | — | — |
+OK /tmp/latentode-bash-smoke/latent_ode_extrapolation: 1 epochs, best=1, replay identical
+OK /tmp/latentode-bash-smoke/latent_ode_interpolation: 1 epochs, best=1, replay identical
+OK /tmp/latentode-bash-smoke/ode_rnn_extrapolation: 1 epochs, best=1, replay identical
+OK /tmp/latentode-bash-smoke/ode_rnn_interpolation: 1 epochs, best=1, replay identical
+Validated 4 experiments

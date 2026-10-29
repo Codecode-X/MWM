@@ -1,0 +1,41 @@
+{
+  "doi": "10.1101/2025.08.26.672412",
+  "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12407814/",
+  "model_comparison_table": {
+    "caption": "Reconstruction errors of the different models on the test set.",
+    "columns": [
+      "interpolation_error",
+      "forecast_error",
+      "overall_error"
+    ],
+    "rows": {
+      "ODE-AD (body: ODE-AE)": [
+        10.2,
+        17.97,
+        12.46
+      ],
+      "LSTM": [
+        13.01,
+        21.9,
+        15.5
+      ],
+      "deterministic_version": [
+        10.13,
+        17.92,
+        12.26
+      ]
+    }
+  },
+  "selected_validation_reconstruction_error": 11.64,
+  "patient_split": {
+    "train": 2451,
+    "validation": 613,
+    "test": 766
+  },
+  "early_diagnosis": {
+    "precision": 0.74,
+    "recall": 0.52,
+    "accuracy": 0.79
+  },
+  "cross_study_absolute_score_comparison_valid": false
+}

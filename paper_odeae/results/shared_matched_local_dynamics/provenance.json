@@ -1,0 +1,34 @@
+{
+  "checkpoint_sha256": "f13ab3dae0a2be7da6c9aee971e162b63ae998373a2e48af65bd6fd758acf0b8",
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "physical_gpu": "2",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "model_device": "cuda:0",
+  "knn_device": "cuda:0",
+  "jacobian_device": "cuda:0",
+  "forecast_device": "cuda:0",
+  "states": 17165,
+  "reference_states": 12544,
+  "reference_patients": 2093,
+  "same_patient_excluded": true,
+  "unique_neighbor_patients": true,
+  "k": 20,
+  "k_sensitivity": [
+    10,
+    40
+  ],
+  "forecast_origins": 12302,
+  "horizon_tolerance_years": 0.25,
+  "minimum_speed_norm": 0.04576060548424721,
+  "source_sha256": "69f5b8878ded8b7174b36557844448e98a42fbb39b7dbdcc3d969c287d3d81b3",
+  "training_performed": false,
+  "forecast_check": {
+    "checked_origins": 8,
+    "max_direct_vs_original_mmse_difference": 3.814697265625e-06,
+    "max_independent_cached_state_difference": 9.5367431640625e-07,
+    "future_value_isolation": "exact equality"
+  },
+  "random_control_seed": 0,
+  "cosine_epsilon": 1e-12,
+  "sensitivity_epsilon": 1e-08
+}

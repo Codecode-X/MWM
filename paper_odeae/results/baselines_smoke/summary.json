@@ -1,0 +1,133 @@
+{
+  "updated_at": "2026-10-28T00:01:57.225817+00:00",
+  "smoke": true,
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "runs": [
+    {
+      "name": "reference/ode_ae",
+      "path": "/home/xjh/projects/LatentODE/paper_odeae/results/local_available/ode_ae/seed_0",
+      "status": "complete",
+      "epochs": 90,
+      "best_validation_overall": 3.2872582532397234,
+      "best_epoch": 50,
+      "total_parameters": 3003,
+      "trainable_parameters": 3003,
+      "test": {
+        "interpolation": 3.014008944182298,
+        "forecast": 3.2478035995204886,
+        "overall": 3.115103375634905
+      },
+      "validation": 3.2872582532397234,
+      "physical_gpu": "0",
+      "checkpoint_reload_difference": 0.0
+    },
+    {
+      "name": "reference/deterministic",
+      "path": "/home/xjh/projects/LatentODE/paper_odeae/results/local_available/deterministic/seed_0",
+      "status": "complete",
+      "epochs": 122,
+      "best_validation_overall": 0.9298679442583998,
+      "best_epoch": 82,
+      "total_parameters": 2505,
+      "trainable_parameters": 2505,
+      "test": {
+        "interpolation": 0.7166985833906415,
+        "forecast": 1.2060589299166464,
+        "overall": 0.9298126992970732
+      },
+      "validation": 0.9298679442583998,
+      "physical_gpu": "1",
+      "checkpoint_reload_difference": 0.0
+    },
+    {
+      "name": "reference/lstm",
+      "path": "/home/xjh/projects/LatentODE/paper_odeae/results/local_available/lstm/seed_0",
+      "status": "complete",
+      "epochs": 84,
+      "best_validation_overall": 3.8882220840048873,
+      "best_epoch": 44,
+      "total_parameters": 4469,
+      "trainable_parameters": 4469,
+      "test": {
+        "interpolation": 3.628884566640896,
+        "forecast": 3.8414734708865437,
+        "overall": 3.720943450780266
+      },
+      "validation": 3.8882220840048873,
+      "physical_gpu": "2",
+      "checkpoint_reload_difference": 0.0
+    },
+    {
+      "name": "native/latent_ode",
+      "path": "paper_odeae/results/baselines_smoke/native/latent_ode/seed_0",
+      "status": "complete",
+      "epochs": 1,
+      "best_validation_overall": 8.337818276285727,
+      "best_epoch": 1,
+      "total_parameters": 72266,
+      "trainable_parameters": 62065,
+      "test": {
+        "interpolation": 7.534051185295296,
+        "forecast": 7.654261035194699,
+        "overall": 7.585097150615184
+      },
+      "validation": 8.337818276285727,
+      "physical_gpu": "0",
+      "checkpoint_reload_difference": 0.0
+    },
+    {
+      "name": "native/ode_rnn",
+      "path": "paper_odeae/results/baselines_smoke/native/ode_rnn/seed_0",
+      "status": "complete",
+      "epochs": 1,
+      "best_validation_overall": 6.987576540130267,
+      "best_epoch": 1,
+      "total_parameters": 32746,
+      "trainable_parameters": 22545,
+      "test": {
+        "interpolation": 7.498700763331726,
+        "forecast": 5.687595646527674,
+        "overall": 6.8211008037033025
+      },
+      "validation": 6.987576540130267,
+      "physical_gpu": "1",
+      "checkpoint_reload_difference": 0.0
+    },
+    {
+      "name": "small/latent_ode",
+      "path": "paper_odeae/results/baselines_smoke/small/latent_ode/seed_0",
+      "status": "complete",
+      "epochs": 1,
+      "best_validation_overall": 11.918764577424533,
+      "best_epoch": 1,
+      "total_parameters": 10042,
+      "trainable_parameters": 7641,
+      "test": {
+        "interpolation": 11.382738349485832,
+        "forecast": 11.711591461168911,
+        "overall": 11.510360443062382
+      },
+      "validation": 11.918764577424533,
+      "physical_gpu": "2",
+      "checkpoint_reload_difference": 0.0
+    },
+    {
+      "name": "small/ode_rnn",
+      "path": "paper_odeae/results/baselines_smoke/small/ode_rnn/seed_0",
+      "status": "complete",
+      "epochs": 1,
+      "best_validation_overall": 12.599267610437488,
+      "best_epoch": 1,
+      "total_parameters": 5120,
+      "trainable_parameters": 2719,
+      "test": {
+        "interpolation": 11.058450452343095,
+        "forecast": 11.025187826220645,
+        "overall": 11.031481034267927
+      },
+      "validation": 12.599267610437488,
+      "physical_gpu": "3",
+      "checkpoint_reload_difference": 0.0
+    }
+  ]
+}

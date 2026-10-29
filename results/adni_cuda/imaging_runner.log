@@ -1,0 +1,79 @@
+{
+  "patient_counts": {
+    "train": 1677,
+    "validation": 312,
+    "test": 324
+  },
+  "patient_disjoint": true,
+  "prepared_sha256": "66c1d78c0bd536b01046a80bc4fa8723d8071445fb900f302f70fc242b240d6a",
+  "feature_count": 58,
+  "selected_eligible_T1": 2301,
+  "successfully_encoded_eligible": 2267,
+  "failed_eligible": 34,
+  "no_selected_T1_eligible": 12,
+  "failure_reasons": {
+    "ValueError: too few DICOM slices": 34
+  },
+  "normalization_fit_split": "train",
+  "PCA_fit_split": "train",
+  "feature_extraction": "one earliest recognized T1 per eligible patient, frozen MedicalNet on 4 CUDA GPUs"
+}
+GPU 0: medicalnet latent_ode seed 0
+GPU 1: medicalnet ode_rnn seed 0
+GPU 2: medicalnet latent_ode seed 1
+GPU 3: medicalnet ode_rnn seed 1
+completed GPU 1: medicalnet ode_rnn seed 0
+GPU 1: medicalnet ode_rnn seed 2
+completed GPU 3: medicalnet ode_rnn seed 1
+GPU 3: medicalnet ode_rnn seed 3
+completed GPU 2: medicalnet latent_ode seed 1
+GPU 2: medicalnet latent_ode seed 3
+completed GPU 0: medicalnet latent_ode seed 0
+GPU 0: medicalnet latent_ode seed 2
+completed GPU 1: medicalnet ode_rnn seed 2
+GPU 1: medicalnet ode_rnn seed 4
+completed GPU 3: medicalnet ode_rnn seed 3
+completed GPU 2: medicalnet latent_ode seed 3completed GPU 1: medicalnet ode_rnn seed 4
+completed GPU 0: medicalnet latent_ode seed 2
+
+GPU 0: medicalnet_matched ode_rnn seed 0GPU 1: medicalnet_matched ode_rnn seed 1
+
+GPU 2: medicalnet_matched ode_rnn seed 2GPU 3: medicalnet_matched ode_rnn seed 3
+
+completed GPU 0: medicalnet_matched ode_rnn seed 0
+GPU 0: medicalnet_matched ode_rnn seed 4
+completed GPU 3: medicalnet_matched ode_rnn seed 3
+completed GPU 2: medicalnet_matched ode_rnn seed 2
+completed GPU 1: medicalnet_matched ode_rnn seed 1
+completed GPU 0: medicalnet_matched ode_rnn seed 4
+results/adni_cuda/medicalnet/ode_rnn/seed_0
+results/adni_cuda/medicalnet/latent_ode/seed_4
+results/adni_cuda/medicalnet/latent_ode/seed_0
+results/adni_cuda/medicalnet/latent_ode/seed_1
+results/adni_cuda/medicalnet/ode_rnn/seed_2
+results/adni_cuda/medicalnet/ode_rnn/seed_1
+results/adni_cuda/medicalnet/latent_ode/seed_2
+results/adni_cuda/medicalnet/latent_ode/seed_3
+results/adni_cuda/medicalnet/ode_rnn/seed_4
+results/adni_cuda/medicalnet/ode_rnn/seed_3
+results/adni_cuda/medicalnet_matched/ode_rnn/seed_0
+results/adni_cuda/medicalnet_matched/ode_rnn/seed_2
+results/adni_cuda/medicalnet_matched/ode_rnn/seed_1
+results/adni_cuda/medicalnet_matched/ode_rnn/seed_3
+results/adni_cuda/structured/latent_ode/seed_1
+results/adni_cuda/medicalnet_matched/ode_rnn/seed_4
+results/adni_cuda/structured/ode_rnn/seed_0
+results/adni_cuda/structured/ode_rnn/seed_1
+results/adni_cuda/structured/latent_ode/seed_3
+results/adni_cuda/structured/latent_ode/seed_0
+results/adni_cuda/structured/ode_rnn/seed_2
+results/adni_cuda/structured/ode_rnn/seed_3
+results/adni_cuda/structured_matched/ode_rnn/seed_2
+results/adni_cuda/structured/latent_ode/seed_2
+results/adni_cuda/structured/ode_rnn/seed_4
+results/adni_cuda/structured_matched/ode_rnn/seed_3
+results/adni_cuda/structured/latent_ode/seed_4
+results/adni_cuda/structured_matched/ode_rnn/seed_1
+results/adni_cuda/structured_matched/ode_rnn/seed_0
+results/adni_cuda/structured_matched/ode_rnn/seed_4
+results/adni_cuda/summary.md

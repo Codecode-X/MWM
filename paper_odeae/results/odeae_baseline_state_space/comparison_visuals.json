@@ -1,0 +1,79 @@
+{
+  "physical_gpu": "1",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "model_device": "cuda:0",
+  "projection_device": "cuda:0",
+  "case_prediction_checks": [
+    {
+      "model": "ode_ae",
+      "subject_id": "003_S_4900",
+      "max_difference_from_original_prediction": 1.9073486328125e-06
+    },
+    {
+      "model": "ode_ae",
+      "subject_id": "002_S_4219",
+      "max_difference_from_original_prediction": 1.9073486328125e-06
+    },
+    {
+      "model": "ode_ae",
+      "subject_id": "002_S_0619",
+      "max_difference_from_original_prediction": 4.76837158203125e-07
+    },
+    {
+      "model": "deterministic_22545",
+      "subject_id": "003_S_4900",
+      "max_difference_from_original_prediction": 9.5367431640625e-05
+    },
+    {
+      "model": "deterministic_22545",
+      "subject_id": "002_S_4219",
+      "max_difference_from_original_prediction": 3.814697265625e-06
+    },
+    {
+      "model": "deterministic_22545",
+      "subject_id": "002_S_0619",
+      "max_difference_from_original_prediction": 1.9073486328125e-06
+    },
+    {
+      "model": "shared_matched",
+      "subject_id": "003_S_4900",
+      "max_difference_from_original_prediction": 9.655952453613281e-06
+    },
+    {
+      "model": "shared_matched",
+      "subject_id": "002_S_4219",
+      "max_difference_from_original_prediction": 1.9073486328125e-06
+    },
+    {
+      "model": "shared_matched",
+      "subject_id": "002_S_0619",
+      "max_difference_from_original_prediction": 1.9073486328125e-06
+    }
+  ],
+  "velocity_projection": {
+    "ode_ae": {
+      "state_plane_velocity_energy": 0.9999890923500061,
+      "velocity_plane_velocity_energy": 1.0,
+      "velocity_plane_training_state_variance": 0.6927516460418701,
+      "fit_device": "cuda:0"
+    },
+    "deterministic_22545": {
+      "state_plane_velocity_energy": 0.11684783548116684,
+      "velocity_plane_velocity_energy": 0.999491810798645,
+      "velocity_plane_training_state_variance": 0.4325256049633026,
+      "fit_device": "cuda:0"
+    },
+    "shared_matched": {
+      "state_plane_velocity_energy": 0.6961917877197266,
+      "velocity_plane_velocity_energy": 0.9983216524124146,
+      "velocity_plane_training_state_variance": 0.4985906779766083,
+      "fit_device": "cuda:0"
+    }
+  },
+  "case_selection": "same three test patients as earlier shared_matched examples; first 3 visits observed",
+  "checkpoint_sha256": {
+    "ode_ae": "6a160abccd9a96f1c1f1471354f83024fae38724dde07c714ee1d424f86a51bf",
+    "deterministic_22545": "0b3b7a8cb83da2f582ed83ed705065a12e3f125a327dd617c4c5994c2e216814",
+    "shared_matched": "f13ab3dae0a2be7da6c9aee971e162b63ae998373a2e48af65bd6fd758acf0b8"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "study": "shared_matched_scaling",
+  "baseline_parameters": 22545,
+  "target_parameters": 90180,
+  "baseline_original": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/shared_matched/seed_0",
+  "baseline_reference": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_scaling_4x/baseline_reference",
+  "baseline_retrained": false,
+  "baseline_metrics_sha256": "f1d274f5a645a56b383614de596797ac986981c95ff3a6c2b490a8c0f37c7570",
+  "dataset": "/home/xjh/projects/LatentODE/paper_odeae/cache/local_available.pkl",
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "jobs": [
+    {
+      "name": "init_4x",
+      "physical_gpu": 0,
+      "changes": {
+        "init_width": 8613
+      },
+      "parameters": 90177,
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_scaling_4x/configs/init_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_scaling_4x/init_4x/seed_0"
+    },
+    {
+      "name": "update_4x",
+      "physical_gpu": 1,
+      "changes": {
+        "update_width": 1250
+      },
+      "parameters": 90187,
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_scaling_4x/configs/update_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_scaling_4x/update_4x/seed_0"
+    },
+    {
+      "name": "ode_4x",
+      "physical_gpu": 2,
+      "changes": {
+        "ode_width": 5391
+      },
+      "parameters": 90184,
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_scaling_4x/configs/ode_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_scaling_4x/ode_4x/seed_0"
+    },
+    {
+      "name": "latent_4x",
+      "physical_gpu": 3,
+      "changes": {
+        "latent": 73
+      },
+      "parameters": 90550,
+      "config": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_scaling_4x/configs/latent_4x.json",
+      "output": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_scaling_4x/latent_4x/seed_0"
+    }
+  ],
+  "selection": "checkpoint by validation overall; compare validation forecast at that checkpoint",
+  "execution": "one fixed independent worker on each physical RTX 4090 GPU 0,1,2,3"
+}

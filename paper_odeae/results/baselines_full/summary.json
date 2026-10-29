@@ -1,0 +1,187 @@
+{
+  "updated_at": "2026-10-28T16:06:44.836464+00:00",
+  "smoke": false,
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "runs": [
+    {
+      "name": "reference/ode_ae",
+      "path": "/home/xjh/projects/LatentODE/paper_odeae/results/local_available/ode_ae/seed_0",
+      "status": "complete",
+      "total_parameters": 3003,
+      "trainable_parameters": 3003,
+      "epochs": 90,
+      "best_validation_overall": 3.2872582532397234,
+      "best_epoch": 50,
+      "test": {
+        "interpolation": 3.014008944182298,
+        "forecast": 3.2478035995204886,
+        "overall": 3.115103375634905
+      },
+      "validation": 3.2872582532397234,
+      "physical_gpu": "0",
+      "checkpoint_reload_difference": 0.0
+    },
+    {
+      "name": "reference/deterministic",
+      "path": "/home/xjh/projects/LatentODE/paper_odeae/results/local_available/deterministic/seed_0",
+      "status": "complete",
+      "total_parameters": 2505,
+      "trainable_parameters": 2505,
+      "epochs": 122,
+      "best_validation_overall": 0.9298679442583998,
+      "best_epoch": 82,
+      "test": {
+        "interpolation": 0.7166985833906415,
+        "forecast": 1.2060589299166464,
+        "overall": 0.9298126992970732
+      },
+      "validation": 0.9298679442583998,
+      "physical_gpu": "1",
+      "checkpoint_reload_difference": 0.0
+    },
+    {
+      "name": "reference/lstm",
+      "path": "/home/xjh/projects/LatentODE/paper_odeae/results/local_available/lstm/seed_0",
+      "status": "complete",
+      "total_parameters": 4469,
+      "trainable_parameters": 4469,
+      "epochs": 84,
+      "best_validation_overall": 3.8882220840048873,
+      "best_epoch": 44,
+      "test": {
+        "interpolation": 3.628884566640896,
+        "forecast": 3.8414734708865437,
+        "overall": 3.720943450780266
+      },
+      "validation": 3.8882220840048873,
+      "physical_gpu": "2",
+      "checkpoint_reload_difference": 0.0
+    },
+    {
+      "name": "native/latent_ode",
+      "path": "paper_odeae/results/baselines_full/native/latent_ode/seed_0",
+      "status": "complete",
+      "total_parameters": 72266,
+      "trainable_parameters": 62065,
+      "epochs": 69,
+      "best_validation_overall": 2.8494608295420014,
+      "best_epoch": 29,
+      "test": {
+        "interpolation": 2.5246078311333426,
+        "forecast": 2.8369831583458627,
+        "overall": 2.6593619785955216
+      },
+      "validation": 2.8494608295420014,
+      "physical_gpu": "0",
+      "checkpoint_reload_difference": 0.0
+    },
+    {
+      "name": "native/ode_rnn",
+      "path": "paper_odeae/results/baselines_full/native/ode_rnn/seed_0",
+      "status": "complete",
+      "total_parameters": 32746,
+      "trainable_parameters": 22545,
+      "epochs": 96,
+      "best_validation_overall": 1.2801901210496496,
+      "best_epoch": 56,
+      "test": {
+        "interpolation": 1.370758661438728,
+        "forecast": 1.1205800264751575,
+        "overall": 1.2640648915399217
+      },
+      "validation": 1.2801901210496496,
+      "physical_gpu": "1",
+      "checkpoint_reload_difference": 0.0
+    },
+    {
+      "name": "small/latent_ode",
+      "path": "paper_odeae/results/baselines_full/small/latent_ode/seed_0",
+      "status": "complete",
+      "total_parameters": 10042,
+      "trainable_parameters": 7641,
+      "epochs": 194,
+      "best_validation_overall": 2.847576118516959,
+      "best_epoch": 154,
+      "test": {
+        "interpolation": 2.5283307275168267,
+        "forecast": 2.8276230085938607,
+        "overall": 2.6577555511375666
+      },
+      "validation": 2.847576118516959,
+      "physical_gpu": "2",
+      "checkpoint_reload_difference": 0.0
+    },
+    {
+      "name": "small/ode_rnn",
+      "path": "paper_odeae/results/baselines_full/small/ode_rnn/seed_0",
+      "status": "complete",
+      "total_parameters": 5120,
+      "trainable_parameters": 2719,
+      "epochs": 128,
+      "best_validation_overall": 1.4870456144055466,
+      "best_epoch": 88,
+      "test": {
+        "interpolation": 1.5469820099434823,
+        "forecast": 1.2542845006530663,
+        "overall": 1.4198242320011434
+      },
+      "validation": 1.4870456144055466,
+      "physical_gpu": "3",
+      "checkpoint_reload_difference": 0.0
+    },
+    {
+      "name": "capacity/deterministic_22545",
+      "path": "/home/xjh/projects/LatentODE/paper_odeae/results/capacity_matched/deterministic_22545/seed_0",
+      "status": "complete",
+      "total_parameters": 22545,
+      "trainable_parameters": 22545,
+      "epochs": 116,
+      "best_validation_overall": 0.9325368729801707,
+      "best_epoch": 76,
+      "test": {
+        "interpolation": 0.666807758142079,
+        "forecast": 1.1915476650796923,
+        "overall": 0.8947578770954969
+      },
+      "validation": 0.9325368729801707,
+      "physical_gpu": "0,1,2,3",
+      "checkpoint_reload_difference": 0.0
+    },
+    {
+      "name": "ablation/forward_age",
+      "path": "/home/xjh/projects/LatentODE/paper_odeae/results/direction_ablation/forward_age_from22545/seed_0",
+      "status": "complete",
+      "trainable_parameters": 22545,
+      "total_parameters": 22545,
+      "epochs": 150,
+      "best_validation_overall": 0.8783466471138766,
+      "best_epoch": 110,
+      "test": {
+        "interpolation": 0.5929031551735997,
+        "forecast": 1.081386531894332,
+        "overall": 0.8056730127385353
+      },
+      "validation": 0.8783466471138766,
+      "physical_gpu": "0,1,2,3",
+      "checkpoint_reload_difference": 0.0
+    },
+    {
+      "name": "ablation/forward_zero",
+      "path": "/home/xjh/projects/LatentODE/paper_odeae/results/direction_ablation/forward_from22545/seed_0",
+      "status": "complete",
+      "trainable_parameters": 21307,
+      "total_parameters": 21307,
+      "epochs": 200,
+      "best_validation_overall": 0.895291941612937,
+      "best_epoch": 160,
+      "test": {
+        "interpolation": 0.608036006245037,
+        "forecast": 1.1488274276938772,
+        "overall": 0.8439450880488585
+      },
+      "validation": 0.895291941612937,
+      "physical_gpu": "0,1,2,3",
+      "checkpoint_reload_difference": 0.0
+    }
+  ]
+}

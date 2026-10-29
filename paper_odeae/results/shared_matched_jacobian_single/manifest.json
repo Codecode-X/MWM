@@ -1,0 +1,13 @@
+{
+  "baseline": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/shared_matched/seed_0",
+  "weak_prior": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_prior_weak_single/weak_prior/seed_0",
+  "baseline_retrained": false,
+  "parameters": 22545,
+  "prior_weight": 0.0,
+  "jacobian_weight": 0.01,
+  "physical_gpu": 1,
+  "output": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_jacobian_single/jacobian/seed_0",
+  "dataset": "/home/xjh/projects/LatentODE/paper_odeae/cache/local_available.pkl",
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "regularizer": "exact ||W2 diag(1-tanh(W1z+b1)^2) W1||_F^2; mean over valid generated states; z detached"
+}

@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-10-27T23:55:07.566454+00:00",
+  "status": "all_four_formal_runs_completed",
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "scope": "40-field local_available, seed 0",
+  "runs": [
+    {
+      "run": "native/latent_ode/seed_0",
+      "physical_gpu": "0",
+      "parameter_device": "cuda:0",
+      "epochs": 69,
+      "best_epoch": 29,
+      "training_hours": 2.352849942509428,
+      "checkpoint_reload_difference": 0,
+      "evaluation_counts_match_reference": true,
+      "swanlab_status": "success"
+    },
+    {
+      "run": "native/ode_rnn/seed_0",
+      "physical_gpu": "1",
+      "parameter_device": "cuda:0",
+      "epochs": 96,
+      "best_epoch": 56,
+      "training_hours": 2.3700387322583185,
+      "checkpoint_reload_difference": 0,
+      "evaluation_counts_match_reference": true,
+      "swanlab_status": "success"
+    },
+    {
+      "run": "small/latent_ode/seed_0",
+      "physical_gpu": "2",
+      "parameter_device": "cuda:0",
+      "epochs": 194,
+      "best_epoch": 154,
+      "training_hours": 6.502656391863873,
+      "checkpoint_reload_difference": 0,
+      "evaluation_counts_match_reference": true,
+      "swanlab_status": "success"
+    },
+    {
+      "run": "small/ode_rnn/seed_0",
+      "physical_gpu": "3",
+      "parameter_device": "cuda:0",
+      "epochs": 128,
+      "best_epoch": 88,
+      "training_hours": 2.930566808270006,
+      "checkpoint_reload_difference": 0,
+      "evaluation_counts_match_reference": true,
+      "swanlab_status": "success"
+    }
+  ]
+}

@@ -1,0 +1,497 @@
+{
+  "runs": [
+    {
+      "name": "ODE-AE",
+      "status": "completed_checkpoint",
+      "run": "local_available/ode_ae/seed_0",
+      "checkpoint_epoch": 50,
+      "checked_at": "2026-10-28T06:33:11.210027+00:00",
+      "physical_gpu": 0,
+      "parameter_device": "cuda:0",
+      "trainable_parameters": 3003,
+      "patients": 414,
+      "prefixes": 2402,
+      "batches": 76,
+      "batch_size": 32,
+      "rtol": 0.0001,
+      "atol": 1e-06,
+      "time_unit": "year",
+      "instrumentation_prediction_difference": 0.0,
+      "wall_seconds_with_concurrent_training": 8.009023889084347,
+      "total": {
+        "integration_calls": 1596,
+        "nonzero_integrations": 1520,
+        "zero_interval_calls": 76,
+        "accepted_steps": 3040,
+        "rejected_steps": 0,
+        "nfe": 21280,
+        "accepted_steps_per_nonzero_solve": 2.0,
+        "accepted_step_histogram": {
+          "2": 1520
+        },
+        "active_patient_step_equivalents": 48954
+      },
+      "by_phase": {
+        "encoder": {
+          "integration_calls": 817,
+          "nonzero_integrations": 741,
+          "zero_interval_calls": 76,
+          "accepted_steps": 1482,
+          "rejected_steps": 0,
+          "nfe": 10374,
+          "accepted_steps_per_nonzero_solve": 2.0,
+          "accepted_step_histogram": {
+            "2": 741
+          },
+          "active_patient_step_equivalents": 16318
+        },
+        "generator": {
+          "integration_calls": 779,
+          "nonzero_integrations": 779,
+          "zero_interval_calls": 0,
+          "accepted_steps": 1558,
+          "rejected_steps": 0,
+          "nfe": 10906,
+          "accepted_steps_per_nonzero_solve": 2.0,
+          "accepted_step_histogram": {
+            "2": 779
+          },
+          "active_patient_step_equivalents": 32636
+        }
+      }
+    },
+    {
+      "name": "Deterministic 2505",
+      "status": "completed_checkpoint",
+      "run": "local_available/deterministic/seed_0",
+      "checkpoint_epoch": 82,
+      "checked_at": "2026-10-28T06:33:10.945734+00:00",
+      "physical_gpu": 1,
+      "parameter_device": "cuda:0",
+      "trainable_parameters": 2505,
+      "patients": 414,
+      "prefixes": 2402,
+      "batches": 76,
+      "batch_size": 32,
+      "rtol": 0.0001,
+      "atol": 1e-06,
+      "time_unit": "year",
+      "instrumentation_prediction_difference": 0.0,
+      "wall_seconds_with_concurrent_training": 7.8404915609862655,
+      "total": {
+        "integration_calls": 1596,
+        "nonzero_integrations": 1520,
+        "zero_interval_calls": 76,
+        "accepted_steps": 3040,
+        "rejected_steps": 0,
+        "nfe": 21280,
+        "accepted_steps_per_nonzero_solve": 2.0,
+        "accepted_step_histogram": {
+          "2": 1520
+        },
+        "active_patient_step_equivalents": 48954
+      },
+      "by_phase": {
+        "encoder": {
+          "integration_calls": 817,
+          "nonzero_integrations": 741,
+          "zero_interval_calls": 76,
+          "accepted_steps": 1482,
+          "rejected_steps": 0,
+          "nfe": 10374,
+          "accepted_steps_per_nonzero_solve": 2.0,
+          "accepted_step_histogram": {
+            "2": 741
+          },
+          "active_patient_step_equivalents": 16318
+        },
+        "generator": {
+          "integration_calls": 779,
+          "nonzero_integrations": 779,
+          "zero_interval_calls": 0,
+          "accepted_steps": 1558,
+          "rejected_steps": 0,
+          "nfe": 10906,
+          "accepted_steps_per_nonzero_solve": 2.0,
+          "accepted_step_histogram": {
+            "2": 779
+          },
+          "active_patient_step_equivalents": 32636
+        }
+      }
+    },
+    {
+      "name": "LSTM",
+      "status": "completed_checkpoint",
+      "run": "local_available/lstm/seed_0",
+      "checkpoint_epoch": 44,
+      "checked_at": "2026-10-28T06:33:03.570462+00:00",
+      "physical_gpu": 2,
+      "parameter_device": "cuda:0",
+      "trainable_parameters": 4469,
+      "patients": 414,
+      "prefixes": 2402,
+      "batches": 76,
+      "batch_size": 32,
+      "rtol": 0.0001,
+      "atol": 1e-06,
+      "time_unit": "year",
+      "instrumentation_prediction_difference": 0.0,
+      "wall_seconds_with_concurrent_training": 0.5901430919766426,
+      "total": {
+        "integration_calls": 0,
+        "nonzero_integrations": 0,
+        "zero_interval_calls": 0,
+        "accepted_steps": 0,
+        "rejected_steps": 0,
+        "nfe": 0,
+        "accepted_steps_per_nonzero_solve": 0.0,
+        "accepted_step_histogram": {},
+        "active_patient_step_equivalents": 0
+      },
+      "by_phase": {}
+    },
+    {
+      "name": "Latent ODE native",
+      "status": "completed_checkpoint",
+      "run": "baselines_full/native/latent_ode/seed_0",
+      "checkpoint_epoch": 29,
+      "checked_at": "2026-10-28T06:33:12.956710+00:00",
+      "physical_gpu": 3,
+      "parameter_device": "cuda:0",
+      "trainable_parameters": 62065,
+      "patients": 414,
+      "prefixes": 2402,
+      "batches": 76,
+      "batch_size": 32,
+      "rtol": 0.0001,
+      "atol": 1e-06,
+      "time_unit": "decade",
+      "instrumentation_prediction_difference": 0.0,
+      "wall_seconds_with_concurrent_training": 9.898883884074166,
+      "total": {
+        "integration_calls": 1596,
+        "nonzero_integrations": 1596,
+        "zero_interval_calls": 0,
+        "accepted_steps": 3192,
+        "rejected_steps": 0,
+        "nfe": 22344,
+        "accepted_steps_per_nonzero_solve": 2.0,
+        "accepted_step_histogram": {
+          "2": 1596
+        },
+        "active_patient_step_equivalents": 52930
+      },
+      "by_phase": {
+        "encoder": {
+          "integration_calls": 741,
+          "nonzero_integrations": 741,
+          "zero_interval_calls": 0,
+          "accepted_steps": 1482,
+          "rejected_steps": 0,
+          "nfe": 10374,
+          "accepted_steps_per_nonzero_solve": 2.0,
+          "accepted_step_histogram": {
+            "2": 741
+          },
+          "active_patient_step_equivalents": 16318
+        },
+        "generator": {
+          "integration_calls": 855,
+          "nonzero_integrations": 855,
+          "zero_interval_calls": 0,
+          "accepted_steps": 1710,
+          "rejected_steps": 0,
+          "nfe": 11970,
+          "accepted_steps_per_nonzero_solve": 2.0,
+          "accepted_step_histogram": {
+            "2": 855
+          },
+          "active_patient_step_equivalents": 36612
+        }
+      }
+    },
+    {
+      "name": "ODE-RNN native",
+      "status": "completed_checkpoint",
+      "run": "baselines_full/native/ode_rnn/seed_0",
+      "checkpoint_epoch": 56,
+      "checked_at": "2026-10-28T06:33:17.075408+00:00",
+      "physical_gpu": 0,
+      "parameter_device": "cuda:0",
+      "trainable_parameters": 22545,
+      "patients": 414,
+      "prefixes": 2402,
+      "batches": 76,
+      "batch_size": 32,
+      "rtol": 0.0001,
+      "atol": 1e-06,
+      "time_unit": "decade",
+      "instrumentation_prediction_difference": 0.0,
+      "wall_seconds_with_concurrent_training": 5.6594702689908445,
+      "total": {
+        "integration_calls": 779,
+        "nonzero_integrations": 779,
+        "zero_interval_calls": 0,
+        "accepted_steps": 1558,
+        "rejected_steps": 0,
+        "nfe": 10906,
+        "accepted_steps_per_nonzero_solve": 2.0,
+        "accepted_step_histogram": {
+          "2": 779
+        },
+        "active_patient_step_equivalents": 32636
+      },
+      "by_phase": {
+        "recurrent_dynamics": {
+          "integration_calls": 779,
+          "nonzero_integrations": 779,
+          "zero_interval_calls": 0,
+          "accepted_steps": 1558,
+          "rejected_steps": 0,
+          "nfe": 10906,
+          "accepted_steps_per_nonzero_solve": 2.0,
+          "accepted_step_histogram": {
+            "2": 779
+          },
+          "active_patient_step_equivalents": 32636
+        }
+      }
+    },
+    {
+      "name": "Latent ODE small",
+      "status": "completed_checkpoint",
+      "run": "baselines_full/small/latent_ode/seed_0",
+      "checkpoint_epoch": 154,
+      "checked_at": "2026-10-28T06:33:20.912215+00:00",
+      "physical_gpu": 1,
+      "parameter_device": "cuda:0",
+      "trainable_parameters": 7641,
+      "patients": 414,
+      "prefixes": 2402,
+      "batches": 76,
+      "batch_size": 32,
+      "rtol": 0.0001,
+      "atol": 1e-06,
+      "time_unit": "decade",
+      "instrumentation_prediction_difference": 0.0,
+      "wall_seconds_with_concurrent_training": 9.711639696964994,
+      "total": {
+        "integration_calls": 1596,
+        "nonzero_integrations": 1596,
+        "zero_interval_calls": 0,
+        "accepted_steps": 3192,
+        "rejected_steps": 0,
+        "nfe": 22344,
+        "accepted_steps_per_nonzero_solve": 2.0,
+        "accepted_step_histogram": {
+          "2": 1596
+        },
+        "active_patient_step_equivalents": 52930
+      },
+      "by_phase": {
+        "encoder": {
+          "integration_calls": 741,
+          "nonzero_integrations": 741,
+          "zero_interval_calls": 0,
+          "accepted_steps": 1482,
+          "rejected_steps": 0,
+          "nfe": 10374,
+          "accepted_steps_per_nonzero_solve": 2.0,
+          "accepted_step_histogram": {
+            "2": 741
+          },
+          "active_patient_step_equivalents": 16318
+        },
+        "generator": {
+          "integration_calls": 855,
+          "nonzero_integrations": 855,
+          "zero_interval_calls": 0,
+          "accepted_steps": 1710,
+          "rejected_steps": 0,
+          "nfe": 11970,
+          "accepted_steps_per_nonzero_solve": 2.0,
+          "accepted_step_histogram": {
+            "2": 855
+          },
+          "active_patient_step_equivalents": 36612
+        }
+      }
+    },
+    {
+      "name": "ODE-RNN small",
+      "status": "completed_checkpoint",
+      "run": "baselines_full/small/ode_rnn/seed_0",
+      "checkpoint_epoch": 88,
+      "checked_at": "2026-10-28T06:33:08.678880+00:00",
+      "physical_gpu": 2,
+      "parameter_device": "cuda:0",
+      "trainable_parameters": 2719,
+      "patients": 414,
+      "prefixes": 2402,
+      "batches": 76,
+      "batch_size": 32,
+      "rtol": 0.0001,
+      "atol": 1e-06,
+      "time_unit": "decade",
+      "instrumentation_prediction_difference": 0.0,
+      "wall_seconds_with_concurrent_training": 4.957850386039354,
+      "total": {
+        "integration_calls": 779,
+        "nonzero_integrations": 779,
+        "zero_interval_calls": 0,
+        "accepted_steps": 1558,
+        "rejected_steps": 0,
+        "nfe": 10906,
+        "accepted_steps_per_nonzero_solve": 2.0,
+        "accepted_step_histogram": {
+          "2": 779
+        },
+        "active_patient_step_equivalents": 32636
+      },
+      "by_phase": {
+        "recurrent_dynamics": {
+          "integration_calls": 779,
+          "nonzero_integrations": 779,
+          "zero_interval_calls": 0,
+          "accepted_steps": 1558,
+          "rejected_steps": 0,
+          "nfe": 10906,
+          "accepted_steps_per_nonzero_solve": 2.0,
+          "accepted_step_histogram": {
+            "2": 779
+          },
+          "active_patient_step_equivalents": 32636
+        }
+      }
+    },
+    {
+      "name": "Deterministic 22545",
+      "status": "completed_checkpoint",
+      "run": "capacity_matched/deterministic_22545/seed_0",
+      "checkpoint_epoch": 76,
+      "checked_at": "2026-10-28T06:33:20.058690+00:00",
+      "physical_gpu": 3,
+      "parameter_device": "cuda:0",
+      "trainable_parameters": 22545,
+      "patients": 414,
+      "prefixes": 2402,
+      "batches": 76,
+      "batch_size": 32,
+      "rtol": 0.0001,
+      "atol": 1e-06,
+      "time_unit": "year",
+      "instrumentation_prediction_difference": 0.0,
+      "wall_seconds_with_concurrent_training": 6.888108994928189,
+      "total": {
+        "integration_calls": 1596,
+        "nonzero_integrations": 1520,
+        "zero_interval_calls": 76,
+        "accepted_steps": 3041,
+        "rejected_steps": 0,
+        "nfe": 21287,
+        "accepted_steps_per_nonzero_solve": 2.0006578947368423,
+        "accepted_step_histogram": {
+          "2": 1519,
+          "3": 1
+        },
+        "active_patient_step_equivalents": 48984
+      },
+      "by_phase": {
+        "encoder": {
+          "integration_calls": 817,
+          "nonzero_integrations": 741,
+          "zero_interval_calls": 76,
+          "accepted_steps": 1482,
+          "rejected_steps": 0,
+          "nfe": 10374,
+          "accepted_steps_per_nonzero_solve": 2.0,
+          "accepted_step_histogram": {
+            "2": 741
+          },
+          "active_patient_step_equivalents": 16318
+        },
+        "generator": {
+          "integration_calls": 779,
+          "nonzero_integrations": 779,
+          "zero_interval_calls": 0,
+          "accepted_steps": 1559,
+          "rejected_steps": 0,
+          "nfe": 10913,
+          "accepted_steps_per_nonzero_solve": 2.001283697047497,
+          "accepted_step_histogram": {
+            "2": 778,
+            "3": 1
+          },
+          "active_patient_step_equivalents": 32666
+        }
+      }
+    },
+    {
+      "name": "Forward age 22545",
+      "status": "in_progress_checkpoint",
+      "run": "direction_ablation/forward_age_from22545/seed_0",
+      "checkpoint_epoch": 84,
+      "checked_at": "2026-10-28T06:33:29.715047+00:00",
+      "physical_gpu": 0,
+      "parameter_device": "cuda:0",
+      "trainable_parameters": 22545,
+      "patients": 414,
+      "prefixes": 2402,
+      "batches": 76,
+      "batch_size": 32,
+      "rtol": 0.0001,
+      "atol": 1e-06,
+      "time_unit": "year",
+      "instrumentation_prediction_difference": 0.0,
+      "wall_seconds_with_concurrent_training": 12.245645294897258,
+      "total": {
+        "integration_calls": 2489,
+        "nonzero_integrations": 2246,
+        "zero_interval_calls": 243,
+        "accepted_steps": 4492,
+        "rejected_steps": 0,
+        "nfe": 31444,
+        "accepted_steps_per_nonzero_solve": 2.0,
+        "accepted_step_histogram": {
+          "2": 2246
+        },
+        "active_patient_step_equivalents": 48954
+      },
+      "by_phase": {
+        "encoder": {
+          "integration_calls": 817,
+          "nonzero_integrations": 741,
+          "zero_interval_calls": 76,
+          "accepted_steps": 1482,
+          "rejected_steps": 0,
+          "nfe": 10374,
+          "accepted_steps_per_nonzero_solve": 2.0,
+          "accepted_step_histogram": {
+            "2": 741
+          },
+          "active_patient_step_equivalents": 16318
+        },
+        "generator": {
+          "integration_calls": 1672,
+          "nonzero_integrations": 1505,
+          "zero_interval_calls": 167,
+          "accepted_steps": 3010,
+          "rejected_steps": 0,
+          "nfe": 21070,
+          "accepted_steps_per_nonzero_solve": 2.0,
+          "accepted_step_histogram": {
+            "2": 1505
+          },
+          "active_patient_step_equivalents": 32636
+        }
+      }
+    },
+    {
+      "name": "Forward zero 21307",
+      "status": "no_checkpoint",
+      "run": "direction_ablation/forward_from22545/seed_0"
+    }
+  ],
+  "rk_stages_per_attempt": 7
+}
