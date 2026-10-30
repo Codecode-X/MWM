@@ -56,7 +56,6 @@ cover/
 *.pot
 
 # Django stuff:
-*.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -206,27 +205,19 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-# ADNI patient data, embeddings and model checkpoints stay local.
-data/adni_cache/
-models/pretrained/
-results/adni_cuda/**/*.pt
-results/adni_cuda/**/*.npz
-results/adni_cuda/**/*.pkl
-results/adni_cuda/private/
-
-# SwanLab local dashboards and runtime state
-swanlog/
-**/swanlog/
-results/swanlab_monitoring/checks/
-
-# Model weights are intentionally excluded from the MWM publication.
-*.ckpt
-*.h5
-*.hdf5
-*.onnx
-*.pb
+# Project data, experiment reports, figures, metrics, and logs are versioned.
+# Keep model weights local, including weights inside experiment directories.
 *.pt
 *.pth
+*.ckpt
 *.safetensors
+*.onnx
+*.h5
+*.hdf5
 *.tflite
+*.pb
 *.weights
+*.pt.tar
+*.pth.tar
+pytorch_model*.bin
+adapter_model*.bin

@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "cuda_unit_tests": {
+    "passed": 4,
+    "physical_gpu": 0,
+    "environment": "healthflux"
+  },
+  "same_dataset_as_all_references": true,
+  "common_training_settings_checked": [
+    "data",
+    "normalization",
+    "scope",
+    "seed",
+    "batch_size",
+    "lr",
+    "lr_decay",
+    "lr_decay_steps",
+    "mse_weight",
+    "cce_weight",
+    "l2_weight",
+    "max_epochs",
+    "min_epochs",
+    "patience",
+    "input_dropout"
+  ],
+  "variant_differences": [
+    "kl_weight",
+    "output",
+    "variant"
+  ],
+  "native_model_parameters": 5156722,
+  "cuda_smoke": {
+    "variant": "common_task",
+    "physical_gpu": 0,
+    "loss_component_sum_error": 1.3351440415476645e-06,
+    "checkpoint_reload_difference": 0.0,
+    "actual_tensor_devices": {
+      "values": "cuda:0",
+      "ages": "cuda:0",
+      "mask": "cuda:0",
+      "context_mask": "cuda:0"
+    }
+  },
+  "formal_swanlab": {
+    "mode": "local",
+    "status": "running",
+    "family": "healthflux_adni",
+    "training_seed": 0,
+    "log_dir": "/home/xjh/projects/LatentODE/swanlog",
+    "physical_gpu": "0",
+    "parameter_device": "cuda:0",
+    "model_parameters": 5156722,
+    "run_id": "ejxf0ts2",
+    "experiment_name": "healthflux_adni-0-common_task-seed_0",
+    "sdk_version": "0.10.3"
+  },
+  "paper_kl_status": {
+    "status": "waiting_for_free_gpu"
+  },
+  "source_hashes_verified": true,
+  "reference_metrics_unchanged": true,
+  "formal_first_epoch_completed": true,
+  "formal_validation_same_field_counts_as_shared_matched": true,
+  "formal_actual_tensor_devices": {
+    "values": "cuda:0",
+    "ages": "cuda:0",
+    "mask": "cuda:0",
+    "context_mask": "cuda:0"
+  },
+  "first_epoch_seconds": 196.12599685997702
+}

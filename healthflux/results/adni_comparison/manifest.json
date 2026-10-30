@@ -1,0 +1,75 @@
+{
+  "created_by": "healthflux.study",
+  "dataset": "/home/xjh/projects/LatentODE/paper_odeae/cache/local_available.pkl",
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "environment": "healthflux",
+  "baseline_retrained": false,
+  "jobs": [
+    {
+      "name": "common_task",
+      "config": "/home/xjh/projects/LatentODE/healthflux/results/adni_comparison/configs/common_task.json",
+      "output": "/home/xjh/projects/LatentODE/healthflux/results/adni_comparison/common_task/seed_0",
+      "kl_weight": 1.0
+    },
+    {
+      "name": "paper_kl",
+      "config": "/home/xjh/projects/LatentODE/healthflux/results/adni_comparison/configs/paper_kl.json",
+      "output": "/home/xjh/projects/LatentODE/healthflux/results/adni_comparison/paper_kl/seed_0",
+      "kl_weight": 0.01
+    }
+  ],
+  "paper": {
+    "paper": "https://www.medrxiv.org/content/10.64898/2026.09.19.26363460v3.full",
+    "version": 3,
+    "posted": "2026-10-07",
+    "pdf_sha256": "5f482ad2e1b12266e9f672d4078ceda65eab463638d8eb0ac6f116cdb8807078",
+    "implementation_source": "Methods-based reimplementation",
+    "public_code_search": "No author HealthFlux implementation link found in paper HTML/PDF, author lab website or GitHub repository search at audit time",
+    "rejected_same_name_repo": {
+      "url": "https://github.com/RandomForestPanda/HealthFlux",
+      "commit": "1fbc80f13d198878ce62668d31bea9a27314a4ca",
+      "reason": "unrelated React/PostgreSQL healthcare analytics application"
+    },
+    "author_lab": "https://lab.kejunying.com/",
+    "github_author": "https://github.com/albert-ying/"
+  },
+  "reference_runs": [
+    {
+      "name": "shared_matched (6D)",
+      "path": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/shared_matched/seed_0",
+      "metrics_sha256": "f1d274f5a645a56b383614de596797ac986981c95ff3a6c2b490a8c0f37c7570"
+    },
+    {
+      "name": "shared_matched latent2x (28D)",
+      "path": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_latent_scaling/latent_2x/seed_0",
+      "metrics_sha256": "902c31622a3b7f26ba0d2824b749cb8d53575ca371a3d8c0337f80d340502db8"
+    },
+    {
+      "name": "shared_matched latent4x (73D)",
+      "path": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_scaling_4x/latent_4x/seed_0",
+      "metrics_sha256": "56c8f88b29b33d2baea80f75dc5b469a3b1aee6aacae2312d908eb6b90b35d15"
+    },
+    {
+      "name": "ODE-AE",
+      "path": "/home/xjh/projects/LatentODE/paper_odeae/results/local_available/ode_ae/seed_0",
+      "metrics_sha256": "e3a256f365250a0549cddb6438b6a1bb69c49bd185e0ce98e85e0374169e2156"
+    },
+    {
+      "name": "deterministic ODE-AE 22545",
+      "path": "/home/xjh/projects/LatentODE/paper_odeae/results/capacity_matched/deterministic_22545/seed_0",
+      "metrics_sha256": "6cf6a512171debc80e88969e148afb48592cb939ddaba2089b069fad7dbae234"
+    },
+    {
+      "name": "ODE-RNN",
+      "path": "/home/xjh/projects/LatentODE/paper_odeae/results/baselines_full/native/ode_rnn/seed_0",
+      "metrics_sha256": "801be083a27425b3ff1234c3758e18eb45cc3b5c33a7e30d7a45665818e4c3c2"
+    },
+    {
+      "name": "Latent ODE",
+      "path": "/home/xjh/projects/LatentODE/paper_odeae/results/baselines_full/native/latent_ode/seed_0",
+      "metrics_sha256": "a4a580010e9fd11041e22b73f8826c5da7b85b2ed46af1aa6ce45f6a30f6f56b"
+    }
+  ],
+  "selection": "original ADNI validation overall mixed-field reconstruction error",
+  "hardware_policy": "free physical GPU among 0,1,2,3; one worker per GPU; existing training preserved"
+}

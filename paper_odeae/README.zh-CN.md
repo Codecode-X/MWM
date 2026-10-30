@@ -10,6 +10,8 @@
 
 新增 latent2x 的三组损失消融：weak_prior＋Jacobian、仅 weak_prior、仅 Jacobian，新增项权重均为 0.01，分别使用 GPU 1、2、3。参见 [实验设计](docs/LATENT2X_LOSS_ABLATION.zh-CN.md) 与 [四组实时对比](results/latent2x_loss_ablation/summary.md)。
 
+新增 HealthFlux 基线：使用独立的 `healthflux` Conda 环境，按论文 v3 实现双状态连续时间模型，接入相同 ADNI 数据与字段评分。参见 [模型与任务适配](../healthflux/README.zh-CN.md) 和 [实时比较](../healthflux/results/adni_comparison/summary.md)。
+
 shared_matched 已完成 [二维状态空间、共享速度场与患者轨迹可视化](results/shared_matched_state_space/report.zh-CN.md)，并提供 [交互查看页面](results/shared_matched_state_space/interactive.html)。
 
 [临床速度实验 A](results/shared_matched_clinical_velocity/report.zh-CN.md) 进一步使用 DECODER 的链式导数，将潜在速度转为 MMSE、CDR-SB 和 ADAS 各题的分数/年，包含相邻随访变化率评价、临床速度场及较快下降患者的排序对照。

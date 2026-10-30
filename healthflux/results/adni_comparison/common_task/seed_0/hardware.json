@@ -1,0 +1,95 @@
+{
+  "physical_gpu": "0",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "parameter_device": "cuda:0",
+  "parameters": 5156722,
+  "trainable_parameters": 5156722,
+  "environment": "healthflux",
+  "executable": "/home/xjh/miniforge3/envs/healthflux/bin/python",
+  "torch_version": "2.5.1+cu121",
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "model_source_sha256": "1f2f0185027e465ebbad52c93b1af7538d14c7b7453d4f18b269bce336b46e38",
+  "parameter_breakdown": {
+    "context_encoder": 199808,
+    "age_encoder": 178624,
+    "initial": 320512,
+    "dynamics": 418816,
+    "event_embedding": 768,
+    "encoders": 1511424,
+    "attention": 257,
+    "prior": 418816,
+    "posterior": 517120,
+    "update": 640512,
+    "update_norm": 512,
+    "state_norm": 768,
+    "decoder": 947249
+  },
+  "modality_embedding_parameters": 1536,
+  "latent_dimensions": {
+    "deterministic": 256,
+    "stochastic": 128
+  },
+  "modality_groups": {
+    "demographic": [
+      "marital_status",
+      "education_years",
+      "handedness"
+    ],
+    "cognition": [
+      "mmse",
+      "cdrsb",
+      "avtot1",
+      "adas_q1",
+      "adas_q2",
+      "adas_q3",
+      "adas_q4",
+      "adas_q5",
+      "adas_q6",
+      "adas_q7",
+      "adas_q8",
+      "adas_q9",
+      "adas_q10",
+      "adas_q11",
+      "adas_q12",
+      "adas_q13",
+      "clock",
+      "digit_forward",
+      "digit_forward_length",
+      "digit_backward",
+      "digit_backward_length",
+      "category_animals",
+      "category_animals_perseveration",
+      "category_animals_intrusion",
+      "category_vegetables",
+      "category_vegetables_perseveration",
+      "category_vegetables_intrusion"
+    ],
+    "pet": [
+      "amyloid_cortical_suvr",
+      "tau_cortical_suvr"
+    ],
+    "mri": [
+      "hippocampal_volume_change_percent"
+    ],
+    "genetic": [
+      "apoe4_count"
+    ],
+    "csf": [
+      "csf_abeta42",
+      "csf_abeta40",
+      "csf_ptau"
+    ]
+  },
+  "solver": "original-paper fixed-step RK4, age/10 clock, max step 10 years, max 4 substeps",
+  "future_updates": false,
+  "history_reconstruction": "cutoff-conditioned backward integration; native prior mean at unobserved query",
+  "implementation": "paper v3 Methods reimplementation; common ADNI task readout and objective",
+  "actual_tensor_devices": {
+    "values": "cuda:0",
+    "ages": "cuda:0",
+    "mask": "cuda:0",
+    "context_mask": "cuda:0"
+  },
+  "prediction_device": "cuda:0",
+  "kl_device": "cuda:0"
+}
