@@ -1,0 +1,451 @@
+{
+  "status": "passed",
+  "runs": [
+    {
+      "name": "healthflux_kl",
+      "physical_gpu": "0",
+      "environment": "healthflux",
+      "devices": {
+        "state": "cuda:0",
+        "velocity": "cuda:0",
+        "pca": "cuda:0",
+        "neighborhoods": "cuda:0"
+      },
+      "original_evaluation_max_difference": 0.0,
+      "checkpoint_parameters_unchanged": true,
+      "state_checks": [
+        {
+          "comparison": "cutoff latent state vs original forward/hooked update",
+          "max_error": 0.0
+        },
+        {
+          "comparison": "future values and masks changed",
+          "max_error": 0.0
+        }
+      ]
+    },
+    {
+      "name": "latent2x_baseline",
+      "physical_gpu": "1",
+      "environment": "ode",
+      "devices": {
+        "state": "cuda:0",
+        "velocity": "cuda:0",
+        "pca": "cuda:0",
+        "neighborhoods": "cuda:0"
+      },
+      "original_evaluation_max_difference": 0.0,
+      "checkpoint_parameters_unchanged": true,
+      "state_checks": [
+        {
+          "comparison": "cutoff latent state vs original forward/hooked update",
+          "max_error": 0.0
+        },
+        {
+          "comparison": "future values and masks changed",
+          "max_error": 0.0
+        }
+      ]
+    },
+    {
+      "name": "latent2x_both",
+      "physical_gpu": "2",
+      "environment": "ode",
+      "devices": {
+        "state": "cuda:0",
+        "velocity": "cuda:0",
+        "pca": "cuda:0",
+        "neighborhoods": "cuda:0"
+      },
+      "original_evaluation_max_difference": 0.0,
+      "checkpoint_parameters_unchanged": true,
+      "state_checks": [
+        {
+          "comparison": "cutoff latent state vs original forward/hooked update",
+          "max_error": 0.0
+        },
+        {
+          "comparison": "future values and masks changed",
+          "max_error": 0.0
+        }
+      ]
+    },
+    {
+      "name": "latent2x_prior",
+      "physical_gpu": "3",
+      "environment": "ode",
+      "devices": {
+        "state": "cuda:0",
+        "velocity": "cuda:0",
+        "pca": "cuda:0",
+        "neighborhoods": "cuda:0"
+      },
+      "original_evaluation_max_difference": 0.0,
+      "checkpoint_parameters_unchanged": true,
+      "state_checks": [
+        {
+          "comparison": "cutoff latent state vs original forward/hooked update",
+          "max_error": 0.0
+        },
+        {
+          "comparison": "future values and masks changed",
+          "max_error": 0.0
+        }
+      ]
+    },
+    {
+      "name": "latent2x_jacobian",
+      "physical_gpu": "3",
+      "environment": "ode",
+      "devices": {
+        "state": "cuda:0",
+        "velocity": "cuda:0",
+        "pca": "cuda:0",
+        "neighborhoods": "cuda:0"
+      },
+      "original_evaluation_max_difference": 0.0,
+      "checkpoint_parameters_unchanged": true,
+      "state_checks": [
+        {
+          "comparison": "cutoff latent state vs original forward/hooked update",
+          "max_error": 0.0
+        },
+        {
+          "comparison": "future values and masks changed",
+          "max_error": 0.0
+        }
+      ]
+    },
+    {
+      "name": "ode_ae",
+      "physical_gpu": "2",
+      "environment": "ode",
+      "devices": {
+        "state": "cuda:0",
+        "velocity": "cuda:0",
+        "pca": "cuda:0",
+        "neighborhoods": "cuda:0"
+      },
+      "original_evaluation_max_difference": 0.0,
+      "checkpoint_parameters_unchanged": true,
+      "state_checks": [
+        {
+          "comparison": "cutoff decoder prediction vs original forward",
+          "max_error": 0.0
+        },
+        {
+          "comparison": "future values and masks changed",
+          "max_error": 0.0
+        }
+      ]
+    },
+    {
+      "name": "latent_ode",
+      "physical_gpu": "1",
+      "environment": "ode",
+      "devices": {
+        "state": "cuda:0",
+        "velocity": "cuda:0",
+        "pca": "cuda:0",
+        "neighborhoods": "cuda:0"
+      },
+      "original_evaluation_max_difference": 0.0,
+      "checkpoint_parameters_unchanged": true,
+      "state_checks": [
+        {
+          "comparison": "cutoff latent state vs original forward/hooked update",
+          "max_error": 0.0
+        },
+        {
+          "comparison": "future values and masks changed",
+          "max_error": 0.0
+        }
+      ]
+    },
+    {
+      "name": "ode_rnn",
+      "physical_gpu": "0",
+      "environment": "ode",
+      "devices": {
+        "state": "cuda:0",
+        "velocity": "cuda:0",
+        "pca": "cuda:0",
+        "neighborhoods": "cuda:0"
+      },
+      "original_evaluation_max_difference": 0.0,
+      "checkpoint_parameters_unchanged": true,
+      "state_checks": [
+        {
+          "comparison": "cutoff latent state vs original forward/hooked update",
+          "max_error": 0.0
+        },
+        {
+          "comparison": "future values and masks changed",
+          "max_error": 0.0
+        }
+      ]
+    },
+    {
+      "name": "shared_matched",
+      "physical_gpu": "3",
+      "environment": "ode",
+      "devices": {
+        "state": "cuda:0",
+        "velocity": "cuda:0",
+        "pca": "cuda:0",
+        "neighborhoods": "cuda:0"
+      },
+      "original_evaluation_max_difference": 0.0,
+      "checkpoint_parameters_unchanged": true,
+      "state_checks": [
+        {
+          "source": "previous CUDA state extraction; exact checkpoint hash verified"
+        }
+      ]
+    }
+  ],
+  "training_performed": false,
+  "velocity_projection_checks": [
+    {
+      "name": "healthflux_kl",
+      "checkpoint_sha256": "aceddf89acf7e522729fb4816089ebb3e390e22b30fd8ea9cae4ebbe1eeb55b2",
+      "source_states_sha256": "36b62ef769841dd6dba7b15fbb0e60cbc03e1f5ff7eb0298274197e0e81228d8",
+      "physical_gpu": "0",
+      "device": "cuda:0",
+      "method": "uncentered SVD of training velocities; includes mean flow",
+      "velocity_energy_retained_2d": 0.9999999999999996,
+      "projection_dtype": "CUDA float64; gesvd",
+      "basis_orthogonality_max_error": 6.661338147750939e-16,
+      "state_variance_retained_2d": 0.01409686747949427,
+      "train_mean_velocity_energy_fraction": 0.9999999999999999,
+      "effective_uncentered_velocity_rank": 1.0,
+      "diagnostics_source_sha256": "f2e63c122a1d81bc299b133d6a1560470c81e5fc2b718feda72f9055cce8ee0d",
+      "model_training_performed": false,
+      "neighborhood_dtype": "CUDA float32; projections and energy use float64",
+      "case_model_device": "cuda:0"
+    },
+    {
+      "name": "latent2x_baseline",
+      "checkpoint_sha256": "cdb3cb3006295cade1ee96d7e3d64547f87cfa3754ad99f68df3e8186157869f",
+      "source_states_sha256": "53f22af51128132d50d53fc2b5d5ecad2e3c4986f992163e29cfa4b5570708bb",
+      "physical_gpu": "1",
+      "device": "cuda:0",
+      "method": "uncentered SVD of training velocities; includes mean flow",
+      "velocity_energy_retained_2d": 0.9317884052447253,
+      "projection_dtype": "CUDA float64; gesvd",
+      "basis_orthogonality_max_error": 7.771561172376096e-16,
+      "state_variance_retained_2d": 0.09681743950461905,
+      "train_mean_velocity_energy_fraction": 0.7582659114222607,
+      "effective_uncentered_velocity_rank": 1.7377466056072515,
+      "diagnostics_source_sha256": "f2e63c122a1d81bc299b133d6a1560470c81e5fc2b718feda72f9055cce8ee0d",
+      "model_training_performed": false,
+      "neighborhood_dtype": "CUDA float32; projections and energy use float64",
+      "case_model_device": "cuda:0"
+    },
+    {
+      "name": "latent2x_both",
+      "checkpoint_sha256": "0a99d69bb92b837b3f5eb71e8af15a9296b5913c212437cff80217175b4bec86",
+      "source_states_sha256": "7cabe8892ff58baf57ad9f61c090e5e594685a5dc1de616c2376b96168860593",
+      "physical_gpu": "2",
+      "device": "cuda:0",
+      "method": "uncentered SVD of training velocities; includes mean flow",
+      "velocity_energy_retained_2d": 0.9815006401706787,
+      "projection_dtype": "CUDA float64; gesvd",
+      "basis_orthogonality_max_error": 2.220446049250313e-16,
+      "state_variance_retained_2d": 0.11276567636650886,
+      "train_mean_velocity_energy_fraction": 0.8394187633537984,
+      "effective_uncentered_velocity_rank": 1.365681017358071,
+      "diagnostics_source_sha256": "f2e63c122a1d81bc299b133d6a1560470c81e5fc2b718feda72f9055cce8ee0d",
+      "model_training_performed": false,
+      "neighborhood_dtype": "CUDA float32; projections and energy use float64",
+      "case_model_device": "cuda:0"
+    },
+    {
+      "name": "latent2x_prior",
+      "checkpoint_sha256": "62bcda7ff945b69f94154dde9cc9f10ffa018323c75b2fe2694a220164ea6eac",
+      "source_states_sha256": "ad5eae2b1e80b736145a02d0a989c5c32b829f1f445d0e3d87f15599b4a6751f",
+      "physical_gpu": "3",
+      "device": "cuda:0",
+      "method": "uncentered SVD of training velocities; includes mean flow",
+      "velocity_energy_retained_2d": 0.9552357107113595,
+      "projection_dtype": "CUDA float64; gesvd",
+      "basis_orthogonality_max_error": 7.771561172376096e-16,
+      "state_variance_retained_2d": 0.1535318060722779,
+      "train_mean_velocity_energy_fraction": 0.7257555621515439,
+      "effective_uncentered_velocity_rank": 1.689624621770333,
+      "diagnostics_source_sha256": "f2e63c122a1d81bc299b133d6a1560470c81e5fc2b718feda72f9055cce8ee0d",
+      "model_training_performed": false,
+      "neighborhood_dtype": "CUDA float32; projections and energy use float64",
+      "case_model_device": "cuda:0"
+    },
+    {
+      "name": "latent2x_jacobian",
+      "checkpoint_sha256": "8b80134e81c516055bb937393e61e1f819bd318ee77158b14a61f0799cc1fce5",
+      "source_states_sha256": "56849ea061307e872c3ee89cb9f637960b26e62cdb0239d95f354b8fc6cc3033",
+      "physical_gpu": "3",
+      "device": "cuda:0",
+      "method": "uncentered SVD of training velocities; includes mean flow",
+      "velocity_energy_retained_2d": 0.9586975054701387,
+      "projection_dtype": "CUDA float64; gesvd",
+      "basis_orthogonality_max_error": 2.220446049250313e-16,
+      "state_variance_retained_2d": 0.16952421248930388,
+      "train_mean_velocity_energy_fraction": 0.7702062207880979,
+      "effective_uncentered_velocity_rank": 1.6127476239563228,
+      "diagnostics_source_sha256": "f2e63c122a1d81bc299b133d6a1560470c81e5fc2b718feda72f9055cce8ee0d",
+      "model_training_performed": false,
+      "neighborhood_dtype": "CUDA float32; projections and energy use float64",
+      "case_model_device": "cuda:0"
+    },
+    {
+      "name": "ode_ae",
+      "checkpoint_sha256": "6a160abccd9a96f1c1f1471354f83024fae38724dde07c714ee1d424f86a51bf",
+      "source_states_sha256": "c15805f006ce0d3a0ede60642fcf9f9983e1485321a457fa9fe0b97c5a023d0b",
+      "physical_gpu": "1",
+      "device": "cuda:0",
+      "method": "uncentered SVD of training velocities; includes mean flow",
+      "velocity_energy_retained_2d": 0.9999996614285601,
+      "projection_dtype": "CUDA float64; gesvd",
+      "basis_orthogonality_max_error": 4.440892098500626e-16,
+      "state_variance_retained_2d": 0.6927514660709639,
+      "train_mean_velocity_energy_fraction": 0.999979560743673,
+      "effective_uncentered_velocity_rank": 1.000131998377361,
+      "diagnostics_source_sha256": "f2e63c122a1d81bc299b133d6a1560470c81e5fc2b718feda72f9055cce8ee0d",
+      "model_training_performed": false,
+      "neighborhood_dtype": "CUDA float32; projections and energy use float64",
+      "case_model_device": "cuda:0"
+    },
+    {
+      "name": "latent_ode",
+      "checkpoint_sha256": "6c8e922eac8d309166234a9061f42a26d1492e09ac30e872646dd05eba3a30e3",
+      "source_states_sha256": "e052df3750c5303e323af7446e9624cd4b73e908f255d5d99dde12b50422be51",
+      "physical_gpu": "0",
+      "device": "cuda:0",
+      "method": "uncentered SVD of training velocities; includes mean flow",
+      "velocity_energy_retained_2d": 0.9999999999999994,
+      "projection_dtype": "CUDA float64; gesvd",
+      "basis_orthogonality_max_error": 4.440892098500626e-16,
+      "state_variance_retained_2d": 0.24929787737217113,
+      "train_mean_velocity_energy_fraction": 1.0,
+      "effective_uncentered_velocity_rank": 1.0,
+      "diagnostics_source_sha256": "f2e63c122a1d81bc299b133d6a1560470c81e5fc2b718feda72f9055cce8ee0d",
+      "model_training_performed": false,
+      "neighborhood_dtype": "CUDA float32; projections and energy use float64",
+      "case_model_device": "cuda:0"
+    },
+    {
+      "name": "ode_rnn",
+      "checkpoint_sha256": "3fc5be5a3212f677f9aeb8431bd3d9ec82d88270d12459aa7ebe9c1ce89dcfb9",
+      "source_states_sha256": "742eda215e726feb69f180aff4fa9a92838b7522e149298272d6d1bfb3214ffb",
+      "physical_gpu": "2",
+      "device": "cuda:0",
+      "method": "uncentered SVD of training velocities; includes mean flow",
+      "velocity_energy_retained_2d": 0.9999999999999999,
+      "projection_dtype": "CUDA float64; gesvd",
+      "basis_orthogonality_max_error": 2.220446049250313e-16,
+      "state_variance_retained_2d": 0.05634919321979551,
+      "train_mean_velocity_energy_fraction": 0.9999999999999998,
+      "effective_uncentered_velocity_rank": 1.0,
+      "diagnostics_source_sha256": "f2e63c122a1d81bc299b133d6a1560470c81e5fc2b718feda72f9055cce8ee0d",
+      "model_training_performed": false,
+      "neighborhood_dtype": "CUDA float32; projections and energy use float64",
+      "case_model_device": "cuda:0"
+    },
+    {
+      "name": "shared_matched",
+      "checkpoint_sha256": "f13ab3dae0a2be7da6c9aee971e162b63ae998373a2e48af65bd6fd758acf0b8",
+      "source_states_sha256": "96c264bd6b406e7ca0effd070cdc26a46df371b20c3d3063650f855bbd54328d",
+      "physical_gpu": "3",
+      "device": "cuda:0",
+      "method": "uncentered SVD of training velocities; includes mean flow",
+      "velocity_energy_retained_2d": 0.9983210834912188,
+      "projection_dtype": "CUDA float64; gesvd",
+      "basis_orthogonality_max_error": 8.881784197001252e-16,
+      "state_variance_retained_2d": 0.49859031762114286,
+      "train_mean_velocity_energy_fraction": 0.692486601119876,
+      "effective_uncentered_velocity_rank": 1.3501003037728934,
+      "diagnostics_source_sha256": "f2e63c122a1d81bc299b133d6a1560470c81e5fc2b718feda72f9055cce8ee0d",
+      "model_training_performed": false,
+      "neighborhood_dtype": "CUDA float32; projections and energy use float64",
+      "case_model_device": "cuda:0"
+    }
+  ],
+  "final_projection_checks": [
+    {
+      "name": "healthflux_kl",
+      "state_and_velocity_projection_checked_on": "cuda:0",
+      "velocity_basis_orthogonality_error": 6.661338147750939e-16,
+      "source_case_forecast_checks": true,
+      "metadata_exactly_matched": true
+    },
+    {
+      "name": "latent2x_baseline",
+      "state_and_velocity_projection_checked_on": "cuda:0",
+      "velocity_basis_orthogonality_error": 7.771561172376096e-16,
+      "source_case_forecast_checks": true,
+      "metadata_exactly_matched": true
+    },
+    {
+      "name": "latent2x_both",
+      "state_and_velocity_projection_checked_on": "cuda:0",
+      "velocity_basis_orthogonality_error": 2.220446049250313e-16,
+      "source_case_forecast_checks": true,
+      "metadata_exactly_matched": true
+    },
+    {
+      "name": "latent2x_prior",
+      "state_and_velocity_projection_checked_on": "cuda:0",
+      "velocity_basis_orthogonality_error": 7.771561172376096e-16,
+      "source_case_forecast_checks": true,
+      "metadata_exactly_matched": true
+    },
+    {
+      "name": "latent2x_jacobian",
+      "state_and_velocity_projection_checked_on": "cuda:0",
+      "velocity_basis_orthogonality_error": 2.220446049250313e-16,
+      "source_case_forecast_checks": true,
+      "metadata_exactly_matched": true
+    },
+    {
+      "name": "ode_ae",
+      "state_and_velocity_projection_checked_on": "cuda:0",
+      "velocity_basis_orthogonality_error": 4.440892098500626e-16,
+      "source_case_forecast_checks": true,
+      "metadata_exactly_matched": true
+    },
+    {
+      "name": "latent_ode",
+      "state_and_velocity_projection_checked_on": "cuda:0",
+      "velocity_basis_orthogonality_error": 4.440892098500626e-16,
+      "source_case_forecast_checks": true,
+      "metadata_exactly_matched": true
+    },
+    {
+      "name": "ode_rnn",
+      "state_and_velocity_projection_checked_on": "cuda:0",
+      "velocity_basis_orthogonality_error": 2.220446049250313e-16,
+      "source_case_forecast_checks": true,
+      "metadata_exactly_matched": true
+    },
+    {
+      "name": "shared_matched",
+      "state_and_velocity_projection_checked_on": "cuda:0",
+      "velocity_basis_orthogonality_error": 8.881784197001252e-16,
+      "source_case_forecast_checks": true,
+      "metadata_exactly_matched": true
+    }
+  ],
+  "original_reference_pca_and_coordinates_exact": true,
+  "annual_clock_tests": {
+    "cuda": true,
+    "families_checked": 5,
+    "unit_test_invocations_passed": 2
+  },
+  "report_links_checked": true,
+  "master_figures": 15,
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "per_model_interactive_pages": 9
+}

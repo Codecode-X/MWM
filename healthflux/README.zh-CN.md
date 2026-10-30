@@ -10,6 +10,8 @@
 
 实时训练状态和同任务比较见 [结果汇总](results/adni_comparison/summary.md)。
 
+HealthFlux-kl 与八组对照的状态空间、速度场及病例可视化见 [统一横向分析](../paper_odeae/results/state_space_model_comparison/report.zh-CN.md)。其中 HealthFlux 同时展示 256 维 ODE 状态和 384 维完整健康表示。
+
 ## 2. 先理解 HealthFlux 的两种状态
 
 HealthFlux 同时维护两部分：

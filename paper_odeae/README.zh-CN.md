@@ -14,6 +14,8 @@
 
 shared_matched 已完成 [二维状态空间、共享速度场与患者轨迹可视化](results/shared_matched_state_space/report.zh-CN.md)，并提供 [交互查看页面](results/shared_matched_state_space/interactive.html)。
 
+八组新模型的 [状态空间与动力学横向比较](results/state_space_model_comparison/report.zh-CN.md) 已覆盖 HealthFlux-kl、四组 latent2x、ODE-AE、Latent ODE、ODE-RNN，并保留原六维 shared_matched 参照。文档统一展示任务误差、诊断/MMSE/年龄状态图、平滑与原始场、速度主平面和同三位患者的轨迹。
+
 [临床速度实验 A](results/shared_matched_clinical_velocity/report.zh-CN.md) 进一步使用 DECODER 的链式导数，将潜在速度转为 MMSE、CDR-SB 和 ADAS 各题的分数/年，包含相邻随访变化率评价、临床速度场及较快下降患者的排序对照。
 
 [局部动力学实验 B](results/shared_matched_local_dynamics/report.zh-CN.md) 在六维空间计算不同患者近邻的方向一致性、速度敏感性与精确Jacobian范数，并关联12/24个月MMSE预测误差，包含区域、二维投影、邻域大小及患者重抽样分析。

@@ -1,0 +1,98 @@
+{
+  "models": [
+    {
+      "name": "healthflux_kl",
+      "title": "HealthFlux-kl",
+      "family": "healthflux",
+      "checkpoint": "/home/xjh/projects/LatentODE/healthflux/results/adni_comparison/paper_kl/seed_0/best.pt",
+      "checkpoint_sha256": "aceddf89acf7e522729fb4816089ebb3e390e22b30fd8ea9cae4ebbe1eeb55b2",
+      "original_metrics_sha256": "5cc86c8b091beba25faf9622dd2b1a90fbe3991951e4b392d02858e63ead2e1b",
+      "environment": "healthflux"
+    },
+    {
+      "name": "latent2x_baseline",
+      "title": "latent2x baseline",
+      "family": "shared",
+      "checkpoint": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_latent_scaling/latent_2x/seed_0/best.pt",
+      "checkpoint_sha256": "cdb3cb3006295cade1ee96d7e3d64547f87cfa3754ad99f68df3e8186157869f",
+      "original_metrics_sha256": "902c31622a3b7f26ba0d2824b749cb8d53575ca371a3d8c0337f80d340502db8",
+      "environment": "ode"
+    },
+    {
+      "name": "latent2x_both",
+      "title": "latent2x both",
+      "family": "shared",
+      "checkpoint": "/home/xjh/projects/LatentODE/paper_odeae/results/latent2x_loss_ablation/both/seed_0/best.pt",
+      "checkpoint_sha256": "0a99d69bb92b837b3f5eb71e8af15a9296b5913c212437cff80217175b4bec86",
+      "original_metrics_sha256": "bddc11bfe72776701d2acc27905c5ef9800b39fb1c292eadd8bc5ccc0597a0ca",
+      "environment": "ode"
+    },
+    {
+      "name": "latent2x_prior",
+      "title": "latent2x prior",
+      "family": "shared",
+      "checkpoint": "/home/xjh/projects/LatentODE/paper_odeae/results/latent2x_loss_ablation/weak_prior/seed_0/best.pt",
+      "checkpoint_sha256": "62bcda7ff945b69f94154dde9cc9f10ffa018323c75b2fe2694a220164ea6eac",
+      "original_metrics_sha256": "7c9169c6b35ea16ec1e0ef6881e26197084c49337064ab41c61cc2c80adcdf2b",
+      "environment": "ode"
+    },
+    {
+      "name": "latent2x_jacobian",
+      "title": "latent2x jacobian",
+      "family": "shared",
+      "checkpoint": "/home/xjh/projects/LatentODE/paper_odeae/results/latent2x_loss_ablation/jacobian/seed_0/best.pt",
+      "checkpoint_sha256": "8b80134e81c516055bb937393e61e1f819bd318ee77158b14a61f0799cc1fce5",
+      "original_metrics_sha256": "064a794f3cbc5370e82a4563affec2e4736ef99c6296acb4bb2986cd81e4f3ec",
+      "environment": "ode"
+    },
+    {
+      "name": "ode_ae",
+      "title": "ODE-AE",
+      "family": "ode_ae",
+      "checkpoint": "/home/xjh/projects/LatentODE/paper_odeae/results/local_available/ode_ae/seed_0/best.pt",
+      "checkpoint_sha256": "6a160abccd9a96f1c1f1471354f83024fae38724dde07c714ee1d424f86a51bf",
+      "original_metrics_sha256": "e3a256f365250a0549cddb6438b6a1bb69c49bd185e0ce98e85e0374169e2156",
+      "environment": "ode"
+    },
+    {
+      "name": "latent_ode",
+      "title": "Latent ODE",
+      "family": "latent_ode",
+      "checkpoint": "/home/xjh/projects/LatentODE/paper_odeae/results/baselines_full/native/latent_ode/seed_0/best.pt",
+      "checkpoint_sha256": "6c8e922eac8d309166234a9061f42a26d1492e09ac30e872646dd05eba3a30e3",
+      "original_metrics_sha256": "a4a580010e9fd11041e22b73f8826c5da7b85b2ed46af1aa6ce45f6a30f6f56b",
+      "environment": "ode"
+    },
+    {
+      "name": "ode_rnn",
+      "title": "ODE-RNN",
+      "family": "ode_rnn",
+      "checkpoint": "/home/xjh/projects/LatentODE/paper_odeae/results/baselines_full/native/ode_rnn/seed_0/best.pt",
+      "checkpoint_sha256": "3fc5be5a3212f677f9aeb8431bd3d9ec82d88270d12459aa7ebe9c1ce89dcfb9",
+      "original_metrics_sha256": "801be083a27425b3ff1234c3758e18eb45cc3b5c33a7e30d7a45665818e4c3c2",
+      "environment": "ode"
+    },
+    {
+      "name": "shared_matched",
+      "title": "shared_matched 6D (reference)",
+      "family": "shared",
+      "checkpoint": "/home/xjh/projects/LatentODE/paper_odeae/results/forward_age_scaling/shared_matched/seed_0/best.pt",
+      "checkpoint_sha256": "f13ab3dae0a2be7da6c9aee971e162b63ae998373a2e48af65bd6fd758acf0b8",
+      "original_metrics_sha256": "f1d274f5a645a56b383614de596797ac986981c95ff3a6c2b490a8c0f37c7570",
+      "environment": "ode"
+    }
+  ],
+  "dataset": "/home/xjh/projects/LatentODE/paper_odeae/cache/local_available.pkl",
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "training_performed": false,
+  "pca": "own training states; original shared_matched PCA reused",
+  "primary_healthflux_state": "256D h; additional observed 384D representation",
+  "native_ode_rnn_forecast": "feedback updates; shown separately from pure ODE diagnostic continuation",
+  "case_source": "/home/xjh/projects/LatentODE/paper_odeae/results/shared_matched_state_space/patient_paths.json"
+}
