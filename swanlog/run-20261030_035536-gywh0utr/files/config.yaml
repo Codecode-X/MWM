@@ -1,0 +1,337 @@
+ablation:
+  desc: ''
+  sort: 20
+  value: common task; beta=1 versus paper beta=.01
+age_condition_unit:
+  desc: ''
+  sort: 51
+  value: year
+age_covariate:
+  desc: ''
+  sort: 44
+  value: age INIT or age-conditioned dynamics
+age_dim:
+  desc: ''
+  sort: 26
+  value: 64
+batch_size:
+  desc: ''
+  sort: 10
+  value: 128
+capacity_change:
+  desc: ''
+  sort: 18
+  value: native HealthFlux 256+128D; no parameter-count matching
+cce_weight:
+  desc: ''
+  sort: 4
+  value: 1.0
+comparison_output:
+  desc: ''
+  sort: 34
+  value: /home/xjh/projects/LatentODE/mimic_experiment/results/baselines_single_cuda
+context_dim:
+  desc: ''
+  sort: 25
+  value: 128
+data:
+  desc: ''
+  sort: 15
+  value: /data/MIMIC/derived/latentode_iv31/dataset.pkl
+dataset_sha256:
+  desc: ''
+  sort: 33
+  value: 67944547ee256643fb3cdc66188fa2dc77c25d5b9182d225d3eb470404491897
+decoder_widths:
+  desc: ''
+  sort: 29
+  value:
+  - 1024
+  - 512
+deterministic_dim:
+  desc: ''
+  sort: 23
+  value: 256
+diagnosis_event_nodes:
+  desc: ''
+  sort: 52
+  value: 0
+dropout:
+  desc: ''
+  sort: 30
+  value: 0.1
+evaluation_context_hours:
+  desc: ''
+  sort: 41
+  value: 24
+future_semantics:
+  desc: ''
+  sort: 46
+  value: ODE rollout without future observation updates
+gradient_partitions:
+  desc: ''
+  sort: 38
+  value: 4
+history_semantics:
+  desc: ''
+  sort: 45
+  value: history-conditioned reconstruction
+input_dropout:
+  desc: ''
+  sort: 11
+  value: 0.1
+input_zscore_fit:
+  desc: ''
+  sort: 32
+  value: train only
+internal_width:
+  desc: ''
+  sort: 28
+  value: 384
+kl_weight:
+  desc: ''
+  sort: 5
+  value: 0.01
+l2_weight:
+  desc: ''
+  sort: 6
+  value: 0.02
+lr:
+  desc: ''
+  sort: 0
+  value: 0.003
+lr_decay:
+  desc: ''
+  sort: 1
+  value: 0.97
+lr_decay_steps:
+  desc: ''
+  sort: 2
+  value: 2000
+max_epochs:
+  desc: ''
+  sort: 7
+  value: 300
+micro_batch_size:
+  desc: ''
+  sort: 37
+  value: 32
+min_epochs:
+  desc: ''
+  sort: 8
+  value: 50
+modality_groups:
+  desc: ''
+  sort: 47
+  value:
+    gcs:
+    - gcs_eye
+    - gcs_motor
+    - gcs_verbal
+    laboratory:
+    - glucose
+    - urea_nitrogen
+    - creatinine
+    - sodium
+    - potassium
+    - chloride
+    - bicarbonate
+    - calcium
+    - magnesium
+    - phosphate
+    - wbc
+    - hemoglobin
+    - hematocrit
+    - platelets
+    - lactate
+    - blood_gas_ph
+    - blood_gas_pco2
+    - blood_gas_po2
+    vitals:
+    - heart_rate
+    - sbp
+    - dbp
+    - map
+    - respiratory_rate
+    - spo2
+    - temperature
+    - fio2
+    - weight
+model:
+  desc: ''
+  sort: 14
+  value: healthflux
+model_parameters:
+  desc: ''
+  sort: 58
+  value: 4409965
+mse_weight:
+  desc: ''
+  sort: 3
+  value: 1.0
+normalization:
+  desc: ''
+  sort: 12
+  value: train_minmax
+normalized_train_means:
+  desc: ''
+  sort: 54
+  value:
+  - 0.3136656974911325
+  - 0.35904672057509934
+  - 0.1952034229816041
+  - 0.2634569004547034
+  - 0.26870995762164107
+  - 0.9673928723762061
+  - 0.6097315890758659
+  - 0.3972675098438346
+  - 0.29373283300244085
+  - 0.08849939523595837
+  - 0.10557177082712703
+  - 0.043774910378087235
+  - 0.5592136431041099
+  - 0.3480783123493841
+  - 0.4642645102066409
+  - 0.42886282178529583
+  - 0.33245765242654235
+  - 0.10051670693750529
+  - 0.1402917694488777
+  - 0.032313587475692726
+  - 0.44227485394414373
+  - 0.39679965305210635
+  - 0.09850828554818382
+  - 0.09173584432112772
+  - 0.6924531947403366
+  - 0.1893979703079372
+  - 0.1678082705256278
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+observation_dim:
+  desc: ''
+  sort: 27
+  value: 256
+ode_clock:
+  desc: ''
+  sort: 48
+  value: hour
+output:
+  desc: ''
+  sort: 16
+  value: /home/xjh/projects/LatentODE/mimic_experiment/results/baselines_single_cuda/healthflux_kl/seed_0
+paper_version:
+  desc: ''
+  sort: 31
+  value: 3
+parameter_device:
+  desc: ''
+  sort: 57
+  value: cuda:0
+patience:
+  desc: ''
+  sort: 9
+  value: 40
+physical_gpu:
+  desc: ''
+  sort: 36
+  value: '0'
+raw_scale:
+  desc: ''
+  sort: 53
+  value:
+  - 262.0
+  - 303.0
+  - 276.0
+  - 296.0
+  - 69.0
+  - 99.0
+  - 12.411109924316406
+  - 0.7900000065565109
+  - 268.29998779296875
+  - 1637.8800000026822
+  - 256.0
+  - 33.10000076144934
+  - 99.0
+  - 8.899999976158142
+  - 95.0
+  - 48.0
+  - 22.499999225139618
+  - 19.00000075995922
+  - 25.600000761449337
+  - 398.19998779147863
+  - 19.299999952316284
+  - 61.299996852874756
+  - 1778.0
+  - 28.949999999254942
+  - 1.4300003051757812
+  - 172.0
+  - 777.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+reference_output:
+  desc: ''
+  sort: 35
+  value: /home/xjh/projects/LatentODE/mimic_experiment/results/latent2x_both_cuda
+rk4_max_substeps:
+  desc: ''
+  sort: 50
+  value: 4
+rk4_nominal_step_hours:
+  desc: ''
+  sort: 49
+  value: 1
+scope:
+  desc: ''
+  sort: 17
+  value: mimic_iv31_first48h
+seed:
+  desc: ''
+  sort: 13
+  value: 0
+smoke:
+  desc: ''
+  sort: 19
+  value: false
+source_adni_config:
+  desc: ''
+  sort: 43
+  value: /home/xjh/projects/LatentODE/healthflux/results/adni_comparison/configs/paper_kl.json
+stochastic_dim:
+  desc: ''
+  sort: 24
+  value: 128
+study:
+  desc: ''
+  sort: 21
+  value: mimic_baselines_single
+time_unit:
+  desc: ''
+  sort: 39
+  value: hour
+tracking_family:
+  desc: ''
+  sort: 55
+  value: mimic_baselines
+training_context_hours:
+  desc: ''
+  sort: 40
+  value:
+  - 6
+  - 12
+  - 18
+  - 24
+training_seed:
+  desc: ''
+  sort: 56
+  value: 0
+variant:
+  desc: ''
+  sort: 22
+  value: healthflux_kl
+verify_reference:
+  desc: ''
+  sort: 42
+  value: false

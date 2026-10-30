@@ -1,0 +1,614 @@
+{
+  "purpose": "Real held-out patient timelines for a model-method explanation; cached ADNI CUDA predictions reused.",
+  "model_execution_performed": false,
+  "adni": {
+    "subject_id": "002_S_4219",
+    "split": "test",
+    "context_visits": 3,
+    "source_data": "/home/xjh/projects/LatentODE/paper_odeae/cache/local_available.pkl",
+    "source_data_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+    "prediction_source": "/home/xjh/projects/LatentODE/paper_odeae/results/state_space_model_comparison/latent2x_both/forecast_cases.json",
+    "prediction_source_sha256": "eee83774bea4fd0e0be95e6c61d76156e72402289fc1cb240234167a8321d064",
+    "checkpoint": "/home/xjh/projects/LatentODE/paper_odeae/results/latent2x_loss_ablation/both/seed_0/best.pt",
+    "checkpoint_sha256": "0a99d69bb92b837b3f5eb71e8af15a9296b5913c212437cff80217175b4bec86",
+    "checkpoint_epoch": 81,
+    "rows": [
+      {
+        "date": "2011-09-30",
+        "age": 79.58110809326172,
+        "years_from_cutoff": -0.5010299682617188,
+        "role": "history",
+        "observations": {
+          "diagnosis": 1.0,
+          "mmse": 30.0,
+          "cdrsb": 1.0000000074505806,
+          "amyloid_cortical_suvr": null,
+          "hippocampal_volume_change_percent": 1.3369626685744151e-06
+        },
+        "generated_mmse": 28.637880325317383
+      },
+      {
+        "date": "2011-12-31",
+        "age": 79.83299255371094,
+        "years_from_cutoff": -0.2491455078125,
+        "role": "history",
+        "observations": {
+          "diagnosis": null,
+          "mmse": null,
+          "cdrsb": null,
+          "amyloid_cortical_suvr": 1.0618045304109387,
+          "hippocampal_volume_change_percent": 1.6856322710809764
+        },
+        "generated_mmse": 28.59609603881836
+      },
+      {
+        "date": "2012-03-31",
+        "age": 80.08213806152344,
+        "years_from_cutoff": 0.0,
+        "role": "history",
+        "observations": {
+          "diagnosis": 1.0,
+          "mmse": 28.999999165534973,
+          "cdrsb": 1.0000000074505806,
+          "amyloid_cortical_suvr": null,
+          "hippocampal_volume_change_percent": -0.5570889951941354
+        },
+        "generated_mmse": 28.54636001586914
+      },
+      {
+        "date": "2012-12-31",
+        "age": 80.83504486083984,
+        "years_from_cutoff": 0.7529067993164062,
+        "role": "future_target",
+        "observations": {
+          "diagnosis": 1.0,
+          "mmse": 28.999999165534973,
+          "cdrsb": 0.5000000037252903,
+          "amyloid_cortical_suvr": null,
+          "hippocampal_volume_change_percent": -0.9896718666295783
+        },
+        "generated_mmse": 28.373014450073242
+      }
+    ]
+  },
+  "mimic": {
+    "subject_id": "10004235",
+    "split": "test",
+    "context_hours": 24,
+    "admission_age_proxy": 47.0,
+    "source_data": "/data/MIMIC/derived/latentode_iv31/dataset.pkl",
+    "source_data_sha256": "67944547ee256643fb3cdc66188fa2dc77c25d5b9182d225d3eb470404491897",
+    "historical_observed_hours": 22,
+    "future_observed_hours": 22,
+    "rows": [
+      {
+        "hour": 1,
+        "role": "history",
+        "observations": {
+          "heart_rate": 136.75000417232513,
+          "sbp": 114.49999895691872,
+          "respiratory_rate": 25.600001126527786,
+          "spo2": 94.33333349227905,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 2,
+        "role": "history",
+        "observations": {
+          "heart_rate": 123.99999618530273,
+          "sbp": 104.00000208616257,
+          "respiratory_rate": 29.99999925494194,
+          "spo2": 93.99999982118607,
+          "glucose": 425.00000015417777,
+          "creatinine": 7.899999988700324
+        }
+      },
+      {
+        "hour": 3,
+        "role": "history",
+        "observations": {
+          "heart_rate": 113.0000029206276,
+          "sbp": 95.50000160932541,
+          "respiratory_rate": 26.999999970197678,
+          "spo2": 97.99999797344208,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 4,
+        "role": "history",
+        "observations": {
+          "heart_rate": 107.50000238418579,
+          "sbp": 104.99999576807022,
+          "respiratory_rate": 26.000000208616257,
+          "spo2": 97.99999797344208,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 6,
+        "role": "history",
+        "observations": {
+          "heart_rate": 102.50000047683716,
+          "sbp": 103.49999621510506,
+          "respiratory_rate": null,
+          "spo2": 98.50000143051147,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 7,
+        "role": "history",
+        "observations": {
+          "heart_rate": 107.00000375509262,
+          "sbp": 98.00000387430191,
+          "respiratory_rate": 28.66666555404663,
+          "spo2": 98.99999898672104,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 8,
+        "role": "history",
+        "observations": {
+          "heart_rate": 105.99999868869781,
+          "sbp": 101.99999666213989,
+          "respiratory_rate": 18.000000059604645,
+          "spo2": 97.99999797344208,
+          "glucose": 315.0000112345011,
+          "creatinine": 7.299999913802854
+        }
+      },
+      {
+        "hour": 9,
+        "role": "history",
+        "observations": {
+          "heart_rate": null,
+          "sbp": null,
+          "respiratory_rate": null,
+          "spo2": null,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 10,
+        "role": "history",
+        "observations": {
+          "heart_rate": 110.00000333786011,
+          "sbp": 98.00000387430191,
+          "respiratory_rate": 21.99999910593033,
+          "spo2": 97.00000286102295,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 11,
+        "role": "history",
+        "observations": {
+          "heart_rate": 111.00000059604645,
+          "sbp": 95.50000160932541,
+          "respiratory_rate": 18.000000059604645,
+          "spo2": 97.99999797344208,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 12,
+        "role": "history",
+        "observations": {
+          "heart_rate": null,
+          "sbp": null,
+          "respiratory_rate": 21.499999225139618,
+          "spo2": 91.00000268220901,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 13,
+        "role": "history",
+        "observations": {
+          "heart_rate": 114.00000017881393,
+          "sbp": 85.50000157952309,
+          "respiratory_rate": 15.99999950826168,
+          "spo2": 91.99999779462814,
+          "glucose": 129.0000055640066,
+          "creatinine": 7.1999998191152015
+        }
+      },
+      {
+        "hour": 14,
+        "role": "history",
+        "observations": {
+          "heart_rate": null,
+          "sbp": null,
+          "respiratory_rate": null,
+          "spo2": null,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 15,
+        "role": "history",
+        "observations": {
+          "heart_rate": null,
+          "sbp": 97.00000116229057,
+          "respiratory_rate": 18.000000059604645,
+          "spo2": 91.99999779462814,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 16,
+        "role": "history",
+        "observations": {
+          "heart_rate": null,
+          "sbp": null,
+          "respiratory_rate": null,
+          "spo2": null,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 17,
+        "role": "history",
+        "observations": {
+          "heart_rate": 120.99999660253525,
+          "sbp": 89.50000339746475,
+          "respiratory_rate": 16.500000417232513,
+          "spo2": 91.00000268220901,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 18,
+        "role": "history",
+        "observations": {
+          "heart_rate": 114.99999743700027,
+          "sbp": 97.00000116229057,
+          "respiratory_rate": null,
+          "spo2": 92.9999988079071,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 19,
+        "role": "history",
+        "observations": {
+          "heart_rate": null,
+          "sbp": 101.00000298023224,
+          "respiratory_rate": 14.99999974668026,
+          "spo2": 93.99999982118607,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 20,
+        "role": "history",
+        "observations": {
+          "heart_rate": 114.4999988079071,
+          "sbp": 107.0000011920929,
+          "respiratory_rate": 18.666665881872177,
+          "spo2": 92.9999988079071,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 22,
+        "role": "history",
+        "observations": {
+          "heart_rate": 105.00000143051147,
+          "sbp": 117.00000122189522,
+          "respiratory_rate": null,
+          "spo2": 95.00000083446503,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 23,
+        "role": "history",
+        "observations": {
+          "heart_rate": 107.00000375509262,
+          "sbp": 131.99999675154686,
+          "respiratory_rate": 18.999999821186066,
+          "spo2": 95.00000083446503,
+          "glucose": 194.99999891581263,
+          "creatinine": 6.699999838905385
+        }
+      },
+      {
+        "hour": 24,
+        "role": "history",
+        "observations": {
+          "heart_rate": 108.9999982714653,
+          "sbp": 131.99999675154686,
+          "respiratory_rate": null,
+          "spo2": null,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 25,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": 111.00000059604645,
+          "sbp": 122.50000259280205,
+          "respiratory_rate": 13.999999985098839,
+          "spo2": 96.00000184774399,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 27,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": 116.99999976158142,
+          "sbp": 121.99999672174454,
+          "respiratory_rate": 14.99999974668026,
+          "spo2": 98.99999898672104,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 28,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": null,
+          "sbp": null,
+          "respiratory_rate": 15.99999950826168,
+          "spo2": null,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 29,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": 111.00000059604645,
+          "sbp": 134.00000217556953,
+          "respiratory_rate": 14.99999974668026,
+          "spo2": 97.00000286102295,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 30,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": 115.50000387430191,
+          "sbp": 124.00000214576721,
+          "respiratory_rate": 13.999999985098839,
+          "spo2": 96.49999940395355,
+          "glucose": 232.99999508806457,
+          "creatinine": 5.699999878485752
+        }
+      },
+      {
+        "hour": 31,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": null,
+          "sbp": null,
+          "respiratory_rate": 17.000000298023224,
+          "spo2": null,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 32,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": 128.00000083446503,
+          "sbp": 115.25000324845314,
+          "respiratory_rate": 19.999999582767487,
+          "spo2": null,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 33,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": null,
+          "sbp": null,
+          "respiratory_rate": null,
+          "spo2": 96.00000184774399,
+          "glucose": 217.99999659901775,
+          "creatinine": 5.599999783798099
+        }
+      },
+      {
+        "hour": 35,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": 123.99999618530273,
+          "sbp": 103.40000587701797,
+          "respiratory_rate": 19.333333760499954,
+          "spo2": 92.50000125169754,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 36,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": null,
+          "sbp": null,
+          "respiratory_rate": 18.999999821186066,
+          "spo2": null,
+          "glucose": 146.00000385159302,
+          "creatinine": 4.800000012753771
+        }
+      },
+      {
+        "hour": 37,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": 114.00000017881393,
+          "sbp": 124.00000214576721,
+          "respiratory_rate": 19.999999582767487,
+          "spo2": 96.00000184774399,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 38,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": null,
+          "sbp": null,
+          "respiratory_rate": null,
+          "spo2": null,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 39,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": 123.3333391547203,
+          "sbp": 119.66666308045387,
+          "respiratory_rate": 14.749999806284904,
+          "spo2": 98.99999898672104,
+          "glucose": 173.0000011318773,
+          "creatinine": 3.99999999509522
+        }
+      },
+      {
+        "hour": 40,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": null,
+          "sbp": null,
+          "respiratory_rate": null,
+          "spo2": null,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 41,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": 119.00000208616257,
+          "sbp": 102.5000025331974,
+          "respiratory_rate": 13.999999985098839,
+          "spo2": 100.0,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 42,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": null,
+          "sbp": null,
+          "respiratory_rate": null,
+          "spo2": null,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 43,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": 114.00000017881393,
+          "sbp": 90.00000023841858,
+          "respiratory_rate": 13.999999985098839,
+          "spo2": 100.0,
+          "glucose": 176.00000082968666,
+          "creatinine": 2.799999845300281
+        }
+      },
+      {
+        "hour": 44,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": 107.00000375509262,
+          "sbp": 114.49999895691872,
+          "respiratory_rate": 13.000000223517418,
+          "spo2": 98.50000143051147,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 45,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": null,
+          "sbp": null,
+          "respiratory_rate": null,
+          "spo2": null,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 46,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": 110.00000333786011,
+          "sbp": 127.00000125169754,
+          "respiratory_rate": 13.999999985098839,
+          "spo2": 97.99999797344208,
+          "glucose": 172.0000012326075,
+          "creatinine": 2.50000005446577
+        }
+      },
+      {
+        "hour": 47,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": 105.00000143051147,
+          "sbp": 104.4999989271164,
+          "respiratory_rate": 14.49999986588955,
+          "spo2": 98.99999898672104,
+          "glucose": null,
+          "creatinine": null
+        }
+      },
+      {
+        "hour": 48,
+        "role": "future_target",
+        "observations": {
+          "heart_rate": null,
+          "sbp": null,
+          "respiratory_rate": 14.99999974668026,
+          "spo2": null,
+          "glucose": null,
+          "creatinine": null
+        }
+      }
+    ]
+  }
+}

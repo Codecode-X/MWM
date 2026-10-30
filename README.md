@@ -5,9 +5,19 @@
 训练监测统一接入 SwanLab，默认使用本地看板。启动、云端配置和既有任务接入方式见
 [SwanLab 使用说明](reproduction/SWANLAB.zh-CN.md)。
 
+当前 latent2x both 的模型结构、训练损失和测试流程见
+[当前模型方法详解](reproduction/CURRENT_MODEL_METHOD.zh-CN.md)，末尾分别用ADNI和MIMIC的真实病例说明完整过程。
+
 ADNI 多模态纵向预测实验的特征提取、冻结 MedicalNet 编码器、患者切分和 GPU 训练协议见
 [ADNI 实验说明](reproduction/ADNI_EXPERIMENT.zh-CN.md)。结果与图表保存于
 [ADNI GPU 比较](results/adni_cuda/summary.md)。
+
+MIMIC-IV 3.1 的首次 ICU 前48小时序列整理、字段定义和 latent2x both 四卡实验见
+[MIMIC 实验说明](mimic_experiment/README.zh-CN.md)，进度与测试指标见
+[MIMIC GPU 结果](mimic_experiment/results/latent2x_both_cuda/summary.md)。
+
+MIMIC上的HealthFlux-KL、ODE-AE、ODE-RNN、Latent ODE单卡实验见
+[横向比较](mimic_experiment/results/baselines_single_cuda/summary.md)与[实验方案](mimic_experiment/BASELINE_COMPARISON.zh-CN.md)。
 
 本地用药、干预记录能否支持动作预测与反事实研究，见
 [ADNI 治疗相关研究方案](reproduction/ADNI_TREATMENT_PLAN.zh-CN.md)。文档包含原始表覆盖与日期审计、任务定义、因果分析条件和分阶段实施路线。

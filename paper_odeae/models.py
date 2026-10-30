@@ -94,7 +94,8 @@ class PaperModel(nn.Module):
         cutoff=batch['cutoff']; b,n,_=values.shape
         inputs=encode_values(values,context,self.schema)
         last_age=ages.gather(1,(cutoff-1)[:,None]).squeeze(1)
-        h=self.init(last_age[:,None]/100.) if self.encoder_initialization=='age' else values.new_zeros(b,self.latent)
+        initialization_age=batch.get('initialization_age',last_age)
+        h=self.init(initialization_age[:,None]/100.) if self.encoder_initialization=='age' else values.new_zeros(b,self.latent)
         previous=last_age if self.encoder_direction=='backward' else ages[:,0]
         c=torch.zeros_like(h)
         priors=[]

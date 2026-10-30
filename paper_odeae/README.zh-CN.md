@@ -2,6 +2,8 @@
 
 本目录用于复现 Zanin 等人的 [Predicting Alzheimer's Disease Progression from Sparse Multimodal Data by NeuralODE Models](https://doi.org/10.1101/2025.08.26.672412)。工作按三个步骤展开：先把数据整理成论文使用的字段和时间序列，再实现论文模型与对照，最后检查训练结果是否接近论文报告。
 
+当前 latent2x both 的通用结构、训练及测试方法见[当前模型方法详解](../reproduction/CURRENT_MODEL_METHOD.zh-CN.md)，包含ADNI和MIMIC真实病例的逐步说明。
+
 当前共享与扩容消融已按用户要求停止，已完成结果和中断检查点均保留。最新的 [shared_matched 与论文 ODE-AE 对比](results/shared_matched_comparison/comparison.zh-CN.md) 包含结构差异、本地同数据结果、等参数对照和论文报告值。
 
 后续以 shared_matched 为基线的四组扩容实验见 [实验设计](docs/SHARED_MATCHED_SCALING_4X.zh-CN.md) 与 [实时结果](results/shared_matched_scaling_4x/summary.md)。四组分别扩大 INIT、UPDATE、共享 ODE 和潜在维度，总参数量约为基线四倍。

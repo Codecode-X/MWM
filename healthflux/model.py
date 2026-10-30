@@ -38,7 +38,13 @@ class HealthFlux(nn.Module):
         self.h_dim=cfg.get('deterministic_dim',256);self.z_dim=cfg.get('stochastic_dim',128)
         self.context_dim=cfg.get('context_dim',128);self.age_dim=cfg.get('age_dim',64)
         self.observation_dim=cfg.get('observation_dim',256);width=cfg.get('internal_width',384)
-        dropout=cfg.get('dropout',.1);self.groups=field_groups(schema)
+        dropout=cfg.get('dropout',.1)
+        if 'modality_groups' in cfg:
+            indices={f['name']:i for i,f in enumerate(schema)}
+            self.groups={name:[indices[field] for field in fields] for name,fields in cfg['modality_groups'].items()}
+            flat=[j for ids in self.groups.values() for j in ids]
+            if len(flat)!=len(set(flat)) or not flat:raise ValueError('Modality groups must be nonempty and disjoint')
+        else:self.groups=field_groups(schema)
         self.indices={f['name']:i for i,f in enumerate(schema)}
         self.register_buffer('input_mean',torch.tensor(normalization['mean'] if normalization else [0.]*len(schema)))
         self.register_buffer('input_std',torch.tensor(normalization['std'] if normalization else [1.]*len(schema)))

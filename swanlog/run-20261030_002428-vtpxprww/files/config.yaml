@@ -1,0 +1,270 @@
+ablation:
+  desc: ''
+  sort: 27
+  value: latent2x fixed architecture, pre-update supervision and exact Jacobian independent/combined
+ablation_family:
+  desc: ''
+  sort: 32
+  value: latent2x_losses
+atol:
+  desc: ''
+  sort: 17
+  value: 1.0e-06
+batch_size:
+  desc: ''
+  sort: 13
+  value: 128
+capacity_change:
+  desc: ''
+  sort: 24
+  value: dataset schema only; latent 28, MLP 159, ODE 188 retained
+cce_weight:
+  desc: ''
+  sort: 7
+  value: 1.0
+collect_jacobian_states:
+  desc: ''
+  sort: 36
+  value: true
+collect_prior_predictions:
+  desc: ''
+  sort: 35
+  value: true
+data:
+  desc: ''
+  sort: 20
+  value: /data/MIMIC/derived/latentode_iv31/dataset.pkl
+encoder_direction:
+  desc: ''
+  sort: 26
+  value: forward
+encoder_initialization:
+  desc: ''
+  sort: 28
+  value: age
+evaluation_context_hours:
+  desc: ''
+  sort: 40
+  value: 24
+initialization_age:
+  desc: ''
+  sort: 38
+  value: admission_age plus elapsed hours/8766; independent of ODE clock
+input_dropout:
+  desc: ''
+  sort: 14
+  value: 0.1
+jacobian_weight:
+  desc: ''
+  sort: 34
+  value: 0.01
+kl_weight:
+  desc: ''
+  sort: 8
+  value: 1.0
+l2_weight:
+  desc: ''
+  sort: 9
+  value: 0.02
+latent:
+  desc: ''
+  sort: 0
+  value: 28
+lr:
+  desc: ''
+  sort: 3
+  value: 0.003
+lr_decay:
+  desc: ''
+  sort: 4
+  value: 0.97
+lr_decay_steps:
+  desc: ''
+  sort: 5
+  value: 2000
+max_epochs:
+  desc: ''
+  sort: 10
+  value: 300
+min_epochs:
+  desc: ''
+  sort: 11
+  value: 50
+mlp_width:
+  desc: ''
+  sort: 2
+  value: 159
+model:
+  desc: ''
+  sort: 19
+  value: deterministic
+model_parameters:
+  desc: ''
+  sort: 49
+  value: 43280
+mse_weight:
+  desc: ''
+  sort: 6
+  value: 1.0
+normalization:
+  desc: ''
+  sort: 15
+  value: train_minmax
+normalized_train_means:
+  desc: ''
+  sort: 43
+  value:
+  - 0.31379254177222227
+  - 0.3588527959590221
+  - 0.19512281323926242
+  - 0.2633672753848218
+  - 0.268772747895812
+  - 0.9673930582760292
+  - 0.6797345919555496
+  - 0.3984760818579802
+  - 0.29377065873653024
+  - 0.08856128887910537
+  - 0.10564510152558361
+  - 0.04385719014861065
+  - 0.5595386552504087
+  - 0.34820651486614074
+  - 0.4647296533151445
+  - 0.42841747981365613
+  - 0.3325212319852042
+  - 0.1005572730877944
+  - 0.14045276561171557
+  - 0.03234287369891593
+  - 0.4424111739661233
+  - 0.3969025823540029
+  - 0.09838009392702056
+  - 0.09264487608463395
+  - 0.6922154164474479
+  - 0.18925123216751136
+  - 0.16865958646752954
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+ode_width:
+  desc: ''
+  sort: 1
+  value: 188
+output:
+  desc: ''
+  sort: 21
+  value: /home/xjh/projects/LatentODE/mimic_experiment/results/latent2x_both_cuda/seed_0
+parameter_device:
+  desc: ''
+  sort: 48
+  value: cuda:0
+patience:
+  desc: ''
+  sort: 12
+  value: 40
+physical_gpu:
+  desc: ''
+  sort: 47
+  value: '0'
+physical_gpus:
+  desc: ''
+  sort: 44
+  value:
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+prior_weight:
+  desc: ''
+  sort: 33
+  value: 0.01
+raw_scale:
+  desc: ''
+  sort: 42
+  value:
+  - 262.0
+  - 303.0
+  - 276.0
+  - 296.0
+  - 69.0
+  - 99.0
+  - 15.133333206176758
+  - 0.7900000065565109
+  - 268.29998779296875
+  - 1637.8800000026822
+  - 256.0
+  - 33.10000076144934
+  - 99.0
+  - 8.899999976158142
+  - 95.0
+  - 48.0
+  - 22.499999225139618
+  - 19.00000075995922
+  - 25.600000761449337
+  - 398.19998779147863
+  - 19.299999952316284
+  - 61.299996852874756
+  - 1778.0
+  - 28.949999999254942
+  - 1.4300003051757812
+  - 172.0
+  - 777.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+rtol:
+  desc: ''
+  sort: 16
+  value: 0.0001
+scope:
+  desc: ''
+  sort: 22
+  value: mimic_iv31_first48h
+seed:
+  desc: ''
+  sort: 18
+  value: 0
+shared_vector_field:
+  desc: ''
+  sort: 29
+  value: true
+smoke:
+  desc: ''
+  sort: 25
+  value: false
+study:
+  desc: ''
+  sort: 30
+  value: mimic_iv31_latent2x_both
+target_parameters:
+  desc: ''
+  sort: 23
+  value: 43280
+time_unit:
+  desc: ''
+  sort: 37
+  value: hours
+tracking_family:
+  desc: ''
+  sort: 45
+  value: mimic_latent2x_both
+training_context_hours:
+  desc: ''
+  sort: 39
+  value:
+  - 6
+  - 12
+  - 18
+  - 24
+training_seed:
+  desc: ''
+  sort: 46
+  value: 0
+variant:
+  desc: ''
+  sort: 31
+  value: both
+world_size:
+  desc: ''
+  sort: 41
+  value: 4

@@ -1,0 +1,259 @@
+age_covariate:
+  desc: ''
+  sort: 39
+  value: biological years/100 supplied as an additional GRU input; decoder targets
+    unchanged
+atol:
+  desc: ''
+  sort: 17
+  value: 1.0e-06
+batch_size:
+  desc: ''
+  sort: 13
+  value: 32
+cce_weight:
+  desc: ''
+  sort: 7
+  value: 1.0
+comparison_output:
+  desc: ''
+  sort: 27
+  value: /home/xjh/projects/LatentODE/mimic_experiment/results/baselines_single_cuda
+comparison_variant:
+  desc: ''
+  sort: 24
+  value: native
+data:
+  desc: ''
+  sort: 20
+  value: /data/MIMIC/derived/latentode_iv31/dataset.pkl
+dataset_sha256:
+  desc: ''
+  sort: 26
+  value: 67944547ee256643fb3cdc66188fa2dc77c25d5b9182d225d3eb470404491897
+encoder_hidden:
+  desc: ''
+  sort: 25
+  value: 64
+evaluation_context_hours:
+  desc: ''
+  sort: 36
+  value: 24
+future_semantics:
+  desc: ''
+  sort: 41
+  value: ODE rollout without future observation updates
+gradient_partitions:
+  desc: ''
+  sort: 31
+  value: 4
+history_semantics:
+  desc: ''
+  sort: 40
+  value: history-conditioned reconstruction
+input_dropout:
+  desc: ''
+  sort: 14
+  value: 0.1
+kl_weight:
+  desc: ''
+  sort: 8
+  value: 1.0
+l2_weight:
+  desc: ''
+  sort: 9
+  value: 0.02
+latent:
+  desc: ''
+  sort: 0
+  value: 32
+lr:
+  desc: ''
+  sort: 3
+  value: 0.003
+lr_decay:
+  desc: ''
+  sort: 4
+  value: 0.97
+lr_decay_steps:
+  desc: ''
+  sort: 5
+  value: 2000
+max_epochs:
+  desc: ''
+  sort: 10
+  value: 1
+micro_batch_size:
+  desc: ''
+  sort: 30
+  value: 32
+min_epochs:
+  desc: ''
+  sort: 11
+  value: 0
+mlp_width:
+  desc: ''
+  sort: 2
+  value: 16
+model:
+  desc: ''
+  sort: 19
+  value: latent_ode
+model_parameters:
+  desc: ''
+  sort: 47
+  value: 70565
+mse_weight:
+  desc: ''
+  sort: 6
+  value: 1.0
+normalization:
+  desc: ''
+  sort: 15
+  value: train_minmax
+normalized_train_means:
+  desc: ''
+  sort: 43
+  value:
+  - 0.3136656974911325
+  - 0.35904672057509934
+  - 0.1952034229816041
+  - 0.2634569004547034
+  - 0.26870995762164107
+  - 0.9673928723762061
+  - 0.6097315890758659
+  - 0.3972675098438346
+  - 0.29373283300244085
+  - 0.08849939523595837
+  - 0.10557177082712703
+  - 0.043774910378087235
+  - 0.5592136431041099
+  - 0.3480783123493841
+  - 0.4642645102066409
+  - 0.42886282178529583
+  - 0.33245765242654235
+  - 0.10051670693750529
+  - 0.1402917694488777
+  - 0.032313587475692726
+  - 0.44227485394414373
+  - 0.39679965305210635
+  - 0.09850828554818382
+  - 0.09173584432112772
+  - 0.6924531947403366
+  - 0.1893979703079372
+  - 0.1678082705256278
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+ode_width:
+  desc: ''
+  sort: 1
+  value: 64
+output:
+  desc: ''
+  sort: 21
+  value: /home/xjh/projects/LatentODE/mimic_experiment/results/baselines_single_cuda/latent_ode/seed_0
+parameter_device:
+  desc: ''
+  sort: 46
+  value: cuda:0
+patience:
+  desc: ''
+  sort: 12
+  value: 1
+physical_gpu:
+  desc: ''
+  sort: 29
+  value: '3'
+raw_scale:
+  desc: ''
+  sort: 42
+  value:
+  - 262.0
+  - 303.0
+  - 276.0
+  - 296.0
+  - 69.0
+  - 99.0
+  - 12.411109924316406
+  - 0.7900000065565109
+  - 268.29998779296875
+  - 1637.8800000026822
+  - 256.0
+  - 33.10000076144934
+  - 99.0
+  - 8.899999976158142
+  - 95.0
+  - 48.0
+  - 22.499999225139618
+  - 19.00000075995922
+  - 25.600000761449337
+  - 398.19998779147863
+  - 19.299999952316284
+  - 61.299996852874756
+  - 1778.0
+  - 28.949999999254942
+  - 1.4300003051757812
+  - 172.0
+  - 777.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+reference_output:
+  desc: ''
+  sort: 28
+  value: /home/xjh/projects/LatentODE/mimic_experiment/results/latent2x_both_cuda
+rtol:
+  desc: ''
+  sort: 16
+  value: 0.0001
+scope:
+  desc: ''
+  sort: 22
+  value: mimic_iv31_first48h
+seed:
+  desc: ''
+  sort: 18
+  value: 0
+smoke:
+  desc: ''
+  sort: 23
+  value: true
+source_adni_config:
+  desc: ''
+  sort: 38
+  value: /home/xjh/projects/LatentODE/paper_odeae/results/baselines_full/native/latent_ode/seed_0/config.json
+study:
+  desc: ''
+  sort: 32
+  value: mimic_baselines_single
+time_unit:
+  desc: ''
+  sort: 34
+  value: hour
+tracking_family:
+  desc: ''
+  sort: 44
+  value: mimic_baselines
+training_context_hours:
+  desc: ''
+  sort: 35
+  value:
+  - 6
+  - 12
+  - 18
+  - 24
+training_seed:
+  desc: ''
+  sort: 45
+  value: 0
+variant:
+  desc: ''
+  sort: 33
+  value: latent_ode
+verify_reference:
+  desc: ''
+  sort: 37
+  value: true
