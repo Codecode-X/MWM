@@ -1,0 +1,146 @@
+{
+  "version": "level3_v1",
+  "seed": 23261030,
+  "gamma": 2.0,
+  "splits": {
+    "train": 10000,
+    "val": 2000,
+    "test": 2000
+  },
+  "split_streams": {
+    "train": 101,
+    "val": 202,
+    "test": 303
+  },
+  "policy_specs": {
+    "policies": {
+      "0": "Never Treat",
+      "1": "Always Treat",
+      "2": "Delayed Treatment",
+      "3": "Aggressive Dynamic",
+      "4": "Conservative Dynamic"
+    },
+    "thresholds": {
+      "3": 1.2276741453371554,
+      "4": 1.8130148085938025
+    },
+    "threshold_source": "all training visits only",
+    "delay_years": 1.0,
+    "treatment_cost": 3.0,
+    "decision_rule": "visit observation first; use current branch X2; strict > threshold",
+    "treatment_semantics": "[t_start,t_end); no decision at terminal boundary",
+    "cost_calibration": {
+      "source": "training patients only; primary gamma=1 population",
+      "n": 500,
+      "selected_cost": 3.0,
+      "common_cost_frozen_for_all_gammas": true
+    }
+  },
+  "simulation_boundary": 8.0,
+  "time_unit": "year",
+  "terminal_boundary_is_visit": false,
+  "oracle_sampling": "monthly fork..8 years, plus exact 1/2/3-year horizons and terminal boundary",
+  "numerics": {
+    "method": "DOP853",
+    "rtol": 1e-08,
+    "atol": 1e-10,
+    "state_limit": 100.0
+  },
+  "initialization": {
+    "c_mean": 0.0,
+    "c_sd": 1.0,
+    "D_range": [
+      0.4,
+      1.2
+    ],
+    "L_D": 0.75,
+    "L_sd": 0.12,
+    "E": 0.0
+  },
+  "final_dynamics": {
+    "alpha_base": 0.28,
+    "alpha_scale": 0.32,
+    "beta_base": 0.25,
+    "beta_scale": 0.55,
+    "progress_base": 0.35,
+    "progress_scale": 0.65,
+    "D_sigmoid_scale": 2.0,
+    "D_sigmoid_center": 1.0,
+    "risk_weight": 0.12,
+    "L_sigmoid_scale": 2.0,
+    "exposure_half": 0.5,
+    "disease_half": 0.5,
+    "tracking": 0.8,
+    "exposure_risk": 0.45,
+    "oscillation": 0.12,
+    "oscillation_D": 2.0,
+    "exposure_rate": 1.6
+  },
+  "treatment_cost": 3.0,
+  "rng": "SeedSequence([seed, split_stream, patient_index, purpose]); 1=init 2=schedule 3=noise 4=treatment",
+  "environment": {
+    "python": "3.11.17 (main, Oct 13 2026, 16:45:47) [GCC 15.3.0]",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "pandas": "2.2.3",
+    "platform": "Linux-6.8.0-40-generic-x86_64-with-glibc2.35",
+    "conda_env": "ode"
+  },
+  "execution": {
+    "kind": "SciPy synthetic data preparation; no model experiment",
+    "device": "CPU data preparation",
+    "tensor_devices": [],
+    "physical_gpu_assignments": [],
+    "workers": 8,
+    "elapsed_generation_seconds": 69.73754668235779
+  },
+  "source_sha256": {
+    "__init__.py": "5e451c6a14d55616fb651a1c0a3d2ea89276832a34fa99c7db0d5f29516a992f",
+    "behavior_policy.py": "4241ebc33ebd4ab8f8345a56d1674a530c6666eb3d8275f7f0f3d035ac2f0a08",
+    "calibration.py": "6a97c68f3858f2e54731b7cf4c1af1c84cd85d4d57784b64758657c72fe0edda",
+    "common.py": "8f14af532304cf4f4d920b3f7fac29c45dc2f2e6f2bcca3c689927181bc909b4",
+    "counterfactual_policies.py": "586270f5ff435b1e1235e74cd79a501f2d7a43eb338acc21e9bac805905bc33a",
+    "dataset_adapter.py": "0f177ff7cde1f3727fdcae6dd486404f4402df480ab76e3766b3710daf1ab5a2",
+    "evaluation.py": "e06bb8ca840ffe3f914ba674909a613534ceff0f31e7b00d4070bd6b9154deec",
+    "generate.py": "441fdda007ac204283ca9c69d62e37cfa2c6ae6be5bef5a604e90708109ae723",
+    "observation.py": "2b31cd330404a856bcfdadb0a63646f13d577b127350335c5fbcae2e14764578",
+    "plotting.py": "7fb183516d9b61e28a286f8ef3dc49d6a024b9ae70dc779b1d6d91c2d363c5e0",
+    "simulator.py": "9f95954be8a3f4f0c2d6b8ecc026971bbeaf52e2708dff1cc3105b4512de5615",
+    "tests/conftest.py": "1df250f5e6d143d13b77f2568e76ed1ff31edb820e9f6c705393e7f0c9610151",
+    "tests/test_counterfactual.py": "86df1418f6f98b019a94e62b3b54609256926e523cd62a1bee061651ffaf38de",
+    "tests/test_data_leakage.py": "8dba7295a2bb311bf8f47cd58b6b539ea43cd601c652d24097355702840ba9f2",
+    "tests/test_dynamics.py": "add3727381c927f2d6eca9c20c49220674516a9a55d4efa10c1b5d9fc632004f",
+    "tests/test_evaluation.py": "6150599351149a4a4e1a46ef9df55696a21bad6cd8ae3cb07f9fabbd03f1e26f",
+    "tests/test_policy.py": "4840597f0231f6235486b40e4ddef81317f3cacb70f1cf0bde8900d71a1b49b1",
+    "tests/test_replay.py": "ccb9d5300083c150acd0757c7931a8bf7413dcf72371c8991d0c5255c4ab5490",
+    "validation.py": "c4bc4a198a61c92f58068b1ca095e882801e1ce15670201c6380bec2df91116a"
+  },
+  "files": {
+    "config.yaml": "89d4da457932cf8ce47386f987c5039ae3cb49cc813bc6c906e364d1ad3eb09e",
+    "oracle_private/cf_hidden_states.parquet": "88b4f2cf7825d7474a79b2eb452f71f9aca2559de961b295959c68c33403ab15",
+    "oracle_private/cf_outcomes.parquet": "c7777854d3cd97aa85c24cdee39ccd1273789015aa8667d0f0972e74d32d6a41",
+    "oracle_private/cf_trajectories.parquet": "1ccb9e0b57b29968e25da926839360a5f60786fae5a6cf8708fd8598def875da",
+    "oracle_private/cf_treatments.parquet": "9e571a165a964fce4ec855224a1ab8b746ea04ce73f3085c4ee0e9935abe388d",
+    "oracle_private/cf_visits.parquet": "747cadb810ced8a68a3897465205120471ef567f844c568ebf370802ac78d414",
+    "oracle_private/evaluation_spec.json": "8339acb4e093b6eed3f396c3ab6c51459833a0ac21883beb1ea59109bab7dd62",
+    "oracle_private/factual_treatments.parquet": "37e7f79d624490af86e1d5247642b8b53577a42dfeb1f2dd3a0d64feb7274a2b",
+    "oracle_private/factual_visits.parquet": "c8b2d35b3ae5da46c35dc7ffcc70aabeb0a5fd870c4f8f924ff5a90c1723ea8d",
+    "oracle_private/hidden_states.parquet": "d348f0696563418c9eed57c9a04de9af2ce9c6866be9cda46c5fb0bb6029d765",
+    "oracle_private/patient_parameters.parquet": "7be1b3d5d26ebe541d559be418e8ee5b69f17a4656e21c66c72bf49bc0a3b286",
+    "public/policy_specs.json": "65c5770c2f313aa67fa030c17ccaadd9ba915bcc6714a1144dcadce120a27825",
+    "public/test_future_visits.parquet": "be7e4a43bbcde413ee6650d6a5a036ab9cba50d3c49c8bd65ad816509a265151",
+    "public/test_histories.parquet": "8d3eb88af48c35215eea788485b447035a9dca874277370353261c8a7fa4d23a",
+    "public/test_history_treatments.parquet": "e1f672fe2b5a1a617b787a50216a04c82b1dea74e6144b66b6d37aaead19d431",
+    "public/test_patients.parquet": "f8edd3397e07d51af552fd98a085778324629cffcd6ee0c23fb7fd6085e3d591",
+    "public/test_queries.parquet": "cac2d2bd0c97177dbb5da4c8425645c970306a2974c288c9e8f4d1b3f607e849",
+    "public/test_sequences.jsonl": "941538f71d37bd2f6e31a941b2d86a1bd2f4f8f658a4f771d0a19079081a8003",
+    "public/train_patients.parquet": "5a9b033c56aefa11629e9401b8e7da976d8a01b7efd01712596a502099f070cf",
+    "public/train_sequences.jsonl": "27081c1e553b94ba063a977f530d8570346cb747d048989b9fbc0b8852933ceb",
+    "public/train_treatments.parquet": "aaaa3608045e73e2f77aba5a2efa55616dec8430e97425b35e5bc41af39c3e9a",
+    "public/train_visits.parquet": "a717a3921cb0500694018b46636b13a309e2ff23a5a9abb93a2a39044734eb40",
+    "public/val_patients.parquet": "bb3de0497abbdf1ac0da6d08aaf00f12580ea26a05c5aa302c212bbb347bca83",
+    "public/val_sequences.jsonl": "2b6c90e37207efcaf3925307409e9206389ab1cf78e55acb3284079b598dd348",
+    "public/val_treatments.parquet": "099d81d19d2bc19a306c257398d1d276ca4429c75b1d4412bc602c77d5d917ee",
+    "public/val_visits.parquet": "aceaaf442b8492d9fc51491e90fb6eef41f774985bb4e9ced33470e37fa6de69"
+  }
+}

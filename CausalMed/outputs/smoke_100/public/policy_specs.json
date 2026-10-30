@@ -1,0 +1,18 @@
+{
+  "policies": {
+    "0": "Never Treat",
+    "1": "Always Treat",
+    "2": "Delayed Treatment",
+    "3": "Aggressive Dynamic",
+    "4": "Conservative Dynamic"
+  },
+  "thresholds": {
+    "3": 1.2559693450745395,
+    "4": 1.9526319358992057
+  },
+  "threshold_source": "all training visits only",
+  "delay_years": 1.0,
+  "treatment_cost": 2.0,
+  "decision_rule": "visit observation first; use current branch X2; strict > threshold",
+  "treatment_semantics": "[t_start,t_end); no decision at terminal boundary"
+}

@@ -1,0 +1,574 @@
+...EEEE.......EEEE.....E                                                 [100%]
+==================================== ERRORS ====================================
+________ ERROR at setup of test_exported_horizons_and_train_thresholds _________
+
+tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=<pluggy._tracing.TagTracerSub object at 0x766cb59ebed0>, _basetemp=PosixPath('/tmp/pytest-of-xjh/pytest-0'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='session')
+    def small_dataset(tmp_path_factory):
+        cfg = read_config()
+        cfg['splits'] = {'train': 12, 'val': 4, 'test': 4}
+        cfg['workers'] = 1
+        root = tmp_path_factory.mktemp('level3') / 'dataset'
+>       generate(deepcopy(cfg), root, validate=False)
+
+synthetic_cf_level3/tests/conftest.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+synthetic_cf_level3/generate.py:147: in generate
+    write_frame(out / 'public' / f'{split}_patients.parquet', patients)
+synthetic_cf_level3/generate.py:124: in write_frame
+    frame.to_parquet(path, index=False, compression='zstd')
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/util/_decorators.py:333: in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/core/frame.py:3113: in to_parquet
+    return to_parquet(
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/io/parquet.py:476: in to_parquet
+    impl = get_engine(engine)
+           ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+engine = 'auto'
+
+    def get_engine(engine: str) -> BaseImpl:
+        """return our implementation"""
+        if engine == "auto":
+            engine = get_option("io.parquet.engine")
+    
+        if engine == "auto":
+            # try engines in this order
+            engine_classes = [PyArrowImpl, FastParquetImpl]
+    
+            error_msgs = ""
+            for engine_class in engine_classes:
+                try:
+                    return engine_class()
+                except ImportError as err:
+                    error_msgs += "\n - " + str(err)
+    
+>           raise ImportError(
+                "Unable to find a usable engine; "
+                "tried using: 'pyarrow', 'fastparquet'.\n"
+                "A suitable version of "
+                "pyarrow or fastparquet is required for parquet "
+                "support.\n"
+                "Trying to import the above resulted in these errors:"
+                f"{error_msgs}"
+            )
+E           ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+E           A suitable version of pyarrow or fastparquet is required for parquet support.
+E           Trying to import the above resulted in these errors:
+E            - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+E            - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/io/parquet.py:67: ImportError
+---------------------------- Captured stdout setup -----------------------------
+gamma=1.0: simulate train n=12
+_____________ ERROR at setup of test_public_only_mount_and_cutoff ______________
+
+tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=<pluggy._tracing.TagTracerSub object at 0x766cb59ebed0>, _basetemp=PosixPath('/tmp/pytest-of-xjh/pytest-0'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='session')
+    def small_dataset(tmp_path_factory):
+        cfg = read_config()
+        cfg['splits'] = {'train': 12, 'val': 4, 'test': 4}
+        cfg['workers'] = 1
+        root = tmp_path_factory.mktemp('level3') / 'dataset'
+>       generate(deepcopy(cfg), root, validate=False)
+
+synthetic_cf_level3/tests/conftest.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+synthetic_cf_level3/generate.py:147: in generate
+    write_frame(out / 'public' / f'{split}_patients.parquet', patients)
+synthetic_cf_level3/generate.py:124: in write_frame
+    frame.to_parquet(path, index=False, compression='zstd')
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/util/_decorators.py:333: in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/core/frame.py:3113: in to_parquet
+    return to_parquet(
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/io/parquet.py:476: in to_parquet
+    impl = get_engine(engine)
+           ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+engine = 'auto'
+
+    def get_engine(engine: str) -> BaseImpl:
+        """return our implementation"""
+        if engine == "auto":
+            engine = get_option("io.parquet.engine")
+    
+        if engine == "auto":
+            # try engines in this order
+            engine_classes = [PyArrowImpl, FastParquetImpl]
+    
+            error_msgs = ""
+            for engine_class in engine_classes:
+                try:
+                    return engine_class()
+                except ImportError as err:
+                    error_msgs += "\n - " + str(err)
+    
+>           raise ImportError(
+                "Unable to find a usable engine; "
+                "tried using: 'pyarrow', 'fastparquet'.\n"
+                "A suitable version of "
+                "pyarrow or fastparquet is required for parquet "
+                "support.\n"
+                "Trying to import the above resulted in these errors:"
+                f"{error_msgs}"
+            )
+E           ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+E           A suitable version of pyarrow or fastparquet is required for parquet support.
+E           Trying to import the above resulted in these errors:
+E            - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+E            - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/io/parquet.py:67: ImportError
+__________ ERROR at setup of test_patient_split_isolation_and_schema ___________
+
+tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=<pluggy._tracing.TagTracerSub object at 0x766cb59ebed0>, _basetemp=PosixPath('/tmp/pytest-of-xjh/pytest-0'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='session')
+    def small_dataset(tmp_path_factory):
+        cfg = read_config()
+        cfg['splits'] = {'train': 12, 'val': 4, 'test': 4}
+        cfg['workers'] = 1
+        root = tmp_path_factory.mktemp('level3') / 'dataset'
+>       generate(deepcopy(cfg), root, validate=False)
+
+synthetic_cf_level3/tests/conftest.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+synthetic_cf_level3/generate.py:147: in generate
+    write_frame(out / 'public' / f'{split}_patients.parquet', patients)
+synthetic_cf_level3/generate.py:124: in write_frame
+    frame.to_parquet(path, index=False, compression='zstd')
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/util/_decorators.py:333: in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/core/frame.py:3113: in to_parquet
+    return to_parquet(
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/io/parquet.py:476: in to_parquet
+    impl = get_engine(engine)
+           ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+engine = 'auto'
+
+    def get_engine(engine: str) -> BaseImpl:
+        """return our implementation"""
+        if engine == "auto":
+            engine = get_option("io.parquet.engine")
+    
+        if engine == "auto":
+            # try engines in this order
+            engine_classes = [PyArrowImpl, FastParquetImpl]
+    
+            error_msgs = ""
+            for engine_class in engine_classes:
+                try:
+                    return engine_class()
+                except ImportError as err:
+                    error_msgs += "\n - " + str(err)
+    
+>           raise ImportError(
+                "Unable to find a usable engine; "
+                "tried using: 'pyarrow', 'fastparquet'.\n"
+                "A suitable version of "
+                "pyarrow or fastparquet is required for parquet "
+                "support.\n"
+                "Trying to import the above resulted in these errors:"
+                f"{error_msgs}"
+            )
+E           ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+E           A suitable version of pyarrow or fastparquet is required for parquet support.
+E           Trying to import the above resulted in these errors:
+E            - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+E            - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/io/parquet.py:67: ImportError
+_____ ERROR at setup of test_reject_injected_hidden_column_or_path_escape ______
+
+tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=<pluggy._tracing.TagTracerSub object at 0x766cb59ebed0>, _basetemp=PosixPath('/tmp/pytest-of-xjh/pytest-0'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='session')
+    def small_dataset(tmp_path_factory):
+        cfg = read_config()
+        cfg['splits'] = {'train': 12, 'val': 4, 'test': 4}
+        cfg['workers'] = 1
+        root = tmp_path_factory.mktemp('level3') / 'dataset'
+>       generate(deepcopy(cfg), root, validate=False)
+
+synthetic_cf_level3/tests/conftest.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+synthetic_cf_level3/generate.py:147: in generate
+    write_frame(out / 'public' / f'{split}_patients.parquet', patients)
+synthetic_cf_level3/generate.py:124: in write_frame
+    frame.to_parquet(path, index=False, compression='zstd')
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/util/_decorators.py:333: in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/core/frame.py:3113: in to_parquet
+    return to_parquet(
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/io/parquet.py:476: in to_parquet
+    impl = get_engine(engine)
+           ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+engine = 'auto'
+
+    def get_engine(engine: str) -> BaseImpl:
+        """return our implementation"""
+        if engine == "auto":
+            engine = get_option("io.parquet.engine")
+    
+        if engine == "auto":
+            # try engines in this order
+            engine_classes = [PyArrowImpl, FastParquetImpl]
+    
+            error_msgs = ""
+            for engine_class in engine_classes:
+                try:
+                    return engine_class()
+                except ImportError as err:
+                    error_msgs += "\n - " + str(err)
+    
+>           raise ImportError(
+                "Unable to find a usable engine; "
+                "tried using: 'pyarrow', 'fastparquet'.\n"
+                "A suitable version of "
+                "pyarrow or fastparquet is required for parquet "
+                "support.\n"
+                "Trying to import the above resulted in these errors:"
+                f"{error_msgs}"
+            )
+E           ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+E           A suitable version of pyarrow or fastparquet is required for parquet support.
+E           Trying to import the above resulted in these errors:
+E            - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+E            - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/io/parquet.py:67: ImportError
+_____________ ERROR at setup of test_exact_and_known_error_metrics _____________
+
+tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=<pluggy._tracing.TagTracerSub object at 0x766cb59ebed0>, _basetemp=PosixPath('/tmp/pytest-of-xjh/pytest-0'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='session')
+    def small_dataset(tmp_path_factory):
+        cfg = read_config()
+        cfg['splits'] = {'train': 12, 'val': 4, 'test': 4}
+        cfg['workers'] = 1
+        root = tmp_path_factory.mktemp('level3') / 'dataset'
+>       generate(deepcopy(cfg), root, validate=False)
+
+synthetic_cf_level3/tests/conftest.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+synthetic_cf_level3/generate.py:147: in generate
+    write_frame(out / 'public' / f'{split}_patients.parquet', patients)
+synthetic_cf_level3/generate.py:124: in write_frame
+    frame.to_parquet(path, index=False, compression='zstd')
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/util/_decorators.py:333: in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/core/frame.py:3113: in to_parquet
+    return to_parquet(
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/io/parquet.py:476: in to_parquet
+    impl = get_engine(engine)
+           ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+engine = 'auto'
+
+    def get_engine(engine: str) -> BaseImpl:
+        """return our implementation"""
+        if engine == "auto":
+            engine = get_option("io.parquet.engine")
+    
+        if engine == "auto":
+            # try engines in this order
+            engine_classes = [PyArrowImpl, FastParquetImpl]
+    
+            error_msgs = ""
+            for engine_class in engine_classes:
+                try:
+                    return engine_class()
+                except ImportError as err:
+                    error_msgs += "\n - " + str(err)
+    
+>           raise ImportError(
+                "Unable to find a usable engine; "
+                "tried using: 'pyarrow', 'fastparquet'.\n"
+                "A suitable version of "
+                "pyarrow or fastparquet is required for parquet "
+                "support.\n"
+                "Trying to import the above resulted in these errors:"
+                f"{error_msgs}"
+            )
+E           ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+E           A suitable version of pyarrow or fastparquet is required for parquet support.
+E           Trying to import the above resulted in these errors:
+E            - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+E            - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/io/parquet.py:67: ImportError
+____ ERROR at setup of test_missing_duplicate_extra_and_nonfinite_rejected _____
+
+tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=<pluggy._tracing.TagTracerSub object at 0x766cb59ebed0>, _basetemp=PosixPath('/tmp/pytest-of-xjh/pytest-0'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='session')
+    def small_dataset(tmp_path_factory):
+        cfg = read_config()
+        cfg['splits'] = {'train': 12, 'val': 4, 'test': 4}
+        cfg['workers'] = 1
+        root = tmp_path_factory.mktemp('level3') / 'dataset'
+>       generate(deepcopy(cfg), root, validate=False)
+
+synthetic_cf_level3/tests/conftest.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+synthetic_cf_level3/generate.py:147: in generate
+    write_frame(out / 'public' / f'{split}_patients.parquet', patients)
+synthetic_cf_level3/generate.py:124: in write_frame
+    frame.to_parquet(path, index=False, compression='zstd')
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/util/_decorators.py:333: in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/core/frame.py:3113: in to_parquet
+    return to_parquet(
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/io/parquet.py:476: in to_parquet
+    impl = get_engine(engine)
+           ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+engine = 'auto'
+
+    def get_engine(engine: str) -> BaseImpl:
+        """return our implementation"""
+        if engine == "auto":
+            engine = get_option("io.parquet.engine")
+    
+        if engine == "auto":
+            # try engines in this order
+            engine_classes = [PyArrowImpl, FastParquetImpl]
+    
+            error_msgs = ""
+            for engine_class in engine_classes:
+                try:
+                    return engine_class()
+                except ImportError as err:
+                    error_msgs += "\n - " + str(err)
+    
+>           raise ImportError(
+                "Unable to find a usable engine; "
+                "tried using: 'pyarrow', 'fastparquet'.\n"
+                "A suitable version of "
+                "pyarrow or fastparquet is required for parquet "
+                "support.\n"
+                "Trying to import the above resulted in these errors:"
+                f"{error_msgs}"
+            )
+E           ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+E           A suitable version of pyarrow or fastparquet is required for parquet support.
+E           Trying to import the above resulted in these errors:
+E            - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+E            - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/io/parquet.py:67: ImportError
+_____ ERROR at setup of test_regret_requires_model_own_treatment_duration ______
+
+tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=<pluggy._tracing.TagTracerSub object at 0x766cb59ebed0>, _basetemp=PosixPath('/tmp/pytest-of-xjh/pytest-0'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='session')
+    def small_dataset(tmp_path_factory):
+        cfg = read_config()
+        cfg['splits'] = {'train': 12, 'val': 4, 'test': 4}
+        cfg['workers'] = 1
+        root = tmp_path_factory.mktemp('level3') / 'dataset'
+>       generate(deepcopy(cfg), root, validate=False)
+
+synthetic_cf_level3/tests/conftest.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+synthetic_cf_level3/generate.py:147: in generate
+    write_frame(out / 'public' / f'{split}_patients.parquet', patients)
+synthetic_cf_level3/generate.py:124: in write_frame
+    frame.to_parquet(path, index=False, compression='zstd')
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/util/_decorators.py:333: in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/core/frame.py:3113: in to_parquet
+    return to_parquet(
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/io/parquet.py:476: in to_parquet
+    impl = get_engine(engine)
+           ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+engine = 'auto'
+
+    def get_engine(engine: str) -> BaseImpl:
+        """return our implementation"""
+        if engine == "auto":
+            engine = get_option("io.parquet.engine")
+    
+        if engine == "auto":
+            # try engines in this order
+            engine_classes = [PyArrowImpl, FastParquetImpl]
+    
+            error_msgs = ""
+            for engine_class in engine_classes:
+                try:
+                    return engine_class()
+                except ImportError as err:
+                    error_msgs += "\n - " + str(err)
+    
+>           raise ImportError(
+                "Unable to find a usable engine; "
+                "tried using: 'pyarrow', 'fastparquet'.\n"
+                "A suitable version of "
+                "pyarrow or fastparquet is required for parquet "
+                "support.\n"
+                "Trying to import the above resulted in these errors:"
+                f"{error_msgs}"
+            )
+E           ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+E           A suitable version of pyarrow or fastparquet is required for parquet support.
+E           Trying to import the above resulted in these errors:
+E            - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+E            - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/io/parquet.py:67: ImportError
+________ ERROR at setup of test_interval_duration_scoring_and_coverage _________
+
+tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=<pluggy._tracing.TagTracerSub object at 0x766cb59ebed0>, _basetemp=PosixPath('/tmp/pytest-of-xjh/pytest-0'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='session')
+    def small_dataset(tmp_path_factory):
+        cfg = read_config()
+        cfg['splits'] = {'train': 12, 'val': 4, 'test': 4}
+        cfg['workers'] = 1
+        root = tmp_path_factory.mktemp('level3') / 'dataset'
+>       generate(deepcopy(cfg), root, validate=False)
+
+synthetic_cf_level3/tests/conftest.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+synthetic_cf_level3/generate.py:147: in generate
+    write_frame(out / 'public' / f'{split}_patients.parquet', patients)
+synthetic_cf_level3/generate.py:124: in write_frame
+    frame.to_parquet(path, index=False, compression='zstd')
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/util/_decorators.py:333: in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/core/frame.py:3113: in to_parquet
+    return to_parquet(
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/io/parquet.py:476: in to_parquet
+    impl = get_engine(engine)
+           ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+engine = 'auto'
+
+    def get_engine(engine: str) -> BaseImpl:
+        """return our implementation"""
+        if engine == "auto":
+            engine = get_option("io.parquet.engine")
+    
+        if engine == "auto":
+            # try engines in this order
+            engine_classes = [PyArrowImpl, FastParquetImpl]
+    
+            error_msgs = ""
+            for engine_class in engine_classes:
+                try:
+                    return engine_class()
+                except ImportError as err:
+                    error_msgs += "\n - " + str(err)
+    
+>           raise ImportError(
+                "Unable to find a usable engine; "
+                "tried using: 'pyarrow', 'fastparquet'.\n"
+                "A suitable version of "
+                "pyarrow or fastparquet is required for parquet "
+                "support.\n"
+                "Trying to import the above resulted in these errors:"
+                f"{error_msgs}"
+            )
+E           ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+E           A suitable version of pyarrow or fastparquet is required for parquet support.
+E           Trying to import the above resulted in these errors:
+E            - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+E            - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/io/parquet.py:67: ImportError
+________ ERROR at setup of test_repeat_generation_and_worker_invariance ________
+
+tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=<pluggy._tracing.TagTracerSub object at 0x766cb59ebed0>, _basetemp=PosixPath('/tmp/pytest-of-xjh/pytest-0'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='session')
+    def small_dataset(tmp_path_factory):
+        cfg = read_config()
+        cfg['splits'] = {'train': 12, 'val': 4, 'test': 4}
+        cfg['workers'] = 1
+        root = tmp_path_factory.mktemp('level3') / 'dataset'
+>       generate(deepcopy(cfg), root, validate=False)
+
+synthetic_cf_level3/tests/conftest.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+synthetic_cf_level3/generate.py:147: in generate
+    write_frame(out / 'public' / f'{split}_patients.parquet', patients)
+synthetic_cf_level3/generate.py:124: in write_frame
+    frame.to_parquet(path, index=False, compression='zstd')
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/util/_decorators.py:333: in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/core/frame.py:3113: in to_parquet
+    return to_parquet(
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/io/parquet.py:476: in to_parquet
+    impl = get_engine(engine)
+           ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+engine = 'auto'
+
+    def get_engine(engine: str) -> BaseImpl:
+        """return our implementation"""
+        if engine == "auto":
+            engine = get_option("io.parquet.engine")
+    
+        if engine == "auto":
+            # try engines in this order
+            engine_classes = [PyArrowImpl, FastParquetImpl]
+    
+            error_msgs = ""
+            for engine_class in engine_classes:
+                try:
+                    return engine_class()
+                except ImportError as err:
+                    error_msgs += "\n - " + str(err)
+    
+>           raise ImportError(
+                "Unable to find a usable engine; "
+                "tried using: 'pyarrow', 'fastparquet'.\n"
+                "A suitable version of "
+                "pyarrow or fastparquet is required for parquet "
+                "support.\n"
+                "Trying to import the above resulted in these errors:"
+                f"{error_msgs}"
+            )
+E           ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+E           A suitable version of pyarrow or fastparquet is required for parquet support.
+E           Trying to import the above resulted in these errors:
+E            - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+E            - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+
+../../../miniforge3/envs/ode/lib/python3.11/site-packages/pandas/io/parquet.py:67: ImportError
+=========================== short test summary info ============================
+ERROR synthetic_cf_level3/tests/test_counterfactual.py::test_exported_horizons_and_train_thresholds
+ERROR synthetic_cf_level3/tests/test_data_leakage.py::test_public_only_mount_and_cutoff
+ERROR synthetic_cf_level3/tests/test_data_leakage.py::test_patient_split_isolation_and_schema
+ERROR synthetic_cf_level3/tests/test_data_leakage.py::test_reject_injected_hidden_column_or_path_escape
+ERROR synthetic_cf_level3/tests/test_evaluation.py::test_exact_and_known_error_metrics
+ERROR synthetic_cf_level3/tests/test_evaluation.py::test_missing_duplicate_extra_and_nonfinite_rejected
+ERROR synthetic_cf_level3/tests/test_evaluation.py::test_regret_requires_model_own_treatment_duration
+ERROR synthetic_cf_level3/tests/test_evaluation.py::test_interval_duration_scoring_and_coverage
+ERROR synthetic_cf_level3/tests/test_replay.py::test_repeat_generation_and_worker_invariance
+15 passed, 9 errors in 2.08s
+ERROR conda.cli.main_run:execute(148): `conda run pytest synthetic_cf_level3/tests -q` failed. (See above for error)

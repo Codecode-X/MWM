@@ -1,0 +1,173 @@
+version: level3_v1
+seed: 20261030
+splits:
+  train: 10000
+  val: 2000
+  test: 2000
+split_streams:
+  train: 101
+  val: 202
+  test: 303
+simulation:
+  years: 8.0
+  visit_gap:
+  - 0.25
+  - 0.75
+  fork_after: 3.0
+  horizons:
+  - 1.0
+  - 2.0
+  - 3.0
+  samples_per_year: 12
+  solver:
+    method: DOP853
+    rtol: 1.0e-08
+    atol: 1.0e-10
+    state_limit: 100.0
+initial:
+  c_mean: 0.0
+  c_sd: 1.0
+  D_range:
+  - 0.4
+  - 1.2
+  L_D: 0.75
+  L_sd: 0.12
+  E: 0.0
+dynamics:
+  alpha_base: 0.28
+  alpha_scale: 0.32
+  beta_base: 0.25
+  beta_scale: 0.55
+  progress_base: 0.35
+  progress_scale: 0.65
+  D_sigmoid_scale: 2.0
+  D_sigmoid_center: 1.0
+  risk_weight: 0.12
+  L_sigmoid_scale: 2.0
+  exposure_half: 0.5
+  disease_half: 0.5
+  tracking: 0.8
+  exposure_risk: 0.45
+  oscillation: 0.12
+  oscillation_D: 2.0
+  exposure_rate: 1.6
+observation:
+  intercept: 90.0
+  D_weight: -10.0
+  L_weight: -4.0
+  c_weight: 2.0
+  Y_sd: 1.0
+  X1_sd: 0.1
+behavior:
+  gamma: 1.0
+  probability_bounds:
+  - 0.15
+  - 0.85
+  outcome_weight: 0.5
+  outcome_center: 75.0
+  outcome_scale: 10.0
+  risk_weight: 0.8
+  decline_weight: 0.3
+  decline_clip: 5.0
+  previous_treatment_weight: 0.5
+  score_center: 1.0
+policies:
+  ids:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  delay_years: 1.0
+  quantiles:
+  - 0.5
+  - 0.8
+  treatment_cost: 3.0
+  tune_cost: false
+  cost_candidates:
+  - 0.5
+  - 1.0
+  - 1.5
+  - 2.0
+  - 2.5
+  - 3.0
+  - 4.0
+  cost_calibration:
+    source: training patients only; primary gamma=1 population
+    seed: 22261030
+    n: 500
+    horizon: 3.0
+    selected_cost: 3.0
+    selection: maximum 3-year optimal-policy entropy; ties closest to 2
+    thresholds_from_training_pilot:
+      '3': 1.2733637823656994
+      '4': 1.9198911682478514
+    candidates:
+    - cost: 0.5
+      entropy: -0.0
+      counts:
+        '0': 0
+        '1': 500
+        '2': 0
+        '3': 0
+        '4': 0
+    - cost: 1.0
+      entropy: -0.0
+      counts:
+        '0': 0
+        '1': 500
+        '2': 0
+        '3': 0
+        '4': 0
+    - cost: 1.5
+      entropy: 0.0926189885374109
+      counts:
+        '0': 0
+        '1': 492
+        '2': 0
+        '3': 3
+        '4': 5
+    - cost: 2.0
+      entropy: 0.4066078957643447
+      counts:
+        '0': 0
+        '1': 454
+        '2': 19
+        '3': 12
+        '4': 15
+    - cost: 2.5
+      entropy: 0.9021010343979713
+      counts:
+        '0': 40
+        '1': 371
+        '2': 31
+        '3': 47
+        '4': 11
+    - cost: 3.0
+      entropy: 1.2025278902329597
+      counts:
+        '0': 132
+        '1': 253
+        '2': 72
+        '3': 41
+        '4': 2
+    - cost: 4.0
+      entropy: 0.47182471023482303
+      counts:
+        '0': 432
+        '1': 56
+        '2': 10
+        '3': 2
+        '4': 0
+    common_cost_frozen_for_all_gammas: true
+    validation_or_test_used: false
+diagnostics:
+  paired_patients: 100
+  confounding_patients: 500
+  gammas:
+  - 0.0
+  - 0.5
+  - 1.0
+  - 2.0
+workers: 8
+out_dir: CausalMed/outputs/synthetic_cf_level3

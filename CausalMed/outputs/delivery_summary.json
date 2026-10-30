@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "total_patients": 56000,
+  "total_test_patients": 8000,
+  "counterfactual_branches": 40000,
+  "checked_file_sha256": 104,
+  "source_sha256_verified_for_all_datasets": true,
+  "automated_tests": "24 passed",
+  "smoke_patients": 100,
+  "cost": 3.0,
+  "cost_calibration_training_only": true,
+  "cost_calibration_exact_reproduction": true,
+  "model_experiments_performed": false,
+  "figures": 28,
+  "datasets": [
+    {
+      "gamma": 0,
+      "patient_counts": {
+        "train": 10000,
+        "val": 2000,
+        "test": 2000
+      },
+      "status": "PASS",
+      "factual_visits": 231760,
+      "cf_trajectory_rows": 582405,
+      "cf_outcome_rows": 30000,
+      "replay_max_Y_error": 0.0,
+      "tolerance_max_state_error": 8.191674005786354e-09,
+      "risk_treatment_correlation": 0.0010441968816699136,
+      "risk_propensity_spearman": 0.0,
+      "paired_ate_3y": 10.08349037747039,
+      "optimal_policy_counts_3y": {
+        "0": 441,
+        "1": 1145,
+        "2": 284,
+        "3": 124,
+        "4": 6
+      },
+      "treatment_cost": 3.0,
+      "report": "CausalMed/outputs/level3_suite/gamma_0/diagnostics/validation_report.md"
+    },
+    {
+      "gamma": 0.5,
+      "patient_counts": {
+        "train": 10000,
+        "val": 2000,
+        "test": 2000
+      },
+      "status": "PASS",
+      "factual_visits": 231279,
+      "cf_trajectory_rows": 581415,
+      "cf_outcome_rows": 30000,
+      "replay_max_Y_error": 0.0,
+      "tolerance_max_state_error": 7.679675562144439e-09,
+      "risk_treatment_correlation": 0.1789195821218552,
+      "risk_propensity_spearman": 0.9644358496183337,
+      "paired_ate_3y": 10.089096737684622,
+      "optimal_policy_counts_3y": {
+        "0": 447,
+        "1": 1051,
+        "2": 302,
+        "3": 184,
+        "4": 16
+      },
+      "treatment_cost": 3.0,
+      "report": "CausalMed/outputs/level3_suite/gamma_0.5/diagnostics/validation_report.md"
+    },
+    {
+      "gamma": 1,
+      "patient_counts": {
+        "train": 10000,
+        "val": 2000,
+        "test": 2000
+      },
+      "status": "PASS",
+      "factual_visits": 231726,
+      "cf_trajectory_rows": 582715,
+      "cf_outcome_rows": 30000,
+      "replay_max_Y_error": 0.0,
+      "tolerance_max_state_error": 5.651375367676792e-09,
+      "risk_treatment_correlation": 0.2574179940661214,
+      "risk_propensity_spearman": 0.9646690249961951,
+      "paired_ate_3y": 9.983275993681811,
+      "optimal_policy_counts_3y": {
+        "0": 451,
+        "1": 1035,
+        "2": 307,
+        "3": 190,
+        "4": 17
+      },
+      "treatment_cost": 3.0,
+      "report": "CausalMed/outputs/level3_suite/gamma_1/diagnostics/validation_report.md"
+    },
+    {
+      "gamma": 2,
+      "patient_counts": {
+        "train": 10000,
+        "val": 2000,
+        "test": 2000
+      },
+      "status": "PASS",
+      "factual_visits": 231613,
+      "cf_trajectory_rows": 582020,
+      "cf_outcome_rows": 30000,
+      "replay_max_Y_error": 0.0,
+      "tolerance_max_state_error": 5.086923771102647e-09,
+      "risk_treatment_correlation": 0.2996841979880793,
+      "risk_propensity_spearman": 0.9642877169490991,
+      "paired_ate_3y": 9.658225324388896,
+      "optimal_policy_counts_3y": {
+        "0": 487,
+        "1": 902,
+        "2": 383,
+        "3": 206,
+        "4": 22
+      },
+      "treatment_cost": 3.0,
+      "report": "CausalMed/outputs/level3_suite/gamma_2/diagnostics/validation_report.md"
+    }
+  ]
+}

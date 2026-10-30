@@ -1,0 +1,215 @@
+{
+  "status": "PASS",
+  "patient_counts": {
+    "train": 10000,
+    "val": 2000,
+    "test": 2000
+  },
+  "gamma": 0.0,
+  "checked_factual_patients_replay": 14000,
+  "replay_max_Y_error": 0.0,
+  "tolerance_max_state_error": 8.191674005786354e-09,
+  "paired_causal_checks": {
+    "paired_n": 100,
+    "ate_3y": 10.08349037747039,
+    "ite_sd": 1.7958546367611976,
+    "ite_quantiles": {
+      "p05": 7.260892767844053,
+      "p50": 9.985446951460194,
+      "p95": 12.865770118875783
+    },
+    "A_to_next_L_mean": -0.06618580522409444,
+    "L_to_next_D_mean": 0.0013798455320607871,
+    "controlled_L_to_propensity_mean": 0.0,
+    "ablated_L_to_D_max": 1.1231682250922859e-11,
+    "ablated_L_to_propensity_max": 0.0
+  },
+  "propensity_quantiles": [
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+  ],
+  "risk_treatment_correlation": 0.0010441968816699136,
+  "risk_propensity_spearman": 0.0,
+  "overlap_by_risk_quintile": [
+    {
+      "risk_bin": 0,
+      "n": 46352,
+      "propensity_mean": 0.5,
+      "treatment_fraction": 0.49715222644114604,
+      "propensity_min": 0.5,
+      "propensity_max": 0.5,
+      "risk_mean": 0.5533924480637586
+    },
+    {
+      "risk_bin": 1,
+      "n": 46352,
+      "propensity_mean": 0.5,
+      "treatment_fraction": 0.5024810148429409,
+      "propensity_min": 0.5,
+      "propensity_max": 0.5,
+      "risk_mean": 0.9174035495485218
+    },
+    {
+      "risk_bin": 2,
+      "n": 46352,
+      "propensity_mean": 0.5,
+      "treatment_fraction": 0.4985113910942354,
+      "propensity_min": 0.5,
+      "propensity_max": 0.5,
+      "risk_mean": 1.25377525141394
+    },
+    {
+      "risk_bin": 3,
+      "n": 46352,
+      "propensity_mean": 0.5,
+      "treatment_fraction": 0.502847773558854,
+      "propensity_min": 0.5,
+      "propensity_max": 0.5,
+      "risk_mean": 1.7112694974352298
+    },
+    {
+      "risk_bin": 4,
+      "n": 46352,
+      "propensity_mean": 0.5,
+      "treatment_fraction": 0.49887814981014844,
+      "propensity_min": 0.5,
+      "propensity_max": 0.5,
+      "risk_mean": 2.718944632507608
+    }
+  ],
+  "visit_counts": {
+    "min": 13,
+    "max": 22,
+    "mean": 16.554285714285715
+  },
+  "visit_gaps": {
+    "min": 0.25000045068439636,
+    "max": 0.749995659169147,
+    "mean": 0.4970907848252295,
+    "variance": 0.02081471390293735
+  },
+  "treatment_switches": {
+    "mean": 7.753285714285714,
+    "max": 16
+  },
+  "dynamic_branch_switches": {
+    "mean": 0.7645,
+    "max": 2
+  },
+  "branch_risk_divergence_count": 18029,
+  "optimal_policy_counts": {
+    "1.0": {
+      "0": 1903,
+      "1": 97,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    "2.0": {
+      "0": 1195,
+      "1": 795,
+      "2": 0,
+      "3": 10,
+      "4": 0
+    },
+    "3.0": {
+      "0": 441,
+      "1": 1145,
+      "2": 284,
+      "3": 124,
+      "4": 6
+    }
+  },
+  "confounding_diagnostics": [
+    {
+      "gamma": 0.0,
+      "n": 500,
+      "risk_treatment_corr": -0.006927889335716121,
+      "risk_propensity_spearman": 0.0,
+      "naive_effect_rate": 1.640249733789235,
+      "paired_true_effect_rate": 1.2719684397019555,
+      "naive_bias": 0.3682812940872795,
+      "treated_risk": 1.179739774152956,
+      "untreated_risk": 1.1846867491833688,
+      "treated_D": 1.7701489201147318,
+      "untreated_D": 1.7896101082528948,
+      "treated_Y": 67.61668307345705,
+      "untreated_Y": 67.71327136301198,
+      "treated_future_Y": 65.9090778063703,
+      "untreated_future_Y": 65.105351084714
+    },
+    {
+      "gamma": 0.5,
+      "n": 500,
+      "risk_treatment_corr": 0.0602492928359944,
+      "risk_propensity_spearman": 0.860944979779919,
+      "naive_effect_rate": 1.4337084482036393,
+      "paired_true_effect_rate": 1.2369345700717866,
+      "naive_bias": 0.19677387813185265,
+      "treated_risk": 1.2024119989035702,
+      "untreated_risk": 1.1616051059766987,
+      "treated_D": 1.8083584862154274,
+      "untreated_D": 1.7637450072565692,
+      "treated_Y": 67.24135624765881,
+      "untreated_Y": 67.98180154314625,
+      "treated_future_Y": 65.52758313198598,
+      "untreated_future_Y": 65.43389036571979
+    },
+    {
+      "gamma": 1.0,
+      "n": 500,
+      "risk_treatment_corr": 0.10721369412378146,
+      "risk_propensity_spearman": 0.8527341629366516,
+      "naive_effect_rate": 1.361103854006168,
+      "paired_true_effect_rate": 1.2159089413648816,
+      "naive_bias": 0.14519491264128637,
+      "treated_risk": 1.2148620592059987,
+      "untreated_risk": 1.1439370497357932,
+      "treated_D": 1.8290089274392125,
+      "untreated_D": 1.7403531056921693,
+      "treated_Y": 67.01915767017404,
+      "untreated_Y": 68.2530996665445,
+      "treated_future_Y": 65.28612867589904,
+      "untreated_future_Y": 65.75728631091388
+    },
+    {
+      "gamma": 2.0,
+      "n": 500,
+      "risk_treatment_corr": 0.14263733781125978,
+      "risk_propensity_spearman": 0.8456449185796743,
+      "naive_effect_rate": 1.233832290967321,
+      "paired_true_effect_rate": 1.1441402384771815,
+      "naive_bias": 0.08969205249013945,
+      "treated_risk": 1.2123012618466058,
+      "untreated_risk": 1.1194433121332166,
+      "treated_D": 1.8419994692984574,
+      "untreated_D": 1.7168895481437079,
+      "treated_Y": 66.93079593299596,
+      "untreated_Y": 68.52478321924072,
+      "treated_future_Y": 65.23768902658799,
+      "untreated_future_Y": 66.1785692641589
+    }
+  ],
+  "warnings": [
+    "finite-sample naive bias need not increase monotonically with gamma; randomized error is sampling error",
+    "policy ties use the smallest policy_id; threshold policies may coincide for some patients"
+  ],
+  "checks": [
+    "finite states/observations",
+    "D/E invariants",
+    "solver tolerance",
+    "causal treatment effect",
+    "paired A->L and L->D, L->propensity with ablations",
+    "selection and overlap",
+    "all-patient factual replay",
+    "fork exact consistency",
+    "branch-local dynamic decisions",
+    "train-only thresholds",
+    "strictly irregular schedule",
+    "deterministic replay",
+    "public schema / cutoff isolation"
+  ]
+}

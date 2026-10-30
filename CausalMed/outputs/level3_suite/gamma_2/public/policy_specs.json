@@ -1,0 +1,24 @@
+{
+  "policies": {
+    "0": "Never Treat",
+    "1": "Always Treat",
+    "2": "Delayed Treatment",
+    "3": "Aggressive Dynamic",
+    "4": "Conservative Dynamic"
+  },
+  "thresholds": {
+    "3": 1.2276741453371554,
+    "4": 1.8130148085938025
+  },
+  "threshold_source": "all training visits only",
+  "delay_years": 1.0,
+  "treatment_cost": 3.0,
+  "decision_rule": "visit observation first; use current branch X2; strict > threshold",
+  "treatment_semantics": "[t_start,t_end); no decision at terminal boundary",
+  "cost_calibration": {
+    "source": "training patients only; primary gamma=1 population",
+    "n": 500,
+    "selected_cost": 3.0,
+    "common_cost_frozen_for_all_gammas": true
+  }
+}
