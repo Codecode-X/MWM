@@ -1,0 +1,43 @@
+{
+  "physical_gpu": 3,
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "parameter_device": "cuda:0",
+  "parameters": 31314,
+  "trainable_parameters": 31314,
+  "latent_dimension": 28,
+  "mlp_width": 159,
+  "ode_width": 188,
+  "environment": "ode",
+  "torch_version": "2.5.1+cu121",
+  "time_unit": "year",
+  "batch_size": 128,
+  "event_input_dimensions": {
+    "observations": 3,
+    "observation_mask": 3,
+    "action_one_hot": 2,
+    "event_type": 2
+  },
+  "prior_weight": 0.01,
+  "jacobian_weight": 0.01,
+  "l2_weight": 0.02,
+  "jacobian_squared_entries": 784,
+  "normalization": "train_zscore",
+  "parameter_breakdown": {
+    "init": 4798,
+    "update": 10681,
+    "forward_ode": 10744,
+    "decoder": 5091
+  },
+  "actual_tensor_devices": {
+    "times": "cuda:0",
+    "values": "cuda:0",
+    "mask": "cuda:0",
+    "context_mask": "cuda:0",
+    "valid": "cuda:0",
+    "actions": "cuda:0",
+    "cutoff": "cuda:0",
+    "c": "cuda:0"
+  },
+  "prediction_device": "cuda:0",
+  "jacobian_device": "cuda:0"
+}

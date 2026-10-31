@@ -1,0 +1,86 @@
+{
+  "model_name": "ODE-AE",
+  "model_source_sha256": {
+    "latent2x_experiment/__init__.py": "7804a17aed398dc7dcee77c20b23a61faa5fd47729c3d8b7637d916c77417fc8",
+    "latent2x_experiment/data.py": "76d5db8ed3d144b635aa1c12156076557480ab072b54039d7a6a14f7039d6327",
+    "latent2x_experiment/model.py": "b9d2bbff91444f20618e626dce02d0d72c8cf082324f91e154e8dfdfffee167f",
+    "latent2x_experiment/odeae_model.py": "241bb73ffcdc42d5d8aa92c26376c544c3b80011d76c94272f7e510615c8004a",
+    "latent2x_experiment/rollout.py": "c0462eb0c5ada209c91ccff64a42e2408645fc0f844e1cf977f74432331b7ce2",
+    "latent2x_experiment/train.py": "2f5a0716edbcf7dccd660541c36736c9922962cebe9debe646a7250ac858e366",
+    "paper_odeae/__init__.py": "1da58c3b8b61e93c35610307090bac8a0e6b6ee1e1c1c3b00b0b8d4968eda37d",
+    "paper_odeae/models.py": "728460fbbcb113ff24680a5337bfc16cb91c03fa249bd17805a794449e3d137e",
+    "paper_odeae/solver.py": "c69c6a3b637e9303cc5d9afbda3b59c31e6195dadcd95efff6ec81c1519da55b",
+    "paper_odeae/jacobian.py": "a3119cbd379949cbb6de0a61e990a275c6f8783e86031b00fdce15587627619c",
+    "paper_odeae/reference/tsit5_tableau.json": "e316ce7ae258bfe6470732fbe6df84452bebfeebeea887730d52c0b82354397c",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/tracking.py": "efd445872289f3a9a6629bf8e29f370dc5b82babb95459072972bb8e973d5717",
+    "src/swanlab_local.py": "154ccb47f1b74dbc1e12bec983e7683a4c6ee8dbd85766e9aa93aef21c4b21ab",
+    "causalmed_client/__init__.py": "98e687760edac09f64a7eb2465f467d89a4d45b3a148016f54feef6ac0c875bc",
+    "causalmed_client/dataset_adapter.py": "0f177ff7cde1f3727fdcae6dd486404f4402df480ab76e3766b3710daf1ab5a2",
+    "causalmed_client/counterfactual_policies.py": "586270f5ff435b1e1235e74cd79a501f2d7a43eb338acc21e9bac805905bc33a"
+  },
+  "public_data_sha256": {
+    "gamma_1": {
+      "policy_specs.json": "fde1adaf7f9294727ff0dd2e8bdd263613eeb4c63b097f1e28381100a122d3d3",
+      "test_future_visits.parquet": "1147f22a6a51e9c9f978910aea734f95bba01605a7eb98d4077d13b74f35334c",
+      "test_histories.parquet": "9484537e045cbfeef8a1f4973c1a88375e2778565d61a46c52fb36f1ac458853",
+      "test_history_treatments.parquet": "64556bbcdf9e8d040284f0aff8c25384d6fc8e47a1e0d31e1e639756d55e4979",
+      "test_patients.parquet": "43bb307845179d0e735fb318aac28a5c748187827a6d8944de039493afd946b7",
+      "test_queries.parquet": "4be66049e814b35c2051f648eb839b0975f2f5821efdd5d254822073771200f8",
+      "test_sequences.jsonl": "cd03f374ae0c82ecace8762feb62c281d5d110c2025d3313b9f132577b18694e",
+      "train_patients.parquet": "1408dc2aa4402946da07790f5f1e86c6a6280e69a09785948962f18f32930d4e",
+      "train_sequences.jsonl": "ed83f5531a014c2cf8f75c0e70ab1c7c8b32df24000a1ae57f9def676d50e3dc",
+      "train_treatments.parquet": "c063f31b28445652da33d7e21ec039839660c3e1d81a34f4364af483a608528e",
+      "train_visits.parquet": "c669864fb431f811f29c499b7eccdaefa0d021c2d4cb371497e2c2ffd8a2c4f6",
+      "val_patients.parquet": "e8ed7eaa68ecdc8d686e7d1ca7c7d4ee1a6e1bf41d851071dcae396313db7976",
+      "val_sequences.jsonl": "1552038639c0d673d03755b15eb3b72e708789d47644118ef155bba7e45f7819",
+      "val_treatments.parquet": "72fe36d871a306ba6d1a017386a923ab425ff2cb1c59333952f853e2ec7206fd",
+      "val_visits.parquet": "421403500a07683a55d1eeb47dc5ae75272f163a0e2446bbc3d282952a69b58d"
+    }
+  },
+  "configs": {
+    "gamma_1": {
+      "model": "ode_ae_action_update",
+      "variant": "gamma_1",
+      "seed": 0,
+      "latent": 6,
+      "mlp_width": 16,
+      "ode_width": 16,
+      "prior_weight": 0.0,
+      "jacobian_weight": 0.0,
+      "l2_weight": 0.02,
+      "normalization": "train_zscore",
+      "lr": 0.003,
+      "lr_decay": 0.97,
+      "lr_decay_steps": 2000,
+      "input_dropout": 0.1,
+      "batch_size": 128,
+      "max_epochs": 300,
+      "min_epochs": 50,
+      "patience": 40,
+      "rtol": 0.0001,
+      "atol": 1e-06,
+      "rollout_patient_batch": 32,
+      "selection": "validation factual overall standardized MSE",
+      "training_cutoff_years": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "physical_gpu": 1,
+      "action_update": "encoder residual correction; independent 6D generator treatment-conditional residual module",
+      "kl_weight": 1.0,
+      "posterior_anchor": "first history visit; mean replayed to cutoff before policy branching",
+      "encoder_direction": "backward",
+      "shared_vector_field": false
+    }
+  },
+  "order": [
+    "gamma_1"
+  ],
+  "physical_gpu": 1,
+  "environment": "ode",
+  "reference_output": "/home/xjh/projects/LatentODE/CausalMed/outputs/latent2x_both_cuda3",
+  "blind_execution": "bubblewrap namespace; public-only model mounts; separate post-submission oracle evaluator"
+}

@@ -1,0 +1,5682 @@
+[
+  {
+    "epoch": 1,
+    "optimizer_steps": 79,
+    "training_loss": 2.2749907879889766,
+    "training_components": {
+      "mse": 2.042985659611376,
+      "kl": 0.09430551698690728,
+      "weighted_kl": 0.09430551698690728,
+      "ode_l2": 6.88498107089272,
+      "weighted_ode_l2": 0.13769961836971814,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 2.2749907879889766
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.29545652413349216,
+        "per_field_mse": [
+          0.10207887954164495,
+          0.109524328721954,
+          0.08385331586989322
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 1.5262391201127259,
+        "per_field_mse": [
+          0.42109794438164244,
+          0.5351080353551754,
+          0.570033140375908
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.9648530661843039,
+        "per_field_mse": [
+          0.2755865829930161,
+          0.34099027691465433,
+          0.3482762062766335
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        7.30600110468005,
+        0.6698184864454596,
+        0.5293451070289755
+      ],
+      "future_raw_mae": [
+        5.785521398654937,
+        0.5339817096286394,
+        0.41875503251181745
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 22.43885091203265,
+    "elapsed_seconds": 22.440109147923067,
+    "lr": 0.002996392754356608,
+    "peak_memory_bytes": 25660416
+  },
+  {
+    "epoch": 2,
+    "optimizer_steps": 158,
+    "training_loss": 1.2993493608281583,
+    "training_components": {
+      "mse": 1.0644999146461487,
+      "kl": 0.15604068763271162,
+      "weighted_kl": 0.15604068763271162,
+      "ode_l2": 3.9404381136350994,
+      "weighted_ode_l2": 0.0788087603412097,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.2993493608281583
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.25071189722227916,
+        "per_field_mse": [
+          0.09465085804351556,
+          0.07900382393444912,
+          0.0770572152443145
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 1.0304832254456124,
+        "per_field_mse": [
+          0.27880739331484533,
+          0.3586902384612405,
+          0.3929855936695266
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.6748129785711116,
+        "per_field_mse": [
+          0.19480968868371212,
+          0.2311193339029948,
+          0.2488839559844046
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        5.94484199034122,
+        0.548398391335895,
+        0.4395185055915778
+      ],
+      "future_raw_mae": [
+        4.648265329293086,
+        0.43287197577990094,
+        0.34126573148584377
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 23.050976426922716,
+    "elapsed_seconds": 45.50253109494224,
+    "lr": 0.00299278984612026,
+    "peak_memory_bytes": 25456640
+  },
+  {
+    "epoch": 3,
+    "optimizer_steps": 237,
+    "training_loss": 1.1771915034402776,
+    "training_components": {
+      "mse": 0.9306344880333429,
+      "kl": 0.1788870746953578,
+      "weighted_kl": 0.1788870746953578,
+      "ode_l2": 3.383497295500357,
+      "weighted_ode_l2": 0.06766994457833375,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.1771915034402776
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2617776750599549,
+        "per_field_mse": [
+          0.09964688737247335,
+          0.08169872305224052,
+          0.08043206463524107
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.9389679842651992,
+        "per_field_mse": [
+          0.2449858818283744,
+          0.33776540056963605,
+          0.3562167018671888
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.630087119362571,
+        "per_field_mse": [
+          0.17869368119673296,
+          0.22096795839251893,
+          0.23042547977331912
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        5.5726106616883495,
+        0.5321621391372466,
+        0.41845232919211617
+      ],
+      "future_raw_mae": [
+        4.302342806573168,
+        0.42223927482330054,
+        0.3162715062635339
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.825554943992756,
+    "elapsed_seconds": 67.33830260089599,
+    "lr": 0.0029891912700755916,
+    "peak_memory_bytes": 25660416
+  },
+  {
+    "epoch": 4,
+    "optimizer_steps": 316,
+    "training_loss": 1.153822746457933,
+    "training_components": {
+      "mse": 0.9005189802073226,
+      "kl": 0.19161988398696803,
+      "weighted_kl": 0.19161988398696803,
+      "ode_l2": 3.084193866464156,
+      "weighted_ode_l2": 0.06168387566186205,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.153822746457933
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.242196707785082,
+        "per_field_mse": [
+          0.092161786831854,
+          0.07387322337900487,
+          0.07616169757422316
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 1.0058020032113715,
+        "per_field_mse": [
+          0.26461875393525086,
+          0.36279253516506454,
+          0.37839071411105607
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.6575054224187677,
+        "per_field_mse": [
+          0.1859574737548828,
+          0.2310103047688802,
+          0.24053764389500473
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        5.791598978962911,
+        0.5515254586891464,
+        0.43127976826138414
+      ],
+      "future_raw_mae": [
+        4.577147185872124,
+        0.437083705222512,
+        0.34449842115441587
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.987900879932567,
+    "elapsed_seconds": 89.33645744994283,
+    "lr": 0.00298559702101351,
+    "peak_memory_bytes": 25456640
+  },
+  {
+    "epoch": 5,
+    "optimizer_steps": 395,
+    "training_loss": 1.1386817738979678,
+    "training_components": {
+      "mse": 0.8744094711315783,
+      "kl": 0.20719308132612252,
+      "weighted_kl": 0.20719308132612252,
+      "ode_l2": 2.853961377204219,
+      "weighted_ode_l2": 0.05707922606151315,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.1386817738979678
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2514895482992131,
+        "per_field_mse": [
+          0.0955617510825752,
+          0.07510540607664264,
+          0.08082239113999529
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 1.0801932375495356,
+        "per_field_mse": [
+          0.2916941684206849,
+          0.38414660258895705,
+          0.4043524665398935
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.7022038939504913,
+        "per_field_mse": [
+          0.20223400740189987,
+          0.24318635975230823,
+          0.25678352679628313
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        6.080678561468049,
+        0.5675248617819736,
+        0.44582959948627277
+      ],
+      "future_raw_mae": [
+        4.863352843084223,
+        0.45020032266989835,
+        0.36246671896076604
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.931442431989126,
+    "elapsed_seconds": 111.27432666590903,
+    "lr": 0.0029820070937311848,
+    "peak_memory_bytes": 25434624
+  },
+  {
+    "epoch": 6,
+    "optimizer_steps": 474,
+    "training_loss": 1.1390500000760526,
+    "training_components": {
+      "mse": 0.8594097442264799,
+      "kl": 0.22629619550101365,
+      "weighted_kl": 0.22629619550101365,
+      "ode_l2": 2.667203456540651,
+      "weighted_ode_l2": 0.053344068034917494,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.1390500000760526
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2615425962417201,
+        "per_field_mse": [
+          0.09957543605507418,
+          0.07781458572602608,
+          0.08415257446061986
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.8868257970195691,
+        "per_field_mse": [
+          0.23120996939835742,
+          0.32184379701761034,
+          0.3337720306036014
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.6016208722663648,
+        "per_field_mse": [
+          0.17116866880474668,
+          0.21053689991344104,
+          0.2199153035481771
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        5.4136659103588185,
+        0.5194681978167242,
+        0.4050548352955417
+      ],
+      "future_raw_mae": [
+        4.245452120543755,
+        0.41213913272173325,
+        0.31398690638224197
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.94505914102774,
+    "elapsed_seconds": 133.22569405497052,
+    "lr": 0.002978421483032043,
+    "peak_memory_bytes": 25507328
+  },
+  {
+    "epoch": 7,
+    "optimizer_steps": 553,
+    "training_loss": 1.1214019346840773,
+    "training_components": {
+      "mse": 0.8258515173875833,
+      "kl": 0.24444179840480226,
+      "weighted_kl": 0.24444179840480226,
+      "ode_l2": 2.5554316828522503,
+      "weighted_ode_l2": 0.05110863233103028,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.1214019346840773
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2601597940798234,
+        "per_field_mse": [
+          0.10170093356945271,
+          0.07626283697837406,
+          0.08219602353199663
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7682669069763279,
+        "per_field_mse": [
+          0.19650134823490736,
+          0.2837067891633774,
+          0.28805876957804316
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5365084848114938,
+        "per_field_mse": [
+          0.1532608730431759,
+          0.18908720629142992,
+          0.194160405476888
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.990808891020303,
+        0.48772077767756566,
+        0.3762958260630829
+      ],
+      "future_raw_mae": [
+        3.8823125517239268,
+        0.3866004012445981,
+        0.285696423654984
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 22.040151366963983,
+    "elapsed_seconds": 155.2770262080012,
+    "lr": 0.002974840183725759,
+    "peak_memory_bytes": 25665536
+  },
+  {
+    "epoch": 8,
+    "optimizer_steps": 632,
+    "training_loss": 1.109019229683695,
+    "training_components": {
+      "mse": 0.811980275413658,
+      "kl": 0.24863266869436337,
+      "weighted_kl": 0.24863266869436337,
+      "ode_l2": 2.42031418522702,
+      "weighted_ode_l2": 0.048406282652027996,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.109019229683695
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.25498399397429083,
+        "per_field_mse": [
+          0.10171468340903878,
+          0.07101607544448127,
+          0.08225323512077078
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.8236833261651825,
+        "per_field_mse": [
+          0.21905743892457985,
+          0.29829136470338136,
+          0.30633452253722127
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5642874913071141,
+        "per_field_mse": [
+          0.16553492043235085,
+          0.19462627896395596,
+          0.20412629191080728
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        5.2694729052924885,
+        0.5000998609700615,
+        0.3880492261841844
+      ],
+      "future_raw_mae": [
+        4.183777043515146,
+        0.39485792825745425,
+        0.3093270297946806
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.935591078014113,
+    "elapsed_seconds": 177.22352411190514,
+    "lr": 0.002971263190628248,
+    "peak_memory_bytes": 25490944
+  },
+  {
+    "epoch": 9,
+    "optimizer_steps": 711,
+    "training_loss": 1.0951000467131409,
+    "training_components": {
+      "mse": 0.7994177379185641,
+      "kl": 0.24893229879155943,
+      "weighted_kl": 0.24893229879155943,
+      "ode_l2": 2.337500828730909,
+      "weighted_ode_l2": 0.04675001547306399,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0951000467131409
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.23389940264375164,
+        "per_field_mse": [
+          0.09633819403687659,
+          0.06259543281776171,
+          0.07496577578911337
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6698785683666116,
+        "per_field_mse": [
+          0.1690282836533188,
+          0.24811477440089513,
+          0.2527355103123977
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.47101923208525687,
+        "per_field_mse": [
+          0.13587279441139916,
+          0.16349547091397373,
+          0.171650966759884
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.62879410956455,
+        0.4561027662039353,
+        0.3524698579989825
+      ],
+      "future_raw_mae": [
+        3.5956395816354854,
+        0.35772542183177614,
+        0.27107341676651775
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.98390362598002,
+    "elapsed_seconds": 199.2147657169262,
+    "lr": 0.0029676904985616597,
+    "peak_memory_bytes": 25637376
+  },
+  {
+    "epoch": 10,
+    "optimizer_steps": 790,
+    "training_loss": 1.1087411385548265,
+    "training_components": {
+      "mse": 0.7989280789713317,
+      "kl": 0.26407653621480437,
+      "weighted_kl": 0.26407653621480437,
+      "ode_l2": 2.286826127692114,
+      "weighted_ode_l2": 0.04573652152962322,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.1087411385548265
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2560540010977894,
+        "per_field_mse": [
+          0.10204292325747955,
+          0.07304987678051375,
+          0.0809612010597961
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7054866963355292,
+        "per_field_mse": [
+          0.18056381511241895,
+          0.26357343591664983,
+          0.2613494453064604
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5004909108479818,
+        "per_field_mse": [
+          0.1447487714362867,
+          0.17667160219134706,
+          0.17907053722034802
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.784136187733502,
+        0.4700967105751968,
+        0.358426112392724
+      ],
+      "future_raw_mae": [
+        3.7368464630741234,
+        0.37105387659262934,
+        0.2762397224023082
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.837781370035373,
+    "elapsed_seconds": 221.06376641395036,
+    "lr": 0.002964122102354369,
+    "peak_memory_bytes": 25304064
+  },
+  {
+    "epoch": 11,
+    "optimizer_steps": 869,
+    "training_loss": 1.096659891967532,
+    "training_components": {
+      "mse": 0.7818759536441369,
+      "kl": 0.2705906242886676,
+      "weighted_kl": 0.2705906242886676,
+      "ode_l2": 2.209665920160994,
+      "weighted_ode_l2": 0.04419331728846212,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.096659891967532
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.24051397162930876,
+        "per_field_mse": [
+          0.09751630393298674,
+          0.06689961742854264,
+          0.07609805026777938
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6513884939487458,
+        "per_field_mse": [
+          0.16452256847336533,
+          0.24468468822719844,
+          0.24218123724818202
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.46397990879868023,
+        "per_field_mse": [
+          0.13395958964029947,
+          0.16359314704663827,
+          0.16642717211174243
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.566683500271973,
+        0.452939076044373,
+        0.3450317788402782
+      ],
+      "future_raw_mae": [
+        3.54827773461497,
+        0.35632722129710975,
+        0.2631453382121678
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.851088486029766,
+    "elapsed_seconds": 242.92175845999736,
+    "lr": 0.0029605579968409687,
+    "peak_memory_bytes": 25473024
+  },
+  {
+    "epoch": 12,
+    "optimizer_steps": 948,
+    "training_loss": 1.0905230995974964,
+    "training_components": {
+      "mse": 0.7726513667951657,
+      "kl": 0.27494381632231457,
+      "weighted_kl": 0.27494381632231457,
+      "ode_l2": 2.1463957828811453,
+      "weighted_ode_l2": 0.04292791473525989,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0905230995974964
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.23428740337938506,
+        "per_field_mse": [
+          0.09617036256326376,
+          0.06218255570427142,
+          0.07593448511184989
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7056755948390838,
+        "per_field_mse": [
+          0.18096165309537884,
+          0.2629408746034551,
+          0.2617730671402498
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4906654436516039,
+        "per_field_mse": [
+          0.1422865466493549,
+          0.17137074880888967,
+          0.1770081481933594
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.789403754348227,
+        0.4695322689789996,
+        0.3587164815732899
+      ],
+      "future_raw_mae": [
+        3.7431808488158054,
+        0.36545861683254316,
+        0.28303596491871447
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.76503342099022,
+    "elapsed_seconds": 264.69821921293624,
+    "lr": 0.002956998176862264,
+    "peak_memory_bytes": 25451520
+  },
+  {
+    "epoch": 13,
+    "optimizer_steps": 1027,
+    "training_loss": 1.0874163078356394,
+    "training_components": {
+      "mse": 0.7743275195737428,
+      "kl": 0.2709252466506596,
+      "weighted_kl": 0.2709252466506596,
+      "ode_l2": 2.108177640770055,
+      "weighted_ode_l2": 0.04216355193830744,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0874163078356394
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2359477326238279,
+        "per_field_mse": [
+          0.09619070474308854,
+          0.06320360509632687,
+          0.07655342278441248
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7527174391724204,
+        "per_field_mse": [
+          0.19425486476856535,
+          0.28154747667306246,
+          0.2769150977307926
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5170078180486506,
+        "per_field_mse": [
+          0.149525722619259,
+          0.18195620635061552,
+          0.18552588907877604
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.962198404045256,
+        0.485861193851172,
+        0.3689454575966184
+      ],
+      "future_raw_mae": [
+        3.8926706217437665,
+        0.3793732380454809,
+        0.2922754914620911
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 22.448159013991244,
+    "elapsed_seconds": 287.1539820278995,
+    "lr": 0.002953442637265263,
+    "peak_memory_bytes": 25434624
+  },
+  {
+    "epoch": 14,
+    "optimizer_steps": 1106,
+    "training_loss": 1.0989226517798025,
+    "training_components": {
+      "mse": 0.7915770698197281,
+      "kl": 0.2657775714804855,
+      "weighted_kl": 0.2657775714804855,
+      "ode_l2": 2.0784007808830163,
+      "weighted_ode_l2": 0.04156801477074623,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0989226517798025
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.25880920674741953,
+        "per_field_mse": [
+          0.10664807283399969,
+          0.06918917100162796,
+          0.08297196291179186
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6758024493277617,
+        "per_field_mse": [
+          0.17518507879030631,
+          0.2438749845133663,
+          0.2567423860240891
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4856029843417081,
+        "per_field_mse": [
+          0.1439238956335819,
+          0.16419708066998107,
+          0.17748200803814512
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.712341210612896,
+        0.452189028371803,
+        0.3552529041508045
+      ],
+      "future_raw_mae": [
+        3.6982282924732317,
+        0.35716626586129846,
+        0.2684093297889638
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.909375461982563,
+    "elapsed_seconds": 309.0711038399022,
+    "lr": 0.0029498913729031685,
+    "peak_memory_bytes": 25456640
+  },
+  {
+    "epoch": 15,
+    "optimizer_steps": 1185,
+    "training_loss": 1.0869728741766531,
+    "training_components": {
+      "mse": 0.769022943852823,
+      "kl": 0.2773592383423938,
+      "weighted_kl": 0.2773592383423938,
+      "ode_l2": 2.0295348786100558,
+      "weighted_ode_l2": 0.040590696696993674,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0869728741766531
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2537679076669953,
+        "per_field_mse": [
+          0.10262314651736609,
+          0.06985100120931681,
+          0.08129375994031239
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6968288523650845,
+        "per_field_mse": [
+          0.17938357948964653,
+          0.26087006189946954,
+          0.25657521097596836
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4947393641616359,
+        "per_field_mse": [
+          0.1443715205337062,
+          0.17374221801757814,
+          0.17662562561035156
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.76847506257928,
+        0.46767969404466375,
+        0.3551372257598868
+      ],
+      "future_raw_mae": [
+        3.725445702036474,
+        0.3676568794004316,
+        0.2736064513350819
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 22.28801634395495,
+    "elapsed_seconds": 331.3669395239558,
+    "lr": 0.0029463443786353735,
+    "peak_memory_bytes": 25451520
+  },
+  {
+    "epoch": 16,
+    "optimizer_steps": 1264,
+    "training_loss": 1.07249442233315,
+    "training_components": {
+      "mse": 0.7640623027765299,
+      "kl": 0.26865772073027455,
+      "weighted_kl": 0.26865772073027455,
+      "ode_l2": 1.9887196670604657,
+      "weighted_ode_l2": 0.03977439246034321,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.07249442233315
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.25204472512664106,
+        "per_field_mse": [
+          0.10113130894361137,
+          0.071139372380338,
+          0.07977404380269168
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6594761456735474,
+        "per_field_mse": [
+          0.16833102041558642,
+          0.24775249633380983,
+          0.24339262892415112
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4736380310058594,
+        "per_field_mse": [
+          0.13767980402166194,
+          0.1671955057779948,
+          0.16876272120620264
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.619237060203892,
+        0.45576966151632786,
+        0.34589362772347537
+      ],
+      "future_raw_mae": [
+        3.619255316617122,
+        0.36097567247942314,
+        0.26427341785507713
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.910994661971927,
+    "elapsed_seconds": 353.28588965395465,
+    "lr": 0.002942801649327452,
+    "peak_memory_bytes": 25451520
+  },
+  {
+    "epoch": 17,
+    "optimizer_steps": 1343,
+    "training_loss": 1.0688674306567711,
+    "training_components": {
+      "mse": 0.7611735372603694,
+      "kl": 0.2681632796420327,
+      "weighted_kl": 0.2681632796420327,
+      "ode_l2": 1.9765310106398184,
+      "weighted_ode_l2": 0.03953061922441555,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0688674306567711
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.25974075369083466,
+        "per_field_mse": [
+          0.10536246866169934,
+          0.0718629521763518,
+          0.08251533285278352
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7847934924389861,
+        "per_field_mse": [
+          0.2039234577108391,
+          0.2824189823933638,
+          0.29845105233478314
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5453058018539891,
+        "per_field_mse": [
+          0.15896770038026753,
+          0.18637991148052793,
+          0.19995818999319365
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        5.084189929129108,
+        0.48661258336381824,
+        0.3830234887463591
+      ],
+      "future_raw_mae": [
+        3.985015425043262,
+        0.38797160608853715,
+        0.28721426117213666
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.974919466068968,
+    "elapsed_seconds": 375.26888522098307,
+    "lr": 0.002939263179851151,
+    "peak_memory_bytes": 25496064
+  },
+  {
+    "epoch": 18,
+    "optimizer_steps": 1422,
+    "training_loss": 1.0881307298624063,
+    "training_components": {
+      "mse": 0.7738057420223574,
+      "kl": 0.2752017799434783,
+      "weighted_kl": 0.2752017799434783,
+      "ode_l2": 1.9561604216128965,
+      "weighted_ode_l2": 0.039123207613637176,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0881307298624063
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.23950866914131272,
+        "per_field_mse": [
+          0.09896050340914517,
+          0.06409993477080561,
+          0.07644823096136194
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6539001923933682,
+        "per_field_mse": [
+          0.16570525172560682,
+          0.24949025119469484,
+          0.2387046894730665
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.46488742620294743,
+        "per_field_mse": [
+          0.13526155414003316,
+          0.16492979569868607,
+          0.16469607636422823
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.583068086915624,
+        0.45736527001835664,
+        0.3425463355517246
+      ],
+      "future_raw_mae": [
+        3.5654177375511082,
+        0.35668356783996646,
+        0.2648808690142591
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.97844773903489,
+    "elapsed_seconds": 397.25539312697947,
+    "lr": 0.002935728965084384,
+    "peak_memory_bytes": 25462784
+  },
+  {
+    "epoch": 19,
+    "optimizer_steps": 1501,
+    "training_loss": 1.0731651277481755,
+    "training_components": {
+      "mse": 0.756050770795798,
+      "kl": 0.27878885480422005,
+      "weighted_kl": 0.27878885480422005,
+      "ode_l2": 1.9162751768208757,
+      "weighted_ode_l2": 0.0383255023839353,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0731651277481755
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.23492442867776797,
+        "per_field_mse": [
+          0.0970318713404858,
+          0.06364666601460316,
+          0.07424589132267903
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6321236372578508,
+        "per_field_mse": [
+          0.15945637420048978,
+          0.24025949997176088,
+          0.23240776308560016
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4509526533647017,
+        "per_field_mse": [
+          0.13098323567708334,
+          0.1597026376435251,
+          0.16026678004409328
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.495822072485408,
+        0.4488246260578126,
+        0.33799802744909907
+      ],
+      "future_raw_mae": [
+        3.5105045214404846,
+        0.35257415236102946,
+        0.2596527527386273
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.928857707069255,
+    "elapsed_seconds": 419.1926437409129,
+    "lr": 0.0029321989999112237,
+    "peak_memory_bytes": 25597952
+  },
+  {
+    "epoch": 20,
+    "optimizer_steps": 1580,
+    "training_loss": 1.0668646006644527,
+    "training_components": {
+      "mse": 0.749882468694373,
+      "kl": 0.27952533092679854,
+      "weighted_kl": 0.27952533092679854,
+      "ode_l2": 1.872839728488198,
+      "weighted_ode_l2": 0.037456793875633915,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0668646006644527
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.23689582529709183,
+        "per_field_mse": [
+          0.09740301512860884,
+          0.06405823008354566,
+          0.07543458008493732
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7216995465402112,
+        "per_field_mse": [
+          0.18534470199608766,
+          0.26763107762295285,
+          0.2687237669211707
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5005702889182351,
+        "per_field_mse": [
+          0.14523263133655895,
+          0.1747771856134588,
+          0.18056047196821734
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.8470584969015675,
+        0.47370139608327444,
+        0.3634476706547206
+      ],
+      "future_raw_mae": [
+        3.7826214736156185,
+        0.37378759002175227,
+        0.2788224400935175
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.835520498920232,
+    "elapsed_seconds": 441.0394853479229,
+    "lr": 0.0029286732792218944,
+    "peak_memory_bytes": 25269760
+  },
+  {
+    "epoch": 21,
+    "optimizer_steps": 1659,
+    "training_loss": 1.0758513679987267,
+    "training_components": {
+      "mse": 0.7562377407580991,
+      "kl": 0.2821750001439565,
+      "weighted_kl": 0.2821750001439565,
+      "ode_l2": 1.871931401989128,
+      "weighted_ode_l2": 0.03743862709667109,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0758513679987267
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2432729395152469,
+        "per_field_mse": [
+          0.09926372115484679,
+          0.06613872750084862,
+          0.07787049085955147
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7887734846094283,
+        "per_field_mse": [
+          0.20770393109730736,
+          0.2925594798275748,
+          0.2885100736845462
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.539959117080226,
+        "per_field_mse": [
+          0.15824205340761127,
+          0.18928417460123698,
+          0.19243288907137784
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        5.131100617654276,
+        0.4952716633976476,
+        0.3765904836215909
+      ],
+      "future_raw_mae": [
+        4.024299302563919,
+        0.38627323944265396,
+        0.29846739427315216
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 22.328141547972336,
+    "elapsed_seconds": 463.3760153789772,
+    "lr": 0.002925151797912764,
+    "peak_memory_bytes": 25497088
+  },
+  {
+    "epoch": 22,
+    "optimizer_steps": 1738,
+    "training_loss": 1.0743032927754559,
+    "training_components": {
+      "mse": 0.7572209563436387,
+      "kl": 0.27986065779305713,
+      "weighted_kl": 0.27986065779305713,
+      "ode_l2": 1.8610840115366103,
+      "weighted_ode_l2": 0.0372216794404048,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0743032927754559
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.25946636083371266,
+        "per_field_mse": [
+          0.10425895267175354,
+          0.07314381078618212,
+          0.082063597375777
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7788033911558576,
+        "per_field_mse": [
+          0.2017989412617625,
+          0.2950671446570474,
+          0.28193730523704763
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5419227576978278,
+        "per_field_mse": [
+          0.15730888412937974,
+          0.19384320623224433,
+          0.19077066733620385
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        5.0576365210931105,
+        0.49738973745345005,
+        0.37227607178954736
+      ],
+      "future_raw_mae": [
+        3.978145249994175,
+        0.389977000256851,
+        0.29343028907564833
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.810554899042472,
+    "elapsed_seconds": 485.1950803810032,
+    "lr": 0.002921634550886337,
+    "peak_memory_bytes": 25423360
+  },
+  {
+    "epoch": 23,
+    "optimizer_steps": 1817,
+    "training_loss": 1.0784522702422323,
+    "training_components": {
+      "mse": 0.7649886713752264,
+      "kl": 0.276640675113171,
+      "weighted_kl": 0.276640675113171,
+      "ode_l2": 1.8411461311050608,
+      "weighted_ode_l2": 0.0368229217733009,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0784522702422323
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.22913330297599344,
+        "per_field_mse": [
+          0.09413196949955,
+          0.06188962144671746,
+          0.07311171202972598
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6972938955879595,
+        "per_field_mse": [
+          0.17841117727961073,
+          0.257233089398562,
+          0.2616496289097867
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.48375591301195553,
+        "per_field_mse": [
+          0.13996964055841618,
+          0.16813278568152226,
+          0.17565348677201706
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.755533028853694,
+        0.4644081258980505,
+        0.3586318958109325
+      ],
+      "future_raw_mae": [
+        3.706416145874209,
+        0.3666527779611772,
+        0.27157572760889276
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.904324311064556,
+    "elapsed_seconds": 507.1080976749072,
+    "lr": 0.0029181215330512473,
+    "peak_memory_bytes": 25269760
+  },
+  {
+    "epoch": 24,
+    "optimizer_steps": 1896,
+    "training_loss": 1.0853623898723457,
+    "training_components": {
+      "mse": 0.773596876784216,
+      "kl": 0.27588144454020486,
+      "weighted_kl": 0.27588144454020486,
+      "ode_l2": 1.7942033462886569,
+      "weighted_ode_l2": 0.0358840660015239,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0853623898723457
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.25307731086067975,
+        "per_field_mse": [
+          0.10399272471642576,
+          0.06866284009784959,
+          0.08042174604640437
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7107480165818658,
+        "per_field_mse": [
+          0.1825151794175143,
+          0.2685614361219957,
+          0.25967140104235586
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.501994697339607,
+        "per_field_mse": [
+          0.14669942312529594,
+          0.1773834431966146,
+          0.1779118310176965
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.809917946325446,
+        0.47452403928901044,
+        0.35727358759530614
+      ],
+      "future_raw_mae": [
+        3.762907440295776,
+        0.36907288192643406,
+        0.2810591313345536
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 22.170074649038725,
+    "elapsed_seconds": 529.2869499819353,
+    "lr": 0.0029146127393222514,
+    "peak_memory_bytes": 25444352
+  },
+  {
+    "epoch": 25,
+    "optimizer_steps": 1975,
+    "training_loss": 1.0734787666344945,
+    "training_components": {
+      "mse": 0.7621760745591755,
+      "kl": 0.27584155941311317,
+      "weighted_kl": 0.27584155941311317,
+      "ode_l2": 1.773056399973133,
+      "weighted_ode_l2": 0.03546112733362596,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0734787666344945
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2395339565900549,
+        "per_field_mse": [
+          0.09804185628574198,
+          0.06589606313226452,
+          0.07559603717204835
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6953085297222574,
+        "per_field_mse": [
+          0.17801769980083523,
+          0.2617161178843917,
+          0.2555747120370306
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4874200763124409,
+        "per_field_mse": [
+          0.14153901903557056,
+          0.17239843703761246,
+          0.1734826202392578
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.750286081822383,
+        0.46843747149852377,
+        0.35444413176463224
+      ],
+      "future_raw_mae": [
+        3.713597049240545,
+        0.36849769342090455,
+        0.27240647028566384
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 22.148009203956462,
+    "elapsed_seconds": 551.4439410669729,
+    "lr": 0.00291110816462022,
+    "peak_memory_bytes": 25660416
+  },
+  {
+    "epoch": 26,
+    "optimizer_steps": 2054,
+    "training_loss": 1.0823911979228635,
+    "training_components": {
+      "mse": 0.7695947538448286,
+      "kl": 0.27721403218522855,
+      "weighted_kl": 0.27721403218522855,
+      "ode_l2": 1.779120553897906,
+      "weighted_ode_l2": 0.035582410478139224,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0823911979228635
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2474042161043863,
+        "per_field_mse": [
+          0.10047945087969129,
+          0.06828196087385345,
+          0.07864280435084156
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7391094184809175,
+        "per_field_mse": [
+          0.19194144173935204,
+          0.27079279852625465,
+          0.2763751782153108
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.514832240711559,
+        "per_field_mse": [
+          0.15022368737423059,
+          0.17842330932617187,
+          0.1861852440111565
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.932561958203743,
+        0.4764912704256245,
+        0.3685856035333099
+      ],
+      "future_raw_mae": [
+        3.8734306493969815,
+        0.3782112572001182,
+        0.2804911050373785
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 22.655500637949444,
+    "elapsed_seconds": 574.1083951879991,
+    "lr": 0.00290760780387213,
+    "peak_memory_bytes": 25446400
+  },
+  {
+    "epoch": 27,
+    "optimizer_steps": 2133,
+    "training_loss": 1.0819914325883118,
+    "training_components": {
+      "mse": 0.77077585911449,
+      "kl": 0.27562180576445183,
+      "weighted_kl": 0.27562180576445183,
+      "ode_l2": 1.7796880263316481,
+      "weighted_ode_l2": 0.03559375978723357,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0819914325883118
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2372947336035208,
+        "per_field_mse": [
+          0.09712454628317146,
+          0.06515601541081736,
+          0.07501417190953198
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7644336633276296,
+        "per_field_mse": [
+          0.19893161050189914,
+          0.2853384168848897,
+          0.2801636359408408
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5239944152832031,
+        "per_field_mse": [
+          0.15249524850556345,
+          0.1849085526899858,
+          0.18659061408765387
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        5.021576371755455,
+        0.4891212338843843,
+        0.3711032287765892
+      ],
+      "future_raw_mae": [
+        3.9111620530871383,
+        0.380442788348632,
+        0.2912739430830849
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.874327830038965,
+    "elapsed_seconds": 595.9911752269836,
+    "lr": 0.00290411165201106,
+    "peak_memory_bytes": 25592832
+  },
+  {
+    "epoch": 28,
+    "optimizer_steps": 2212,
+    "training_loss": 1.0698646699325949,
+    "training_components": {
+      "mse": 0.7532453514352629,
+      "kl": 0.2813823128802867,
+      "weighted_kl": 0.2813823128802867,
+      "ode_l2": 1.7618502167206775,
+      "weighted_ode_l2": 0.03523700377797779,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0698646699325949
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.22296893264016288,
+        "per_field_mse": [
+          0.09273646342256998,
+          0.059595401636184986,
+          0.07063706758140789
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6655791435471244,
+        "per_field_mse": [
+          0.16738639952266618,
+          0.2529594339770731,
+          0.24523331004738516
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4636952403675426,
+        "per_field_mse": [
+          0.13333698157108193,
+          0.1647619961825284,
+          0.1655962626139323
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.606257971116978,
+        0.4605341433278046,
+        0.34719909179090963
+      ],
+      "future_raw_mae": [
+        3.582263312891566,
+        0.3594602417682092,
+        0.269788227182831
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 22.050065955030732,
+    "elapsed_seconds": 618.0504150169436,
+    "lr": 0.0029006197039761795,
+    "peak_memory_bytes": 25592832
+  },
+  {
+    "epoch": 29,
+    "optimizer_steps": 2291,
+    "training_loss": 1.0833599854119216,
+    "training_components": {
+      "mse": 0.7651206858550446,
+      "kl": 0.28378974353965325,
+      "weighted_kl": 0.28378974353965325,
+      "ode_l2": 1.7224778842322435,
+      "weighted_ode_l2": 0.034449557054646404,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0833599854119216
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.23478767081774396,
+        "per_field_mse": [
+          0.10042349303177371,
+          0.0595789842709499,
+          0.07478519351502033
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6194658621610978,
+        "per_field_mse": [
+          0.15831956721000426,
+          0.2368219935445018,
+          0.2243243014065917
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4440059805205374,
+        "per_field_mse": [
+          0.13191194060354522,
+          0.155977700435754,
+          0.15611633948123815
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.479767449984521,
+        0.44560228542520525,
+        0.3320679892352856
+      ],
+      "future_raw_mae": [
+        3.4680781174961286,
+        0.34187286064631206,
+        0.26002218602418703
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.81512317096349,
+    "elapsed_seconds": 639.8748154559871,
+    "lr": 0.002897131954712745,
+    "peak_memory_bytes": 25241600
+  },
+  {
+    "epoch": 30,
+    "optimizer_steps": 2370,
+    "training_loss": 1.0784755756583395,
+    "training_components": {
+      "mse": 0.7603890873208831,
+      "kl": 0.2836394977720478,
+      "weighted_kl": 0.2836394977720478,
+      "ode_l2": 1.7223495410967478,
+      "weighted_ode_l2": 0.03444698995238618,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0784755756583395
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.22892212975446513,
+        "per_field_mse": [
+          0.09515649804149003,
+          0.06124998944698418,
+          0.07251564226599092
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6488730360676829,
+        "per_field_mse": [
+          0.1648171987888514,
+          0.24585426573714037,
+          0.2382015715416912
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.457324516989968,
+        "per_field_mse": [
+          0.13304347645152698,
+          0.16165233773896187,
+          0.16262870279947916
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.570770725422899,
+        0.45402029577491543,
+        0.342185152638121
+      ],
+      "future_raw_mae": [
+        3.5663238968646014,
+        0.3563048341330883,
+        0.26350838884491434
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.729758403962478,
+    "elapsed_seconds": 661.617636877927,
+    "lr": 0.0028936483991720886,
+    "peak_memory_bytes": 25446400
+  },
+  {
+    "epoch": 31,
+    "optimizer_steps": 2449,
+    "training_loss": 1.0683646783044067,
+    "training_components": {
+      "mse": 0.7515951274316522,
+      "kl": 0.28230454423759554,
+      "weighted_kl": 0.28230454423759554,
+      "ode_l2": 1.7232504343684716,
+      "weighted_ode_l2": 0.03446500795551493,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0683646783044067
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.22278757548984807,
+        "per_field_mse": [
+          0.09482557533460825,
+          0.05701440780238208,
+          0.07094759235285775
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6075324064271339,
+        "per_field_mse": [
+          0.15271081280437324,
+          0.232708319061871,
+          0.22211327456088967
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.43204212674227627,
+        "per_field_mse": [
+          0.12630812720096474,
+          0.15257060010505444,
+          0.1531633994362571
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.399700027413021,
+        0.4417152037357499,
+        0.3304274416603908
+      ],
+      "future_raw_mae": [
+        3.4104838490594314,
+        0.3416129296200264,
+        0.2566778988780007
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.918087186990306,
+    "elapsed_seconds": 683.5454560169019,
+    "lr": 0.0028901690323116145,
+    "peak_memory_bytes": 25569792
+  },
+  {
+    "epoch": 32,
+    "optimizer_steps": 2528,
+    "training_loss": 1.0663796927355513,
+    "training_components": {
+      "mse": 0.7432411192338678,
+      "kl": 0.2889095740982249,
+      "weighted_kl": 0.2889095740982249,
+      "ode_l2": 1.7114499912986272,
+      "weighted_ode_l2": 0.03422899897905845,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0663796927355513
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2452817952857827,
+        "per_field_mse": [
+          0.09880975241234034,
+          0.06949623487048284,
+          0.07697580800295953
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.768059565810018,
+        "per_field_mse": [
+          0.19948371970523351,
+          0.28361176264851934,
+          0.28496408345626517
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5296095308246035,
+        "per_field_mse": [
+          0.15356418678977274,
+          0.18594912627249052,
+          0.1900962177623402
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        5.0285399144951555,
+        0.48763909072287276,
+        0.37426904857428667
+      ],
+      "future_raw_mae": [
+        3.9536210201875575,
+        0.3870285146923556,
+        0.2870016999978369
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.835217825020663,
+    "elapsed_seconds": 705.394464173005,
+    "lr": 0.00288669384909479,
+    "peak_memory_bytes": 25418240
+  },
+  {
+    "epoch": 33,
+    "optimizer_steps": 2607,
+    "training_loss": 1.0620103025738197,
+    "training_components": {
+      "mse": 0.7477642569360854,
+      "kl": 0.2805235959306548,
+      "weighted_kl": 0.2805235959306548,
+      "ode_l2": 1.686122304276575,
+      "weighted_ode_l2": 0.033722445321611214,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0620103025738197
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.24839712031939992,
+        "per_field_mse": [
+          0.10273406570844121,
+          0.06704967249399672,
+          0.07861338211696198
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6759539035213055,
+        "per_field_mse": [
+          0.17437589410314694,
+          0.2538971209116919,
+          0.2476808885064666
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4809361868193655,
+        "per_field_mse": [
+          0.1416985381155303,
+          0.16867203868519176,
+          0.17056561001864345
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.701445397340258,
+        0.4613869231430318,
+        0.3489274197251382
+      ],
+      "future_raw_mae": [
+        3.681131113628871,
+        0.36127505156015016,
+        0.26910932762574497
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.89358034392353,
+    "elapsed_seconds": 727.2978697019862,
+    "lr": 0.002883222844491139,
+    "peak_memory_bytes": 25665536
+  },
+  {
+    "epoch": 34,
+    "optimizer_steps": 2686,
+    "training_loss": 1.0696947401082968,
+    "training_components": {
+      "mse": 0.761358617981778,
+      "kl": 0.27506370616110065,
+      "weighted_kl": 0.27506370616110065,
+      "ode_l2": 1.6636205262775663,
+      "weighted_ode_l2": 0.0332724098823493,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0696947401082968
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.23076766620061195,
+        "per_field_mse": [
+          0.09645764839766414,
+          0.06113870074829458,
+          0.07317131705465324
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6802775687142685,
+        "per_field_mse": [
+          0.1751342464827046,
+          0.25464475396642816,
+          0.2504985682651357
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.47524657000917375,
+        "per_field_mse": [
+          0.13924818281693893,
+          0.16638253830418442,
+          0.16961584888805042
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.7116574864096235,
+        0.46206573066668716,
+        0.35090654968898494
+      ],
+      "future_raw_mae": [
+        3.680446349318241,
+        0.36085759455193256,
+        0.272782973485775
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.930810958030634,
+    "elapsed_seconds": 749.2384974620072,
+    "lr": 0.0028797560134762325,
+    "peak_memory_bytes": 25429504
+  },
+  {
+    "epoch": 35,
+    "optimizer_steps": 2765,
+    "training_loss": 1.0659843185279942,
+    "training_components": {
+      "mse": 0.7478966245168372,
+      "kl": 0.2849440104976485,
+      "weighted_kl": 0.2849440104976485,
+      "ode_l2": 1.6571839595142799,
+      "weighted_ode_l2": 0.0331436783263955,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0659843185279942
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.241295560065844,
+        "per_field_mse": [
+          0.10259509232333769,
+          0.062053834001276044,
+          0.07664663374123028
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6354451397359571,
+        "per_field_mse": [
+          0.16502396099174743,
+          0.23731060720961902,
+          0.2331105715345906
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.45566516159520004,
+        "per_field_mse": [
+          0.13654883274887547,
+          0.15737227884928384,
+          0.16174404999704073
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.573636829272982,
+        0.446061734258393,
+        0.3385087000472007
+      ],
+      "future_raw_mae": [
+        3.5670497432051618,
+        0.34551071174394193,
+        0.2632907956987199
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 22.019936535973102,
+    "elapsed_seconds": 771.2683415699285,
+    "lr": 0.002876293351031685,
+    "peak_memory_bytes": 25404928
+  },
+  {
+    "epoch": 36,
+    "optimizer_steps": 2844,
+    "training_loss": 1.0699270533609995,
+    "training_components": {
+      "mse": 0.7483865286730513,
+      "kl": 0.2884172476545165,
+      "weighted_kl": 0.2884172476545165,
+      "ode_l2": 1.6561635642112056,
+      "weighted_ode_l2": 0.03312327080889593,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0699270533609995
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.23660515002864743,
+        "per_field_mse": [
+          0.09730402763745838,
+          0.0648103793060846,
+          0.07449074308510445
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6954035524113661,
+        "per_field_mse": [
+          0.17809466835329732,
+          0.26583055496640906,
+          0.25147832909165974
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.48613587304317596,
+        "per_field_mse": [
+          0.14124434315074574,
+          0.17414099537242542,
+          0.17075053452000474
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.751312898627331,
+        0.47210526332988995,
+        0.3515921204162318
+      ],
+      "future_raw_mae": [
+        3.7173130298802657,
+        0.36997631196812075,
+        0.2726685965619459
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.90968530497048,
+    "elapsed_seconds": 793.1880750790006,
+    "lr": 0.0028728348521451425,
+    "peak_memory_bytes": 25637376
+  },
+  {
+    "epoch": 37,
+    "optimizer_steps": 2923,
+    "training_loss": 1.0743649700019933,
+    "training_components": {
+      "mse": 0.7562047435513025,
+      "kl": 0.2853257956006859,
+      "weighted_kl": 0.2853257956006859,
+      "ode_l2": 1.6417212199561204,
+      "weighted_ode_l2": 0.03283442363520212,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0743649700019933
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.238673138675492,
+        "per_field_mse": [
+          0.09651375019642193,
+          0.067598288153639,
+          0.07456110032543109
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.764481691785982,
+        "per_field_mse": [
+          0.1983517816185234,
+          0.28357416573361455,
+          0.282555744433844
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5246492568507339,
+        "per_field_mse": [
+          0.15190129551743017,
+          0.1850629864316998,
+          0.18768497490160393
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        5.014252800173161,
+        0.48760676778099526,
+        0.3726841483271479
+      ],
+      "future_raw_mae": [
+        3.9458159513762694,
+        0.3884291985378652,
+        0.28518573036523215
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.967023993027397,
+    "elapsed_seconds": 815.1652269809274,
+    "lr": 0.0028693805118102807,
+    "peak_memory_bytes": 25660416
+  },
+  {
+    "epoch": 38,
+    "optimizer_steps": 3002,
+    "training_loss": 1.0687105708484408,
+    "training_components": {
+      "mse": 0.7557646662374086,
+      "kl": 0.2800926809446721,
+      "weighted_kl": 0.2800926809446721,
+      "ode_l2": 1.6426609467856492,
+      "weighted_ode_l2": 0.032853218432091456,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0687105708484408
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.23975646860131297,
+        "per_field_mse": [
+          0.10001474512786014,
+          0.06448454962047909,
+          0.07525717385297376
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6811139383267155,
+        "per_field_mse": [
+          0.17604935086860088,
+          0.25418673269409153,
+          0.25087785476402313
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.47980143922747986,
+        "per_field_mse": [
+          0.14136835271661932,
+          0.1676595449736624,
+          0.17077354153719815
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.723951029529218,
+        0.46164999230584863,
+        0.3511721076427994
+      ],
+      "future_raw_mae": [
+        3.7007063275917518,
+        0.3641168956609786,
+        0.27057769421901995
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 22.210856433026493,
+    "elapsed_seconds": 837.3862067098962,
+    "lr": 0.0028659303250267937,
+    "peak_memory_bytes": 25444352
+  },
+  {
+    "epoch": 39,
+    "optimizer_steps": 3081,
+    "training_loss": 1.0735044049311289,
+    "training_components": {
+      "mse": 0.7656002678448641,
+      "kl": 0.2753637465117853,
+      "weighted_kl": 0.2753637465117853,
+      "ode_l2": 1.6270198097711877,
+      "weighted_ode_l2": 0.032540395478659036,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0735044049311289
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.23333024205662234,
+        "per_field_mse": [
+          0.09606848389044931,
+          0.06416780505761992,
+          0.07309395310855311
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7395872686125533,
+        "per_field_mse": [
+          0.1891954952075908,
+          0.28040720780442546,
+          0.26998456560053696
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5086726994369969,
+        "per_field_mse": [
+          0.14671829038677794,
+          0.18177583128033262,
+          0.18017857776988636
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.897151825873717,
+        0.484876325370915,
+        0.3642992851572971
+      ],
+      "future_raw_mae": [
+        3.8368619762720155,
+        0.38001303544863757,
+        0.285570325133511
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.933416764019057,
+    "elapsed_seconds": 859.3297839929583,
+    "lr": 0.002862484286800388,
+    "peak_memory_bytes": 25446400
+  },
+  {
+    "epoch": 40,
+    "optimizer_steps": 3160,
+    "training_loss": 1.0671865653388108,
+    "training_components": {
+      "mse": 0.7523295487029643,
+      "kl": 0.2824262752185894,
+      "weighted_kl": 0.2824262752185894,
+      "ode_l2": 1.6215370984017095,
+      "weighted_ode_l2": 0.03243074127579037,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0671865653388108
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.24394164084121012,
+        "per_field_mse": [
+          0.10033354352453812,
+          0.0660345385184226,
+          0.0775735587982494
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7342734046733697,
+        "per_field_mse": [
+          0.1908358116311434,
+          0.2727901814960015,
+          0.2706474115462247
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5106226866751007,
+        "per_field_mse": [
+          0.14955580740263968,
+          0.17848454793294272,
+          0.18258233133951823
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.918335053456587,
+        0.4782453550671319,
+        0.36474621121191775
+      ],
+      "future_raw_mae": [
+        3.8739534498146813,
+        0.3766763593559088,
+        0.28662044676408094
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.907313692965545,
+    "elapsed_seconds": 881.2474083309062,
+    "lr": 0.002859042392142775,
+    "peak_memory_bytes": 25637376
+  },
+  {
+    "epoch": 41,
+    "optimizer_steps": 3239,
+    "training_loss": 1.0699789463719236,
+    "training_components": {
+      "mse": 0.7601198410686059,
+      "kl": 0.2773595144854316,
+      "weighted_kl": 0.2773595144854316,
+      "ode_l2": 1.624979654444924,
+      "weighted_ode_l2": 0.03249959223255326,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0699789463719236
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.23610455211159906,
+        "per_field_mse": [
+          0.09759629853000484,
+          0.06386566770352362,
+          0.0746425858780706
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7061398461318267,
+        "per_field_mse": [
+          0.18045712261229707,
+          0.26676852840715193,
+          0.2589141951123776
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4917467776211826,
+        "per_field_mse": [
+          0.1426625421697443,
+          0.1742202305649266,
+          0.1748640048865116
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.782722541055823,
+        0.4729374330280268,
+        0.35675229956869875
+      ],
+      "future_raw_mae": [
+        3.746670954865055,
+        0.37072480521027823,
+        0.27908678074738646
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.82029760198202,
+    "elapsed_seconds": 903.0780020949896,
+    "lr": 0.002855604636071665,
+    "peak_memory_bytes": 25597952
+  },
+  {
+    "epoch": 42,
+    "optimizer_steps": 3318,
+    "training_loss": 1.0581621059888526,
+    "training_components": {
+      "mse": 0.7377074572104442,
+      "kl": 0.28808124080488956,
+      "weighted_kl": 0.28808124080488956,
+      "ode_l2": 1.6186703171911119,
+      "weighted_ode_l2": 0.03237340556858461,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0581621059888526
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.23097299838870755,
+        "per_field_mse": [
+          0.09707401193521963,
+          0.061495227950575375,
+          0.07240375850291256
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6498947041534703,
+        "per_field_mse": [
+          0.16782718409348468,
+          0.24143598338450836,
+          0.2406315366754772
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.45881563036369555,
+        "per_field_mse": [
+          0.13555516283439867,
+          0.1593611884839607,
+          0.1638992790453362
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.612318895260082,
+        0.44992216829061044,
+        0.3439260902463942
+      ],
+      "future_raw_mae": [
+        3.6219974081102206,
+        0.35585326546410656,
+        0.2632660900399787
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.726033323910087,
+    "elapsed_seconds": 924.8144346039044,
+    "lr": 0.002852171013610758,
+    "peak_memory_bytes": 25265664
+  },
+  {
+    "epoch": 43,
+    "optimizer_steps": 3397,
+    "training_loss": 1.0581709953803051,
+    "training_components": {
+      "mse": 0.7474778898154633,
+      "kl": 0.2782852472383765,
+      "weighted_kl": 0.2782852472383765,
+      "ode_l2": 1.6203932837594914,
+      "weighted_ode_l2": 0.032407865022556694,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0581709953803051
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.23528863950957968,
+        "per_field_mse": [
+          0.10135547334831697,
+          0.06025710449299849,
+          0.07367606166826421
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6541435313113209,
+        "per_field_mse": [
+          0.16992136575024244,
+          0.24334895841948354,
+          0.24087320714159483
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4630949258515329,
+        "per_field_mse": [
+          0.13864700918486625,
+          0.1598368779962713,
+          0.16461103867039537
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.641006406089702,
+        0.4517010906031088,
+        0.3440987524029257
+      ],
+      "future_raw_mae": [
+        3.648916197643228,
+        0.3527413360088925,
+        0.2716551012731215
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.69899132102728,
+    "elapsed_seconds": 946.524092412903,
+    "lr": 0.0028487415197897396,
+    "peak_memory_bytes": 25665536
+  },
+  {
+    "epoch": 44,
+    "optimizer_steps": 3476,
+    "training_loss": 1.0611224581923666,
+    "training_components": {
+      "mse": 0.7440904077095322,
+      "kl": 0.28481243833710873,
+      "weighted_kl": 0.28481243833710873,
+      "ode_l2": 1.6109810720516156,
+      "weighted_ode_l2": 0.03221962068088447,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0611224581923666
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.23615960241029343,
+        "per_field_mse": [
+          0.09791372888683164,
+          0.06446079950588611,
+          0.07378507401757566
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7136036873076312,
+        "per_field_mse": [
+          0.1840420270885368,
+          0.2687971694500802,
+          0.26076449076901415
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4958313131621389,
+        "per_field_mse": [
+          0.144757085164388,
+          0.1755950127803918,
+          0.17547921521735912
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.82999495223454,
+        0.4747322534625076,
+        0.35802477151867773
+      ],
+      "future_raw_mae": [
+        3.7831016988075197,
+        0.37229806436850976,
+        0.2788955681996423
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.772544323001057,
+    "elapsed_seconds": 968.3073841839796,
+    "lr": 0.002845316149644269,
+    "peak_memory_bytes": 25637376
+  },
+  {
+    "epoch": 45,
+    "optimizer_steps": 3555,
+    "training_loss": 1.0723563636405558,
+    "training_components": {
+      "mse": 0.7543223990669733,
+      "kl": 0.28604046717474735,
+      "weighted_kl": 0.28604046717474735,
+      "ode_l2": 1.5996752585036844,
+      "weighted_ode_l2": 0.031993504472171204,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0723563636405558
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2467029808747968,
+        "per_field_mse": [
+          0.1027362305466051,
+          0.06659567055156058,
+          0.07737107977663112
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.687324548580611,
+        "per_field_mse": [
+          0.17937927382120397,
+          0.2535345367846522,
+          0.2544107379747548
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4863477024887547,
+        "per_field_mse": [
+          0.14442075602213542,
+          0.1682677510579427,
+          0.1736591954086766
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.768417834387441,
+        0.46105735787843255,
+        0.3536360811867103
+      ],
+      "future_raw_mae": [
+        3.7470025304938575,
+        0.36564317587163503,
+        0.27013430131812033
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.703033960075118,
+    "elapsed_seconds": 990.0212979519274,
+    "lr": 0.0028418948982159766,
+    "peak_memory_bytes": 25269760
+  },
+  {
+    "epoch": 46,
+    "optimizer_steps": 3634,
+    "training_loss": 1.0741745776767972,
+    "training_components": {
+      "mse": 0.7656987792328943,
+      "kl": 0.2767580485419382,
+      "weighted_kl": 0.2767580485419382,
+      "ode_l2": 1.5858871167219137,
+      "weighted_ode_l2": 0.031717741744050496,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0741745776767972
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.23934436497015427,
+        "per_field_mse": [
+          0.10079673221698632,
+          0.06305512208555912,
+          0.0754925106676088
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6545564367958717,
+        "per_field_mse": [
+          0.17071148035173989,
+          0.24202371456587476,
+          0.24182124187825702
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.465169404925722,
+        "per_field_mse": [
+          0.1388218809185606,
+          0.16039234323212595,
+          0.16595518077503552
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.651783962216121,
+        0.4504694615128154,
+        0.344775243616513
+      ],
+      "future_raw_mae": [
+        3.6387613841251527,
+        0.3526644109793375,
+        0.26507454867070646
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.681197548052296,
+    "elapsed_seconds": 1011.7133766269544,
+    "lr": 0.002838477760552454,
+    "peak_memory_bytes": 25665536
+  },
+  {
+    "epoch": 47,
+    "optimizer_steps": 3713,
+    "training_loss": 1.046934130825574,
+    "training_components": {
+      "mse": 0.7295309855968137,
+      "kl": 0.2857360592748545,
+      "weighted_kl": 0.2857360592748545,
+      "ode_l2": 1.5833541683003873,
+      "weighted_ode_l2": 0.031667082653015474,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.046934130825574
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2285892933630861,
+        "per_field_mse": [
+          0.0969784660856362,
+          0.05958401165267048,
+          0.07202681562477942
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6124087487346801,
+        "per_field_mse": [
+          0.15772031669710218,
+          0.22728561510188505,
+          0.22740281693569292
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4373405549020478,
+        "per_field_mse": [
+          0.13001466832016453,
+          0.15079335715553976,
+          0.15653252942634352
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.471281297370233,
+        0.4365383155653748,
+        0.33433879318544124
+      ],
+      "future_raw_mae": [
+        3.4999719006522834,
+        0.34325724105013233,
+        0.25605952186655256
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.436387607012875,
+    "elapsed_seconds": 1033.1604341049679,
+    "lr": 0.002835064731707248,
+    "peak_memory_bytes": 25246720
+  },
+  {
+    "epoch": 48,
+    "optimizer_steps": 3792,
+    "training_loss": 1.0615505312062516,
+    "training_components": {
+      "mse": 0.7425663018528419,
+      "kl": 0.2874975244078455,
+      "weighted_kl": 0.2874975244078455,
+      "ode_l2": 1.5743354936189289,
+      "weighted_ode_l2": 0.031486709165988086,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0615505312062516
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2566458420521586,
+        "per_field_mse": [
+          0.10476191741432435,
+          0.07192352481449724,
+          0.07996039982333704
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7512448342520754,
+        "per_field_mse": [
+          0.19975862020582247,
+          0.2736690250037108,
+          0.27781718904254216
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5256477416067412,
+        "per_field_mse": [
+          0.15642861013701467,
+          0.18164861783114347,
+          0.1875705136385831
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        5.032003536062918,
+        0.47901511306698696,
+        0.36954591578883184
+      ],
+      "future_raw_mae": [
+        3.972699928387642,
+        0.38300774640431434,
+        0.28159643887982555
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.797001276980154,
+    "elapsed_seconds": 1054.9684114269912,
+    "lr": 0.002831655806739853,
+    "peak_memory_bytes": 25467904
+  },
+  {
+    "epoch": 49,
+    "optimizer_steps": 3871,
+    "training_loss": 1.0643034645273715,
+    "training_components": {
+      "mse": 0.7505495389805564,
+      "kl": 0.28249965513808817,
+      "weighted_kl": 0.28249965513808817,
+      "ode_l2": 1.5627132518382012,
+      "weighted_ode_l2": 0.03125426451428027,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0643034645273715
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2532802268035102,
+        "per_field_mse": [
+          0.10330114128929865,
+          0.07220244173226824,
+          0.0777766437819433
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7416943864033858,
+        "per_field_mse": [
+          0.19644109608204083,
+          0.2719063500612011,
+          0.2733469402601439
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5189183271003491,
+        "per_field_mse": [
+          0.15395798608028527,
+          0.18081716271602746,
+          0.18414317830403645
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.990043679897054,
+        0.47746997670505786,
+        0.366560748701549
+      ],
+      "future_raw_mae": [
+        3.9521524237634607,
+        0.38201394253115195,
+        0.280704577593463
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 22.11560509505216,
+    "elapsed_seconds": 1077.0952079789713,
+    "lr": 0.0028282509807157036,
+    "peak_memory_bytes": 25451520
+  },
+  {
+    "epoch": 50,
+    "optimizer_steps": 3950,
+    "training_loss": 1.0643523591983168,
+    "training_components": {
+      "mse": 0.7485624174528485,
+      "kl": 0.2847934702906427,
+      "weighted_kl": 0.2847934702906427,
+      "ode_l2": 1.549822855599319,
+      "weighted_ode_l2": 0.030996456482931027,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0643523591983168
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.25502936155150424,
+        "per_field_mse": [
+          0.10511695340754915,
+          0.06991375617261203,
+          0.0799986519713431
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6682361375788737,
+        "per_field_mse": [
+          0.17366624478909123,
+          0.2499437784867003,
+          0.24462611430308218
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.479763764814897,
+        "per_field_mse": [
+          0.14239945845170454,
+          0.16782826834013967,
+          0.16953603802305278
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.691869019488224,
+        0.4577807841529915,
+        0.34676899428797625
+      ],
+      "future_raw_mae": [
+        3.7021969869419884,
+        0.36100005174139055,
+        0.2690956694163164
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 22.362063186010346,
+    "elapsed_seconds": 1099.4685695589287,
+    "lr": 0.0028248502487061684,
+    "peak_memory_bytes": 25637376
+  },
+  {
+    "epoch": 51,
+    "optimizer_steps": 4029,
+    "training_loss": 1.0549325445030309,
+    "training_components": {
+      "mse": 0.7339621035358573,
+      "kl": 0.29018267932571945,
+      "weighted_kl": 0.29018267932571945,
+      "ode_l2": 1.5393881254558321,
+      "weighted_ode_l2": 0.030787761782920812,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0549325445030309
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.23317412787728128,
+        "per_field_mse": [
+          0.09777372858481873,
+          0.062493661854642835,
+          0.07290673743781972
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6869382380057689,
+        "per_field_mse": [
+          0.17728537399465427,
+          0.2542356045176517,
+          0.2554172594934629
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.47996679733738756,
+        "per_field_mse": [
+          0.14101842660614938,
+          0.16677803455699575,
+          0.17217033617424243
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.740505194367457,
+        0.4616943702959327,
+        0.3543349333080128
+      ],
+      "future_raw_mae": [
+        3.7182625301610295,
+        0.364742154407926,
+        0.2725824384977994
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.764161981991492,
+    "elapsed_seconds": 1121.244067839929,
+    "lr": 0.002821453605788542,
+    "peak_memory_bytes": 25451520
+  },
+  {
+    "epoch": 52,
+    "optimizer_steps": 4108,
+    "training_loss": 1.0594916849196712,
+    "training_components": {
+      "mse": 0.7490379848057711,
+      "kl": 0.2797169285484507,
+      "weighted_kl": 0.2797169285484507,
+      "ode_l2": 1.5368385435659675,
+      "weighted_ode_l2": 0.03073677026867112,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0594916849196712
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2147391144658478,
+        "per_field_mse": [
+          0.09146833711249569,
+          0.05615608799245299,
+          0.06711468936089915
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6262165135042902,
+        "per_field_mse": [
+          0.15779035171634614,
+          0.23923831648090144,
+          0.22918784530704261
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4385329469622988,
+        "per_field_mse": [
+          0.12753947217536696,
+          0.15573062966086648,
+          0.15526284512606534
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.472273913677282,
+        0.44786978274726985,
+        0.3356484463382832
+      ],
+      "future_raw_mae": [
+        3.482402881485131,
+        0.34966209128379205,
+        0.2588909746612664
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.900318878004327,
+    "elapsed_seconds": 1143.1559736899799,
+    "lr": 0.0028180610470460374,
+    "peak_memory_bytes": 25451520
+  },
+  {
+    "epoch": 53,
+    "optimizer_steps": 4187,
+    "training_loss": 1.0479158283788947,
+    "training_components": {
+      "mse": 0.7351382706738725,
+      "kl": 0.28214650535130803,
+      "weighted_kl": 0.28214650535130803,
+      "ode_l2": 1.5315525335601614,
+      "weighted_ode_l2": 0.030631050019513203,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0479158283788947
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.22168847103559872,
+        "per_field_mse": [
+          0.0941718393204664,
+          0.05828429218812284,
+          0.0692323395270095
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6335448568372597,
+        "per_field_mse": [
+          0.15957660305226384,
+          0.24188412572164855,
+          0.23208412806334727
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4456884210759943,
+        "per_field_mse": [
+          0.12974410224683358,
+          0.1581403457179214,
+          0.15780397311123934
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.497516660357117,
+        0.4503395370942266,
+        0.33776260909265976
+      ],
+      "future_raw_mae": [
+        3.5119981671824596,
+        0.35298806111507053,
+        0.26141491150570956
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.718294691992924,
+    "elapsed_seconds": 1164.8858158859657,
+    "lr": 0.002814672567567781,
+    "peak_memory_bytes": 25468928
+  },
+  {
+    "epoch": 54,
+    "optimizer_steps": 4266,
+    "training_loss": 1.05860899294479,
+    "training_components": {
+      "mse": 0.7438779677016826,
+      "kl": 0.28423712412013286,
+      "weighted_kl": 0.28423712412013286,
+      "ode_l2": 1.5246950433224062,
+      "weighted_ode_l2": 0.030493900179862976,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.05860899294479
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.23643254384758816,
+        "per_field_mse": [
+          0.10053868056800877,
+          0.061263480783300836,
+          0.07463038249627853
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6206141612777897,
+        "per_field_mse": [
+          0.15898120889478784,
+          0.23460984830471623,
+          0.22702310407828563
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4453807793819543,
+        "per_field_mse": [
+          0.13232433573404948,
+          0.15554289106889205,
+          0.15751355257901278
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.489118506951212,
+        0.44351622553910947,
+        0.3340595403153203
+      ],
+      "future_raw_mae": [
+        3.5103704783959495,
+        0.34548837050949405,
+        0.25810610387422234
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.835939682088792,
+    "elapsed_seconds": 1186.7334738019854,
+    "lr": 0.002811288162448803,
+    "peak_memory_bytes": 25444352
+  },
+  {
+    "epoch": 55,
+    "optimizer_steps": 4345,
+    "training_loss": 1.0544148253489145,
+    "training_components": {
+      "mse": 0.7297643076015424,
+      "kl": 0.29424376615995096,
+      "weighted_kl": 0.29424376615995096,
+      "ode_l2": 1.5203375544729112,
+      "weighted_ode_l2": 0.030406750432109532,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0544148253489145
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.24713824589202418,
+        "per_field_mse": [
+          0.10264109069921537,
+          0.06705853053936134,
+          0.07743862465344747
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7350864958757809,
+        "per_field_mse": [
+          0.1936550731246605,
+          0.271096330085416,
+          0.2703350926657044
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5125229501435251,
+        "per_field_mse": [
+          0.15214166444720645,
+          0.1780303622159091,
+          0.18235092348040957
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.954531707693962,
+        0.4767582450880895,
+        0.3645356974462219
+      ],
+      "future_raw_mae": [
+        3.9134830250581443,
+        0.3778772339869604,
+        0.28379868120073803
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.793761917040683,
+    "elapsed_seconds": 1208.539000627934,
+    "lr": 0.002807907826790032,
+    "peak_memory_bytes": 25614336
+  },
+  {
+    "epoch": 56,
+    "optimizer_steps": 4424,
+    "training_loss": 1.0517666883106473,
+    "training_components": {
+      "mse": 0.7358604677115814,
+      "kl": 0.2855819969237605,
+      "weighted_kl": 0.2855819969237605,
+      "ode_l2": 1.516211358806755,
+      "weighted_ode_l2": 0.030324226433906375,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0517666883106473
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.24624165340588822,
+        "per_field_mse": [
+          0.10088655906188625,
+          0.06912177514434335,
+          0.07623331919965863
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.8080261558633035,
+        "per_field_mse": [
+          0.21632803790893962,
+          0.2907293127139427,
+          0.30096880524042113
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.55178432672674,
+        "per_field_mse": [
+          0.16367273087935014,
+          0.18964941498727508,
+          0.19846218086011483
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        5.2365418469592795,
+        0.4937200952290532,
+        0.3846357015027978
+      ],
+      "future_raw_mae": [
+        4.116040443146355,
+        0.39415708500172675,
+        0.2915811890163848
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.847526498953812,
+    "elapsed_seconds": 1230.3984361039475,
+    "lr": 0.002804531555698287,
+    "peak_memory_bytes": 25225216
+  },
+  {
+    "epoch": 57,
+    "optimizer_steps": 4503,
+    "training_loss": 1.0644677635989612,
+    "training_components": {
+      "mse": 0.7536425681053838,
+      "kl": 0.28071121531951276,
+      "weighted_kl": 0.28071121531951276,
+      "ode_l2": 1.5056988287575637,
+      "weighted_ode_l2": 0.030113975882907457,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0644677635989612
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.22502353766038638,
+        "per_field_mse": [
+          0.0960778488049696,
+          0.05856933043796966,
+          0.07037635841744712
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6467796102089794,
+        "per_field_mse": [
+          0.16639108574945677,
+          0.2425788852189202,
+          0.23780963924060242
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.45440771484375,
+        "per_field_mse": [
+          0.1343197248054273,
+          0.15864822295217804,
+          0.16143976708614466
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.59254267613946,
+        0.4509858244917305,
+        0.3419035242975816
+      ],
+      "future_raw_mae": [
+        3.589257078614107,
+        0.3530455260178362,
+        0.26296343975975967
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 22.055151922046207,
+    "elapsed_seconds": 1252.4654909999808,
+    "lr": 0.002801159344286271,
+    "peak_memory_bytes": 25298944
+  },
+  {
+    "epoch": 58,
+    "optimizer_steps": 4582,
+    "training_loss": 1.0625119005577475,
+    "training_components": {
+      "mse": 0.7532164892063865,
+      "kl": 0.2792660750543015,
+      "weighted_kl": 0.2792660750543015,
+      "ode_l2": 1.5014667933500265,
+      "weighted_ode_l2": 0.030029335071014452,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0625119005577475
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2588736589620825,
+        "per_field_mse": [
+          0.10519659775798067,
+          0.07224360609700824,
+          0.08143345510709359
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7583362310693076,
+        "per_field_mse": [
+          0.2028240287173743,
+          0.27604306490723635,
+          0.279469137444697
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5305207607384884,
+        "per_field_mse": [
+          0.15829408402876421,
+          0.1830858135801373,
+          0.1891408631295869
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        5.070466004683656,
+        0.4810883205995915,
+        0.3706429789050746
+      ],
+      "future_raw_mae": [
+        4.008888276867395,
+        0.3829531493752622,
+        0.28473974279794334
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.899507550988346,
+    "elapsed_seconds": 1274.3772995999316,
+    "lr": 0.0027977911876725632,
+    "peak_memory_bytes": 25665536
+  },
+  {
+    "epoch": 59,
+    "optimizer_steps": 4661,
+    "training_loss": 1.0467546687850469,
+    "training_components": {
+      "mse": 0.7344317986995359,
+      "kl": 0.2821851553796213,
+      "weighted_kl": 0.2821851553796213,
+      "ode_l2": 1.5068859329706505,
+      "weighted_ode_l2": 0.03013771803035766,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0467546687850469
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2194939332536773,
+        "per_field_mse": [
+          0.09494125250644771,
+          0.05510395016088595,
+          0.06944873058634364
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6206667810605421,
+        "per_field_mse": [
+          0.15852846928208184,
+          0.2335257643922177,
+          0.22861254738624254
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4376833320386482,
+        "per_field_mse": [
+          0.12952498696067116,
+          0.15214379235469933,
+          0.1560145527232777
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.482721993809343,
+        0.4424903403830147,
+        0.33522691616956796
+      ],
+      "future_raw_mae": [
+        3.494564502392112,
+        0.34300603664282847,
+        0.26095700146722456
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.732565960963257,
+    "elapsed_seconds": 1296.122150260955,
+    "lr": 0.0027944270809816124,
+    "peak_memory_bytes": 25418240
+  },
+  {
+    "epoch": 60,
+    "optimizer_steps": 4740,
+    "training_loss": 1.0574871505363077,
+    "training_components": {
+      "mse": 0.7413263932059083,
+      "kl": 0.28586325502093834,
+      "weighted_kl": 0.28586325502093834,
+      "ode_l2": 1.5148750468145442,
+      "weighted_ode_l2": 0.030297500305349313,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0574871505363077
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.24039009635574538,
+        "per_field_mse": [
+          0.1008304897027544,
+          0.06385551384716252,
+          0.07570409280582846
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7119134053212645,
+        "per_field_mse": [
+          0.18651904809015324,
+          0.2640408540797547,
+          0.2613535031513565
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.49684161839340674,
+        "per_field_mse": [
+          0.1474346766616359,
+          0.1727320723100142,
+          0.17667486942175664
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.862389758769198,
+        0.4705133580438804,
+        0.35842889493531466
+      ],
+      "future_raw_mae": [
+        3.831012850472408,
+        0.36809149927829177,
+        0.2836220269189921
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.6140720610274,
+    "elapsed_seconds": 1317.7484695349121,
+    "lr": 0.0027910670193437297,
+    "peak_memory_bytes": 25632256
+  },
+  {
+    "epoch": 61,
+    "optimizer_steps": 4819,
+    "training_loss": 1.0550873106039023,
+    "training_components": {
+      "mse": 0.7374771343001837,
+      "kl": 0.2874883013435557,
+      "weighted_kl": 0.2874883013435557,
+      "ode_l2": 1.506093763097932,
+      "weighted_ode_l2": 0.030121874606496173,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0550873106039023
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2429336342062685,
+        "per_field_mse": [
+          0.10101114851408996,
+          0.06473367910514384,
+          0.07718880658703474
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7563844200016954,
+        "per_field_mse": [
+          0.19935759579867013,
+          0.28099679915018166,
+          0.27603002505284363
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5221886222145774,
+        "per_field_mse": [
+          0.1544996943618312,
+          0.18235460131096118,
+          0.18533432654178503
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        5.026950011876834,
+        0.4853858143586574,
+        0.36835537621735326
+      ],
+      "future_raw_mae": [
+        3.97079096361522,
+        0.37998175040281745,
+        0.2924740308279506
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.696208270965144,
+    "elapsed_seconds": 1339.4569897470064,
+    "lr": 0.0027877109978950826,
+    "peak_memory_bytes": 25660416
+  },
+  {
+    "epoch": 62,
+    "optimizer_steps": 4898,
+    "training_loss": 1.061077464230453,
+    "training_components": {
+      "mse": 0.7569015169445472,
+      "kl": 0.27401632957066163,
+      "weighted_kl": 0.27401632957066163,
+      "ode_l2": 1.5079806182957902,
+      "weighted_ode_l2": 0.030159611867952952,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.061077464230453
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.23494278291676418,
+        "per_field_mse": [
+          0.09859403853019817,
+          0.06330803965685883,
+          0.0730407047297072
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6548737818609772,
+        "per_field_mse": [
+          0.16922328890313118,
+          0.24578843734193703,
+          0.23986205561590906
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.463334345962062,
+        "per_field_mse": [
+          0.13700778660629734,
+          0.16255525993578362,
+          0.16377129941998106
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.631463423072654,
+        0.45395950889319026,
+        0.34337575398914366
+      ],
+      "future_raw_mae": [
+        3.6384292629055524,
+        0.35685199236478377,
+        0.26639909278085355
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.693265067064203,
+    "elapsed_seconds": 1361.1626536129043,
+    "lr": 0.0027843590117776844,
+    "peak_memory_bytes": 25376768
+  },
+  {
+    "epoch": 63,
+    "optimizer_steps": 4977,
+    "training_loss": 1.0425568720962428,
+    "training_components": {
+      "mse": 0.7291604559632796,
+      "kl": 0.28335289732564856,
+      "weighted_kl": 0.28335289732564856,
+      "ode_l2": 1.50217541561851,
+      "weighted_ode_l2": 0.03004350760786594,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0425568720962428
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2537021054063362,
+        "per_field_mse": [
+          0.10576826253217363,
+          0.06722695124836764,
+          0.0807068916257949
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7329787404600432,
+        "per_field_mse": [
+          0.1941974236913638,
+          0.27226412734662286,
+          0.2665171894220565
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5143704981948389,
+        "per_field_mse": [
+          0.15386300566702177,
+          0.17874232251716382,
+          0.1817651700106534
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.961464689869861,
+        0.47778400349174177,
+        0.36195240178576615
+      ],
+      "future_raw_mae": [
+        3.9099353161067225,
+        0.3728469788225445,
+        0.2867625805980288
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.73312310804613,
+    "elapsed_seconds": 1382.908299778006,
+    "lr": 0.0027810110561393934,
+    "peak_memory_bytes": 25530368
+  },
+  {
+    "epoch": 64,
+    "optimizer_steps": 5056,
+    "training_loss": 1.057243573514721,
+    "training_components": {
+      "mse": 0.74353035567682,
+      "kl": 0.28358576908896244,
+      "weighted_kl": 0.28358576908896244,
+      "ode_l2": 1.506372557410711,
+      "weighted_ode_l2": 0.03012745051727265,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.057243573514721
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.24934566866803481,
+        "per_field_mse": [
+          0.10341191450205693,
+          0.06837389806848304,
+          0.07755985609749483
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7007766657319823,
+        "per_field_mse": [
+          0.18603110350610313,
+          0.2558145788748333,
+          0.2589309833510458
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4948694115841028,
+        "per_field_mse": [
+          0.14834674257220645,
+          0.1703189031427557,
+          0.17620376586914063
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.8560254477108185,
+        0.46312586761408514,
+        0.35676386545766847
+      ],
+      "future_raw_mae": [
+        3.851740916935501,
+        0.3702516247307546,
+        0.2729943318030168
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.51332668098621,
+    "elapsed_seconds": 1404.4342320678988,
+    "lr": 0.0027776671261338986,
+    "peak_memory_bytes": 25293824
+  },
+  {
+    "epoch": 65,
+    "optimizer_steps": 5135,
+    "training_loss": 1.0643468333196036,
+    "training_components": {
+      "mse": 0.750356895259664,
+      "kl": 0.28425348634961284,
+      "weighted_kl": 0.28425348634961284,
+      "ode_l2": 1.4868226700191256,
+      "weighted_ode_l2": 0.02973645265343823,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0643468333196036
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.22511786753086532,
+        "per_field_mse": [
+          0.09545340323872684,
+          0.05877342890654033,
+          0.07089103538559816
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6705094769560523,
+        "per_field_mse": [
+          0.17358966603798778,
+          0.25147444893157056,
+          0.24544536198649397
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.46735691509824806,
+        "per_field_mse": [
+          0.1379500575210109,
+          0.16357942338423295,
+          0.16582743419300428
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.69083445722369,
+        0.4591803828818072,
+        0.3473491699591484
+      ],
+      "future_raw_mae": [
+        3.673495235395647,
+        0.3598217806882835,
+        0.2696658695587296
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.734074270934798,
+    "elapsed_seconds": 1426.1809671549127,
+    "lr": 0.002774327216920719,
+    "peak_memory_bytes": 25497088
+  },
+  {
+    "epoch": 66,
+    "optimizer_steps": 5214,
+    "training_loss": 1.0521932070768332,
+    "training_components": {
+      "mse": 0.73615619577939,
+      "kl": 0.2864053328580494,
+      "weighted_kl": 0.2864053328580494,
+      "ode_l2": 1.4815840434424485,
+      "weighted_ode_l2": 0.029631680207727832,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0521932070768332
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2432828896102074,
+        "per_field_mse": [
+          0.10095074339620046,
+          0.06615371182026332,
+          0.07617843439374361
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7369231144782029,
+        "per_field_mse": [
+          0.19421395688006998,
+          0.27113596229901793,
+          0.271573195299115
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5117633431174539,
+        "per_field_mse": [
+          0.15167462528113163,
+          0.17763921564275567,
+          0.18244950219356654
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.961675884963468,
+        0.4767930930221702,
+        0.3653695089578408
+      ],
+      "future_raw_mae": [
+        3.936320795420337,
+        0.378276777683011,
+        0.2870965886107091
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.635724814026617,
+    "elapsed_seconds": 1447.829486665898,
+    "lr": 0.002770991323665192,
+    "peak_memory_bytes": 25304064
+  },
+  {
+    "epoch": 67,
+    "optimizer_steps": 5293,
+    "training_loss": 1.0424381517156769,
+    "training_components": {
+      "mse": 0.7261872774438013,
+      "kl": 0.28647390705875203,
+      "weighted_kl": 0.28647390705875203,
+      "ode_l2": 1.488848094698749,
+      "weighted_ode_l2": 0.029776961247943625,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0424381517156769
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.26265079215458026,
+        "per_field_mse": [
+          0.10627720326208986,
+          0.07538919045891561,
+          0.0809843984335748
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7641557013773297,
+        "per_field_mse": [
+          0.20318349060779534,
+          0.27799835358108105,
+          0.28297385718845325
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5354086784593987,
+        "per_field_mse": [
+          0.15898247967344342,
+          0.18558401997884114,
+          0.1908421788071141
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        5.074957169914027,
+        0.48278915425116004,
+        0.37295978666802987
+      ],
+      "future_raw_mae": [
+        4.035656933213202,
+        0.38836970806305754,
+        0.2874603861115893
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.87412781501189,
+    "elapsed_seconds": 1469.7164264569292,
+    "lr": 0.002767659441538469,
+    "peak_memory_bytes": 25434624
+  },
+  {
+    "epoch": 68,
+    "optimizer_steps": 5372,
+    "training_loss": 1.0405601836458038,
+    "training_components": {
+      "mse": 0.7310625307167633,
+      "kl": 0.2798298967035511,
+      "weighted_kl": 0.2798298967035511,
+      "ode_l2": 1.483388117597073,
+      "weighted_ode_l2": 0.029667761719113665,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0405601836458038
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.24420392155298803,
+        "per_field_mse": [
+          0.1044214468131571,
+          0.0641507714662088,
+          0.07563170327362215
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.6361653464181083,
+        "per_field_mse": [
+          0.17007182057301823,
+          0.23226982016379566,
+          0.23382370568129435
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.4573834293249881,
+        "per_field_mse": [
+          0.14012729251745976,
+          0.155587158203125,
+          0.1616689786044034
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.643060613030568,
+        0.4412988392464788,
+        0.3390260892164445
+      ],
+      "future_raw_mae": [
+        3.6857126022817317,
+        0.350967107719853,
+        0.2608123981403177
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.68643118510954,
+    "elapsed_seconds": 1491.4157609549584,
+    "lr": 0.002764331565717508,
+    "peak_memory_bytes": 25446400
+  },
+  {
+    "epoch": 69,
+    "optimizer_steps": 5451,
+    "training_loss": 1.0576098727274545,
+    "training_components": {
+      "mse": 0.7272234159179881,
+      "kl": 0.3010492224859286,
+      "weighted_kl": 0.3010492224859286,
+      "ode_l2": 1.466862215271479,
+      "weighted_ode_l2": 0.029337243660341336,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0576098727274545
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2516593697411311,
+        "per_field_mse": [
+          0.10581274334179921,
+          0.06641604347239141,
+          0.07943058292694051
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7171459210750546,
+        "per_field_mse": [
+          0.1906502036971825,
+          0.26435035295786136,
+          0.2621453644200107
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5048276371811375,
+        "per_field_mse": [
+          0.151954038215406,
+          0.17406831960967092,
+          0.1788052793560606
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.915942672077827,
+        0.4707890364201987,
+        0.35897147671396656
+      ],
+      "future_raw_mae": [
+        3.895382763173572,
+        0.36980179515783046,
+        0.28417023170546024
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.661104211001657,
+    "elapsed_seconds": 1513.0897997049615,
+    "lr": 0.002761007691385066,
+    "peak_memory_bytes": 25269760
+  },
+  {
+    "epoch": 70,
+    "optimizer_steps": 5530,
+    "training_loss": 1.0588328219667267,
+    "training_components": {
+      "mse": 0.7427996713903886,
+      "kl": 0.28691683822794806,
+      "weighted_kl": 0.28691683822794806,
+      "ode_l2": 1.4558156623116023,
+      "weighted_ode_l2": 0.02911631253701222,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.0588328219667267
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2745844110858399,
+        "per_field_mse": [
+          0.11293928920351505,
+          0.07556838087030715,
+          0.08607674101201772
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.825342120533402,
+        "per_field_mse": [
+          0.22318140084742968,
+          0.30136715247313856,
+          0.3007935672128336
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.5741298513701467,
+        "per_field_mse": [
+          0.1728976375695431,
+          0.19837554469253077,
+          0.20285666910807293
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        5.318843016064043,
+        0.5026716017183612,
+        0.38452370880685116
+      ],
+      "future_raw_mae": [
+        4.219324820538927,
+        0.3942028324139558,
+        0.30843318897992883
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.60395906807389,
+    "elapsed_seconds": 1534.7068605149398,
+    "lr": 0.002757687813729693,
+    "peak_memory_bytes": 25462784
+  },
+  {
+    "epoch": 71,
+    "optimizer_steps": 5609,
+    "training_loss": 1.053490080410921,
+    "training_components": {
+      "mse": 0.7363245045836968,
+      "kl": 0.28803703867936437,
+      "weighted_kl": 0.28803703867936437,
+      "ode_l2": 1.4564271410809289,
+      "weighted_ode_l2": 0.029128542075617405,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 1.053490080410921
+    },
+    "validation": {
+      "patients": 2000,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 0.2437284453384679,
+        "per_field_mse": [
+          0.10036958040089927,
+          0.06616887430418625,
+          0.0771899906333824
+        ],
+        "observations_per_field": [
+          15052,
+          15052,
+          15052
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 0.7447993701673814,
+        "per_field_mse": [
+          0.19236765785633866,
+          0.2790980295479258,
+          0.27333368276311687
+        ],
+        "observations_per_field": [
+          17948,
+          17948,
+          17948
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 0.516250298239968,
+        "per_field_mse": [
+          0.1504053839481238,
+          0.1819765255089962,
+          0.183868388782848
+        ],
+        "observations_per_field": [
+          33000,
+          33000,
+          33000
+        ]
+      },
+      "future_raw_rmse": [
+        4.938035428632387,
+        0.48374309449621833,
+        0.366551859381337
+      ],
+      "future_raw_mae": [
+        3.915207915152656,
+        0.38166297519767656,
+        0.2897849955936264
+      ],
+      "carry_forward_future_raw_rmse": [
+        12.23632771878684,
+        0.911317575212416,
+        0.798893799916976
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 21.674989438033663,
+    "elapsed_seconds": 1556.3950185049325,
+    "lr": 0.0027543719279457222,
+    "peak_memory_bytes": 25632256
+  }
+]

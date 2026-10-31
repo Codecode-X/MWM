@@ -19,6 +19,9 @@ MIMIC-IV 3.1 的首次 ICU 前48小时序列整理、字段定义和 latent2x bo
 MIMIC上的HealthFlux-KL、ODE-AE、ODE-RNN、Latent ODE单卡实验见
 [横向比较](mimic_experiment/results/baselines_single_cuda/summary.md)与[实验方案](mimic_experiment/BASELINE_COMPARISON.zh-CN.md)。
 
+latent2x both（GPU 3）与ODE-AE（GPU 1）在CausalMed γ=1上的反事实训练和测试见
+[方法说明](CausalMed/latent2x_experiment/README.zh-CN.md)和[模型横向比较](CausalMed/outputs/gamma1_model_comparison/summary.md)。
+
 本地用药、干预记录能否支持动作预测与反事实研究，见
 [ADNI 治疗相关研究方案](reproduction/ADNI_TREATMENT_PLAN.zh-CN.md)。文档包含原始表覆盖与日期审计、任务定义、因果分析条件和分阶段实施路线。
 

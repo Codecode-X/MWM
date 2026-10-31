@@ -1,0 +1,120 @@
+action_update:
+  desc: ''
+  sort: 24
+  value: residual difference between new/old treatment-conditioned shared UPDATE outputs
+atol:
+  desc: ''
+  sort: 19
+  value: 1.0e-06
+batch_size:
+  desc: ''
+  sort: 14
+  value: 128
+input_dropout:
+  desc: ''
+  sort: 13
+  value: 0.1
+jacobian_weight:
+  desc: ''
+  sort: 7
+  value: 0.01
+l2_weight:
+  desc: ''
+  sort: 8
+  value: 0.02
+latent:
+  desc: ''
+  sort: 3
+  value: 28
+lr:
+  desc: ''
+  sort: 10
+  value: 0.003
+lr_decay:
+  desc: ''
+  sort: 11
+  value: 0.97
+lr_decay_steps:
+  desc: ''
+  sort: 12
+  value: 2000
+max_epochs:
+  desc: ''
+  sort: 15
+  value: 1
+min_epochs:
+  desc: ''
+  sort: 16
+  value: 0
+mlp_width:
+  desc: ''
+  sort: 4
+  value: 159
+model:
+  desc: ''
+  sort: 0
+  value: latent2x_both_action_update
+model_parameters:
+  desc: ''
+  sort: 28
+  value: 31314
+normalization:
+  desc: ''
+  sort: 9
+  value: train_zscore
+ode_width:
+  desc: ''
+  sort: 5
+  value: 188
+parameter_device:
+  desc: ''
+  sort: 27
+  value: cuda:0
+patience:
+  desc: ''
+  sort: 17
+  value: 1
+physical_gpu:
+  desc: ''
+  sort: 23
+  value: '3'
+prior_weight:
+  desc: ''
+  sort: 6
+  value: 0.01
+rollout_patient_batch:
+  desc: ''
+  sort: 20
+  value: 32
+rtol:
+  desc: ''
+  sort: 18
+  value: 0.0001
+seed:
+  desc: ''
+  sort: 2
+  value: 0
+selection:
+  desc: ''
+  sort: 21
+  value: validation factual overall standardized MSE
+tracking_family:
+  desc: ''
+  sort: 25
+  value: causalmed_latent2x_both
+training_cutoff_years:
+  desc: ''
+  sort: 22
+  value:
+  - 1
+  - 2
+  - 3
+  - 4
+training_seed:
+  desc: ''
+  sort: 26
+  value: 0
+variant:
+  desc: ''
+  sort: 1
+  value: gamma_1

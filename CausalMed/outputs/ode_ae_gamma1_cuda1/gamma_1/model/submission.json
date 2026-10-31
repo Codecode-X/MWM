@@ -1,0 +1,50 @@
+{
+  "status": "predictions_sealed",
+  "best_epoch": 31,
+  "epochs_run": 71,
+  "physical_gpu": 1,
+  "device": "cuda:0",
+  "checkpoint_sha256": "643c1e7e944cfd5eff20f931df3eb371b175b656aaa16b1763982fa4111120d9",
+  "with_actions": {
+    "patients": 2000,
+    "policies": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "prediction_rows": 582715,
+    "treatment_intervals": 15244,
+    "physical_gpu": "1",
+    "device": "cuda:0",
+    "action_updates_disabled": false,
+    "sha256": {
+      "predictions.parquet": "8f1cecce806630fda1d2bf1d96c427c9695579b31db1accb91fe632a72089144",
+      "predicted_treatments.parquet": "219834fe095bcf9466c783d19761a7e945e1639caf88272fd263d5ca6c57d01c"
+    },
+    "future_policy_risk_source": "observed public X2 at fork; own predicted X2 at later decisions"
+  },
+  "action_off": {
+    "patients": 2000,
+    "policies": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "prediction_rows": 582715,
+    "treatment_intervals": 15226,
+    "physical_gpu": "1",
+    "device": "cuda:0",
+    "action_updates_disabled": true,
+    "sha256": {
+      "predictions.parquet": "fe5e8d367a3f1b3571aa8741f25a17f72241fc3b222d44e35c31792ddb02fe68",
+      "predicted_treatments.parquet": "816d925b8aa12d8a5dda4a7a1b718ae041651dcc12b4c0c7b4af07f810034c52"
+    },
+    "future_policy_risk_source": "observed public X2 at fork; own predicted X2 at later decisions"
+  },
+  "action_off_max_policy_outcome_difference": 0.0,
+  "checkpoint_reload_difference": 0.0
+}

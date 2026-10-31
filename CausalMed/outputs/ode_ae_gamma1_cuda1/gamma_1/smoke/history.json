@@ -1,0 +1,82 @@
+[
+  {
+    "epoch": 1,
+    "optimizer_steps": 1,
+    "training_loss": 3.571573495864868,
+    "training_components": {
+      "mse": 3.074153423309326,
+      "kl": 0.2461671382188797,
+      "weighted_kl": 0.2461671382188797,
+      "ode_l2": 12.562643051147461,
+      "weighted_ode_l2": 0.2512528598308563,
+      "prior_mse": 0.0,
+      "weighted_prior": 0.0,
+      "jacobian": 0.0,
+      "weighted_jacobian": 0.0,
+      "loss": 3.571573495864868
+    },
+    "validation": {
+      "patients": 16,
+      "evaluation": "recorded factual treatment path; no future observation updates",
+      "interpolation": {
+        "reconstruction_error": 2.510765560089596,
+        "per_field_mse": [
+          0.9137682233537946,
+          1.0411301870194694,
+          0.5558671497163319
+        ],
+        "observations_per_field": [
+          126,
+          126,
+          126
+        ]
+      },
+      "forecast": {
+        "reconstruction_error": 2.2555829437685686,
+        "per_field_mse": [
+          0.6927545574349416,
+          0.6481265215806558,
+          0.914701864752971
+        ],
+        "observations_per_field": [
+          142,
+          142,
+          142
+        ]
+      },
+      "overall": {
+        "reconstruction_error": 2.375556831929221,
+        "per_field_mse": [
+          0.7966639959990088,
+          0.8328969016003964,
+          0.7459959343298158
+        ],
+        "observations_per_field": [
+          268,
+          268,
+          268
+        ]
+      },
+      "future_raw_rmse": [
+        9.37082588719444,
+        0.7371676867099901,
+        0.6705460872269924
+      ],
+      "future_raw_mae": [
+        7.198159442871951,
+        0.5745770078047365,
+        0.5022825601478146
+      ],
+      "carry_forward_future_raw_rmse": [
+        10.822835687487943,
+        0.8626855141713974,
+        0.7212160654713156
+      ],
+      "prior_error": null
+    },
+    "epoch_seconds": 0.7955078239319846,
+    "elapsed_seconds": 0.7974029979668558,
+    "lr": 0.0029999543115366823,
+    "peak_memory_bytes": 20185088
+  }
+]
