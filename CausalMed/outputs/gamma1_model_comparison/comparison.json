@@ -895,6 +895,922 @@
           }
         }
       }
+    },
+    {
+      "name": "deterministic_22545\uff08\u540c\u9884\u7b97\uff09",
+      "folder": "/home/xjh/projects/LatentODE/CausalMed/outputs/deterministic_matched_gamma1_cuda1",
+      "gpu": 1,
+      "status": "complete",
+      "phase": "scored",
+      "epochs": 185,
+      "best_epoch": 145,
+      "validation": {
+        "patients": 2000,
+        "evaluation": "recorded factual treatment path; no future observation updates",
+        "interpolation": {
+          "reconstruction_error": 0.024650104147875336,
+          "per_field_mse": [
+            0.00924668070042732,
+            0.012998890724709273,
+            0.002404532722738744
+          ],
+          "observations_per_field": [
+            15052,
+            15052,
+            15052
+          ]
+        },
+        "forecast": {
+          "reconstruction_error": 0.035041746807332186,
+          "per_field_mse": [
+            0.012303133198963605,
+            0.016017230390731916,
+            0.006721383217636663
+          ],
+          "observations_per_field": [
+            17948,
+            17948,
+            17948
+          ]
+        },
+        "overall": {
+          "reconstruction_error": 0.03030189794482607,
+          "per_field_mse": [
+            0.010909020163796164,
+            0.014640501600323302,
+            0.0047523761807066025
+          ],
+          "observations_per_field": [
+            33000,
+            33000,
+            33000
+          ]
+        },
+        "future_raw_rmse": [
+          1.248809045505013,
+          0.11588576833246438,
+          0.05748018788864468
+        ],
+        "future_raw_mae": [
+          0.9975309000629474,
+          0.09226602714985283,
+          0.044455835792481385
+        ],
+        "carry_forward_future_raw_rmse": [
+          12.23632771878684,
+          0.911317575212416,
+          0.798893799916976
+        ],
+        "prior_error": null
+      },
+      "hardware": {
+        "physical_gpu": 1,
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "parameter_device": "cuda:0",
+        "parameters": 31314,
+        "trainable_parameters": 31314,
+        "latent_dimension": 6,
+        "mlp_width": 411,
+        "ode_width": 317,
+        "environment": "ode",
+        "torch_version": "2.5.1+cu121",
+        "time_unit": "year",
+        "batch_size": 128,
+        "event_input_dimensions": {
+          "observations": 3,
+          "observation_mask": 3,
+          "action_one_hot": 2,
+          "event_type": 2
+        },
+        "prior_weight": 0.0,
+        "jacobian_weight": 0.0,
+        "kl_weight": 0.0,
+        "l2_weight": 0.02,
+        "jacobian_squared_entries": 0,
+        "normalization": "train_zscore",
+        "encoder_direction": "backward",
+        "shared_vector_field": false,
+        "parameter_breakdown": {
+          "init": 3294,
+          "update": 9482,
+          "backward_ode": 4127,
+          "forward_ode": 4127,
+          "decoder": 4113,
+          "generator_action": 6171
+        },
+        "source_family": "deterministic_22545",
+        "update_width": 412,
+        "parameter_matching_target": 31314,
+        "actual_tensor_devices": {
+          "times": "cuda:0",
+          "values": "cuda:0",
+          "mask": "cuda:0",
+          "context_mask": "cuda:0",
+          "valid": "cuda:0",
+          "actions": "cuda:0",
+          "cutoff": "cuda:0",
+          "c": "cuda:0"
+        },
+        "prediction_device": "cuda:0",
+        "jacobian_device": "cuda:0"
+      },
+      "with_actions": {
+        "gamma": 1.0,
+        "mode": "trajectory",
+        "n_patients": 2000,
+        "prediction_rows": 582715,
+        "treatment_cost": 3.0,
+        "cf_rmse_trajectory": 1.212182681008201,
+        "policy_regret_status": "available",
+        "horizons": {
+          "1.0": {
+            "cf_rmse": 0.7304484951392611,
+            "by_policy_rmse": {
+              "0": 0.76057651239499,
+              "1": 0.6680681388687343,
+              "2": 0.76057651239499,
+              "3": 0.6913868292455982,
+              "4": 0.7658269856934967
+            },
+            "effects_vs_never": {
+              "1": {
+                "sqrt_pehe": 0.3610425337625264,
+                "ate_error": 0.17392997827873335,
+                "true_ate": 1.9982405787433613,
+                "predicted_ate": 2.1721705570220946
+              },
+              "2": {
+                "sqrt_pehe": 0.0,
+                "ate_error": 0.0,
+                "true_ate": 0.0,
+                "predicted_ate": 0.0
+              },
+              "3": {
+                "sqrt_pehe": 0.37973375375656254,
+                "ate_error": 0.04180905816678704,
+                "true_ate": 0.9575909147488624,
+                "predicted_ate": 0.9993999729156494
+              },
+              "4": {
+                "sqrt_pehe": 0.22439629443700285,
+                "ate_error": 0.029492250328521548,
+                "true_ate": 0.05695036876724225,
+                "predicted_ate": 0.027458118438720702
+              }
+            },
+            "true_optimal_policy_counts": {
+              "0": 1918,
+              "1": 82,
+              "2": 0,
+              "3": 0,
+              "4": 0
+            },
+            "policy_regret": 0.009572868300031463,
+            "optimal_policy_accuracy": 0.9555,
+            "selected_policy_counts": {
+              "0": 1987,
+              "1": 11,
+              "2": 0,
+              "3": 2,
+              "4": 0
+            }
+          },
+          "2.0": {
+            "cf_rmse": 0.8025044614379412,
+            "by_policy_rmse": {
+              "0": 0.9342799324188977,
+              "1": 0.6909450730614074,
+              "2": 0.7486802616235654,
+              "3": 0.7498991626622411,
+              "4": 0.864240752755993
+            },
+            "effects_vs_never": {
+              "1": {
+                "sqrt_pehe": 0.6735458283274118,
+                "ate_error": 0.44330245210868124,
+                "true_ate": 5.724128780386269,
+                "predicted_ate": 5.280826328277588
+              },
+              "2": {
+                "sqrt_pehe": 0.6391116595456804,
+                "ate_error": 0.4942644640570446,
+                "true_ate": 1.7619969870215222,
+                "predicted_ate": 1.2677325229644776
+              },
+              "3": {
+                "sqrt_pehe": 0.8246954983386157,
+                "ate_error": 0.4603814781256581,
+                "true_ate": 3.6525331237860583,
+                "predicted_ate": 3.1921516456604
+              },
+              "4": {
+                "sqrt_pehe": 0.7106091967076132,
+                "ate_error": 0.3018744573276626,
+                "true_ate": 0.6226302919071304,
+                "predicted_ate": 0.32075583457946777
+              }
+            },
+            "true_optimal_policy_counts": {
+              "0": 1289,
+              "1": 699,
+              "2": 0,
+              "3": 12,
+              "4": 0
+            },
+            "policy_regret": 0.07524063416987108,
+            "optimal_policy_accuracy": 0.82,
+            "selected_policy_counts": {
+              "0": 1609,
+              "1": 372,
+              "2": 0,
+              "3": 19,
+              "4": 0
+            }
+          },
+          "3.0": {
+            "cf_rmse": 1.0788088991129379,
+            "by_policy_rmse": {
+              "0": 1.7354250371205893,
+              "1": 0.7157433008231888,
+              "2": 0.7767903138475232,
+              "3": 0.819474380478607,
+              "4": 1.0100560479200857
+            },
+            "effects_vs_never": {
+              "1": {
+                "sqrt_pehe": 1.7057694604517128,
+                "ate_error": 1.5280604324197675,
+                "true_ate": 9.927674755082121,
+                "predicted_ate": 8.399614322662353
+              },
+              "2": {
+                "sqrt_pehe": 1.6446492317198813,
+                "ate_error": 1.503826543004032,
+                "true_ate": 5.828429106862064,
+                "predicted_ate": 4.324602563858032
+              },
+              "3": {
+                "sqrt_pehe": 1.78388563870178,
+                "ate_error": 1.5212738026355161,
+                "true_ate": 7.517316983101215,
+                "predicted_ate": 5.996043180465699
+              },
+              "4": {
+                "sqrt_pehe": 1.6490519979880698,
+                "ate_error": 1.2205854231035915,
+                "true_ate": 2.5455079733050074,
+                "predicted_ate": 1.324922550201416
+              }
+            },
+            "true_optimal_policy_counts": {
+              "0": 451,
+              "1": 1035,
+              "2": 307,
+              "3": 190,
+              "4": 17
+            },
+            "policy_regret": 0.3495628036609368,
+            "optimal_policy_accuracy": 0.579,
+            "selected_policy_counts": {
+              "0": 1197,
+              "1": 647,
+              "2": 92,
+              "3": 64,
+              "4": 0
+            }
+          }
+        }
+      },
+      "action_off": {
+        "gamma": 1.0,
+        "mode": "trajectory",
+        "n_patients": 2000,
+        "prediction_rows": 582715,
+        "treatment_cost": 3.0,
+        "cf_rmse_trajectory": 5.417390684794413,
+        "policy_regret_status": "available",
+        "horizons": {
+          "1.0": {
+            "cf_rmse": 1.5111912512529997,
+            "by_policy_rmse": {
+              "0": 1.456267579803006,
+              "1": 1.635952716247002,
+              "2": 1.456267579803006,
+              "3": 1.5513152645472665,
+              "4": 1.4471157941001556
+            },
+            "effects_vs_never": {
+              "1": {
+                "sqrt_pehe": 2.052124876552962,
+                "ate_error": 1.9982405787433613,
+                "true_ate": 1.9982405787433613,
+                "predicted_ate": 0.0
+              },
+              "2": {
+                "sqrt_pehe": 0.0,
+                "ate_error": 0.0,
+                "true_ate": 0.0,
+                "predicted_ate": 0.0
+              },
+              "3": {
+                "sqrt_pehe": 1.3664776815617639,
+                "ate_error": 0.9575909147488624,
+                "true_ate": 0.9575909147488624,
+                "predicted_ate": 0.0
+              },
+              "4": {
+                "sqrt_pehe": 0.2747133247944481,
+                "ate_error": 0.05695036876724225,
+                "true_ate": 0.05695036876724225,
+                "predicted_ate": 0.0
+              }
+            },
+            "true_optimal_policy_counts": {
+              "0": 1918,
+              "1": 82,
+              "2": 0,
+              "3": 0,
+              "4": 0
+            },
+            "policy_regret": 0.007823245176203425,
+            "optimal_policy_accuracy": 0.959,
+            "selected_policy_counts": {
+              "0": 2000,
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0
+            }
+          },
+          "2.0": {
+            "cf_rmse": 3.612003413621639,
+            "by_policy_rmse": {
+              "0": 3.9937995814175093,
+              "1": 3.7792996271419437,
+              "2": 2.8515415036484746,
+              "3": 3.5415954508647194,
+              "4": 3.7848533983776007
+            },
+            "effects_vs_never": {
+              "1": {
+                "sqrt_pehe": 5.817699883791933,
+                "ate_error": 5.724128780386269,
+                "true_ate": 5.724128780386269,
+                "predicted_ate": 0.0
+              },
+              "2": {
+                "sqrt_pehe": 1.8721385996205602,
+                "ate_error": 1.7619969870215222,
+                "true_ate": 1.7619969870215222,
+                "predicted_ate": 0.0
+              },
+              "3": {
+                "sqrt_pehe": 4.272796908906807,
+                "ate_error": 3.6525331237860583,
+                "true_ate": 3.6525331237860583,
+                "predicted_ate": 0.0
+              },
+              "4": {
+                "sqrt_pehe": 1.3006254634927275,
+                "ate_error": 0.6226302919071304,
+                "true_ate": 0.6226302919071304,
+                "predicted_ate": 0.0
+              }
+            },
+            "true_optimal_policy_counts": {
+              "0": 1289,
+              "1": 699,
+              "2": 0,
+              "3": 12,
+              "4": 0
+            },
+            "policy_regret": 0.30220694530094006,
+            "optimal_policy_accuracy": 0.6445,
+            "selected_policy_counts": {
+              "0": 2000,
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0
+            }
+          },
+          "3.0": {
+            "cf_rmse": 5.803343000029583,
+            "by_policy_rmse": {
+              "0": 7.1514414529259565,
+              "1": 5.976232331972298,
+              "2": 3.991106635534731,
+              "3": 5.412173850813901,
+              "4": 6.026186536440766
+            },
+            "effects_vs_never": {
+              "1": {
+                "sqrt_pehe": 10.073400399231875,
+                "ate_error": 9.927674755082121,
+                "true_ate": 9.927674755082121,
+                "predicted_ate": 0.0
+              },
+              "2": {
+                "sqrt_pehe": 5.930477699575973,
+                "ate_error": 5.828429106862064,
+                "true_ate": 5.828429106862064,
+                "predicted_ate": 0.0
+              },
+              "3": {
+                "sqrt_pehe": 8.05081831481303,
+                "ate_error": 7.517316983101215,
+                "true_ate": 7.517316983101215,
+                "predicted_ate": 0.0
+              },
+              "4": {
+                "sqrt_pehe": 3.5138263018938254,
+                "ate_error": 2.5455079733050074,
+                "true_ate": 2.5455079733050074,
+                "predicted_ate": 0.0
+              }
+            },
+            "true_optimal_policy_counts": {
+              "0": 451,
+              "1": 1035,
+              "2": 307,
+              "3": 190,
+              "4": 17
+            },
+            "policy_regret": 1.3026448655932832,
+            "optimal_policy_accuracy": 0.2255,
+            "selected_policy_counts": {
+              "0": 2000,
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "HealthFlux-KL",
+      "folder": "/home/xjh/projects/LatentODE/CausalMed/outputs/healthflux_kl_gamma1_cuda3",
+      "gpu": 3,
+      "status": "complete",
+      "phase": "scored",
+      "epochs": 79,
+      "best_epoch": 39,
+      "validation": {
+        "patients": 2000,
+        "evaluation": "recorded factual treatment path; no future observation updates",
+        "interpolation": {
+          "reconstruction_error": 0.022758067113555495,
+          "per_field_mse": [
+            0.008388700176039307,
+            0.012797553362505504,
+            0.0015718135750106823
+          ],
+          "observations_per_field": [
+            15052,
+            15052,
+            15052
+          ]
+        },
+        "forecast": {
+          "reconstruction_error": 0.026619016818647423,
+          "per_field_mse": [
+            0.00967947347992535,
+            0.014099392296876305,
+            0.0028401510418457686
+          ],
+          "observations_per_field": [
+            17948,
+            17948,
+            17948
+          ]
+        },
+        "overall": {
+          "reconstruction_error": 0.024857955650849774,
+          "per_field_mse": [
+            0.009090724540479255,
+            0.013505595698501124,
+            0.002261635411869396
+          ],
+          "observations_per_field": [
+            33000,
+            33000,
+            33000
+          ]
+        },
+        "future_raw_rmse": [
+          1.1076793004351906,
+          0.10872679604733718,
+          0.03736453388150889
+        ],
+        "future_raw_mae": [
+          0.8844768268605347,
+          0.0867281124085605,
+          0.02861741873916294
+        ],
+        "carry_forward_future_raw_rmse": [
+          12.23632771878684,
+          0.911317575212416,
+          0.798893799916976
+        ],
+        "prior_error": null
+      },
+      "hardware": {
+        "physical_gpu": 3,
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "parameter_device": "cuda:0",
+        "parameters": 4361412,
+        "trainable_parameters": 4361412,
+        "latent_dimension": 256,
+        "mlp_width": 384,
+        "ode_width": 384,
+        "environment": "healthflux",
+        "torch_version": "2.5.1+cu121",
+        "time_unit": "year",
+        "batch_size": 128,
+        "event_input_dimensions": {
+          "observations": 3,
+          "observation_mask": 3,
+          "action_one_hot": 2,
+          "event_type": 2
+        },
+        "prior_weight": 0.0,
+        "jacobian_weight": 0.0,
+        "kl_weight": 0.01,
+        "l2_weight": 0.02,
+        "jacobian_squared_entries": 0,
+        "normalization": "train_zscore",
+        "encoder_direction": "forward",
+        "shared_vector_field": true,
+        "parameter_breakdown": {
+          "context_encoder": 197888,
+          "age_encoder": 178624,
+          "initial": 320512,
+          "dynamics": 418816,
+          "event_embedding": 512,
+          "encoders": 742656,
+          "attention": 257,
+          "prior": 418816,
+          "posterior": 517120,
+          "update": 640512,
+          "update_norm": 512,
+          "state_norm": 768,
+          "decoder": 923651,
+          "modality_embedding": 768
+        },
+        "stochastic_dimension": 128,
+        "health_representation_dimension": 384,
+        "packed_rollout_dimension": 513,
+        "time_condition": "elapsed years, encoded separately from static c",
+        "solver": "RK4, nominal step .25 year, max 4 substeps per interval",
+        "actual_tensor_devices": {
+          "times": "cuda:0",
+          "values": "cuda:0",
+          "mask": "cuda:0",
+          "context_mask": "cuda:0",
+          "valid": "cuda:0",
+          "actions": "cuda:0",
+          "cutoff": "cuda:0",
+          "c": "cuda:0"
+        },
+        "prediction_device": "cuda:0",
+        "jacobian_device": "cuda:0"
+      },
+      "with_actions": {
+        "gamma": 1.0,
+        "mode": "trajectory",
+        "n_patients": 2000,
+        "prediction_rows": 582715,
+        "treatment_cost": 3.0,
+        "cf_rmse_trajectory": 1.4083268449644433,
+        "policy_regret_status": "available",
+        "horizons": {
+          "1.0": {
+            "cf_rmse": 0.5023611196855268,
+            "by_policy_rmse": {
+              "0": 0.5083929333906643,
+              "1": 0.44560377346352475,
+              "2": 0.5083929333906643,
+              "3": 0.5121766891243843,
+              "4": 0.5329343670734734
+            },
+            "effects_vs_never": {
+              "1": {
+                "sqrt_pehe": 0.3514880069482233,
+                "ate_error": 0.051931336494826175,
+                "true_ate": 1.9982405787433613,
+                "predicted_ate": 1.946309242248535
+              },
+              "2": {
+                "sqrt_pehe": 0.0,
+                "ate_error": 0.0,
+                "true_ate": 0.0,
+                "predicted_ate": 0.0
+              },
+              "3": {
+                "sqrt_pehe": 0.3396667218336628,
+                "ate_error": 0.08481989576692883,
+                "true_ate": 0.9575909147488624,
+                "predicted_ate": 0.8727710189819335
+              },
+              "4": {
+                "sqrt_pehe": 0.2146800890298331,
+                "ate_error": 0.049327525978545964,
+                "true_ate": 0.05695036876724225,
+                "predicted_ate": 0.007622842788696289
+              }
+            },
+            "true_optimal_policy_counts": {
+              "0": 1918,
+              "1": 82,
+              "2": 0,
+              "3": 0,
+              "4": 0
+            },
+            "policy_regret": 0.01613258171629603,
+            "optimal_policy_accuracy": 0.944,
+            "selected_policy_counts": {
+              "0": 1871,
+              "1": 125,
+              "2": 0,
+              "3": 4,
+              "4": 0
+            }
+          },
+          "2.0": {
+            "cf_rmse": 0.6352593770020164,
+            "by_policy_rmse": {
+              "0": 0.7240128101786433,
+              "1": 0.5490874182784986,
+              "2": 0.5565613078476856,
+              "3": 0.6353802008033181,
+              "4": 0.6918181474668295
+            },
+            "effects_vs_never": {
+              "1": {
+                "sqrt_pehe": 0.665355804959325,
+                "ate_error": 0.021528575918495108,
+                "true_ate": 5.724128780386269,
+                "predicted_ate": 5.702600204467774
+              },
+              "2": {
+                "sqrt_pehe": 0.6875144150812278,
+                "ate_error": 0.35218436559383415,
+                "true_ate": 1.7619969870215222,
+                "predicted_ate": 2.1141813526153563
+              },
+              "3": {
+                "sqrt_pehe": 0.7597393798303532,
+                "ate_error": 0.04183524245539694,
+                "true_ate": 3.6525331237860583,
+                "predicted_ate": 3.6943683662414553
+              },
+              "4": {
+                "sqrt_pehe": 0.5322668268927474,
+                "ate_error": 0.08213192269021141,
+                "true_ate": 0.6226302919071304,
+                "predicted_ate": 0.540498369216919
+              }
+            },
+            "true_optimal_policy_counts": {
+              "0": 1289,
+              "1": 699,
+              "2": 0,
+              "3": 12,
+              "4": 0
+            },
+            "policy_regret": 0.15041420283923948,
+            "optimal_policy_accuracy": 0.6385,
+            "selected_policy_counts": {
+              "0": 821,
+              "1": 572,
+              "2": 483,
+              "3": 119,
+              "4": 5
+            }
+          },
+          "3.0": {
+            "cf_rmse": 0.9292650345703856,
+            "by_policy_rmse": {
+              "0": 1.5520948440368745,
+              "1": 0.5868377320128356,
+              "2": 0.5714170149395968,
+              "3": 0.7431526819754793,
+              "4": 0.8279476312459948
+            },
+            "effects_vs_never": {
+              "1": {
+                "sqrt_pehe": 1.867809434245412,
+                "ate_error": 1.3075870036935715,
+                "true_ate": 9.927674755082121,
+                "predicted_ate": 8.62008775138855
+              },
+              "2": {
+                "sqrt_pehe": 1.5340142400568244,
+                "ate_error": 0.9729773360795928,
+                "true_ate": 5.828429106862064,
+                "predicted_ate": 4.855451770782471
+              },
+              "3": {
+                "sqrt_pehe": 1.8433153533885964,
+                "ate_error": 1.2093668888781925,
+                "true_ate": 7.517316983101215,
+                "predicted_ate": 6.307950094223022
+              },
+              "4": {
+                "sqrt_pehe": 1.6305377588503682,
+                "ate_error": 0.8847012430346217,
+                "true_ate": 2.5455079733050074,
+                "predicted_ate": 1.6608067302703857
+              }
+            },
+            "true_optimal_policy_counts": {
+              "0": 451,
+              "1": 1035,
+              "2": 307,
+              "3": 190,
+              "4": 17
+            },
+            "policy_regret": 0.23369818657964708,
+            "optimal_policy_accuracy": 0.6525,
+            "selected_policy_counts": {
+              "0": 909,
+              "1": 667,
+              "2": 323,
+              "3": 99,
+              "4": 2
+            }
+          }
+        }
+      },
+      "action_off": {
+        "gamma": 1.0,
+        "mode": "trajectory",
+        "n_patients": 2000,
+        "prediction_rows": 582715,
+        "treatment_cost": 3.0,
+        "cf_rmse_trajectory": 5.242263995025638,
+        "policy_regret_status": "available",
+        "horizons": {
+          "1.0": {
+            "cf_rmse": 1.4145630613282194,
+            "by_policy_rmse": {
+              "0": 1.220523094600119,
+              "1": 1.7514943674075492,
+              "2": 1.220523094600119,
+              "3": 1.5647060370665125,
+              "4": 1.2286384830266626
+            },
+            "effects_vs_never": {
+              "1": {
+                "sqrt_pehe": 2.052124876552962,
+                "ate_error": 1.9982405787433613,
+                "true_ate": 1.9982405787433613,
+                "predicted_ate": 0.0
+              },
+              "2": {
+                "sqrt_pehe": 0.0,
+                "ate_error": 0.0,
+                "true_ate": 0.0,
+                "predicted_ate": 0.0
+              },
+              "3": {
+                "sqrt_pehe": 1.3664776815617639,
+                "ate_error": 0.9575909147488624,
+                "true_ate": 0.9575909147488624,
+                "predicted_ate": 0.0
+              },
+              "4": {
+                "sqrt_pehe": 0.2747133247944481,
+                "ate_error": 0.05695036876724225,
+                "true_ate": 0.05695036876724225,
+                "predicted_ate": 0.0
+              }
+            },
+            "true_optimal_policy_counts": {
+              "0": 1918,
+              "1": 82,
+              "2": 0,
+              "3": 0,
+              "4": 0
+            },
+            "policy_regret": 0.007823245176203425,
+            "optimal_policy_accuracy": 0.959,
+            "selected_policy_counts": {
+              "0": 2000,
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0
+            }
+          },
+          "2.0": {
+            "cf_rmse": 3.785466562466606,
+            "by_policy_rmse": {
+              "0": 3.758655199857631,
+              "1": 4.4851563833440355,
+              "2": 2.926035928869445,
+              "3": 3.943875423496029,
+              "4": 3.6453846395413896
+            },
+            "effects_vs_never": {
+              "1": {
+                "sqrt_pehe": 5.817699883791933,
+                "ate_error": 5.724128780386269,
+                "true_ate": 5.724128780386269,
+                "predicted_ate": 0.0
+              },
+              "2": {
+                "sqrt_pehe": 1.8721385996205602,
+                "ate_error": 1.7619969870215222,
+                "true_ate": 1.7619969870215222,
+                "predicted_ate": 0.0
+              },
+              "3": {
+                "sqrt_pehe": 4.272796908906807,
+                "ate_error": 3.6525331237860583,
+                "true_ate": 3.6525331237860583,
+                "predicted_ate": 0.0
+              },
+              "4": {
+                "sqrt_pehe": 1.3006254634927275,
+                "ate_error": 0.6226302919071304,
+                "true_ate": 0.6226302919071304,
+                "predicted_ate": 0.0
+              }
+            },
+            "true_optimal_policy_counts": {
+              "0": 1289,
+              "1": 699,
+              "2": 0,
+              "3": 12,
+              "4": 0
+            },
+            "policy_regret": 0.30220694530094006,
+            "optimal_policy_accuracy": 0.6445,
+            "selected_policy_counts": {
+              "0": 2000,
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0
+            }
+          },
+          "3.0": {
+            "cf_rmse": 5.874333593290128,
+            "by_policy_rmse": {
+              "0": 6.930785306986073,
+              "1": 6.400335942911702,
+              "2": 4.19578390832344,
+              "3": 5.624106320986616,
+              "4": 5.856937438415707
+            },
+            "effects_vs_never": {
+              "1": {
+                "sqrt_pehe": 10.073400399231875,
+                "ate_error": 9.927674755082121,
+                "true_ate": 9.927674755082121,
+                "predicted_ate": 0.0
+              },
+              "2": {
+                "sqrt_pehe": 5.930477699575973,
+                "ate_error": 5.828429106862064,
+                "true_ate": 5.828429106862064,
+                "predicted_ate": 0.0
+              },
+              "3": {
+                "sqrt_pehe": 8.05081831481303,
+                "ate_error": 7.517316983101215,
+                "true_ate": 7.517316983101215,
+                "predicted_ate": 0.0
+              },
+              "4": {
+                "sqrt_pehe": 3.5138263018938254,
+                "ate_error": 2.5455079733050074,
+                "true_ate": 2.5455079733050074,
+                "predicted_ate": 0.0
+              }
+            },
+            "true_optimal_policy_counts": {
+              "0": 451,
+              "1": 1035,
+              "2": 307,
+              "3": 190,
+              "4": 17
+            },
+            "policy_regret": 1.3026448655932832,
+            "optimal_policy_accuracy": 0.2255,
+            "selected_policy_counts": {
+              "0": 2000,
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0
+            }
+          }
+        }
+      }
     }
   ]
 }

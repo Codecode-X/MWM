@@ -11,9 +11,12 @@ class ControlledODEAE(nn.Module):
 
     def __init__(self,cfg):
         super().__init__();self.cfg=cfg;self.latent=6
-        self.init=mlp(1,12,16);self.update=mlp(12+10,12,16)
-        self.backward_ode=mlp(12,12,16);self.forward_ode=mlp(6,6,16)
-        self.decoder=mlp(6,3,16);self.generator_action=mlp(6+2,6,16)
+        self.stochastic=cfg.get('model')!='deterministic_matched_action_update'
+        self.kind='ode_ae' if self.stochastic else 'deterministic_ode_ae'
+        dim=12 if self.stochastic else 6;w=cfg.get('mlp_width',16);v=cfg.get('ode_width',16)
+        self.init=mlp(1,dim,w);self.update=mlp(dim+10,dim,cfg.get('update_width',w))
+        self.backward_ode=mlp(dim,dim,v);self.forward_ode=mlp(6,6,v)
+        self.decoder=mlp(6,3,w);self.generator_action=mlp(6+2,6,w)
         for field in [self.backward_ode,self.forward_ode]:
             nn.init.normal_(field[-1].weight,std=.01);nn.init.zeros_(field[-1].bias)
 
@@ -55,6 +58,7 @@ class ControlledODEAE(nn.Module):
             state=self.encoder_change(state,current,old,reversing);current=torch.where(reversing,old,current)
             observed=self.encoder_event(state,batch['values'][:,i],batch['context_mask'][:,i],current,True)
             state=torch.where(active[:,None],observed,state);previous=torch.where(active,time,previous)
+        if not self.stochastic:return state,torch.zeros_like(state),state.new_zeros(())
         mu,logvar=state.chunk(2,-1);logvar=logvar.clamp(-12.,8.);std=(.5*logvar).exp()
         kl=.5*(mu.square()+logvar.exp()-1-logvar).sum(-1).mean()
         return mu,std,kl
@@ -73,7 +77,7 @@ class ControlledODEAE(nn.Module):
 
     def forward(self,batch):
         mu,std,kl=self.posterior(batch)
-        state=mu+std*torch.randn_like(mu) if self.training else mu
+        state=mu+std*torch.randn_like(mu) if self.training and self.stochastic else mu
         current=torch.zeros(len(mu),device=mu.device,dtype=torch.long);previous=batch['times'][:,0]
         predictions=[];states=[];anchor=state.clone();held=current.clone()
         for i in range(batch['times'].shape[1]):

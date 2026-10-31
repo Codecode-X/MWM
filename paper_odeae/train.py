@@ -7,6 +7,7 @@ import os
 from pathlib import Path
 import pickle
 import random
+import sys
 import time
 
 import numpy as np
@@ -77,8 +78,12 @@ def main():
     cfg['smoke']=args.smoke
     if not torch.cuda.is_available() or os.environ.get('CUDA_VISIBLE_DEVICES') not in ['0','1','2','3']:
         raise RuntimeError('assign one physical CUDA GPU 0/1/2/3; CPU fallback is disabled')
+    if cfg.get('history_encoder_variant') and (Path(sys.prefix).name!='ode' or os.environ['CUDA_VISIBLE_DEVICES']!=str(cfg['physical_gpu'])):
+        raise RuntimeError('History encoder experiments require the ode environment and the assigned physical GPU')
     torch.set_num_threads(1);seed_all(cfg['seed'])
     path=Path(cfg['data']);payload=pickle.loads(path.read_bytes())
+    if cfg.get('dataset_sha256') and hashlib.sha256(path.read_bytes()).hexdigest()!=cfg['dataset_sha256']:
+        raise RuntimeError('Prepared dataset changed')
     schema=payload['schema']
     if cfg['scope'] != payload['metadata']['scope']:
         raise ValueError('configuration scope does not match prepared data')
@@ -110,7 +115,7 @@ def main():
                   'parameter_device':str(next(model.parameters()).device),'parameters':sum(p.numel() for p in model.parameters()),
                   'trainable_parameters':sum(p.numel() for p in model.parameters() if p.requires_grad),
                   'torch_version':torch.__version__,'dataset_sha256':hashlib.sha256(path.read_bytes()).hexdigest()}
-        if cfg.get('study') in ['forward_age_scaling','shared_matched_scaling','shared_matched_prior_single','shared_matched_jacobian_single','latent2x_loss_ablation']:
+        if cfg.get('study') in ['forward_age_scaling','shared_matched_scaling','shared_matched_prior_single','shared_matched_jacobian_single','latent2x_loss_ablation','latent2x_history_encoder_ablation']:
             import inspect
             hardware['model_source_sha256']=hashlib.sha256(Path(inspect.getfile(PaperModel)).read_bytes()).hexdigest()
             hardware['shared_vector_field']=getattr(model,'shared_vector_field',False)
@@ -121,11 +126,15 @@ def main():
                 hardware['parameter_breakdown'][name]=sum(p.numel() for p in unique)
                 seen.update(id(p) for p in unique)
             hardware['encoder_initialization']=model.encoder_initialization
-            hardware['generator_anchor']='history cutoff'
+            hardware['generator_anchor']=getattr(model,'generator_anchor','history cutoff')
             hardware['prior_weight']=cfg.get('prior_weight',0.)
             hardware['collect_prior_predictions']=model.collect_prior_predictions
             hardware['jacobian_weight']=cfg.get('jacobian_weight',0.)
             hardware['jacobian_definition']=f'mean_valid_states(sum_{model.latent**2}_entries(J_f(z)^2)); exact analytic; states detached'
+        if cfg.get('history_encoder_variant'):
+            hardware.update(environment=Path(sys.prefix).name,encoder_variant=model.variant,encoder_direction=model.encoder_direction,
+                            latent_dimension=model.latent,time_unit='year',prior_semantics=cfg['prior_semantics'],
+                            history_encoder_source_sha256=hashlib.sha256(Path(inspect.getfile(type(model))).read_bytes()).hexdigest())
         if cfg['model'] in ['latent_ode','ode_rnn']:
             hardware.update(network_source='src.model via paper_odeae.baselines',
                 time_unit='decade, relative to first observation',
@@ -134,8 +143,13 @@ def main():
         (output/'config.json').write_text(json.dumps(cfg,indent=2))
         (output/'data.json').write_text(json.dumps(payload['metadata'],indent=2))
         (output/'schema.json').write_text(json.dumps(schema,indent=2))
-        best=float('inf');bad=0;history=[];start=time.monotonic();steps=0
-        for epoch in range(1,cfg['max_epochs']+1):
+        best=float('inf');bad=0;history=[];start=time.monotonic();steps=0;first_epoch=1;elapsed_base=0.
+        if cfg.get('resume') and (output/'last.pt').exists():
+            last=torch.load(output/'last.pt',map_location='cuda',weights_only=False);model.load_state_dict(last['state_dict'])
+            optimizer.load_state_dict(last['optimizer']);scheduler.load_state_dict(last['scheduler'])
+            best=last['best_score'];bad=last['bad_epochs'];history=last['history'];steps=last['optimizer_steps']
+            first_epoch=last['epoch']+1;elapsed_base=last['elapsed_seconds']
+        for epoch in range(first_epoch,cfg['max_epochs']+1):
             seed_all(cfg['seed']+epoch);model.train();total=0.;batches=0
             components=torch.zeros(5,device='cuda');epoch_start=time.monotonic()
             prior_components=torch.zeros(2,device='cuda')
@@ -172,7 +186,7 @@ def main():
             val=evaluate(model,splits['validation'],schema,cfg['batch_size'])
             score=val['overall']['reconstruction_error']
             row={'epoch':epoch,'optimizer_steps':steps,'training_loss':total/batches,'lr':scheduler.get_last_lr()[0],
-                 'validation':val,'elapsed_seconds':time.monotonic()-start}
+                 'validation':val,'elapsed_seconds':elapsed_base+time.monotonic()-start}
             row['training_components']={k:float(v/batches) for k,v in zip(['mse','cce','kl','ode_l2','gradient_norm'],components)}
             row['training_components']['weighted_ode_l2']=row['training_components']['ode_l2']*cfg['l2_weight']
             if cfg.get('collect_prior_predictions',False):
@@ -190,6 +204,13 @@ def main():
             else:bad+=1
             (output/'history.json').write_text(json.dumps(history,indent=2))
             (output/'hardware.json').write_text(json.dumps(hardware,indent=2))
+            if cfg.get('resume'):
+                temporary=output/'last.partial.pt'
+                torch.save({'state_dict':model.state_dict(),'config':cfg,'schema':schema,'metadata':payload['metadata'],
+                            'epoch':epoch,'optimizer':optimizer.state_dict(),'scheduler':scheduler.state_dict(),
+                            'history':history,'best_score':best,'bad_epochs':bad,'optimizer_steps':steps,
+                            'elapsed_seconds':row['elapsed_seconds']},temporary)
+                temporary.replace(output/'last.pt')
             if epoch>=cfg['min_epochs'] and bad>=cfg['patience']:break
         checkpoint=torch.load(output/'best.pt',map_location='cuda',weights_only=False)
         model.load_state_dict(checkpoint['state_dict'])
@@ -199,7 +220,7 @@ def main():
         results={'status':'cuda_smoke_passed' if cfg['smoke'] else 'local_or_paper_contract_run_completed',
                  'scope':cfg['scope'],'best_epoch':checkpoint['epoch'],'epochs_run':len(history),
                  'validation':val,'test':evaluate(model,splits['test'],schema,cfg['batch_size']),
-                 'checkpoint_reload_difference':discrepancy,'elapsed_seconds':time.monotonic()-start,
+                 'checkpoint_reload_difference':discrepancy,'elapsed_seconds':elapsed_base+time.monotonic()-start,
                  'published_numbers_reproduced':False}
         tracker.final(results)
         (output/'metrics.json').write_text(json.dumps(results,indent=2))

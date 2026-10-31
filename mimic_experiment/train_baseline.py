@@ -58,6 +58,9 @@ def checks(model,sequences,schema,cfg,output):
     with torch.no_grad():shifted=model(changed,sample=False)
     torch.testing.assert_close(original['mu'],shifted['mu'],rtol=0,atol=0)
     model.train();out=model(batch,sample=True)
+    if cfg['model']=='deterministic':
+        torch.testing.assert_close(out['std'],torch.zeros_like(out['std']),rtol=0,atol=0)
+        if float(out['kl'])!=0.:raise AssertionError('Deterministic model must have zero KL')
     errors=feature_errors(out['prediction'],batch['values'],batch['mask'],schema)
     counts=batch['mask'].sum((0,1));loss=(errors.sum((0,1))/counts.clamp_min(1)).sum()+cfg['kl_weight']*out['kl']+.02*model.ode_regularization()
     if not torch.isfinite(loss):raise FloatingPointError('Baseline check objective is nonfinite')
@@ -80,16 +83,17 @@ def checks(model,sequences,schema,cfg,output):
             reverse=model.evolve_hours(after,hour+delta,-delta,context,age)
             torch.testing.assert_close(reverse,state,rtol=0,atol=2e-6)
         else:
-            field=model.forward_ode if cfg['model']=='ode_ae' else model.core.ode
+            field=model.forward_ode if cfg['model'] in ['ode_ae','deterministic'] else model.core.ode
             for parameter in field.parameters():parameter.zero_()
-            layers=field if cfg['model']=='ode_ae' else field.net;layers[-1].bias.fill_(.2)
+            layers=field if cfg['model'] in ['ode_ae','deterministic'] else field.net;layers[-1].bias.fill_(.2)
             dimensions=cfg['latent'];state=torch.zeros(2,dimensions,device='cuda');delta=torch.tensor([2.,5.],device='cuda')
             after=model.solve(field,state,delta)
         torch.testing.assert_close(after,state+.2*delta[:,None],rtol=2e-5,atol=2e-6)
     report={'status':'passed','model':cfg['model'],'physical_gpu':os.environ['CUDA_VISIBLE_DEVICES'],'device':str(next(model.parameters()).device),
             'future_values_and_target_masks_change_predictions_max':0.,'future_times_change_encoded_state_max':0.,
             'finite_trainable_parameter_gradients':used,'ode_time_unit_verified':'hour','full_native_architecture':True,
-            'test_objective':float(loss.detach())}
+            'test_objective':float(loss.detach()),'parameters':sum(p.numel() for p in model.parameters()),
+            'source_family':cfg.get('source_family',cfg['model']),'parameter_matching_target':cfg.get('target_parameters')}
     atomic(output/'checks.json',report)
 
 
@@ -132,6 +136,9 @@ def main():
         normalization=input_normalization(payload)
     if stage=='checks' and cfg.get('verify_reference'):verify_reference(payload,cfg,output,modes)
     model=make_model(schema,cfg,normalization).cuda()
+    actual_parameters=sum(p.numel() for p in model.parameters())
+    if cfg.get('target_parameters') is not None and actual_parameters!=cfg['target_parameters']:
+        raise AssertionError(f"Parameter count {actual_parameters} differs from target {cfg['target_parameters']}")
     if stage=='checks':checks(model,splits['train'],schema,cfg,output);return
     if stage=='smoke':
         cfg.update(max_epochs=1,min_epochs=0,patience=1,batch_size=32)
@@ -143,6 +150,9 @@ def main():
               'effective_batch_size':cfg['batch_size'],'max_micro_batch_size':32,'gradient_partitions':4,'time_unit':'hour',
               'dataset_sha256':digest,'clock_age_separation':True,'history_semantics':cfg['history_semantics'],'future_semantics':cfg['future_semantics'],
               'age_covariate':cfg['age_covariate'],
+              'source_family':cfg.get('source_family',cfg['model']),'parameter_matching_target':cfg.get('target_parameters'),
+              'encoder_direction':cfg.get('encoder_direction'),'encoder_initialization':cfg.get('encoder_initialization'),
+              'shared_vector_field':getattr(model,'shared_vector_field',False),
               'kl_weight':cfg['kl_weight'],'parameter_breakdown':{name:sum(p.numel() for p in module.parameters()) for name,module in model.named_children()}}
     if cfg['model']=='healthflux':hardware['modality_groups']=cfg['modality_groups']
     for name,obj in [('config',cfg),('schema',schema),('data',meta),('hardware',hardware),('input_normalization',normalization)]:atomic(output/f'{name}.json',obj)

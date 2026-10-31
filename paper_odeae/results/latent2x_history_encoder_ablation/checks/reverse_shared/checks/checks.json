@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "variant": "reverse_shared",
+  "physical_gpu": 2,
+  "device": "cuda:0",
+  "parameters": 44875,
+  "trainable_parameters": 44875,
+  "parameter_breakdown": {
+    "init": 4798,
+    "decoder": 12451,
+    "update": 16882,
+    "backward_ode": 10744
+  },
+  "shared_field_identity_verified": true,
+  "retained_network_initial_tensors_identical": true,
+  "frozen_forward_reference_equivalence": true,
+  "future_values_and_masks_do_not_change_predictions": true,
+  "future_times_do_not_change_encoded_state": true,
+  "all_parameters_receive_finite_gradients": true,
+  "exact_jacobian_entries": 784,
+  "time_unit_verified": "year",
+  "actual_tensor_devices": {
+    "values": "cuda:0",
+    "mask": "cuda:0",
+    "ages": "cuda:0",
+    "context_mask": "cuda:0",
+    "valid": "cuda:0",
+    "cutoff": "cuda:0"
+  },
+  "main_state_matches_backward_encoder": true,
+  "generation_matches_first_visit_anchor": true,
+  "weak_prior_matches_original_forward_causal_supervision": true,
+  "auxiliary_forward_state_used_for_main_generation": false,
+  "reference_checkpoint_full_evaluation_max_difference": 0.0
+}

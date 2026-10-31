@@ -1,6 +1,6 @@
 # CausalMed：Level 3 连续时间反事实基准
 
-新增γ=1动作条件模型实验：latent2x both使用物理GPU 3，ODE-AE使用物理GPU 1，执行相同五策略反事实推演。见[方法与运行说明](latent2x_experiment/README.zh-CN.md)和[模型横向比较](outputs/gamma1_model_comparison/summary.md)。
+γ=1动作条件模型实验包括latent2x both、ODE-AE、确定性ODE-AE和HealthFlux-KL，执行相同五策略反事实推演。前两组已完成；新增确定性ODE-AE在物理GPU 1按31,314参数匹配，HealthFlux-KL在物理GPU 3保留原生256＋128维。见[方法与运行说明](latent2x_experiment/README.zh-CN.md)和[模型横向比较](outputs/gamma1_model_comparison/summary.md)。
 
 代码位于 [synthetic_cf_level3](synthetic_cf_level3/README.md)。新增内容全部限制在 CausalMed 内，原模型、shared_matched 数据代码和历史实验未改动。
 

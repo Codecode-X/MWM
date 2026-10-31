@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "variant": "attention_time",
+  "physical_gpu": 3,
+  "device": "cuda:0",
+  "parameters": 44875,
+  "trainable_parameters": 44875,
+  "parameter_breakdown": {
+    "init": 4798,
+    "decoder": 12451,
+    "backward_ode": 10744,
+    "history_attention": 16882
+  },
+  "shared_field_identity_verified": true,
+  "retained_network_initial_tensors_identical": true,
+  "frozen_forward_reference_equivalence": true,
+  "future_values_and_masks_do_not_change_predictions": true,
+  "future_times_do_not_change_encoded_state": true,
+  "all_parameters_receive_finite_gradients": true,
+  "exact_jacobian_entries": 784,
+  "time_unit_verified": "year",
+  "actual_tensor_devices": {
+    "values": "cuda:0",
+    "mask": "cuda:0",
+    "ages": "cuda:0",
+    "context_mask": "cuda:0",
+    "valid": "cuda:0",
+    "cutoff": "cuda:0"
+  },
+  "attention_encoder_parameters": 16882,
+  "history_encoding_has_no_ode_calls": true,
+  "prefix_states_are_causal": true,
+  "continuous_time_encoding_changes_state": true,
+  "weak_prior_excludes_target_observation": true,
+  "time_encoding_parameters": 0,
+  "attention_heads": 4
+}

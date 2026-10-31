@@ -74,7 +74,7 @@ def checks(model,sequences,specs,output):
     changed={**batch,'actions':batch['actions'].clone()};changed['actions'][:,5:]=1-changed['actions'][:,5:]
     with torch.no_grad():other=model(changed)
     torch.testing.assert_close(other['prediction'][:,:6],original['prediction'][:,:6],rtol=0,atol=0)
-    state=torch.randn(4,model.latent,device='cuda');action=torch.tensor([0,1,0,1],device='cuda')
+    state=original['anchor'].detach().clone();action=torch.tensor([0,1,0,1],device='cuda')
     torch.testing.assert_close(model.change_action(state,action,action),state,rtol=0,atol=0)
     torch.testing.assert_close(model.change_action(state,action,1-action,disabled=True),state,rtol=0,atol=0)
     p=torch.tensor([0,1,2,2,3,3,4,4],device='cuda');t=torch.tensor([0,0,.999999999,1,0,0,0,0],device='cuda',dtype=torch.float64)
@@ -87,10 +87,17 @@ def checks(model,sequences,specs,output):
         if parameter.grad is None or not torch.isfinite(parameter.grad).all():raise AssertionError('Missing or nonfinite gradient')
     controlled=copy.deepcopy(model)
     with torch.no_grad():
-        for parameter in controlled.forward_ode.parameters():parameter.zero_()
-        controlled.forward_ode[-1].bias.fill_(.2)
-        start=torch.zeros(2,model.latent,device='cuda');dt=torch.tensor([1.,3.],device='cuda')
-        torch.testing.assert_close(controlled.solve(start,dt),start+dt[:,None]*.2,rtol=2e-5,atol=2e-6)
+        if getattr(model,'kind',None)=='healthflux':
+            for parameter in controlled.core.dynamics.parameters():parameter.zero_()
+            controlled.core.dynamics[-1].bias.fill_(float(np.arctanh(.2)))
+            start=original['anchor'][:2].detach();dt=torch.tensor([1.,3.],device='cuda')
+            before=controlled.unpack(start)[0];after=controlled.unpack(controlled.solve(start,dt))[0]
+            torch.testing.assert_close(after,before+dt[:,None]*.2,rtol=2e-5,atol=2e-6)
+        else:
+            for parameter in controlled.forward_ode.parameters():parameter.zero_()
+            controlled.forward_ode[-1].bias.fill_(.2)
+            start=torch.zeros(2,model.latent,device='cuda');dt=torch.tensor([1.,3.],device='cuda')
+            torch.testing.assert_close(controlled.solve(start,dt),start+dt[:,None]*.2,rtol=2e-5,atol=2e-6)
     atomic(output/'checks.json',{'status':'passed','physical_gpu':int(os.environ['CUDA_VISIBLE_DEVICES']),'device':'cuda:0','parameters':sum(p.numel() for p in model.parameters()),
            'future_outcomes_do_not_change_predictions':True,'fork_action_not_consumed_in_history':True,
            'actions_at_or_after_a_target_do_not_change_that_target':True,'unchanged_action_is_identity':True,
@@ -102,7 +109,9 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--config',required=True);parser.add_argument('--stage',choices=['checks','smoke','training'],default='training');args=parser.parse_args()
     cfg=json.loads(Path(args.config).read_text());output=Path('/workspace/output');stage=args.stage
     gpu=int(cfg.get('physical_gpu',3));is_odeae=cfg.get('model')=='ode_ae_action_update'
-    if Path(sys.prefix).name!='ode' or os.environ.get('CUDA_VISIBLE_DEVICES')!=str(gpu) or not torch.cuda.is_available():raise RuntimeError('Use ode and the configured physical GPU; no CPU fallback')
+    is_det=cfg.get('model')=='deterministic_matched_action_update';is_health=cfg.get('model')=='healthflux_kl_action_update'
+    environment='healthflux' if is_health else 'ode'
+    if Path(sys.prefix).name!=environment or os.environ.get('CUDA_VISIBLE_DEVICES')!=str(gpu) or not torch.cuda.is_available():raise RuntimeError('Use the configured environment and physical CUDA GPU; no CPU fallback')
     if importlib.util.find_spec('synthetic_cf_level3') is not None or Path('/home/xjh/projects/LatentODE/CausalMed').exists():raise RuntimeError('Generator/oracle filesystem must be absent from model namespace')
     torch.cuda.set_device(0);torch.set_num_threads(1);seed_all(cfg['seed'])
     output.mkdir(parents=True,exist_ok=True);payload,test_dataset=load_public('/workspace/public');metadata=payload['metadata']
@@ -110,24 +119,33 @@ def main():
            'readable_dataset_files':public_hashes('/workspace/public'),'execution_namespace':'bubblewrap; read-only public data and frozen model source',
            'physical_gpu':gpu,'device':'cuda:0'})
     atomic(output/'data.json',metadata)
-    if is_odeae:
+    if is_health:
+        from .healthflux_model import HealthFluxCF
+        model=HealthFluxCF(cfg).cuda()
+    elif is_odeae or is_det:
         from .odeae_model import ControlledODEAE
         model=ControlledODEAE(cfg).cuda()
     else:model=ControlledBoth(cfg).cuda()
     parameters=sum(p.numel() for p in model.parameters())
-    if parameters!=(1843 if is_odeae else 31314):raise AssertionError('Unexpected architecture parameter count')
+    expected=4361412 if is_health else 1843 if is_odeae else 31314
+    if parameters!=expected:raise AssertionError(f'Unexpected architecture parameter count: {parameters}, expected {expected}')
     if stage=='checks':checks(model,payload['train'],test_dataset.policy_specs,output);return
     if stage=='smoke':
         cfg.update(max_epochs=1,min_epochs=0,patience=1)
         payload['train']=payload['train'][:64];payload['val']=payload['val'][:16];payload['test']=payload['test'][:8]
     hardware={'physical_gpu':gpu,'gpu_name':torch.cuda.get_device_name(),'parameter_device':str(next(model.parameters()).device),
-              'parameters':parameters,'trainable_parameters':parameters,'latent_dimension':model.latent,'mlp_width':16 if is_odeae else 159,'ode_width':16 if is_odeae else 188,
+              'parameters':parameters,'trainable_parameters':parameters,'latent_dimension':model.latent,
+              'mlp_width':cfg.get('internal_width') if is_health else cfg.get('mlp_width',159),'ode_width':cfg.get('internal_width') if is_health else cfg.get('ode_width',188),
               'environment':Path(sys.prefix).name,'torch_version':torch.__version__,'time_unit':'year','batch_size':cfg['batch_size'],
               'event_input_dimensions':{'observations':3,'observation_mask':3,'action_one_hot':2,'event_type':2},
-              'prior_weight':0. if is_odeae else .01,'jacobian_weight':0. if is_odeae else .01,'kl_weight':1. if is_odeae else 0.,
-              'l2_weight':.02,'jacobian_squared_entries':0 if is_odeae else 784,'normalization':'train_zscore',
-              'encoder_direction':'backward' if is_odeae else 'forward','shared_vector_field':not is_odeae,
+              'prior_weight':cfg.get('prior_weight',.01),'jacobian_weight':cfg.get('jacobian_weight',.01),'kl_weight':cfg.get('kl_weight',0.),
+              'l2_weight':.02,'jacobian_squared_entries':0 if is_odeae or is_det or is_health else 784,'normalization':'train_zscore',
+              'encoder_direction':'backward' if is_odeae or is_det else 'forward','shared_vector_field':not (is_odeae or is_det),
               'parameter_breakdown':{name:sum(p.numel() for p in module.parameters()) for name,module in model.named_children()}}
+    if is_health:hardware.update(stochastic_dimension=128,health_representation_dimension=384,packed_rollout_dimension=513,
+            parameter_breakdown={**{name:sum(p.numel() for p in module.parameters()) for name,module in model.core.named_children()},'modality_embedding':model.core.modality_embedding.numel()},
+            time_condition='elapsed years, encoded separately from static c',solver='RK4, nominal step .25 year, max 4 substeps per interval')
+    if is_det:hardware.update(source_family='deterministic_22545',update_width=cfg['update_width'],parameter_matching_target=31314)
     atomic(output/'hardware.json',hardware);atomic(output/'config.json',cfg)
     optimizer=torch.optim.Adam(model.parameters(),lr=cfg['lr']);scheduler=torch.optim.lr_scheduler.LambdaLR(optimizer,lambda step:cfg['lr_decay']**(step/cfg['lr_decay_steps']))
     history=[];best=float('inf');bad=0;steps=0;first=1;elapsed_base=0.
@@ -136,7 +154,8 @@ def main():
         history=last['history'];best=last['best_score'];bad=last['bad_epochs'];steps=last['optimizer_steps'];first=last['epoch']+1;elapsed_base=last['elapsed_seconds']
     trained=json.loads((output/'training_complete.json').read_text()) if (output/'training_complete.json').exists() else None
     if not trained:
-        with SwanLabTracker(output,cfg,'causalmed_ode_ae' if is_odeae else 'causalmed_latent2x_both',model,cfg['seed']) as tracker:
+        family='causalmed_healthflux_kl' if is_health else 'causalmed_deterministic_matched' if is_det else 'causalmed_ode_ae' if is_odeae else 'causalmed_latent2x_both'
+        with SwanLabTracker(output,cfg,family,model,cfg['seed']) as tracker:
             tracker.step=steps;started=time.monotonic()
             for epoch in range(first,cfg['max_epochs']+1):
                 seed_all(cfg['seed']+epoch);model.train();begin=time.monotonic();torch.cuda.reset_peak_memory_stats()

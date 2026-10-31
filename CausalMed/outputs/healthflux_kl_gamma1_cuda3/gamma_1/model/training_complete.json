@@ -1,0 +1,66 @@
+{
+  "status": "training_complete",
+  "best_epoch": 39,
+  "epochs_run": 79,
+  "validation": {
+    "patients": 2000,
+    "evaluation": "recorded factual treatment path; no future observation updates",
+    "interpolation": {
+      "reconstruction_error": 0.022758067113555495,
+      "per_field_mse": [
+        0.008388700176039307,
+        0.012797553362505504,
+        0.0015718135750106823
+      ],
+      "observations_per_field": [
+        15052,
+        15052,
+        15052
+      ]
+    },
+    "forecast": {
+      "reconstruction_error": 0.026619016818647423,
+      "per_field_mse": [
+        0.00967947347992535,
+        0.014099392296876305,
+        0.0028401510418457686
+      ],
+      "observations_per_field": [
+        17948,
+        17948,
+        17948
+      ]
+    },
+    "overall": {
+      "reconstruction_error": 0.024857955650849774,
+      "per_field_mse": [
+        0.009090724540479255,
+        0.013505595698501124,
+        0.002261635411869396
+      ],
+      "observations_per_field": [
+        33000,
+        33000,
+        33000
+      ]
+    },
+    "future_raw_rmse": [
+      1.1076793004351906,
+      0.10872679604733718,
+      0.03736453388150889
+    ],
+    "future_raw_mae": [
+      0.8844768268605347,
+      0.0867281124085605,
+      0.02861741873916294
+    ],
+    "carry_forward_future_raw_rmse": [
+      12.23632771878684,
+      0.911317575212416,
+      0.798893799916976
+    ],
+    "prior_error": null
+  },
+  "checkpoint_reload_difference": 0.0,
+  "elapsed_seconds": 6624.010356821003
+}

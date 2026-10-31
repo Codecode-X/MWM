@@ -1,12 +1,12 @@
-# MIMIC-IV：四个 baseline 与 latent2x both 的比较方案
+# MIMIC-IV：五个 baseline 与 latent2x both 的比较方案
 
 ## 1. 从已有 MIMIC 任务继续比较
 
-现有实验已经将 MIMIC-IV 3.1 整理为患者的小时级纵向记录，并完成 latent2x both 的训练。本次在同一数据、同一预测任务上训练 HealthFlux-KL、ODE-AE、ODE-RNN 和 Latent ODE。
+现有实验已经将 MIMIC-IV 3.1 整理为患者的小时级纵向记录，并完成 latent2x both 的训练。在同一数据、同一预测任务上，比较 HealthFlux-KL、ODE-AE、ODE-RNN、Latent ODE，以及新增的同预算确定性ODE-AE。
 
 主要问题是：**给定患者入住 ICU 后前24小时的资料，哪种模型能更准确地预测之后24小时的生理指标与GCS？**
 
-[实时横向比较表](results/baselines_single_cuda/summary.md)汇总五个模型的参数量、训练进度、原始目标误差、原始单位误差及不同预测范围的结果。
+[六模型实时横向比较表](results/baselines_with_deterministic_cuda/summary.md)汇总参数量、训练进度、原始目标误差、原始单位误差及不同预测范围的结果。新增比较直接读取此前四个baseline及latent2x both的已有记录，同时加入确定性ODE-AE的结果。
 
 ## 2. 所有模型使用哪些相同条件
 
@@ -53,7 +53,7 @@
 
 这样，模型之间比较的是相同数量患者带来的优化步骤。最后不足128人的批次按实际观测数和实际人数计算。
 
-## 3. 四个 baseline 如何接入这个任务
+## 3. 五个 baseline 如何接入这个任务
 
 ### 3.1 HealthFlux-KL
 
@@ -97,9 +97,30 @@ INIT接收真实年龄锚点推算值，观测间隔和生成ODE使用小时。�
 
 训练从后验采样，测试使用后验均值。生成从截止状态分别向过去和未来积分，保持后验的实际时间位置。KL系数为1。
 
-### 3.5 各模型训练目标
+### 3.5 deterministic_22545（同预算）
 
-四个baseline共同的数据项为：
+`deterministic_22545`沿用ADNI实验的模型名称。迁移到MIMIC后，本组与MIMIC上的latent2x both匹配为 **43,280个参数**。
+
+模型保留6维确定性状态。它按时间从后往前读取历史观测，在首次历史检查处形成潜在状态，再由另一套独立ODE生成完整轨迹。INIT读取年龄/100；ODE使用实际小时差。训练和测试都使用确定性状态。
+
+这次只通过隐藏层宽度分配参数预算：
+
+| 模块 | 网络结构 | 参数量 |
+|---|---|---:|
+| 年龄INIT | 1 → 322 → 6 | 2,582 |
+| 观测UPDATE | 50 → 318 → 6 | 18,132 |
+| 编码ODE | 6 → 242 → 6 | 3,152 |
+| 生成ODE | 6 → 242 → 6 | 3,152 |
+| DECODER | 6 → 318 → 44 | 16,262 |
+| 合计 | 与latent2x both相同 | **43,280** |
+
+UPDATE的50维输入由6维状态与44维展开观测组成。各网络采用一层Tanh隐藏层；两套ODE使用相同的自适应Tsit5容差。损失为数值MSE＋类别交叉熵＋0.02×两套ODE的参数平方和。所有数据、训练截止点、优化预算和测试方法沿用共同协议。
+
+本组在空闲物理GPU 1使用`ode`环境单卡训练，有效batch为128，分四组累积梯度。启动流程依次执行CUDA正确性检查、小规模完整训练与测试、正式训练，以及最佳检查点测试。SwanLab、实际张量设备和源码散列随实验保存。
+
+### 3.6 各模型训练目标
+
+五个baseline共同的数据项为：
 
 \[
 L_{\mathrm{data}}=L_{\mathrm{MSE}}+L_{\mathrm{CE}}.
@@ -114,8 +135,9 @@ L_{\mathrm{data}}=L_{\mathrm{MSE}}+L_{\mathrm{CE}}.
 | ODE-AE | 1 × 后验对标准Gaussian的KL | 0.02 | — | — |
 | ODE-RNN | — | 0.02 | — | — |
 | Latent ODE | 1 × 后验对标准Gaussian的KL | 0.02 | — | — |
+| deterministic_22545（同预算） | — | 0.02 | — | — |
 
-模型容量沿用现有ADNI比较中的各baseline设置，输入输出层按MIMIC字段适配。比较表同时列出总参数与可训练参数，便于结合模型容量阅读结果。
+HealthFlux-KL、ODE-AE、ODE-RNN和Latent ODE沿用现有ADNI比较中的容量设置，输入输出层按MIMIC字段适配。新增确定性ODE-AE按43,280参数匹配。比较表同时列出总参数与可训练参数。
 
 ## 4. 如何测试并汇总
 
@@ -147,11 +169,15 @@ L_{\mathrm{data}}=L_{\mathrm{MSE}}+L_{\mathrm{CE}}.
 | ODE-AE | 1 | ode | 单卡，梯度累积 |
 | ODE-RNN | 2 | ode | 单卡，梯度累积 |
 | Latent ODE | 3 | ode | 单卡，梯度累积 |
+| deterministic_22545（同预算，新增） | 1 | ode | 单卡，梯度累积 |
 
 启动命令：
 
 ```bash
 bash scripts/run_mimic_baselines.sh
+
+# 新增确定性ODE-AE，并持续汇总六模型比较。
+bash scripts/run_mimic_deterministic_matched.sh
 ```
 
 每条任务依次完成CUDA检查、完整48小时小规模预检查和正式训练。检查会改变未来观测值、未来标签掩码及未来查询时间，分别核对预测隔离和截止状态隔离；还会检查参数梯度和小时制积分。

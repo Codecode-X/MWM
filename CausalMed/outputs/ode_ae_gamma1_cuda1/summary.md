@@ -4,7 +4,7 @@
 
 每组使用10,000位训练患者、2,000位验证患者、2,000位测试患者。模型学习公开事实轨迹中的Y、X1、X2、静态c和治疗区间。测试在首次达到3年的检查后分叉，从同一个患者状态分别执行五种公开策略，推演至8年边界。
 
-动态策略在分叉时使用已经观察到的X2，之后使用各自分支预测的X2。未来检查只提供决策时刻，状态通过共享ODE演化，并在治疗切换时接受动作校正。
+动态策略在分叉时使用已经观察到的X2，之后使用各自分支预测的X2。未来检查提供决策时刻，状态通过各模型的生成ODE演化，并在治疗切换时接受动作校正。
 
 ## 2. 模型与训练设置
 
@@ -54,5 +54,5 @@ sqrt(PEHE)评价个体治疗效应；ATE Error评价人群平均效应。策略�
 每组model/中保存best.pt、last.pt、history.json、hardware.json、isolation.json及两组预测。evaluation/保存官方评分器输出。报告每30秒更新。
 
 ```bash
-bash scripts/run_causalmed_latent2x_both.sh
+bash scripts/run_causalmed_odeae.sh
 ```

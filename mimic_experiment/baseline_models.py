@@ -69,5 +69,5 @@ def make_model(schema,cfg,normalization=None):
     if cfg['model']=='healthflux':
         from .healthflux_icu import HealthFluxICU
         return HealthFluxICU(schema,cfg,normalization)
-    if cfg['model']=='ode_ae':return paper_model_from_config(schema,cfg)
+    if cfg['model'] in ['ode_ae','deterministic']:return paper_model_from_config(schema,cfg)
     return ICUBaseline(schema,cfg['model'],cfg['latent'],cfg['encoder_hidden'],cfg['ode_width'],cfg['rtol'],cfg['atol'])

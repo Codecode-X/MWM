@@ -10,20 +10,22 @@ NAMES={'healthflux_kl':'HealthFlux-KL','ode_ae':'ODE-AE','ode_rnn':'ODE-RNN','la
 def generate(output):
     out=Path(output);manifest=read(out/'manifest.json',{});queue=read(out/'queue.json',{});rows=[]
     reference=Path(manifest.get('reference_output',out.parent/'latent2x_both_cuda'))
-    sources=[('latent2x_both','latent2x both',reference/'seed_0')]+[(key,title,out/key/'seed_0') for key,title in NAMES.items()]
+    names={**NAMES,**manifest.get('additional_model_names',{})};outputs=manifest.get('model_outputs',{})
+    sources=[('latent2x_both','latent2x both',reference/'seed_0')]+[(key,title,Path(outputs.get(key,out/key/'seed_0'))) for key,title in names.items()]
     for key,title,path in sources:
         history=read(path/'history.json',[]);final=read(path/'metrics.json');hardware=read(path/'hardware.json',{})
         best=min(history,key=lambda row:row['validation']['overall']['reconstruction_error']) if history else None
-        state=queue.get('jobs',{}).get(key,{})
+        source_queue=read(manifest.get('model_queues',{}).get(key,out/'queue.json'),{})
+        state=source_queue.get('jobs',{}).get(key,{})
         rows.append({'key':key,'name':title,'path':str(path),'hardware':hardware,'history':history,'result':final,
                      'validation':final['validation'] if final else best['validation'] if best else None,
                      'status':'complete' if final else state.get('status','waiting'),'phase':state.get('phase','training'),
                      'epochs':final['epochs_run'] if final else len(history),'best_epoch':final['best_epoch'] if final else best['epoch'] if best else None})
-    lines=['# MIMIC-IV：latent2x both 与四个 baseline 的横向比较','',
+    lines=['# MIMIC-IV：模型横向比较','',
            '## 1. 所有模型回答同一个预测问题','',
            '每位患者取首次ICU住院的前48小时。训练21,517人，验证4,649人，测试4,536人，使用同一份chronology_v2缓存、31个原始字段、44维展开输出及训练集min-max归一化。','',
            '训练每人每轮选一个6、12、18或24小时历史截止点。主要验证与测试固定读取前24小时，评价之后24小时的观测。数值字段计算MSE，类别字段计算交叉熵；每个字段先在有效观测上取均值，再按字段求和。验证整体误差用于选模。','',
-           '四个baseline各占一张4090，独立单卡训练。每次优化使用128位患者，按四组在单卡上累积梯度，每组最多32人。每个字段使用整批有效观测数作为分母，KL按患者数或有效观测节点数归约，ODE参数L2每个优化步骤计一次。','',
+           '各baseline独立单卡训练。每次优化使用128位患者，按四组在单卡上累积梯度，每组最多32人。每个字段使用整批有效观测数作为分母，KL按患者数或有效观测节点数归约，ODE参数L2每个优化步骤计一次。','',
            'Adam学习率0.003，按0.97^(step/2000)衰减，输入dropout为0.1，梯度范数上限10，最多300轮、至少50轮、验证整体误差连续40轮未改善时早停。全部训练接入SwanLab，重新载入最佳检查点后进行测试。','',
            '## 2. 各模型保留什么结构','',
            '| 模型 | 物理GPU | 总参数 | 可训练参数 | 状态与未来生成方式 |','|---|---|---:|---:|---|']
@@ -31,7 +33,8 @@ def generate(output):
                   'healthflux_kl':'256维确定性＋128维随机；条件ODE＋先验均值；KL=0.01',
                   'ode_ae':'6维随机潜在状态；反向编码、独立生成ODE；KL=1',
                   'ode_rnn':'32维；ODE＋GRU；未来以模型预测作递归输入',
-                  'latent_ode':'32维随机潜在状态；64维ODE-RNN编码器；KL=1'}
+                  'latent_ode':'32维随机潜在状态；64维ODE-RNN编码器；KL=1',
+                  'deterministic_matched':'6维确定性状态；反向编码与独立生成ODE；43,280参数匹配；KL=0'}
     for row in rows:
         hw=row['hardware'];lines.append(f"| {row['name']} | {hw.get('physical_gpu','—')} | {hw.get('parameters','—'):,} | {hw.get('trainable_parameters','—'):,} | {descriptions[row['key']]} |" if hw else f"| {row['name']} | {queue.get('jobs',{}).get(row['key'],{}).get('physical_gpu','—')} | — | — | {descriptions[row['key']]} |")
     lines += ['',
@@ -62,7 +65,7 @@ def generate(output):
     lines+=['','## 5. 原始单位下的未来误差','',
             '保持最近值使用同一段历史；历史中从未测到的字段使用训练均值或训练众数。以下各栏的目标时刻及字段掩码相同。','',
             '### MAE','',
-            '| 字段 | 单位 | 我们方法 | HealthFlux-KL | ODE-AE | ODE-RNN | Latent ODE | 保持最近值 |','|---|---|---:|---:|---:|---:|---:|---:|']
+            '| 字段 | 单位 | '+' | '.join(row['name'] for row in rows)+' | 保持最近值 |','|'+'|'.join(['---','---']+['---:']*(len(rows)+1))+'|']
     mae_rows=[]
     if ref_test:
         for field,value in ref_test['clinical_forecast'].items():
@@ -75,7 +78,7 @@ def generate(output):
             last=ref_test['carry_forward'][field]['mae'];record['carry_forward']=last;mae_rows.append(record)
             lines.append('| '+' | '.join([field,value['unit']]+values+[number(last)])+' |')
     lines+=['','### RMSE','',
-            '| 字段 | 单位 | 我们方法 | HealthFlux-KL | ODE-AE | ODE-RNN | Latent ODE | 保持最近值 |','|---|---|---:|---:|---:|---:|---:|---:|']
+            '| 字段 | 单位 | '+' | '.join(row['name'] for row in rows)+' | 保持最近值 |','|'+'|'.join(['---','---']+['---:']*(len(rows)+1))+'|']
     rmse_rows=[]
     if ref_test:
         for field,value in ref_test['clinical_forecast'].items():
@@ -103,7 +106,7 @@ def generate(output):
     lines+=['','## 8. 配置、检查与输出','',
             '[实验设计](../../BASELINE_COMPARISON.zh-CN.md) · [任务配置与来源](manifest.json) · [运行队列](queue.json) · [完整比较数据](comparison.json)','',
             '每个模型目录保存best.pt、last.pt、history.json、metrics.json、hardware.json和swanlab.json。启动前的CUDA检查、完整48小时预检查保存在checks目录，执行源码固定在source_snapshot。每30秒更新本报告。','',
-            '```bash','bash scripts/run_mimic_baselines.sh','```','']
+            '```bash','bash scripts/run_mimic_deterministic_matched.sh' if manifest.get('additional_model_names') else 'bash scripts/run_mimic_baselines.sh','```','']
     if any(row['history'] for row in rows[1:]):lines+=['![训练与验证曲线](training_curves.png)','']
     (out/'summary.md').write_text('\n'.join(lines))
     atomic(out/'comparison.json',{'dataset_sha256':manifest.get('dataset_sha256'),'models':[{k:v for k,v in row.items() if k!='history'} for row in rows],'future_mae':mae_rows,'future_rmse':rmse_rows})
@@ -127,8 +130,9 @@ def plot(out,rows):
         history=row['history']
         if not history:continue
         x=[h['epoch'] for h in history]
-        axes[0].plot(x,[h['validation']['overall']['reconstruction_error'] for h in history],label=row['name'])
-        axes[1].plot(x,[h['validation']['forecast']['reconstruction_error'] for h in history],label=row['name'])
+        label=row['name'].replace('deterministic_22545（同预算）','Deterministic ODE-AE (matched)')
+        axes[0].plot(x,[h['validation']['overall']['reconstruction_error'] for h in history],label=label)
+        axes[1].plot(x,[h['validation']['forecast']['reconstruction_error'] for h in history],label=label)
     for ax,title in zip(axes,['Validation overall','Validation forecast']):
         ax.set(xlabel='Epoch',ylabel='Mixed-field error',title=title);ax.legend(fontsize=8);ax.grid(alpha=.15)
     fig.tight_layout()

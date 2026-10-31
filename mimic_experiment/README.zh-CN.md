@@ -2,7 +2,13 @@
 
 模型结构、训练损失和测试流程的通用讲解，见[当前模型方法详解](../reproduction/CURRENT_MODEL_METHOD.zh-CN.md)。该文最后分别用ADNI和MIMIC真实病例展开说明。
 
-HealthFlux-KL、ODE-AE、ODE-RNN、Latent ODE各单卡运行的新增比较，见[baseline实验方案](BASELINE_COMPARISON.zh-CN.md)与[实时横向比较](results/baselines_single_cuda/summary.md)。
+五种对照方法的建模思想、结构和训练区别，见[五类模型方法简明比较](../reproduction/MODEL_METHODS_COMPARISON.zh-CN.md)。
+
+新增与ADNI对应的历史编码消融：反向共享ODE、因果注意力加小时编码。三组均为28维状态、43,280参数，新增两组分别在GPU 2、3单卡运行。见[实验设计](HISTORY_ENCODER_ABLATION.zh-CN.md)与[三组实时比较](results/history_encoder_ablation_cuda/summary.md)。
+
+现有latent2x both检查点的[低维流形与黎曼几何分析](../paper_odeae/results/latent2x_both_manifold/report.zh-CN.md)同时覆盖ADNI和MIMIC，包括局部维度、ODE搬运后的几何结构和真实预测投影对照。
+
+HealthFlux-KL、ODE-AE、ODE-RNN、Latent ODE，以及新增的同预算确定性ODE-AE，见[baseline实验方案](BASELINE_COMPARISON.zh-CN.md)与[六模型实时横向比较](results/baselines_with_deterministic_cuda/summary.md)。确定性ODE-AE与MIMIC上的latent2x both均为43,280参数，新增模型使用空闲的物理GPU 1单卡训练。
 
 ## 1. 先把 ICU 记录变成可以学习的患者轨迹
 
@@ -166,6 +172,9 @@ Jacobian 沿用已验证的解析表达式，与对该两层 Tanh 向量场直�
 ```bash
 # 使用现有 ode 环境；整理数据、四卡检查、正式训练和最终测试连续执行。
 bash scripts/run_mimic_latent2x_both.sh
+
+# 新增同预算确定性ODE-AE，使用物理GPU 1单卡训练并汇总比较。
+bash scripts/run_mimic_deterministic_matched.sh
 
 # 只整理数据，CPU执行表格扫描和聚合。
 /home/xjh/miniforge3/envs/ode/bin/python -m mimic_experiment.prepare

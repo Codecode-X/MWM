@@ -4,6 +4,10 @@
 
 当前 latent2x both 的通用结构、训练及测试方法见[当前模型方法详解](../reproduction/CURRENT_MODEL_METHOD.zh-CN.md)，包含ADNI和MIMIC真实病例的逐步说明。
 
+latent2x both、HealthFlux-KL、ODE-AE、ODE-RNN和Latent ODE的建模思想、结构与训练策略，见[五类模型方法简明比较](../reproduction/MODEL_METHODS_COMPARISON.zh-CN.md)。
+
+latent2x both 的[低维流形假设与黎曼几何约束实验](results/latent2x_both_manifold/report.zh-CN.md)已完成ADNI和MIMIC诊断：包括患者独立维度估计、Gaussian与已知流形对照、同步推演参考点云、临床Fisher度量，以及验证集选型的冻结投影测试。
+
 当前共享与扩容消融已按用户要求停止，已完成结果和中断检查点均保留。最新的 [shared_matched 与论文 ODE-AE 对比](results/shared_matched_comparison/comparison.zh-CN.md) 包含结构差异、本地同数据结果、等参数对照和论文报告值。
 
 后续以 shared_matched 为基线的四组扩容实验见 [实验设计](docs/SHARED_MATCHED_SCALING_4X.zh-CN.md) 与 [实时结果](results/shared_matched_scaling_4x/summary.md)。四组分别扩大 INIT、UPDATE、共享 ODE 和潜在维度，总参数量约为基线四倍。
@@ -11,6 +15,8 @@
 潜在状态容量比较现已覆盖1x、2x、4x、8x、16x。latent8x和latent16x已完成，新增latent2x（28维、44,875参数）在GPU 0训练。参见 [扩容设计](docs/LATENT_SCALE_UP.zh-CN.md) 与 [五档容量实时比较](results/shared_matched_latent_scaling/summary.md)。
 
 新增 latent2x 的三组损失消融：weak_prior＋Jacobian、仅 weak_prior、仅 Jacobian，新增项权重均为 0.01，分别使用 GPU 1、2、3。参见 [实验设计](docs/LATENT2X_LOSS_ABLATION.zh-CN.md) 与 [四组实时对比](results/latent2x_loss_ablation/summary.md)。
+
+新增以latent2x both为参照的历史编码消融：反向共享ODE编码、因果注意力加实际时间编码。三组均为28维状态、44,875参数，保留原损失和生成ODE；新增两组分别使用GPU 2、3单卡训练。参见[实验设计](HISTORY_ENCODER_ABLATION.zh-CN.md)与[三组实时比较](results/latent2x_history_encoder_ablation/summary.md)。
 
 新增 HealthFlux 基线：使用独立的 `healthflux` Conda 环境，按论文 v3 实现双状态连续时间模型，接入相同 ADNI 数据与字段评分。参见 [模型与任务适配](../healthflux/README.zh-CN.md) 和 [实时比较](../healthflux/results/adni_comparison/summary.md)。
 

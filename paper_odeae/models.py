@@ -184,6 +184,10 @@ class PaperModel(nn.Module):
 
 
 def paper_model_from_config(schema,cfg,model_class=PaperModel):
+    if cfg.get('history_encoder_variant'):
+        if model_class is not PaperModel:raise ValueError('History encoder ablations use their dedicated single-GPU model')
+        from .history_encoders import HistoryEncoderAblation
+        return HistoryEncoderAblation(schema,cfg)
     if cfg.get('prior_weight',0.)<0 or (cfg.get('prior_weight',0.)>0 and not cfg.get('collect_prior_predictions')):
         raise ValueError('nonnegative prior weight requires collected pre-update predictions')
     if cfg.get('jacobian_weight',0.)<0 or (cfg.get('jacobian_weight',0.)>0 and not cfg.get('collect_jacobian_states')):

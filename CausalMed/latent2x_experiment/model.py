@@ -83,10 +83,10 @@ class ControlledBoth(nn.Module):
 def objective(model,out,batch):
     errors=(out['prediction']-batch['values']).square()*batch['mask']
     mse=(errors.sum((0,1))/batch['mask'].sum((0,1)).clamp_min(1)).sum()
-    if getattr(model,'kind',None)=='ode_ae':
+    if getattr(model,'kind',None) in ['ode_ae','deterministic_ode_ae','healthflux']:
         kl=out['kl'];l2=model.ode_regularization();zero=mse.new_zeros(())
-        loss=mse+model.cfg.get('kl_weight',1.)*kl+.02*l2
-        return loss,{'mse':mse,'kl':kl,'weighted_kl':model.cfg.get('kl_weight',1.)*kl,'ode_l2':l2,'weighted_ode_l2':.02*l2,
+        weight=model.cfg.get('kl_weight',1.);loss=mse+weight*kl+.02*l2
+        return loss,{'mse':mse,'kl':kl,'weighted_kl':weight*kl,'ode_l2':l2,'weighted_ode_l2':.02*l2,
                      'prior_mse':zero,'weighted_prior':zero,'jacobian':zero,'weighted_jacobian':zero}
     n=out['prior_prediction'].shape[1];i=torch.arange(n,device='cuda')[None]
     mask=batch['mask'][:,:n]*((i>0)&(i<batch['cutoff'][:,None]))[...,None]
