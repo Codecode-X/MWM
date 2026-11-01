@@ -1,5 +1,7 @@
 # 当前模型方法：从纵向观测到连续状态轨迹
 
+实际使用的患者队列、模态、划分与预处理见[ADNI与MIMIC数据集文档](ADNI_MIMIC_DATASETS.zh-CN.md)。
+
 与HealthFlux-KL、ODE-AE、ODE-RNN和Latent ODE的思想、结构和训练对照，见[五类模型方法简明比较](MODEL_METHODS_COMPARISON.zh-CN.md)。
 
 ## 1. 从患者的检查记录出发

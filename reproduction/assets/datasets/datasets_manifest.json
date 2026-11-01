@@ -1,0 +1,344 @@
+{
+  "generated_at": "2026-11-01T03:39:59.117312+00:00",
+  "scope": "current cached common-task datasets",
+  "documentation_builder_sha256": "58adb1bbea97d0dbfb26199614db36dbec0651800cd7ac24454ce96cdede33ec",
+  "datasets": {
+    "adni": {
+      "cache": "/home/xjh/projects/LatentODE/paper_odeae/cache/local_available.pkl",
+      "cache_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+      "patients": 2900,
+      "fields": 40,
+      "numeric_fields": 36,
+      "categorical_fields": 4,
+      "expanded_dimensions": 49,
+      "normalization": "train_minmax",
+      "splits": {
+        "train": {
+          "dataset": "adni",
+          "split": "train",
+          "patients": 2093,
+          "observation_rows": 12544,
+          "visits_min": 2,
+          "visits_median": 5.0,
+          "visits_max": 24,
+          "visits_mean": 5.993311036789297,
+          "timestamp_span_median": 3.0006866455078125,
+          "timestamp_span_min": 0.24640655517578125,
+          "timestamp_span_max": 20.752910614013672,
+          "time_unit": "year"
+        },
+        "validation": {
+          "dataset": "adni",
+          "split": "validation",
+          "patients": 393,
+          "observation_rows": 2219,
+          "visits_min": 2,
+          "visits_median": 5.0,
+          "visits_max": 23,
+          "visits_mean": 5.646310432569974,
+          "timestamp_span_median": 3.0006790161132812,
+          "timestamp_span_min": 0.24640655517578125,
+          "timestamp_span_max": 19.496238708496094,
+          "time_unit": "year"
+        },
+        "test": {
+          "dataset": "adni",
+          "split": "test",
+          "patients": 414,
+          "observation_rows": 2402,
+          "visits_min": 2,
+          "visits_median": 5.0,
+          "visits_max": 16,
+          "visits_mean": 5.8019323671497585,
+          "timestamp_span_median": 2.997943878173828,
+          "timestamp_span_min": 0.24640655517578125,
+          "timestamp_span_max": 20.0,
+          "time_unit": "year"
+        },
+        "all": {
+          "dataset": "adni",
+          "split": "all",
+          "patients": 2900,
+          "observation_rows": 17165,
+          "visits_min": 2,
+          "visits_median": 5.0,
+          "visits_max": 24,
+          "visits_mean": 5.9189655172413795,
+          "timestamp_span_median": 3.0006866455078125,
+          "timestamp_span_min": 0.24640655517578125,
+          "timestamp_span_max": 20.752910614013672,
+          "time_unit": "year"
+        }
+      },
+      "modalities": [
+        {
+          "dataset": "adni",
+          "split": "all",
+          "modality": "人口学",
+          "fields": 5,
+          "patients": 2900,
+          "patients_with_any_observation": 2900,
+          "patients_with_at_least_two_timepoints": 2900,
+          "timepoints_with_any_observation": 17165
+        },
+        {
+          "dataset": "adni",
+          "split": "all",
+          "modality": "诊断",
+          "fields": 1,
+          "patients": 2900,
+          "patients_with_any_observation": 2897,
+          "patients_with_at_least_two_timepoints": 2788,
+          "timepoints_with_any_observation": 14608
+        },
+        {
+          "dataset": "adni",
+          "split": "all",
+          "modality": "认知与神经心理",
+          "fields": 27,
+          "patients": 2900,
+          "patients_with_any_observation": 2900,
+          "patients_with_at_least_two_timepoints": 2781,
+          "timepoints_with_any_observation": 14951
+        },
+        {
+          "dataset": "adni",
+          "split": "all",
+          "modality": "MRI海马体积变化",
+          "fields": 1,
+          "patients": 2900,
+          "patients_with_any_observation": 2834,
+          "patients_with_at_least_two_timepoints": 2227,
+          "timepoints_with_any_observation": 11118
+        },
+        {
+          "dataset": "adni",
+          "split": "all",
+          "modality": "淀粉样PET",
+          "fields": 1,
+          "patients": 2900,
+          "patients_with_any_observation": 2051,
+          "patients_with_at_least_two_timepoints": 1059,
+          "timepoints_with_any_observation": 4246
+        },
+        {
+          "dataset": "adni",
+          "split": "all",
+          "modality": "tau PET",
+          "fields": 1,
+          "patients": 2900,
+          "patients_with_any_observation": 1344,
+          "patients_with_at_least_two_timepoints": 542,
+          "timepoints_with_any_observation": 2280
+        },
+        {
+          "dataset": "adni",
+          "split": "all",
+          "modality": "APOE遗传",
+          "fields": 1,
+          "patients": 2900,
+          "patients_with_any_observation": 2789,
+          "patients_with_at_least_two_timepoints": 2789,
+          "timepoints_with_any_observation": 16873
+        },
+        {
+          "dataset": "adni",
+          "split": "all",
+          "modality": "脑脊液CSF",
+          "fields": 3,
+          "patients": 2900,
+          "patients_with_any_observation": 1635,
+          "patients_with_at_least_two_timepoints": 837,
+          "timepoints_with_any_observation": 3146
+        }
+      ],
+      "normalization_fit": "train only",
+      "patient_partition_check": "passed",
+      "training_artifact_cache_hash_verified": true,
+      "original_split_counts": {
+        "train": 2199,
+        "test": 446,
+        "validation": 420
+      },
+      "split_file": "/data/SAMSUNG_backup/ADNI_data/ADNI_multimodal_timeline/indexes/patient_splits.csv",
+      "split_file_sha256": "6c99ff86950d34ce9733e8d7dd2b7b436e0d9bfa9efcd8b3019785e9f3f4e09a",
+      "excluded": {
+        "fewer_than_two_dated_quarters_or_invalid_age": 165
+      },
+      "source_files": [
+        {
+          "path": "/data/SAMSUNG_backup/ADNI_data/Enrollment/PTDEMOG_18Oct2026.csv",
+          "sha256": "cb8c521ba184fdc4a4c7da4357968ea10c17d9a029da33e9d37c8795b6be3eba"
+        },
+        {
+          "path": "/data/SAMSUNG_backup/ADNI_data/Biospecimen/APOERES_17Oct2026.csv",
+          "sha256": "d1b0107241a2e804bbe2179ac2d039831995e1d8c0156d884290dc03580990c0"
+        },
+        {
+          "path": "/data/SAMSUNG_backup/ADNI_data/Neuropsychological/MMSE_17Oct2026.csv",
+          "sha256": "de54694e4a518100ca0a024190059ac0ba1d7ec3a4b52676f16aed810bb55e5a"
+        },
+        {
+          "path": "/data/SAMSUNG_backup/ADNI_data/Neuropsychological/CDR_17Oct2026.csv",
+          "sha256": "4e303b2e42790fcb106dd6e999674d0216e916221d2194086df86cc99ffa2f8a"
+        },
+        {
+          "path": "/data/SAMSUNG_backup/ADNI_data/Neuropsychological/ADAS_17Oct2026.csv",
+          "sha256": "6ce7b140580d2130cae70fc18dac446bc1afcc899a4e03d030f19d1370ead569"
+        },
+        {
+          "path": "/data/SAMSUNG_backup/ADNI_data/Neuropsychological/NEUROBAT_17Oct2026.csv",
+          "sha256": "8b01a82892e21df87bd46e7cbd6fe35ef703c0dcd5ba99aabfdcefaccd038133"
+        },
+        {
+          "path": "/data/SAMSUNG_backup/ADNI_data/MRI_PET_csv/PET/All_Subjects_UPENNBIOMK_ROCHE_ELECSYS_17Oct2026.csv",
+          "sha256": "99b20a91f7c4d102ad1d27837aa2752dfee6c507df1813770db473f380d77297"
+        },
+        {
+          "path": "/data/SAMSUNG_backup/ADNI_data/Enrollment/DXSUM_16Oct2026.csv",
+          "sha256": "7c319904c6c25a616de3139894865e6874df79afe57617bed387708b8d940b6d"
+        },
+        {
+          "path": "/data/SAMSUNG_backup/ADNI_data/MRI_PET_csv/All_Subjects_UCSFFSX7_17Oct2026.csv",
+          "sha256": "638851a59fbfed12d75ca758098bbd677da03ab4f435f06a9236be4f4d8f9c78"
+        },
+        {
+          "path": "/data/SAMSUNG_backup/ADNI_data/MRI_PET_csv/PET/All_Subjects_UCBERKELEY_AMY_6MM_17Oct2026.csv",
+          "sha256": "652c77c54aed61d905bc76e6cc6bef6503425aa270c44a094e77f849a987c7e0"
+        },
+        {
+          "path": "/data/SAMSUNG_backup/ADNI_data/MRI_PET_csv/PET/All_Subjects_UCBERKELEY_TAU_6MM_17Oct2026.csv",
+          "sha256": "5d5061df051e044796f9974e33274c57edf69d14aad40d8ca2a234ca01bda3c0"
+        }
+      ]
+    },
+    "mimic": {
+      "cache": "/data/MIMIC/derived/latentode_iv31/dataset.pkl",
+      "cache_sha256": "67944547ee256643fb3cdc66188fa2dc77c25d5b9182d225d3eb470404491897",
+      "patients": 30702,
+      "fields": 31,
+      "numeric_fields": 27,
+      "categorical_fields": 4,
+      "expanded_dimensions": 44,
+      "normalization": "train_minmax",
+      "splits": {
+        "train": {
+          "dataset": "mimic",
+          "split": "train",
+          "patients": 21517,
+          "observation_rows": 828033,
+          "visits_min": 14,
+          "visits_median": 39.0,
+          "visits_max": 48,
+          "visits_mean": 38.482734581958454,
+          "timestamp_span_median": 47.0,
+          "timestamp_span_min": 33.0,
+          "timestamp_span_max": 47.0,
+          "time_unit": "hour"
+        },
+        "validation": {
+          "dataset": "mimic",
+          "split": "validation",
+          "patients": 4649,
+          "observation_rows": 179406,
+          "visits_min": 17,
+          "visits_median": 39.0,
+          "visits_max": 48,
+          "visits_mean": 38.59023445902345,
+          "timestamp_span_median": 47.0,
+          "timestamp_span_min": 36.0,
+          "timestamp_span_max": 47.0,
+          "time_unit": "hour"
+        },
+        "test": {
+          "dataset": "mimic",
+          "split": "test",
+          "patients": 4536,
+          "observation_rows": 174203,
+          "visits_min": 14,
+          "visits_median": 39.0,
+          "visits_max": 48,
+          "visits_mean": 38.404541446208114,
+          "timestamp_span_median": 47.0,
+          "timestamp_span_min": 38.0,
+          "timestamp_span_max": 47.0,
+          "time_unit": "hour"
+        },
+        "all": {
+          "dataset": "mimic",
+          "split": "all",
+          "patients": 30702,
+          "observation_rows": 1181642,
+          "visits_min": 14,
+          "visits_median": 39.0,
+          "visits_max": 48,
+          "visits_mean": 38.4874601003192,
+          "timestamp_span_median": 47.0,
+          "timestamp_span_min": 33.0,
+          "timestamp_span_max": 47.0,
+          "time_unit": "hour"
+        }
+      },
+      "modalities": [
+        {
+          "dataset": "mimic",
+          "split": "all",
+          "modality": "生命体征与体重",
+          "fields": 9,
+          "patients": 30702,
+          "patients_with_any_observation": 30688,
+          "patients_with_at_least_two_timepoints": 30686,
+          "timepoints_with_any_observation": 1094772
+        },
+        {
+          "dataset": "mimic",
+          "split": "all",
+          "modality": "化验",
+          "fields": 18,
+          "patients": 30702,
+          "patients_with_any_observation": 30564,
+          "patients_with_at_least_two_timepoints": 30392,
+          "timepoints_with_any_observation": 313923
+        },
+        {
+          "dataset": "mimic",
+          "split": "all",
+          "modality": "GCS意识状态",
+          "fields": 3,
+          "patients": 30702,
+          "patients_with_any_observation": 30686,
+          "patients_with_at_least_two_timepoints": 30683,
+          "timepoints_with_any_observation": 395644
+        },
+        {
+          "dataset": "mimic",
+          "split": "all",
+          "modality": "性别",
+          "fields": 1,
+          "patients": 30702,
+          "patients_with_any_observation": 30702,
+          "patients_with_at_least_two_timepoints": 0,
+          "timepoints_with_any_observation": 30702
+        }
+      ],
+      "normalization_fit": "train only",
+      "patient_partition_check": "passed",
+      "training_artifact_cache_hash_verified": true,
+      "revision": "chronology_v2",
+      "selection_audit": {
+        "all_icu_stays": 94458,
+        "unique_first_icu_patients": 65366,
+        "adult_first_icu": 65366,
+        "first_icu_at_least48h": 31142,
+        "candidate_by_split": {
+          "train": 21826,
+          "validation": 4715,
+          "test": 4601
+        },
+        "first_stay_rule": "earliest ICU stay per subject before LOS filtering; never select a later eligible stay"
+      },
+      "excluded_observation_support": 70,
+      "excluded_chronology": 370
+    }
+  }
+}

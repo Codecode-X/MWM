@@ -1,5 +1,7 @@
 # MIMIC：历史读取方向与ODE编码作用的等参数消融
 
+本页为旧方案记录。旧注意力组及旧反向组已按用户要求停止。正向与反向两组重新采用单卡完整batch 128、无梯度累积训练，见[新方案](DIRECTION_FULL_BATCH.zh-CN.md)与[新结果](results/direction_full_batch_cuda/summary.md)。
+
 ## 1. 从ADNI继续验证两个问题
 
 [ADNI实验](../paper_odeae/results/latent2x_history_encoder_ablation/summary.md)已经完成正向ODE、反向共享ODE、注意力加时间编码三组比较。本轮把同样的两个消融接入MIMIC，研究这些设计在小时级生理记录中的作用。

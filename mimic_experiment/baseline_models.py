@@ -66,6 +66,9 @@ class ICUBaseline(BaselineModel):
 
 
 def make_model(schema,cfg,normalization=None):
+    if cfg.get('capacity_matched'):
+        from capacity_matched.models import make_model as matched_model
+        return matched_model(schema,cfg)
     if cfg['model']=='healthflux':
         from .healthflux_icu import HealthFluxICU
         return HealthFluxICU(schema,cfg,normalization)

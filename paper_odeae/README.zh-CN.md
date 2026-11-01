@@ -4,7 +4,11 @@
 
 当前 latent2x both 的通用结构、训练及测试方法见[当前模型方法详解](../reproduction/CURRENT_MODEL_METHOD.zh-CN.md)，包含ADNI和MIMIC真实病例的逐步说明。
 
+当前实验使用的ADNI 40字段、MIMIC 31字段及其队列、划分和预处理见[数据集文档](../reproduction/ADNI_MIMIC_DATASETS.zh-CN.md)。
+
 latent2x both、HealthFlux-KL、ODE-AE、ODE-RNN和Latent ODE的建模思想、结构与训练策略，见[五类模型方法简明比较](../reproduction/MODEL_METHODS_COMPARISON.zh-CN.md)。
+
+新增概率ODE-AE、ODE-RNN、Latent ODE与latent2x both的同预算比较：ADNI各44,875参数，MIMIC各43,280参数，排队使用空闲GPU。见[容量设计与总队列](../capacity_matched/README.zh-CN.md)及[ADNI原容量与同预算结果](results/baselines_matched_latent2x/summary.md)。
 
 latent2x both 的[低维流形假设与黎曼几何约束实验](results/latent2x_both_manifold/report.zh-CN.md)已完成ADNI和MIMIC诊断：包括患者独立维度估计、Gaussian与已知流形对照、同步推演参考点云、临床Fisher度量，以及验证集选型的冻结投影测试。
 

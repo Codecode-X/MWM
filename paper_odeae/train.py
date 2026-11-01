@@ -78,7 +78,7 @@ def main():
     cfg['smoke']=args.smoke
     if not torch.cuda.is_available() or os.environ.get('CUDA_VISIBLE_DEVICES') not in ['0','1','2','3']:
         raise RuntimeError('assign one physical CUDA GPU 0/1/2/3; CPU fallback is disabled')
-    if cfg.get('history_encoder_variant') and (Path(sys.prefix).name!='ode' or os.environ['CUDA_VISIBLE_DEVICES']!=str(cfg['physical_gpu'])):
+    if (cfg.get('history_encoder_variant') or cfg.get('capacity_matched')) and (Path(sys.prefix).name!='ode' or os.environ['CUDA_VISIBLE_DEVICES']!=str(cfg['physical_gpu'])):
         raise RuntimeError('History encoder experiments require the ode environment and the assigned physical GPU')
     torch.set_num_threads(1);seed_all(cfg['seed'])
     path=Path(cfg['data']);payload=pickle.loads(path.read_bytes())
@@ -101,7 +101,10 @@ def main():
                           'mask':s['mask'][:4],'dates':s['dates'][:4]} for s in splits[key][:n]]
     if any(not seqs for seqs in splits.values()):raise ValueError('each patient split must be nonempty')
     output=Path(cfg['output']);output.mkdir(parents=True,exist_ok=True)
-    if cfg['model'] in ['latent_ode','ode_rnn']:
+    if cfg.get('capacity_matched'):
+        from capacity_matched.models import make_model
+        model=make_model(schema,cfg).cuda()
+    elif cfg['model'] in ['latent_ode','ode_rnn']:
         from .baselines import BaselineModel
         model=BaselineModel(schema,cfg['model'],cfg['latent'],cfg['encoder_hidden'],cfg['ode_width'],cfg['rtol'],cfg['atol']).cuda()
     else:
@@ -115,6 +118,12 @@ def main():
                   'parameter_device':str(next(model.parameters()).device),'parameters':sum(p.numel() for p in model.parameters()),
                   'trainable_parameters':sum(p.numel() for p in model.parameters() if p.requires_grad),
                   'torch_version':torch.__version__,'dataset_sha256':hashlib.sha256(path.read_bytes()).hexdigest()}
+        if cfg.get('capacity_matched'):
+            hardware.update(environment=Path(sys.prefix).name,capacity_matched=True,target_parameters=cfg['target_parameters'],
+                            parameter_breakdown={name:sum(p.numel() for p in child.parameters()) for name,child in model.named_children()},
+                            capacity_definition='total = trainable = task-used parameters; binary classifier removed',
+                            kl_weight=cfg['kl_weight'],l2_weight=cfg['l2_weight'])
+            (output/'hardware.json').write_text(json.dumps(hardware,indent=2))
         if cfg.get('study') in ['forward_age_scaling','shared_matched_scaling','shared_matched_prior_single','shared_matched_jacobian_single','latent2x_loss_ablation','latent2x_history_encoder_ablation']:
             import inspect
             hardware['model_source_sha256']=hashlib.sha256(Path(inspect.getfile(PaperModel)).read_bytes()).hexdigest()
@@ -183,6 +192,7 @@ def main():
                 tracker.batch(loss, scheduler.get_last_lr()[0], mse=mse, cce=cce, kl=out['kl'], l2=l2, gradient_norm=grad_norm,prior_mse=pmse,prior_cce=pcce,weighted_prior=cfg.get('prior_weight',0.)*(pmse+pcce),jacobian_frobenius_squared=jac,weighted_jacobian=cfg.get('jacobian_weight',0.)*jac)
                 hardware['actual_tensor_devices']={k:str(b[k].device) for k in ['values','ages','mask','context_mask']}
                 hardware['prediction_device']=str(out['prediction'].device)
+                if cfg.get('capacity_matched') and steps==1:(output/'hardware.json').write_text(json.dumps(hardware,indent=2))
             val=evaluate(model,splits['validation'],schema,cfg['batch_size'])
             score=val['overall']['reconstruction_error']
             row={'epoch':epoch,'optimizer_steps':steps,'training_loss':total/batches,'lr':scheduler.get_last_lr()[0],

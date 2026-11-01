@@ -1,0 +1,29 @@
+{
+  "physical_gpu": "3",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "parameter_device": "cuda:0",
+  "parameters": 44875,
+  "trainable_parameters": 44875,
+  "torch_version": "2.5.1+cu121",
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "environment": "ode",
+  "capacity_matched": true,
+  "target_parameters": 44875,
+  "parameter_breakdown": {
+    "core": 44875
+  },
+  "capacity_definition": "total = trainable = task-used parameters; binary classifier removed",
+  "kl_weight": 1.0,
+  "l2_weight": 0.02,
+  "network_source": "src.model via paper_odeae.baselines",
+  "time_unit": "decade, relative to first observation",
+  "posterior_anchor": "history cutoff",
+  "interpolation_semantics": "cutoff-conditioned reconstruction",
+  "actual_tensor_devices": {
+    "values": "cuda:0",
+    "ages": "cuda:0",
+    "mask": "cuda:0",
+    "context_mask": "cuda:0"
+  },
+  "prediction_device": "cuda:0"
+}

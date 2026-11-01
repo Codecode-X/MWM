@@ -1,8 +1,14 @@
 # MIMIC-IV 数据整理与 latent2x both 实验
 
+最新方向对照将正向latent2x both与反向共享ODE同时重新训练，均为单卡完整batch 128、无梯度累积，分别使用GPU 3和2。旧注意力及旧反向实验已停止并保留记录。见[整批训练设计](DIRECTION_FULL_BATCH.zh-CN.md)与[新单卡实时比较](results/direction_full_batch_cuda/summary.md)。
+
 模型结构、训练损失和测试流程的通用讲解，见[当前模型方法详解](../reproduction/CURRENT_MODEL_METHOD.zh-CN.md)。该文最后分别用ADNI和MIMIC真实病例展开说明。
 
+两套数据的患者筛选、模态覆盖、划分和预处理统一记录在[ADNI与MIMIC数据集文档](../reproduction/ADNI_MIMIC_DATASETS.zh-CN.md)。
+
 五种对照方法的建模思想、结构和训练区别，见[五类模型方法简明比较](../reproduction/MODEL_METHODS_COMPARISON.zh-CN.md)。
+
+概率ODE-AE、ODE-RNN、Latent ODE新增43,280参数同预算版本，按空闲GPU排队运行。见[设计与总队列](../capacity_matched/README.zh-CN.md)及[MIMIC原容量与同预算比较](results/baselines_matched_latent2x/summary.md)。
 
 新增与ADNI对应的历史编码消融：反向共享ODE、因果注意力加小时编码。三组均为28维状态、43,280参数，新增两组分别在GPU 2、3单卡运行。见[实验设计](HISTORY_ENCODER_ABLATION.zh-CN.md)与[三组实时比较](results/history_encoder_ablation_cuda/summary.md)。
 

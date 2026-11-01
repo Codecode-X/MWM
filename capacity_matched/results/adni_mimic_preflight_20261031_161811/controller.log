@@ -1,0 +1,11 @@
+All six architecture checks: physical GPU 0, PID 4155055
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/xjh/projects/LatentODE/capacity_matched/study.py", line 197, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/xjh/projects/LatentODE/capacity_matched/study.py", line 146, in main
+    if worker.returncode or not (out/'architecture_checks.json').exists():raise RuntimeError('Architecture checks failed; inspect architecture_checks.log')
+                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Architecture checks failed; inspect architecture_checks.log

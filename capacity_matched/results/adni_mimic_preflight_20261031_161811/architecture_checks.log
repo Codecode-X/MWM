@@ -1,0 +1,21 @@
+{"dataset": "adni", "model": "ode_ae", "parameters": 44875, "physical_gpu": 0, "checks": "passed"}
+{"dataset": "mimic", "model": "ode_ae", "parameters": 43280, "physical_gpu": 0, "checks": "passed"}
+{"dataset": "adni", "model": "ode_rnn", "parameters": 44875, "physical_gpu": 0, "checks": "passed"}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/xjh/projects/LatentODE/capacity_matched/results/adni_mimic/source_snapshot/capacity_matched/checks.py", line 90, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/xjh/projects/LatentODE/capacity_matched/results/adni_mimic/source_snapshot/capacity_matched/checks.py", line 85, in main
+    run(cfg,payloads[name],output,args.gpu);torch.cuda.empty_cache()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/projects/LatentODE/capacity_matched/results/adni_mimic/source_snapshot/capacity_matched/checks.py", line 43, in run
+    torch.testing.assert_close(original['mu'],other['mu'],rtol=0,atol=0)
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1530, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not equal!
+
+Mismatched elements: 90 / 152 (59.2%)
+Greatest absolute difference: 5.960464477539063e-08 at index (0, 17)
+Greatest relative difference: 1.161923137260601e-05 at index (0, 18)

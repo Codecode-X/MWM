@@ -76,7 +76,8 @@ def collect(out):
     for key,path in [('reference',REFERENCE/'seed_0')]+[(v,out/v/'seed_0') for v in GPUS]:
         history=read(path/'history.json',[]);result=read(path/'metrics.json');best=min(history,key=lambda x:x['validation']['overall']['reconstruction_error']) if history else None
         state=queue.get('jobs',{}).get(key,{})
-        rows.append({'key':key,'name':NAMES[key],'path':str(path),'status':'complete' if result else state.get('status','waiting'),
+        stopped=read(path/'stopped_by_user.json')
+        rows.append({'key':key,'name':NAMES[key],'path':str(path),'status':'stopped_by_user' if stopped else 'complete' if result else state.get('status','waiting'),
                      'phase':state.get('phase','training'),'epochs':result['epochs_run'] if result else len(history),
                      'best_epoch':result['best_epoch'] if result else best['epoch'] if best else None,
                      'validation':result['validation'] if result else best['validation'] if best else None,
@@ -102,6 +103,8 @@ def report(out,manifest):
            '保留0.01 weak prior、0.01 Jacobian、0.02 ODE L2；Adam学习率0.003及原衰减，最多300轮、至少50轮、早停耐心40轮。验证整体数据误差选模，重新载入最佳检查点后测试，全部训练接入SwanLab。','',
            '## 3. 训练进度与主要结果','',
            '| 模型 | 阶段 | 已训练 / 最佳轮次 | 验证整体 | 测试历史 | 测试未来 | 测试整体 | 未来数值标准化MSE |','|---|---|---:|---:|---:|---:|---:|---:|']
+    if any(row['status']=='stopped_by_user' for row in rows):
+        lines[2:2]=['注意力组及旧反向组已按用户要求停止，检查点和日志保留。正向与反向的新一轮单卡训练统一使用完整batch 128、一次反向传播、无梯度累积，见[新实验实时比较](../direction_full_batch_cuda/summary.md)。','']
     for row in rows:
         v=row['validation'];t=row['result']['test'] if row['result'] else None
         values=[row['name'],row['status']+(f" / {row['phase']}" if row['status']!='complete' else ''),f"{row['epochs']} / {row['best_epoch'] or '—'}",num(v['overall']['reconstruction_error'] if v else None)]
@@ -189,6 +192,8 @@ def main():
     try:
         for stage in ['checks','smoke','training']:
             for key,cfg in configs.items():
+                if (Path(cfg['output'])/'stopped_by_user.json').exists():
+                    state['jobs'][key].update(status='stopped_by_user',phase='user_stopped');continue
                 folder=Path(cfg['output']) if stage=='training' else out/'checks'/key/stage;folder.mkdir(parents=True,exist_ok=True)
                 expected=folder/('checks.json' if stage=='checks' else 'metrics.json')
                 if expected.exists():
@@ -217,7 +222,7 @@ def main():
                     atomic(out/'queue.json',state);print(f'{key}: {stage} passed',flush=True)
                 if time.monotonic()-last>=30:report(out,manifest);last=time.monotonic()
                 time.sleep(2)
-        state.update(status='complete',finished_at=datetime.now(timezone.utc).isoformat());atomic(out/'queue.json',state);report(out,manifest)
+        state.update(status='stopped_by_user' if any(j['status']=='stopped_by_user' for j in state['jobs'].values()) else 'complete',finished_at=datetime.now(timezone.utc).isoformat());atomic(out/'queue.json',state);report(out,manifest)
     except BaseException as exc:
         state.update(status='failed',error=repr(exc),finished_at=datetime.now(timezone.utc).isoformat())
         for key in workers:state['jobs'][key]['status']='interrupted'

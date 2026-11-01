@@ -8,6 +8,9 @@
 当前 latent2x both 的模型结构、训练损失和测试流程见
 [当前模型方法详解](reproduction/CURRENT_MODEL_METHOD.zh-CN.md)，末尾分别用ADNI和MIMIC的真实病例说明完整过程。
 
+当前ADNI与MIMIC的队列筛选、使用模态、患者分组、时间聚合和缺失处理见
+[数据集文档](reproduction/ADNI_MIMIC_DATASETS.zh-CN.md)，包含从实际缓存重新统计的人数、时间点数和模态覆盖表。
+
 latent2x both 在ADNI和MIMIC上的[低维流形与黎曼几何诊断](paper_odeae/results/latent2x_both_manifold/report.zh-CN.md)包含局部维度、同协方差对照、ODE点云搬运、临床度量及冻结投影的真实预测比较。
 
 ADNI 多模态纵向预测实验的特征提取、冻结 MedicalNet 编码器、患者切分和 GPU 训练协议见
