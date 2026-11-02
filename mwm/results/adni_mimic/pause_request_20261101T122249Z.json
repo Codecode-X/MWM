@@ -1,0 +1,64 @@
+{
+  "requested_at": "2026-11-01T12:22:49.260022+00:00",
+  "reason": "return to latent2x both; pause all MWM and resume matched baselines",
+  "previous_queue": {
+    "pid": 857974,
+    "start_time": "105190051",
+    "status": "running",
+    "gpus": [
+      0,
+      1,
+      3,
+      2
+    ],
+    "active_datasets": [
+      "adni",
+      "mimic"
+    ],
+    "reserved_gpus": [],
+    "started_at": "2026-11-01T10:49:11.972934+00:00",
+    "jobs": {
+      "mimic_main": {
+        "status": "running",
+        "phase": "training",
+        "physical_gpu": 2,
+        "pid": 826142,
+        "adopted_at": "2026-11-01T10:49:15.374638+00:00"
+      },
+      "adni_main": {
+        "status": "complete",
+        "phase": "tested"
+      },
+      "mimic_A": {
+        "status": "paused_by_user",
+        "phase": "user_paused"
+      },
+      "adni_A": {
+        "status": "complete",
+        "phase": "tested"
+      },
+      "mimic_B": {
+        "status": "paused_by_user",
+        "phase": "user_paused"
+      },
+      "adni_B": {
+        "status": "complete",
+        "phase": "tested"
+      },
+      "adni_A_batch32": {
+        "status": "running",
+        "phase": "training",
+        "physical_gpu": 0,
+        "pid": 857708,
+        "adopted_at": "2026-11-01T10:49:15.392518+00:00"
+      },
+      "adni_B_batch32": {
+        "status": "running",
+        "phase": "training",
+        "physical_gpu": 1,
+        "pid": 857709,
+        "adopted_at": "2026-11-01T10:49:15.409346+00:00"
+      }
+    }
+  }
+}

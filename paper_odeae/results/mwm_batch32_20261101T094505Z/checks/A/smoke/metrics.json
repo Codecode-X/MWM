@@ -1,0 +1,2610 @@
+{
+  "status": "cuda_smoke_passed",
+  "best_epoch": 1,
+  "epochs_run": 1,
+  "checkpoint_selection": "unweighted causal overall MSE + CE; no A weights or B NLL",
+  "causal_validation": {
+    "overall": {
+      "reconstruction_error": 9.273934553328663,
+      "sum_feature_mse": 5.075670984129525,
+      "sum_feature_cce": 4.198263569199138,
+      "observed_scalars": 3189,
+      "per_field": {
+        "sex": {
+          "loss": 0.6971108955249452,
+          "observations": 114
+        },
+        "age": {
+          "loss": 0.1609904975221868,
+          "observations": 114
+        },
+        "marital_status": {
+          "loss": 1.4570473118832237,
+          "observations": 114
+        },
+        "education_years": {
+          "loss": 0.27822919477496233,
+          "observations": 114
+        },
+        "handedness": {
+          "loss": 0.9454952039216694,
+          "observations": 114
+        },
+        "diagnosis": {
+          "loss": 1.0986101578693002,
+          "observations": 98
+        },
+        "mmse": {
+          "loss": 0.5116457085860403,
+          "observations": 95
+        },
+        "cdrsb": {
+          "loss": 0.01422588448775442,
+          "observations": 95
+        },
+        "avtot1": {
+          "loss": 0.0902739173487613,
+          "observations": 95
+        },
+        "adas_q1": {
+          "loss": 0.05276629799290707,
+          "observations": 95
+        },
+        "adas_q2": {
+          "loss": 0.010774440514413935,
+          "observations": 95
+        },
+        "adas_q3": {
+          "loss": 0.07492555819059674,
+          "observations": 95
+        },
+        "adas_q4": {
+          "loss": 0.14914988467567844,
+          "observations": 95
+        },
+        "adas_q5": {
+          "loss": 0.008788689814115826,
+          "observations": 95
+        },
+        "adas_q6": {
+          "loss": 0.05198233253077457,
+          "observations": 95
+        },
+        "adas_q7": {
+          "loss": 0.01409240019948859,
+          "observations": 95
+        },
+        "adas_q8": {
+          "loss": 0.11960484354119552,
+          "observations": 95
+        },
+        "adas_q9": {
+          "loss": 0.02367241257115414,
+          "observations": 95
+        },
+        "adas_q10": {
+          "loss": 0.02096411052503084,
+          "observations": 95
+        },
+        "adas_q11": {
+          "loss": 0.025750125081915605,
+          "observations": 95
+        },
+        "adas_q12": {
+          "loss": 0.002803108566685727,
+          "observations": 95
+        },
+        "adas_q13": {
+          "loss": 0.0394216211218583,
+          "observations": 95
+        },
+        "clock": {
+          "loss": 0.8174167030736019,
+          "observations": 95
+        },
+        "digit_forward": {
+          "loss": 0.2530199143944717,
+          "observations": 41
+        },
+        "digit_forward_length": {
+          "loss": 0.595291463340201,
+          "observations": 41
+        },
+        "digit_backward": {
+          "loss": 0.3201222768644007,
+          "observations": 41
+        },
+        "digit_backward_length": {
+          "loss": 0.09080696687465761,
+          "observations": 41
+        },
+        "category_animals": {
+          "loss": 0.16525890952662417,
+          "observations": 95
+        },
+        "category_animals_perseveration": {
+          "loss": 0.004240800832447253,
+          "observations": 95
+        },
+        "category_animals_intrusion": {
+          "loss": 0.013075886274638928,
+          "observations": 95
+        },
+        "category_vegetables": {
+          "loss": 0.2020368343446313,
+          "observations": 41
+        },
+        "category_vegetables_perseveration": {
+          "loss": 0.017095240151009907,
+          "observations": 41
+        },
+        "category_vegetables_intrusion": {
+          "loss": 0.0005380418605920746,
+          "observations": 41
+        },
+        "amyloid_cortical_suvr": {
+          "loss": 0.15068302656474866,
+          "observations": 19
+        },
+        "hippocampal_volume_change_percent": {
+          "loss": 0.1905147150943154,
+          "observations": 114
+        },
+        "apoe4_count": {
+          "loss": 0.266279655590392,
+          "observations": 114
+        },
+        "csf_abeta42": {
+          "loss": 0.024585309482756116,
+          "observations": 42
+        },
+        "csf_abeta40": {
+          "loss": 0.26045048236846924,
+          "observations": 3
+        },
+        "csf_ptau": {
+          "loss": 0.05419372944604783,
+          "observations": 42
+        }
+      }
+    },
+    "interpolation": {
+      "reconstruction_error": 9.186525401883564,
+      "sum_feature_mse": 4.987505874448262,
+      "sum_feature_cce": 4.199019527435302,
+      "observed_scalars": 1976,
+      "per_field": {
+        "sex": {
+          "loss": 0.6963911586337619,
+          "observations": 72
+        },
+        "age": {
+          "loss": 0.15958856211768258,
+          "observations": 72
+        },
+        "marital_status": {
+          "loss": 1.4589290618896484,
+          "observations": 72
+        },
+        "education_years": {
+          "loss": 0.28240301873948837,
+          "observations": 72
+        },
+        "handedness": {
+          "loss": 0.9451933966742622,
+          "observations": 72
+        },
+        "diagnosis": {
+          "loss": 1.0985059102376302,
+          "observations": 60
+        },
+        "mmse": {
+          "loss": 0.5137522467251482,
+          "observations": 58
+        },
+        "cdrsb": {
+          "loss": 0.013081187831944433,
+          "observations": 58
+        },
+        "avtot1": {
+          "loss": 0.09818906114812483,
+          "observations": 57
+        },
+        "adas_q1": {
+          "loss": 0.046936930271617154,
+          "observations": 57
+        },
+        "adas_q2": {
+          "loss": 0.010158006559338486,
+          "observations": 57
+        },
+        "adas_q3": {
+          "loss": 0.07499672237195466,
+          "observations": 57
+        },
+        "adas_q4": {
+          "loss": 0.1418661820261102,
+          "observations": 57
+        },
+        "adas_q5": {
+          "loss": 0.0075273639277408,
+          "observations": 57
+        },
+        "adas_q6": {
+          "loss": 0.05327890212075752,
+          "observations": 57
+        },
+        "adas_q7": {
+          "loss": 0.008897865027712103,
+          "observations": 57
+        },
+        "adas_q8": {
+          "loss": 0.11240723258570622,
+          "observations": 57
+        },
+        "adas_q9": {
+          "loss": 0.01687616318987127,
+          "observations": 57
+        },
+        "adas_q10": {
+          "loss": 0.018805861473083496,
+          "observations": 57
+        },
+        "adas_q11": {
+          "loss": 0.02263441838716206,
+          "observations": 57
+        },
+        "adas_q12": {
+          "loss": 0.0023476473594966686,
+          "observations": 57
+        },
+        "adas_q13": {
+          "loss": 0.038528760274251304,
+          "observations": 57
+        },
+        "clock": {
+          "loss": 0.838240104809142,
+          "observations": 57
+        },
+        "digit_forward": {
+          "loss": 0.24359657214238092,
+          "observations": 26
+        },
+        "digit_forward_length": {
+          "loss": 0.5451911412752591,
+          "observations": 26
+        },
+        "digit_backward": {
+          "loss": 0.2777838890369122,
+          "observations": 26
+        },
+        "digit_backward_length": {
+          "loss": 0.07118404370087844,
+          "observations": 26
+        },
+        "category_animals": {
+          "loss": 0.16834397901568496,
+          "observations": 57
+        },
+        "category_animals_perseveration": {
+          "loss": 0.004277486288756655,
+          "observations": 57
+        },
+        "category_animals_intrusion": {
+          "loss": 0.010887034106672857,
+          "observations": 57
+        },
+        "category_vegetables": {
+          "loss": 0.20960321793189415,
+          "observations": 26
+        },
+        "category_vegetables_perseveration": {
+          "loss": 0.020211944213280313,
+          "observations": 26
+        },
+        "category_vegetables_intrusion": {
+          "loss": 0.00042483020717134845,
+          "observations": 26
+        },
+        "amyloid_cortical_suvr": {
+          "loss": 0.15876653459337023,
+          "observations": 18
+        },
+        "hippocampal_volume_change_percent": {
+          "loss": 0.1976035171084934,
+          "observations": 72
+        },
+        "apoe4_count": {
+          "loss": 0.26717527707417804,
+          "observations": 72
+        },
+        "csf_abeta42": {
+          "loss": 0.025130175492342782,
+          "observations": 34
+        },
+        "csf_abeta40": {
+          "loss": 0.26045048236846924,
+          "observations": 2
+        },
+        "csf_ptau": {
+          "loss": 0.06635951294618495,
+          "observations": 34
+        }
+      }
+    },
+    "bootstrap": {
+      "reconstruction_error": 8.497569640535197,
+      "sum_feature_mse": 4.311251751639526,
+      "sum_feature_cce": 4.186317888895671,
+      "observed_scalars": 933,
+      "per_field": {
+        "sex": {
+          "loss": 0.6951906840006511,
+          "observations": 30
+        },
+        "age": {
+          "loss": 0.14990673065185547,
+          "observations": 30
+        },
+        "marital_status": {
+          "loss": 1.458715057373047,
+          "observations": 30
+        },
+        "education_years": {
+          "loss": 0.2768125534057617,
+          "observations": 30
+        },
+        "handedness": {
+          "loss": 0.9375616073608398,
+          "observations": 30
+        },
+        "diagnosis": {
+          "loss": 1.0948505401611328,
+          "observations": 30
+        },
+        "mmse": {
+          "loss": 0.4893262545267741,
+          "observations": 30
+        },
+        "cdrsb": {
+          "loss": 0.009147892395655314,
+          "observations": 30
+        },
+        "avtot1": {
+          "loss": 0.10882877420496058,
+          "observations": 27
+        },
+        "adas_q1": {
+          "loss": 0.034626523653666176,
+          "observations": 27
+        },
+        "adas_q2": {
+          "loss": 0.009862449434068467,
+          "observations": 27
+        },
+        "adas_q3": {
+          "loss": 0.04690980911254883,
+          "observations": 27
+        },
+        "adas_q4": {
+          "loss": 0.1233479446834988,
+          "observations": 27
+        },
+        "adas_q5": {
+          "loss": 0.009341777474791915,
+          "observations": 27
+        },
+        "adas_q6": {
+          "loss": 0.0574287043677436,
+          "observations": 27
+        },
+        "adas_q7": {
+          "loss": 0.004861543575922648,
+          "observations": 27
+        },
+        "adas_q8": {
+          "loss": 0.09303784370422363,
+          "observations": 27
+        },
+        "adas_q9": {
+          "loss": 0.009554801163850006,
+          "observations": 27
+        },
+        "adas_q10": {
+          "loss": 0.02026225902416088,
+          "observations": 27
+        },
+        "adas_q11": {
+          "loss": 0.026375048690372042,
+          "observations": 27
+        },
+        "adas_q12": {
+          "loss": 0.002013673522958049,
+          "observations": 27
+        },
+        "adas_q13": {
+          "loss": 0.040855217863012244,
+          "observations": 27
+        },
+        "clock": {
+          "loss": 0.8539882236056857,
+          "observations": 27
+        },
+        "digit_forward": {
+          "loss": 0.20289130644364792,
+          "observations": 11
+        },
+        "digit_forward_length": {
+          "loss": 0.35451867363669654,
+          "observations": 11
+        },
+        "digit_backward": {
+          "loss": 0.19448629292574796,
+          "observations": 11
+        },
+        "digit_backward_length": {
+          "loss": 0.04028752717104825,
+          "observations": 11
+        },
+        "category_animals": {
+          "loss": 0.1418699158562554,
+          "observations": 27
+        },
+        "category_animals_perseveration": {
+          "loss": 0.00397309164206187,
+          "observations": 27
+        },
+        "category_animals_intrusion": {
+          "loss": 0.008163317486091896,
+          "observations": 27
+        },
+        "category_vegetables": {
+          "loss": 0.2207376089963046,
+          "observations": 11
+        },
+        "category_vegetables_perseveration": {
+          "loss": 0.014966305006634106,
+          "observations": 11
+        },
+        "category_vegetables_intrusion": {
+          "loss": 0.00022164393555034292,
+          "observations": 11
+        },
+        "amyloid_cortical_suvr": {
+          "loss": 0.17796485126018524,
+          "observations": 16
+        },
+        "hippocampal_volume_change_percent": {
+          "loss": 0.2093212604522705,
+          "observations": 30
+        },
+        "apoe4_count": {
+          "loss": 0.26899779637654625,
+          "observations": 30
+        },
+        "csf_abeta42": {
+          "loss": 0.02371260854932997,
+          "observations": 27
+        },
+        "csf_ptau": {
+          "loss": 0.08265152683964481,
+          "observations": 27
+        }
+      }
+    },
+    "history_preupdate": {
+      "reconstruction_error": 9.338463978194408,
+      "sum_feature_mse": 5.129327424021349,
+      "sum_feature_cce": 4.20913655417306,
+      "observed_scalars": 1043,
+      "per_field": {
+        "sex": {
+          "loss": 0.6972485951014927,
+          "observations": 42
+        },
+        "age": {
+          "loss": 0.16650413331531344,
+          "observations": 42
+        },
+        "marital_status": {
+          "loss": 1.4590819222586495,
+          "observations": 42
+        },
+        "education_years": {
+          "loss": 0.28639618555704754,
+          "observations": 42
+        },
+        "handedness": {
+          "loss": 0.9506446293422154,
+          "observations": 42
+        },
+        "diagnosis": {
+          "loss": 1.1021614074707031,
+          "observations": 30
+        },
+        "mmse": {
+          "loss": 0.5399230207715716,
+          "observations": 28
+        },
+        "cdrsb": {
+          "loss": 0.0172954329422542,
+          "observations": 28
+        },
+        "avtot1": {
+          "loss": 0.08861330350240072,
+          "observations": 30
+        },
+        "adas_q1": {
+          "loss": 0.05801629225413005,
+          "observations": 30
+        },
+        "adas_q2": {
+          "loss": 0.010424007972081503,
+          "observations": 30
+        },
+        "adas_q3": {
+          "loss": 0.10027494430541992,
+          "observations": 30
+        },
+        "adas_q4": {
+          "loss": 0.15853260358174642,
+          "observations": 30
+        },
+        "adas_q5": {
+          "loss": 0.005894391735394796,
+          "observations": 30
+        },
+        "adas_q6": {
+          "loss": 0.04954408009847005,
+          "observations": 30
+        },
+        "adas_q7": {
+          "loss": 0.012530554334322612,
+          "observations": 30
+        },
+        "adas_q8": {
+          "loss": 0.12983968257904052,
+          "observations": 30
+        },
+        "adas_q9": {
+          "loss": 0.023465389013290407,
+          "observations": 30
+        },
+        "adas_q10": {
+          "loss": 0.017495103677113853,
+          "observations": 30
+        },
+        "adas_q11": {
+          "loss": 0.019267851114273073,
+          "observations": 30
+        },
+        "adas_q12": {
+          "loss": 0.0026482239365577696,
+          "observations": 30
+        },
+        "adas_q13": {
+          "loss": 0.036434948444366455,
+          "observations": 30
+        },
+        "clock": {
+          "loss": 0.8240668614705403,
+          "observations": 30
+        },
+        "digit_forward": {
+          "loss": 0.2734471003214518,
+          "observations": 15
+        },
+        "digit_forward_length": {
+          "loss": 0.6850176493326823,
+          "observations": 15
+        },
+        "digit_backward": {
+          "loss": 0.33886877695719403,
+          "observations": 15
+        },
+        "digit_backward_length": {
+          "loss": 0.09384148120880127,
+          "observations": 15
+        },
+        "category_animals": {
+          "loss": 0.19217063585917155,
+          "observations": 30
+        },
+        "category_animals_perseveration": {
+          "loss": 0.004551441470781962,
+          "observations": 30
+        },
+        "category_animals_intrusion": {
+          "loss": 0.01333837906519572,
+          "observations": 30
+        },
+        "category_vegetables": {
+          "loss": 0.20143798192342122,
+          "observations": 15
+        },
+        "category_vegetables_perseveration": {
+          "loss": 0.024058743317921957,
+          "observations": 15
+        },
+        "category_vegetables_intrusion": {
+          "loss": 0.0005738334730267525,
+          "observations": 15
+        },
+        "amyloid_cortical_suvr": {
+          "loss": 0.0051799919456243515,
+          "observations": 2
+        },
+        "hippocampal_volume_change_percent": {
+          "loss": 0.18923370043436685,
+          "observations": 42
+        },
+        "apoe4_count": {
+          "loss": 0.26587343215942383,
+          "observations": 42
+        },
+        "csf_abeta42": {
+          "loss": 0.030597931572369168,
+          "observations": 7
+        },
+        "csf_abeta40": {
+          "loss": 0.26045048236846924,
+          "observations": 2
+        },
+        "csf_ptau": {
+          "loss": 0.003518852006111826,
+          "observations": 7
+        }
+      }
+    },
+    "forecast": {
+      "reconstruction_error": 9.260050305314994,
+      "sum_feature_mse": 5.063097146087886,
+      "sum_feature_cce": 4.1969531592271085,
+      "observed_scalars": 1213,
+      "per_field": {
+        "sex": {
+          "loss": 0.6983446393694196,
+          "observations": 42
+        },
+        "age": {
+          "loss": 0.16339383806501115,
+          "observations": 42
+        },
+        "marital_status": {
+          "loss": 1.4538210914248513,
+          "observations": 42
+        },
+        "education_years": {
+          "loss": 0.27107406797863187,
+          "observations": 42
+        },
+        "handedness": {
+          "loss": 0.9460127694266183,
+          "observations": 42
+        },
+        "diagnosis": {
+          "loss": 1.098774659006219,
+          "observations": 38
+        },
+        "mmse": {
+          "loss": 0.5083436708192568,
+          "observations": 37
+        },
+        "cdrsb": {
+          "loss": 0.016020272229168867,
+          "observations": 37
+        },
+        "avtot1": {
+          "loss": 0.07840122047223543,
+          "observations": 38
+        },
+        "adas_q1": {
+          "loss": 0.06151035584901508,
+          "observations": 38
+        },
+        "adas_q2": {
+          "loss": 0.01169908909421218,
+          "observations": 38
+        },
+        "adas_q3": {
+          "loss": 0.07481881191855982,
+          "observations": 38
+        },
+        "adas_q4": {
+          "loss": 0.1600754135533383,
+          "observations": 38
+        },
+        "adas_q5": {
+          "loss": 0.010680680212221648,
+          "observations": 38
+        },
+        "adas_q6": {
+          "loss": 0.05003747187162701,
+          "observations": 38
+        },
+        "adas_q7": {
+          "loss": 0.021884206094239887,
+          "observations": 38
+        },
+        "adas_q8": {
+          "loss": 0.13040123487773694,
+          "observations": 38
+        },
+        "adas_q9": {
+          "loss": 0.0338667819374486,
+          "observations": 38
+        },
+        "adas_q10": {
+          "loss": 0.02420148724003842,
+          "observations": 38
+        },
+        "adas_q11": {
+          "loss": 0.030423685124045925,
+          "observations": 38
+        },
+        "adas_q12": {
+          "loss": 0.0034863007696051347,
+          "observations": 38
+        },
+        "adas_q13": {
+          "loss": 0.04076091239326879,
+          "observations": 38
+        },
+        "clock": {
+          "loss": 0.786181600470292,
+          "observations": 38
+        },
+        "digit_forward": {
+          "loss": 0.26935367584228515,
+          "observations": 15
+        },
+        "digit_forward_length": {
+          "loss": 0.6821319580078125,
+          "observations": 15
+        },
+        "digit_backward": {
+          "loss": 0.3935089111328125,
+          "observations": 15
+        },
+        "digit_backward_length": {
+          "loss": 0.12482004165649414,
+          "observations": 15
+        },
+        "category_animals": {
+          "loss": 0.16063129274468674,
+          "observations": 38
+        },
+        "category_animals_perseveration": {
+          "loss": 0.0041857722558473285,
+          "observations": 38
+        },
+        "category_animals_intrusion": {
+          "loss": 0.016359162958044755,
+          "observations": 38
+        },
+        "category_vegetables": {
+          "loss": 0.18892183303833007,
+          "observations": 15
+        },
+        "category_vegetables_perseveration": {
+          "loss": 0.011692955096562704,
+          "observations": 15
+        },
+        "category_vegetables_intrusion": {
+          "loss": 0.0007342753310998281,
+          "observations": 15
+        },
+        "amyloid_cortical_suvr": {
+          "loss": 0.0051799919456243515,
+          "observations": 1
+        },
+        "hippocampal_volume_change_percent": {
+          "loss": 0.1783625284830729,
+          "observations": 42
+        },
+        "apoe4_count": {
+          "loss": 0.26474434988839285,
+          "observations": 42
+        },
+        "csf_abeta42": {
+          "loss": 0.02226964198052883,
+          "observations": 8
+        },
+        "csf_abeta40": {
+          "loss": 0.26045048236846924,
+          "observations": 1
+        },
+        "csf_ptau": {
+          "loss": 0.002489172387868166,
+          "observations": 8
+        }
+      }
+    },
+    "history_semantics": "first observation after UPDATE; remaining history before UPDATE"
+  },
+  "causal_test": {
+    "overall": {
+      "reconstruction_error": 8.354078759146837,
+      "sum_feature_mse": 4.2075652601617595,
+      "sum_feature_cce": 4.146513498985077,
+      "observed_scalars": 3668,
+      "per_field": {
+        "sex": {
+          "loss": 0.7010456611370218,
+          "observations": 116
+        },
+        "age": {
+          "loss": 0.1329677516016467,
+          "observations": 116
+        },
+        "marital_status": {
+          "loss": 1.4124679565429688,
+          "observations": 116
+        },
+        "education_years": {
+          "loss": 0.19099363787420864,
+          "observations": 116
+        },
+        "handedness": {
+          "loss": 0.9425459236934267,
+          "observations": 116
+        },
+        "diagnosis": {
+          "loss": 1.0904539576116599,
+          "observations": 106
+        },
+        "mmse": {
+          "loss": 0.4351194849554098,
+          "observations": 106
+        },
+        "cdrsb": {
+          "loss": 0.04145583566629662,
+          "observations": 106
+        },
+        "avtot1": {
+          "loss": 0.08747826882128446,
+          "observations": 106
+        },
+        "adas_q1": {
+          "loss": 0.1210040236419102,
+          "observations": 106
+        },
+        "adas_q2": {
+          "loss": 0.023448377285363538,
+          "observations": 106
+        },
+        "adas_q3": {
+          "loss": 0.11217350329992906,
+          "observations": 106
+        },
+        "adas_q4": {
+          "loss": 0.27323246002197266,
+          "observations": 106
+        },
+        "adas_q5": {
+          "loss": 0.031287173055252936,
+          "observations": 106
+        },
+        "adas_q6": {
+          "loss": 0.07445097869297243,
+          "observations": 106
+        },
+        "adas_q7": {
+          "loss": 0.031109791881633254,
+          "observations": 106
+        },
+        "adas_q8": {
+          "loss": 0.11780364558381855,
+          "observations": 106
+        },
+        "adas_q9": {
+          "loss": 0.01678509644742282,
+          "observations": 106
+        },
+        "adas_q10": {
+          "loss": 0.012980208082019159,
+          "observations": 106
+        },
+        "adas_q11": {
+          "loss": 0.0824003849389418,
+          "observations": 106
+        },
+        "adas_q12": {
+          "loss": 0.03592727319249567,
+          "observations": 106
+        },
+        "adas_q13": {
+          "loss": 0.04327088032128676,
+          "observations": 106
+        },
+        "clock": {
+          "loss": 0.5604236170930682,
+          "observations": 106
+        },
+        "digit_forward": {
+          "loss": 0.16962705850601195,
+          "observations": 80
+        },
+        "digit_forward_length": {
+          "loss": 0.4648292064666748,
+          "observations": 80
+        },
+        "digit_backward": {
+          "loss": 0.2839521884918213,
+          "observations": 80
+        },
+        "digit_backward_length": {
+          "loss": 0.09787667989730835,
+          "observations": 80
+        },
+        "category_animals": {
+          "loss": 0.11470118108785378,
+          "observations": 106
+        },
+        "category_animals_perseveration": {
+          "loss": 0.004243956984214063,
+          "observations": 106
+        },
+        "category_animals_intrusion": {
+          "loss": 0.01651842864054554,
+          "observations": 106
+        },
+        "category_vegetables": {
+          "loss": 0.0709228754043579,
+          "observations": 80
+        },
+        "category_vegetables_perseveration": {
+          "loss": 0.03624837100505829,
+          "observations": 80
+        },
+        "category_vegetables_intrusion": {
+          "loss": 0.0007188483141362667,
+          "observations": 80
+        },
+        "amyloid_cortical_suvr": {
+          "loss": 0.13063527643680573,
+          "observations": 8
+        },
+        "hippocampal_volume_change_percent": {
+          "loss": 0.18509603801526522,
+          "observations": 114
+        },
+        "apoe4_count": {
+          "loss": 0.17209447663405847,
+          "observations": 116
+        },
+        "csf_abeta42": {
+          "loss": 0.007930557243525982,
+          "observations": 32
+        },
+        "csf_ptau": {
+          "loss": 0.027857724577188492,
+          "observations": 32
+        }
+      }
+    },
+    "interpolation": {
+      "reconstruction_error": 8.363383402867605,
+      "sum_feature_mse": 4.211592063469977,
+      "sum_feature_cce": 4.151791339397628,
+      "observed_scalars": 2285,
+      "per_field": {
+        "sex": {
+          "loss": 0.700089546099101,
+          "observations": 73
+        },
+        "age": {
+          "loss": 0.13240103525658176,
+          "observations": 73
+        },
+        "marital_status": {
+          "loss": 1.4194780114578873,
+          "observations": 73
+        },
+        "education_years": {
+          "loss": 0.19633395051302976,
+          "observations": 73
+        },
+        "handedness": {
+          "loss": 0.9434825949472924,
+          "observations": 73
+        },
+        "diagnosis": {
+          "loss": 1.0887411868933476,
+          "observations": 66
+        },
+        "mmse": {
+          "loss": 0.44655695828524505,
+          "observations": 66
+        },
+        "cdrsb": {
+          "loss": 0.03135720527533329,
+          "observations": 66
+        },
+        "avtot1": {
+          "loss": 0.08519357534555289,
+          "observations": 65
+        },
+        "adas_q1": {
+          "loss": 0.11783887423001803,
+          "observations": 65
+        },
+        "adas_q2": {
+          "loss": 0.021194815635681152,
+          "observations": 65
+        },
+        "adas_q3": {
+          "loss": 0.10993040524996243,
+          "observations": 65
+        },
+        "adas_q4": {
+          "loss": 0.27691923288198617,
+          "observations": 65
+        },
+        "adas_q5": {
+          "loss": 0.027942274166987493,
+          "observations": 65
+        },
+        "adas_q6": {
+          "loss": 0.07597301923311674,
+          "observations": 65
+        },
+        "adas_q7": {
+          "loss": 0.030588514988238995,
+          "observations": 65
+        },
+        "adas_q8": {
+          "loss": 0.10732892109797551,
+          "observations": 65
+        },
+        "adas_q9": {
+          "loss": 0.01406243214240441,
+          "observations": 65
+        },
+        "adas_q10": {
+          "loss": 0.009591282331026518,
+          "observations": 65
+        },
+        "adas_q11": {
+          "loss": 0.0687389740577111,
+          "observations": 65
+        },
+        "adas_q12": {
+          "loss": 0.029561813061053935,
+          "observations": 65
+        },
+        "adas_q13": {
+          "loss": 0.04026687695429875,
+          "observations": 65
+        },
+        "clock": {
+          "loss": 0.5656843919020432,
+          "observations": 65
+        },
+        "digit_forward": {
+          "loss": 0.17722095489501954,
+          "observations": 50
+        },
+        "digit_forward_length": {
+          "loss": 0.4669806671142578,
+          "observations": 50
+        },
+        "digit_backward": {
+          "loss": 0.29388429641723635,
+          "observations": 50
+        },
+        "digit_backward_length": {
+          "loss": 0.11465070724487304,
+          "observations": 50
+        },
+        "category_animals": {
+          "loss": 0.11605031673724835,
+          "observations": 65
+        },
+        "category_animals_perseveration": {
+          "loss": 0.0036907897545741153,
+          "observations": 65
+        },
+        "category_animals_intrusion": {
+          "loss": 0.014878321610964262,
+          "observations": 65
+        },
+        "category_vegetables": {
+          "loss": 0.08180870056152344,
+          "observations": 50
+        },
+        "category_vegetables_perseveration": {
+          "loss": 0.02043893814086914,
+          "observations": 50
+        },
+        "category_vegetables_intrusion": {
+          "loss": 0.000569501668214798,
+          "observations": 50
+        },
+        "amyloid_cortical_suvr": {
+          "loss": 0.13063528140385947,
+          "observations": 6
+        },
+        "hippocampal_volume_change_percent": {
+          "loss": 0.19308870611056475,
+          "observations": 71
+        },
+        "apoe4_count": {
+          "loss": 0.1705788390277183,
+          "observations": 73
+        },
+        "csf_abeta42": {
+          "loss": 0.006773636891291692,
+          "observations": 26
+        },
+        "csf_ptau": {
+          "loss": 0.03287785328351534,
+          "observations": 26
+        }
+      }
+    },
+    "bootstrap": {
+      "reconstruction_error": 8.120486033572593,
+      "sum_feature_mse": 3.9611440307039416,
+      "sum_feature_cce": 4.159342002868652,
+      "observed_scalars": 982,
+      "per_field": {
+        "sex": {
+          "loss": 0.6989593505859375,
+          "observations": 30
+        },
+        "age": {
+          "loss": 0.1260194460550944,
+          "observations": 30
+        },
+        "marital_status": {
+          "loss": 1.433792495727539,
+          "observations": 30
+        },
+        "education_years": {
+          "loss": 0.19850966135660808,
+          "observations": 30
+        },
+        "handedness": {
+          "loss": 0.9393234888712565,
+          "observations": 30
+        },
+        "diagnosis": {
+          "loss": 1.0872666676839193,
+          "observations": 30
+        },
+        "mmse": {
+          "loss": 0.45717544555664064,
+          "observations": 30
+        },
+        "cdrsb": {
+          "loss": 0.02253665526707967,
+          "observations": 30
+        },
+        "avtot1": {
+          "loss": 0.0824561629976545,
+          "observations": 28
+        },
+        "adas_q1": {
+          "loss": 0.08922289950507027,
+          "observations": 28
+        },
+        "adas_q2": {
+          "loss": 0.010208160749503545,
+          "observations": 28
+        },
+        "adas_q3": {
+          "loss": 0.08264943531581334,
+          "observations": 28
+        },
+        "adas_q4": {
+          "loss": 0.2797954423086984,
+          "observations": 28
+        },
+        "adas_q5": {
+          "loss": 0.025070313896451677,
+          "observations": 28
+        },
+        "adas_q6": {
+          "loss": 0.0809683884893145,
+          "observations": 28
+        },
+        "adas_q7": {
+          "loss": 0.021522607122148787,
+          "observations": 28
+        },
+        "adas_q8": {
+          "loss": 0.03411780510629926,
+          "observations": 28
+        },
+        "adas_q9": {
+          "loss": 0.010818977441106523,
+          "observations": 28
+        },
+        "adas_q10": {
+          "loss": 0.008351877863918031,
+          "observations": 28
+        },
+        "adas_q11": {
+          "loss": 0.05213723863874163,
+          "observations": 28
+        },
+        "adas_q12": {
+          "loss": 0.02613569370337895,
+          "observations": 28
+        },
+        "adas_q13": {
+          "loss": 0.01897978356906346,
+          "observations": 28
+        },
+        "clock": {
+          "loss": 0.5455314091273716,
+          "observations": 28
+        },
+        "digit_forward": {
+          "loss": 0.1852477788925171,
+          "observations": 20
+        },
+        "digit_forward_length": {
+          "loss": 0.43816657066345216,
+          "observations": 20
+        },
+        "digit_backward": {
+          "loss": 0.3186410188674927,
+          "observations": 20
+        },
+        "digit_backward_length": {
+          "loss": 0.18014721870422362,
+          "observations": 20
+        },
+        "category_animals": {
+          "loss": 0.11789837905338832,
+          "observations": 28
+        },
+        "category_animals_perseveration": {
+          "loss": 0.0017026854412896292,
+          "observations": 28
+        },
+        "category_animals_intrusion": {
+          "loss": 0.015424735844135284,
+          "observations": 28
+        },
+        "category_vegetables": {
+          "loss": 0.11236485242843627,
+          "observations": 20
+        },
+        "category_vegetables_perseveration": {
+          "loss": 0.003069514036178589,
+          "observations": 20
+        },
+        "category_vegetables_intrusion": {
+          "loss": 0.00015701535157859326,
+          "observations": 20
+        },
+        "hippocampal_volume_change_percent": {
+          "loss": 0.20566541807992117,
+          "observations": 28
+        },
+        "apoe4_count": {
+          "loss": 0.16289459864298503,
+          "observations": 30
+        },
+        "csf_abeta42": {
+          "loss": 0.006562735885381699,
+          "observations": 20
+        },
+        "csf_ptau": {
+          "loss": 0.04099410474300384,
+          "observations": 20
+        }
+      }
+    },
+    "history_preupdate": {
+      "reconstruction_error": 8.436512512145825,
+      "sum_feature_mse": 4.289789240497427,
+      "sum_feature_cce": 4.146723271648398,
+      "observed_scalars": 1303,
+      "per_field": {
+        "sex": {
+          "loss": 0.700878098953602,
+          "observations": 43
+        },
+        "age": {
+          "loss": 0.13685330679250318,
+          "observations": 43
+        },
+        "marital_status": {
+          "loss": 1.409490984539653,
+          "observations": 43
+        },
+        "education_years": {
+          "loss": 0.19481601271518442,
+          "observations": 43
+        },
+        "handedness": {
+          "loss": 0.9463843412177507,
+          "observations": 43
+        },
+        "diagnosis": {
+          "loss": 1.0899698469373915,
+          "observations": 36
+        },
+        "mmse": {
+          "loss": 0.43770821889241535,
+          "observations": 36
+        },
+        "cdrsb": {
+          "loss": 0.03870766030417548,
+          "observations": 36
+        },
+        "avtot1": {
+          "loss": 0.08726512419210898,
+          "observations": 37
+        },
+        "adas_q1": {
+          "loss": 0.13949420001055743,
+          "observations": 37
+        },
+        "adas_q2": {
+          "loss": 0.029509041760418867,
+          "observations": 37
+        },
+        "adas_q3": {
+          "loss": 0.13057546357850772,
+          "observations": 37
+        },
+        "adas_q4": {
+          "loss": 0.27474264196447423,
+          "observations": 37
+        },
+        "adas_q5": {
+          "loss": 0.030115649506852433,
+          "observations": 37
+        },
+        "adas_q6": {
+          "loss": 0.0721927462397395,
+          "observations": 37
+        },
+        "adas_q7": {
+          "loss": 0.03744920202203699,
+          "observations": 37
+        },
+        "adas_q8": {
+          "loss": 0.16273193101625186,
+          "observations": 37
+        },
+        "adas_q9": {
+          "loss": 0.016516938402846053,
+          "observations": 37
+        },
+        "adas_q10": {
+          "loss": 0.010529210438599458,
+          "observations": 37
+        },
+        "adas_q11": {
+          "loss": 0.08130244950990419,
+          "observations": 37
+        },
+        "adas_q12": {
+          "loss": 0.032154553645365944,
+          "observations": 37
+        },
+        "adas_q13": {
+          "loss": 0.056376025483414936,
+          "observations": 37
+        },
+        "clock": {
+          "loss": 0.5809352462356155,
+          "observations": 37
+        },
+        "digit_forward": {
+          "loss": 0.1718697230021159,
+          "observations": 30
+        },
+        "digit_forward_length": {
+          "loss": 0.48619006474812826,
+          "observations": 30
+        },
+        "digit_backward": {
+          "loss": 0.27737979888916015,
+          "observations": 30
+        },
+        "digit_backward_length": {
+          "loss": 0.07098636627197266,
+          "observations": 30
+        },
+        "category_animals": {
+          "loss": 0.11465178309260188,
+          "observations": 37
+        },
+        "category_animals_perseveration": {
+          "loss": 0.005195301126789402,
+          "observations": 37
+        },
+        "category_animals_intrusion": {
+          "loss": 0.014464818142555855,
+          "observations": 37
+        },
+        "category_vegetables": {
+          "loss": 0.06143792470296224,
+          "observations": 30
+        },
+        "category_vegetables_perseveration": {
+          "loss": 0.03201855421066284,
+          "observations": 30
+        },
+        "category_vegetables_intrusion": {
+          "loss": 0.0008444925770163536,
+          "observations": 30
+        },
+        "amyloid_cortical_suvr": {
+          "loss": 0.13063528140385947,
+          "observations": 6
+        },
+        "hippocampal_volume_change_percent": {
+          "loss": 0.18489923033603403,
+          "observations": 43
+        },
+        "apoe4_count": {
+          "loss": 0.175939959149028,
+          "observations": 43
+        },
+        "csf_abeta42": {
+          "loss": 0.007476640244325002,
+          "observations": 6
+        },
+        "csf_ptau": {
+          "loss": 0.005823679889241855,
+          "observations": 6
+        }
+      }
+    },
+    "forecast": {
+      "reconstruction_error": 8.324507363349563,
+      "sum_feature_mse": 4.187036151006835,
+      "sum_feature_cce": 4.137471212342728,
+      "observed_scalars": 1383,
+      "per_field": {
+        "sex": {
+          "loss": 0.7026687888211982,
+          "observations": 43
+        },
+        "age": {
+          "loss": 0.13392985144326852,
+          "observations": 43
+        },
+        "marital_status": {
+          "loss": 1.400566810785338,
+          "observations": 43
+        },
+        "education_years": {
+          "loss": 0.18192749245222226,
+          "observations": 43
+        },
+        "handedness": {
+          "loss": 0.9409555834393168,
+          "observations": 43
+        },
+        "diagnosis": {
+          "loss": 1.093280029296875,
+          "observations": 40
+        },
+        "mmse": {
+          "loss": 0.41624755859375,
+          "observations": 40
+        },
+        "cdrsb": {
+          "loss": 0.05811856389045715,
+          "observations": 40
+        },
+        "avtot1": {
+          "loss": 0.09110035547396032,
+          "observations": 41
+        },
+        "adas_q1": {
+          "loss": 0.12602192018090225,
+          "observations": 41
+        },
+        "adas_q2": {
+          "loss": 0.027021094066340748,
+          "observations": 41
+        },
+        "adas_q3": {
+          "loss": 0.11572968087545256,
+          "observations": 41
+        },
+        "adas_q4": {
+          "loss": 0.2673875762195122,
+          "observations": 41
+        },
+        "adas_q5": {
+          "loss": 0.03659005862910573,
+          "observations": 41
+        },
+        "adas_q6": {
+          "loss": 0.07203797596256907,
+          "observations": 41
+        },
+        "adas_q7": {
+          "loss": 0.031936203561178066,
+          "observations": 41
+        },
+        "adas_q8": {
+          "loss": 0.13440990447998047,
+          "observations": 41
+        },
+        "adas_q9": {
+          "loss": 0.021101515467573956,
+          "observations": 41
+        },
+        "adas_q10": {
+          "loss": 0.01835289379445518,
+          "observations": 41
+        },
+        "adas_q11": {
+          "loss": 0.10405871926284418,
+          "observations": 41
+        },
+        "adas_q12": {
+          "loss": 0.04601885923525182,
+          "observations": 41
+        },
+        "adas_q13": {
+          "loss": 0.048033339221303054,
+          "observations": 41
+        },
+        "clock": {
+          "loss": 0.5520835504299257,
+          "observations": 41
+        },
+        "digit_forward": {
+          "loss": 0.1569705645243327,
+          "observations": 30
+        },
+        "digit_forward_length": {
+          "loss": 0.4612434387207031,
+          "observations": 30
+        },
+        "digit_backward": {
+          "loss": 0.2673987706502279,
+          "observations": 30
+        },
+        "digit_backward_length": {
+          "loss": 0.06991996765136718,
+          "observations": 30
+        },
+        "category_animals": {
+          "loss": 0.11256229586717559,
+          "observations": 41
+        },
+        "category_animals_perseveration": {
+          "loss": 0.005120929421448126,
+          "observations": 41
+        },
+        "category_animals_intrusion": {
+          "loss": 0.019118596867817205,
+          "observations": 41
+        },
+        "category_vegetables": {
+          "loss": 0.05277984142303467,
+          "observations": 30
+        },
+        "category_vegetables_perseveration": {
+          "loss": 0.06259742975234986,
+          "observations": 30
+        },
+        "category_vegetables_intrusion": {
+          "loss": 0.0009677593906720479,
+          "observations": 30
+        },
+        "amyloid_cortical_suvr": {
+          "loss": 0.13063527643680573,
+          "observations": 2
+        },
+        "hippocampal_volume_change_percent": {
+          "loss": 0.17189885294714638,
+          "observations": 43
+        },
+        "apoe4_count": {
+          "loss": 0.17466759127239848,
+          "observations": 43
+        },
+        "csf_abeta42": {
+          "loss": 0.012943881253401438,
+          "observations": 6
+        },
+        "csf_ptau": {
+          "loss": 0.006103841587901115,
+          "observations": 6
+        }
+      }
+    },
+    "history_semantics": "first observation after UPDATE; remaining history before UPDATE"
+  },
+  "checkpoint_reload_difference": 0.0,
+  "training_batch_size": 32,
+  "gradient_accumulation_steps": 1,
+  "validation": {
+    "interpolation": {
+      "reconstruction_error": 9.540665683281379,
+      "sum_feature_mse": 5.299827303951274,
+      "sum_feature_cce": 4.240838379330105,
+      "observed_fields": 39,
+      "observed_scalars": 1976,
+      "per_field": {
+        "sex": {
+          "loss": 0.6944980091518826,
+          "observations": 72
+        },
+        "age": {
+          "loss": 0.18847919834984672,
+          "observations": 72
+        },
+        "marital_status": {
+          "loss": 1.4647848341200087,
+          "observations": 72
+        },
+        "education_years": {
+          "loss": 0.3591451909806993,
+          "observations": 72
+        },
+        "handedness": {
+          "loss": 0.9749311870998807,
+          "observations": 72
+        },
+        "diagnosis": {
+          "loss": 1.1066243489583334,
+          "observations": 60
+        },
+        "mmse": {
+          "loss": 0.5908909501700566,
+          "observations": 58
+        },
+        "cdrsb": {
+          "loss": 0.012817084789276123,
+          "observations": 58
+        },
+        "avtot1": {
+          "loss": 0.10108654959159985,
+          "observations": 57
+        },
+        "adas_q1": {
+          "loss": 0.06406557769106146,
+          "observations": 57
+        },
+        "adas_q2": {
+          "loss": 0.010941944624248304,
+          "observations": 57
+        },
+        "adas_q3": {
+          "loss": 0.08406552097253632,
+          "observations": 57
+        },
+        "adas_q4": {
+          "loss": 0.1557322385018332,
+          "observations": 57
+        },
+        "adas_q5": {
+          "loss": 0.005870929412674485,
+          "observations": 57
+        },
+        "adas_q6": {
+          "loss": 0.05265221679419802,
+          "observations": 57
+        },
+        "adas_q7": {
+          "loss": 0.007736001621212876,
+          "observations": 57
+        },
+        "adas_q8": {
+          "loss": 0.10783581984670539,
+          "observations": 57
+        },
+        "adas_q9": {
+          "loss": 0.016392149423298082,
+          "observations": 57
+        },
+        "adas_q10": {
+          "loss": 0.01917807888566402,
+          "observations": 57
+        },
+        "adas_q11": {
+          "loss": 0.022372632695917497,
+          "observations": 57
+        },
+        "adas_q12": {
+          "loss": 0.0016781580552720186,
+          "observations": 57
+        },
+        "adas_q13": {
+          "loss": 0.03739485824317263,
+          "observations": 57
+        },
+        "clock": {
+          "loss": 0.8575822261341831,
+          "observations": 57
+        },
+        "digit_forward": {
+          "loss": 0.28342954929058367,
+          "observations": 26
+        },
+        "digit_forward_length": {
+          "loss": 0.521693229675293,
+          "observations": 26
+        },
+        "digit_backward": {
+          "loss": 0.2864378415621244,
+          "observations": 26
+        },
+        "digit_backward_length": {
+          "loss": 0.08512168664198655,
+          "observations": 26
+        },
+        "category_animals": {
+          "loss": 0.1813456886693051,
+          "observations": 57
+        },
+        "category_animals_perseveration": {
+          "loss": 0.004233447606103462,
+          "observations": 57
+        },
+        "category_animals_intrusion": {
+          "loss": 0.005322182387636419,
+          "observations": 57
+        },
+        "category_vegetables": {
+          "loss": 0.21245723504286546,
+          "observations": 26
+        },
+        "category_vegetables_perseveration": {
+          "loss": 0.016225144267082214,
+          "observations": 26
+        },
+        "category_vegetables_intrusion": {
+          "loss": 0.0014273340885455792,
+          "observations": 26
+        },
+        "amyloid_cortical_suvr": {
+          "loss": 0.18735394212934706,
+          "observations": 18
+        },
+        "hippocampal_volume_change_percent": {
+          "loss": 0.2015808555814955,
+          "observations": 72
+        },
+        "apoe4_count": {
+          "loss": 0.2840501202477349,
+          "observations": 72
+        },
+        "csf_abeta42": {
+          "loss": 0.03404634840348188,
+          "observations": 34
+        },
+        "csf_abeta40": {
+          "loss": 0.23396427929401398,
+          "observations": 2
+        },
+        "csf_ptau": {
+          "loss": 0.06522109228021958,
+          "observations": 34
+        }
+      }
+    },
+    "forecast": {
+      "reconstruction_error": 9.260050305314994,
+      "sum_feature_mse": 5.063097146087886,
+      "sum_feature_cce": 4.1969531592271085,
+      "observed_fields": 39,
+      "observed_scalars": 1213,
+      "per_field": {
+        "sex": {
+          "loss": 0.6983446393694196,
+          "observations": 42
+        },
+        "age": {
+          "loss": 0.16339383806501115,
+          "observations": 42
+        },
+        "marital_status": {
+          "loss": 1.4538210914248513,
+          "observations": 42
+        },
+        "education_years": {
+          "loss": 0.27107406797863187,
+          "observations": 42
+        },
+        "handedness": {
+          "loss": 0.9460127694266183,
+          "observations": 42
+        },
+        "diagnosis": {
+          "loss": 1.098774659006219,
+          "observations": 38
+        },
+        "mmse": {
+          "loss": 0.5083436708192568,
+          "observations": 37
+        },
+        "cdrsb": {
+          "loss": 0.016020272229168867,
+          "observations": 37
+        },
+        "avtot1": {
+          "loss": 0.07840122047223543,
+          "observations": 38
+        },
+        "adas_q1": {
+          "loss": 0.06151035584901508,
+          "observations": 38
+        },
+        "adas_q2": {
+          "loss": 0.01169908909421218,
+          "observations": 38
+        },
+        "adas_q3": {
+          "loss": 0.07481881191855982,
+          "observations": 38
+        },
+        "adas_q4": {
+          "loss": 0.1600754135533383,
+          "observations": 38
+        },
+        "adas_q5": {
+          "loss": 0.010680680212221648,
+          "observations": 38
+        },
+        "adas_q6": {
+          "loss": 0.05003747187162701,
+          "observations": 38
+        },
+        "adas_q7": {
+          "loss": 0.021884206094239887,
+          "observations": 38
+        },
+        "adas_q8": {
+          "loss": 0.13040123487773694,
+          "observations": 38
+        },
+        "adas_q9": {
+          "loss": 0.0338667819374486,
+          "observations": 38
+        },
+        "adas_q10": {
+          "loss": 0.02420148724003842,
+          "observations": 38
+        },
+        "adas_q11": {
+          "loss": 0.030423685124045925,
+          "observations": 38
+        },
+        "adas_q12": {
+          "loss": 0.0034863007696051347,
+          "observations": 38
+        },
+        "adas_q13": {
+          "loss": 0.04076091239326879,
+          "observations": 38
+        },
+        "clock": {
+          "loss": 0.786181600470292,
+          "observations": 38
+        },
+        "digit_forward": {
+          "loss": 0.26935367584228515,
+          "observations": 15
+        },
+        "digit_forward_length": {
+          "loss": 0.6821319580078125,
+          "observations": 15
+        },
+        "digit_backward": {
+          "loss": 0.3935089111328125,
+          "observations": 15
+        },
+        "digit_backward_length": {
+          "loss": 0.12482004165649414,
+          "observations": 15
+        },
+        "category_animals": {
+          "loss": 0.16063129274468674,
+          "observations": 38
+        },
+        "category_animals_perseveration": {
+          "loss": 0.0041857722558473285,
+          "observations": 38
+        },
+        "category_animals_intrusion": {
+          "loss": 0.016359162958044755,
+          "observations": 38
+        },
+        "category_vegetables": {
+          "loss": 0.18892183303833007,
+          "observations": 15
+        },
+        "category_vegetables_perseveration": {
+          "loss": 0.011692955096562704,
+          "observations": 15
+        },
+        "category_vegetables_intrusion": {
+          "loss": 0.0007342753310998281,
+          "observations": 15
+        },
+        "amyloid_cortical_suvr": {
+          "loss": 0.0051799919456243515,
+          "observations": 1
+        },
+        "hippocampal_volume_change_percent": {
+          "loss": 0.1783625284830729,
+          "observations": 42
+        },
+        "apoe4_count": {
+          "loss": 0.26474434988839285,
+          "observations": 42
+        },
+        "csf_abeta42": {
+          "loss": 0.02226964198052883,
+          "observations": 8
+        },
+        "csf_abeta40": {
+          "loss": 0.26045048236846924,
+          "observations": 1
+        },
+        "csf_ptau": {
+          "loss": 0.002489172387868166,
+          "observations": 8
+        }
+      }
+    },
+    "overall": {
+      "reconstruction_error": 9.503505057453353,
+      "sum_feature_mse": 5.2789865331632395,
+      "sum_feature_cce": 4.224518524290113,
+      "observed_fields": 39,
+      "observed_scalars": 3189,
+      "per_field": {
+        "sex": {
+          "loss": 0.6959151552434553,
+          "observations": 114
+        },
+        "age": {
+          "loss": 0.1792372318736294,
+          "observations": 114
+        },
+        "marital_status": {
+          "loss": 1.4607455604954769,
+          "observations": 114
+        },
+        "education_years": {
+          "loss": 0.3266979686000891,
+          "observations": 114
+        },
+        "handedness": {
+          "loss": 0.9642771001447711,
+          "observations": 114
+        },
+        "diagnosis": {
+          "loss": 1.1035807084064095,
+          "observations": 98
+        },
+        "mmse": {
+          "loss": 0.558740917005037,
+          "observations": 95
+        },
+        "cdrsb": {
+          "loss": 0.014064642002708034,
+          "observations": 95
+        },
+        "avtot1": {
+          "loss": 0.09201241543418483,
+          "observations": 95
+        },
+        "adas_q1": {
+          "loss": 0.0630434889542429,
+          "observations": 95
+        },
+        "adas_q2": {
+          "loss": 0.011244801471107884,
+          "observations": 95
+        },
+        "adas_q3": {
+          "loss": 0.08036684237028423,
+          "observations": 95
+        },
+        "adas_q4": {
+          "loss": 0.1574694984837582,
+          "observations": 95
+        },
+        "adas_q5": {
+          "loss": 0.0077948300462020075,
+          "observations": 95
+        },
+        "adas_q6": {
+          "loss": 0.05160631882516961,
+          "observations": 95
+        },
+        "adas_q7": {
+          "loss": 0.013395281841880397,
+          "observations": 95
+        },
+        "adas_q8": {
+          "loss": 0.11686198585911801,
+          "observations": 95
+        },
+        "adas_q9": {
+          "loss": 0.023382003683792917,
+          "observations": 95
+        },
+        "adas_q10": {
+          "loss": 0.021187440972579154,
+          "observations": 95
+        },
+        "adas_q11": {
+          "loss": 0.02559305241233424,
+          "observations": 95
+        },
+        "adas_q12": {
+          "loss": 0.0024014151410052652,
+          "observations": 95
+        },
+        "adas_q13": {
+          "loss": 0.038741277393541836,
+          "observations": 95
+        },
+        "clock": {
+          "loss": 0.8290220561780428,
+          "observations": 95
+        },
+        "digit_forward": {
+          "loss": 0.2782798394924257,
+          "observations": 41
+        },
+        "digit_forward_length": {
+          "loss": 0.5803903254067025,
+          "observations": 41
+        },
+        "digit_backward": {
+          "loss": 0.32561020734833507,
+          "observations": 41
+        },
+        "digit_backward_length": {
+          "loss": 0.09964547506192835,
+          "observations": 41
+        },
+        "category_animals": {
+          "loss": 0.17305992528011924,
+          "observations": 95
+        },
+        "category_animals_perseveration": {
+          "loss": 0.004214377466001009,
+          "observations": 95
+        },
+        "category_animals_intrusion": {
+          "loss": 0.009736974615799754,
+          "observations": 95
+        },
+        "category_vegetables": {
+          "loss": 0.2038467221143769,
+          "observations": 41
+        },
+        "category_vegetables_perseveration": {
+          "loss": 0.014567026277867759,
+          "observations": 41
+        },
+        "category_vegetables_intrusion": {
+          "loss": 0.0011737759156924923,
+          "observations": 41
+        },
+        "amyloid_cortical_suvr": {
+          "loss": 0.17776583370409513,
+          "observations": 19
+        },
+        "hippocampal_volume_change_percent": {
+          "loss": 0.1930267434371145,
+          "observations": 114
+        },
+        "apoe4_count": {
+          "loss": 0.27693748474121094,
+          "observations": 114
+        },
+        "csf_abeta42": {
+          "loss": 0.03180316800162906,
+          "observations": 42
+        },
+        "csf_abeta40": {
+          "loss": 0.2427930235862732,
+          "observations": 3
+        },
+        "csf_ptau": {
+          "loss": 0.05327216216496059,
+          "observations": 42
+        }
+      }
+    }
+  },
+  "test": {
+    "interpolation": {
+      "reconstruction_error": 8.734282323611572,
+      "sum_feature_mse": 4.5438848543891,
+      "sum_feature_cce": 4.1903974692224715,
+      "observed_fields": 38,
+      "observed_scalars": 2285,
+      "per_field": {
+        "sex": {
+          "loss": 0.6964460399052869,
+          "observations": 73
+        },
+        "age": {
+          "loss": 0.162315891213613,
+          "observations": 73
+        },
+        "marital_status": {
+          "loss": 1.434073565757438,
+          "observations": 73
+        },
+        "education_years": {
+          "loss": 0.2556664715074513,
+          "observations": 73
+        },
+        "handedness": {
+          "loss": 0.9737204982809824,
+          "observations": 73
+        },
+        "diagnosis": {
+          "loss": 1.0861573652787642,
+          "observations": 66
+        },
+        "mmse": {
+          "loss": 0.5251086841930043,
+          "observations": 66
+        },
+        "cdrsb": {
+          "loss": 0.030870726614287407,
+          "observations": 66
+        },
+        "avtot1": {
+          "loss": 0.0895003318786621,
+          "observations": 65
+        },
+        "adas_q1": {
+          "loss": 0.14483130528376653,
+          "observations": 65
+        },
+        "adas_q2": {
+          "loss": 0.020319804778465858,
+          "observations": 65
+        },
+        "adas_q3": {
+          "loss": 0.11886907724233774,
+          "observations": 65
+        },
+        "adas_q4": {
+          "loss": 0.30807336660531853,
+          "observations": 65
+        },
+        "adas_q5": {
+          "loss": 0.02823799206660344,
+          "observations": 65
+        },
+        "adas_q6": {
+          "loss": 0.07334103951087365,
+          "observations": 65
+        },
+        "adas_q7": {
+          "loss": 0.03578806657057542,
+          "observations": 65
+        },
+        "adas_q8": {
+          "loss": 0.10190185400155874,
+          "observations": 65
+        },
+        "adas_q9": {
+          "loss": 0.013764435511368972,
+          "observations": 65
+        },
+        "adas_q10": {
+          "loss": 0.00997410462452815,
+          "observations": 65
+        },
+        "adas_q11": {
+          "loss": 0.06788869270911584,
+          "observations": 65
+        },
+        "adas_q12": {
+          "loss": 0.02485324602860671,
+          "observations": 65
+        },
+        "adas_q13": {
+          "loss": 0.04252295860877404,
+          "observations": 65
+        },
+        "clock": {
+          "loss": 0.5904046865609976,
+          "observations": 65
+        },
+        "digit_forward": {
+          "loss": 0.20055652618408204,
+          "observations": 50
+        },
+        "digit_forward_length": {
+          "loss": 0.45495052337646485,
+          "observations": 50
+        },
+        "digit_backward": {
+          "loss": 0.2973250579833984,
+          "observations": 50
+        },
+        "digit_backward_length": {
+          "loss": 0.1293731689453125,
+          "observations": 50
+        },
+        "category_animals": {
+          "loss": 0.12690319648155798,
+          "observations": 65
+        },
+        "category_animals_perseveration": {
+          "loss": 0.0032718630937429577,
+          "observations": 65
+        },
+        "category_animals_intrusion": {
+          "loss": 0.007716024838961087,
+          "observations": 65
+        },
+        "category_vegetables": {
+          "loss": 0.08174915313720703,
+          "observations": 50
+        },
+        "category_vegetables_perseveration": {
+          "loss": 0.01683765172958374,
+          "observations": 50
+        },
+        "category_vegetables_intrusion": {
+          "loss": 0.0010505720973014831,
+          "observations": 50
+        },
+        "amyloid_cortical_suvr": {
+          "loss": 0.1608248551686605,
+          "observations": 6
+        },
+        "hippocampal_volume_change_percent": {
+          "loss": 0.2002210214104451,
+          "observations": 71
+        },
+        "apoe4_count": {
+          "loss": 0.1816528659977325,
+          "observations": 73
+        },
+        "csf_abeta42": {
+          "loss": 0.004561682733205648,
+          "observations": 26
+        },
+        "csf_ptau": {
+          "loss": 0.03265795570153456,
+          "observations": 26
+        }
+      }
+    },
+    "forecast": {
+      "reconstruction_error": 8.324507363349563,
+      "sum_feature_mse": 4.187036151006835,
+      "sum_feature_cce": 4.137471212342728,
+      "observed_fields": 38,
+      "observed_scalars": 1383,
+      "per_field": {
+        "sex": {
+          "loss": 0.7026687888211982,
+          "observations": 43
+        },
+        "age": {
+          "loss": 0.13392985144326852,
+          "observations": 43
+        },
+        "marital_status": {
+          "loss": 1.400566810785338,
+          "observations": 43
+        },
+        "education_years": {
+          "loss": 0.18192749245222226,
+          "observations": 43
+        },
+        "handedness": {
+          "loss": 0.9409555834393168,
+          "observations": 43
+        },
+        "diagnosis": {
+          "loss": 1.093280029296875,
+          "observations": 40
+        },
+        "mmse": {
+          "loss": 0.41624755859375,
+          "observations": 40
+        },
+        "cdrsb": {
+          "loss": 0.05811856389045715,
+          "observations": 40
+        },
+        "avtot1": {
+          "loss": 0.09110035547396032,
+          "observations": 41
+        },
+        "adas_q1": {
+          "loss": 0.12602192018090225,
+          "observations": 41
+        },
+        "adas_q2": {
+          "loss": 0.027021094066340748,
+          "observations": 41
+        },
+        "adas_q3": {
+          "loss": 0.11572968087545256,
+          "observations": 41
+        },
+        "adas_q4": {
+          "loss": 0.2673875762195122,
+          "observations": 41
+        },
+        "adas_q5": {
+          "loss": 0.03659005862910573,
+          "observations": 41
+        },
+        "adas_q6": {
+          "loss": 0.07203797596256907,
+          "observations": 41
+        },
+        "adas_q7": {
+          "loss": 0.031936203561178066,
+          "observations": 41
+        },
+        "adas_q8": {
+          "loss": 0.13440990447998047,
+          "observations": 41
+        },
+        "adas_q9": {
+          "loss": 0.021101515467573956,
+          "observations": 41
+        },
+        "adas_q10": {
+          "loss": 0.01835289379445518,
+          "observations": 41
+        },
+        "adas_q11": {
+          "loss": 0.10405871926284418,
+          "observations": 41
+        },
+        "adas_q12": {
+          "loss": 0.04601885923525182,
+          "observations": 41
+        },
+        "adas_q13": {
+          "loss": 0.048033339221303054,
+          "observations": 41
+        },
+        "clock": {
+          "loss": 0.5520835504299257,
+          "observations": 41
+        },
+        "digit_forward": {
+          "loss": 0.1569705645243327,
+          "observations": 30
+        },
+        "digit_forward_length": {
+          "loss": 0.4612434387207031,
+          "observations": 30
+        },
+        "digit_backward": {
+          "loss": 0.2673987706502279,
+          "observations": 30
+        },
+        "digit_backward_length": {
+          "loss": 0.06991996765136718,
+          "observations": 30
+        },
+        "category_animals": {
+          "loss": 0.11256229586717559,
+          "observations": 41
+        },
+        "category_animals_perseveration": {
+          "loss": 0.005120929421448126,
+          "observations": 41
+        },
+        "category_animals_intrusion": {
+          "loss": 0.019118596867817205,
+          "observations": 41
+        },
+        "category_vegetables": {
+          "loss": 0.05277984142303467,
+          "observations": 30
+        },
+        "category_vegetables_perseveration": {
+          "loss": 0.06259742975234986,
+          "observations": 30
+        },
+        "category_vegetables_intrusion": {
+          "loss": 0.0009677593906720479,
+          "observations": 30
+        },
+        "amyloid_cortical_suvr": {
+          "loss": 0.13063527643680573,
+          "observations": 2
+        },
+        "hippocampal_volume_change_percent": {
+          "loss": 0.17189885294714638,
+          "observations": 43
+        },
+        "apoe4_count": {
+          "loss": 0.17466759127239848,
+          "observations": 43
+        },
+        "csf_abeta42": {
+          "loss": 0.012943881253401438,
+          "observations": 6
+        },
+        "csf_ptau": {
+          "loss": 0.006103841587901115,
+          "observations": 6
+        }
+      }
+    },
+    "overall": {
+      "reconstruction_error": 8.588531133211028,
+      "sum_feature_mse": 4.417705291608893,
+      "sum_feature_cce": 4.170825841602134,
+      "observed_fields": 38,
+      "observed_scalars": 3668,
+      "per_field": {
+        "sex": {
+          "loss": 0.6987526992271686,
+          "observations": 116
+        },
+        "age": {
+          "loss": 0.1517934799194336,
+          "observations": 116
+        },
+        "marital_status": {
+          "loss": 1.4216530898521686,
+          "observations": 116
+        },
+        "education_years": {
+          "loss": 0.22833220712069807,
+          "observations": 116
+        },
+        "handedness": {
+          "loss": 0.9615748175259294,
+          "observations": 116
+        },
+        "diagnosis": {
+          "loss": 1.0888452349968676,
+          "observations": 106
+        },
+        "mmse": {
+          "loss": 0.48402905014325986,
+          "observations": 106
+        },
+        "cdrsb": {
+          "loss": 0.041152931609243715,
+          "observations": 106
+        },
+        "avtot1": {
+          "loss": 0.09011919993274617,
+          "observations": 106
+        },
+        "adas_q1": {
+          "loss": 0.13755598608052955,
+          "observations": 106
+        },
+        "adas_q2": {
+          "loss": 0.022911814023863594,
+          "observations": 106
+        },
+        "adas_q3": {
+          "loss": 0.11765478242118403,
+          "observations": 106
+        },
+        "adas_q4": {
+          "loss": 0.29233644593436764,
+          "observations": 106
+        },
+        "adas_q5": {
+          "loss": 0.031468503880050944,
+          "observations": 106
+        },
+        "adas_q6": {
+          "loss": 0.07283702436483132,
+          "observations": 106
+        },
+        "adas_q7": {
+          "loss": 0.034298195029204746,
+          "observations": 106
+        },
+        "adas_q8": {
+          "loss": 0.11447571808437132,
+          "observations": 106
+        },
+        "adas_q9": {
+          "loss": 0.01660236322654868,
+          "observations": 106
+        },
+        "adas_q10": {
+          "loss": 0.013214957039311246,
+          "observations": 106
+        },
+        "adas_q11": {
+          "loss": 0.08187897700183797,
+          "observations": 106
+        },
+        "adas_q12": {
+          "loss": 0.03303994322722813,
+          "observations": 106
+        },
+        "adas_q13": {
+          "loss": 0.04465433336653799,
+          "observations": 106
+        },
+        "clock": {
+          "loss": 0.5755823243339107,
+          "observations": 106
+        },
+        "digit_forward": {
+          "loss": 0.18421179056167603,
+          "observations": 80
+        },
+        "digit_forward_length": {
+          "loss": 0.4573103904724121,
+          "observations": 80
+        },
+        "digit_backward": {
+          "loss": 0.2861026763916016,
+          "observations": 80
+        },
+        "digit_backward_length": {
+          "loss": 0.107078218460083,
+          "observations": 80
+        },
+        "category_animals": {
+          "loss": 0.12135624435712707,
+          "observations": 106
+        },
+        "category_animals_perseveration": {
+          "loss": 0.003987067994081749,
+          "observations": 106
+        },
+        "category_animals_intrusion": {
+          "loss": 0.012126454767191186,
+          "observations": 106
+        },
+        "category_vegetables": {
+          "loss": 0.07088566422462464,
+          "observations": 80
+        },
+        "category_vegetables_perseveration": {
+          "loss": 0.033997565507888794,
+          "observations": 80
+        },
+        "category_vegetables_intrusion": {
+          "loss": 0.0010195173323154449,
+          "observations": 80
+        },
+        "amyloid_cortical_suvr": {
+          "loss": 0.1532774567604065,
+          "observations": 8
+        },
+        "hippocampal_volume_change_percent": {
+          "loss": 0.1895381024009303,
+          "observations": 114
+        },
+        "apoe4_count": {
+          "loss": 0.179063501029179,
+          "observations": 116
+        },
+        "csf_abeta42": {
+          "loss": 0.006133344955742359,
+          "observations": 32
+        },
+        "csf_ptau": {
+          "loss": 0.02767905965447426,
+          "observations": 32
+        }
+      }
+    }
+  },
+  "elapsed_seconds": 0.7051391060231254
+}

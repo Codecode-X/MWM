@@ -33,6 +33,10 @@ def report(output,manifest):
                'ODE-AE仍是6维Gaussian状态和独立编码/生成ODE；ODE-RNN使用38维递归状态及两层隐藏ODE；Latent ODE保留32维随机状态，编码状态调为48维。通过网络隐藏宽度精确匹配预算。旧的冻结二分类头服务于此前的其他任务，新版只保留当前混合字段预测所用网络。','',
                '## 2. 参数与训练进度','',
                '| 模型 | 容量 | 总参数 | 可训练参数 | 物理GPU | 阶段 | 已训练 / 最佳轮次 |','|---|---|---:|---:|---|---|---:|']
+        if queue.get('status')=='paused_by_user':
+            lines[2:2]=['同预算基线实验已按要求暂停，已有结果和恢复检查点保留，不会自动恢复。GPU已分配给MWM实验。','']
+        elif read(output/'resume_request.json'):
+            lines[2:2]=['当前主模型为latent2x both。此前暂停的同预算baseline从last.pt继续训练；已完成的实验保留原结果。MWM相关训练已暂停。','']
         for row in rows:
             h=row['hardware'];count=h.get('parameters');active=h.get('trainable_parameters')
             lines.append('| '+' | '.join([row['name'],row['capacity'],f'{count:,}' if count is not None else '—',f'{active:,}' if active is not None else '—',str(row['gpu']) if row['gpu'] is not None else '等待空闲卡',row['status']+(f" / {row['phase']}" if row['status']!='complete' else ''),f"{row['epochs']} / {row['best_epoch'] or '—'}"])+' |')
@@ -91,6 +95,10 @@ def report(output,manifest):
     lines=['# ADNI与MIMIC：三种基线的同预算实验','',
            'ADNI按44,875参数匹配，MIMIC按43,280参数匹配。六组新实验按空闲GPU排队，所有任务均为单卡训练，使用ode环境和SwanLab。','',
            '| 作业 | 状态 | 阶段 | 物理GPU |','|---|---|---|---:|']
+    if queue.get('status')=='paused_by_user':
+        lines[2:2]=['未完成的同预算baseline已暂停，恢复检查点保留，不会自动恢复。GPU已分配给MWM实验。','']
+    elif read(output/'resume_request.json'):
+        lines[2:2]=['已恢复未完成的三组同参数量baseline，从原检查点续训。主模型使用latent2x both，MWM全部暂停。','']
     for job in manifest['jobs']:
         state=queue.get('jobs',{}).get(job['id'],{});lines.append('| '+' | '.join([job['id'],state.get('status','waiting'),state.get('phase','checks'),str(state.get('physical_gpu','等待空闲卡'))])+' |')
     lines+=['']+[f"- [{group['dataset'].upper()}：原容量与同预算指标]({os.path.relpath(group['report'],output)})" for group in all_rows]

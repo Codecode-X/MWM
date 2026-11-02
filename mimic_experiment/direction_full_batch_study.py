@@ -85,6 +85,8 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--output',default=str(DEFAULT));args=parser.parse_args()
     if Path(sys.prefix).name!='ode':raise RuntimeError('Use ode environment')
     out=Path(args.output).resolve();out.mkdir(exist_ok=True);previous=read(out/'queue.json',{})
+    if any((out/key/'seed_0/paused_by_user.json').exists() for key in GPUS):
+        raise RuntimeError('This experiment is paused by the user; explicit resume is required before removing its pause marker')
     if previous.get('pid') and identity(previous['pid'])==previous.get('start_time'):raise RuntimeError('Full-batch direction study already running')
     leases={}
     for gpu in [2,3]:

@@ -113,6 +113,8 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--output',default=str(DEFAULT));parser.add_argument('--gpus',type=int,nargs='+',default=[0,1,2,3]);args=parser.parse_args()
     if Path(sys.prefix).name!='ode' or not args.gpus or len(set(args.gpus))!=len(args.gpus) or set(args.gpus)-{0,1,2,3}:raise RuntimeError('Use ode and valid physical GPUs')
     out=Path(args.output).resolve();out.mkdir(parents=True,exist_ok=True);previous=read(out/'queue.json',{})
+    if (out/'paused_by_user.json').exists():
+        raise RuntimeError('The user paused the equal-budget baseline study; explicit resume is required before removing its pause marker')
     if previous.get('pid') and identity(previous['pid'])==previous.get('start_time'):raise RuntimeError('Matched baseline queue already running')
     source,manifest=prepare(out);workers={};logs={};leases={};owned={};jobs={j['id']:j for j in manifest['jobs']}
     state={'pid':os.getpid(),'start_time':identity(os.getpid()),'status':'waiting_for_idle_gpu','started_at':datetime.now(timezone.utc).isoformat(),

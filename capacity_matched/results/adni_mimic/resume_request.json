@@ -1,0 +1,42 @@
+{
+  "requested_at": "2026-11-01T12:24:11.776485+00:00",
+  "main_model": "latent2x both",
+  "MWM_status": "paused_by_user",
+  "physical_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "resume_jobs": [
+    {
+      "id": "mimic_ode_rnn",
+      "completed_epochs": 27,
+      "resume_after_epoch": 27,
+      "next_epoch": 28,
+      "optimizer_steps": 4563,
+      "checkpoint": "/home/xjh/projects/LatentODE/mimic_experiment/results/baselines_matched_latent2x/ode_rnn/seed_0/last.pt",
+      "requested_at": "2026-11-01T12:24:11.776485+00:00"
+    },
+    {
+      "id": "adni_latent_ode",
+      "completed_epochs": 86,
+      "resume_after_epoch": 86,
+      "next_epoch": 87,
+      "optimizer_steps": 33712,
+      "checkpoint": "/home/xjh/projects/LatentODE/paper_odeae/results/baselines_matched_latent2x/latent_ode/seed_0/last.pt",
+      "requested_at": "2026-11-01T12:24:11.776485+00:00"
+    },
+    {
+      "id": "mimic_latent_ode",
+      "completed_epochs": 10,
+      "resume_after_epoch": 10,
+      "next_epoch": 11,
+      "optimizer_steps": 1690,
+      "checkpoint": "/home/xjh/projects/LatentODE/mimic_experiment/results/baselines_matched_latent2x/latent_ode/seed_0/last.pt",
+      "requested_at": "2026-11-01T12:24:11.776485+00:00"
+    }
+  ],
+  "completed_jobs": "keep existing results",
+  "configuration_changes": "none; resume optimizer, scheduler and checkpoints"
+}

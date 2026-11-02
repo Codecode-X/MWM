@@ -1,0 +1,211 @@
+{
+  "scope": "local_available",
+  "features_in_paper_contract": 46,
+  "features_with_training_observations": 40,
+  "missing_training_features": [
+    "ecog_self",
+    "ecog_partner",
+    "npi",
+    "fdg_parietal_suvr",
+    "fdg_temporal_suvr",
+    "cortical_volume_change_percent"
+  ],
+  "patient_counts": {
+    "train": 2093,
+    "validation": 393,
+    "test": 414
+  },
+  "excluded": {
+    "fewer_than_two_dated_quarters_or_invalid_age": 165
+  },
+  "normalization": "train_minmax",
+  "offset": [
+    0.0,
+    50.669403076171875,
+    0.0,
+    4.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    3.0,
+    0.0,
+    2.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.8098055720329285,
+    0.7960723638534546,
+    -45.45988082885742,
+    0.0,
+    203.0,
+    4740.0,
+    8.0
+  ],
+  "scale": [
+    1.0,
+    48.8240966796875,
+    1.0,
+    16.0,
+    1.0,
+    1.0,
+    30.0,
+    18.0,
+    15.0,
+    10.0,
+    5.0,
+    5.0,
+    10.0,
+    5.0,
+    5.0,
+    8.0,
+    12.0,
+    5.0,
+    5.0,
+    5.0,
+    5.0,
+    5.0,
+    5.0,
+    12.0,
+    5.0,
+    12.0,
+    5.0,
+    44.0,
+    30.0,
+    51.0,
+    31.0,
+    8.0,
+    42.0,
+    1.5375471115112305,
+    2.3778610229492188,
+    80.92703247070312,
+    2.0,
+    3746.0,
+    32740.0,
+    95.69999694824219
+  ],
+  "source_files": [
+    {
+      "path": "/data/SAMSUNG_backup/ADNI_data/Enrollment/PTDEMOG_18Oct2026.csv",
+      "sha256": "cb8c521ba184fdc4a4c7da4357968ea10c17d9a029da33e9d37c8795b6be3eba"
+    },
+    {
+      "path": "/data/SAMSUNG_backup/ADNI_data/Biospecimen/APOERES_17Oct2026.csv",
+      "sha256": "d1b0107241a2e804bbe2179ac2d039831995e1d8c0156d884290dc03580990c0"
+    },
+    {
+      "path": "/data/SAMSUNG_backup/ADNI_data/Neuropsychological/MMSE_17Oct2026.csv",
+      "sha256": "de54694e4a518100ca0a024190059ac0ba1d7ec3a4b52676f16aed810bb55e5a"
+    },
+    {
+      "path": "/data/SAMSUNG_backup/ADNI_data/Neuropsychological/CDR_17Oct2026.csv",
+      "sha256": "4e303b2e42790fcb106dd6e999674d0216e916221d2194086df86cc99ffa2f8a"
+    },
+    {
+      "path": "/data/SAMSUNG_backup/ADNI_data/Neuropsychological/ADAS_17Oct2026.csv",
+      "sha256": "6ce7b140580d2130cae70fc18dac446bc1afcc899a4e03d030f19d1370ead569"
+    },
+    {
+      "path": "/data/SAMSUNG_backup/ADNI_data/Neuropsychological/NEUROBAT_17Oct2026.csv",
+      "sha256": "8b01a82892e21df87bd46e7cbd6fe35ef703c0dcd5ba99aabfdcefaccd038133"
+    },
+    {
+      "path": "/data/SAMSUNG_backup/ADNI_data/MRI_PET_csv/PET/All_Subjects_UPENNBIOMK_ROCHE_ELECSYS_17Oct2026.csv",
+      "sha256": "99b20a91f7c4d102ad1d27837aa2752dfee6c507df1813770db473f380d77297"
+    },
+    {
+      "path": "/data/SAMSUNG_backup/ADNI_data/Enrollment/DXSUM_16Oct2026.csv",
+      "sha256": "7c319904c6c25a616de3139894865e6874df79afe57617bed387708b8d940b6d"
+    },
+    {
+      "path": "/data/SAMSUNG_backup/ADNI_data/MRI_PET_csv/All_Subjects_UCSFFSX7_17Oct2026.csv",
+      "sha256": "638851a59fbfed12d75ca758098bbd677da03ab4f435f06a9236be4f4d8f9c78"
+    },
+    {
+      "path": "/data/SAMSUNG_backup/ADNI_data/MRI_PET_csv/PET/All_Subjects_UCBERKELEY_AMY_6MM_17Oct2026.csv",
+      "sha256": "652c77c54aed61d905bc76e6cc6bef6503425aa270c44a094e77f849a987c7e0"
+    },
+    {
+      "path": "/data/SAMSUNG_backup/ADNI_data/MRI_PET_csv/PET/All_Subjects_UCBERKELEY_TAU_6MM_17Oct2026.csv",
+      "sha256": "5d5061df051e044796f9974e33274c57edf69d14aad40d8ca2a234ca01bda3c0"
+    }
+  ],
+  "training_feature_counts": {
+    "sex": 12544,
+    "age": 12544,
+    "marital_status": 12511,
+    "education_years": 12544,
+    "handedness": 12544,
+    "diagnosis": 10676,
+    "mmse": 9536,
+    "cdrsb": 9812,
+    "ecog_self": 0,
+    "ecog_partner": 0,
+    "npi": 0,
+    "avtot1": 9441,
+    "adas_q1": 9515,
+    "adas_q2": 9522,
+    "adas_q3": 9519,
+    "adas_q4": 9506,
+    "adas_q5": 9516,
+    "adas_q6": 9513,
+    "adas_q7": 9516,
+    "adas_q8": 9497,
+    "adas_q9": 9489,
+    "adas_q10": 9522,
+    "adas_q11": 9522,
+    "adas_q12": 9522,
+    "adas_q13": 9453,
+    "clock": 9447,
+    "digit_forward": 2805,
+    "digit_forward_length": 2798,
+    "digit_backward": 2781,
+    "digit_backward_length": 2780,
+    "category_animals": 9467,
+    "category_animals_perseveration": 9462,
+    "category_animals_intrusion": 9463,
+    "category_vegetables": 2804,
+    "category_vegetables_perseveration": 2803,
+    "category_vegetables_intrusion": 2804,
+    "amyloid_cortical_suvr": 3092,
+    "tau_cortical_suvr": 1637,
+    "fdg_parietal_suvr": 0,
+    "fdg_temporal_suvr": 0,
+    "hippocampal_volume_change_percent": 8103,
+    "cortical_volume_change_percent": 0,
+    "apoe4_count": 12348,
+    "csf_abeta42": 2247,
+    "csf_abeta40": 663,
+    "csf_ptau": 2228
+  },
+  "quarter_definition": "calendar quarter, timestamp at right edge",
+  "visit_merge": "PHASE + VISCODE2 (fallback VISCODE); earliest date from EXAMDATE, then VISDATE, then SCANDATE",
+  "exact_paper_results_reproduced": false,
+  "implementation_assumptions": [
+    "train-only minmax/zscore is explicit; original normalization unspecified",
+    "category coding and static earliest demographic selection reconstructed",
+    "quarter timestamp right edge; birth year-only uses July 1",
+    "unphased source visits keep their dates to avoid cross-phase VISCODE collisions",
+    "Roche CSF assay substitution for unavailable UPENN MASTER sources",
+    "cortical PET SUVR reconstructed as volume-weighted cortical regions; full visual QC only"
+  ]
+}

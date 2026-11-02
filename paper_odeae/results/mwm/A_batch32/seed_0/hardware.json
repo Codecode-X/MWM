@@ -1,0 +1,38 @@
+{
+  "physical_gpu": 0,
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "environment": "ode",
+  "parameter_device": "cuda:0",
+  "parameters": 44875,
+  "trainable_parameters": 44875,
+  "torch_version": "2.5.1+cu121",
+  "world_size": 1,
+  "training_batch_size": 32,
+  "gradient_accumulation_steps": 1,
+  "forward_calls_per_optimizer_step": 1,
+  "backward_calls_per_optimizer_step": 1,
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "time_unit": "year",
+  "initialization_age": "first actual observation age",
+  "latent_dimension": 28,
+  "variant": "A",
+  "shared_vector_field": true,
+  "training_negative_time_integration": false,
+  "parameter_breakdown": {
+    "init": 4798,
+    "decoder": 12451,
+    "update": 16882,
+    "backward_ode": 10744
+  },
+  "actual_tensor_devices": {
+    "values": "cuda:0",
+    "mask": "cuda:0",
+    "ages": "cuda:0",
+    "context_mask": "cuda:0",
+    "valid": "cuda:0",
+    "cutoff": "cuda:0",
+    "first_observation_age": "cuda:0"
+  },
+  "prediction_device": "cuda:0",
+  "first_actual_training_batch": 32
+}

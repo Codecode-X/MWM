@@ -1,0 +1,64 @@
+{
+  "handoff_at": "2026-11-01T10:47:34.416106+00:00",
+  "previous_queue": {
+    "pid": 826005,
+    "start_time": "104812819",
+    "status": "running",
+    "gpus": [
+      0,
+      1,
+      3,
+      2
+    ],
+    "active_datasets": [
+      "adni",
+      "mimic"
+    ],
+    "reserved_gpus": [],
+    "started_at": "2026-11-01T09:46:19.743890+00:00",
+    "jobs": {
+      "mimic_main": {
+        "status": "running",
+        "phase": "training",
+        "physical_gpu": 2,
+        "pid": 826142
+      },
+      "adni_main": {
+        "status": "complete",
+        "phase": "tested",
+        "physical_gpu": 0,
+        "pid": 829975,
+        "finished_at": "2026-11-01T10:22:40.067851+00:00"
+      },
+      "mimic_A": {
+        "status": "paused_by_user",
+        "phase": "user_paused"
+      },
+      "adni_A": {
+        "status": "complete",
+        "phase": "tested",
+        "physical_gpu": 1,
+        "pid": 830386,
+        "finished_at": "2026-11-01T10:17:59.071670+00:00"
+      },
+      "mimic_B": {
+        "status": "paused_by_user",
+        "phase": "user_paused"
+      },
+      "adni_B": {
+        "status": "complete",
+        "phase": "tested",
+        "physical_gpu": 3,
+        "pid": 831188,
+        "finished_at": "2026-11-01T10:44:15.334300+00:00"
+      }
+    }
+  },
+  "preserved_workers": {
+    "mimic_main": {
+      "pid": 826142,
+      "physical_gpu": 2
+    }
+  },
+  "reason": "add batch32 jobs and unified curve reporting; model workers continue uninterrupted"
+}

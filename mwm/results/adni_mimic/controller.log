@@ -1,0 +1,27 @@
+mimic_main: training, GPU 2, PID 826142
+adni_main: smoke, GPU 0, PID 826144
+adni_A: smoke, GPU 1, PID 826146
+adni_B: smoke, GPU 3, PID 826148
+adni_main: training, GPU 0, PID 829975
+adni_A: training, GPU 1, PID 830386
+adni_B: training, GPU 3, PID 831188
+mimic_main: monitoring existing training, GPU 2, PID 826142
+adni_A_batch32: smoke, GPU 0, PID 857230
+adni_B_batch32: smoke, GPU 1, PID 857232
+adni_A_batch32: training, GPU 0, PID 857708
+adni_B_batch32: training, GPU 1, PID 857709
+mimic_main: monitoring existing training, GPU 2, PID 826142
+adni_A_batch32: monitoring existing training, GPU 0, PID 857708
+adni_B_batch32: monitoring existing training, GPU 1, PID 857709
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/xjh/projects/LatentODE/mwm/study.py", line 245, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/xjh/projects/LatentODE/mwm/study.py", line 230, in main
+    time.sleep(5)
+  File "/home/xjh/projects/LatentODE/mwm/study.py", line 150, in stop
+    def stop(signum,frame):raise KeyboardInterrupt(f'signal {signum}')
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt: signal 15

@@ -1,8 +1,8 @@
 {
-  "pid": 4157848,
-  "start_time": "98524321",
-  "status": "running",
-  "started_at": "2026-10-31T16:18:13.620771+00:00",
+  "pid": 864581,
+  "start_time": "105760701",
+  "status": "failed",
+  "started_at": "2026-11-01T12:24:17.432009+00:00",
   "gpus": [
     0,
     1,
@@ -12,43 +12,39 @@
   "jobs": {
     "adni_ode_ae": {
       "status": "complete",
-      "phase": "tested",
-      "physical_gpu": 0,
-      "pid": 4158873,
-      "finished_at": "2026-10-31T18:32:00.412869+00:00"
+      "phase": "tested"
     },
     "mimic_ode_ae": {
       "status": "complete",
-      "phase": "tested",
-      "physical_gpu": 0,
-      "pid": 119250,
-      "finished_at": "2026-11-01T07:55:00.792435+00:00"
+      "phase": "tested"
     },
     "adni_ode_rnn": {
       "status": "complete",
-      "phase": "tested",
-      "physical_gpu": 1,
-      "pid": 664757,
-      "finished_at": "2026-11-01T06:36:46.811408+00:00"
+      "phase": "tested"
     },
     "mimic_ode_rnn": {
-      "status": "running",
-      "phase": "training",
-      "physical_gpu": 1,
-      "pid": 666488
-    },
-    "adni_latent_ode": {
-      "status": "running",
-      "phase": "training",
-      "physical_gpu": 3,
-      "pid": 666692
-    },
-    "mimic_latent_ode": {
-      "status": "running",
+      "status": "failed",
       "phase": "training",
       "physical_gpu": 0,
-      "pid": 668391
+      "pid": 864730,
+      "error": "KeyError('prediction_device')",
+      "exit_code": 0
+    },
+    "adni_latent_ode": {
+      "status": "complete",
+      "phase": "tested",
+      "physical_gpu": 1,
+      "pid": 864732,
+      "finished_at": "2026-11-01T19:50:24.341711+00:00"
+    },
+    "mimic_latent_ode": {
+      "status": "failed",
+      "phase": "training",
+      "physical_gpu": 2,
+      "pid": 864734,
+      "error": "KeyError('prediction_device')",
+      "exit_code": 0
     }
   },
-  "architecture_checks_gpu": 0
+  "finished_at": "2026-11-02T10:54:19.788613+00:00"
 }

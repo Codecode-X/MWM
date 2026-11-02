@@ -1,0 +1,44 @@
+{
+  "reason": "reserve physical GPU2; dedicate GPU0,1,3 to ADNI MWM",
+  "queue_before_pause": {
+    "pid": 802411,
+    "start_time": "104730093",
+    "status": "running",
+    "gpus": [
+      2,
+      0,
+      1,
+      3
+    ],
+    "started_at": "2026-11-01T09:32:32.487973+00:00",
+    "jobs": {
+      "mimic_main": {
+        "status": "running",
+        "phase": "training",
+        "physical_gpu": 2,
+        "pid": 804430
+      },
+      "adni_main": {
+        "status": "waiting",
+        "phase": "waiting_for_idle_gpu"
+      },
+      "mimic_A": {
+        "status": "waiting",
+        "phase": "waiting_for_idle_gpu"
+      },
+      "adni_A": {
+        "status": "waiting",
+        "phase": "waiting_for_idle_gpu"
+      },
+      "mimic_B": {
+        "status": "waiting",
+        "phase": "waiting_for_idle_gpu"
+      },
+      "adni_B": {
+        "status": "waiting",
+        "phase": "waiting_for_idle_gpu"
+      }
+    },
+    "architecture_checks_gpu": 2
+  }
+}

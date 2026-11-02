@@ -1,15 +1,17 @@
 # ADNI与MIMIC：三种基线的同预算实验
 
+已恢复未完成的三组同参数量baseline，从原检查点续训。主模型使用latent2x both，MWM全部暂停。
+
 ADNI按44,875参数匹配，MIMIC按43,280参数匹配。六组新实验按空闲GPU排队，所有任务均为单卡训练，使用ode环境和SwanLab。
 
 | 作业 | 状态 | 阶段 | 物理GPU |
 |---|---|---|---:|
-| adni_ode_ae | complete | tested | 0 |
-| mimic_ode_ae | complete | tested | 0 |
-| adni_ode_rnn | complete | tested | 1 |
-| mimic_ode_rnn | running | training | 1 |
-| adni_latent_ode | running | training | 3 |
-| mimic_latent_ode | running | training | 0 |
+| adni_ode_ae | complete | tested | 等待空闲卡 |
+| mimic_ode_ae | complete | tested | 等待空闲卡 |
+| adni_ode_rnn | complete | tested | 等待空闲卡 |
+| mimic_ode_rnn | failed | training | 0 |
+| adni_latent_ode | complete | tested | 1 |
+| mimic_latent_ode | failed | training | 2 |
 
 - [ADNI：原容量与同预算指标](../../../paper_odeae/results/baselines_matched_latent2x/summary.md)
 - [MIMIC：原容量与同预算指标](../../../mimic_experiment/results/baselines_matched_latent2x/summary.md)

@@ -1,0 +1,33 @@
+mimic_main: smoke, GPU 2, PID 802787
+mimic_main: training, GPU 2, PID 804430
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/xjh/projects/LatentODE/mwm/study.py", line 185, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/xjh/projects/LatentODE/mwm/study.py", line 172, in main
+    time.sleep(5)
+  File "/home/xjh/projects/LatentODE/mwm/study.py", line 113, in stop
+    def stop(signum,frame):raise KeyboardInterrupt(f'signal {signum}')
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt: signal 15
+adni_main: smoke, GPU 0, PID 815642
+adni_A: smoke, GPU 1, PID 815644
+adni_B: smoke, GPU 3, PID 815646
+adni_main: training, GPU 0, PID 818342
+adni_A: training, GPU 1, PID 818343
+adni_B: training, GPU 3, PID 820156
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/xjh/projects/LatentODE/mwm/study.py", line 197, in <module>
+    for key,(worker,stage,gpu) in list(workers.items()):
+                ^^^^^^
+  File "/home/xjh/projects/LatentODE/mwm/study.py", line 183, in main
+    with (out/'architecture_checks.log').open('a') as stream:
+    ^^^^^^^^^^^^^
+  File "/home/xjh/projects/LatentODE/mwm/study.py", line 124, in stop
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--output',default=str(DEFAULT))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt: signal 15
