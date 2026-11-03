@@ -23,6 +23,8 @@ def main():
     if (folder/'metrics.json').exists():return
     cfg={**cfg,'output':str(folder),'comparison_output':str(root),'physical_gpu':a.gpu,'history_anchor_gradient':'stopped_only_for_history',
          'study':'history_stop_gradient_from_initialization','selection_range':'epoch1 through original early-stopping endpoint','from_scratch':True}
+    cfg['max_epochs']=min(cfg['max_epochs'],150)
+    cfg['min_epochs']=min(cfg['min_epochs'],cfg['max_epochs'])
     seed_all(0);native=make_model(payload['schema'],cfg).cuda();initial_native=parameter_hash(native);del native
     seed_all(0);model=make_causal_model(payload['schema'],cfg,True);initial_stop=parameter_hash(model)
     assert initial_native==initial_stop

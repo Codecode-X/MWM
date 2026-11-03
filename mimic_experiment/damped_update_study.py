@@ -24,6 +24,8 @@ def main():
     folder.mkdir(exist_ok=True)
     lock = (folder/'controller.lock').open('a')
     fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    if (folder/'stop_request.json').exists():
+        atomic(folder/'queue.json', {'status':'stopped_by_user','physical_gpu':3,'reason':'preserved user stop request'});return
     original = json.loads((root/'manifest.json').read_text())
     source = folder/'source_snapshot'; source.mkdir(exist_ok=True)
     for name in ['damped_update_model.py', 'damped_update_checks.py', 'damped_update_train.py']:
@@ -51,7 +53,7 @@ def main():
     def stop(signum, frame):
         if proc is not None and proc.poll() is None:
             proc.terminate(); proc.wait()
-        state['status'] = 'stopped'; report(); raise SystemExit(0)
+        state['status'] = 'stopped'; atomic(folder/'queue.json', state); raise SystemExit(0)
     signal.signal(signal.SIGTERM, stop); signal.signal(signal.SIGINT, stop)
     gpu_lock = Path('/tmp/latentode_gpu_3.lock').open('a')
     while True:

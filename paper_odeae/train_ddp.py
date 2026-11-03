@@ -139,6 +139,8 @@ def main():
     dist.init_process_group('nccl',init_method=f'tcp://127.0.0.1:{args.port}',rank=rank,world_size=world,device_id=torch.device('cuda:0'))
     try:
         cfg=json.loads(Path(args.config).read_text());cfg={**cfg,'smoke':args.smoke,'distributed_world_size':world}
+        cfg['max_epochs']=min(int(cfg['max_epochs']),150)
+        cfg['min_epochs']=min(int(cfg['min_epochs']),cfg['max_epochs'])
         if cfg.get('jacobian_weight',0.):raise ValueError('Jacobian ablation uses the single-GPU trainer')
         if cfg['batch_size']%world:raise ValueError('global batch must be divisible by world size')
         if cfg['model'] not in ['deterministic','ode_ae']:raise ValueError('only ODE-AE capacity comparisons supported')

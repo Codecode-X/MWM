@@ -52,6 +52,7 @@ def _generate(out):
     for key,label in [('control','原路径控制组'),('history_stop','历史梯度截断组')]:
         history=histories[key];best=min(history,key=lambda r:r['validation']['overall']['reconstruction_error']) if history else None
         status=queue.get('jobs',{}).get(key,{}).get('status','等待开始')
+        if (out/key/'stop_request.json').exists():status='stopped_by_user'
         row=[label,status,f"{history[-1]['epoch'] if history else 45} / {best['epoch'] if best else '—'}"]
         row += [f"{best['validation'][r]['reconstruction_error']:.6f}" if best else '—' for r in ['interpolation','forecast','overall']]
         row += [f"{max(r['maximum_batch_gradient_norm'] for r in history):.5g}" if history else '—']
@@ -76,6 +77,8 @@ def _generate(out):
             lines+=['','在这个同起点、同预算续训区间内，截断组没有复现控制组超过100的训练梯度峰值。历史与未来测试误差继续按上表分别判断，训练稳定性与预测性能分开回答。','']
         elif stop['maximum_training_batch_gradient']>=100:
             lines += ['',f"切断历史损失返回编码器后，续训中仍出现超过100的梯度峰值，最大为{stop['maximum_training_batch_gradient']:.6g}。因此，这次第45轮后的干预没有消除全部梯度异常。峰值大小、验证波动以及历史和未来测试结果按上表分别评价。",'']
+    elif (out/'history_stop/stop_request.json').exists():
+        lines += ['','历史梯度完全截断组已按用户要求停止，已有记录保留；原路径控制组继续。新版本改为历史编码梯度最大递归深度8，见8.5。被停止组不再继续生成测试指标。','']
     else:lines += ['','测试指标将在各组完成36轮续训并重新载入最佳检查点后填写。','']
     if any(histories.values()):
         import matplotlib
@@ -98,6 +101,7 @@ def _generate(out):
                 '第45轮后的干预检验“在已训练模型上切断路径是否足够”。本组另外从seed 0初始化开始，全程使用同一stop-gradient版本，检验完整训练策略。已有原始seed 0训练作为对照，避免重复训练相同控制模型。','',
                 '这组恢复原完整训练预算：最多300轮、至少50轮、验证整体误差40轮未改善时早停。batch=128、无梯度累积、Adam、学习率衰减、所有损失权重与原模型相同，使用GPU 2。构造时核对两个版本的初始参数逐项相同。','',
                 '| 组别 | 当前状态 | 已训练 / 最佳轮次 | 验证历史 | 验证未来 | 验证整体 |','|---|---|---:|---:|---:|---:|']
+        if (out/'fresh_history_stop/stop_request.json').exists():fresh_queue['status']='stopped_by_user'
         for label,result,history,status in [('原始从零训练',reference,[], 'complete'),('全程历史梯度截断',fresh_metrics,fresh,fresh_queue['status'])]:
             selected=result['validation'] if result else best['validation'] if best else None
             epoch_count=result['epochs_run'] if result else len(history);best_epoch=result['best_epoch'] if result else best['epoch'] if best else '—'
@@ -108,6 +112,8 @@ def _generate(out):
             test=result['test'] if result else None;values=[label,str(result['best_epoch']) if result else '—']+[f"{test[r]['reconstruction_error']:.6f}" if test else '—' for r in ['interpolation','forecast','overall']]+[f"{test['mean_standardized_numeric_mse']:.6f}" if test else '—']
             lines.append('| '+' | '.join(values)+' |')
         lines+=['','[从零初始化一致性](targeted_causal_ablation/fresh_history_stop/initialization_check.json) · [从零训练配置](targeted_causal_ablation/fresh_history_stop/manifest.json) · [训练记录](targeted_causal_ablation/fresh_history_stop/)','']
+        if (out/'fresh_history_stop/stop_request.json').exists():
+            lines += ['本组已按用户要求停止，由8.5的历史梯度深度8组替代。从零训练的最后完整轮次、最佳验证指标和曲线保留在此。','']
         first_batch=read(out/'fresh_history_stop/first_batch_forward_audit.json')
         if first_batch:
             lines += [f"原训练与全程截断组在第一次Adam更新前的batch前向损失均为{first_batch['original_first_batch_forward_loss']:.12g}，差值为{first_batch['absolute_difference']:.3g}。初始参数核验与这一条原始SwanLab记录一致；首次更新后，梯度路径不同会使训练轨迹逐渐分开。",'',
@@ -174,9 +180,13 @@ def _generate(out):
                       '固定输入的逐点对照同时显示UPDATE权重的局部作用与状态位置的作用。结合A—D整体递归，当前证据支持ODE、UPDATE和轨迹位置的强非线性交互，不能只归结为UPDATE权重变化或ODE落点变化中的单一项。','']
     lines += ['混合权重可能形成训练中没有出现过的轨迹。本实验给出固定背景下的模块敏感性及交互，不将混合组合解释为自然训练轨迹，也不作为完整因果识别。','']
     import importlib
-    from . import damped_update_report
-    lines += importlib.reload(damped_update_report).section(out, manifest)
-    lines += ['### 8.5 原始记录与复现','',
+    from . import damped_update_sweep_report
+    lines += importlib.reload(damped_update_sweep_report).section(out, manifest)
+    from . import history_depth_report
+    lines += importlib.reload(history_depth_report).section(out, manifest)
+    from . import adni_fixed_update_report
+    lines += importlib.reload(adni_fixed_update_report).section(out)
+    lines += ['### 8.7 原始记录与复现','',
               '[实验配置与源码指纹](targeted_causal_ablation/manifest.json) · [运行队列及物理GPU](targeted_causal_ablation/queue.json) · [CUDA梯度检查](targeted_causal_ablation/checks.json)','',
               '[控制组完整记录](targeted_causal_ablation/control/) · [截断组完整记录](targeted_causal_ablation/history_stop/) · [固定稳定INIT交叉结果](targeted_causal_ablation/module_cross/stable/results.json) · [固定异常INIT交叉结果](targeted_causal_ablation/module_cross/abnormal/results.json)','',
               '```bash','bash scripts/run_mimic_targeted_causal_ablation.sh','bash scripts/run_mimic_history_stop_fresh.sh','```','',

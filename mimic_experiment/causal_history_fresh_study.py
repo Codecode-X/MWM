@@ -17,6 +17,8 @@ from . import causal_history_report
 def main():
     project=Path(__file__).resolve().parents[1];root=project/'mimic_experiment/results/weak_prior_ablation_cuda/targeted_causal_ablation';folder=root/'fresh_history_stop';folder.mkdir(exist_ok=True)
     lock=(folder/'controller.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+    if (folder/'stop_request.json').exists():
+        atomic(folder/'queue.json',{'status':'stopped_by_user','physical_gpu':2,'reason':'replaced by history_depth_8'});return
     manifest=json.loads((root/'manifest.json').read_text());source=folder/'source_snapshot';source.mkdir(exist_ok=True)
     for name in ['causal_history_fresh.py','causal_history_model.py']:
         path=project/'mimic_experiment'/name;dest=source/name

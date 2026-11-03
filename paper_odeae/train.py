@@ -73,6 +73,8 @@ def main():
     p.add_argument('--model',choices=['ode_ae','deterministic','lstm','latent_ode','ode_rnn'])
     p.add_argument('--seed',type=int);p.add_argument('--output');p.add_argument('--smoke',action='store_true')
     args=p.parse_args();cfg=json.loads(Path(args.config).read_text())
+    cfg['max_epochs']=min(int(cfg['max_epochs']),150)
+    cfg['min_epochs']=min(int(cfg['min_epochs']),cfg['max_epochs'])
     for k in ['model','seed','output']:
         if getattr(args,k) is not None:cfg[k]=getattr(args,k)
     cfg['smoke']=args.smoke

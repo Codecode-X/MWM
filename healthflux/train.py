@@ -23,6 +23,8 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config',required=True);parser.add_argument('--output');parser.add_argument('--smoke',action='store_true')
     args=parser.parse_args();cfg=json.loads(Path(args.config).read_text())
+    cfg['max_epochs']=min(int(cfg['max_epochs']),150)
+    cfg['min_epochs']=min(int(cfg['min_epochs']),cfg['max_epochs'])
     if args.output:cfg['output']=args.output
     cfg['smoke']=args.smoke
     if Path(sys.prefix).name!='healthflux':raise RuntimeError('Use the healthflux Conda environment')

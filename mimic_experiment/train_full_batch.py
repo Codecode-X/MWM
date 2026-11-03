@@ -46,6 +46,8 @@ def components(vector,cfg):
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--config',required=True);parser.add_argument('--stage',choices=['smoke','training'],default='training');args=parser.parse_args()
     cfg=json.loads(Path(args.config).read_text());smoke=args.stage=='smoke'
+    cfg['max_epochs']=min(int(cfg['max_epochs']),150)
+    cfg['min_epochs']=min(int(cfg['min_epochs']),cfg['max_epochs'])
     if Path(sys.prefix).name!='ode' or not torch.cuda.is_available() or os.environ.get('CUDA_VISIBLE_DEVICES')!=str(cfg['physical_gpu']):raise RuntimeError('Use ode and the assigned physical CUDA GPU')
     if cfg['batch_size']!=128 or cfg['gradient_accumulation_steps']!=1:raise RuntimeError('Use complete batch128 with no gradient accumulation')
     torch.set_num_threads(1);torch.cuda.set_device(0);seed_all(cfg['seed'])

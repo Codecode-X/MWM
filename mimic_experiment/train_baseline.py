@@ -119,6 +119,8 @@ def verify_reference(payload,cfg,output,modes):
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--config',required=True);parser.add_argument('--stage',choices=['checks','smoke','training'],default='training')
     args=parser.parse_args();cfg=json.loads(Path(args.config).read_text());stage=args.stage
+    cfg['max_epochs']=min(int(cfg['max_epochs']),150)
+    cfg['min_epochs']=min(int(cfg['min_epochs']),cfg['max_epochs'])
     expected_env='healthflux' if cfg['model']=='healthflux' else 'ode'
     if Path(sys.prefix).name!=expected_env or not torch.cuda.is_available() or os.environ.get('CUDA_VISIBLE_DEVICES')!=str(cfg['physical_gpu']):raise RuntimeError('Explicit assigned CUDA GPU and configured Conda environment required')
     torch.set_num_threads(1);torch.cuda.set_device(0);seed_all(cfg['seed'])

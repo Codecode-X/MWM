@@ -69,6 +69,7 @@ def main():
                     ('cross_stable_init','causal_module_cross.py',2,['--init-context','stable'],out/'module_cross/stable/results.json'),
                     ('cross_abnormal_init','causal_module_cross.py',3,['--init-context','abnormal'],out/'module_cross/abnormal/results.json')]
     for name,script,gpu,extra,done in specifications:
+        if (out/name/'stop_request.json').exists():state['jobs'][name]={'status':'stopped_by_user','physical_gpu':gpu};continue
         if done.exists():state['jobs'][name]={'status':'complete','physical_gpu':gpu,'reused_existing_artifact':True};continue
         launch(name,script,gpu,extra)
     while True:

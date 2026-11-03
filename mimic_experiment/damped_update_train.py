@@ -35,6 +35,8 @@ def main():
            'update_alpha': .3, 'learnable_update_alpha': False, 'history_anchor_gradient': 'full_original',
            'study': 'fixed_damped_update_from_seed0', 'from_scratch': True,
            'selection_range': 'epoch1 through original early-stopping endpoint'}
+    cfg['max_epochs'] = min(cfg['max_epochs'], 150)
+    cfg['min_epochs'] = min(cfg['min_epochs'], cfg['max_epochs'])
     assert cfg['batch_size'] == 128 and cfg['gradient_accumulation_steps'] == 1
     seed_all(0)
     native = make_model(payload['schema'], cfg).cuda()
