@@ -1,0 +1,447 @@
+{
+  "regions": [
+    {
+      "region": "CN core",
+      "states": 739,
+      "patients": 182,
+      "C_mean": 0.9666662216186523,
+      "C_p10": 0.9308694005012512,
+      "D_mean": 0.04207445681095123,
+      "J_mean": 0.19730691611766815,
+      "opposite_pair_fraction": 0.0,
+      "patient_weighted_C": 0.9713633188408288,
+      "patient_weighted_D": 0.04292553870614125,
+      "patient_weighted_J": 0.19748049426958297,
+      "patient_weighted_overlap": 0.2273920476436615
+    },
+    {
+      "region": "CN/MCI boundary",
+      "states": 51,
+      "patients": 30,
+      "C_mean": 0.8475334048271179,
+      "C_p10": 0.581446647644043,
+      "D_mean": 0.05582001805305481,
+      "J_mean": 0.19291459023952484,
+      "opposite_pair_fraction": 0.0,
+      "patient_weighted_C": 0.9084239502747854,
+      "patient_weighted_D": 0.05148436259478328,
+      "patient_weighted_J": 0.19273125988741713,
+      "patient_weighted_overlap": 0.0741666704416275
+    },
+    {
+      "region": "MCI core",
+      "states": 667,
+      "patients": 188,
+      "C_mean": 0.9707261919975281,
+      "C_p10": 0.9385277032852173,
+      "D_mean": 0.04640669375658035,
+      "J_mean": 0.19475147128105164,
+      "opposite_pair_fraction": 0.0,
+      "patient_weighted_C": 0.9791877621740573,
+      "patient_weighted_D": 0.04815503420550989,
+      "patient_weighted_J": 0.1942193351880127,
+      "patient_weighted_overlap": 0.16555404663085938
+    },
+    {
+      "region": "MCI/Dementia boundary",
+      "states": 57,
+      "patients": 43,
+      "C_mean": 0.9872606992721558,
+      "C_p10": 0.9764582872390747,
+      "D_mean": 0.04394690692424774,
+      "J_mean": 0.1838240772485733,
+      "opposite_pair_fraction": 0.0,
+      "patient_weighted_C": 0.9889323636311892,
+      "patient_weighted_D": 0.04329270909922987,
+      "patient_weighted_J": 0.18375090506765265,
+      "patient_weighted_overlap": 0.13730619847774506
+    },
+    {
+      "region": "Dementia core",
+      "states": 327,
+      "patients": 102,
+      "C_mean": 0.9955515265464783,
+      "C_p10": 0.9903883814811707,
+      "D_mean": 0.03962589055299759,
+      "J_mean": 0.17994476854801178,
+      "opposite_pair_fraction": 0.0,
+      "patient_weighted_C": 0.9952010558363326,
+      "patient_weighted_D": 0.040198713260503616,
+      "patient_weighted_J": 0.18006946257881673,
+      "patient_weighted_overlap": 0.19138595461845398
+    },
+    {
+      "region": "Other mixed",
+      "states": 1,
+      "patients": 1,
+      "C_mean": 0.9933145642280579,
+      "C_p10": 0.9933145642280579,
+      "D_mean": 0.04943232238292694,
+      "J_mean": 0.17652179300785065,
+      "opposite_pair_fraction": 0.0,
+      "patient_weighted_C": 0.993314564228058,
+      "patient_weighted_D": 0.0494323223829269,
+      "patient_weighted_J": 0.1765217930078506,
+      "patient_weighted_overlap": 0.0
+    },
+    {
+      "region": "Insufficient labels",
+      "states": 560,
+      "patients": 271,
+      "C_mean": 0.9696145057678223,
+      "C_p10": 0.9297307133674622,
+      "D_mean": 0.04675189033150673,
+      "J_mean": 0.19582989811897278,
+      "opposite_pair_fraction": 0.0,
+      "patient_weighted_C": 0.9782221090648376,
+      "patient_weighted_D": 0.04692174286712981,
+      "patient_weighted_J": 0.19588424646992908,
+      "patient_weighted_overlap": 0.17662933468818665
+    }
+  ],
+  "forecast": {
+    "horizons": {
+      "12": {
+        "test_patients": 289,
+        "test_origins": 1022,
+        "mmse_mae_patient_weighted": 1.7811834878959847,
+        "mmse_mae_origin_weighted": 1.6326533557879948,
+        "persistence_mae_patient_weighted": 1.8308090046839771,
+        "sensitivity_error": {
+          "pearson": 0.00048684892167169747,
+          "spearman": -0.003251899136936722
+        },
+        "jacobian_error": {
+          "pearson": -0.40496327514766417,
+          "spearman": -0.43712265839398645
+        },
+        "adjusted_sensitivity_error": -0.019578035034764053,
+        "adjusted_jacobian_error": -0.11496463520141548,
+        "covariates": [
+          "age",
+          "years",
+          "history_visits",
+          "last_mmse",
+          "last_mmse_missing",
+          "last_mmse_lag",
+          "sex",
+          "dx_cn",
+          "dx_mci",
+          "dx_dem",
+          "dx_missing"
+        ],
+        "knn_sensitivity": {
+          "10": {
+            "pearson": 0.06366972486549757,
+            "spearman": 0.04439953466173489
+          },
+          "20": {
+            "pearson": 0.00048684892167169747,
+            "spearman": -0.003251899136936722
+          },
+          "40": {
+            "pearson": -0.015100288449054741,
+            "spearman": 0.0234811876068886
+          }
+        },
+        "patient_bootstrap_95ci": {
+          "D": [
+            -0.12161528285196446,
+            0.12051121470883495
+          ],
+          "J": [
+            -0.5264422681541044,
+            -0.33564762888057725
+          ],
+          "adjusted_D": [
+            -0.139707615365008,
+            0.0979210159283932
+          ],
+          "adjusted_J": [
+            -0.23207785488252478,
+            0.004228548646394106
+          ]
+        },
+        "training_patient_D_quartile_cuts": [
+          0.03795389963003496,
+          0.04347331114113331,
+          0.04958229875192047
+        ]
+      },
+      "24": {
+        "test_patients": 237,
+        "test_origins": 698,
+        "mmse_mae_patient_weighted": 1.7138362300094678,
+        "mmse_mae_origin_weighted": 1.5437036627172398,
+        "persistence_mae_patient_weighted": 2.1563528549242323,
+        "sensitivity_error": {
+          "pearson": -0.02969292959435296,
+          "spearman": 0.06761992503502151
+        },
+        "jacobian_error": {
+          "pearson": -0.41634459007068625,
+          "spearman": -0.47279950383929586
+        },
+        "adjusted_sensitivity_error": 0.01760934339358809,
+        "adjusted_jacobian_error": -0.1413147715891016,
+        "covariates": [
+          "age",
+          "years",
+          "history_visits",
+          "last_mmse",
+          "last_mmse_missing",
+          "last_mmse_lag",
+          "sex",
+          "dx_cn",
+          "dx_mci",
+          "dx_dem",
+          "dx_missing"
+        ],
+        "knn_sensitivity": {
+          "10": {
+            "pearson": -0.02799688596032345,
+            "spearman": 0.07531925020598242
+          },
+          "20": {
+            "pearson": -0.02969292959435296,
+            "spearman": 0.06761992503502151
+          },
+          "40": {
+            "pearson": -0.03552898770463587,
+            "spearman": 0.08052875730854453
+          }
+        },
+        "patient_bootstrap_95ci": {
+          "D": [
+            -0.06171479139214616,
+            0.18480203822947167
+          ],
+          "J": [
+            -0.569023644951321,
+            -0.35847618416384136
+          ],
+          "adjusted_D": [
+            -0.10827031807871795,
+            0.15164349298185736
+          ],
+          "adjusted_J": [
+            -0.26745085293367415,
+            -0.008094917595926638
+          ]
+        },
+        "training_patient_D_quartile_cuts": [
+          0.03799194749444723,
+          0.04281947761774063,
+          0.0486458569765091
+        ]
+      }
+    },
+    "sensitivity_quartiles": [
+      {
+        "horizon_months": 12,
+        "sensitivity_quartile": 1,
+        "patients": 62,
+        "mean_D": 0.03323868039165205,
+        "mmse_mae": 1.7909935500077938
+      },
+      {
+        "horizon_months": 12,
+        "sensitivity_quartile": 2,
+        "patients": 78,
+        "mean_D": 0.040964890395669376,
+        "mmse_mae": 1.7543935707959843
+      },
+      {
+        "horizon_months": 12,
+        "sensitivity_quartile": 3,
+        "patients": 74,
+        "mean_D": 0.046141699026628416,
+        "mmse_mae": 1.9046967317232344
+      },
+      {
+        "horizon_months": 12,
+        "sensitivity_quartile": 4,
+        "patients": 75,
+        "mean_D": 0.055811192463418646,
+        "mmse_mae": 1.679068949758003
+      },
+      {
+        "horizon_months": 24,
+        "sensitivity_quartile": 1,
+        "patients": 64,
+        "mean_D": 0.03280199733292517,
+        "mmse_mae": 1.5535033812746406
+      },
+      {
+        "horizon_months": 24,
+        "sensitivity_quartile": 2,
+        "patients": 64,
+        "mean_D": 0.040719006784372985,
+        "mmse_mae": 2.022386533180843
+      },
+      {
+        "horizon_months": 24,
+        "sensitivity_quartile": 3,
+        "patients": 52,
+        "mean_D": 0.04550740760245427,
+        "mmse_mae": 1.4492835510639976
+      },
+      {
+        "horizon_months": 24,
+        "sensitivity_quartile": 4,
+        "patients": 57,
+        "mean_D": 0.05607952425584188,
+        "mmse_mae": 1.7887629356450008
+      }
+    ],
+    "region_forecast_errors": [
+      {
+        "horizon_months": 12,
+        "region": "CN core",
+        "origins": 235,
+        "patients": 85,
+        "mmse_mae": 0.96108751854998
+      },
+      {
+        "horizon_months": 12,
+        "region": "CN/MCI boundary",
+        "origins": 23,
+        "patients": 17,
+        "mmse_mae": 1.466907086579696
+      },
+      {
+        "horizon_months": 12,
+        "region": "MCI core",
+        "origins": 387,
+        "patients": 142,
+        "mmse_mae": 1.623352965027171
+      },
+      {
+        "horizon_months": 12,
+        "region": "MCI/Dementia boundary",
+        "origins": 22,
+        "patients": 17,
+        "mmse_mae": 2.1905172738161953
+      },
+      {
+        "horizon_months": 12,
+        "region": "Dementia core",
+        "origins": 143,
+        "patients": 72,
+        "mmse_mae": 2.829885637530914
+      },
+      {
+        "horizon_months": 12,
+        "region": "Other mixed",
+        "origins": 1,
+        "patients": 1,
+        "mmse_mae": 3.97846257686615
+      },
+      {
+        "horizon_months": 12,
+        "region": "Insufficient labels",
+        "origins": 211,
+        "patients": 132,
+        "mmse_mae": 1.5350531446990243
+      },
+      {
+        "horizon_months": 24,
+        "region": "CN core",
+        "origins": 227,
+        "patients": 89,
+        "mmse_mae": 0.955872066745674
+      },
+      {
+        "horizon_months": 24,
+        "region": "CN/MCI boundary",
+        "origins": 15,
+        "patients": 11,
+        "mmse_mae": 1.5934092362721761
+      },
+      {
+        "horizon_months": 24,
+        "region": "MCI core",
+        "origins": 256,
+        "patients": 104,
+        "mmse_mae": 1.6831490865442902
+      },
+      {
+        "horizon_months": 24,
+        "region": "MCI/Dementia boundary",
+        "origins": 11,
+        "patients": 11,
+        "mmse_mae": 1.5083680694753474
+      },
+      {
+        "horizon_months": 24,
+        "region": "Dementia core",
+        "origins": 62,
+        "patients": 41,
+        "mmse_mae": 3.4624286563165727
+      },
+      {
+        "horizon_months": 24,
+        "region": "Other mixed",
+        "origins": 1,
+        "patients": 1,
+        "mmse_mae": 3.3137091994285583
+      },
+      {
+        "horizon_months": 24,
+        "region": "Insufficient labels",
+        "origins": 126,
+        "patients": 87,
+        "mmse_mae": 1.3584012545290447
+      }
+    ]
+  },
+  "projection_comparison": {
+    "conditions": [
+      {
+        "name": "6D neighbors / 6D velocities",
+        "mean": 0.9703835844993591,
+        "p10": 0.9374259889125824
+      },
+      {
+        "name": "2D neighbors / 6D velocities",
+        "mean": 0.9197767376899719,
+        "p10": 0.8049009919166565
+      },
+      {
+        "name": "2D neighbors / projected velocities",
+        "mean": 0.8296113610267639,
+        "p10": 0.5283394575119019
+      },
+      {
+        "name": "Random distinct training patients / 6D velocities",
+        "mean": 0.8171146512031555,
+        "p10": 0.711489737033844
+      }
+    ],
+    "mean_neighbor_overlap": 0.18243131041526794
+  },
+  "neighbor_size": {
+    "10": {
+      "C_mean": 0.9756081104278564,
+      "D_mean": 0.04426347836852074
+    },
+    "20": {
+      "C_mean": 0.9703835844993591,
+      "D_mean": 0.04437395557761192
+    },
+    "40": {
+      "C_mean": 0.9628982543945312,
+      "D_mean": 0.04465147480368614
+    }
+  },
+  "low_consistency_states": {
+    "states": 137,
+    "fraction": 0.057035803497085764,
+    "by_region": {
+      "CN core": 43,
+      "CN/MCI boundary": 21,
+      "MCI core": 37,
+      "Insufficient labels": 36
+    }
+  }
+}

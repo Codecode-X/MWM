@@ -1,0 +1,1498 @@
+{
+  "schema_version": 2,
+  "updated_at_utc": "2026-11-05T14:45:28.827872+00:00",
+  "status": "executing",
+  "execution_started": true,
+  "document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+  "main_model_definition": {
+    "working_name": "M0_sex_init_no_prior_shared_alpha01_jac01",
+    "latent": 28,
+    "init_covariate": "sex",
+    "init_encoding": {
+      "female": 0,
+      "male": 1
+    },
+    "init_network": [
+      1,
+      159,
+      28
+    ],
+    "initial_state_time": "first_known_history_visit",
+    "history_order": "chronological",
+    "shared_vector_field": true,
+    "ode_network": [
+      28,
+      188,
+      28
+    ],
+    "update_alpha": 0.1,
+    "prior_weight": 0,
+    "jacobian_weight": 0.01,
+    "l2_weight": 0.02,
+    "jacobian_definition": "mean_valid_generated_states(sum_784_squared_entries); states detached",
+    "main_loss": "original masked all-time field-normalized MSE plus CE",
+    "parameters": {
+      "ADNI": 44875,
+      "MIMIC": 43280,
+      "CausalMed_c_adaptation": 31314
+    },
+    "completed_matching_main_runs": [],
+    "causalmed_adaptation": {
+      "name": "M0-c",
+      "init_covariate": "public_train_normalized_c",
+      "public_sex_available": false,
+      "gamma": 1,
+      "action_shift_unchanged": true
+    }
+  },
+  "execution_policy": {
+    "environment": "ode; native HealthFlux retains healthflux",
+    "physical_gpus": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "model_execution": "CUDA only",
+    "workers_per_gpu": 1,
+    "max_total_epochs": 150,
+    "seed": 0,
+    "gradient_accumulation_steps": 1,
+    "batch_size": {
+      "ADNI": 32,
+      "MIMIC": 128,
+      "CausalMed": 128
+    },
+    "planned_output_root": "publication_sex_init/results/",
+    "preserve_existing_checkpoints_and_logs": true,
+    "preserve_stop_flags": true,
+    "launch_existing_queues": false
+  },
+  "result_policy": {
+    "obsolete_results_in_document": false,
+    "missing_numeric_cell": "",
+    "age_init_can_be_main_or_resume_as_main": false,
+    "overbudget_results_require_separate_checkpoint_audit": true,
+    "all_theoretical_topics_required": true,
+    "init_and_full_alpha_priority": "P2"
+  },
+  "task_count": 36,
+  "tasks": [
+    {
+      "id": "SETUP",
+      "datasets": [
+        "ADNI",
+        "MIMIC",
+        "CausalMed"
+      ],
+      "priority": "P0",
+      "operation": "implement_and_cuda_audit",
+      "depends_on": [],
+      "required": true,
+      "status": "complete",
+      "source_documents": [
+        "ablation/Ablation.zh-CN.md",
+        "mimic_experiment/init_covariate_ablation.py"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": []
+    },
+    {
+      "id": "M-ADNI",
+      "datasets": [
+        "ADNI"
+      ],
+      "priority": "P0",
+      "operation": "train_from_fixed_seed",
+      "depends_on": [
+        "SETUP"
+      ],
+      "required": true,
+      "status": "complete",
+      "init_covariate": "sex",
+      "resume_age_init_as_main": false,
+      "max_total_epochs": 150,
+      "source_documents": [
+        "ablation/Ablation.zh-CN.md",
+        "mimic_experiment/init_covariate_ablation.py"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_main"
+      ]
+    },
+    {
+      "id": "B-ADNI",
+      "datasets": [
+        "ADNI"
+      ],
+      "priority": "P0",
+      "operation": "reuse_audit_or_train_baselines",
+      "depends_on": [
+        "SETUP"
+      ],
+      "required": true,
+      "status": "complete",
+      "preserve_baseline_objectives": true,
+      "prohibit_unaudited_overbudget_results": true,
+      "source_documents": [
+        "paper_odeae/results/baselines_matched_latent2x/summary.md",
+        "mimic_experiment/results/baselines_matched_latent2x/summary.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_deterministic_matched",
+        "adni_latent_ode_matched_150"
+      ]
+    },
+    {
+      "id": "M-MIMIC",
+      "datasets": [
+        "MIMIC"
+      ],
+      "priority": "P0",
+      "operation": "train_from_fixed_seed",
+      "depends_on": [
+        "SETUP"
+      ],
+      "required": true,
+      "status": "complete",
+      "init_covariate": "sex",
+      "resume_age_init_as_main": false,
+      "max_total_epochs": 150,
+      "source_documents": [
+        "ablation/Ablation.zh-CN.md",
+        "mimic_experiment/init_covariate_ablation.py"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "mimic_main"
+      ]
+    },
+    {
+      "id": "B-MIMIC",
+      "datasets": [
+        "MIMIC"
+      ],
+      "priority": "P0",
+      "operation": "reuse_audit_or_train_baselines",
+      "depends_on": [
+        "SETUP"
+      ],
+      "required": true,
+      "status": "complete",
+      "preserve_baseline_objectives": true,
+      "prohibit_unaudited_overbudget_results": true,
+      "source_documents": [
+        "paper_odeae/results/baselines_matched_latent2x/summary.md",
+        "mimic_experiment/results/baselines_matched_latent2x/summary.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "mimic_deterministic_matched",
+        "mimic_ode_rnn_matched_150",
+        "mimic_ode_rnn_native_150",
+        "mimic_ode_ae_native_budget_audit"
+      ]
+    },
+    {
+      "id": "M-CF",
+      "datasets": [
+        "CausalMed"
+      ],
+      "priority": "P0",
+      "operation": "train_from_fixed_seed",
+      "depends_on": [
+        "SETUP"
+      ],
+      "required": true,
+      "status": "complete",
+      "init_covariate": "public_train_normalized_c",
+      "gamma": 1,
+      "preserve_action_shift": true,
+      "observation_update_alpha": 0.1,
+      "max_total_epochs": 150,
+      "source_documents": [
+        "CausalMed/outputs/gamma1_model_comparison/summary.md",
+        "CausalMed/latent2x_experiment/README.zh-CN.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "causalmed_main"
+      ]
+    },
+    {
+      "id": "B-CF",
+      "datasets": [
+        "CausalMed"
+      ],
+      "priority": "P0",
+      "operation": "reuse_audit_or_train_baselines",
+      "depends_on": [
+        "SETUP"
+      ],
+      "required": true,
+      "status": "complete",
+      "source_documents": [
+        "CausalMed/outputs/gamma1_model_comparison/summary.md",
+        "CausalMed/latent2x_experiment/README.zh-CN.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "causalmed_deterministic_budget_audit"
+      ]
+    },
+    {
+      "id": "A-REV-ADNI",
+      "datasets": [
+        "ADNI"
+      ],
+      "priority": "P1",
+      "operation": "train_from_fixed_seed",
+      "depends_on": [
+        "SETUP"
+      ],
+      "required": true,
+      "status": "complete",
+      "changes": {
+        "history_order": "reverse",
+        "initial_state_time": "last_history_visit",
+        "generation_anchor": "first_history_visit"
+      },
+      "exact_parameter_match": true,
+      "init_covariate": "sex",
+      "max_total_epochs": 150,
+      "preserve_previous_stop_flags": true,
+      "source_documents": [
+        "paper_odeae/results/latent2x_history_encoder_ablation/summary.md",
+        "mimic_experiment/alpha_direction_model.py"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_reverse"
+      ]
+    },
+    {
+      "id": "A-REV-MIMIC",
+      "datasets": [
+        "MIMIC"
+      ],
+      "priority": "P1",
+      "operation": "train_from_fixed_seed",
+      "depends_on": [
+        "SETUP"
+      ],
+      "required": true,
+      "status": "complete",
+      "changes": {
+        "history_order": "reverse",
+        "initial_state_time": "last_history_visit",
+        "generation_anchor": "first_history_visit"
+      },
+      "exact_parameter_match": true,
+      "init_covariate": "sex",
+      "max_total_epochs": 150,
+      "preserve_previous_stop_flags": true,
+      "source_documents": [
+        "paper_odeae/results/latent2x_history_encoder_ablation/summary.md",
+        "mimic_experiment/alpha_direction_model.py"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "mimic_reverse"
+      ]
+    },
+    {
+      "id": "A-SPLIT-ADNI",
+      "datasets": [
+        "ADNI"
+      ],
+      "priority": "P1",
+      "operation": "train_from_fixed_seed",
+      "depends_on": [
+        "SETUP"
+      ],
+      "required": true,
+      "status": "complete",
+      "changes": {
+        "shared_vector_field": false,
+        "encoder_ode_width": 94,
+        "generator_ode_width": 94,
+        "encoder_output_bias": false
+      },
+      "exact_parameter_match": true,
+      "init_covariate": "sex",
+      "max_total_epochs": 150,
+      "preserve_previous_stop_flags": true,
+      "source_documents": [
+        "ablation/Ablation.zh-CN.md",
+        "mimic_experiment/component_ablation_model.py"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_separate_fields"
+      ]
+    },
+    {
+      "id": "A-SPLIT-MIMIC",
+      "datasets": [
+        "MIMIC"
+      ],
+      "priority": "P1",
+      "operation": "train_from_fixed_seed",
+      "depends_on": [
+        "SETUP"
+      ],
+      "required": true,
+      "status": "complete",
+      "changes": {
+        "shared_vector_field": false,
+        "encoder_ode_width": 94,
+        "generator_ode_width": 94,
+        "encoder_output_bias": false
+      },
+      "exact_parameter_match": true,
+      "init_covariate": "sex",
+      "max_total_epochs": 150,
+      "preserve_previous_stop_flags": true,
+      "source_documents": [
+        "ablation/Ablation.zh-CN.md",
+        "mimic_experiment/component_ablation_model.py"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "mimic_separate_fields"
+      ]
+    },
+    {
+      "id": "A-ENCODE-ADNI",
+      "datasets": [
+        "ADNI"
+      ],
+      "priority": "P1",
+      "operation": "train_from_fixed_seed",
+      "depends_on": [
+        "SETUP"
+      ],
+      "required": true,
+      "status": "complete",
+      "changes": {
+        "integrate_between_history_visits": false
+      },
+      "exact_parameter_match": true,
+      "init_covariate": "sex",
+      "max_total_epochs": 150,
+      "preserve_previous_stop_flags": true,
+      "source_documents": [
+        "paper_odeae/history_encoders.py",
+        "reproduction/SAMPLING_IRREGULARITY_COMPARISON.zh-CN.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_no_encoder_ode"
+      ]
+    },
+    {
+      "id": "A-ENCODE-MIMIC",
+      "datasets": [
+        "MIMIC"
+      ],
+      "priority": "P1",
+      "operation": "train_from_fixed_seed",
+      "depends_on": [
+        "SETUP"
+      ],
+      "required": true,
+      "status": "complete",
+      "changes": {
+        "integrate_between_history_visits": false
+      },
+      "exact_parameter_match": true,
+      "init_covariate": "sex",
+      "max_total_epochs": 150,
+      "preserve_previous_stop_flags": true,
+      "source_documents": [
+        "paper_odeae/history_encoders.py",
+        "reproduction/SAMPLING_IRREGULARITY_COMPARISON.zh-CN.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "mimic_no_encoder_ode"
+      ]
+    },
+    {
+      "id": "A-ATTN-ADNI",
+      "datasets": [
+        "ADNI"
+      ],
+      "priority": "P1",
+      "operation": "train_from_fixed_seed",
+      "depends_on": [
+        "SETUP"
+      ],
+      "required": true,
+      "status": "complete",
+      "changes": {
+        "history_encoder": "causal_attention_actual_time",
+        "alpha_applicable": false
+      },
+      "exact_parameter_match": true,
+      "init_covariate": "sex",
+      "max_total_epochs": 150,
+      "preserve_previous_stop_flags": true,
+      "source_documents": [
+        "paper_odeae/results/latent2x_history_encoder_ablation/summary.md",
+        "mimic_experiment/results/history_encoder_ablation_cuda/summary.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_attention"
+      ]
+    },
+    {
+      "id": "A-ATTN-MIMIC",
+      "datasets": [
+        "MIMIC"
+      ],
+      "priority": "P1",
+      "operation": "train_from_fixed_seed",
+      "depends_on": [
+        "SETUP"
+      ],
+      "required": true,
+      "status": "complete",
+      "changes": {
+        "history_encoder": "causal_attention_actual_time",
+        "alpha_applicable": false
+      },
+      "exact_parameter_match": true,
+      "init_covariate": "sex",
+      "max_total_epochs": 150,
+      "preserve_previous_stop_flags": true,
+      "source_documents": [
+        "paper_odeae/results/latent2x_history_encoder_ablation/summary.md",
+        "mimic_experiment/results/history_encoder_ablation_cuda/summary.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "mimic_attention"
+      ]
+    },
+    {
+      "id": "A-J0-ADNI",
+      "datasets": [
+        "ADNI"
+      ],
+      "priority": "P1",
+      "operation": "train_from_fixed_seed",
+      "depends_on": [
+        "SETUP"
+      ],
+      "required": true,
+      "status": "complete",
+      "changes": {
+        "jacobian_weight": 0
+      },
+      "exact_parameter_match": true,
+      "init_covariate": "sex",
+      "max_total_epochs": 150,
+      "preserve_previous_stop_flags": true,
+      "source_documents": [
+        "paper_odeae/results/latent2x_loss_ablation/summary.md",
+        "paper_odeae/jacobian.py"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_no_jacobian"
+      ]
+    },
+    {
+      "id": "A-J0-MIMIC",
+      "datasets": [
+        "MIMIC"
+      ],
+      "priority": "P1",
+      "operation": "train_from_fixed_seed",
+      "depends_on": [
+        "SETUP"
+      ],
+      "required": true,
+      "status": "complete",
+      "changes": {
+        "jacobian_weight": 0
+      },
+      "exact_parameter_match": true,
+      "init_covariate": "sex",
+      "max_total_epochs": 150,
+      "preserve_previous_stop_flags": true,
+      "source_documents": [
+        "paper_odeae/results/latent2x_loss_ablation/summary.md",
+        "paper_odeae/jacobian.py"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "mimic_no_jacobian"
+      ]
+    },
+    {
+      "id": "A-PRIOR-ADNI",
+      "datasets": [
+        "ADNI"
+      ],
+      "priority": "P1",
+      "operation": "train_from_fixed_seed",
+      "depends_on": [
+        "SETUP"
+      ],
+      "required": true,
+      "status": "complete",
+      "changes": {
+        "prior_weight": 0.01
+      },
+      "exact_parameter_match": true,
+      "init_covariate": "sex",
+      "max_total_epochs": 150,
+      "preserve_previous_stop_flags": true,
+      "source_documents": [
+        "ablation/Ablation.zh-CN.md",
+        "mimic_experiment/component_ablation_loss.py"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_add_prior"
+      ]
+    },
+    {
+      "id": "A-PRIOR-MIMIC",
+      "datasets": [
+        "MIMIC"
+      ],
+      "priority": "P1",
+      "operation": "train_from_fixed_seed",
+      "depends_on": [
+        "SETUP"
+      ],
+      "required": true,
+      "status": "complete",
+      "changes": {
+        "prior_weight": 0.01
+      },
+      "exact_parameter_match": true,
+      "init_covariate": "sex",
+      "max_total_epochs": 150,
+      "preserve_previous_stop_flags": true,
+      "source_documents": [
+        "ablation/Ablation.zh-CN.md",
+        "mimic_experiment/component_ablation_loss.py"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "mimic_add_prior"
+      ]
+    },
+    {
+      "id": "D-HORIZON",
+      "datasets": [
+        "ADNI",
+        "MIMIC"
+      ],
+      "priority": "P1",
+      "operation": "cuda_frozen_checkpoint_analysis",
+      "depends_on": [
+        "M-ADNI",
+        "M-MIMIC",
+        "B-ADNI",
+        "B-MIMIC"
+      ],
+      "required": true,
+      "status": "complete",
+      "parameter_updates_allowed": false,
+      "adds_learnable_parameters": false,
+      "source_documents": [
+        "mimic_experiment/results/baselines_single_cuda/summary.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_horizons",
+        "mimic_horizons"
+      ]
+    },
+    {
+      "id": "D-STATE",
+      "datasets": [
+        "ADNI",
+        "MIMIC"
+      ],
+      "priority": "P1",
+      "operation": "cuda_frozen_checkpoint_analysis",
+      "depends_on": [
+        "M-ADNI",
+        "M-MIMIC",
+        "B-ADNI",
+        "B-MIMIC"
+      ],
+      "required": true,
+      "status": "complete",
+      "parameter_updates_allowed": false,
+      "adds_learnable_parameters": false,
+      "source_documents": [
+        "paper_odeae/results/state_space_model_comparison/report.zh-CN.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_state",
+        "mimic_state",
+        "adni_baseline_state_deterministic",
+        "adni_baseline_state_ode_ae",
+        "adni_baseline_state_ode_rnn",
+        "adni_baseline_state_latent_ode",
+        "adni_baseline_state_healthflux",
+        "mimic_baseline_state_deterministic",
+        "mimic_baseline_state_ode_ae",
+        "mimic_baseline_state_ode_rnn",
+        "mimic_baseline_state_latent_ode",
+        "mimic_baseline_state_healthflux"
+      ]
+    },
+    {
+      "id": "D-CLINICAL",
+      "datasets": [
+        "ADNI",
+        "MIMIC"
+      ],
+      "priority": "P1",
+      "operation": "cuda_frozen_checkpoint_analysis",
+      "depends_on": [
+        "M-ADNI",
+        "M-MIMIC"
+      ],
+      "required": true,
+      "status": "complete",
+      "parameter_updates_allowed": false,
+      "adds_learnable_parameters": false,
+      "source_documents": [
+        "paper_odeae/results/shared_matched_clinical_velocity/report.zh-CN.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_clinical",
+        "mimic_clinical"
+      ]
+    },
+    {
+      "id": "D-MMSE",
+      "datasets": [
+        "ADNI"
+      ],
+      "priority": "P1",
+      "operation": "cuda_frozen_checkpoint_analysis",
+      "depends_on": [
+        "M-ADNI",
+        "D-CLINICAL"
+      ],
+      "required": true,
+      "status": "complete",
+      "parameter_updates_allowed": false,
+      "adds_learnable_parameters": false,
+      "source_documents": [
+        "paper_odeae/results/mmse_decline_mechanism/report.zh-CN.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_mmse"
+      ]
+    },
+    {
+      "id": "D-LOCAL",
+      "datasets": [
+        "ADNI",
+        "MIMIC"
+      ],
+      "priority": "P1",
+      "operation": "cuda_frozen_checkpoint_analysis",
+      "depends_on": [
+        "M-ADNI",
+        "M-MIMIC"
+      ],
+      "required": true,
+      "status": "complete",
+      "parameter_updates_allowed": false,
+      "adds_learnable_parameters": false,
+      "source_documents": [
+        "paper_odeae/results/shared_matched_local_dynamics/report.zh-CN.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_local",
+        "mimic_local"
+      ]
+    },
+    {
+      "id": "D-GEOM",
+      "datasets": [
+        "ADNI",
+        "MIMIC"
+      ],
+      "priority": "P1",
+      "operation": "cuda_frozen_checkpoint_analysis",
+      "depends_on": [
+        "M-ADNI",
+        "M-MIMIC"
+      ],
+      "required": true,
+      "status": "complete",
+      "parameter_updates_allowed": false,
+      "adds_learnable_parameters": false,
+      "source_documents": [
+        "paper_odeae/results/latent2x_both_manifold/report.zh-CN.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_geometry",
+        "adni_dynamics",
+        "mimic_geometry",
+        "mimic_dynamics"
+      ]
+    },
+    {
+      "id": "D-JAC",
+      "datasets": [
+        "ADNI",
+        "MIMIC"
+      ],
+      "priority": "P1",
+      "operation": "cuda_frozen_checkpoint_analysis",
+      "depends_on": [
+        "M-ADNI",
+        "M-MIMIC",
+        "A-J0-ADNI",
+        "A-J0-MIMIC"
+      ],
+      "required": true,
+      "status": "failed",
+      "parameter_updates_allowed": false,
+      "adds_learnable_parameters": false,
+      "source_documents": [
+        "ablation/results/jacobian_utility_adni/report.zh-CN.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_jacobian_utility",
+        "mimic_jacobian_utility"
+      ]
+    },
+    {
+      "id": "D-STAGE",
+      "datasets": [
+        "ADNI"
+      ],
+      "priority": "P1",
+      "operation": "cuda_frozen_checkpoint_analysis",
+      "depends_on": [
+        "M-ADNI"
+      ],
+      "required": true,
+      "status": "complete",
+      "parameter_updates_allowed": false,
+      "adds_learnable_parameters": false,
+      "source_documents": [
+        "paper_odeae/results/shared_matched_continuous_stage/report.zh-CN.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_stage"
+      ]
+    },
+    {
+      "id": "D-STABILITY",
+      "datasets": [
+        "MIMIC"
+      ],
+      "priority": "P1",
+      "operation": "cuda_frozen_checkpoint_analysis",
+      "depends_on": [
+        "M-MIMIC",
+        "X-ALPHA-MIMIC"
+      ],
+      "required": true,
+      "status": "queued",
+      "parameter_updates_allowed": false,
+      "adds_learnable_parameters": false,
+      "source_documents": [
+        "mimic_experiment/results/weak_prior_ablation_cuda/mechanism_diagnosis/report.zh-CN.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "mimic_stability"
+      ]
+    },
+    {
+      "id": "D-COST",
+      "datasets": [
+        "ADNI",
+        "MIMIC"
+      ],
+      "priority": "P1",
+      "operation": "cuda_frozen_checkpoint_analysis",
+      "depends_on": [
+        "M-ADNI",
+        "M-MIMIC",
+        "B-ADNI",
+        "B-MIMIC"
+      ],
+      "required": true,
+      "status": "complete",
+      "parameter_updates_allowed": false,
+      "adds_learnable_parameters": false,
+      "source_documents": [
+        "paper_odeae/results/solver_steps_full_test/summary.zh-CN.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_cost",
+        "mimic_cost",
+        "adni_baseline_cost_deterministic",
+        "adni_baseline_cost_ode_ae",
+        "adni_baseline_cost_ode_rnn",
+        "adni_baseline_cost_latent_ode",
+        "adni_baseline_cost_healthflux",
+        "mimic_baseline_cost_deterministic",
+        "mimic_baseline_cost_ode_ae",
+        "mimic_baseline_cost_ode_rnn",
+        "mimic_baseline_cost_latent_ode",
+        "mimic_baseline_cost_healthflux"
+      ]
+    },
+    {
+      "id": "D-CF",
+      "datasets": [
+        "CausalMed"
+      ],
+      "priority": "P1",
+      "operation": "cuda_frozen_checkpoint_analysis",
+      "depends_on": [
+        "M-CF",
+        "B-CF"
+      ],
+      "required": true,
+      "status": "complete",
+      "parameter_updates_allowed": false,
+      "adds_learnable_parameters": false,
+      "source_documents": [
+        "CausalMed/outputs/gamma1_model_comparison/summary.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "causalmed_main",
+        "causalmed_deterministic_budget_audit"
+      ]
+    },
+    {
+      "id": "X-INIT-ADNI",
+      "datasets": [
+        "ADNI"
+      ],
+      "priority": "P2",
+      "operation": "train_control_groups",
+      "depends_on": [
+        "M-ADNI"
+      ],
+      "required": true,
+      "status": "complete",
+      "inputs": [
+        "sex",
+        "first_age",
+        "cutoff_age",
+        "zero_scalar"
+      ],
+      "reuse_main_sex_row": true,
+      "max_total_epochs": 150,
+      "source_documents": [
+        "mimic_experiment/results/init_covariate_ablation_cuda/summary.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_init_first_age",
+        "adni_init_cutoff_age",
+        "adni_init_zero_scalar"
+      ]
+    },
+    {
+      "id": "X-ALPHA-ADNI",
+      "datasets": [
+        "ADNI"
+      ],
+      "priority": "P2",
+      "operation": "train_control_groups",
+      "depends_on": [
+        "M-ADNI"
+      ],
+      "required": true,
+      "status": "queued",
+      "alpha_values": [
+        0,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        1
+      ],
+      "reuse_main_alpha01_row": true,
+      "max_total_epochs": 150,
+      "source_documents": [
+        "mimic_experiment/results/weak_prior_ablation_cuda/targeted_causal_ablation/summary.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_alpha_0",
+        "adni_alpha_02",
+        "adni_alpha_03",
+        "adni_alpha_04",
+        "adni_alpha_05",
+        "adni_alpha_1"
+      ]
+    },
+    {
+      "id": "X-CAPACITY-ADNI",
+      "datasets": [
+        "ADNI"
+      ],
+      "priority": "P2",
+      "operation": "train_capacity_controls",
+      "depends_on": [
+        "M-ADNI"
+      ],
+      "required": true,
+      "status": "queued",
+      "latent_dimensions": [
+        6,
+        28,
+        73
+      ],
+      "modules": [
+        "init",
+        "update",
+        "ode"
+      ],
+      "max_total_epochs": 150,
+      "source_documents": [
+        "paper_odeae/results/shared_matched_latent_scaling/summary.md",
+        "paper_odeae/results/shared_matched_scaling_4x/summary.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "adni_latent_6",
+        "adni_latent_73",
+        "adni_init_expand",
+        "adni_update_expand",
+        "adni_ode_expand"
+      ]
+    },
+    {
+      "id": "X-INIT-MIMIC",
+      "datasets": [
+        "MIMIC"
+      ],
+      "priority": "P2",
+      "operation": "train_control_groups",
+      "depends_on": [
+        "M-MIMIC"
+      ],
+      "required": true,
+      "status": "complete",
+      "inputs": [
+        "sex",
+        "first_age",
+        "cutoff_age",
+        "zero_scalar"
+      ],
+      "reuse_main_sex_row": true,
+      "max_total_epochs": 150,
+      "source_documents": [
+        "mimic_experiment/results/init_covariate_ablation_cuda/summary.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "mimic_init_first_age",
+        "mimic_init_cutoff_age",
+        "mimic_init_zero_scalar"
+      ]
+    },
+    {
+      "id": "X-ALPHA-MIMIC",
+      "datasets": [
+        "MIMIC"
+      ],
+      "priority": "P2",
+      "operation": "train_control_groups",
+      "depends_on": [
+        "M-MIMIC"
+      ],
+      "required": true,
+      "status": "running",
+      "alpha_values": [
+        0,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        1
+      ],
+      "reuse_main_alpha01_row": true,
+      "max_total_epochs": 150,
+      "source_documents": [
+        "mimic_experiment/results/weak_prior_ablation_cuda/targeted_causal_ablation/summary.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "mimic_alpha_0",
+        "mimic_alpha_02",
+        "mimic_alpha_03",
+        "mimic_alpha_04",
+        "mimic_alpha_05",
+        "mimic_alpha_1"
+      ]
+    },
+    {
+      "id": "X-CAPACITY-MIMIC",
+      "datasets": [
+        "MIMIC"
+      ],
+      "priority": "P2",
+      "operation": "train_capacity_controls",
+      "depends_on": [
+        "M-MIMIC"
+      ],
+      "required": true,
+      "status": "queued",
+      "latent_dimensions": [
+        6,
+        28,
+        73
+      ],
+      "modules": [
+        "init",
+        "update",
+        "ode"
+      ],
+      "max_total_epochs": 150,
+      "source_documents": [
+        "paper_odeae/results/shared_matched_latent_scaling/summary.md",
+        "paper_odeae/results/shared_matched_scaling_4x/summary.md"
+      ],
+      "experiment_document": "reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+      "execution_jobs": [
+        "mimic_latent_6",
+        "mimic_latent_73",
+        "mimic_init_expand",
+        "mimic_update_expand",
+        "mimic_ode_expand"
+      ]
+    }
+  ],
+  "compatible_result_evidence": [
+    {
+      "model": "ODE-AE（概率，同预算）",
+      "source": "paper_odeae/results/baselines_matched_latent2x/comparison.json",
+      "run": "/home/xjh/projects/LatentODE/paper_odeae/results/baselines_matched_latent2x/ode_ae/seed_0",
+      "source_sha256": "8937565d0e996aaa7567e4f68f01efedf5f3be1e97ef7b76c1f564b880577bbf",
+      "epochs_run": 81,
+      "best_epoch": 41,
+      "history": 3.0267082404094996,
+      "future": 3.23857150363605,
+      "overall": 3.1183147922393255
+    },
+    {
+      "model": "ODE-RNN（同预算）",
+      "source": "paper_odeae/results/baselines_matched_latent2x/comparison.json",
+      "run": "/home/xjh/projects/LatentODE/paper_odeae/results/baselines_matched_latent2x/ode_rnn/seed_0",
+      "source_sha256": "8937565d0e996aaa7567e4f68f01efedf5f3be1e97ef7b76c1f564b880577bbf",
+      "epochs_run": 69,
+      "best_epoch": 29,
+      "history": 1.3760407870274793,
+      "future": 1.032329433339607,
+      "overall": 1.228165279891023
+    },
+    {
+      "model": "HealthFlux-KL（KL=1）",
+      "source": "healthflux/results/adni_comparison/common_task/seed_0/metrics.json",
+      "run": null,
+      "source_sha256": "a92d15ced585c917bedebd24e353e601200806a54799fb2cd5b4fa4e18b7f790",
+      "epochs_run": 58,
+      "best_epoch": 18,
+      "history": 0.8083413823313235,
+      "future": 1.5349993019380292,
+      "overall": 1.1273242536081178
+    },
+    {
+      "model": "HealthFlux-KL（KL=0.01）",
+      "source": "healthflux/results/adni_comparison/paper_kl/seed_0/metrics.json",
+      "run": null,
+      "source_sha256": "5cc86c8b091beba25faf9622dd2b1a90fbe3991951e4b392d02858e63ead2e1b",
+      "epochs_run": 50,
+      "best_epoch": 3,
+      "history": 1.0843898412806734,
+      "future": 1.6031995013827,
+      "overall": 1.3115674438481926
+    },
+    {
+      "model": "ODE-AE（概率，原容量）",
+      "source": "paper_odeae/results/baselines_matched_latent2x/comparison.json",
+      "run": "/home/xjh/projects/LatentODE/paper_odeae/results/local_available/ode_ae/seed_0",
+      "source_sha256": "8937565d0e996aaa7567e4f68f01efedf5f3be1e97ef7b76c1f564b880577bbf",
+      "epochs_run": 90,
+      "best_epoch": 50,
+      "history": 3.014008944182298,
+      "future": 3.2478035995204886,
+      "overall": 3.115103375634905
+    },
+    {
+      "model": "ODE-RNN（原容量）",
+      "source": "paper_odeae/results/baselines_matched_latent2x/comparison.json",
+      "run": "/home/xjh/projects/LatentODE/paper_odeae/results/baselines_full/native/ode_rnn/seed_0",
+      "source_sha256": "8937565d0e996aaa7567e4f68f01efedf5f3be1e97ef7b76c1f564b880577bbf",
+      "epochs_run": 96,
+      "best_epoch": 56,
+      "history": 1.370758661438728,
+      "future": 1.1205800264751575,
+      "overall": 1.2640648915399217
+    },
+    {
+      "model": "Latent ODE（原容量）",
+      "source": "paper_odeae/results/baselines_matched_latent2x/comparison.json",
+      "run": "/home/xjh/projects/LatentODE/paper_odeae/results/baselines_full/native/latent_ode/seed_0",
+      "source_sha256": "8937565d0e996aaa7567e4f68f01efedf5f3be1e97ef7b76c1f564b880577bbf",
+      "epochs_run": 69,
+      "best_epoch": 29,
+      "history": 2.5246078311333426,
+      "future": 2.8369831583458627,
+      "overall": 2.6593619785955216
+    },
+    {
+      "model": "确定性 ODE-AE（22,545 参数）",
+      "source": "paper_odeae/results/capacity_matched/deterministic_22545/seed_0/metrics.json",
+      "run": "paper_odeae/results/capacity_matched/deterministic_22545/seed_0",
+      "source_sha256": "6cf6a512171debc80e88969e148afb48592cb939ddaba2089b069fad7dbae234",
+      "epochs_run": 116,
+      "best_epoch": 76,
+      "history": 0.666807758142079,
+      "future": 1.1915476650796923,
+      "overall": 0.8947578770954969
+    },
+    {
+      "model": "ODE-AE（概率，同预算）",
+      "source": "mimic_experiment/results/baselines_matched_latent2x/comparison.json",
+      "run": "/home/xjh/projects/LatentODE/mimic_experiment/results/baselines_matched_latent2x/ode_ae/seed_0",
+      "source_sha256": "f4ca8c18957e44b7a4afff31fae64b91eecf26224a01d5ae7c494963b34495b2",
+      "epochs_run": 124,
+      "best_epoch": 84,
+      "history": 3.2019553052782443,
+      "future": 2.552856426504646,
+      "overall": 3.2185148392624767
+    },
+    {
+      "model": "Latent ODE（同预算）",
+      "source": "mimic_experiment/results/baselines_matched_latent2x/comparison.json",
+      "run": "/home/xjh/projects/LatentODE/mimic_experiment/results/baselines_matched_latent2x/latent_ode/seed_0",
+      "source_sha256": "f4ca8c18957e44b7a4afff31fae64b91eecf26224a01d5ae7c494963b34495b2",
+      "epochs_run": 84,
+      "best_epoch": 44,
+      "history": 3.1624454973289113,
+      "future": 2.4820123286327203,
+      "overall": 3.1557830407511442
+    },
+    {
+      "model": "HealthFlux-KL（KL=0.01）",
+      "source": "mimic_experiment/results/baselines_single_cuda/comparison.json",
+      "run": "/home/xjh/projects/LatentODE/mimic_experiment/results/baselines_single_cuda/healthflux_kl/seed_0",
+      "source_sha256": "37725f1561c5806320612e19d388c3bd7dfc10b2b7d881027a27b04c837eeaf5",
+      "epochs_run": 110,
+      "best_epoch": 70,
+      "history": 1.2659984911649498,
+      "future": 1.947003609290356,
+      "overall": 1.5917599148415529
+    },
+    {
+      "model": "Latent ODE（原容量）",
+      "source": "mimic_experiment/results/baselines_matched_latent2x/comparison.json",
+      "run": "/home/xjh/projects/LatentODE/mimic_experiment/results/baselines_single_cuda/latent_ode/seed_0",
+      "source_sha256": "f4ca8c18957e44b7a4afff31fae64b91eecf26224a01d5ae7c494963b34495b2",
+      "epochs_run": 104,
+      "best_epoch": 64,
+      "history": 3.1751876327838606,
+      "future": 2.4998391434681553,
+      "overall": 3.1675119592802594
+    },
+    {
+      "model": "ODE-AE（概率，同预算）",
+      "source": "mimic_experiment/results/baselines_matched_latent2x/comparison.json",
+      "clinical_scores": {
+        "std_numeric_mse": 0.9361091306082531,
+        "heart_rate_mae": 14.576447247417933,
+        "map_mae": 11.323553438644442,
+        "gcs_eye_accuracy": 0.6577064816822025,
+        "gcs_motor_accuracy": 0.7455065951587186,
+        "gcs_verbal_accuracy": 0.7384904705073958
+      }
+    },
+    {
+      "model": "Latent ODE（同预算）",
+      "source": "mimic_experiment/results/baselines_matched_latent2x/comparison.json",
+      "clinical_scores": {
+        "std_numeric_mse": 0.9275225565541598,
+        "heart_rate_mae": 14.11217180138302,
+        "map_mae": 11.465835794952788,
+        "gcs_eye_accuracy": 0.6668473155574824,
+        "gcs_motor_accuracy": 0.7515944339759385,
+        "gcs_verbal_accuracy": 0.762287078225019
+      }
+    },
+    {
+      "model": "HealthFlux-KL",
+      "source": "mimic_experiment/results/baselines_single_cuda/comparison.json",
+      "clinical_scores": {
+        "std_numeric_mse": 0.9194632503180515,
+        "heart_rate_mae": 14.5767959993655,
+        "map_mae": 10.894301155116013,
+        "gcs_eye_accuracy": 0.7049281017414553,
+        "gcs_motor_accuracy": 0.8175460211624873,
+        "gcs_verbal_accuracy": 0.8219955878630067
+      }
+    },
+    {
+      "model": "保持最近值",
+      "source": "mimic_experiment/results/baselines_single_cuda/comparison.json",
+      "mean_standardized_numeric_mse": 0.5809328614671875,
+      "clinical": {
+        "heart_rate": {
+          "unit": "bpm",
+          "mae": 9.748846477515007,
+          "rmse": 13.55410038256403,
+          "standardized_rmse": 0.7401862739733195
+        },
+        "sbp": {
+          "unit": "mmHg",
+          "mae": 14.05366388569109,
+          "rmse": 18.65576502042332,
+          "standardized_rmse": 0.9114145845761742
+        },
+        "dbp": {
+          "unit": "mmHg",
+          "mae": 9.011407490096913,
+          "rmse": 12.494845109241888,
+          "standardized_rmse": 0.8807418068265589
+        },
+        "map": {
+          "unit": "mmHg",
+          "mae": 9.939788152962453,
+          "rmse": 13.948211174413498,
+          "standardized_rmse": 0.950821234025061
+        },
+        "respiratory_rate": {
+          "unit": "breaths/min",
+          "mae": 3.813872342955713,
+          "rmse": 5.267882331933383,
+          "standardized_rmse": 0.9786322192537383
+        },
+        "spo2": {
+          "unit": "%",
+          "mae": 1.9726412999646221,
+          "rmse": 2.9332942242961204,
+          "standardized_rmse": 1.0486156542950187
+        },
+        "temperature": {
+          "unit": "degC",
+          "mae": 0.43782577366383374,
+          "rmse": 0.6313357146687069,
+          "standardized_rmse": 0.9325432352492504
+        },
+        "fio2": {
+          "unit": "fraction",
+          "mae": 0.08297985948741436,
+          "rmse": 0.15682649503657878,
+          "standardized_rmse": 0.8210550544343458
+        },
+        "weight": {
+          "unit": "kg",
+          "mae": 5.359685279475427,
+          "rmse": 11.607963646639536,
+          "standardized_rmse": 0.4856333079590794
+        },
+        "glucose": {
+          "unit": "mg/dL",
+          "mae": 34.28962017444916,
+          "rmse": 59.10367832980475,
+          "standardized_rmse": 0.920103414609951
+        },
+        "urea_nitrogen": {
+          "unit": "mg/dL",
+          "mae": 4.884566212428435,
+          "rmse": 8.322330314655085,
+          "standardized_rmse": 0.36352314721955303
+        },
+        "creatinine": {
+          "unit": "mg/dL",
+          "mae": 0.2648672185528816,
+          "rmse": 0.5288969686182556,
+          "standardized_rmse": 0.34046401110918123
+        },
+        "sodium": {
+          "unit": "mEq/L",
+          "mae": 2.5547707040594627,
+          "rmse": 3.4914022355589953,
+          "standardized_rmse": 0.5850496782325558
+        },
+        "potassium": {
+          "unit": "mEq/L",
+          "mae": 0.4434679463385463,
+          "rmse": 0.6397195504514489,
+          "standardized_rmse": 0.9312711980937186
+        },
+        "chloride": {
+          "unit": "mEq/L",
+          "mae": 3.0351947894975893,
+          "rmse": 4.131650514725514,
+          "standardized_rmse": 0.593788817854672
+        },
+        "bicarbonate": {
+          "unit": "mEq/L",
+          "mae": 2.2608383996883488,
+          "rmse": 3.05902755385769,
+          "standardized_rmse": 0.6517672183786329
+        },
+        "calcium": {
+          "unit": "mg/dL",
+          "mae": 0.4078964281434179,
+          "rmse": 0.6044919384339338,
+          "standardized_rmse": 0.7255957104737031
+        },
+        "magnesium": {
+          "unit": "mg/dL",
+          "mae": 0.27441465507361523,
+          "rmse": 0.41843859868322136,
+          "standardized_rmse": 0.938180639465582
+        },
+        "phosphate": {
+          "unit": "mg/dL",
+          "mae": 0.8178451412323352,
+          "rmse": 1.1507342557436153,
+          "standardized_rmse": 0.7539785192803201
+        },
+        "wbc": {
+          "unit": "K/uL",
+          "mae": 2.8994225250091965,
+          "rmse": 5.958622433942174,
+          "standardized_rmse": 0.5823195136008161
+        },
+        "hemoglobin": {
+          "unit": "g/dL",
+          "mae": 0.8983960666741447,
+          "rmse": 1.1992073129506222,
+          "standardized_rmse": 0.5669163912182781
+        },
+        "hematocrit": {
+          "unit": "%",
+          "mae": 2.644722617110359,
+          "rmse": 3.5246201067653518,
+          "standardized_rmse": 0.5717075239484694
+        },
+        "platelets": {
+          "unit": "K/uL",
+          "mae": 27.610911297319387,
+          "rmse": 40.47760252493721,
+          "standardized_rmse": 0.3946509495881023
+        },
+        "lactate": {
+          "unit": "mmol/L",
+          "mae": 1.0473427132481143,
+          "rmse": 1.8882258592201138,
+          "standardized_rmse": 0.8335755390093542
+        },
+        "blood_gas_ph": {
+          "unit": "pH",
+          "mae": 0.05324858477337754,
+          "rmse": 0.0729405082568917,
+          "standardized_rmse": 0.8538709454742928
+        },
+        "blood_gas_pco2": {
+          "unit": "mmHg",
+          "mae": 5.741888112512253,
+          "rmse": 8.232640540384939,
+          "standardized_rmse": 0.7707307983508561
+        },
+        "blood_gas_po2": {
+          "unit": "mmHg",
+          "mae": 42.71052747544525,
+          "rmse": 69.92705604965269,
+          "standardized_rmse": 0.756399113605919
+        },
+        "gcs_eye": {
+          "accuracy": 0.7093359346773611
+        },
+        "gcs_motor": {
+          "accuracy": 0.8295405131178432
+        },
+        "gcs_verbal": {
+          "accuracy": 0.836750931250226
+        }
+      }
+    },
+    {
+      "model": "ODE-AE（概率，同预算）",
+      "source": "mimic_experiment/results/baselines_matched_latent2x/comparison.json",
+      "horizon_errors": {
+        "6h": 2.4993160886737193,
+        "12h": 2.5120965876262136,
+        "24h": 2.552856426504646
+      }
+    },
+    {
+      "model": "Latent ODE（同预算）",
+      "source": "mimic_experiment/results/baselines_matched_latent2x/comparison.json",
+      "horizon_errors": {
+        "6h": 2.423923085615885,
+        "12h": 2.4371309801726264,
+        "24h": 2.4820123286327203
+      }
+    },
+    {
+      "model": "HealthFlux-KL",
+      "source": "mimic_experiment/results/baselines_single_cuda/comparison.json",
+      "horizon_errors": {
+        "6h": 1.657210284421245,
+        "12h": 1.7782481950332045,
+        "24h": 1.947003609290356
+      }
+    },
+    {
+      "model": "ODE-AE",
+      "source": "CausalMed/outputs/gamma1_model_comparison/comparison.json",
+      "epochs_run": 71,
+      "best_epoch": 31,
+      "scores": {
+        "cf_rmse": 5.25065672906241,
+        "cf_rmse_3y": 5.305324221161128,
+        "sqrt_pehe_3y": 10.498133069692145,
+        "ate_error_3y": 10.394522729859343,
+        "regret_3y": 1.3026448655932832
+      }
+    },
+    {
+      "model": "HealthFlux-KL（原生容量）",
+      "source": "CausalMed/outputs/gamma1_model_comparison/comparison.json",
+      "epochs_run": 79,
+      "best_epoch": 39,
+      "scores": {
+        "cf_rmse": 1.4083268449644433,
+        "cf_rmse_3y": 0.9292650345703856,
+        "sqrt_pehe_3y": 1.867809434245412,
+        "ate_error_3y": 1.3075870036935715,
+        "regret_3y": 0.23369818657964708
+      }
+    }
+  ],
+  "execution_manifest": "/home/xjh/projects/LatentODE/publication_sex_init/manifest.json",
+  "execution_queue": "/home/xjh/projects/LatentODE/publication_sex_init/queue.json"
+}

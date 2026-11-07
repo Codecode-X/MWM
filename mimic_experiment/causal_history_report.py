@@ -186,7 +186,10 @@ def _generate(out):
     lines += importlib.reload(history_depth_report).section(out, manifest)
     from . import adni_fixed_update_report
     lines += importlib.reload(adni_fixed_update_report).section(out)
-    lines += ['### 8.7 原始记录与复现','',
+    from . import alpha_direction_report
+    lines += importlib.reload(alpha_direction_report).section(out)
+    lines += ['### 8.8 原始记录与复现','',
+              '当前α=0.1主模型的完整等参数模块消融，统一记录于[Ablation文档](../../../ablation/Ablation.zh-CN.md)。','',
               '[实验配置与源码指纹](targeted_causal_ablation/manifest.json) · [运行队列及物理GPU](targeted_causal_ablation/queue.json) · [CUDA梯度检查](targeted_causal_ablation/checks.json)','',
               '[控制组完整记录](targeted_causal_ablation/control/) · [截断组完整记录](targeted_causal_ablation/history_stop/) · [固定稳定INIT交叉结果](targeted_causal_ablation/module_cross/stable/results.json) · [固定异常INIT交叉结果](targeted_causal_ablation/module_cross/abnormal/results.json)','',
               '```bash','bash scripts/run_mimic_targeted_causal_ablation.sh','bash scripts/run_mimic_history_stop_fresh.sh','```','',

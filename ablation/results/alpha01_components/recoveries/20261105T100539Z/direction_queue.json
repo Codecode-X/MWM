@@ -1,0 +1,28 @@
+{
+  "status": "running",
+  "controller_pid": 71352,
+  "physical_gpus": {
+    "adni_reverse": 2,
+    "mimic_reverse": 3
+  },
+  "jobs": {
+    "adni_reverse": {
+      "status": "complete",
+      "pid": 2119344,
+      "physical_gpu": 2,
+      "adopted_without_restart": true
+    },
+    "mimic_reverse": {
+      "status": "running",
+      "physical_gpu": 3,
+      "pid": 71805
+    },
+    "mimic_forward_150": {
+      "status": "cancelled_by_user"
+    },
+    "mimic_forward_existing": {
+      "status": "queued_evaluation_only",
+      "physical_gpu": 3
+    }
+  }
+}

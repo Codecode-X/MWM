@@ -1,0 +1,23 @@
+
+Recovery 20261104T040807Z — resume from last completed epoch
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/xjh/projects/LatentODE/mimic_experiment/component_ablation_study.py", line 106, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/xjh/projects/LatentODE/mimic_experiment/component_ablation_study.py", line 49, in main
+    assert digest(Path(cfg['data']))==cfg['dataset_sha256']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/projects/LatentODE/mimic_experiment/component_ablation_study.py", line 18, in digest
+    def digest(path): return hashlib.sha256(path.read_bytes()).hexdigest()
+                                            ^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/pathlib.py", line 1050, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/data/MIMIC/derived/latentode_iv31/dataset.pkl'
+
+Data mount restored; resume 2026-11-04T04:09:37.022876+00:00

@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "alpha": 0.0,
+  "physical_gpu": 1,
+  "parameter_device": "cuda:0",
+  "parameters": 43280,
+  "same_parameter_hash_and_state_dict_keys": true,
+  "alpha1_forward_and_loss_bitwise_equal": true,
+  "alpha0_returns_input_state": true,
+  "alpha0_observation_values_do_not_change_outputs": true,
+  "jacobian_formula_max_absolute_error_float64": 0.0,
+  "history_encoder_gradient_stopped": false,
+  "gradient_norms": {
+    "history": {
+      "init": 4.509917736053467,
+      "update": 0.0,
+      "forward_ode": 13.42216682434082,
+      "decoder": 5.264091968536377
+    },
+    "future": {
+      "init": 27.404993057250977,
+      "update": 0.0,
+      "forward_ode": 167.39634704589844,
+      "decoder": 17.455402374267578
+    }
+  },
+  "optimizer_steps": 0,
+  "actual_tensor_devices": {
+    "values": "cuda:0",
+    "mask": "cuda:0",
+    "ages": "cuda:0",
+    "context_mask": "cuda:0",
+    "valid": "cuda:0",
+    "cutoff": "cuda:0",
+    "initialization_age": "cuda:0"
+  },
+  "batch_kind": "fixed training-patient implementation check, not a replay of a historical abnormal batch"
+}

@@ -1,0 +1,220 @@
+ablation:
+  desc: ''
+  sort: 27
+  value: latent2x fixed architecture, pre-update supervision and exact Jacobian independent/combined
+ablation_component:
+  desc: ''
+  sort: 44
+  value: no_prior
+ablation_family:
+  desc: ''
+  sort: 32
+  value: latent2x_losses
+atol:
+  desc: ''
+  sort: 17
+  value: 1.0e-06
+batch_size:
+  desc: ''
+  sort: 13
+  value: 32
+capacity_change:
+  desc: ''
+  sort: 24
+  value: none
+cce_weight:
+  desc: ''
+  sort: 7
+  value: 1.0
+collect_jacobian_states:
+  desc: ''
+  sort: 36
+  value: true
+collect_prior_predictions:
+  desc: ''
+  sort: 35
+  value: false
+data:
+  desc: ''
+  sort: 20
+  value: /home/xjh/projects/LatentODE/paper_odeae/cache/local_available.pkl
+dataset:
+  desc: ''
+  sort: 37
+  value: adni
+dataset_name:
+  desc: ''
+  sort: 45
+  value: adni
+dataset_sha256:
+  desc: ''
+  sort: 43
+  value: 9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7
+encoder_direction:
+  desc: ''
+  sort: 26
+  value: forward
+encoder_initialization:
+  desc: ''
+  sort: 28
+  value: age
+family:
+  desc: ''
+  sort: 46
+  value: publication
+generator_anchor:
+  desc: ''
+  sort: 41
+  value: history cutoff
+gradient_accumulation_steps:
+  desc: ''
+  sort: 40
+  value: 1
+history_order:
+  desc: ''
+  sort: 49
+  value: chronological
+init_covariate:
+  desc: ''
+  sort: 47
+  value: first_age
+input_dropout:
+  desc: ''
+  sort: 14
+  value: 0.1
+jacobian_weight:
+  desc: ''
+  sort: 34
+  value: 0.01
+kl_weight:
+  desc: ''
+  sort: 8
+  value: 0.0
+l2_weight:
+  desc: ''
+  sort: 9
+  value: 0.02
+latent:
+  desc: ''
+  sort: 0
+  value: 28
+learnable_update_alpha:
+  desc: ''
+  sort: 42
+  value: false
+lr:
+  desc: ''
+  sort: 3
+  value: 0.003
+lr_decay:
+  desc: ''
+  sort: 4
+  value: 0.97
+lr_decay_steps:
+  desc: ''
+  sort: 5
+  value: 2000
+max_epochs:
+  desc: ''
+  sort: 10
+  value: 150
+min_epochs:
+  desc: ''
+  sort: 11
+  value: 50
+mlp_width:
+  desc: ''
+  sort: 2
+  value: 159
+model:
+  desc: ''
+  sort: 19
+  value: deterministic
+model_parameters:
+  desc: ''
+  sort: 54
+  value: 44875
+mse_weight:
+  desc: ''
+  sort: 6
+  value: 1.0
+normalization:
+  desc: ''
+  sort: 15
+  value: train_minmax
+ode_width:
+  desc: ''
+  sort: 1
+  value: 188
+output:
+  desc: ''
+  sort: 21
+  value: /home/xjh/projects/LatentODE/publication_sex_init/results/adni/init_first_age
+parameter_device:
+  desc: ''
+  sort: 53
+  value: cuda:0
+patience:
+  desc: ''
+  sort: 12
+  value: 40
+physical_gpu:
+  desc: ''
+  sort: 39
+  value: '3'
+prior_weight:
+  desc: ''
+  sort: 33
+  value: 0.0
+rtol:
+  desc: ''
+  sort: 16
+  value: 0.0001
+scope:
+  desc: ''
+  sort: 22
+  value: local_available
+seed:
+  desc: ''
+  sort: 18
+  value: 0
+sex_missing_fill:
+  desc: ''
+  sort: 48
+  value: 1
+shared_vector_field:
+  desc: ''
+  sort: 29
+  value: true
+smoke:
+  desc: ''
+  sort: 25
+  value: false
+source_snapshot:
+  desc: ''
+  sort: 50
+  value: /home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5
+study:
+  desc: ''
+  sort: 30
+  value: publication_sex_init
+target_parameters:
+  desc: ''
+  sort: 23
+  value: 44875
+tracking_family:
+  desc: ''
+  sort: 51
+  value: publication_adni_init_first_age
+training_seed:
+  desc: ''
+  sort: 52
+  value: 0
+update_alpha:
+  desc: ''
+  sort: 38
+  value: 0.1
+variant:
+  desc: ''
+  sort: 31
+  value: init_first_age

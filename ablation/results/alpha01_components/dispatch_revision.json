@@ -1,0 +1,45 @@
+{
+  "requested_at_utc": "2026-11-04T04:20:49.632718+00:00",
+  "reason": "User authorized idle-GPU backfill for all remaining component ablations, prioritizing MIMIC weak-prior removal.",
+  "physical_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "priority": [
+    "mimic_no_prior",
+    "adni_no_jacobian",
+    "mimic_no_jacobian",
+    "adni_separate_fields",
+    "mimic_separate_fields",
+    "adni_no_prior"
+  ],
+  "adopt_without_restart": {
+    "adni_no_prior": {
+      "pid": 71697,
+      "physical_gpu": 0
+    }
+  },
+  "old_controller_pid": 71351,
+  "before_dispatch_backup": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/dispatch_backups/20261104T042049Z",
+  "parameter_budgets": {
+    "adni": 44875,
+    "mimic": 43280
+  },
+  "max_total_epochs": 150,
+  "training_changes": "None; only device assignment and job scheduling. Frozen model, loss, trainer, batch sizes and optimizer retained.",
+  "scheduler_sha256": "07077ac09122a360947c4639625f48b79119609c73c0720bb1e0ebba2d7e595e",
+  "new_controller_pid": 314027,
+  "user_stopped_groups": [
+    "adni_no_prior",
+    "mimic_no_prior"
+  ],
+  "stop_requested_at_utc": "2026-11-04T08:56:23.634969+00:00",
+  "stop_reason": "中断所有 weak prior 相关的消融组实验",
+  "preserved_worker_pids_on_stop": {
+    "mimic_no_jacobian": 119415,
+    "adni_separate_fields": 274241,
+    "mimic_separate_fields": 312156
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "main_model": "latent2x, chronological encoding, shared field, weak prior=.01, Jacobian=.01, fixed residual alpha=.1",
+  "physical_gpu": 0,
+  "max_epochs": 150,
+  "jobs": [
+    {
+      "name": "adni_no_prior",
+      "dataset": "adni",
+      "component": "no_prior",
+      "config": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/adni_no_prior/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/adni_no_prior",
+      "source": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/adni_no_prior/source_snapshot",
+      "native": "/home/xjh/projects/LatentODE/paper_odeae/results/latent2x_loss_ablation/source_snapshot"
+    },
+    {
+      "name": "mimic_no_prior",
+      "dataset": "mimic",
+      "component": "no_prior",
+      "config": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/mimic_no_prior/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/mimic_no_prior",
+      "source": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/mimic_no_prior/source_snapshot",
+      "native": "/home/xjh/projects/LatentODE/mimic_experiment/results/direction_full_batch_cuda/source_snapshot"
+    },
+    {
+      "name": "adni_no_jacobian",
+      "dataset": "adni",
+      "component": "no_jacobian",
+      "config": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/adni_no_jacobian/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/adni_no_jacobian",
+      "source": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/adni_no_jacobian/source_snapshot",
+      "native": "/home/xjh/projects/LatentODE/paper_odeae/results/latent2x_loss_ablation/source_snapshot"
+    },
+    {
+      "name": "mimic_no_jacobian",
+      "dataset": "mimic",
+      "component": "no_jacobian",
+      "config": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/mimic_no_jacobian/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/mimic_no_jacobian",
+      "source": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/mimic_no_jacobian/source_snapshot",
+      "native": "/home/xjh/projects/LatentODE/mimic_experiment/results/direction_full_batch_cuda/source_snapshot"
+    },
+    {
+      "name": "adni_separate_fields",
+      "dataset": "adni",
+      "component": "separate_fields",
+      "config": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/adni_separate_fields/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/adni_separate_fields",
+      "source": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/adni_separate_fields/source_snapshot",
+      "native": "/home/xjh/projects/LatentODE/paper_odeae/results/latent2x_loss_ablation/source_snapshot"
+    },
+    {
+      "name": "mimic_separate_fields",
+      "dataset": "mimic",
+      "component": "separate_fields",
+      "config": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/mimic_separate_fields/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/mimic_separate_fields",
+      "source": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/mimic_separate_fields/source_snapshot",
+      "native": "/home/xjh/projects/LatentODE/mimic_experiment/results/direction_full_batch_cuda/source_snapshot"
+    }
+  ],
+  "references": {
+    "adni": "/home/xjh/projects/LatentODE/mimic_experiment/results/weak_prior_ablation_cuda/targeted_causal_ablation/adni_update_alpha_01",
+    "mimic": "/home/xjh/projects/LatentODE/mimic_experiment/results/weak_prior_ablation_cuda/targeted_causal_ablation/update_alpha_01"
+  },
+  "direction_study": "/home/xjh/projects/LatentODE/mimic_experiment/results/weak_prior_ablation_cuda/targeted_causal_ablation/direction_alpha01",
+  "document": "/home/xjh/projects/LatentODE/ablation/Ablation.zh-CN.md",
+  "same_parameter_budget": {
+    "adni": 44875,
+    "mimic": 43280
+  },
+  "unique_ode_parameter_budget": 10744
+}

@@ -1,0 +1,63 @@
+{
+  "status": "interrupted",
+  "controller_pid": 13988,
+  "physical_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "phase": "parallel_training",
+  "priority": [
+    "mimic_no_prior",
+    "adni_no_jacobian",
+    "mimic_no_jacobian",
+    "adni_separate_fields",
+    "mimic_separate_fields",
+    "adni_no_prior"
+  ],
+  "jobs": {
+    "adni_no_prior": {
+      "status": "complete",
+      "physical_gpu": 0
+    },
+    "mimic_no_prior": {
+      "status": "stopped_by_user",
+      "physical_gpu": 2
+    },
+    "adni_no_jacobian": {
+      "status": "complete",
+      "physical_gpu": 0
+    },
+    "mimic_no_jacobian": {
+      "status": "complete",
+      "physical_gpu": 0,
+      "pid": 15223,
+      "stage": "training",
+      "dispatched_at_utc": "2026-11-05T10:05:59.372789+00:00",
+      "exit_code": 0,
+      "finished_at_utc": "2026-11-05T14:26:38.944286+00:00"
+    },
+    "adni_separate_fields": {
+      "status": "complete",
+      "physical_gpu": 1,
+      "pid": 15023,
+      "stage": "training",
+      "dispatched_at_utc": "2026-11-05T10:05:53.406336+00:00",
+      "exit_code": 0,
+      "finished_at_utc": "2026-11-05T12:54:50.034157+00:00"
+    },
+    "mimic_separate_fields": {
+      "status": "interrupted",
+      "physical_gpu": 2,
+      "pid": 14284,
+      "stage": "training",
+      "dispatched_at_utc": "2026-11-05T10:05:47.133444+00:00"
+    }
+  },
+  "started_at_utc": "2026-11-05T10:05:42.341876+00:00",
+  "current_jobs": [
+    "mimic_separate_fields"
+  ],
+  "updated_at_utc": "2026-11-05T14:52:33.120690+00:00"
+}

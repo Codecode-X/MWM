@@ -1,0 +1,100 @@
+{
+  "recovered_at_utc": "2026-11-05T10:05:39.922759+00:00",
+  "jobs": [
+    {
+      "job": "adni_separate_fields",
+      "last_completed_epoch": 14,
+      "next_epoch": 15,
+      "optimizer_steps": 5488,
+      "physical_gpu_before": 0,
+      "max_total_epochs": 150,
+      "backup": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/recoveries/20261105T100539Z/adni_separate_fields"
+    },
+    {
+      "job": "mimic_no_jacobian",
+      "last_completed_epoch": 58,
+      "next_epoch": 59,
+      "optimizer_steps": 9802,
+      "physical_gpu_before": 1,
+      "max_total_epochs": 150,
+      "backup": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/recoveries/20261105T100539Z/mimic_no_jacobian"
+    },
+    {
+      "job": "mimic_separate_fields",
+      "last_completed_epoch": 1,
+      "next_epoch": 2,
+      "optimizer_steps": 169,
+      "physical_gpu_before": 2,
+      "max_total_epochs": 150,
+      "backup": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/recoveries/20261105T100539Z/mimic_separate_fields"
+    },
+    {
+      "job": "mimic_reverse",
+      "last_completed_epoch": 135,
+      "next_epoch": 136,
+      "optimizer_steps": 22815,
+      "physical_gpu_before": 3,
+      "max_total_epochs": 150,
+      "backup": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/recoveries/20261105T100539Z/mimic_reverse"
+    }
+  ],
+  "controllers": [
+    {
+      "name": "components",
+      "pid": 13988,
+      "log": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/parallel_controller.log"
+    },
+    {
+      "name": "direction",
+      "pid": 13989,
+      "log": "/home/xjh/projects/LatentODE/mimic_experiment/results/weak_prior_ablation_cuda/targeted_causal_ablation/direction_alpha01/parallel_controller.log"
+    }
+  ],
+  "stopped_jobs_kept_stopped": [
+    "mimic_no_prior",
+    "adni_no_prior",
+    "mimic_forward_150"
+  ],
+  "method": "restore original model, Adam, scheduler and epoch history; original per-epoch reseeding",
+  "max_total_epochs": 150,
+  "status": "recovered_and_verified",
+  "verified_at_utc": "2026-11-05T10:13:07.532901+00:00",
+  "verified_jobs": [
+    {
+      "job": "adni_separate_fields",
+      "pid": 15023,
+      "physical_gpu": 1,
+      "first_resumed_epoch": 15,
+      "first_resumed_optimizer_steps": 5880,
+      "latest_completed_epoch": 16,
+      "SwanLab_run": "c07leetk"
+    },
+    {
+      "job": "mimic_no_jacobian",
+      "pid": 15223,
+      "physical_gpu": 0,
+      "first_resumed_epoch": 59,
+      "first_resumed_optimizer_steps": 9971,
+      "latest_completed_epoch": 59,
+      "SwanLab_run": "h5v64hj7"
+    },
+    {
+      "job": "mimic_separate_fields",
+      "pid": 14284,
+      "physical_gpu": 2,
+      "first_resumed_epoch": 2,
+      "first_resumed_optimizer_steps": 338,
+      "latest_completed_epoch": 3,
+      "SwanLab_run": "p8qzccrj"
+    },
+    {
+      "job": "mimic_reverse",
+      "pid": 14205,
+      "physical_gpu": 3,
+      "first_resumed_epoch": 136,
+      "first_resumed_optimizer_steps": 22984,
+      "latest_completed_epoch": 136,
+      "SwanLab_run": "08y7ii8q"
+    }
+  ]
+}

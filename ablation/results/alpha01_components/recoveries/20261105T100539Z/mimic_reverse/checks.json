@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "dataset": "mimic",
+  "history_read_direction": "reverse",
+  "physical_gpu": 3,
+  "parameter_device": "cuda:0",
+  "parameters": 43280,
+  "alpha": 0.1,
+  "same_initial_tensors_for_directions": true,
+  "reference_forward_or_reverse_output_bitwise_equal": true,
+  "causal_prior_bitwise_equal_to_forward_alpha01": true,
+  "future_observations_do_not_change_outputs": true,
+  "single_visit_directions_equal": true,
+  "update_calls_in_main_and_auxiliary": 48,
+  "reverse_ode_deltas_nonpositive": true,
+  "generation_and_prior_deltas_nonnegative": true,
+  "jacobian_formula_max_absolute_error_float64": 1.1102230246251565e-16,
+  "total_loss_gradient_norms": {
+    "init": 5.022881984710693,
+    "update": 6.104259967803955,
+    "forward_ode": 91.83832550048828,
+    "decoder": 12.0964994430542
+  },
+  "optimizer_steps": 0,
+  "batch_kind": "fixed training batch implementation checks",
+  "actual_tensor_devices": {
+    "values": "cuda:0",
+    "mask": "cuda:0",
+    "ages": "cuda:0",
+    "context_mask": "cuda:0",
+    "valid": "cuda:0",
+    "cutoff": "cuda:0",
+    "initialization_age": "cuda:0"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "status": "running",
+  "controller_pid": 314027,
+  "physical_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "phase": "parallel_training",
+  "priority": [
+    "mimic_no_prior",
+    "adni_no_jacobian",
+    "mimic_no_jacobian",
+    "adni_separate_fields",
+    "mimic_separate_fields",
+    "adni_no_prior"
+  ],
+  "jobs": {
+    "adni_no_prior": {
+      "status": "complete",
+      "physical_gpu": 0
+    },
+    "mimic_no_prior": {
+      "status": "stopped_by_user",
+      "physical_gpu": 2
+    },
+    "adni_no_jacobian": {
+      "status": "complete",
+      "physical_gpu": 0
+    },
+    "mimic_no_jacobian": {
+      "status": "running",
+      "physical_gpu": 1,
+      "pid": 119415,
+      "stage": "training",
+      "adopted_without_restart": true,
+      "adopted_at_utc": "2026-11-04T08:56:24.527877+00:00"
+    },
+    "adni_separate_fields": {
+      "status": "running",
+      "physical_gpu": 0,
+      "pid": 274241,
+      "stage": "training",
+      "adopted_without_restart": true,
+      "adopted_at_utc": "2026-11-04T08:56:24.528064+00:00"
+    },
+    "mimic_separate_fields": {
+      "status": "running",
+      "physical_gpu": 2,
+      "pid": 312156,
+      "stage": "training",
+      "adopted_without_restart": true,
+      "adopted_at_utc": "2026-11-04T08:56:24.528289+00:00"
+    }
+  },
+  "started_at_utc": "2026-11-04T08:56:24.527278+00:00",
+  "current_jobs": [
+    "mimic_no_jacobian",
+    "adni_separate_fields",
+    "mimic_separate_fields"
+  ],
+  "updated_at_utc": "2026-11-04T09:00:19.042568+00:00"
+}

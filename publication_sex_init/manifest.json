@@ -1,0 +1,1043 @@
+{
+  "created_at_utc": "2026-11-05T15:42:16.672499+00:00",
+  "status": "ready",
+  "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v1",
+  "physical_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "max_total_epochs": 150,
+  "jobs": [
+    {
+      "id": "mimic_main",
+      "kind": "clinical_training",
+      "priority": 0,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/main/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/main",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v1",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_no_jacobian",
+      "kind": "clinical_training",
+      "priority": 1,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/no_jacobian/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/no_jacobian",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v1",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_reverse",
+      "kind": "clinical_training",
+      "priority": 3,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/reverse/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/reverse",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_separate_fields",
+      "kind": "clinical_training",
+      "priority": 4,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/separate_fields/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/separate_fields",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_no_encoder_ode",
+      "kind": "clinical_training",
+      "priority": 5,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/no_encoder_ode/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/no_encoder_ode",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_attention",
+      "kind": "clinical_training",
+      "priority": 6,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/attention/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/attention",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_add_prior",
+      "kind": "clinical_training",
+      "priority": 7,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/add_prior/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/add_prior",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_init_first_age",
+      "kind": "clinical_training",
+      "priority": 20,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/init_first_age/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/init_first_age",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_init_cutoff_age",
+      "kind": "clinical_training",
+      "priority": 20,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/init_cutoff_age/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/init_cutoff_age",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_init_zero_scalar",
+      "kind": "clinical_training",
+      "priority": 20,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/init_zero_scalar/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/init_zero_scalar",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_alpha_0",
+      "kind": "clinical_training",
+      "priority": 21,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/alpha_0/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/alpha_0",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_alpha_02",
+      "kind": "clinical_training",
+      "priority": 21,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/alpha_02/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/alpha_02",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_alpha_03",
+      "kind": "clinical_training",
+      "priority": 21,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/alpha_03/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/alpha_03",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_alpha_04",
+      "kind": "clinical_training",
+      "priority": 21,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/alpha_04/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/alpha_04",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_alpha_05",
+      "kind": "clinical_training",
+      "priority": 21,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/alpha_05/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/alpha_05",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_alpha_1",
+      "kind": "clinical_training",
+      "priority": 21,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/alpha_1/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/alpha_1",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_main",
+      "kind": "clinical_training",
+      "priority": 0,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/main/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/main",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v1",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_no_jacobian",
+      "kind": "clinical_training",
+      "priority": 1,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/no_jacobian/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/no_jacobian",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v1",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_reverse",
+      "kind": "clinical_training",
+      "priority": 3,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/reverse/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/reverse",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_separate_fields",
+      "kind": "clinical_training",
+      "priority": 4,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/separate_fields/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/separate_fields",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_no_encoder_ode",
+      "kind": "clinical_training",
+      "priority": 5,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/no_encoder_ode/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/no_encoder_ode",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_attention",
+      "kind": "clinical_training",
+      "priority": 6,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/attention/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/attention",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_add_prior",
+      "kind": "clinical_training",
+      "priority": 7,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/add_prior/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/add_prior",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_init_first_age",
+      "kind": "clinical_training",
+      "priority": 20,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/init_first_age/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/init_first_age",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_init_cutoff_age",
+      "kind": "clinical_training",
+      "priority": 20,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/init_cutoff_age/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/init_cutoff_age",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_init_zero_scalar",
+      "kind": "clinical_training",
+      "priority": 20,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/init_zero_scalar/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/init_zero_scalar",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_alpha_0",
+      "kind": "clinical_training",
+      "priority": 21,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/alpha_0/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/alpha_0",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_alpha_02",
+      "kind": "clinical_training",
+      "priority": 21,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/alpha_02/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/alpha_02",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_alpha_03",
+      "kind": "clinical_training",
+      "priority": 21,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/alpha_03/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/alpha_03",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_alpha_04",
+      "kind": "clinical_training",
+      "priority": 21,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/alpha_04/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/alpha_04",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_alpha_05",
+      "kind": "clinical_training",
+      "priority": 21,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/alpha_05/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/alpha_05",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_alpha_1",
+      "kind": "clinical_training",
+      "priority": 21,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/alpha_1/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/alpha_1",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_deterministic_matched",
+      "kind": "train",
+      "priority": 2,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/adni_deterministic_matched/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/adni_deterministic_matched",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_latent_ode_matched_150",
+      "kind": "train",
+      "priority": 2,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/adni_latent_ode_matched_150/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/adni_latent_ode_matched_150",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_latent_6",
+      "kind": "train",
+      "priority": 22,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/adni_latent_6/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/adni_latent_6",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_latent_73",
+      "kind": "train",
+      "priority": 22,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/adni_latent_73/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/adni_latent_73",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_init_expand",
+      "kind": "train",
+      "priority": 22,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/adni_init_expand/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/adni_init_expand",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_update_expand",
+      "kind": "train",
+      "priority": 22,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/adni_update_expand/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/adni_update_expand",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "adni_ode_expand",
+      "kind": "train",
+      "priority": 22,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/adni_ode_expand/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/adni/adni_ode_expand",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_deterministic_matched",
+      "kind": "train",
+      "priority": 2,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/mimic_deterministic_matched/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/mimic_deterministic_matched",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_ode_rnn_matched_150",
+      "kind": "train",
+      "priority": 2,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/mimic_ode_rnn_matched_150/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/mimic_ode_rnn_matched_150",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_ode_rnn_native_150",
+      "kind": "train",
+      "priority": 10,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/mimic_ode_rnn_native_150/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/mimic_ode_rnn_native_150",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_ode_ae_native_budget_audit",
+      "kind": "baseline_evaluate",
+      "priority": 2,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/mimic_ode_ae_native_budget_audit/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/mimic_ode_ae_native_budget_audit",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.baseline_evaluate",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_latent_6",
+      "kind": "train",
+      "priority": 22,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/mimic_latent_6/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/mimic_latent_6",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_latent_73",
+      "kind": "train",
+      "priority": 22,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/mimic_latent_73/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/mimic_latent_73",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_init_expand",
+      "kind": "train",
+      "priority": 22,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/mimic_init_expand/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/mimic_init_expand",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_update_expand",
+      "kind": "train",
+      "priority": 22,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/mimic_update_expand/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/mimic_update_expand",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "mimic_ode_expand",
+      "kind": "train",
+      "priority": 22,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/mimic_ode_expand/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/mimic/mimic_ode_expand",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "module": "publication_sex_init.train",
+      "depends_on": []
+    },
+    {
+      "id": "causalmed_main",
+      "kind": "cf_launch",
+      "priority": 2,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/causalmed/causalmed_main/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/causalmed/causalmed_main",
+      "source": "/home/xjh/projects/LatentODE",
+      "module": "publication_sex_init.cf_launch",
+      "depends_on": []
+    },
+    {
+      "id": "causalmed_deterministic_budget_audit",
+      "kind": "cf_launch",
+      "priority": 2,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/results/causalmed/causalmed_deterministic_budget_audit/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/results/causalmed/causalmed_deterministic_budget_audit",
+      "source": "/home/xjh/projects/LatentODE",
+      "module": "publication_sex_init.cf_launch",
+      "depends_on": []
+    },
+    {
+      "id": "adni_state",
+      "kind": "frozen_analysis",
+      "priority": 8,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/state/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/state",
+      "module": "publication_sex_init.analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "adni_main"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "adni_horizons",
+      "kind": "frozen_analysis",
+      "priority": 8,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/horizons/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/horizons",
+      "module": "publication_sex_init.analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "adni_main"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "adni_clinical",
+      "kind": "frozen_analysis",
+      "priority": 8,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/clinical/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/clinical",
+      "module": "publication_sex_init.analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "adni_main",
+        "adni_state"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "adni_local",
+      "kind": "frozen_analysis",
+      "priority": 8,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/local/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/local",
+      "module": "publication_sex_init.analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "adni_main",
+        "adni_state"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "adni_geometry",
+      "kind": "frozen_analysis",
+      "priority": 8,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/manifold/adni_geometry/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/manifold/adni_geometry",
+      "module": "publication_sex_init.analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "adni_main",
+        "adni_state"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "adni_dynamics",
+      "kind": "frozen_analysis",
+      "priority": 8,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/manifold/adni_dynamics/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/manifold/adni_dynamics",
+      "module": "publication_sex_init.analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "adni_main",
+        "adni_state"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "adni_cost",
+      "kind": "frozen_analysis",
+      "priority": 8,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/cost/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/cost",
+      "module": "publication_sex_init.analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "adni_main"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "adni_jacobian_utility",
+      "kind": "frozen_analysis",
+      "priority": 8,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/jacobian_utility/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/jacobian_utility",
+      "module": "publication_sex_init.analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "adni_main",
+        "adni_no_jacobian"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "adni_baseline_state_ode_ae",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_state/ode_ae/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_state/ode_ae",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "adni_baseline_cost_ode_ae",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_cost/ode_ae/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_cost/ode_ae",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "adni_baseline_state_deterministic",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_state/deterministic/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_state/deterministic",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "adni_deterministic_matched"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "adni_baseline_cost_deterministic",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_cost/deterministic/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_cost/deterministic",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "adni_deterministic_matched"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "adni_baseline_state_latent_ode",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_state/latent_ode/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_state/latent_ode",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "adni_latent_ode_matched_150"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "adni_baseline_cost_latent_ode",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_cost/latent_ode/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_cost/latent_ode",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "adni_latent_ode_matched_150"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "adni_baseline_state_ode_rnn",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_state/ode_rnn/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_state/ode_rnn",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "adni_baseline_cost_ode_rnn",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_cost/ode_rnn/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_cost/ode_rnn",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "adni_baseline_state_healthflux",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_state/healthflux/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_state/healthflux",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [],
+      "completion_file": "complete.json",
+      "command": [
+        "/home/xjh/miniforge3/envs/healthflux/bin/python",
+        "-u",
+        "-m",
+        "publication_sex_init.baseline_analysis",
+        "--config",
+        "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_state/healthflux/launch_config.json"
+      ]
+    },
+    {
+      "id": "adni_baseline_cost_healthflux",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_cost/healthflux/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_cost/healthflux",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [],
+      "completion_file": "complete.json",
+      "command": [
+        "/home/xjh/miniforge3/envs/healthflux/bin/python",
+        "-u",
+        "-m",
+        "publication_sex_init.baseline_analysis",
+        "--config",
+        "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/baseline_cost/healthflux/launch_config.json"
+      ]
+    },
+    {
+      "id": "mimic_state",
+      "kind": "frozen_analysis",
+      "priority": 8,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/state/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/state",
+      "module": "publication_sex_init.analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "mimic_main"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "mimic_horizons",
+      "kind": "frozen_analysis",
+      "priority": 8,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/horizons/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/horizons",
+      "module": "publication_sex_init.analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "mimic_main"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "mimic_clinical",
+      "kind": "frozen_analysis",
+      "priority": 8,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/clinical/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/clinical",
+      "module": "publication_sex_init.analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "mimic_main",
+        "mimic_state"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "mimic_local",
+      "kind": "frozen_analysis",
+      "priority": 8,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/local/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/local",
+      "module": "publication_sex_init.analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "mimic_main",
+        "mimic_state"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "mimic_geometry",
+      "kind": "frozen_analysis",
+      "priority": 8,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/manifold/mimic_geometry/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/manifold/mimic_geometry",
+      "module": "publication_sex_init.analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "mimic_main",
+        "mimic_state"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "mimic_dynamics",
+      "kind": "frozen_analysis",
+      "priority": 8,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/manifold/mimic_dynamics/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/manifold/mimic_dynamics",
+      "module": "publication_sex_init.analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "mimic_main",
+        "mimic_state"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "mimic_cost",
+      "kind": "frozen_analysis",
+      "priority": 8,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/cost/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/cost",
+      "module": "publication_sex_init.analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "mimic_main"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "mimic_jacobian_utility",
+      "kind": "frozen_analysis",
+      "priority": 8,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/jacobian_utility/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/jacobian_utility",
+      "module": "publication_sex_init.analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "mimic_main",
+        "mimic_no_jacobian"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "mimic_baseline_state_ode_ae",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_state/ode_ae/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_state/ode_ae",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "mimic_baseline_cost_ode_ae",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_cost/ode_ae/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_cost/ode_ae",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "mimic_baseline_state_deterministic",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_state/deterministic/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_state/deterministic",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "mimic_deterministic_matched"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "mimic_baseline_cost_deterministic",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_cost/deterministic/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_cost/deterministic",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "mimic_deterministic_matched"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "mimic_baseline_state_latent_ode",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_state/latent_ode/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_state/latent_ode",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "mimic_baseline_cost_latent_ode",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_cost/latent_ode/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_cost/latent_ode",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "mimic_baseline_state_ode_rnn",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_state/ode_rnn/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_state/ode_rnn",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "mimic_ode_rnn_matched_150"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "mimic_baseline_cost_ode_rnn",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_cost/ode_rnn/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_cost/ode_rnn",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "mimic_ode_rnn_matched_150"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "mimic_baseline_state_healthflux",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_state/healthflux/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_state/healthflux",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [],
+      "completion_file": "complete.json",
+      "command": [
+        "/home/xjh/miniforge3/envs/healthflux/bin/python",
+        "-u",
+        "-m",
+        "publication_sex_init.baseline_analysis",
+        "--config",
+        "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_state/healthflux/launch_config.json"
+      ]
+    },
+    {
+      "id": "mimic_baseline_cost_healthflux",
+      "kind": "frozen_analysis",
+      "priority": 9,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_cost/healthflux/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_cost/healthflux",
+      "module": "publication_sex_init.baseline_analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [],
+      "completion_file": "complete.json",
+      "command": [
+        "/home/xjh/miniforge3/envs/healthflux/bin/python",
+        "-u",
+        "-m",
+        "publication_sex_init.baseline_analysis",
+        "--config",
+        "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/baseline_cost/healthflux/launch_config.json"
+      ]
+    },
+    {
+      "id": "adni_stage",
+      "kind": "frozen_analysis",
+      "priority": 8,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/stage/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/stage",
+      "module": "publication_sex_init.analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "adni_state"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "adni_mmse",
+      "kind": "frozen_analysis",
+      "priority": 8,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/mmse/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/adni/mmse",
+      "module": "publication_sex_init.analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "adni_state",
+        "adni_clinical"
+      ],
+      "completion_file": "complete.json"
+    },
+    {
+      "id": "mimic_stability",
+      "kind": "frozen_analysis",
+      "priority": 18,
+      "config": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/stability/launch_config.json",
+      "output": "/home/xjh/projects/LatentODE/publication_sex_init/analysis/mimic/stability",
+      "module": "publication_sex_init.analysis",
+      "source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "depends_on": [
+        "mimic_main",
+        "mimic_alpha_1"
+      ],
+      "completion_file": "complete.json"
+    }
+  ],
+  "updated_at_utc": "2026-11-05T15:43:40.343202+00:00",
+  "queued_runtime_snapshot": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5"
+}

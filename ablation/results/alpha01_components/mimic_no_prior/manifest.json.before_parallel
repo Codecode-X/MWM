@@ -1,0 +1,91 @@
+{
+  "dataset": "mimic",
+  "component": "no_prior",
+  "physical_gpu": 0,
+  "max_epochs": 150,
+  "reference": "/home/xjh/projects/LatentODE/mimic_experiment/results/weak_prior_ablation_cuda/targeted_causal_ablation/update_alpha_01",
+  "native_source": "/home/xjh/projects/LatentODE/mimic_experiment/results/direction_full_batch_cuda/source_snapshot",
+  "native_source_hashes": {
+    "healthflux/__init__.py": "56c20bdc2d7c74f97793b52fea3da2e2f41035d441967eff6cb81315b0f7dd22",
+    "healthflux/model.py": "e72533399c0d38f998e73466c87c74ab5423a742d4447ac39e14cb3b47c8a3b4",
+    "mimic_experiment/__init__.py": "7ae2f104dea65a3988c9b162af00a9d5dad2b8880073108b703e804c30ad7b3c",
+    "mimic_experiment/baseline_models.py": "458c181970427e8d375287f172a1d43f526ee73f6282edf3f4d0949de53bdf6b",
+    "mimic_experiment/baseline_report.py": "13aa58e6caf9b875dbcd7a0a2bbe3c28e7170a136b896cf6fae6b69c454f8ef3",
+    "mimic_experiment/baseline_study.py": "ee61c6869b7835cd36a70a25438fa205277875af1879865eb6ed82255c9bbe0d",
+    "mimic_experiment/data.py": "65ff1a8c9460756183a9ae90c26f0d02629c072d4357c781a79031ad129cf6cd",
+    "mimic_experiment/direction_full_batch_checks.py": "3b4d4047615ea45d513509615d8c5ee8c31b95b4ae84224a30eb46d0a4b11697",
+    "mimic_experiment/direction_full_batch_report.py": "730c69f65e29cb1d07916b7b31c5640a734d0f9fc376f1213f7ab4d9f3509593",
+    "mimic_experiment/direction_full_batch_study.py": "282e8940f839f3771cbd5679472bb5e85d8031cafcdbdcf438110a5b695b31a0",
+    "mimic_experiment/evaluation.py": "207959fe7dc5368f98294f2172156af5c0a295a3381a47101b0c2aaca9c955ae",
+    "mimic_experiment/healthflux_icu.py": "53f38e80c7bf4b1a5fd0d74715a8d325874fd208ae57b7c652ab24517dd505e4",
+    "mimic_experiment/history_encoder_checks.py": "fc488bc0efd1fe798d212890bc3a310c41e091a5d3b3f87a39067c5333960d4b",
+    "mimic_experiment/history_encoder_study.py": "8c7a16968c18328420bafab4aa3a1f8c6231e23b030507c90e4d1f3607df10f7",
+    "mimic_experiment/prepare.py": "9a8486b10bb0bfe419a378a7427d14dc0bcf93a248bb88d4f246bf8f6722fa5c",
+    "mimic_experiment/report.py": "0d172e66b7de9b66d8c141d5de4ccba4a1959d93535c6f3aca12daed485c3793",
+    "mimic_experiment/run.py": "0fc476531f1941b148c4d950ae481b41c03e2e36ff72bf6dc2da327c9514eb9f",
+    "mimic_experiment/train_baseline.py": "64967a8242048d7810178f06ea08f22789207bf403e9a234b78e170d7243c9af",
+    "mimic_experiment/train_ddp.py": "307d48d6d7016b6b804bd08e07b1096d7f618b0e670ce2cd2a153a688ae4daee",
+    "mimic_experiment/train_full_batch.py": "22748efcf65aec5af169b3ace0060180118505dac674a0da74edffd6192033a3",
+    "mimic_experiment/train_history_encoder.py": "d5c9c782905982dfdcd7f0555a70c8e76babd7cb30816a0c1e647bb6ac2904c2",
+    "paper_odeae/__init__.py": "1da58c3b8b61e93c35610307090bac8a0e6b6ee1e1c1c3b00b0b8d4968eda37d",
+    "paper_odeae/baselines.py": "e8d86a20355b3cb10c37e6cd24a8b14921712788572e8e9da9dffab00ef6626e",
+    "paper_odeae/data.py": "e147266ff180655c353858cf7b4481f45d7163a0118df757e3064902d0e16295",
+    "paper_odeae/history_encoders.py": "774d9737d3eb790f35887d8cbc4ec116fd60facca14c26efe3b0de59c6eacef4",
+    "paper_odeae/jacobian.py": "a3119cbd379949cbb6de0a61e990a275c6f8783e86031b00fdce15587627619c",
+    "paper_odeae/models.py": "f631a28d9ce37d0ff2490850139bd7ba120e03f6ae086bb2080f4693324e4126",
+    "paper_odeae/reference/features46.json": "3cdce2d849494d3c6e1bb33d6822c2fb273b0882bb45d71f51783c7e57a0ef27",
+    "paper_odeae/reference/tsit5_tableau.json": "e316ce7ae258bfe6470732fbe6df84452bebfeebeea887730d52c0b82354397c",
+    "paper_odeae/scaling_study.py": "99fe116175abc78a71317a01566c7ef84355096ea04b5dd3aa40ebd22ac8d292",
+    "paper_odeae/solver.py": "c69c6a3b637e9303cc5d9afbda3b59c31e6195dadcd95efff6ec81c1519da55b",
+    "paper_odeae/train.py": "2220c5f76405e626b304a13d6808d045c48e2211d6348a852313dc9aad1218c0",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/adni_models.py": "b95d4011c6783ceecf5d7366e0ef5adc233fc5c11d74eb39269bc2140c40e9b0",
+    "src/model.py": "9339f0cd1afea3f09b9d264184ebd460384df4200bf6fdcebab55c83180fe518",
+    "src/swanlab_local.py": "154ccb47f1b74dbc1e12bec983e7683a4c6ee8dbd85766e9aa93aef21c4b21ab",
+    "src/tracking.py": "efd445872289f3a9a6629bf8e29f370dc5b82babb95459072972bb8e973d5717"
+  },
+  "source_sha256": {
+    "fixed_update_checks.py": "58167dab1192cd0c63c0340a4df40cd5ac32da7d881bd14facef3fd448f461c5",
+    "component_ablation_train.py": "05a30597f2ca8b7509332df88d49f554f6d1d4df78f6ceb63b25041416f3c240",
+    "component_ablation_model.py": "58f63ace93330b7b487474290efb5f72ec5532cb40e5ac5ce51f49234537f08b",
+    "component_ablation_checks.py": "f320c2f81989e079c352b020130c4aa840c5cdf68ba2792bfad641487a56b8e7",
+    "fixed_update_model.py": "bb9d174632543b2334dd21928518509725f952d59b313f2f9522d8122eb1248d",
+    "component_ablation_loss.py": "479727990d1102684022c893a6857ec6c04a5dcd3c144a1a70894aca2606b5df"
+  },
+  "same_total_parameters": true,
+  "target_parameters": 43280,
+  "unique_ode_parameters": 10744,
+  "field_architecture": "188 shared",
+  "jacobian_scope": "mean over distinct fields at the same detached main-generation states",
+  "l2_scope": "sum of squares of all distinct ODE parameters; same coefficient0.02",
+  "config_differences": {
+    "output": {
+      "main": "/home/xjh/projects/LatentODE/mimic_experiment/results/weak_prior_ablation_cuda/targeted_causal_ablation/update_alpha_01",
+      "ablation": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/mimic_no_prior"
+    },
+    "physical_gpu": {
+      "main": 1,
+      "ablation": 0
+    },
+    "dataset": {
+      "main": null,
+      "ablation": "mimic"
+    },
+    "prior_weight": {
+      "main": 0.01,
+      "ablation": 0.0
+    },
+    "max_epochs": {
+      "main": 300,
+      "ablation": 150
+    },
+    "ablation_component": {
+      "main": null,
+      "ablation": "no_prior"
+    },
+    "study": {
+      "main": "fixed_damped_update_from_seed0",
+      "ablation": "main_alpha01_component_ablation"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-01T12:24:11.776485+00:00",
-  "main_model": "latent2x both",
+  "updated_at": "2026-11-05T15:40:31.097812+00:00",
+  "main_model": "M0_sex_init_no_prior_shared_alpha01_jac01",
   "method_document": "/home/xjh/projects/LatentODE/reproduction/CURRENT_MODEL_METHOD.zh-CN.md",
   "MWM_status": "paused_by_user",
   "matched_baseline_queue": "/home/xjh/projects/LatentODE/capacity_matched/results/adni_mimic/queue.json",
@@ -32,5 +32,80 @@
       "checkpoint": "/home/xjh/projects/LatentODE/mimic_experiment/results/baselines_matched_latent2x/latent_ode/seed_0/last.pt",
       "requested_at": "2026-11-01T12:24:11.776485+00:00"
     }
-  ]
+  ],
+  "main_model_description": "性别 INIT、28维、正序共享ODE、无weak prior、Jacobian=.01、alpha=.1",
+  "training_max_epochs": 150,
+  "ablation_document": "/home/xjh/projects/LatentODE/ablation/Ablation.zh-CN.md",
+  "component_ablation_queue": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/queue.json",
+  "direction_ablation_queue": "/home/xjh/projects/LatentODE/mimic_experiment/results/weak_prior_ablation_cuda/targeted_causal_ablation/direction_alpha01/queue.json",
+  "latest_recovery": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/recoveries/20261105T100539Z/manifest.json",
+  "recovered_controllers": [
+    {
+      "name": "components",
+      "pid": 13988,
+      "log": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/parallel_controller.log"
+    },
+    {
+      "name": "direction",
+      "pid": 13989,
+      "log": "/home/xjh/projects/LatentODE/mimic_experiment/results/weak_prior_ablation_cuda/targeted_causal_ablation/direction_alpha01/parallel_controller.log"
+    }
+  ],
+  "component_ablation_dispatch": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/dispatch_revision.json",
+  "component_ablation_controller_pid": 13988,
+  "component_ablation_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "stopped_weak_prior_ablations": [
+    "adni_no_prior",
+    "mimic_no_prior"
+  ],
+  "weak_prior_ablation_auto_resume": false,
+  "jacobian_utility_study": "/home/xjh/projects/LatentODE/ablation/results/jacobian_utility_adni",
+  "latest_recovered_jobs": [
+    {
+      "job": "adni_separate_fields",
+      "pid": 15023,
+      "physical_gpu": 1,
+      "first_resumed_epoch": 15,
+      "first_resumed_optimizer_steps": 5880,
+      "latest_completed_epoch": 16,
+      "SwanLab_run": "c07leetk"
+    },
+    {
+      "job": "mimic_no_jacobian",
+      "pid": 15223,
+      "physical_gpu": 0,
+      "first_resumed_epoch": 59,
+      "first_resumed_optimizer_steps": 9971,
+      "latest_completed_epoch": 59,
+      "SwanLab_run": "h5v64hj7"
+    },
+    {
+      "job": "mimic_separate_fields",
+      "pid": 14284,
+      "physical_gpu": 2,
+      "first_resumed_epoch": 2,
+      "first_resumed_optimizer_steps": 338,
+      "latest_completed_epoch": 3,
+      "SwanLab_run": "p8qzccrj"
+    },
+    {
+      "job": "mimic_reverse",
+      "pid": 14205,
+      "physical_gpu": 3,
+      "first_resumed_epoch": 136,
+      "first_resumed_optimizer_steps": 22984,
+      "latest_completed_epoch": 136,
+      "SwanLab_run": "08y7ii8q"
+    }
+  ],
+  "publication_queue": "/home/xjh/projects/LatentODE/publication_sex_init/queue.json",
+  "publication_document": "/home/xjh/projects/LatentODE/reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md",
+  "publication_controller_pid": 279038,
+  "legacy_gpu_jobs_stopped_by_user": "/home/xjh/projects/LatentODE/publication_sex_init/preemption_record.json",
+  "publication_report_pid": 279336
 }

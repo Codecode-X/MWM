@@ -2,6 +2,13 @@
 
 # Latent ODE 与 ODE-RNN 论文复现
 
+ADNI、MIMIC和CausalMed截至目前的实验已按主题整合到
+[项目实验总览与insight](EXPERIMENTS_OVERVIEW.zh-CN.md)。文档包含实验目的、设计、联合对比表、结果解释、25条实验发现，以及正式训练账本和原始资料索引。
+
+论文实验以“性别 INIT、共享 ODE、α=0.1、无 weak prior、Jacobian=0.01”为新主模型，
+按主题组织的实验介绍、结果表、核心消融和状态空间／流形等分析见
+[论文实验清单](reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md)。未完成结果留空，INIT 与完整 α 扫描排在最后。
+
 训练监测统一接入 SwanLab，默认使用本地看板。启动、云端配置和既有任务接入方式见
 [SwanLab 使用说明](reproduction/SWANLAB.zh-CN.md)。
 

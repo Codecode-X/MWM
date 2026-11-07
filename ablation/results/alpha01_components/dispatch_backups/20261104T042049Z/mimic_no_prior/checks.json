@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "dataset": "mimic",
+  "ablation_component": "no_prior",
+  "alpha": 0.1,
+  "parameters": 43280,
+  "physical_gpu": 0,
+  "parameter_device": "cuda:0",
+  "actual_tensor_devices": {
+    "values": "cuda:0",
+    "mask": "cuda:0",
+    "ages": "cuda:0",
+    "context_mask": "cuda:0",
+    "valid": "cuda:0",
+    "cutoff": "cuda:0",
+    "initialization_age": "cuda:0"
+  },
+  "unique_fields": 1,
+  "unique_ode_parameters": 10744,
+  "future_observations_do_not_change_outputs": true,
+  "total_loss_gradient_norms": {
+    "init": 5.496476173400879,
+    "update": 2.420228958129883,
+    "backward_ode": 71.62923431396484,
+    "forward_ode": 71.62923431396484,
+    "decoder": 11.736372947692871
+  },
+  "optimizer_steps": 0,
+  "same_total_parameters": true,
+  "retained_network_initial_tensors_equal": true,
+  "forward_outputs_bitwise_equal_to_main": true,
+  "removed_loss_gradient_relative_error": 0.0,
+  "removed_loss_scalar_difference": 0.0
+}

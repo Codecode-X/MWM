@@ -1,0 +1,2145 @@
+{
+  "created_at_utc": "2026-11-05T10:11:33.990832+00:00",
+  "purpose": "test actual robustness and forecast benefit of Jacobian regularization, no retraining",
+  "data": "/home/xjh/projects/LatentODE/paper_odeae/cache/local_available.pkl",
+  "dataset_sha256": "9606b09cc6163d7e55890338d96d55454aa8593ab030b63537488f8ddf165de7",
+  "models": {
+    "regularized": {
+      "checkpoint": "regularized.pt",
+      "checkpoint_sha256": "2381919b04fece5e690ea863eca93beca7f80753b95697fb48b805c9fd99cdda",
+      "config": "regularized_config.json",
+      "metrics": "regularized_native_metrics.json",
+      "source_run": "/home/xjh/projects/LatentODE/mimic_experiment/results/weak_prior_ablation_cuda/targeted_causal_ablation/adni_update_alpha_01",
+      "epoch": 30
+    },
+    "unregularized": {
+      "checkpoint": "unregularized.pt",
+      "checkpoint_sha256": "534bff30e14edbc67f1fb3e5803e6559e173320106b06ac8cacbfe887209171b",
+      "config": "unregularized_config.json",
+      "metrics": "unregularized_native_metrics.json",
+      "source_run": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/adni_no_jacobian",
+      "epoch": 30
+    }
+  },
+  "cohort": [
+    {
+      "subject_id": "002_S_0619",
+      "cutoff_count": 3,
+      "cutoff_age": 78.5763168334961
+    },
+    {
+      "subject_id": "002_S_0729",
+      "cutoff_count": 3,
+      "cutoff_age": 66.41478729248047
+    },
+    {
+      "subject_id": "002_S_1018",
+      "cutoff_count": 3,
+      "cutoff_age": 71.83299255371094
+    },
+    {
+      "subject_id": "002_S_1070",
+      "cutoff_count": 3,
+      "cutoff_age": 74.83367919921875
+    },
+    {
+      "subject_id": "002_S_1268",
+      "cutoff_count": 3,
+      "cutoff_age": 84.16426849365234
+    },
+    {
+      "subject_id": "002_S_4171",
+      "cutoff_count": 3,
+      "cutoff_age": 70.08350372314453
+    },
+    {
+      "subject_id": "002_S_4219",
+      "cutoff_count": 3,
+      "cutoff_age": 80.08213806152344
+    },
+    {
+      "subject_id": "002_S_4264",
+      "cutoff_count": 2,
+      "cutoff_age": 74.41478729248047
+    },
+    {
+      "subject_id": "002_S_4654",
+      "cutoff_count": 3,
+      "cutoff_age": 76.2491455078125
+    },
+    {
+      "subject_id": "002_S_6066",
+      "cutoff_count": 3,
+      "cutoff_age": 76.75016784667969
+    },
+    {
+      "subject_id": "003_S_4524",
+      "cutoff_count": 3,
+      "cutoff_age": 72.58316040039062
+    },
+    {
+      "subject_id": "003_S_4900",
+      "cutoff_count": 3,
+      "cutoff_age": 60.49555206298828
+    },
+    {
+      "subject_id": "003_S_5165",
+      "cutoff_count": 3,
+      "cutoff_age": 79.501708984375
+    },
+    {
+      "subject_id": "005_S_0448",
+      "cutoff_count": 3,
+      "cutoff_age": 86.8254623413086
+    },
+    {
+      "subject_id": "005_S_10446",
+      "cutoff_count": 3,
+      "cutoff_age": 86.32991027832031
+    },
+    {
+      "subject_id": "005_S_4168",
+      "cutoff_count": 3,
+      "cutoff_age": 82.83094024658203
+    },
+    {
+      "subject_id": "006_S_0484",
+      "cutoff_count": 2,
+      "cutoff_age": 71.66324615478516
+    },
+    {
+      "subject_id": "006_S_4192",
+      "cutoff_count": 3,
+      "cutoff_age": 83.16495513916016
+    },
+    {
+      "subject_id": "006_S_4363",
+      "cutoff_count": 3,
+      "cutoff_age": 74.16564178466797
+    },
+    {
+      "subject_id": "006_S_4449",
+      "cutoff_count": 3,
+      "cutoff_age": 67.66050720214844
+    },
+    {
+      "subject_id": "006_S_4485",
+      "cutoff_count": 3,
+      "cutoff_age": 73.9986343383789
+    },
+    {
+      "subject_id": "006_S_5153",
+      "cutoff_count": 3,
+      "cutoff_age": 79.99726104736328
+    },
+    {
+      "subject_id": "006_S_6234",
+      "cutoff_count": 3,
+      "cutoff_age": 74.2505111694336
+    },
+    {
+      "subject_id": "007_S_0128",
+      "cutoff_count": 3,
+      "cutoff_age": 65.3278579711914
+    },
+    {
+      "subject_id": "007_S_0344",
+      "cutoff_count": 3,
+      "cutoff_age": 79.58384704589844
+    },
+    {
+      "subject_id": "007_S_4272",
+      "cutoff_count": 3,
+      "cutoff_age": 71.66050720214844
+    },
+    {
+      "subject_id": "007_S_4387",
+      "cutoff_count": 3,
+      "cutoff_age": 76.7474365234375
+    },
+    {
+      "subject_id": "007_S_6323",
+      "cutoff_count": 3,
+      "cutoff_age": 70.49417877197266
+    },
+    {
+      "subject_id": "009_S_2208",
+      "cutoff_count": 3,
+      "cutoff_age": 69.49212646484375
+    },
+    {
+      "subject_id": "009_S_2381",
+      "cutoff_count": 3,
+      "cutoff_age": 69.83435821533203
+    },
+    {
+      "subject_id": "009_S_4543",
+      "cutoff_count": 3,
+      "cutoff_age": 70.83094024658203
+    },
+    {
+      "subject_id": "009_S_4814",
+      "cutoff_count": 3,
+      "cutoff_age": 69.83709716796875
+    },
+    {
+      "subject_id": "009_S_5027",
+      "cutoff_count": 3,
+      "cutoff_age": 76.24640655517578
+    },
+    {
+      "subject_id": "009_S_5224",
+      "cutoff_count": 3,
+      "cutoff_age": 78.83094024658203
+    },
+    {
+      "subject_id": "009_S_5252",
+      "cutoff_count": 2,
+      "cutoff_age": 57.327857971191406
+    },
+    {
+      "subject_id": "009_S_6212",
+      "cutoff_count": 3,
+      "cutoff_age": 75.4962387084961
+    },
+    {
+      "subject_id": "010_S_0829",
+      "cutoff_count": 3,
+      "cutoff_age": 66.16016387939453
+    },
+    {
+      "subject_id": "010_S_10825",
+      "cutoff_count": 3,
+      "cutoff_age": 67.66050720214844
+    },
+    {
+      "subject_id": "010_S_10868",
+      "cutoff_count": 2,
+      "cutoff_age": 88.91170501708984
+    },
+    {
+      "subject_id": "010_S_10869",
+      "cutoff_count": 2,
+      "cutoff_age": 75.99726104736328
+    },
+    {
+      "subject_id": "011_S_0168",
+      "cutoff_count": 3,
+      "cutoff_age": 90.74332427978516
+    },
+    {
+      "subject_id": "011_S_0241",
+      "cutoff_count": 3,
+      "cutoff_age": 82.91307067871094
+    },
+    {
+      "subject_id": "011_S_0362",
+      "cutoff_count": 3,
+      "cutoff_age": 71.33196258544922
+    },
+    {
+      "subject_id": "011_S_10278",
+      "cutoff_count": 3,
+      "cutoff_age": 71.83573150634766
+    },
+    {
+      "subject_id": "011_S_6618",
+      "cutoff_count": 3,
+      "cutoff_age": 85.74401092529297
+    },
+    {
+      "subject_id": "012_S_0637",
+      "cutoff_count": 3,
+      "cutoff_age": 76.91444396972656
+    },
+    {
+      "subject_id": "012_S_10244",
+      "cutoff_count": 3,
+      "cutoff_age": 67.7508544921875
+    },
+    {
+      "subject_id": "012_S_4849",
+      "cutoff_count": 3,
+      "cutoff_age": 66.66392517089844
+    },
+    {
+      "subject_id": "012_S_6503",
+      "cutoff_count": 3,
+      "cutoff_age": 78.08076477050781
+    },
+    {
+      "subject_id": "013_S_4579",
+      "cutoff_count": 3,
+      "cutoff_age": 85.58521270751953
+    },
+    {
+      "subject_id": "013_S_4580",
+      "cutoff_count": 3,
+      "cutoff_age": 70.33264923095703
+    },
+    {
+      "subject_id": "013_S_4616",
+      "cutoff_count": 3,
+      "cutoff_age": 85.67008972167969
+    },
+    {
+      "subject_id": "013_S_4917",
+      "cutoff_count": 3,
+      "cutoff_age": 75.578369140625
+    },
+    {
+      "subject_id": "014_S_0328",
+      "cutoff_count": 3,
+      "cutoff_age": 77.41546630859375
+    },
+    {
+      "subject_id": "014_S_10157",
+      "cutoff_count": 3,
+      "cutoff_age": 75.7508544921875
+    },
+    {
+      "subject_id": "014_S_10180",
+      "cutoff_count": 3,
+      "cutoff_age": 81.16358947753906
+    },
+    {
+      "subject_id": "014_S_10409",
+      "cutoff_count": 2,
+      "cutoff_age": 66.08076477050781
+    },
+    {
+      "subject_id": "014_S_2185",
+      "cutoff_count": 3,
+      "cutoff_age": 73.91101837158203
+    },
+    {
+      "subject_id": "014_S_2308",
+      "cutoff_count": 3,
+      "cutoff_age": 75.4962387084961
+    },
+    {
+      "subject_id": "014_S_6076",
+      "cutoff_count": 3,
+      "cutoff_age": 60.08213424682617
+    },
+    {
+      "subject_id": "014_S_6199",
+      "cutoff_count": 2,
+      "cutoff_age": 70.5763168334961
+    },
+    {
+      "subject_id": "014_S_6522",
+      "cutoff_count": 3,
+      "cutoff_age": 72.66803741455078
+    },
+    {
+      "subject_id": "014_S_6831",
+      "cutoff_count": 3,
+      "cutoff_age": 81.2511978149414
+    },
+    {
+      "subject_id": "014_S_6920",
+      "cutoff_count": 3,
+      "cutoff_age": 68.66255950927734
+    },
+    {
+      "subject_id": "016_S_10174",
+      "cutoff_count": 2,
+      "cutoff_age": 71.41683959960938
+    },
+    {
+      "subject_id": "016_S_1028",
+      "cutoff_count": 3,
+      "cutoff_age": 78.08076477050781
+    },
+    {
+      "subject_id": "016_S_10885",
+      "cutoff_count": 3,
+      "cutoff_age": 77.58248138427734
+    },
+    {
+      "subject_id": "016_S_2031",
+      "cutoff_count": 3,
+      "cutoff_age": 73.24298095703125
+    },
+    {
+      "subject_id": "016_S_4583",
+      "cutoff_count": 2,
+      "cutoff_age": 86.82820129394531
+    },
+    {
+      "subject_id": "016_S_4601",
+      "cutoff_count": 3,
+      "cutoff_age": 73.33333587646484
+    },
+    {
+      "subject_id": "016_S_6790",
+      "cutoff_count": 3,
+      "cutoff_age": 79.91239166259766
+    },
+    {
+      "subject_id": "016_S_6839",
+      "cutoff_count": 3,
+      "cutoff_age": 71.66324615478516
+    },
+    {
+      "subject_id": "016_S_6931",
+      "cutoff_count": 3,
+      "cutoff_age": 76.2491455078125
+    },
+    {
+      "subject_id": "016_S_6934",
+      "cutoff_count": 3,
+      "cutoff_age": 70.9979476928711
+    },
+    {
+      "subject_id": "018_S_2180",
+      "cutoff_count": 3,
+      "cutoff_age": 78.32991027832031
+    },
+    {
+      "subject_id": "018_S_4868",
+      "cutoff_count": 3,
+      "cutoff_age": 77.91649627685547
+    },
+    {
+      "subject_id": "019_S_10145",
+      "cutoff_count": 3,
+      "cutoff_age": 63.501712799072266
+    },
+    {
+      "subject_id": "019_S_10395",
+      "cutoff_count": 3,
+      "cutoff_age": 64.24366760253906
+    },
+    {
+      "subject_id": "020_S_0883",
+      "cutoff_count": 3,
+      "cutoff_age": 76.91170501708984
+    },
+    {
+      "subject_id": "020_S_6185",
+      "cutoff_count": 3,
+      "cutoff_age": 83.91512298583984
+    },
+    {
+      "subject_id": "020_S_6282",
+      "cutoff_count": 3,
+      "cutoff_age": 76.33128356933594
+    },
+    {
+      "subject_id": "020_S_6449",
+      "cutoff_count": 3,
+      "cutoff_age": 66.41478729248047
+    },
+    {
+      "subject_id": "020_S_6566",
+      "cutoff_count": 3,
+      "cutoff_age": 73.49486541748047
+    },
+    {
+      "subject_id": "021_S_0231",
+      "cutoff_count": 3,
+      "cutoff_age": 61.49486541748047
+    },
+    {
+      "subject_id": "021_S_10270",
+      "cutoff_count": 3,
+      "cutoff_age": 60.41615295410156
+    },
+    {
+      "subject_id": "021_S_10673",
+      "cutoff_count": 2,
+      "cutoff_age": 81.8261489868164
+    },
+    {
+      "subject_id": "021_S_2150",
+      "cutoff_count": 3,
+      "cutoff_age": 73.40725708007812
+    },
+    {
+      "subject_id": "021_S_4419",
+      "cutoff_count": 3,
+      "cutoff_age": 64.41067504882812
+    },
+    {
+      "subject_id": "021_S_4659",
+      "cutoff_count": 3,
+      "cutoff_age": 86.66940307617188
+    },
+    {
+      "subject_id": "021_S_5099",
+      "cutoff_count": 3,
+      "cutoff_age": 62.50239562988281
+    },
+    {
+      "subject_id": "021_S_5177",
+      "cutoff_count": 3,
+      "cutoff_age": 73.24845886230469
+    },
+    {
+      "subject_id": "021_S_6987",
+      "cutoff_count": 3,
+      "cutoff_age": 69.40999603271484
+    },
+    {
+      "subject_id": "022_S_0066",
+      "cutoff_count": 3,
+      "cutoff_age": 75.66871643066406
+    },
+    {
+      "subject_id": "022_S_0750",
+      "cutoff_count": 3,
+      "cutoff_age": 76.8295669555664
+    },
+    {
+      "subject_id": "022_S_10046",
+      "cutoff_count": 3,
+      "cutoff_age": 85.0787124633789
+    },
+    {
+      "subject_id": "022_S_4805",
+      "cutoff_count": 3,
+      "cutoff_age": 72.50102996826172
+    },
+    {
+      "subject_id": "023_S_0042",
+      "cutoff_count": 3,
+      "cutoff_age": 74.08076477050781
+    },
+    {
+      "subject_id": "023_S_0078",
+      "cutoff_count": 3,
+      "cutoff_age": 76.8295669555664
+    },
+    {
+      "subject_id": "023_S_0217",
+      "cutoff_count": 3,
+      "cutoff_age": 84.7474365234375
+    },
+    {
+      "subject_id": "023_S_0926",
+      "cutoff_count": 3,
+      "cutoff_age": 72.24640655517578
+    },
+    {
+      "subject_id": "023_S_10094",
+      "cutoff_count": 3,
+      "cutoff_age": 69.41820526123047
+    },
+    {
+      "subject_id": "023_S_1046",
+      "cutoff_count": 3,
+      "cutoff_age": 72.83504486083984
+    },
+    {
+      "subject_id": "023_S_1190",
+      "cutoff_count": 3,
+      "cutoff_age": 77.83161926269531
+    },
+    {
+      "subject_id": "023_S_2068",
+      "cutoff_count": 3,
+      "cutoff_age": 83.99726104736328
+    },
+    {
+      "subject_id": "023_S_4020",
+      "cutoff_count": 3,
+      "cutoff_age": 67.4962387084961
+    },
+    {
+      "subject_id": "023_S_4035",
+      "cutoff_count": 3,
+      "cutoff_age": 73.49760437011719
+    },
+    {
+      "subject_id": "023_S_6374",
+      "cutoff_count": 3,
+      "cutoff_age": 66.33264923095703
+    },
+    {
+      "subject_id": "023_S_6535",
+      "cutoff_count": 3,
+      "cutoff_age": 79.4962387084961
+    },
+    {
+      "subject_id": "023_S_6702",
+      "cutoff_count": 3,
+      "cutoff_age": 65.82888793945312
+    },
+    {
+      "subject_id": "024_S_1063",
+      "cutoff_count": 3,
+      "cutoff_age": 79.58110809326172
+    },
+    {
+      "subject_id": "024_S_2239",
+      "cutoff_count": 3,
+      "cutoff_age": 74.16290283203125
+    },
+    {
+      "subject_id": "024_S_4392",
+      "cutoff_count": 3,
+      "cutoff_age": 83.08008575439453
+    },
+    {
+      "subject_id": "024_S_6184",
+      "cutoff_count": 2,
+      "cutoff_age": 72.75016784667969
+    },
+    {
+      "subject_id": "027_S_0120",
+      "cutoff_count": 3,
+      "cutoff_age": 73.24298095703125
+    },
+    {
+      "subject_id": "027_S_0307",
+      "cutoff_count": 3,
+      "cutoff_age": 79.8275146484375
+    },
+    {
+      "subject_id": "027_S_0850",
+      "cutoff_count": 3,
+      "cutoff_age": 79.2470932006836
+    },
+    {
+      "subject_id": "027_S_10316",
+      "cutoff_count": 2,
+      "cutoff_age": 63.58384704589844
+    },
+    {
+      "subject_id": "027_S_10438",
+      "cutoff_count": 2,
+      "cutoff_age": 62.830936431884766
+    },
+    {
+      "subject_id": "027_S_10457",
+      "cutoff_count": 2,
+      "cutoff_age": 74.83094024658203
+    },
+    {
+      "subject_id": "027_S_1387",
+      "cutoff_count": 3,
+      "cutoff_age": 86.83094024658203
+    },
+    {
+      "subject_id": "027_S_2219",
+      "cutoff_count": 3,
+      "cutoff_age": 74.91033172607422
+    },
+    {
+      "subject_id": "027_S_4869",
+      "cutoff_count": 3,
+      "cutoff_age": 78.24777221679688
+    },
+    {
+      "subject_id": "027_S_4919",
+      "cutoff_count": 3,
+      "cutoff_age": 75.41136169433594
+    },
+    {
+      "subject_id": "027_S_4926",
+      "cutoff_count": 3,
+      "cutoff_age": 63.082820892333984
+    },
+    {
+      "subject_id": "027_S_4938",
+      "cutoff_count": 3,
+      "cutoff_age": 71.8275146484375
+    },
+    {
+      "subject_id": "027_S_4962",
+      "cutoff_count": 3,
+      "cutoff_age": 80.66255950927734
+    },
+    {
+      "subject_id": "027_S_4964",
+      "cutoff_count": 3,
+      "cutoff_age": 81.49760437011719
+    },
+    {
+      "subject_id": "027_S_5109",
+      "cutoff_count": 3,
+      "cutoff_age": 78.9979476928711
+    },
+    {
+      "subject_id": "027_S_5118",
+      "cutoff_count": 3,
+      "cutoff_age": 69.08145141601562
+    },
+    {
+      "subject_id": "027_S_5169",
+      "cutoff_count": 3,
+      "cutoff_age": 66.41751861572266
+    },
+    {
+      "subject_id": "027_S_6183",
+      "cutoff_count": 3,
+      "cutoff_age": 68.33128356933594
+    },
+    {
+      "subject_id": "027_S_6327",
+      "cutoff_count": 3,
+      "cutoff_age": 81.40725708007812
+    },
+    {
+      "subject_id": "027_S_6582",
+      "cutoff_count": 3,
+      "cutoff_age": 69.41820526123047
+    },
+    {
+      "subject_id": "027_S_6733",
+      "cutoff_count": 3,
+      "cutoff_age": 78.49691772460938
+    },
+    {
+      "subject_id": "029_S_0843",
+      "cutoff_count": 3,
+      "cutoff_age": 71.40862274169922
+    },
+    {
+      "subject_id": "029_S_1056",
+      "cutoff_count": 3,
+      "cutoff_age": 72.33128356933594
+    },
+    {
+      "subject_id": "029_S_4290",
+      "cutoff_count": 3,
+      "cutoff_age": 74.33264923095703
+    },
+    {
+      "subject_id": "029_S_4385",
+      "cutoff_count": 3,
+      "cutoff_age": 68.99931335449219
+    },
+    {
+      "subject_id": "029_S_5135",
+      "cutoff_count": 3,
+      "cutoff_age": 77.58248138427734
+    },
+    {
+      "subject_id": "031_S_10731",
+      "cutoff_count": 2,
+      "cutoff_age": 71.74537658691406
+    },
+    {
+      "subject_id": "031_S_10758",
+      "cutoff_count": 2,
+      "cutoff_age": 66.9979476928711
+    },
+    {
+      "subject_id": "031_S_4024",
+      "cutoff_count": 3,
+      "cutoff_age": 56.66803741455078
+    },
+    {
+      "subject_id": "032_S_0400",
+      "cutoff_count": 3,
+      "cutoff_age": 70.49144744873047
+    },
+    {
+      "subject_id": "032_S_0479",
+      "cutoff_count": 3,
+      "cutoff_age": 74.65845489501953
+    },
+    {
+      "subject_id": "032_S_1037",
+      "cutoff_count": 2,
+      "cutoff_age": 74.40657043457031
+    },
+    {
+      "subject_id": "032_S_2119",
+      "cutoff_count": 3,
+      "cutoff_age": 72.49281311035156
+    },
+    {
+      "subject_id": "032_S_2240",
+      "cutoff_count": 3,
+      "cutoff_age": 78.65845489501953
+    },
+    {
+      "subject_id": "032_S_4277",
+      "cutoff_count": 3,
+      "cutoff_age": 72.16426849365234
+    },
+    {
+      "subject_id": "032_S_4386",
+      "cutoff_count": 3,
+      "cutoff_age": 85.33333587646484
+    },
+    {
+      "subject_id": "032_S_4823",
+      "cutoff_count": 3,
+      "cutoff_age": 82.9979476928711
+    },
+    {
+      "subject_id": "032_S_6709",
+      "cutoff_count": 3,
+      "cutoff_age": 69.82888793945312
+    },
+    {
+      "subject_id": "032_S_6804",
+      "cutoff_count": 3,
+      "cutoff_age": 74.50239562988281
+    },
+    {
+      "subject_id": "033_S_0513",
+      "cutoff_count": 3,
+      "cutoff_age": 70.0780258178711
+    },
+    {
+      "subject_id": "033_S_0516",
+      "cutoff_count": 3,
+      "cutoff_age": 88.82682800292969
+    },
+    {
+      "subject_id": "033_S_0734",
+      "cutoff_count": 3,
+      "cutoff_age": 73.82888793945312
+    },
+    {
+      "subject_id": "033_S_0906",
+      "cutoff_count": 3,
+      "cutoff_age": 66.0780258178711
+    },
+    {
+      "subject_id": "033_S_10016",
+      "cutoff_count": 3,
+      "cutoff_age": 73.9986343383789
+    },
+    {
+      "subject_id": "033_S_10021",
+      "cutoff_count": 3,
+      "cutoff_age": 71.66324615478516
+    },
+    {
+      "subject_id": "033_S_10049",
+      "cutoff_count": 3,
+      "cutoff_age": 84.49555206298828
+    },
+    {
+      "subject_id": "033_S_10092",
+      "cutoff_count": 3,
+      "cutoff_age": 67.91239166259766
+    },
+    {
+      "subject_id": "033_S_10118",
+      "cutoff_count": 3,
+      "cutoff_age": 80.33128356933594
+    },
+    {
+      "subject_id": "033_S_10196",
+      "cutoff_count": 3,
+      "cutoff_age": 66.74606323242188
+    },
+    {
+      "subject_id": "033_S_10353",
+      "cutoff_count": 3,
+      "cutoff_age": 72.91444396972656
+    },
+    {
+      "subject_id": "033_S_1086",
+      "cutoff_count": 3,
+      "cutoff_age": 82.58179473876953
+    },
+    {
+      "subject_id": "033_S_4179",
+      "cutoff_count": 3,
+      "cutoff_age": 84.16426849365234
+    },
+    {
+      "subject_id": "035_S_0048",
+      "cutoff_count": 3,
+      "cutoff_age": 79.74811553955078
+    },
+    {
+      "subject_id": "035_S_0997",
+      "cutoff_count": 3,
+      "cutoff_age": 81.0787124633789
+    },
+    {
+      "subject_id": "035_S_10193",
+      "cutoff_count": 2,
+      "cutoff_age": 57.50307846069336
+    },
+    {
+      "subject_id": "035_S_10274",
+      "cutoff_count": 3,
+      "cutoff_age": 68.66803741455078
+    },
+    {
+      "subject_id": "035_S_10364",
+      "cutoff_count": 3,
+      "cutoff_age": 79.99726104736328
+    },
+    {
+      "subject_id": "035_S_10382",
+      "cutoff_count": 3,
+      "cutoff_age": 59.33196258544922
+    },
+    {
+      "subject_id": "035_S_4783",
+      "cutoff_count": 3,
+      "cutoff_age": 83.99726104736328
+    },
+    {
+      "subject_id": "035_S_6480",
+      "cutoff_count": 3,
+      "cutoff_age": 81.16358947753906
+    },
+    {
+      "subject_id": "035_S_6641",
+      "cutoff_count": 2,
+      "cutoff_age": 65.24298095703125
+    },
+    {
+      "subject_id": "035_S_6730",
+      "cutoff_count": 3,
+      "cutoff_age": 76.07939910888672
+    },
+    {
+      "subject_id": "035_S_7000",
+      "cutoff_count": 3,
+      "cutoff_age": 90.58179473876953
+    },
+    {
+      "subject_id": "036_S_0576",
+      "cutoff_count": 3,
+      "cutoff_age": 78.65845489501953
+    },
+    {
+      "subject_id": "036_S_1023",
+      "cutoff_count": 3,
+      "cutoff_age": 77.91101837158203
+    },
+    {
+      "subject_id": "036_S_10642",
+      "cutoff_count": 3,
+      "cutoff_age": 73.5770034790039
+    },
+    {
+      "subject_id": "036_S_4389",
+      "cutoff_count": 3,
+      "cutoff_age": 81.74674987792969
+    },
+    {
+      "subject_id": "036_S_5063",
+      "cutoff_count": 3,
+      "cutoff_age": 72.2491455078125
+    },
+    {
+      "subject_id": "036_S_5283",
+      "cutoff_count": 3,
+      "cutoff_age": 76.07939910888672
+    },
+    {
+      "subject_id": "036_S_6134",
+      "cutoff_count": 2,
+      "cutoff_age": 63.159481048583984
+    },
+    {
+      "subject_id": "036_S_6887",
+      "cutoff_count": 3,
+      "cutoff_age": 74.2505111694336
+    },
+    {
+      "subject_id": "037_S_0303",
+      "cutoff_count": 3,
+      "cutoff_age": 85.5770034790039
+    },
+    {
+      "subject_id": "037_S_0454",
+      "cutoff_count": 3,
+      "cutoff_age": 83.07734680175781
+    },
+    {
+      "subject_id": "037_S_10098",
+      "cutoff_count": 3,
+      "cutoff_age": 79.501708984375
+    },
+    {
+      "subject_id": "037_S_10233",
+      "cutoff_count": 3,
+      "cutoff_age": 84.65982055664062
+    },
+    {
+      "subject_id": "037_S_10234",
+      "cutoff_count": 3,
+      "cutoff_age": 78.91307067871094
+    },
+    {
+      "subject_id": "037_S_10611",
+      "cutoff_count": 3,
+      "cutoff_age": 66.9979476928711
+    },
+    {
+      "subject_id": "037_S_1421",
+      "cutoff_count": 3,
+      "cutoff_age": 75.58384704589844
+    },
+    {
+      "subject_id": "037_S_4432",
+      "cutoff_count": 3,
+      "cutoff_age": 62.33264923095703
+    },
+    {
+      "subject_id": "037_S_4770",
+      "cutoff_count": 3,
+      "cutoff_age": 76.50102996826172
+    },
+    {
+      "subject_id": "037_S_5126",
+      "cutoff_count": 3,
+      "cutoff_age": 69.24845886230469
+    },
+    {
+      "subject_id": "037_S_6083",
+      "cutoff_count": 3,
+      "cutoff_age": 74.41478729248047
+    },
+    {
+      "subject_id": "037_S_6144",
+      "cutoff_count": 3,
+      "cutoff_age": 65.65913391113281
+    },
+    {
+      "subject_id": "037_S_6271",
+      "cutoff_count": 3,
+      "cutoff_age": 64.66803741455078
+    },
+    {
+      "subject_id": "037_S_6951",
+      "cutoff_count": 3,
+      "cutoff_age": 56.49555206298828
+    },
+    {
+      "subject_id": "037_S_6974",
+      "cutoff_count": 3,
+      "cutoff_age": 82.24777221679688
+    },
+    {
+      "subject_id": "037_S_6977",
+      "cutoff_count": 3,
+      "cutoff_age": 58.4147834777832
+    },
+    {
+      "subject_id": "041_S_0262",
+      "cutoff_count": 3,
+      "cutoff_age": 86.66666412353516
+    },
+    {
+      "subject_id": "041_S_0549",
+      "cutoff_count": 3,
+      "cutoff_age": 69.66187286376953
+    },
+    {
+      "subject_id": "041_S_10583",
+      "cutoff_count": 3,
+      "cutoff_age": 72.33128356933594
+    },
+    {
+      "subject_id": "041_S_10712",
+      "cutoff_count": 2,
+      "cutoff_age": 77.9986343383789
+    },
+    {
+      "subject_id": "041_S_1411",
+      "cutoff_count": 2,
+      "cutoff_age": 74.91580963134766
+    },
+    {
+      "subject_id": "041_S_4014",
+      "cutoff_count": 3,
+      "cutoff_age": 81.24845886230469
+    },
+    {
+      "subject_id": "041_S_4874",
+      "cutoff_count": 3,
+      "cutoff_age": 58.41204833984375
+    },
+    {
+      "subject_id": "041_S_5078",
+      "cutoff_count": 3,
+      "cutoff_age": 68.07939910888672
+    },
+    {
+      "subject_id": "041_S_6136",
+      "cutoff_count": 3,
+      "cutoff_age": 63.49623489379883
+    },
+    {
+      "subject_id": "041_S_6731",
+      "cutoff_count": 3,
+      "cutoff_age": 68.50102996826172
+    },
+    {
+      "subject_id": "041_S_6786",
+      "cutoff_count": 3,
+      "cutoff_age": 88.91444396972656
+    },
+    {
+      "subject_id": "051_S_1072",
+      "cutoff_count": 3,
+      "cutoff_age": 60.996578216552734
+    },
+    {
+      "subject_id": "051_S_4929",
+      "cutoff_count": 3,
+      "cutoff_age": 76.57769012451172
+    },
+    {
+      "subject_id": "051_S_6761",
+      "cutoff_count": 3,
+      "cutoff_age": 72.16426849365234
+    },
+    {
+      "subject_id": "052_S_10168",
+      "cutoff_count": 3,
+      "cutoff_age": 56.829566955566406
+    },
+    {
+      "subject_id": "052_S_10238",
+      "cutoff_count": 3,
+      "cutoff_age": 79.58384704589844
+    },
+    {
+      "subject_id": "052_S_10267",
+      "cutoff_count": 2,
+      "cutoff_age": 82.83094024658203
+    },
+    {
+      "subject_id": "052_S_10275",
+      "cutoff_count": 3,
+      "cutoff_age": 65.0787124633789
+    },
+    {
+      "subject_id": "052_S_10548",
+      "cutoff_count": 2,
+      "cutoff_age": 78.08076477050781
+    },
+    {
+      "subject_id": "052_S_1250",
+      "cutoff_count": 3,
+      "cutoff_age": 74.41204833984375
+    },
+    {
+      "subject_id": "053_S_2396",
+      "cutoff_count": 3,
+      "cutoff_age": 70.9979476928711
+    },
+    {
+      "subject_id": "057_S_0779",
+      "cutoff_count": 3,
+      "cutoff_age": 80.65982055664062
+    },
+    {
+      "subject_id": "057_S_0934",
+      "cutoff_count": 3,
+      "cutoff_age": 71.3292236328125
+    },
+    {
+      "subject_id": "057_S_1373",
+      "cutoff_count": 3,
+      "cutoff_age": 76.2491455078125
+    },
+    {
+      "subject_id": "057_S_4897",
+      "cutoff_count": 3,
+      "cutoff_age": 76.57769012451172
+    },
+    {
+      "subject_id": "062_S_0793",
+      "cutoff_count": 3,
+      "cutoff_age": 70.16290283203125
+    },
+    {
+      "subject_id": "062_S_1294",
+      "cutoff_count": 2,
+      "cutoff_age": 79.91239166259766
+    },
+    {
+      "subject_id": "067_S_0029",
+      "cutoff_count": 3,
+      "cutoff_age": 65.41546630859375
+    },
+    {
+      "subject_id": "067_S_0045",
+      "cutoff_count": 3,
+      "cutoff_age": 86.91307067871094
+    },
+    {
+      "subject_id": "067_S_0177",
+      "cutoff_count": 3,
+      "cutoff_age": 75.7508544921875
+    },
+    {
+      "subject_id": "067_S_0284",
+      "cutoff_count": 3,
+      "cutoff_age": 77.66735076904297
+    },
+    {
+      "subject_id": "067_S_0290",
+      "cutoff_count": 3,
+      "cutoff_age": 76.24366760253906
+    },
+    {
+      "subject_id": "067_S_10360",
+      "cutoff_count": 3,
+      "cutoff_age": 61.74948501586914
+    },
+    {
+      "subject_id": "067_S_10474",
+      "cutoff_count": 3,
+      "cutoff_age": 80.4079360961914
+    },
+    {
+      "subject_id": "067_S_4054",
+      "cutoff_count": 3,
+      "cutoff_age": 68.99657440185547
+    },
+    {
+      "subject_id": "067_S_4212",
+      "cutoff_count": 3,
+      "cutoff_age": 65.33059692382812
+    },
+    {
+      "subject_id": "067_S_6912",
+      "cutoff_count": 2,
+      "cutoff_age": 60.911705017089844
+    },
+    {
+      "subject_id": "067_S_6986",
+      "cutoff_count": 3,
+      "cutoff_age": 62.830936431884766
+    },
+    {
+      "subject_id": "067_S_7059",
+      "cutoff_count": 3,
+      "cutoff_age": 61.1635856628418
+    },
+    {
+      "subject_id": "068_S_2171",
+      "cutoff_count": 3,
+      "cutoff_age": 65.99589538574219
+    },
+    {
+      "subject_id": "068_S_2187",
+      "cutoff_count": 3,
+      "cutoff_age": 58.40657043457031
+    },
+    {
+      "subject_id": "068_S_2315",
+      "cutoff_count": 3,
+      "cutoff_age": 68.91170501708984
+    },
+    {
+      "subject_id": "068_S_4061",
+      "cutoff_count": 3,
+      "cutoff_age": 64.83504486083984
+    },
+    {
+      "subject_id": "068_S_4174",
+      "cutoff_count": 3,
+      "cutoff_age": 74.32991027832031
+    },
+    {
+      "subject_id": "068_S_4217",
+      "cutoff_count": 3,
+      "cutoff_age": 77.24845886230469
+    },
+    {
+      "subject_id": "070_S_4856",
+      "cutoff_count": 3,
+      "cutoff_age": 65.7494888305664
+    },
+    {
+      "subject_id": "070_S_6229",
+      "cutoff_count": 3,
+      "cutoff_age": 83.08281707763672
+    },
+    {
+      "subject_id": "070_S_6394",
+      "cutoff_count": 2,
+      "cutoff_age": 67.58384704589844
+    },
+    {
+      "subject_id": "070_S_6911",
+      "cutoff_count": 3,
+      "cutoff_age": 74.74606323242188
+    },
+    {
+      "subject_id": "070_S_7078",
+      "cutoff_count": 2,
+      "cutoff_age": 78.66119384765625
+    },
+    {
+      "subject_id": "072_S_1380",
+      "cutoff_count": 3,
+      "cutoff_age": 85.83161926269531
+    },
+    {
+      "subject_id": "072_S_2037",
+      "cutoff_count": 3,
+      "cutoff_age": 76.49555206298828
+    },
+    {
+      "subject_id": "072_S_4103",
+      "cutoff_count": 3,
+      "cutoff_age": 72.2491455078125
+    },
+    {
+      "subject_id": "072_S_4462",
+      "cutoff_count": 3,
+      "cutoff_age": 72.07939910888672
+    },
+    {
+      "subject_id": "072_S_4769",
+      "cutoff_count": 3,
+      "cutoff_age": 58.584529876708984
+    },
+    {
+      "subject_id": "073_S_10167",
+      "cutoff_count": 2,
+      "cutoff_age": 61.91375732421875
+    },
+    {
+      "subject_id": "073_S_10172",
+      "cutoff_count": 3,
+      "cutoff_age": 72.41615295410156
+    },
+    {
+      "subject_id": "073_S_10245",
+      "cutoff_count": 3,
+      "cutoff_age": 75.41136169433594
+    },
+    {
+      "subject_id": "073_S_10333",
+      "cutoff_count": 2,
+      "cutoff_age": 65.66461181640625
+    },
+    {
+      "subject_id": "073_S_10465",
+      "cutoff_count": 2,
+      "cutoff_age": 77.57974243164062
+    },
+    {
+      "subject_id": "073_S_2264",
+      "cutoff_count": 3,
+      "cutoff_age": 69.91101837158203
+    },
+    {
+      "subject_id": "073_S_4216",
+      "cutoff_count": 3,
+      "cutoff_age": 56.99931716918945
+    },
+    {
+      "subject_id": "073_S_4360",
+      "cutoff_count": 3,
+      "cutoff_age": 60.16427230834961
+    },
+    {
+      "subject_id": "073_S_4393",
+      "cutoff_count": 3,
+      "cutoff_age": 74.08076477050781
+    },
+    {
+      "subject_id": "073_S_4540",
+      "cutoff_count": 2,
+      "cutoff_age": 71.49349975585938
+    },
+    {
+      "subject_id": "073_S_4853",
+      "cutoff_count": 3,
+      "cutoff_age": 72.16426849365234
+    },
+    {
+      "subject_id": "073_S_5016",
+      "cutoff_count": 3,
+      "cutoff_age": 65.58248138427734
+    },
+    {
+      "subject_id": "082_S_0363",
+      "cutoff_count": 3,
+      "cutoff_age": 73.91375732421875
+    },
+    {
+      "subject_id": "082_S_10220",
+      "cutoff_count": 3,
+      "cutoff_age": 78.49691772460938
+    },
+    {
+      "subject_id": "082_S_10221",
+      "cutoff_count": 3,
+      "cutoff_age": 62.57905578613281
+    },
+    {
+      "subject_id": "082_S_1079",
+      "cutoff_count": 3,
+      "cutoff_age": 79.2470932006836
+    },
+    {
+      "subject_id": "082_S_4090",
+      "cutoff_count": 3,
+      "cutoff_age": 72.24640655517578
+    },
+    {
+      "subject_id": "094_S_0489",
+      "cutoff_count": 2,
+      "cutoff_age": 74.58179473876953
+    },
+    {
+      "subject_id": "094_S_1241",
+      "cutoff_count": 3,
+      "cutoff_age": 73.33059692382812
+    },
+    {
+      "subject_id": "094_S_1293",
+      "cutoff_count": 3,
+      "cutoff_age": 78.24504089355469
+    },
+    {
+      "subject_id": "094_S_4162",
+      "cutoff_count": 3,
+      "cutoff_age": 72.24640655517578
+    },
+    {
+      "subject_id": "094_S_4503",
+      "cutoff_count": 3,
+      "cutoff_age": 72.41615295410156
+    },
+    {
+      "subject_id": "094_S_6269",
+      "cutoff_count": 3,
+      "cutoff_age": 74.57905578613281
+    },
+    {
+      "subject_id": "098_S_10390",
+      "cutoff_count": 3,
+      "cutoff_age": 64.49281311035156
+    },
+    {
+      "subject_id": "098_S_10480",
+      "cutoff_count": 3,
+      "cutoff_age": 74.91307067871094
+    },
+    {
+      "subject_id": "098_S_10542",
+      "cutoff_count": 2,
+      "cutoff_age": 59.40862274169922
+    },
+    {
+      "subject_id": "098_S_6655",
+      "cutoff_count": 3,
+      "cutoff_age": 81.40725708007812
+    },
+    {
+      "subject_id": "099_S_0040",
+      "cutoff_count": 3,
+      "cutoff_age": 74.74606323242188
+    },
+    {
+      "subject_id": "099_S_0352",
+      "cutoff_count": 3,
+      "cutoff_age": 78.32991027832031
+    },
+    {
+      "subject_id": "099_S_4022",
+      "cutoff_count": 3,
+      "cutoff_age": 87.66050720214844
+    },
+    {
+      "subject_id": "099_S_6175",
+      "cutoff_count": 3,
+      "cutoff_age": 70.91033172607422
+    },
+    {
+      "subject_id": "100_S_0015",
+      "cutoff_count": 3,
+      "cutoff_age": 81.65913391113281
+    },
+    {
+      "subject_id": "100_S_4512",
+      "cutoff_count": 3,
+      "cutoff_age": 68.83504486083984
+    },
+    {
+      "subject_id": "100_S_5091",
+      "cutoff_count": 3,
+      "cutoff_age": 69.15811157226562
+    },
+    {
+      "subject_id": "100_S_5106",
+      "cutoff_count": 3,
+      "cutoff_age": 75.24435424804688
+    },
+    {
+      "subject_id": "109_S_1157",
+      "cutoff_count": 3,
+      "cutoff_age": 86.24504089355469
+    },
+    {
+      "subject_id": "109_S_6218",
+      "cutoff_count": 3,
+      "cutoff_age": 67.33196258544922
+    },
+    {
+      "subject_id": "109_S_6373",
+      "cutoff_count": 3,
+      "cutoff_age": 86.0780258178711
+    },
+    {
+      "subject_id": "114_S_0228",
+      "cutoff_count": 2,
+      "cutoff_age": 80.91170501708984
+    },
+    {
+      "subject_id": "114_S_0979",
+      "cutoff_count": 3,
+      "cutoff_age": 87.49897003173828
+    },
+    {
+      "subject_id": "114_S_6524",
+      "cutoff_count": 3,
+      "cutoff_age": 67.15947723388672
+    },
+    {
+      "subject_id": "116_S_0834",
+      "cutoff_count": 3,
+      "cutoff_age": 64.65982055664062
+    },
+    {
+      "subject_id": "116_S_0890",
+      "cutoff_count": 2,
+      "cutoff_age": 60.498287200927734
+    },
+    {
+      "subject_id": "116_S_10365",
+      "cutoff_count": 3,
+      "cutoff_age": 70.83094024658203
+    },
+    {
+      "subject_id": "116_S_10641",
+      "cutoff_count": 3,
+      "cutoff_age": 79.08281707763672
+    },
+    {
+      "subject_id": "116_S_10654",
+      "cutoff_count": 3,
+      "cutoff_age": 74.24504089355469
+    },
+    {
+      "subject_id": "116_S_1243",
+      "cutoff_count": 3,
+      "cutoff_age": 78.49691772460938
+    },
+    {
+      "subject_id": "116_S_4209",
+      "cutoff_count": 2,
+      "cutoff_age": 78.08076477050781
+    },
+    {
+      "subject_id": "116_S_4625",
+      "cutoff_count": 3,
+      "cutoff_age": 64.58316040039062
+    },
+    {
+      "subject_id": "116_S_6133",
+      "cutoff_count": 3,
+      "cutoff_age": 70.74606323242188
+    },
+    {
+      "subject_id": "123_S_10796",
+      "cutoff_count": 2,
+      "cutoff_age": 69.58248138427734
+    },
+    {
+      "subject_id": "123_S_4526",
+      "cutoff_count": 3,
+      "cutoff_age": 80.16426849365234
+    },
+    {
+      "subject_id": "123_S_4904",
+      "cutoff_count": 3,
+      "cutoff_age": 66.41204833984375
+    },
+    {
+      "subject_id": "123_S_7125",
+      "cutoff_count": 3,
+      "cutoff_age": 76.7474365234375
+    },
+    {
+      "subject_id": "126_S_0708",
+      "cutoff_count": 3,
+      "cutoff_age": 77.65913391113281
+    },
+    {
+      "subject_id": "126_S_10722",
+      "cutoff_count": 3,
+      "cutoff_age": 69.58248138427734
+    },
+    {
+      "subject_id": "126_S_10788",
+      "cutoff_count": 2,
+      "cutoff_age": 78.66119384765625
+    },
+    {
+      "subject_id": "126_S_1187",
+      "cutoff_count": 3,
+      "cutoff_age": 77.66461181640625
+    },
+    {
+      "subject_id": "126_S_1340",
+      "cutoff_count": 2,
+      "cutoff_age": 82.8254623413086
+    },
+    {
+      "subject_id": "126_S_4494",
+      "cutoff_count": 3,
+      "cutoff_age": 71.83025360107422
+    },
+    {
+      "subject_id": "127_S_0260",
+      "cutoff_count": 3,
+      "cutoff_age": 79.501708984375
+    },
+    {
+      "subject_id": "127_S_0397",
+      "cutoff_count": 2,
+      "cutoff_age": 75.33196258544922
+    },
+    {
+      "subject_id": "127_S_1382",
+      "cutoff_count": 3,
+      "cutoff_age": 65.08145141601562
+    },
+    {
+      "subject_id": "127_S_1419",
+      "cutoff_count": 3,
+      "cutoff_age": 79.16495513916016
+    },
+    {
+      "subject_id": "127_S_4240",
+      "cutoff_count": 3,
+      "cutoff_age": 71.41136169433594
+    },
+    {
+      "subject_id": "127_S_4843",
+      "cutoff_count": 3,
+      "cutoff_age": 74.66119384765625
+    },
+    {
+      "subject_id": "127_S_6232",
+      "cutoff_count": 3,
+      "cutoff_age": 69.82888793945312
+    },
+    {
+      "subject_id": "128_S_0216",
+      "cutoff_count": 3,
+      "cutoff_age": 85.49486541748047
+    },
+    {
+      "subject_id": "128_S_0266",
+      "cutoff_count": 3,
+      "cutoff_age": 86.32991027832031
+    },
+    {
+      "subject_id": "128_S_0611",
+      "cutoff_count": 3,
+      "cutoff_age": 73.0787124633789
+    },
+    {
+      "subject_id": "128_S_2057",
+      "cutoff_count": 2,
+      "cutoff_age": 64.58316040039062
+    },
+    {
+      "subject_id": "128_S_4603",
+      "cutoff_count": 2,
+      "cutoff_age": 59.49349594116211
+    },
+    {
+      "subject_id": "128_S_4745",
+      "cutoff_count": 2,
+      "cutoff_age": 61.74674987792969
+    },
+    {
+      "subject_id": "129_S_4369",
+      "cutoff_count": 3,
+      "cutoff_age": 69.2511978149414
+    },
+    {
+      "subject_id": "129_S_4396",
+      "cutoff_count": 3,
+      "cutoff_age": 79.08008575439453
+    },
+    {
+      "subject_id": "129_S_6621",
+      "cutoff_count": 3,
+      "cutoff_age": 58.66666793823242
+    },
+    {
+      "subject_id": "129_S_6784",
+      "cutoff_count": 3,
+      "cutoff_age": 84.16426849365234
+    },
+    {
+      "subject_id": "130_S_0423",
+      "cutoff_count": 3,
+      "cutoff_age": 80.32854461669922
+    },
+    {
+      "subject_id": "130_S_0505",
+      "cutoff_count": 3,
+      "cutoff_age": 80.57769012451172
+    },
+    {
+      "subject_id": "130_S_10214",
+      "cutoff_count": 3,
+      "cutoff_age": 68.91170501708984
+    },
+    {
+      "subject_id": "130_S_10490",
+      "cutoff_count": 2,
+      "cutoff_age": 72.49281311035156
+    },
+    {
+      "subject_id": "130_S_10696",
+      "cutoff_count": 2,
+      "cutoff_age": 68.8295669555664
+    },
+    {
+      "subject_id": "130_S_10760",
+      "cutoff_count": 3,
+      "cutoff_age": 65.33059692382812
+    },
+    {
+      "subject_id": "130_S_1201",
+      "cutoff_count": 3,
+      "cutoff_age": 76.83230590820312
+    },
+    {
+      "subject_id": "130_S_4405",
+      "cutoff_count": 3,
+      "cutoff_age": 72.07939910888672
+    },
+    {
+      "subject_id": "130_S_4468",
+      "cutoff_count": 3,
+      "cutoff_age": 63.080081939697266
+    },
+    {
+      "subject_id": "130_S_4971",
+      "cutoff_count": 3,
+      "cutoff_age": 76.99657440185547
+    },
+    {
+      "subject_id": "130_S_6047",
+      "cutoff_count": 3,
+      "cutoff_age": 72.33128356933594
+    },
+    {
+      "subject_id": "131_S_0497",
+      "cutoff_count": 3,
+      "cutoff_age": 76.82682800292969
+    },
+    {
+      "subject_id": "131_S_10801",
+      "cutoff_count": 3,
+      "cutoff_age": 78.74606323242188
+    },
+    {
+      "subject_id": "131_S_10815",
+      "cutoff_count": 3,
+      "cutoff_age": 61.65913772583008
+    },
+    {
+      "subject_id": "133_S_0433",
+      "cutoff_count": 3,
+      "cutoff_age": 86.74332427978516
+    },
+    {
+      "subject_id": "133_S_0488",
+      "cutoff_count": 3,
+      "cutoff_age": 72.07939910888672
+    },
+    {
+      "subject_id": "133_S_0525",
+      "cutoff_count": 3,
+      "cutoff_age": 71.4962387084961
+    },
+    {
+      "subject_id": "135_S_10332",
+      "cutoff_count": 2,
+      "cutoff_age": 66.50239562988281
+    },
+    {
+      "subject_id": "135_S_10823",
+      "cutoff_count": 3,
+      "cutoff_age": 80.99657440185547
+    },
+    {
+      "subject_id": "135_S_4406",
+      "cutoff_count": 3,
+      "cutoff_age": 79.49349975585938
+    },
+    {
+      "subject_id": "135_S_4689",
+      "cutoff_count": 3,
+      "cutoff_age": 70.33264923095703
+    },
+    {
+      "subject_id": "135_S_4723",
+      "cutoff_count": 3,
+      "cutoff_age": 70.08350372314453
+    },
+    {
+      "subject_id": "135_S_5015",
+      "cutoff_count": 3,
+      "cutoff_age": 78.57905578613281
+    },
+    {
+      "subject_id": "135_S_6544",
+      "cutoff_count": 3,
+      "cutoff_age": 78.83367919921875
+    },
+    {
+      "subject_id": "135_S_7003",
+      "cutoff_count": 3,
+      "cutoff_age": 83.33196258544922
+    },
+    {
+      "subject_id": "136_S_0086",
+      "cutoff_count": 3,
+      "cutoff_age": 81.08145141601562
+    },
+    {
+      "subject_id": "137_S_0301",
+      "cutoff_count": 3,
+      "cutoff_age": 74.32991027832031
+    },
+    {
+      "subject_id": "137_S_0686",
+      "cutoff_count": 3,
+      "cutoff_age": 72.8295669555664
+    },
+    {
+      "subject_id": "137_S_0841",
+      "cutoff_count": 3,
+      "cutoff_age": 77.8261489868164
+    },
+    {
+      "subject_id": "137_S_0972",
+      "cutoff_count": 3,
+      "cutoff_age": 78.49144744873047
+    },
+    {
+      "subject_id": "137_S_1041",
+      "cutoff_count": 3,
+      "cutoff_age": 72.08213806152344
+    },
+    {
+      "subject_id": "137_S_4299",
+      "cutoff_count": 3,
+      "cutoff_age": 77.57974243164062
+    },
+    {
+      "subject_id": "137_S_4303",
+      "cutoff_count": 3,
+      "cutoff_age": 80.91444396972656
+    },
+    {
+      "subject_id": "137_S_4587",
+      "cutoff_count": 3,
+      "cutoff_age": 66.33264923095703
+    },
+    {
+      "subject_id": "137_S_6919",
+      "cutoff_count": 3,
+      "cutoff_age": 81.41272735595703
+    },
+    {
+      "subject_id": "141_S_0696",
+      "cutoff_count": 3,
+      "cutoff_age": 75.3292236328125
+    },
+    {
+      "subject_id": "141_S_1051",
+      "cutoff_count": 2,
+      "cutoff_age": 76.07939910888672
+    },
+    {
+      "subject_id": "141_S_10535",
+      "cutoff_count": 2,
+      "cutoff_age": 68.4079360961914
+    },
+    {
+      "subject_id": "141_S_1378",
+      "cutoff_count": 3,
+      "cutoff_age": 62.66666793823242
+    },
+    {
+      "subject_id": "141_S_2210",
+      "cutoff_count": 3,
+      "cutoff_age": 80.49281311035156
+    },
+    {
+      "subject_id": "141_S_4160",
+      "cutoff_count": 3,
+      "cutoff_age": 75.08008575439453
+    },
+    {
+      "subject_id": "141_S_4423",
+      "cutoff_count": 3,
+      "cutoff_age": 78.16564178466797
+    },
+    {
+      "subject_id": "141_S_4426",
+      "cutoff_count": 3,
+      "cutoff_age": 78.08076477050781
+    },
+    {
+      "subject_id": "141_S_4711",
+      "cutoff_count": 3,
+      "cutoff_age": 75.58384704589844
+    },
+    {
+      "subject_id": "141_S_6779",
+      "cutoff_count": 3,
+      "cutoff_age": 72.99931335449219
+    },
+    {
+      "subject_id": "153_S_4297",
+      "cutoff_count": 3,
+      "cutoff_age": 83.74537658691406
+    },
+    {
+      "subject_id": "153_S_4838",
+      "cutoff_count": 3,
+      "cutoff_age": 76.41067504882812
+    },
+    {
+      "subject_id": "158_S_10754",
+      "cutoff_count": 2,
+      "cutoff_age": 81.16358947753906
+    },
+    {
+      "subject_id": "158_S_10843",
+      "cutoff_count": 2,
+      "cutoff_age": 80.91170501708984
+    },
+    {
+      "subject_id": "158_S_10850",
+      "cutoff_count": 3,
+      "cutoff_age": 83.74537658691406
+    },
+    {
+      "subject_id": "168_S_6049",
+      "cutoff_count": 3,
+      "cutoff_age": 73.99589538574219
+    },
+    {
+      "subject_id": "168_S_6151",
+      "cutoff_count": 3,
+      "cutoff_age": 65.65913391113281
+    },
+    {
+      "subject_id": "168_S_6233",
+      "cutoff_count": 3,
+      "cutoff_age": 79.33196258544922
+    },
+    {
+      "subject_id": "168_S_6281",
+      "cutoff_count": 3,
+      "cutoff_age": 81.16358947753906
+    },
+    {
+      "subject_id": "168_S_6320",
+      "cutoff_count": 3,
+      "cutoff_age": 68.32854461669922
+    },
+    {
+      "subject_id": "168_S_6413",
+      "cutoff_count": 3,
+      "cutoff_age": 80.83504486083984
+    },
+    {
+      "subject_id": "168_S_6828",
+      "cutoff_count": 3,
+      "cutoff_age": 82.83094024658203
+    },
+    {
+      "subject_id": "168_S_6908",
+      "cutoff_count": 3,
+      "cutoff_age": 91.83025360107422
+    },
+    {
+      "subject_id": "177_S_6408",
+      "cutoff_count": 2,
+      "cutoff_age": 59.91238784790039
+    },
+    {
+      "subject_id": "305_S_10311",
+      "cutoff_count": 2,
+      "cutoff_age": 76.08213806152344
+    },
+    {
+      "subject_id": "305_S_10404",
+      "cutoff_count": 2,
+      "cutoff_age": 64.16426849365234
+    },
+    {
+      "subject_id": "305_S_6188",
+      "cutoff_count": 3,
+      "cutoff_age": 70.16290283203125
+    },
+    {
+      "subject_id": "305_S_6313",
+      "cutoff_count": 3,
+      "cutoff_age": 66.40930938720703
+    },
+    {
+      "subject_id": "305_S_6810",
+      "cutoff_count": 3,
+      "cutoff_age": 74.57905578613281
+    },
+    {
+      "subject_id": "305_S_6899",
+      "cutoff_count": 2,
+      "cutoff_age": 56.911705017089844
+    },
+    {
+      "subject_id": "334_S_10727",
+      "cutoff_count": 3,
+      "cutoff_age": 67.99726104736328
+    },
+    {
+      "subject_id": "341_S_6605",
+      "cutoff_count": 3,
+      "cutoff_age": 78.66940307617188
+    },
+    {
+      "subject_id": "341_S_6820",
+      "cutoff_count": 3,
+      "cutoff_age": 69.58521270751953
+    },
+    {
+      "subject_id": "389_S_10587",
+      "cutoff_count": 3,
+      "cutoff_age": 88.58316040039062
+    },
+    {
+      "subject_id": "389_S_10676",
+      "cutoff_count": 3,
+      "cutoff_age": 78.33264923095703
+    },
+    {
+      "subject_id": "941_S_10024",
+      "cutoff_count": 2,
+      "cutoff_age": 78.7488021850586
+    },
+    {
+      "subject_id": "941_S_10085",
+      "cutoff_count": 3,
+      "cutoff_age": 78.66392517089844
+    },
+    {
+      "subject_id": "941_S_10309",
+      "cutoff_count": 3,
+      "cutoff_age": 80.74469757080078
+    },
+    {
+      "subject_id": "941_S_4100",
+      "cutoff_count": 3,
+      "cutoff_age": 79.08008575439453
+    },
+    {
+      "subject_id": "941_S_4365",
+      "cutoff_count": 3,
+      "cutoff_age": 80.99931335449219
+    },
+    {
+      "subject_id": "941_S_4764",
+      "cutoff_count": 3,
+      "cutoff_age": 83.33196258544922
+    },
+    {
+      "subject_id": "941_S_6044",
+      "cutoff_count": 3,
+      "cutoff_age": 79.33196258544922
+    },
+    {
+      "subject_id": "941_S_6068",
+      "cutoff_count": 3,
+      "cutoff_age": 77.91101837158203
+    },
+    {
+      "subject_id": "941_S_6080",
+      "cutoff_count": 3,
+      "cutoff_age": 79.16221618652344
+    },
+    {
+      "subject_id": "941_S_6333",
+      "cutoff_count": 3,
+      "cutoff_age": 79.3292236328125
+    },
+    {
+      "subject_id": "941_S_6575",
+      "cutoff_count": 3,
+      "cutoff_age": 74.58179473876953
+    },
+    {
+      "subject_id": "941_S_6854",
+      "cutoff_count": 3,
+      "cutoff_age": 87.66050720214844
+    }
+  ],
+  "cohort_rule": "first min(3, observed visits), same patients and histories, no future values in encoder",
+  "years": [
+    0,
+    1,
+    2,
+    3,
+    5
+  ],
+  "state_noise": "8 identical random unit directions, length 0.01 times each own cutoff-state norm",
+  "observation_noise": "same Gaussian noise, sigma in [0,0.01,0.05] training-field SD; only observed numeric histories excluding age/education/apoe4",
+  "physical_gpu": 1,
+  "parameters_per_model": 44875,
+  "optimizer_steps": 0,
+  "native_source": "/home/xjh/projects/LatentODE/paper_odeae/results/latent2x_loss_ablation/source_snapshot",
+  "native_source_hashes": {
+    "paper_odeae/__init__.py": "1da58c3b8b61e93c35610307090bac8a0e6b6ee1e1c1c3b00b0b8d4968eda37d",
+    "paper_odeae/models.py": "82f3aea1521c4e8a903eaa439e64a213f63749da473b039db072f619030024a3",
+    "paper_odeae/train.py": "c861f4739c69b65a4e1a3fcc871a32f11b141f4b1025f3553e8333b8b657960d",
+    "paper_odeae/jacobian.py": "a3119cbd379949cbb6de0a61e990a275c6f8783e86031b00fdce15587627619c",
+    "paper_odeae/data.py": "e147266ff180655c353858cf7b4481f45d7163a0118df757e3064902d0e16295",
+    "paper_odeae/solver.py": "c69c6a3b637e9303cc5d9afbda3b59c31e6195dadcd95efff6ec81c1519da55b",
+    "paper_odeae/diagnostics/jacobian_checkpoint.py": "46ea0e80eabb800096f21e28e68a9ec1fd0512ba9d574d3dc3666de5bc898f5c",
+    "paper_odeae/reference/features46.json": "3cdce2d849494d3c6e1bb33d6822c2fb273b0882bb45d71f51783c7e57a0ef27",
+    "paper_odeae/reference/tsit5_tableau.json": "e316ce7ae258bfe6470732fbe6df84452bebfeebeea887730d52c0b82354397c",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/tracking.py": "efd445872289f3a9a6629bf8e29f370dc5b82babb95459072972bb8e973d5717",
+    "src/swanlab_local.py": "154ccb47f1b74dbc1e12bec983e7683a4c6ee8dbd85766e9aa93aef21c4b21ab"
+  },
+  "source_hashes": {
+    "fixed_update_checks.py": "58167dab1192cd0c63c0340a4df40cd5ac32da7d881bd14facef3fd448f461c5",
+    "component_ablation_train.py": "05a30597f2ca8b7509332df88d49f554f6d1d4df78f6ceb63b25041416f3c240",
+    "component_ablation_model.py": "58f63ace93330b7b487474290efb5f72ec5532cb40e5ac5ce51f49234537f08b",
+    "jacobian_utility_adni.py": "aaa636a8859dbcfd9465ca6a094e384be8f1809334c7c5f662658a6ffeac6a00",
+    "component_ablation_checks.py": "f320c2f81989e079c352b020130c4aa840c5cdf68ba2792bfad641487a56b8e7",
+    "jacobian_utility_report.py": "1053c22027d27fb8b28472fa6e7ca863b2750e543eb9be2772161c43efbfda31",
+    "fixed_update_model.py": "bb9d174632543b2334dd21928518509725f952d59b313f2f9522d8122eb1248d",
+    "component_ablation_loss.py": "479727990d1102684022c893a6857ec6c04a5dcd3c144a1a70894aca2606b5df"
+  },
+  "concurrent_with_training": true,
+  "postprocessing_revisions": [
+    {
+      "at_utc": "2026-11-05T10:15:52.117079+00:00",
+      "reason": "readability, corrected formula, mechanism interpretation and exact reproduction command",
+      "previous_sha256": "5847ff18bb1384986ce8a8228a469dc92e6f180fd7df10ac5cf54818d3fdf95e",
+      "current_sha256": "1053c22027d27fb8b28472fa6e7ca863b2750e543eb9be2772161c43efbfda31",
+      "previous_source": "/home/xjh/projects/LatentODE/ablation/results/jacobian_utility_adni/postprocessing_versions/jacobian_utility_report.v1.py",
+      "GPU_experiments_repeated": false
+    }
+  ]
+}

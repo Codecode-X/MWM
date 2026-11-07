@@ -1,0 +1,23 @@
+{
+  "time_utc": "2026-11-05T14:52:40.712261+00:00",
+  "user_instruction": "Stop all GPU programs and dedicate four GPUs to the publication checklist",
+  "processes": [
+    {
+      "pid": 13988,
+      "command": "/home/xjh/miniforge3/envs/ode/bin/python -u -m mimic_experiment.component_ablation_study ",
+      "cwd": "/home/xjh/projects/LatentODE"
+    },
+    {
+      "pid": 14284,
+      "command": "/home/xjh/miniforge3/envs/ode/bin/python /home/xjh/projects/LatentODE/ablation/results/alpha01_components/mimic_separate_fields/source_snapshot/component_ablation_train.py --config /home/xjh/projects/LatentODE/ablation/results/alpha01_components/mimic_separate_fields/launch_config.json --stage training ",
+      "cwd": "/home/xjh/projects/LatentODE/mimic_experiment/results/direction_full_batch_cuda/source_snapshot"
+    }
+  ],
+  "preserved_last_completed_epoch": 109,
+  "preserved_files": {
+    "best.pt": 571526,
+    "last.pt": 1913414,
+    "history.json": 4154211,
+    "config.json": 4083
+  }
+}

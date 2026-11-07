@@ -1,0 +1,34 @@
+{
+  "requested_at_utc": "2026-11-04T04:20:49.632718+00:00",
+  "reason": "User authorized idle-GPU backfill for all remaining component ablations, prioritizing MIMIC weak-prior removal.",
+  "physical_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "priority": [
+    "mimic_no_prior",
+    "adni_no_jacobian",
+    "mimic_no_jacobian",
+    "adni_separate_fields",
+    "mimic_separate_fields",
+    "adni_no_prior"
+  ],
+  "adopt_without_restart": {
+    "adni_no_prior": {
+      "pid": 71697,
+      "physical_gpu": 0
+    }
+  },
+  "old_controller_pid": 71351,
+  "before_dispatch_backup": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/dispatch_backups/20261104T042049Z",
+  "parameter_budgets": {
+    "adni": 44875,
+    "mimic": 43280
+  },
+  "max_total_epochs": 150,
+  "training_changes": "None; only device assignment and job scheduling. Frozen model, loss, trainer, batch sizes and optimizer retained.",
+  "scheduler_sha256": "12c82f3dded57b51766e4b3a0a807e95da9c06bcb3a7015878384e681c7ea02a",
+  "new_controller_pid": 89568
+}

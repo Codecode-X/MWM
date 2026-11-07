@@ -1,0 +1,77 @@
+{
+  "models_implemented": [
+    "ode_ae",
+    "deterministic",
+    "lstm"
+  ],
+  "unit_checks_passed": 6,
+  "cuda_smoke_jobs_passed": 4,
+  "smoke_epochs_per_job": 1,
+  "smoke_jobs": [
+    {
+      "model": "deterministic",
+      "seed": 0,
+      "physical_gpu": "1",
+      "checkpoint_reload_difference": 0.0,
+      "actual_tensor_devices": {
+        "values": "cuda:0",
+        "ages": "cuda:0",
+        "mask": "cuda:0",
+        "context_mask": "cuda:0"
+      }
+    },
+    {
+      "model": "lstm",
+      "seed": 0,
+      "physical_gpu": "2",
+      "checkpoint_reload_difference": 0.0,
+      "actual_tensor_devices": {
+        "values": "cuda:0",
+        "ages": "cuda:0",
+        "mask": "cuda:0",
+        "context_mask": "cuda:0"
+      }
+    },
+    {
+      "model": "ode_ae",
+      "seed": 0,
+      "physical_gpu": "0",
+      "checkpoint_reload_difference": 0.0,
+      "actual_tensor_devices": {
+        "values": "cuda:0",
+        "ages": "cuda:0",
+        "mask": "cuda:0",
+        "context_mask": "cuda:0"
+      }
+    },
+    {
+      "model": "ode_ae",
+      "seed": 1,
+      "physical_gpu": "3",
+      "checkpoint_reload_difference": 0.0,
+      "actual_tensor_devices": {
+        "values": "cuda:0",
+        "ages": "cuda:0",
+        "mask": "cuda:0",
+        "context_mask": "cuda:0"
+      }
+    }
+  ],
+  "local_feature_count": 40,
+  "missing_paper_fields": [
+    "ecog_self",
+    "ecog_partner",
+    "npi",
+    "fdg_parietal_suvr",
+    "fdg_temporal_suvr",
+    "cortical_volume_change_percent"
+  ],
+  "local_patient_counts": {
+    "train": 2093,
+    "validation": 393,
+    "test": 414
+  },
+  "paper46_missing_data_guard_verified": true,
+  "formal_multi_seed_training_completed": false,
+  "published_effects_reproduced": false
+}

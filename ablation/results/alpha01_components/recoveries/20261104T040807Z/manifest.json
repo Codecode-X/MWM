@@ -1,0 +1,125 @@
+{
+  "recovered_at_utc": "2026-11-04T04:08:07.155517+00:00",
+  "reason": "user requested recovery after accidental process interruption",
+  "resume_unit": "completed epoch boundary; replay any unsaved partial epoch",
+  "restored_state": [
+    "model",
+    "Adam optimizer",
+    "learning-rate scheduler",
+    "best score",
+    "early stopping counter",
+    "optimizer step count",
+    "complete history"
+  ],
+  "randomness": "Original workers reseed Torch/NumPy/Python and batch samplers using seed+epoch at each epoch start. Checkpoint RNG states are preserved in backup.",
+  "jobs": [
+    {
+      "job": "adni_no_prior",
+      "physical_gpu": 0,
+      "completed_epoch": 39,
+      "next_epoch": 40,
+      "optimizer_steps": 15288,
+      "resume_checkpoint": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/adni_no_prior/last.pt",
+      "checkpoint_sha256": "eeece2f46752faf617ae2fe7dd1e6848f2e0190b6c5997e7c9ef2f544e9d97f5",
+      "backup": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/recoveries/20261104T040807Z/adni_no_prior",
+      "max_total_epochs": 150,
+      "parameter_count": 44875
+    },
+    {
+      "job": "mimic_reverse",
+      "physical_gpu": 3,
+      "completed_epoch": 41,
+      "next_epoch": 42,
+      "optimizer_steps": 6929,
+      "resume_checkpoint": "/home/xjh/projects/LatentODE/mimic_experiment/results/weak_prior_ablation_cuda/targeted_causal_ablation/direction_alpha01/mimic_reverse/last.pt",
+      "checkpoint_sha256": "d53be1a9a73e00e4a18dada9a0bcf872ad1e0f4456819966a543bf06e66770c1",
+      "backup": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/recoveries/20261104T040807Z/mimic_reverse",
+      "max_total_epochs": 150,
+      "parameter_count": 43280
+    },
+    {
+      "job": "update_alpha_00",
+      "physical_gpu": 1,
+      "completed_epoch": 108,
+      "next_epoch": 109,
+      "optimizer_steps": 18252,
+      "resume_checkpoint": "/home/xjh/projects/LatentODE/mimic_experiment/results/weak_prior_ablation_cuda/targeted_causal_ablation/update_alpha_00/last.pt",
+      "checkpoint_sha256": "20ffb63d11521cf67913d31359abb86ca45b5d8af4127dd8df73ce92cea99d4a",
+      "backup": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/recoveries/20261104T040807Z/update_alpha_00",
+      "max_total_epochs": 150,
+      "parameter_count": 43280
+    }
+  ],
+  "completed_jobs_reused": [
+    "adni_reverse",
+    "adni_update_alpha_01"
+  ],
+  "cancelled_job_kept_cancelled": "mimic_forward_150",
+  "controllers": [
+    {
+      "controller": "components",
+      "pid": 71351,
+      "command": [
+        "bash",
+        "scripts/run_main_alpha01_ablation.sh"
+      ],
+      "log": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/controller.log"
+    },
+    {
+      "controller": "direction",
+      "pid": 71352,
+      "command": [
+        "bash",
+        "scripts/run_alpha01_direction_adni_mimic.sh"
+      ],
+      "log": "/home/xjh/projects/LatentODE/mimic_experiment/results/weak_prior_ablation_cuda/targeted_causal_ablation/direction_alpha01/parallel_controller.log"
+    },
+    {
+      "controller": "fixed_update",
+      "pid": 71354,
+      "command": [
+        "bash",
+        "scripts/run_mimic_adni_fixed_update_150.sh"
+      ],
+      "log": "/home/xjh/projects/LatentODE/mimic_experiment/results/weak_prior_ablation_cuda/targeted_causal_ablation/fixed_update_additions_controller.log"
+    }
+  ],
+  "recovery_directory": "/home/xjh/projects/LatentODE/ablation/results/alpha01_components/recoveries/20261104T040807Z",
+  "data_mount_restored_at_utc": "2026-11-04T04:09:37.027479+00:00",
+  "verified_MIMIC_sha256": "67944547ee256643fb3cdc66188fa2dc77c25d5b9182d225d3eb470404491897",
+  "initial_restart_attempt": "Workers could not read the unmounted /data volume; no training steps were executed in the failed attempt.",
+  "verified_at_utc": "2026-11-04T04:12:15.629510+00:00",
+  "verified_active_workers": [
+    {
+      "job": "adni_no_prior",
+      "pid": 71697,
+      "physical_gpu": 0,
+      "parameters": 44875,
+      "swanlab_run_id": "we0lrh0x",
+      "parameter_device": "cuda:0",
+      "loaded_optimizer_steps": 15288,
+      "status": "CUDA training active; new SwanLab tracking initialized after checkpoint load"
+    },
+    {
+      "job": "update_alpha_00",
+      "pid": 72261,
+      "physical_gpu": 1,
+      "parameters": 43280,
+      "swanlab_run_id": "ijtq9y63",
+      "parameter_device": "cuda:0",
+      "loaded_optimizer_steps": 18252,
+      "status": "CUDA training active; new SwanLab tracking initialized after checkpoint load"
+    },
+    {
+      "job": "mimic_reverse",
+      "pid": 71805,
+      "physical_gpu": 3,
+      "parameters": 43280,
+      "swanlab_run_id": "527ajywd",
+      "parameter_device": "cuda:0",
+      "loaded_optimizer_steps": 6929,
+      "status": "CUDA training active; new SwanLab tracking initialized after checkpoint load"
+    }
+  ],
+  "status": "recovered"
+}

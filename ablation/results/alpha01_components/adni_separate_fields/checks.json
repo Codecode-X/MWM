@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "dataset": "adni",
+  "ablation_component": "separate_fields",
+  "alpha": 0.1,
+  "parameters": 44875,
+  "physical_gpu": 1,
+  "parameter_device": "cuda:0",
+  "actual_tensor_devices": {
+    "values": "cuda:0",
+    "mask": "cuda:0",
+    "ages": "cuda:0",
+    "context_mask": "cuda:0",
+    "valid": "cuda:0",
+    "cutoff": "cuda:0"
+  },
+  "unique_fields": 2,
+  "unique_ode_parameters": 10744,
+  "future_observations_do_not_change_outputs": true,
+  "total_loss_gradient_norms": {
+    "init": 7.918602466583252,
+    "update": 1.093929648399353,
+    "backward_ode": 2.6463921070098877,
+    "forward_ode": 3.6052324771881104,
+    "decoder": 11.480209350585938
+  },
+  "optimizer_steps": 0,
+  "same_total_parameters": true,
+  "retained_network_initial_tensors_equal": true,
+  "independent_field_parameters": true,
+  "encoder_field_parameters": 5358,
+  "generator_field_parameters": 5386,
+  "initial_two_field_max_absolute_difference": 0.0,
+  "jacobian_gradient_norms_per_field": [
+    0.45689329504966736,
+    0.45689329504966736
+  ],
+  "prediction_relative_difference_from_main_initialization": 0.18170543015003204
+}

@@ -1,0 +1,240 @@
+
+Publication dispatch 2026-11-06T10:29:29.744543+00:00 physical GPU 3
+Full 6D distinct-patient neighbors and Jacobians complete
+2D projection comparison complete
+Long-horizon forecasts complete: 12302 origins across all splits
+{
+  "regions": [
+    {
+      "region": "CN core",
+      "states": 739,
+      "patients": 182,
+      "C_mean": 0.9666662216186523,
+      "C_p10": 0.9308694005012512,
+      "D_mean": 0.04207445681095123,
+      "J_mean": 0.19730691611766815,
+      "opposite_pair_fraction": 0.0
+    },
+    {
+      "region": "CN/MCI boundary",
+      "states": 51,
+      "patients": 30,
+      "C_mean": 0.8475334048271179,
+      "C_p10": 0.581446647644043,
+      "D_mean": 0.05582001805305481,
+      "J_mean": 0.19291459023952484,
+      "opposite_pair_fraction": 0.0
+    },
+    {
+      "region": "MCI core",
+      "states": 667,
+      "patients": 188,
+      "C_mean": 0.9707261919975281,
+      "C_p10": 0.9385277032852173,
+      "D_mean": 0.04640669375658035,
+      "J_mean": 0.19475147128105164,
+      "opposite_pair_fraction": 0.0
+    },
+    {
+      "region": "MCI/Dementia boundary",
+      "states": 57,
+      "patients": 43,
+      "C_mean": 0.9872606992721558,
+      "C_p10": 0.9764582872390747,
+      "D_mean": 0.04394690692424774,
+      "J_mean": 0.1838240772485733,
+      "opposite_pair_fraction": 0.0
+    },
+    {
+      "region": "Dementia core",
+      "states": 327,
+      "patients": 102,
+      "C_mean": 0.9955515265464783,
+      "C_p10": 0.9903883814811707,
+      "D_mean": 0.03962589055299759,
+      "J_mean": 0.17994476854801178,
+      "opposite_pair_fraction": 0.0
+    },
+    {
+      "region": "Other mixed",
+      "states": 1,
+      "patients": 1,
+      "C_mean": 0.9933145642280579,
+      "C_p10": 0.9933145642280579,
+      "D_mean": 0.04943232238292694,
+      "J_mean": 0.17652179300785065,
+      "opposite_pair_fraction": 0.0
+    },
+    {
+      "region": "Insufficient labels",
+      "states": 560,
+      "patients": 271,
+      "C_mean": 0.9696145057678223,
+      "C_p10": 0.9297307133674622,
+      "D_mean": 0.04675189033150673,
+      "J_mean": 0.19582989811897278,
+      "opposite_pair_fraction": 0.0
+    }
+  ],
+  "horizons": {
+    "12": {
+      "test_patients": 289,
+      "test_origins": 1022,
+      "mmse_mae_patient_weighted": 1.7811834878959847,
+      "mmse_mae_origin_weighted": 1.6326533557879948,
+      "persistence_mae_patient_weighted": 1.8308090046839771,
+      "sensitivity_error": {
+        "pearson": 0.00048684892167169747,
+        "spearman": -0.003251899136936722
+      },
+      "jacobian_error": {
+        "pearson": -0.40496327514766417,
+        "spearman": -0.43712265839398645
+      },
+      "adjusted_sensitivity_error": -0.019578035034764053,
+      "adjusted_jacobian_error": -0.11496463520141548,
+      "covariates": [
+        "age",
+        "years",
+        "history_visits",
+        "last_mmse",
+        "last_mmse_missing",
+        "last_mmse_lag",
+        "sex",
+        "dx_cn",
+        "dx_mci",
+        "dx_dem",
+        "dx_missing"
+      ],
+      "knn_sensitivity": {
+        "10": {
+          "pearson": 0.06366972486549757,
+          "spearman": 0.04439953466173489
+        },
+        "20": {
+          "pearson": 0.00048684892167169747,
+          "spearman": -0.003251899136936722
+        },
+        "40": {
+          "pearson": -0.015100288449054741,
+          "spearman": 0.0234811876068886
+        }
+      },
+      "patient_bootstrap_95ci": {
+        "D": [
+          -0.12161528285196446,
+          0.12051121470883495
+        ],
+        "J": [
+          -0.5264422681541044,
+          -0.33564762888057725
+        ],
+        "adjusted_D": [
+          -0.139707615365008,
+          0.0979210159283932
+        ],
+        "adjusted_J": [
+          -0.23207785488252478,
+          0.004228548646394106
+        ]
+      },
+      "training_patient_D_quartile_cuts": [
+        0.03795389963003496,
+        0.04347331114113331,
+        0.04958229875192047
+      ]
+    },
+    "24": {
+      "test_patients": 237,
+      "test_origins": 698,
+      "mmse_mae_patient_weighted": 1.7138362300094678,
+      "mmse_mae_origin_weighted": 1.5437036627172398,
+      "persistence_mae_patient_weighted": 2.1563528549242323,
+      "sensitivity_error": {
+        "pearson": -0.02969292959435296,
+        "spearman": 0.06761992503502151
+      },
+      "jacobian_error": {
+        "pearson": -0.41634459007068625,
+        "spearman": -0.47279950383929586
+      },
+      "adjusted_sensitivity_error": 0.01760934339358809,
+      "adjusted_jacobian_error": -0.1413147715891016,
+      "covariates": [
+        "age",
+        "years",
+        "history_visits",
+        "last_mmse",
+        "last_mmse_missing",
+        "last_mmse_lag",
+        "sex",
+        "dx_cn",
+        "dx_mci",
+        "dx_dem",
+        "dx_missing"
+      ],
+      "knn_sensitivity": {
+        "10": {
+          "pearson": -0.02799688596032345,
+          "spearman": 0.07531925020598242
+        },
+        "20": {
+          "pearson": -0.02969292959435296,
+          "spearman": 0.06761992503502151
+        },
+        "40": {
+          "pearson": -0.03552898770463587,
+          "spearman": 0.08052875730854453
+        }
+      },
+      "patient_bootstrap_95ci": {
+        "D": [
+          -0.06171479139214616,
+          0.18480203822947167
+        ],
+        "J": [
+          -0.569023644951321,
+          -0.35847618416384136
+        ],
+        "adjusted_D": [
+          -0.10827031807871795,
+          0.15164349298185736
+        ],
+        "adjusted_J": [
+          -0.26745085293367415,
+          -0.008094917595926638
+        ]
+      },
+      "training_patient_D_quartile_cuts": [
+        0.03799194749444723,
+        0.04281947761774063,
+        0.0486458569765091
+      ]
+    }
+  },
+  "projection": {
+    "conditions": [
+      {
+        "name": "6D neighbors / 6D velocities",
+        "mean": 0.9703835844993591,
+        "p10": 0.9374259889125824
+      },
+      {
+        "name": "2D neighbors / 6D velocities",
+        "mean": 0.9197767376899719,
+        "p10": 0.8049009919166565
+      },
+      {
+        "name": "2D neighbors / projected velocities",
+        "mean": 0.8296113610267639,
+        "p10": 0.5283394575119019
+      },
+      {
+        "name": "Random distinct training patients / 6D velocities",
+        "mean": 0.8171146512031555,
+        "p10": 0.711489737033844
+      }
+    ],
+    "mean_neighbor_overlap": 0.18243131041526794
+  }
+}
