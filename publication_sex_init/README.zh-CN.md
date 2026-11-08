@@ -8,6 +8,13 @@
 
 截至 2026-11-08，89 项作业全部完成，failed=0。三项冻结诊断已经修复并补跑，主报告包含 60 张带解释的图和 34 张带说明的表。[核验记录](validation.json) 覆盖结果文件、CUDA 诊断、源码哈希、图表和本地链接。
 
+[PDF 阅读版](../reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.pdf) 保留全部图表、中文说明和公式，并提供章节书签。导出信息、文档哈希与各图所在页码见 [PDF 导出记录](../reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.pdf.json)。重新导出使用：
+
+~~~bash
+/home/xjh/miniforge3/envs/ode/bin/python -m pip install -r scripts/requirements-pdf-export.txt
+/home/xjh/miniforge3/envs/ode/bin/python scripts/export_publication_pdf.py
+~~~
+
 - [论文实验结果、表格与逐图解释](../reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md)
 - [失败诊断修复与数值核验](REPAIR.zh-CN.md)
 - [89 项作业及依赖](manifest.json)
