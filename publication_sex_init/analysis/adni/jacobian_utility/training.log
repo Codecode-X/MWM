@@ -14,3 +14,62 @@ Traceback (most recent call last):
   File "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5/mimic_experiment/jacobian_utility_adni.py", line 25, in <module>
     from component_ablation_model import make_model
 ModuleNotFoundError: No module named 'component_ablation_model'
+
+Publication dispatch 2026-11-08T06:15:17.258947+00:00 physical GPU 0
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v6/publication_sex_init/analysis.py", line 309, in <module>
+    main()
+  File "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v6/publication_sex_init/analysis.py", line 305, in main
+    run(cfg)
+  File "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v6/publication_sex_init/analysis_extra.py", line 471, in run
+    {"jacobian_utility":jacobian_utility,"clinical":mimic_clinical,"local":mimic_local,
+  File "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v6/publication_sex_init/analysis_extra.py", line 154, in jacobian_utility
+    noises={str(s):noise_forecast(model,payload,dataset,s,out,label) for s in [0.,.01,.05]}
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v6/publication_sex_init/analysis_extra.py", line 154, in <dictcomp>
+    noises={str(s):noise_forecast(model,payload,dataset,s,out,label) for s in [0.,.01,.05]}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v6/publication_sex_init/analysis_extra.py", line 64, in noise_forecast
+    pred=model(noisy,sample=False)["prediction"]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v6/publication_sex_init/models.py", line 123, in forward
+    state, priors, _ = self.encode(batch)
+                       ^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v6/publication_sex_init/models.py", line 91, in encode
+    state = self.initial_state(batch)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v6/publication_sex_init/models.py", line 81, in initial_state
+    return self.init(self.initialization_scalar(batch)[:, None])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xjh/miniforge3/envs/ode/lib/python3.11/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 must have the same dtype, but got Double and Float
+
+Publication dispatch 2026-11-08T06:16:00.627014+00:00 physical GPU 0

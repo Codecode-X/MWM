@@ -1,4 +1,4 @@
-# 当前论文清单的四 GPU 执行目录
+# 当前论文实验的四 GPU 执行目录
 
 本轮主模型采用性别 INIT、28 维共享状态、α=0.1 残差 UPDATE、无 weak prior、0.01 Jacobian 和 0.02 ODE L2。ADNI 为 44,875 参数，MIMIC 为 43,280 参数。CausalMed γ=1 的公开资料没有性别，适配版使用公开静态 c 初始化，参数为 31,314；仅观测更新使用残差门控，治疗条件位移保持原定义。
 
@@ -6,7 +6,10 @@
 
 ## 进度与结果
 
-- [论文清单及实时表格](../reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md)
+截至 2026-11-08，89 项作业全部完成，failed=0。三项冻结诊断已经修复并补跑，主报告包含 60 张带解释的图和 34 张带说明的表。[核验记录](validation.json) 覆盖结果文件、CUDA 诊断、源码哈希、图表和本地链接。
+
+- [论文实验结果、表格与逐图解释](../reproduction/NO_WEAK_PRIOR_PUBLICATION_RERUN.zh-CN.md)
+- [失败诊断修复与数值核验](REPAIR.zh-CN.md)
 - [89 项作业及依赖](manifest.json)
 - [GPU 队列](queue.json)
 - [进度摘要](progress_summary.json)
@@ -24,7 +27,7 @@
 
 [models.py](models.py) 包含性别 INIT、残差 UPDATE、顺序/反序、双场、无编码 ODE、注意力和目标函数；[train.py](train.py) 完成单卡训练与检查；[queue.py](queue.py) 管理 GPU 锁、任务依赖和恢复；[analysis.py](analysis.py)、[analysis_extra.py](analysis_extra.py)、[baseline_analysis.py](baseline_analysis.py) 执行冻结模型分析；[report.py](report.py) 只做统计、绘图、结果回填与检查点归档。
 
-第一批已经启动的四组使用冻结源码 v1。后续尚未启动的组使用 v5，补充启动前残差 Jacobian 恒等式检查、移除 Jacobian 的梯度核验、诊断和自动报告。源码文件及哈希都保存在各自 snapshot 中，运行中任务的冻结源码不变。
+第一批四组使用冻结源码 v1，后续实验使用 v5。2026-11-08 对三项失败诊断补跑：稳定性使用 v6，ADNI/MIMIC Jacobian 效用使用 v7。新版本将切线流计算独立封装，并修复观测噪声 dtype；全部分析读取原已训练权重。源码及哈希保存在各自 snapshot 中，原冻结版本保留。
 
 若某组在训练中出现数值不稳定，记录原始失败日志和实际停止轮次，再使用验证集已选出的有效最佳检查点进行 CUDA 测试。该组结果明确标注不稳定停止；测试阶段不更新参数。实现错误和预检失败单独记为 failed。
 

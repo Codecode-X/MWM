@@ -1,0 +1,74 @@
+{
+  "time_utc": "2026-11-08T06:15:16.271316+00:00",
+  "failure_cause": "legacy module import when using frozen package",
+  "jobs": [
+    {
+      "id": "adni_jacobian_utility",
+      "previous_state": {
+        "status": "failed",
+        "pid": 631411,
+        "physical_gpu": 3,
+        "started_at_utc": "2026-11-06T10:30:29.849081+00:00",
+        "finished_at_utc": "2026-11-06T10:30:39.852612+00:00",
+        "exit_code": 1
+      },
+      "previous_source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "log_sha256": "e7845d08a5949f694b289c271df7cc6ee185218db743393d49f69e13d21c40c9"
+    },
+    {
+      "id": "mimic_jacobian_utility",
+      "previous_state": {
+        "status": "failed",
+        "pid": 635558,
+        "physical_gpu": 3,
+        "started_at_utc": "2026-11-06T10:35:40.136597+00:00",
+        "finished_at_utc": "2026-11-06T10:35:50.140239+00:00",
+        "exit_code": 1
+      },
+      "previous_source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "log_sha256": "735641c2ae9210780b855da4c9e3e399d3679bc36216d17220f7eda6ed948c5d"
+    },
+    {
+      "id": "mimic_stability",
+      "previous_state": {
+        "status": "failed",
+        "pid": 704346,
+        "physical_gpu": 2,
+        "started_at_utc": "2026-11-07T06:00:10.097314+00:00",
+        "finished_at_utc": "2026-11-07T06:00:20.101237+00:00",
+        "exit_code": 1
+      },
+      "previous_source": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5",
+      "log_sha256": "ce98480defcfdbb5b903f64e137c5fffd125a721d2499dcf7567353a98fce470"
+    }
+  ],
+  "source_snapshot": "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v6",
+  "training_performed": false,
+  "second_fix": "Cast observation noise to the float32 model input dtype; retain float64 tangent-flow diagnostics.",
+  "second_attempt_previous_states": [
+    {
+      "id": "adni_jacobian_utility",
+      "state": {
+        "status": "failed",
+        "physical_gpu": 0,
+        "started_at_utc": "2026-11-08T06:15:17.259364+00:00",
+        "finished_at_utc": "2026-11-08T06:15:37.302716+00:00",
+        "exit_code": 1,
+        "repair_attempt": 1,
+        "pid": 755424
+      }
+    },
+    {
+      "id": "mimic_jacobian_utility",
+      "state": {
+        "status": "failed",
+        "physical_gpu": 1,
+        "started_at_utc": "2026-11-08T06:15:17.279039+00:00",
+        "finished_at_utc": "2026-11-08T06:15:57.307931+00:00",
+        "exit_code": -15,
+        "repair_attempt": 1,
+        "pid": 755426
+      }
+    }
+  ]
+}

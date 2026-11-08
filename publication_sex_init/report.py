@@ -110,6 +110,8 @@ def cf_figures(results,jobs):
 
 
 def generate():
+    from .presentation import stability_figure
+    stability_figure(OUT)
     manifest=read(OUT/"manifest.json");queue=read(OUT/"queue.json");jobs=manifest.get("jobs",[])
     byid={j["id"]:j for j in jobs}
     results={j["id"]:read(Path(j["output"])/"metrics.json") for j in jobs}
@@ -355,14 +357,23 @@ def generate():
         measurements=read(OUT/"analysis/mimic/stability/metrics.json",[])
         for row,family,ident in zip(rows[2:],["main","alpha1"],["mimic_main","mimic_alpha_1"]):
             chosen=[r for r in measurements if r["model"]==family or r["model"].startswith(family+"_")]
+            chosen=list({r['checkpoint_sha256']:r for r in chosen}.values())
             r=result(ident)
             if not chosen or not r:continue
             ratio=[r["history_gradient_norm"]/max(r["future_gradient_norm"],1e-30) for r in chosen]
             recursive=[x for r in chosen for x in r["recursive_state_gains"]]
             row[1:7]=[str(r["best_epoch"]),str(r["epochs_run"]),fmt(float(np.quantile(ratio,.95))),
                       fmt(float(np.median([r["gradient_cosine"] for r in chosen]))),
-                      fmt(float(np.quantile(recursive,.95))),str(int(r.get("nonfinite_events",0)))]
+                      fmt(float(np.quantile(recursive,.95))),str(int((Path(byid[ident]['output'])/'numerical_failure.json').exists()))]
     text=table_section(text,25,stability)
+    # Reuse each model's independently sourced test F in the main comparison.
+    # Native baselines are not all present as new-training job IDs.
+    main_forecasts={}
+    for dataset,number in [('adni',1),('mimic',3)]:
+        found=re.search(rf'表 {number}：[^\n]*\n\n(\|[^\n]*\n(?:\|[^\n]*\n)*)',text)
+        for line in found.group(1).strip().splitlines()[2:]:
+            cells=[x.strip() for x in line.split('|')[1:-1]]
+            main_forecasts[dataset,cells[0]]=cells[5]
     def costs(rows):
         mapping={"M0":"cost","确定性 ODE-AE（同预算）":"baseline_cost/deterministic",
                  "ODE-AE（概率，同预算）":"baseline_cost/ode_ae","ODE-RNN（同预算）":"baseline_cost/ode_rnn",
@@ -372,10 +383,8 @@ def generate():
             if m:
                 row[2:7]=[str(m["encoding_nfe"]),str(m["generation_nfe"]),f'{m["accepted"]} / {m["rejected"]}',
                           fmt(m["milliseconds_per_patient"]),fmt(m["peak_memory_gib"])]
-                ident=d+("_main" if row[1]=="M0" else "_deterministic_matched" if "确定性" in row[1] else
-                         "_ode_rnn_matched_150" if "ODE-RNN" in row[1] else "_latent_ode_matched_150")
-                r=result(ident)
-                if r:row[7]=fmt(r["test"]["forecast"]["reconstruction_error"])
+                name='M0（性别 INIT）' if row[1]=='M0' else 'HealthFlux-KL（KL=1）' if d=='adni' and row[1]=='HealthFlux-KL' else 'HealthFlux-KL（KL=0.01）' if row[1]=='HealthFlux-KL' else row[1]
+                row[7]=main_forecasts.get((d,name),'')
     text=table_section(text,26,costs)
     for job in jobs:
         archive(job)
@@ -401,12 +410,14 @@ def generate():
         if "inputs" in image.parts or "workspace" in image.parts:continue
         lines+=["",f'![{image.parent.name} / {image.stem}]({os.path.relpath(image,DOC.parent)})']
     lines+=["","[队列状态](../publication_sex_init/queue.json) · [完整实验配置](../publication_sex_init/manifest.json) · [旧作业中断记录](../publication_sex_init/preemption_record.json)",""]
-    temporary=DOC.with_suffix(".tmp.md");temporary.write_text(text+"\n".join(lines));temporary.replace(DOC)
+    from .captions import enrich
+    document=enrich(text+'\n'.join(lines),DOC,OUT)
+    temporary=DOC.with_suffix(".tmp.md");temporary.write_text(document);temporary.replace(DOC)
     atomic(OUT/"progress_summary.json",{"updated_at_utc":datetime.now(timezone.utc).isoformat(),
            "jobs":len(jobs),"status":queue.get("status"),"counts":{s:sum(q.get("status")==s for q in status.values())
                for s in ["queued","running","complete","failed"]}})
     planpath=ROOT/"reproduction/no_weak_prior_rerun_plan.json";plan=read(planpath)
-    plan.update(status="executing",execution_started=True,execution_manifest=str(OUT/"manifest.json"),
+    plan.update(status="complete" if queue.get('status')=='complete' else "executing",execution_started=True,execution_manifest=str(OUT/"manifest.json"),
                 execution_queue=str(OUT/"queue.json"))
     highlevel={"SETUP":[], "M-ADNI":["adni_main"],"M-MIMIC":["mimic_main"],"M-CF":["causalmed_main"],
         "B-ADNI":["adni_deterministic_matched","adni_latent_ode_matched_150"],

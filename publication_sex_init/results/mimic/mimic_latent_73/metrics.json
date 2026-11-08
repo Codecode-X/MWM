@@ -1,0 +1,4686 @@
+{
+  "status": "complete",
+  "best_epoch": 94,
+  "epochs_run": 134,
+  "validation": {
+    "interpolation": {
+      "reconstruction_error": 0.7669046025699304,
+      "sum_feature_mse": 0.17264541836816696,
+      "sum_feature_cce": 0.5942591842017635,
+      "observed_scalars": 815615,
+      "per_field": {
+        "heart_rate": {
+          "loss": 0.0058853099945142305,
+          "observations": 76766
+        },
+        "sbp": {
+          "loss": 0.004407185761466314,
+          "observations": 76202
+        },
+        "dbp": {
+          "loss": 0.002707869859237492,
+          "observations": 76191
+        },
+        "map": {
+          "loss": 0.00241890028238428,
+          "observations": 76166
+        },
+        "respiratory_rate": {
+          "loss": 0.005377250233463064,
+          "observations": 78804
+        },
+        "spo2": {
+          "loss": 0.0008022455136546361,
+          "observations": 76995
+        },
+        "temperature": {
+          "loss": 0.0036678841231305255,
+          "observations": 32430
+        },
+        "fio2": {
+          "loss": 0.04187968981631798,
+          "observations": 16882
+        },
+        "weight": {
+          "loss": 0.009178798936239076,
+          "observations": 5886
+        },
+        "glucose": {
+          "loss": 0.002059455706462367,
+          "observations": 15668
+        },
+        "urea_nitrogen": {
+          "loss": 0.006377474289639724,
+          "observations": 10426
+        },
+        "creatinine": {
+          "loss": 0.0019633248503574566,
+          "observations": 10460
+        },
+        "sodium": {
+          "loss": 0.004555289704969999,
+          "observations": 10644
+        },
+        "potassium": {
+          "loss": 0.006513846999015748,
+          "observations": 10852
+        },
+        "chloride": {
+          "loss": 0.006136473370389952,
+          "observations": 10798
+        },
+        "bicarbonate": {
+          "loss": 0.009187200033746032,
+          "observations": 10407
+        },
+        "calcium": {
+          "loss": 0.0017973333048981357,
+          "observations": 9004
+        },
+        "magnesium": {
+          "loss": 0.0008247448992679729,
+          "observations": 9581
+        },
+        "phosphate": {
+          "loss": 0.0032520042492558813,
+          "observations": 9088
+        },
+        "wbc": {
+          "loss": 0.0008467493426875013,
+          "observations": 10477
+        },
+        "hemoglobin": {
+          "loss": 0.012135084024810379,
+          "observations": 10639
+        },
+        "hematocrit": {
+          "loss": 0.010272302150905476,
+          "observations": 11977
+        },
+        "platelets": {
+          "loss": 0.0038098651838265737,
+          "observations": 10668
+        },
+        "lactate": {
+          "loss": 0.0060901660514071755,
+          "observations": 9776
+        },
+        "blood_gas_ph": {
+          "loss": 0.0035736389674483242,
+          "observations": 14088
+        },
+        "blood_gas_pco2": {
+          "loss": 0.0036579494245740983,
+          "observations": 13466
+        },
+        "blood_gas_po2": {
+          "loss": 0.013267381294096556,
+          "observations": 13475
+        },
+        "gcs_eye": {
+          "loss": 0.25504624504751716,
+          "observations": 31100
+        },
+        "gcs_motor": {
+          "loss": 0.211631045185568,
+          "observations": 30979
+        },
+        "gcs_verbal": {
+          "loss": 0.12757740216882715,
+          "observations": 31071
+        },
+        "sex": {
+          "loss": 4.491799851218472e-06,
+          "observations": 4649
+        }
+      }
+    },
+    "forecast": {
+      "reconstruction_error": 1.8637642954681246,
+      "sum_feature_mse": 0.1559921582959906,
+      "sum_feature_cce": 1.707772137172134,
+      "observed_scalars": 705397,
+      "per_field": {
+        "heart_rate": {
+          "loss": 0.005237816538173153,
+          "observations": 74961
+        },
+        "sbp": {
+          "loss": 0.004389305704406991,
+          "observations": 74021
+        },
+        "dbp": {
+          "loss": 0.002447759500679339,
+          "observations": 74016
+        },
+        "map": {
+          "loss": 0.0021645853128229343,
+          "observations": 73998
+        },
+        "respiratory_rate": {
+          "loss": 0.005753050127051908,
+          "observations": 76330
+        },
+        "spo2": {
+          "loss": 0.0008931312006873139,
+          "observations": 74996
+        },
+        "temperature": {
+          "loss": 0.0026886754941539857,
+          "observations": 29620
+        },
+        "fio2": {
+          "loss": 0.03553784368991034,
+          "observations": 11660
+        },
+        "weight": {
+          "loss": 0.010649519357277025,
+          "observations": 2525
+        },
+        "glucose": {
+          "loss": 0.0015788712637598817,
+          "observations": 9104
+        },
+        "urea_nitrogen": {
+          "loss": 0.006507146596412574,
+          "observations": 7691
+        },
+        "creatinine": {
+          "loss": 0.0016774222894359323,
+          "observations": 7726
+        },
+        "sodium": {
+          "loss": 0.004208694857037284,
+          "observations": 8376
+        },
+        "potassium": {
+          "loss": 0.004628618571682036,
+          "observations": 8319
+        },
+        "chloride": {
+          "loss": 0.005596294341935173,
+          "observations": 8089
+        },
+        "bicarbonate": {
+          "loss": 0.009444197415644909,
+          "observations": 7669
+        },
+        "calcium": {
+          "loss": 0.001305830734494798,
+          "observations": 7136
+        },
+        "magnesium": {
+          "loss": 0.0005180631481585441,
+          "observations": 7735
+        },
+        "phosphate": {
+          "loss": 0.003245412621654875,
+          "observations": 7205
+        },
+        "wbc": {
+          "loss": 0.0006034459618215884,
+          "observations": 6807
+        },
+        "hemoglobin": {
+          "loss": 0.011269071598976,
+          "observations": 6969
+        },
+        "hematocrit": {
+          "loss": 0.009645874922078709,
+          "observations": 7849
+        },
+        "platelets": {
+          "loss": 0.0036078850172816916,
+          "observations": 6932
+        },
+        "lactate": {
+          "loss": 0.005645010280768025,
+          "observations": 3845
+        },
+        "blood_gas_ph": {
+          "loss": 0.004824757094753048,
+          "observations": 6518
+        },
+        "blood_gas_pco2": {
+          "loss": 0.003895719084554458,
+          "observations": 5818
+        },
+        "blood_gas_po2": {
+          "loss": 0.00802815557037812,
+          "observations": 5825
+        },
+        "gcs_eye": {
+          "loss": 0.7012940777359159,
+          "observations": 27885
+        },
+        "gcs_motor": {
+          "loss": 0.49789826999942643,
+          "observations": 27863
+        },
+        "gcs_verbal": {
+          "loss": 0.5085797894367916,
+          "observations": 27909
+        }
+      }
+    },
+    "overall": {
+      "reconstruction_error": 1.287041152550938,
+      "sum_feature_mse": 0.16597743111679142,
+      "sum_feature_cce": 1.1210637214341466,
+      "observed_scalars": 1521012,
+      "per_field": {
+        "heart_rate": {
+          "loss": 0.005565414662718694,
+          "observations": 151727
+        },
+        "sbp": {
+          "loss": 0.004398375527592721,
+          "observations": 150223
+        },
+        "dbp": {
+          "loss": 0.0025796978867956267,
+          "observations": 150207
+        },
+        "map": {
+          "loss": 0.002293578633975406,
+          "observations": 150164
+        },
+        "respiratory_rate": {
+          "loss": 0.005562153635218422,
+          "observations": 155134
+        },
+        "spo2": {
+          "loss": 0.0008470906912443227,
+          "observations": 151991
+        },
+        "temperature": {
+          "loss": 0.003200452041952577,
+          "observations": 62050
+        },
+        "fio2": {
+          "loss": 0.03928891396098177,
+          "observations": 28542
+        },
+        "weight": {
+          "loss": 0.00962031228199199,
+          "observations": 8411
+        },
+        "glucose": {
+          "loss": 0.0018828352967398378,
+          "observations": 24772
+        },
+        "urea_nitrogen": {
+          "loss": 0.00643252260995739,
+          "observations": 18117
+        },
+        "creatinine": {
+          "loss": 0.0018418642283501987,
+          "observations": 18186
+        },
+        "sodium": {
+          "loss": 0.004402656746650219,
+          "observations": 19020
+        },
+        "potassium": {
+          "loss": 0.005695777234741484,
+          "observations": 19171
+        },
+        "chloride": {
+          "loss": 0.005905123304924996,
+          "observations": 18887
+        },
+        "bicarbonate": {
+          "loss": 0.00929623481168977,
+          "observations": 18076
+        },
+        "calcium": {
+          "loss": 0.0015800246164488895,
+          "observations": 16140
+        },
+        "magnesium": {
+          "loss": 0.0006877511815996452,
+          "observations": 17316
+        },
+        "phosphate": {
+          "loss": 0.0032490893575592475,
+          "observations": 16293
+        },
+        "wbc": {
+          "loss": 0.0007509285694230033,
+          "observations": 17284
+        },
+        "hemoglobin": {
+          "loss": 0.01179232848287712,
+          "observations": 17608
+        },
+        "hematocrit": {
+          "loss": 0.010024303168849075,
+          "observations": 19826
+        },
+        "platelets": {
+          "loss": 0.0037303125278346917,
+          "observations": 17600
+        },
+        "lactate": {
+          "loss": 0.005964505381236193,
+          "observations": 13621
+        },
+        "blood_gas_ph": {
+          "loss": 0.003969387189898863,
+          "observations": 20606
+        },
+        "blood_gas_pco2": {
+          "loss": 0.003729684749149517,
+          "observations": 19284
+        },
+        "blood_gas_po2": {
+          "loss": 0.011686112336389758,
+          "observations": 19300
+        },
+        "gcs_eye": {
+          "loss": 0.46600870680705947,
+          "observations": 58985
+        },
+        "gcs_motor": {
+          "loss": 0.3471849640619706,
+          "observations": 58842
+        },
+        "gcs_verbal": {
+          "loss": 0.3078655587652652,
+          "observations": 58980
+        },
+        "sex": {
+          "loss": 4.491799851218472e-06,
+          "observations": 4649
+        }
+      }
+    },
+    "prior": {
+      "reconstruction_error": 0.0,
+      "sum_feature_mse": 0.0,
+      "sum_feature_cce": 0.0,
+      "observed_scalars": 0,
+      "per_field": {}
+    },
+    "forecast_6h": {
+      "reconstruction_error": 1.5357598785839754,
+      "sum_feature_mse": 0.15292517405234626,
+      "sum_feature_cce": 1.3828347045316292,
+      "observed_scalars": 181386,
+      "per_field": {
+        "heart_rate": {
+          "loss": 0.00542962146310536,
+          "observations": 19055
+        },
+        "sbp": {
+          "loss": 0.004167122839051145,
+          "observations": 18889
+        },
+        "dbp": {
+          "loss": 0.002415681708243738,
+          "observations": 18887
+        },
+        "map": {
+          "loss": 0.0020988810196446318,
+          "observations": 18888
+        },
+        "respiratory_rate": {
+          "loss": 0.0054721699815527694,
+          "observations": 19491
+        },
+        "spo2": {
+          "loss": 0.0008237464430023999,
+          "observations": 19093
+        },
+        "temperature": {
+          "loss": 0.0030880362570819553,
+          "observations": 7454
+        },
+        "fio2": {
+          "loss": 0.03133211179532939,
+          "observations": 3150
+        },
+        "weight": {
+          "loss": 0.010743801195993476,
+          "observations": 462
+        },
+        "glucose": {
+          "loss": 0.0021147123361044944,
+          "observations": 2415
+        },
+        "urea_nitrogen": {
+          "loss": 0.0065797560133256236,
+          "observations": 1998
+        },
+        "creatinine": {
+          "loss": 0.0017920591889170336,
+          "observations": 2018
+        },
+        "sodium": {
+          "loss": 0.004283619123223738,
+          "observations": 2198
+        },
+        "potassium": {
+          "loss": 0.0053869929873387075,
+          "observations": 2204
+        },
+        "chloride": {
+          "loss": 0.00577189014404907,
+          "observations": 2127
+        },
+        "bicarbonate": {
+          "loss": 0.009003243189299431,
+          "observations": 1983
+        },
+        "calcium": {
+          "loss": 0.0012941447498725851,
+          "observations": 1819
+        },
+        "magnesium": {
+          "loss": 0.0004653044541524288,
+          "observations": 2035
+        },
+        "phosphate": {
+          "loss": 0.0032061312659140175,
+          "observations": 1850
+        },
+        "wbc": {
+          "loss": 0.0005505656993226871,
+          "observations": 1739
+        },
+        "hemoglobin": {
+          "loss": 0.011367937363878203,
+          "observations": 1800
+        },
+        "hematocrit": {
+          "loss": 0.00958237935779743,
+          "observations": 2129
+        },
+        "platelets": {
+          "loss": 0.0038945135770344667,
+          "observations": 1780
+        },
+        "lactate": {
+          "loss": 0.005981146243692253,
+          "observations": 1189
+        },
+        "blood_gas_ph": {
+          "loss": 0.004463883539053975,
+          "observations": 1897
+        },
+        "blood_gas_pco2": {
+          "loss": 0.003350024850477132,
+          "observations": 1698
+        },
+        "blood_gas_po2": {
+          "loss": 0.008265697265888123,
+          "observations": 1701
+        },
+        "gcs_eye": {
+          "loss": 0.6098427751172051,
+          "observations": 7147
+        },
+        "gcs_motor": {
+          "loss": 0.4037284013838435,
+          "observations": 7142
+        },
+        "gcs_verbal": {
+          "loss": 0.36926352803058043,
+          "observations": 7148
+        }
+      }
+    },
+    "forecast_12h": {
+      "reconstruction_error": 1.67735416681244,
+      "sum_feature_mse": 0.15418582281621157,
+      "sum_feature_cce": 1.5231683439962285,
+      "observed_scalars": 361944,
+      "per_field": {
+        "heart_rate": {
+          "loss": 0.00536090598648621,
+          "observations": 38016
+        },
+        "sbp": {
+          "loss": 0.00425860835573531,
+          "observations": 37672
+        },
+        "dbp": {
+          "loss": 0.002405100592088511,
+          "observations": 37671
+        },
+        "map": {
+          "loss": 0.002093476493898079,
+          "observations": 37672
+        },
+        "respiratory_rate": {
+          "loss": 0.005605020036821254,
+          "observations": 38804
+        },
+        "spo2": {
+          "loss": 0.000841489917680528,
+          "observations": 38066
+        },
+        "temperature": {
+          "loss": 0.002855358323738018,
+          "observations": 15019
+        },
+        "fio2": {
+          "loss": 0.03298063987855753,
+          "observations": 6154
+        },
+        "weight": {
+          "loss": 0.010763782752784574,
+          "observations": 1099
+        },
+        "glucose": {
+          "loss": 0.0018088920882655582,
+          "observations": 4791
+        },
+        "urea_nitrogen": {
+          "loss": 0.00670017944364138,
+          "observations": 4056
+        },
+        "creatinine": {
+          "loss": 0.0017186061824549952,
+          "observations": 4085
+        },
+        "sodium": {
+          "loss": 0.004262822279948004,
+          "observations": 4398
+        },
+        "potassium": {
+          "loss": 0.004958617427513007,
+          "observations": 4419
+        },
+        "chloride": {
+          "loss": 0.005771686845968924,
+          "observations": 4265
+        },
+        "bicarbonate": {
+          "loss": 0.009271046294240777,
+          "observations": 4016
+        },
+        "calcium": {
+          "loss": 0.0013249341083069641,
+          "observations": 3750
+        },
+        "magnesium": {
+          "loss": 0.0004596801062637757,
+          "observations": 4126
+        },
+        "phosphate": {
+          "loss": 0.0031798491131906446,
+          "observations": 3800
+        },
+        "wbc": {
+          "loss": 0.0005624048967926486,
+          "observations": 3587
+        },
+        "hemoglobin": {
+          "loss": 0.011526685549272287,
+          "observations": 3685
+        },
+        "hematocrit": {
+          "loss": 0.009819032348840302,
+          "observations": 4232
+        },
+        "platelets": {
+          "loss": 0.0038339178262816443,
+          "observations": 3656
+        },
+        "lactate": {
+          "loss": 0.005800605578833929,
+          "observations": 2164
+        },
+        "blood_gas_ph": {
+          "loss": 0.004612707528300271,
+          "observations": 3511
+        },
+        "blood_gas_pco2": {
+          "loss": 0.003452776316777073,
+          "observations": 3143
+        },
+        "blood_gas_po2": {
+          "loss": 0.007956996543529375,
+          "observations": 3148
+        },
+        "gcs_eye": {
+          "loss": 0.6546802653364062,
+          "observations": 14311
+        },
+        "gcs_motor": {
+          "loss": 0.44235421214070353,
+          "observations": 14300
+        },
+        "gcs_verbal": {
+          "loss": 0.4261338665191186,
+          "observations": 14328
+        }
+      }
+    },
+    "forecast_24h": {
+      "reconstruction_error": 1.8637642954681246,
+      "sum_feature_mse": 0.1559921582959906,
+      "sum_feature_cce": 1.707772137172134,
+      "observed_scalars": 705397,
+      "per_field": {
+        "heart_rate": {
+          "loss": 0.005237816538173153,
+          "observations": 74961
+        },
+        "sbp": {
+          "loss": 0.004389305704406991,
+          "observations": 74021
+        },
+        "dbp": {
+          "loss": 0.002447759500679339,
+          "observations": 74016
+        },
+        "map": {
+          "loss": 0.0021645853128229343,
+          "observations": 73998
+        },
+        "respiratory_rate": {
+          "loss": 0.005753050127051908,
+          "observations": 76330
+        },
+        "spo2": {
+          "loss": 0.0008931312006873139,
+          "observations": 74996
+        },
+        "temperature": {
+          "loss": 0.0026886754941539857,
+          "observations": 29620
+        },
+        "fio2": {
+          "loss": 0.03553784368991034,
+          "observations": 11660
+        },
+        "weight": {
+          "loss": 0.010649519357277025,
+          "observations": 2525
+        },
+        "glucose": {
+          "loss": 0.0015788712637598817,
+          "observations": 9104
+        },
+        "urea_nitrogen": {
+          "loss": 0.006507146596412574,
+          "observations": 7691
+        },
+        "creatinine": {
+          "loss": 0.0016774222894359323,
+          "observations": 7726
+        },
+        "sodium": {
+          "loss": 0.004208694857037284,
+          "observations": 8376
+        },
+        "potassium": {
+          "loss": 0.004628618571682036,
+          "observations": 8319
+        },
+        "chloride": {
+          "loss": 0.005596294341935173,
+          "observations": 8089
+        },
+        "bicarbonate": {
+          "loss": 0.009444197415644909,
+          "observations": 7669
+        },
+        "calcium": {
+          "loss": 0.001305830734494798,
+          "observations": 7136
+        },
+        "magnesium": {
+          "loss": 0.0005180631481585441,
+          "observations": 7735
+        },
+        "phosphate": {
+          "loss": 0.003245412621654875,
+          "observations": 7205
+        },
+        "wbc": {
+          "loss": 0.0006034459618215884,
+          "observations": 6807
+        },
+        "hemoglobin": {
+          "loss": 0.011269071598976,
+          "observations": 6969
+        },
+        "hematocrit": {
+          "loss": 0.009645874922078709,
+          "observations": 7849
+        },
+        "platelets": {
+          "loss": 0.0036078850172816916,
+          "observations": 6932
+        },
+        "lactate": {
+          "loss": 0.005645010280768025,
+          "observations": 3845
+        },
+        "blood_gas_ph": {
+          "loss": 0.004824757094753048,
+          "observations": 6518
+        },
+        "blood_gas_pco2": {
+          "loss": 0.003895719084554458,
+          "observations": 5818
+        },
+        "blood_gas_po2": {
+          "loss": 0.00802815557037812,
+          "observations": 5825
+        },
+        "gcs_eye": {
+          "loss": 0.7012940777359159,
+          "observations": 27885
+        },
+        "gcs_motor": {
+          "loss": 0.49789826999942643,
+          "observations": 27863
+        },
+        "gcs_verbal": {
+          "loss": 0.5085797894367916,
+          "observations": 27909
+        }
+      }
+    },
+    "patients": 4649,
+    "context_hours": 24,
+    "clinical_forecast": {
+      "heart_rate": {
+        "unit": "bpm",
+        "observations": 74961,
+        "mae": 14.966985123956555,
+        "rmse": 18.961663388172408,
+        "standardized_rmse": 1.0354920338115874
+      },
+      "sbp": {
+        "unit": "mmHg",
+        "observations": 74021,
+        "mae": 15.705462524897053,
+        "rmse": 20.07430615029823,
+        "standardized_rmse": 0.9807164370155561
+      },
+      "dbp": {
+        "unit": "mmHg",
+        "observations": 74016,
+        "mae": 10.734875870585904,
+        "rmse": 13.65505502455956,
+        "standardized_rmse": 0.9625231629122907
+      },
+      "map": {
+        "unit": "mmHg",
+        "observations": 73998,
+        "mae": 10.570944529938863,
+        "rmse": 13.77143081775798,
+        "standardized_rmse": 0.9387704760629987
+      },
+      "respiratory_rate": {
+        "unit": "breaths/min",
+        "observations": 76330,
+        "mae": 4.066370918184468,
+        "rmse": 5.2335715964238165,
+        "standardized_rmse": 0.9722581985144345
+      },
+      "spo2": {
+        "unit": "%",
+        "observations": 74996,
+        "mae": 2.1547361355767873,
+        "rmse": 2.958644773867989,
+        "standardized_rmse": 1.057678155733115
+      },
+      "temperature": {
+        "unit": "degC",
+        "observations": 29620,
+        "mae": 0.4692346999034002,
+        "rmse": 0.6435463279209145,
+        "standardized_rmse": 0.9505794789180667
+      },
+      "fio2": {
+        "unit": "fraction",
+        "observations": 11660,
+        "mae": 0.10528306269784589,
+        "rmse": 0.14892672229999482,
+        "standardized_rmse": 0.7796963010378483
+      },
+      "weight": {
+        "unit": "kg",
+        "observations": 2525,
+        "mae": 21.325295127361418,
+        "rmse": 27.687621958719877,
+        "standardized_rmse": 1.1583454127396546
+      },
+      "glucose": {
+        "unit": "mg/dL",
+        "observations": 9104,
+        "mae": 43.749668563459686,
+        "rmse": 65.08118320898735,
+        "standardized_rmse": 1.0131589198780564
+      },
+      "urea_nitrogen": {
+        "unit": "mg/dL",
+        "observations": 7691,
+        "mae": 15.55918035927558,
+        "rmse": 20.650722973845117,
+        "standardized_rmse": 0.9020329071284199
+      },
+      "creatinine": {
+        "unit": "mg/dL",
+        "observations": 7726,
+        "mae": 0.8645080573106113,
+        "rmse": 1.3556550885399705,
+        "standardized_rmse": 0.8726685848298497
+      },
+      "sodium": {
+        "unit": "mEq/L",
+        "observations": 8376,
+        "mae": 4.87713582398514,
+        "rmse": 6.422571003408403,
+        "standardized_rmse": 1.0762217714992746
+      },
+      "potassium": {
+        "unit": "mEq/L",
+        "observations": 8319,
+        "mae": 0.4603293551372853,
+        "rmse": 0.6055021677076123,
+        "standardized_rmse": 0.8814592719129469
+      },
+      "chloride": {
+        "unit": "mEq/L",
+        "observations": 8089,
+        "mae": 5.393520440339364,
+        "rmse": 7.106796496028639,
+        "standardized_rmse": 1.0213681614818095
+      },
+      "bicarbonate": {
+        "unit": "mEq/L",
+        "observations": 7669,
+        "mae": 3.5813463777867174,
+        "rmse": 4.664700509748281,
+        "standardized_rmse": 0.9938775713131308
+      },
+      "calcium": {
+        "unit": "mg/dL",
+        "observations": 7136,
+        "mae": 0.606838904007882,
+        "rmse": 0.8130662727018934,
+        "standardized_rmse": 0.975955777560487
+      },
+      "magnesium": {
+        "unit": "mg/dL",
+        "observations": 7735,
+        "mae": 0.2971129741657311,
+        "rmse": 0.43245902863288177,
+        "standardized_rmse": 0.969615827273657
+      },
+      "phosphate": {
+        "unit": "mg/dL",
+        "observations": 7205,
+        "mae": 1.1202200529867423,
+        "rmse": 1.4583942341678626,
+        "standardized_rmse": 0.9555619985382906
+      },
+      "wbc": {
+        "unit": "K/uL",
+        "observations": 6807,
+        "mae": 6.763714774638464,
+        "rmse": 9.781837302067695,
+        "standardized_rmse": 0.9559516151611325
+      },
+      "hemoglobin": {
+        "unit": "g/dL",
+        "observations": 6969,
+        "mae": 1.6509942875125048,
+        "rmse": 2.0488085462436,
+        "standardized_rmse": 0.9685590929859628
+      },
+      "hematocrit": {
+        "unit": "%",
+        "observations": 7849,
+        "mae": 4.85337888706696,
+        "rmse": 6.020482041681151,
+        "standardized_rmse": 0.9765463445036464
+      },
+      "platelets": {
+        "unit": "K/uL",
+        "observations": 6932,
+        "mae": 75.64778172326652,
+        "rmse": 106.7967657701877,
+        "standardized_rmse": 1.0412534931676538
+      },
+      "lactate": {
+        "unit": "mmol/L",
+        "observations": 3845,
+        "mae": 1.5560402174420596,
+        "rmse": 2.1751085555884018,
+        "standardized_rmse": 0.9602226755740567
+      },
+      "blood_gas_ph": {
+        "unit": "pH",
+        "observations": 6518,
+        "mae": 0.07967076181313877,
+        "rmse": 0.09932849537832605,
+        "standardized_rmse": 1.1627793428930029
+      },
+      "blood_gas_pco2": {
+        "unit": "mmHg",
+        "observations": 5818,
+        "mae": 7.672898247653612,
+        "rmse": 10.735499680846676,
+        "standardized_rmse": 1.0050457321834483
+      },
+      "blood_gas_po2": {
+        "unit": "mmHg",
+        "observations": 5825,
+        "mae": 51.17487009118044,
+        "rmse": 69.61918079343373,
+        "standardized_rmse": 0.7530688351120001
+      },
+      "gcs_eye": {
+        "observations": 27885,
+        "accuracy": 0.731289223596916
+      },
+      "gcs_motor": {
+        "observations": 27863,
+        "accuracy": 0.83113806840613
+      },
+      "gcs_verbal": {
+        "observations": 27909,
+        "accuracy": 0.8337095560571859
+      }
+    },
+    "carry_forward": {
+      "heart_rate": {
+        "unit": "bpm",
+        "mae": 9.741284255260346,
+        "rmse": 13.612637588796717,
+        "standardized_rmse": 0.7433829772105124
+      },
+      "sbp": {
+        "unit": "mmHg",
+        "mae": 13.990749156841774,
+        "rmse": 18.479423370657592,
+        "standardized_rmse": 0.9027995344139986
+      },
+      "dbp": {
+        "unit": "mmHg",
+        "mae": 9.135383710555066,
+        "rmse": 12.623885703531815,
+        "standardized_rmse": 0.8898376735760251
+      },
+      "map": {
+        "unit": "mmHg",
+        "mae": 10.01703367772246,
+        "rmse": 13.860468723431618,
+        "standardized_rmse": 0.9448400093019931
+      },
+      "respiratory_rate": {
+        "unit": "breaths/min",
+        "mae": 3.830231054141858,
+        "rmse": 5.2612653842346955,
+        "standardized_rmse": 0.9774029666237396
+      },
+      "spo2": {
+        "unit": "%",
+        "mae": 1.9782343441228547,
+        "rmse": 3.1168424207574805,
+        "standardized_rmse": 1.114231817355915
+      },
+      "temperature": {
+        "unit": "degC",
+        "mae": 0.438553464965731,
+        "rmse": 0.6399173099308765,
+        "standardized_rmse": 0.945219072246026
+      },
+      "fio2": {
+        "unit": "fraction",
+        "mae": 0.07621818033133522,
+        "rmse": 0.1469229966788364,
+        "standardized_rmse": 0.7692059240861222
+      },
+      "weight": {
+        "unit": "kg",
+        "mae": 4.564858995874378,
+        "rmse": 9.2228532373179,
+        "standardized_rmse": 0.38584930680381896
+      },
+      "glucose": {
+        "unit": "mg/dL",
+        "mae": 35.44160387842397,
+        "rmse": 59.892261319626094,
+        "standardized_rmse": 0.9323797723958259
+      },
+      "urea_nitrogen": {
+        "unit": "mg/dL",
+        "mae": 4.941100242931191,
+        "rmse": 8.077740850859929,
+        "standardized_rmse": 0.35283936896348134
+      },
+      "creatinine": {
+        "unit": "mg/dL",
+        "mae": 0.26835381960317756,
+        "rmse": 0.5292718237165868,
+        "standardized_rmse": 0.34070531457268177
+      },
+      "sodium": {
+        "unit": "mEq/L",
+        "mae": 2.574759961765014,
+        "rmse": 3.6122850650685794,
+        "standardized_rmse": 0.6053058549022428
+      },
+      "potassium": {
+        "unit": "mEq/L",
+        "mae": 0.44938093147445224,
+        "rmse": 0.6225397446297647,
+        "standardized_rmse": 0.9062617102028346
+      },
+      "chloride": {
+        "unit": "mEq/L",
+        "mae": 2.959265682156883,
+        "rmse": 4.0471250241823435,
+        "standardized_rmse": 0.5816410597300838
+      },
+      "bicarbonate": {
+        "unit": "mEq/L",
+        "mae": 2.2106994319761073,
+        "rmse": 2.9460598963625415,
+        "standardized_rmse": 0.627697930150251
+      },
+      "calcium": {
+        "unit": "mg/dL",
+        "mae": 0.40304988170131445,
+        "rmse": 0.5861215145206994,
+        "standardized_rmse": 0.7035449601765869
+      },
+      "magnesium": {
+        "unit": "mg/dL",
+        "mae": 0.2774986122326617,
+        "rmse": 0.4457226634837329,
+        "standardized_rmse": 0.9993542057721233
+      },
+      "phosphate": {
+        "unit": "mg/dL",
+        "mae": 0.8208338982828828,
+        "rmse": 1.1666981878156957,
+        "standardized_rmse": 0.7644383294454574
+      },
+      "wbc": {
+        "unit": "K/uL",
+        "mae": 2.717298743445043,
+        "rmse": 4.21223502962946,
+        "standardized_rmse": 0.41164995446831004
+      },
+      "hemoglobin": {
+        "unit": "g/dL",
+        "mae": 0.8980578919361031,
+        "rmse": 1.1998210228259862,
+        "standardized_rmse": 0.5672065180245768
+      },
+      "hematocrit": {
+        "unit": "%",
+        "mae": 2.639941284824485,
+        "rmse": 3.5287391681053757,
+        "standardized_rmse": 0.5723756522256634
+      },
+      "platelets": {
+        "unit": "K/uL",
+        "mae": 27.740255675105022,
+        "rmse": 41.09719326359756,
+        "standardized_rmse": 0.40069187242234516
+      },
+      "lactate": {
+        "unit": "mmol/L",
+        "mae": 0.953068282347646,
+        "rmse": 1.5617189611379065,
+        "standardized_rmse": 0.689435915971059
+      },
+      "blood_gas_ph": {
+        "unit": "pH",
+        "mae": 0.05363925952253796,
+        "rmse": 0.07353010011891882,
+        "standardized_rmse": 0.8607729450997954
+      },
+      "blood_gas_pco2": {
+        "unit": "mmHg",
+        "mae": 5.9122069494836555,
+        "rmse": 8.603288972867663,
+        "standardized_rmse": 0.8054304989965431
+      },
+      "blood_gas_po2": {
+        "unit": "mmHg",
+        "mae": 40.014674735161364,
+        "rmse": 65.00764566914819,
+        "standardized_rmse": 0.703185981787025
+      },
+      "gcs_eye": {
+        "accuracy": 0.7073695535233997
+      },
+      "gcs_motor": {
+        "accuracy": 0.8213042385959876
+      },
+      "gcs_verbal": {
+        "accuracy": 0.8296965136694257
+      }
+    },
+    "mean_standardized_numeric_mse": 0.9582897166232394,
+    "carry_forward_mean_standardized_numeric_mse": 0.5677698780844002,
+    "dynamics": {
+      "jacobian_frobenius_squared": 0.01594980222336878,
+      "states": 179406
+    }
+  },
+  "test": {
+    "interpolation": {
+      "reconstruction_error": 0.7457760354871092,
+      "sum_feature_mse": 0.1707400802574694,
+      "sum_feature_cce": 0.5750359552296398,
+      "observed_scalars": 790181,
+      "per_field": {
+        "heart_rate": {
+          "loss": 0.005760066553332864,
+          "observations": 74090
+        },
+        "sbp": {
+          "loss": 0.00456838180972392,
+          "observations": 73573
+        },
+        "dbp": {
+          "loss": 0.002746138018376157,
+          "observations": 73560
+        },
+        "map": {
+          "loss": 0.0024468650178843723,
+          "observations": 73582
+        },
+        "respiratory_rate": {
+          "loss": 0.005189988193432188,
+          "observations": 76031
+        },
+        "spo2": {
+          "loss": 0.0008119186850473723,
+          "observations": 74344
+        },
+        "temperature": {
+          "loss": 0.0034121065905885536,
+          "observations": 31413
+        },
+        "fio2": {
+          "loss": 0.04074852076514918,
+          "observations": 16448
+        },
+        "weight": {
+          "loss": 0.008803058977322687,
+          "observations": 5631
+        },
+        "glucose": {
+          "loss": 0.002003506586492733,
+          "observations": 15009
+        },
+        "urea_nitrogen": {
+          "loss": 0.006073123747255744,
+          "observations": 10250
+        },
+        "creatinine": {
+          "loss": 0.002037201235288254,
+          "observations": 10280
+        },
+        "sodium": {
+          "loss": 0.004664203799944772,
+          "observations": 10531
+        },
+        "potassium": {
+          "loss": 0.006615543103356981,
+          "observations": 10642
+        },
+        "chloride": {
+          "loss": 0.006139770164227757,
+          "observations": 10611
+        },
+        "bicarbonate": {
+          "loss": 0.009659047497552819,
+          "observations": 10240
+        },
+        "calcium": {
+          "loss": 0.0018335338178574873,
+          "observations": 8955
+        },
+        "magnesium": {
+          "loss": 0.0008677616689842725,
+          "observations": 9463
+        },
+        "phosphate": {
+          "loss": 0.0033752636550620327,
+          "observations": 9013
+        },
+        "wbc": {
+          "loss": 0.001304160261473517,
+          "observations": 10121
+        },
+        "hemoglobin": {
+          "loss": 0.012075252109489046,
+          "observations": 10244
+        },
+        "hematocrit": {
+          "loss": 0.010165998613659058,
+          "observations": 11627
+        },
+        "platelets": {
+          "loss": 0.0038611069191326858,
+          "observations": 10292
+        },
+        "lactate": {
+          "loss": 0.006198081422691917,
+          "observations": 9397
+        },
+        "blood_gas_ph": {
+          "loss": 0.003535965247001172,
+          "observations": 13349
+        },
+        "blood_gas_pco2": {
+          "loss": 0.003963325093662705,
+          "observations": 12732
+        },
+        "blood_gas_po2": {
+          "loss": 0.011880190703479176,
+          "observations": 12738
+        },
+        "gcs_eye": {
+          "loss": 0.25381150868034924,
+          "observations": 30570
+        },
+        "gcs_motor": {
+          "loss": 0.20260291527619842,
+          "observations": 30410
+        },
+        "gcs_verbal": {
+          "loss": 0.11861768074201996,
+          "observations": 30499
+        },
+        "sex": {
+          "loss": 3.850531072156494e-06,
+          "observations": 4536
+        }
+      }
+    },
+    "forecast": {
+      "reconstruction_error": 1.8537527143187558,
+      "sum_feature_mse": 0.16296402532771698,
+      "sum_feature_cce": 1.6907886889910388,
+      "observed_scalars": 687074,
+      "per_field": {
+        "heart_rate": {
+          "loss": 0.005256821766996672,
+          "observations": 72607
+        },
+        "sbp": {
+          "loss": 0.004675539231836489,
+          "observations": 71641
+        },
+        "dbp": {
+          "loss": 0.0025247130977472942,
+          "observations": 71637
+        },
+        "map": {
+          "loss": 0.0022978773642226315,
+          "observations": 71599
+        },
+        "respiratory_rate": {
+          "loss": 0.005703347404297739,
+          "observations": 73890
+        },
+        "spo2": {
+          "loss": 0.0008899887369619704,
+          "observations": 72639
+        },
+        "temperature": {
+          "loss": 0.0025073525072023648,
+          "observations": 28869
+        },
+        "fio2": {
+          "loss": 0.03936916142577198,
+          "observations": 11930
+        },
+        "weight": {
+          "loss": 0.01167449985715476,
+          "observations": 2475
+        },
+        "glucose": {
+          "loss": 0.0015256045529685668,
+          "observations": 8866
+        },
+        "urea_nitrogen": {
+          "loss": 0.006357898801720828,
+          "observations": 7467
+        },
+        "creatinine": {
+          "loss": 0.0017811601240084196,
+          "observations": 7509
+        },
+        "sodium": {
+          "loss": 0.004003027370864791,
+          "observations": 8064
+        },
+        "potassium": {
+          "loss": 0.00502023670928977,
+          "observations": 8073
+        },
+        "chloride": {
+          "loss": 0.005201043740183039,
+          "observations": 7780
+        },
+        "bicarbonate": {
+          "loss": 0.009966978271452757,
+          "observations": 7390
+        },
+        "calcium": {
+          "loss": 0.0014112924650205865,
+          "observations": 6914
+        },
+        "magnesium": {
+          "loss": 0.0004642707926351758,
+          "observations": 7511
+        },
+        "phosphate": {
+          "loss": 0.003224638897902159,
+          "observations": 6988
+        },
+        "wbc": {
+          "loss": 0.000902284092168683,
+          "observations": 6675
+        },
+        "hemoglobin": {
+          "loss": 0.011731856162672829,
+          "observations": 6803
+        },
+        "hematocrit": {
+          "loss": 0.01002240160664275,
+          "observations": 7779
+        },
+        "platelets": {
+          "loss": 0.0033559514501996135,
+          "observations": 6785
+        },
+        "lactate": {
+          "loss": 0.006933194560161918,
+          "observations": 3877
+        },
+        "blood_gas_ph": {
+          "loss": 0.004854961269987142,
+          "observations": 6587
+        },
+        "blood_gas_pco2": {
+          "loss": 0.0037683997919389614,
+          "observations": 5895
+        },
+        "blood_gas_po2": {
+          "loss": 0.007539523275707067,
+          "observations": 5899
+        },
+        "gcs_eye": {
+          "loss": 0.7023490932223959,
+          "observations": 27678
+        },
+        "gcs_motor": {
+          "loss": 0.48661798863397815,
+          "observations": 27596
+        },
+        "gcs_verbal": {
+          "loss": 0.5018216071346647,
+          "observations": 27651
+        }
+      }
+    },
+    "overall": {
+      "reconstruction_error": 1.27284566233252,
+      "sum_feature_mse": 0.16733945990261104,
+      "sum_feature_cce": 1.105506202429909,
+      "observed_scalars": 1477255,
+      "per_field": {
+        "heart_rate": {
+          "loss": 0.005510987883250516,
+          "observations": 146697
+        },
+        "sbp": {
+          "loss": 0.004621247703628113,
+          "observations": 145214
+        },
+        "dbp": {
+          "loss": 0.0026368918358588745,
+          "observations": 145197
+        },
+        "map": {
+          "loss": 0.0023733886785890362,
+          "observations": 145181
+        },
+        "respiratory_rate": {
+          "loss": 0.005443002199913708,
+          "observations": 149921
+        },
+        "spo2": {
+          "loss": 0.0008505009101106647,
+          "observations": 146983
+        },
+        "temperature": {
+          "loss": 0.0029788205795552914,
+          "observations": 60282
+        },
+        "fio2": {
+          "loss": 0.04016864367826552,
+          "observations": 28378
+        },
+        "weight": {
+          "loss": 0.009679794212255894,
+          "observations": 8106
+        },
+        "glucose": {
+          "loss": 0.001826037287400031,
+          "observations": 23875
+        },
+        "urea_nitrogen": {
+          "loss": 0.006193144937976459,
+          "observations": 17717
+        },
+        "creatinine": {
+          "loss": 0.0019291224825847303,
+          "observations": 17789
+        },
+        "sodium": {
+          "loss": 0.0043774747670610355,
+          "observations": 18595
+        },
+        "potassium": {
+          "loss": 0.005927383440272744,
+          "observations": 18715
+        },
+        "chloride": {
+          "loss": 0.005742657916897578,
+          "observations": 18391
+        },
+        "bicarbonate": {
+          "loss": 0.009788123528793734,
+          "observations": 17630
+        },
+        "calcium": {
+          "loss": 0.0016495665464083334,
+          "observations": 15869
+        },
+        "magnesium": {
+          "loss": 0.0006892168439009087,
+          "observations": 16974
+        },
+        "phosphate": {
+          "loss": 0.0033094824374590016,
+          "observations": 16001
+        },
+        "wbc": {
+          "loss": 0.0011444482410064437,
+          "observations": 16796
+        },
+        "hemoglobin": {
+          "loss": 0.01193821210451977,
+          "observations": 17047
+        },
+        "hematocrit": {
+          "loss": 0.010108437009426806,
+          "observations": 19406
+        },
+        "platelets": {
+          "loss": 0.0036603995507394653,
+          "observations": 17077
+        },
+        "lactate": {
+          "loss": 0.0064127893552365966,
+          "observations": 13274
+        },
+        "blood_gas_ph": {
+          "loss": 0.003971771152471798,
+          "observations": 19936
+        },
+        "blood_gas_pco2": {
+          "loss": 0.003901635900275005,
+          "observations": 18627
+        },
+        "blood_gas_po2": {
+          "loss": 0.010506278718752994,
+          "observations": 18637
+        },
+        "gcs_eye": {
+          "loss": 0.46694540535416384,
+          "observations": 58248
+        },
+        "gcs_motor": {
+          "loss": 0.3377213515080539,
+          "observations": 58006
+        },
+        "gcs_verbal": {
+          "loss": 0.300835595036619,
+          "observations": 58150
+        },
+        "sex": {
+          "loss": 3.850531072156494e-06,
+          "observations": 4536
+        }
+      }
+    },
+    "prior": {
+      "reconstruction_error": 0.0,
+      "sum_feature_mse": 0.0,
+      "sum_feature_cce": 0.0,
+      "observed_scalars": 0,
+      "per_field": {}
+    },
+    "forecast_6h": {
+      "reconstruction_error": 1.5236574019914992,
+      "sum_feature_mse": 0.16588717148262744,
+      "sum_feature_cce": 1.357770230508872,
+      "observed_scalars": 176803,
+      "per_field": {
+        "heart_rate": {
+          "loss": 0.005481913763603033,
+          "observations": 18386
+        },
+        "sbp": {
+          "loss": 0.004425286836963061,
+          "observations": 18220
+        },
+        "dbp": {
+          "loss": 0.0024825297890997806,
+          "observations": 18221
+        },
+        "map": {
+          "loss": 0.0022566925587674527,
+          "observations": 18219
+        },
+        "respiratory_rate": {
+          "loss": 0.005438341330242121,
+          "observations": 18711
+        },
+        "spo2": {
+          "loss": 0.0008153155743300346,
+          "observations": 18448
+        },
+        "temperature": {
+          "loss": 0.0027380235753805405,
+          "observations": 7297
+        },
+        "fio2": {
+          "loss": 0.03525455424059665,
+          "observations": 3166
+        },
+        "weight": {
+          "loss": 0.014531980025144272,
+          "observations": 505
+        },
+        "glucose": {
+          "loss": 0.0015811376037540609,
+          "observations": 2392
+        },
+        "urea_nitrogen": {
+          "loss": 0.006549621664511798,
+          "observations": 1990
+        },
+        "creatinine": {
+          "loss": 0.0025324239014308855,
+          "observations": 1997
+        },
+        "sodium": {
+          "loss": 0.004288411115466906,
+          "observations": 2133
+        },
+        "potassium": {
+          "loss": 0.006090403004803753,
+          "observations": 2168
+        },
+        "chloride": {
+          "loss": 0.005640534111912283,
+          "observations": 2064
+        },
+        "bicarbonate": {
+          "loss": 0.010104163246741639,
+          "observations": 1945
+        },
+        "calcium": {
+          "loss": 0.0014830552464060761,
+          "observations": 1803
+        },
+        "magnesium": {
+          "loss": 0.0005766579562827694,
+          "observations": 2017
+        },
+        "phosphate": {
+          "loss": 0.003618509305448717,
+          "observations": 1840
+        },
+        "wbc": {
+          "loss": 0.0010286315033107543,
+          "observations": 1738
+        },
+        "hemoglobin": {
+          "loss": 0.0122460261027684,
+          "observations": 1798
+        },
+        "hematocrit": {
+          "loss": 0.010286053754249761,
+          "observations": 2136
+        },
+        "platelets": {
+          "loss": 0.00356050717461054,
+          "observations": 1783
+        },
+        "lactate": {
+          "loss": 0.006446761895844698,
+          "observations": 1161
+        },
+        "blood_gas_ph": {
+          "loss": 0.004558457188713672,
+          "observations": 1902
+        },
+        "blood_gas_pco2": {
+          "loss": 0.0038712578288351116,
+          "observations": 1716
+        },
+        "blood_gas_po2": {
+          "loss": 0.00799992118340866,
+          "observations": 1718
+        },
+        "gcs_eye": {
+          "loss": 0.6149699334534129,
+          "observations": 7117
+        },
+        "gcs_motor": {
+          "loss": 0.4034582613621379,
+          "observations": 7093
+        },
+        "gcs_verbal": {
+          "loss": 0.3393420356933212,
+          "observations": 7119
+        }
+      }
+    },
+    "forecast_12h": {
+      "reconstruction_error": 1.6590486167970482,
+      "sum_feature_mse": 0.163002701357416,
+      "sum_feature_cce": 1.4960459154396322,
+      "observed_scalars": 352427,
+      "per_field": {
+        "heart_rate": {
+          "loss": 0.005439221176500945,
+          "observations": 36681
+        },
+        "sbp": {
+          "loss": 0.004565032121004304,
+          "observations": 36288
+        },
+        "dbp": {
+          "loss": 0.0025294111442133575,
+          "observations": 36286
+        },
+        "map": {
+          "loss": 0.0023047715838076916,
+          "observations": 36261
+        },
+        "respiratory_rate": {
+          "loss": 0.005547752082666782,
+          "observations": 37380
+        },
+        "spo2": {
+          "loss": 0.0008507908101137558,
+          "observations": 36805
+        },
+        "temperature": {
+          "loss": 0.0026057940715093317,
+          "observations": 14626
+        },
+        "fio2": {
+          "loss": 0.036168654360113316,
+          "observations": 6277
+        },
+        "weight": {
+          "loss": 0.013285835641690807,
+          "observations": 1116
+        },
+        "glucose": {
+          "loss": 0.0015673341497305865,
+          "observations": 4741
+        },
+        "urea_nitrogen": {
+          "loss": 0.006486635387741428,
+          "observations": 3998
+        },
+        "creatinine": {
+          "loss": 0.002059966566767149,
+          "observations": 4015
+        },
+        "sodium": {
+          "loss": 0.004128577636873357,
+          "observations": 4304
+        },
+        "potassium": {
+          "loss": 0.005486222076238972,
+          "observations": 4343
+        },
+        "chloride": {
+          "loss": 0.005400162528373666,
+          "observations": 4164
+        },
+        "bicarbonate": {
+          "loss": 0.010056223226644699,
+          "observations": 3924
+        },
+        "calcium": {
+          "loss": 0.0014076219416088254,
+          "observations": 3685
+        },
+        "magnesium": {
+          "loss": 0.0005027663333680394,
+          "observations": 4034
+        },
+        "phosphate": {
+          "loss": 0.0033216046081369723,
+          "observations": 3724
+        },
+        "wbc": {
+          "loss": 0.0009584564196305184,
+          "observations": 3569
+        },
+        "hemoglobin": {
+          "loss": 0.01181388646364212,
+          "observations": 3654
+        },
+        "hematocrit": {
+          "loss": 0.010127857670360278,
+          "observations": 4237
+        },
+        "platelets": {
+          "loss": 0.0035373344794591955,
+          "observations": 3636
+        },
+        "lactate": {
+          "loss": 0.006842062331773289,
+          "observations": 2153
+        },
+        "blood_gas_ph": {
+          "loss": 0.004708265436595769,
+          "observations": 3546
+        },
+        "blood_gas_pco2": {
+          "loss": 0.0036678760183635373,
+          "observations": 3180
+        },
+        "blood_gas_po2": {
+          "loss": 0.007632585090487296,
+          "observations": 3182
+        },
+        "gcs_eye": {
+          "loss": 0.6545288385255658,
+          "observations": 14223
+        },
+        "gcs_motor": {
+          "loss": 0.4386239230418362,
+          "observations": 14177
+        },
+        "gcs_verbal": {
+          "loss": 0.40289315387223035,
+          "observations": 14218
+        }
+      }
+    },
+    "forecast_24h": {
+      "reconstruction_error": 1.8537527143187558,
+      "sum_feature_mse": 0.16296402532771698,
+      "sum_feature_cce": 1.6907886889910388,
+      "observed_scalars": 687074,
+      "per_field": {
+        "heart_rate": {
+          "loss": 0.005256821766996672,
+          "observations": 72607
+        },
+        "sbp": {
+          "loss": 0.004675539231836489,
+          "observations": 71641
+        },
+        "dbp": {
+          "loss": 0.0025247130977472942,
+          "observations": 71637
+        },
+        "map": {
+          "loss": 0.0022978773642226315,
+          "observations": 71599
+        },
+        "respiratory_rate": {
+          "loss": 0.005703347404297739,
+          "observations": 73890
+        },
+        "spo2": {
+          "loss": 0.0008899887369619704,
+          "observations": 72639
+        },
+        "temperature": {
+          "loss": 0.0025073525072023648,
+          "observations": 28869
+        },
+        "fio2": {
+          "loss": 0.03936916142577198,
+          "observations": 11930
+        },
+        "weight": {
+          "loss": 0.01167449985715476,
+          "observations": 2475
+        },
+        "glucose": {
+          "loss": 0.0015256045529685668,
+          "observations": 8866
+        },
+        "urea_nitrogen": {
+          "loss": 0.006357898801720828,
+          "observations": 7467
+        },
+        "creatinine": {
+          "loss": 0.0017811601240084196,
+          "observations": 7509
+        },
+        "sodium": {
+          "loss": 0.004003027370864791,
+          "observations": 8064
+        },
+        "potassium": {
+          "loss": 0.00502023670928977,
+          "observations": 8073
+        },
+        "chloride": {
+          "loss": 0.005201043740183039,
+          "observations": 7780
+        },
+        "bicarbonate": {
+          "loss": 0.009966978271452757,
+          "observations": 7390
+        },
+        "calcium": {
+          "loss": 0.0014112924650205865,
+          "observations": 6914
+        },
+        "magnesium": {
+          "loss": 0.0004642707926351758,
+          "observations": 7511
+        },
+        "phosphate": {
+          "loss": 0.003224638897902159,
+          "observations": 6988
+        },
+        "wbc": {
+          "loss": 0.000902284092168683,
+          "observations": 6675
+        },
+        "hemoglobin": {
+          "loss": 0.011731856162672829,
+          "observations": 6803
+        },
+        "hematocrit": {
+          "loss": 0.01002240160664275,
+          "observations": 7779
+        },
+        "platelets": {
+          "loss": 0.0033559514501996135,
+          "observations": 6785
+        },
+        "lactate": {
+          "loss": 0.006933194560161918,
+          "observations": 3877
+        },
+        "blood_gas_ph": {
+          "loss": 0.004854961269987142,
+          "observations": 6587
+        },
+        "blood_gas_pco2": {
+          "loss": 0.0037683997919389614,
+          "observations": 5895
+        },
+        "blood_gas_po2": {
+          "loss": 0.007539523275707067,
+          "observations": 5899
+        },
+        "gcs_eye": {
+          "loss": 0.7023490932223959,
+          "observations": 27678
+        },
+        "gcs_motor": {
+          "loss": 0.48661798863397815,
+          "observations": 27596
+        },
+        "gcs_verbal": {
+          "loss": 0.5018216071346647,
+          "observations": 27651
+        }
+      }
+    },
+    "patients": 4536,
+    "context_hours": 24,
+    "clinical_forecast": {
+      "heart_rate": {
+        "unit": "bpm",
+        "observations": 72607,
+        "mae": 15.109385201124756,
+        "rmse": 18.996033095720787,
+        "standardized_rmse": 1.037368955558494
+      },
+      "sbp": {
+        "unit": "mmHg",
+        "observations": 71641,
+        "mae": 16.157008550003383,
+        "rmse": 20.7185081831602,
+        "standardized_rmse": 1.0121884847992442
+      },
+      "dbp": {
+        "unit": "mmHg",
+        "observations": 71637,
+        "mae": 10.859230986112347,
+        "rmse": 13.868040414348306,
+        "standardized_rmse": 0.9775361651056071
+      },
+      "map": {
+        "unit": "mmHg",
+        "observations": 71599,
+        "mae": 10.87602972083572,
+        "rmse": 14.189109314672647,
+        "standardized_rmse": 0.9672427711047201
+      },
+      "respiratory_rate": {
+        "unit": "breaths/min",
+        "observations": 73890,
+        "mae": 4.039558970419992,
+        "rmse": 5.2109151779568945,
+        "standardized_rmse": 0.9680492394512795
+      },
+      "spo2": {
+        "unit": "%",
+        "observations": 72639,
+        "mae": 2.146957172246807,
+        "rmse": 2.9534352220701017,
+        "standardized_rmse": 1.0558158067325008
+      },
+      "temperature": {
+        "unit": "degC",
+        "observations": 28869,
+        "mae": 0.4558154906976365,
+        "rmse": 0.6214673540150164,
+        "standardized_rmse": 0.9179667226953424
+      },
+      "fio2": {
+        "unit": "fraction",
+        "observations": 11930,
+        "mae": 0.11110611642037897,
+        "rmse": 0.15674914370949763,
+        "standardized_rmse": 0.8206500865234557
+      },
+      "weight": {
+        "unit": "kg",
+        "observations": 2475,
+        "mae": 22.80849208063237,
+        "rmse": 28.98943793092423,
+        "standardized_rmse": 1.2128084707040534
+      },
+      "glucose": {
+        "unit": "mg/dL",
+        "observations": 8866,
+        "mae": 43.53930937527754,
+        "rmse": 63.973935462305604,
+        "standardized_rmse": 0.9959217112756386
+      },
+      "urea_nitrogen": {
+        "unit": "mg/dL",
+        "observations": 7467,
+        "mae": 15.742271961801196,
+        "rmse": 20.412526934938167,
+        "standardized_rmse": 0.891628396559282
+      },
+      "creatinine": {
+        "unit": "mg/dL",
+        "observations": 7509,
+        "mae": 0.8616679739938545,
+        "rmse": 1.3969455727584696,
+        "standardized_rmse": 0.8992482869491432
+      },
+      "sodium": {
+        "unit": "mEq/L",
+        "observations": 8064,
+        "mae": 4.810846490386341,
+        "rmse": 6.263678732330212,
+        "standardized_rmse": 1.0495964027230378
+      },
+      "potassium": {
+        "unit": "mEq/L",
+        "observations": 8073,
+        "mae": 0.4689031231368443,
+        "rmse": 0.6305972943268384,
+        "standardized_rmse": 0.9179914814046028
+      },
+      "chloride": {
+        "unit": "mEq/L",
+        "observations": 7780,
+        "mae": 5.317110011617444,
+        "rmse": 6.851234907310646,
+        "standardized_rmse": 0.9846395918428549
+      },
+      "bicarbonate": {
+        "unit": "mEq/L",
+        "observations": 7390,
+        "mae": 3.663019264696093,
+        "rmse": 4.792068231716568,
+        "standardized_rmse": 1.0210149881545731
+      },
+      "calcium": {
+        "unit": "mg/dL",
+        "observations": 6914,
+        "mae": 0.6374705132499905,
+        "rmse": 0.8452613567451874,
+        "standardized_rmse": 1.0146008171298735
+      },
+      "magnesium": {
+        "unit": "mg/dL",
+        "observations": 7511,
+        "mae": 0.3003535748961647,
+        "rmse": 0.4093919510062695,
+        "standardized_rmse": 0.9178971624410165
+      },
+      "phosphate": {
+        "unit": "mg/dL",
+        "observations": 6988,
+        "mae": 1.1192642254414442,
+        "rmse": 1.4537191867226618,
+        "standardized_rmse": 0.9524988366199726
+      },
+      "wbc": {
+        "unit": "K/uL",
+        "observations": 6675,
+        "mae": 6.952390330894082,
+        "rmse": 11.961148786046325,
+        "standardized_rmse": 1.1689296343935933
+      },
+      "hemoglobin": {
+        "unit": "g/dL",
+        "observations": 6803,
+        "mae": 1.68845943893693,
+        "rmse": 2.0904542760941816,
+        "standardized_rmse": 0.9882468038776284
+      },
+      "hematocrit": {
+        "unit": "%",
+        "observations": 7779,
+        "mae": 4.938328895086485,
+        "rmse": 6.136861936384634,
+        "standardized_rmse": 0.995423630401948
+      },
+      "platelets": {
+        "unit": "K/uL",
+        "observations": 6785,
+        "mae": 75.10700876653063,
+        "rmse": 103.00056128144563,
+        "standardized_rmse": 1.004241031636868
+      },
+      "lactate": {
+        "unit": "mmol/L",
+        "observations": 3877,
+        "mae": 1.6257631967245896,
+        "rmse": 2.4105451029920624,
+        "standardized_rmse": 1.0641584128939374
+      },
+      "blood_gas_ph": {
+        "unit": "pH",
+        "observations": 6587,
+        "mae": 0.07858835285863931,
+        "rmse": 0.09963892080116399,
+        "standardized_rmse": 1.1664133078273347
+      },
+      "blood_gas_pco2": {
+        "unit": "mmHg",
+        "observations": 5895,
+        "mae": 7.660575548201117,
+        "rmse": 10.558614466146693,
+        "standardized_rmse": 0.9884859319500464
+      },
+      "blood_gas_po2": {
+        "unit": "mmHg",
+        "observations": 5899,
+        "mae": 49.17512074205345,
+        "rmse": 67.467242775434,
+        "standardized_rmse": 0.729791378555069
+      },
+      "gcs_eye": {
+        "observations": 27678,
+        "accuracy": 0.7247633499530313
+      },
+      "gcs_motor": {
+        "observations": 27596,
+        "accuracy": 0.8390346427018408
+      },
+      "gcs_verbal": {
+        "observations": 27651,
+        "accuracy": 0.8397887960652418
+      }
+    },
+    "carry_forward": {
+      "heart_rate": {
+        "unit": "bpm",
+        "mae": 9.748846477515007,
+        "rmse": 13.55410038256403,
+        "standardized_rmse": 0.7401862739733195
+      },
+      "sbp": {
+        "unit": "mmHg",
+        "mae": 14.05366388569109,
+        "rmse": 18.65576502042332,
+        "standardized_rmse": 0.9114145845761742
+      },
+      "dbp": {
+        "unit": "mmHg",
+        "mae": 9.011407490096913,
+        "rmse": 12.494845109241888,
+        "standardized_rmse": 0.8807418068265589
+      },
+      "map": {
+        "unit": "mmHg",
+        "mae": 9.939788152962453,
+        "rmse": 13.948211174413498,
+        "standardized_rmse": 0.950821234025061
+      },
+      "respiratory_rate": {
+        "unit": "breaths/min",
+        "mae": 3.813872342955713,
+        "rmse": 5.267882331933383,
+        "standardized_rmse": 0.9786322192537383
+      },
+      "spo2": {
+        "unit": "%",
+        "mae": 1.9726412999646221,
+        "rmse": 2.9332942242961204,
+        "standardized_rmse": 1.0486156542950187
+      },
+      "temperature": {
+        "unit": "degC",
+        "mae": 0.43782577366383374,
+        "rmse": 0.6313357146687069,
+        "standardized_rmse": 0.9325432352492504
+      },
+      "fio2": {
+        "unit": "fraction",
+        "mae": 0.08297985948741436,
+        "rmse": 0.15682649503657878,
+        "standardized_rmse": 0.8210550544343458
+      },
+      "weight": {
+        "unit": "kg",
+        "mae": 5.359685279475427,
+        "rmse": 11.607963646639536,
+        "standardized_rmse": 0.4856333079590794
+      },
+      "glucose": {
+        "unit": "mg/dL",
+        "mae": 34.28962017444916,
+        "rmse": 59.10367832980475,
+        "standardized_rmse": 0.920103414609951
+      },
+      "urea_nitrogen": {
+        "unit": "mg/dL",
+        "mae": 4.884566212428435,
+        "rmse": 8.322330314655085,
+        "standardized_rmse": 0.36352314721955303
+      },
+      "creatinine": {
+        "unit": "mg/dL",
+        "mae": 0.2648672185528816,
+        "rmse": 0.5288969686182556,
+        "standardized_rmse": 0.34046401110918123
+      },
+      "sodium": {
+        "unit": "mEq/L",
+        "mae": 2.5547707040594627,
+        "rmse": 3.4914022355589953,
+        "standardized_rmse": 0.5850496782325558
+      },
+      "potassium": {
+        "unit": "mEq/L",
+        "mae": 0.4434679463385463,
+        "rmse": 0.6397195504514489,
+        "standardized_rmse": 0.9312711980937186
+      },
+      "chloride": {
+        "unit": "mEq/L",
+        "mae": 3.0351947894975893,
+        "rmse": 4.131650514725514,
+        "standardized_rmse": 0.593788817854672
+      },
+      "bicarbonate": {
+        "unit": "mEq/L",
+        "mae": 2.2608383996883488,
+        "rmse": 3.05902755385769,
+        "standardized_rmse": 0.6517672183786329
+      },
+      "calcium": {
+        "unit": "mg/dL",
+        "mae": 0.4078964281434179,
+        "rmse": 0.6044919384339338,
+        "standardized_rmse": 0.7255957104737031
+      },
+      "magnesium": {
+        "unit": "mg/dL",
+        "mae": 0.27441465507361523,
+        "rmse": 0.41843859868322136,
+        "standardized_rmse": 0.938180639465582
+      },
+      "phosphate": {
+        "unit": "mg/dL",
+        "mae": 0.8178451412323352,
+        "rmse": 1.1507342557436153,
+        "standardized_rmse": 0.7539785192803201
+      },
+      "wbc": {
+        "unit": "K/uL",
+        "mae": 2.8994225250091965,
+        "rmse": 5.958622433942174,
+        "standardized_rmse": 0.5823195136008161
+      },
+      "hemoglobin": {
+        "unit": "g/dL",
+        "mae": 0.8983960666741447,
+        "rmse": 1.1992073129506222,
+        "standardized_rmse": 0.5669163912182781
+      },
+      "hematocrit": {
+        "unit": "%",
+        "mae": 2.644722617110359,
+        "rmse": 3.5246201067653518,
+        "standardized_rmse": 0.5717075239484694
+      },
+      "platelets": {
+        "unit": "K/uL",
+        "mae": 27.610911297319387,
+        "rmse": 40.47760252493721,
+        "standardized_rmse": 0.3946509495881023
+      },
+      "lactate": {
+        "unit": "mmol/L",
+        "mae": 1.0473427132481143,
+        "rmse": 1.8882258592201138,
+        "standardized_rmse": 0.8335755390093542
+      },
+      "blood_gas_ph": {
+        "unit": "pH",
+        "mae": 0.05324858477337754,
+        "rmse": 0.0729405082568917,
+        "standardized_rmse": 0.8538709454742928
+      },
+      "blood_gas_pco2": {
+        "unit": "mmHg",
+        "mae": 5.741888112512253,
+        "rmse": 8.232640540384939,
+        "standardized_rmse": 0.7707307983508561
+      },
+      "blood_gas_po2": {
+        "unit": "mmHg",
+        "mae": 42.71052747544525,
+        "rmse": 69.92705604965269,
+        "standardized_rmse": 0.756399113605919
+      },
+      "gcs_eye": {
+        "accuracy": 0.7093359346773611
+      },
+      "gcs_motor": {
+        "accuracy": 0.8295405131178432
+      },
+      "gcs_verbal": {
+        "accuracy": 0.836750931250226
+      }
+    },
+    "mean_standardized_numeric_mse": 0.9891409487607634,
+    "carry_forward_mean_standardized_numeric_mse": 0.5809328614671875,
+    "dynamics": {
+      "jacobian_frobenius_squared": 0.016079790684452613,
+      "states": 174203
+    }
+  },
+  "checkpoint_reload_difference": 0.0,
+  "physical_gpu": 1,
+  "checkpoint_sha256": "320a78a824d4d282e2261c9f82b6faf3cf9f3dee02a0d7a149625f99cfe7a3e6",
+  "test_early_contexts": {
+    "6": {
+      "interpolation": {
+        "reconstruction_error": 0.40317626663641326,
+        "sum_feature_mse": 0.18171486263965309,
+        "sum_feature_cce": 0.22146140399676018,
+        "observed_scalars": 221440,
+        "per_field": {
+          "heart_rate": {
+            "loss": 0.005990355461878048,
+            "observations": 17661
+          },
+          "sbp": {
+            "loss": 0.005157389058583519,
+            "observations": 17465
+          },
+          "dbp": {
+            "loss": 0.002938199776814427,
+            "observations": 17466
+          },
+          "map": {
+            "loss": 0.0027831704752537645,
+            "observations": 17464
+          },
+          "respiratory_rate": {
+            "loss": 0.005281794869943517,
+            "observations": 18249
+          },
+          "spo2": {
+            "loss": 0.0008008620439517311,
+            "observations": 17663
+          },
+          "temperature": {
+            "loss": 0.004035258744012173,
+            "observations": 8180
+          },
+          "fio2": {
+            "loss": 0.04356912868689946,
+            "observations": 4904
+          },
+          "weight": {
+            "loss": 0.008983776359282028,
+            "observations": 3938
+          },
+          "glucose": {
+            "loss": 0.002320685671902139,
+            "observations": 5759
+          },
+          "urea_nitrogen": {
+            "loss": 0.007078708136984467,
+            "observations": 3425
+          },
+          "creatinine": {
+            "loss": 0.0021253291417692136,
+            "observations": 3427
+          },
+          "sodium": {
+            "loss": 0.004824076455716415,
+            "observations": 3288
+          },
+          "potassium": {
+            "loss": 0.008105892274260026,
+            "observations": 3296
+          },
+          "chloride": {
+            "loss": 0.006659479597054007,
+            "observations": 3448
+          },
+          "bicarbonate": {
+            "loss": 0.009878250343448714,
+            "observations": 3417
+          },
+          "calcium": {
+            "loss": 0.0019964858028724383,
+            "observations": 2901
+          },
+          "magnesium": {
+            "loss": 0.0008346709725217571,
+            "observations": 2943
+          },
+          "phosphate": {
+            "loss": 0.0034798230999864917,
+            "observations": 2896
+          },
+          "wbc": {
+            "loss": 0.000994868982956478,
+            "observations": 3923
+          },
+          "hemoglobin": {
+            "loss": 0.012298943114666956,
+            "observations": 3935
+          },
+          "hematocrit": {
+            "loss": 0.011063665571168014,
+            "observations": 4102
+          },
+          "platelets": {
+            "loss": 0.0038962160134798085,
+            "observations": 3977
+          },
+          "lactate": {
+            "loss": 0.0042542592124984215,
+            "observations": 3820
+          },
+          "blood_gas_ph": {
+            "loss": 0.004150599122023472,
+            "observations": 5288
+          },
+          "blood_gas_pco2": {
+            "loss": 0.004049596717453623,
+            "observations": 5185
+          },
+          "blood_gas_po2": {
+            "loss": 0.014163376932271972,
+            "observations": 5186
+          },
+          "gcs_eye": {
+            "loss": 0.08733293063190929,
+            "observations": 7932
+          },
+          "gcs_motor": {
+            "loss": 0.08208938722400862,
+            "observations": 7871
+          },
+          "gcs_verbal": {
+            "loss": 0.052018676378467105,
+            "observations": 7918
+          },
+          "sex": {
+            "loss": 2.040976237515554e-05,
+            "observations": 4513
+          }
+        }
+      },
+      "forecast": {
+        "reconstruction_error": 2.4098596882365806,
+        "sum_feature_mse": 0.17219513072486592,
+        "sum_feature_cce": 2.2376645575117147,
+        "observed_scalars": 1249385,
+        "per_field": {
+          "heart_rate": {
+            "loss": 0.004811556154126976,
+            "observations": 128419
+          },
+          "sbp": {
+            "loss": 0.0047731435813878,
+            "observations": 127136
+          },
+          "dbp": {
+            "loss": 0.00256767009013925,
+            "observations": 127120
+          },
+          "map": {
+            "loss": 0.0023258132296590244,
+            "observations": 127102
+          },
+          "respiratory_rate": {
+            "loss": 0.005922508249388798,
+            "observations": 131044
+          },
+          "spo2": {
+            "loss": 0.0008950937710324324,
+            "observations": 128697
+          },
+          "temperature": {
+            "loss": 0.0026988680132767878,
+            "observations": 51814
+          },
+          "fio2": {
+            "loss": 0.04456514425459343,
+            "observations": 23365
+          },
+          "weight": {
+            "loss": 0.010331829163324835,
+            "observations": 4139
+          },
+          "glucose": {
+            "loss": 0.0016269017308396417,
+            "observations": 18021
+          },
+          "urea_nitrogen": {
+            "loss": 0.0072646512396480544,
+            "observations": 14212
+          },
+          "creatinine": {
+            "loss": 0.001954341666326146,
+            "observations": 14282
+          },
+          "sodium": {
+            "loss": 0.0043950794659224635,
+            "observations": 15225
+          },
+          "potassium": {
+            "loss": 0.005883137827635153,
+            "observations": 15336
+          },
+          "chloride": {
+            "loss": 0.005772848169049667,
+            "observations": 14861
+          },
+          "bicarbonate": {
+            "loss": 0.009584578629453971,
+            "observations": 14134
+          },
+          "calcium": {
+            "loss": 0.0014407739038612396,
+            "observations": 12892
+          },
+          "magnesium": {
+            "loss": 0.0006375133600826761,
+            "observations": 13955
+          },
+          "phosphate": {
+            "loss": 0.0035939287974422894,
+            "observations": 13029
+          },
+          "wbc": {
+            "loss": 0.0012669618701730055,
+            "observations": 12801
+          },
+          "hemoglobin": {
+            "loss": 0.012749453671865345,
+            "observations": 13034
+          },
+          "hematocrit": {
+            "loss": 0.010839063135804022,
+            "observations": 15222
+          },
+          "platelets": {
+            "loss": 0.003442709204804588,
+            "observations": 13028
+          },
+          "lactate": {
+            "loss": 0.005878535409040232,
+            "observations": 9379
+          },
+          "blood_gas_ph": {
+            "loss": 0.004976878975949237,
+            "observations": 14562
+          },
+          "blood_gas_pco2": {
+            "loss": 0.0037758723690399874,
+            "observations": 13361
+          },
+          "blood_gas_po2": {
+            "loss": 0.008220274790998886,
+            "observations": 13370
+          },
+          "gcs_eye": {
+            "loss": 0.889235715555796,
+            "observations": 50036
+          },
+          "gcs_motor": {
+            "loss": 0.6865219178493583,
+            "observations": 49856
+          },
+          "gcs_verbal": {
+            "loss": 0.6619069241065606,
+            "observations": 49953
+          }
+        }
+      },
+      "overall": {
+        "reconstruction_error": 2.1358513660772354,
+        "sum_feature_mse": 0.17375348860657944,
+        "sum_feature_cce": 1.9620978774706561,
+        "observed_scalars": 1470825,
+        "per_field": {
+          "heart_rate": {
+            "loss": 0.004954072416465227,
+            "observations": 146080
+          },
+          "sbp": {
+            "loss": 0.004819552951712787,
+            "observations": 144601
+          },
+          "dbp": {
+            "loss": 0.0026124301125152296,
+            "observations": 144586
+          },
+          "map": {
+            "loss": 0.0023810633229125497,
+            "observations": 144566
+          },
+          "respiratory_rate": {
+            "loss": 0.0058441898989876895,
+            "observations": 149293
+          },
+          "spo2": {
+            "loss": 0.0008837217067468358,
+            "observations": 146360
+          },
+          "temperature": {
+            "loss": 0.002881080841614365,
+            "observations": 59994
+          },
+          "fio2": {
+            "loss": 0.04439235910957242,
+            "observations": 28269
+          },
+          "weight": {
+            "loss": 0.009674576220793403,
+            "observations": 8077
+          },
+          "glucose": {
+            "loss": 0.0017949211480890231,
+            "observations": 23780
+          },
+          "urea_nitrogen": {
+            "loss": 0.007228542177772592,
+            "observations": 17637
+          },
+          "creatinine": {
+            "loss": 0.00198743072625493,
+            "observations": 17709
+          },
+          "sodium": {
+            "loss": 0.004471271391439842,
+            "observations": 18513
+          },
+          "potassium": {
+            "loss": 0.006276342944638342,
+            "observations": 18632
+          },
+          "chloride": {
+            "loss": 0.005939820989192402,
+            "observations": 18309
+          },
+          "bicarbonate": {
+            "loss": 0.009641753593799865,
+            "observations": 17551
+          },
+          "calcium": {
+            "loss": 0.0015428520518292622,
+            "observations": 15793
+          },
+          "magnesium": {
+            "loss": 0.0006718508448266133,
+            "observations": 16898
+          },
+          "phosphate": {
+            "loss": 0.003573178434671375,
+            "observations": 15925
+          },
+          "wbc": {
+            "loss": 0.0012031362211134369,
+            "observations": 16724
+          },
+          "hemoglobin": {
+            "loss": 0.012644983212930564,
+            "observations": 16969
+          },
+          "hematocrit": {
+            "loss": 0.010886740582566952,
+            "observations": 19324
+          },
+          "platelets": {
+            "loss": 0.003548771917154003,
+            "observations": 17005
+          },
+          "lactate": {
+            "loss": 0.005408444129485453,
+            "observations": 13199
+          },
+          "blood_gas_ph": {
+            "loss": 0.0047567596618714805,
+            "observations": 19850
+          },
+          "blood_gas_pco2": {
+            "loss": 0.003852398885510622,
+            "observations": 18546
+          },
+          "blood_gas_po2": {
+            "loss": 0.009881243112112177,
+            "observations": 18556
+          },
+          "gcs_eye": {
+            "loss": 0.7795080573987211,
+            "observations": 57968
+          },
+          "gcs_motor": {
+            "loss": 0.6041083452428032,
+            "observations": 57727
+          },
+          "gcs_verbal": {
+            "loss": 0.5784610650667567,
+            "observations": 57871
+          },
+          "sex": {
+            "loss": 2.040976237515554e-05,
+            "observations": 4513
+          }
+        }
+      },
+      "prior": {
+        "reconstruction_error": 0.0,
+        "sum_feature_mse": 0.0,
+        "sum_feature_cce": 0.0,
+        "observed_scalars": 0,
+        "per_field": {}
+      },
+      "forecast_6h": {
+        "reconstruction_error": 1.935419622142304,
+        "sum_feature_mse": 0.17406946295558487,
+        "sum_feature_cce": 1.761350159186719,
+        "observed_scalars": 199903,
+        "per_field": {
+          "heart_rate": {
+            "loss": 0.005239681924710487,
+            "observations": 18950
+          },
+          "sbp": {
+            "loss": 0.0045648490179624485,
+            "observations": 18843
+          },
+          "dbp": {
+            "loss": 0.002540498266032167,
+            "observations": 18840
+          },
+          "map": {
+            "loss": 0.0023732580970973766,
+            "observations": 18841
+          },
+          "respiratory_rate": {
+            "loss": 0.005559879127191176,
+            "observations": 19477
+          },
+          "spo2": {
+            "loss": 0.0007644869805914366,
+            "observations": 19015
+          },
+          "temperature": {
+            "loss": 0.0033608637698473876,
+            "observations": 7930
+          },
+          "fio2": {
+            "loss": 0.04206743797621442,
+            "observations": 4265
+          },
+          "weight": {
+            "loss": 0.009098793448211713,
+            "observations": 468
+          },
+          "glucose": {
+            "loss": 0.0020390121358052284,
+            "observations": 3723
+          },
+          "urea_nitrogen": {
+            "loss": 0.007702493266045273,
+            "observations": 2618
+          },
+          "creatinine": {
+            "loss": 0.002030611728438493,
+            "observations": 2621
+          },
+          "sodium": {
+            "loss": 0.004756897799945626,
+            "observations": 2710
+          },
+          "potassium": {
+            "loss": 0.0067710585054338085,
+            "observations": 2840
+          },
+          "chloride": {
+            "loss": 0.006154979969224166,
+            "observations": 2763
+          },
+          "bicarbonate": {
+            "loss": 0.009146731537886156,
+            "observations": 2613
+          },
+          "calcium": {
+            "loss": 0.0016036211039540586,
+            "observations": 2334
+          },
+          "magnesium": {
+            "loss": 0.001055472888065896,
+            "observations": 2496
+          },
+          "phosphate": {
+            "loss": 0.003705597287802167,
+            "observations": 2346
+          },
+          "wbc": {
+            "loss": 0.0018140477008049898,
+            "observations": 2472
+          },
+          "hemoglobin": {
+            "loss": 0.013151509294662744,
+            "observations": 2519
+          },
+          "hematocrit": {
+            "loss": 0.010911623941932078,
+            "observations": 3110
+          },
+          "platelets": {
+            "loss": 0.0035044432643153802,
+            "observations": 2527
+          },
+          "lactate": {
+            "loss": 0.005759744876338651,
+            "observations": 2353
+          },
+          "blood_gas_ph": {
+            "loss": 0.005290222722305013,
+            "observations": 3364
+          },
+          "blood_gas_pco2": {
+            "loss": 0.0036146434998455984,
+            "observations": 3210
+          },
+          "blood_gas_po2": {
+            "loss": 0.009487002824920925,
+            "observations": 3211
+          },
+          "gcs_eye": {
+            "loss": 0.7815906951520096,
+            "observations": 7824
+          },
+          "gcs_motor": {
+            "loss": 0.6097055389854867,
+            "observations": 7806
+          },
+          "gcs_verbal": {
+            "loss": 0.3700539250492226,
+            "observations": 7814
+          }
+        }
+      },
+      "forecast_12h": {
+        "reconstruction_error": 2.0763552582796954,
+        "sum_feature_mse": 0.17147667808164874,
+        "sum_feature_cce": 1.9048785801980468,
+        "observed_scalars": 388507,
+        "per_field": {
+          "heart_rate": {
+            "loss": 0.005110293225002423,
+            "observations": 37681
+          },
+          "sbp": {
+            "loss": 0.004603169624450765,
+            "observations": 37475
+          },
+          "dbp": {
+            "loss": 0.0025375837026938406,
+            "observations": 37466
+          },
+          "map": {
+            "loss": 0.002318466352935904,
+            "observations": 37484
+          },
+          "respiratory_rate": {
+            "loss": 0.005592957946774828,
+            "observations": 38666
+          },
+          "spo2": {
+            "loss": 0.0008131285515295509,
+            "observations": 37862
+          },
+          "temperature": {
+            "loss": 0.003129005345121805,
+            "observations": 15585
+          },
+          "fio2": {
+            "loss": 0.042081031961350254,
+            "observations": 8010
+          },
+          "weight": {
+            "loss": 0.009419626659174124,
+            "observations": 1046
+          },
+          "glucose": {
+            "loss": 0.0017499914720236287,
+            "observations": 6770
+          },
+          "urea_nitrogen": {
+            "loss": 0.007316555326287911,
+            "observations": 4954
+          },
+          "creatinine": {
+            "loss": 0.0019260567261567233,
+            "observations": 4967
+          },
+          "sodium": {
+            "loss": 0.004711744047656951,
+            "observations": 5201
+          },
+          "potassium": {
+            "loss": 0.006734575976995537,
+            "observations": 5338
+          },
+          "chloride": {
+            "loss": 0.006038424686400562,
+            "observations": 5195
+          },
+          "bicarbonate": {
+            "loss": 0.009122072900175155,
+            "observations": 4941
+          },
+          "calcium": {
+            "loss": 0.0015849262271306925,
+            "observations": 4364
+          },
+          "magnesium": {
+            "loss": 0.0010257909400952258,
+            "observations": 4709
+          },
+          "phosphate": {
+            "loss": 0.0036339164080366297,
+            "observations": 4406
+          },
+          "wbc": {
+            "loss": 0.001582553830185252,
+            "observations": 4620
+          },
+          "hemoglobin": {
+            "loss": 0.012726987467125429,
+            "observations": 4703
+          },
+          "hematocrit": {
+            "loss": 0.010800625591987002,
+            "observations": 5613
+          },
+          "platelets": {
+            "loss": 0.0036150441543820002,
+            "observations": 4704
+          },
+          "lactate": {
+            "loss": 0.005540021411819459,
+            "observations": 4118
+          },
+          "blood_gas_ph": {
+            "loss": 0.005107366767172419,
+            "observations": 5914
+          },
+          "blood_gas_pco2": {
+            "loss": 0.003757564442955459,
+            "observations": 5558
+          },
+          "blood_gas_po2": {
+            "loss": 0.008897196336029202,
+            "observations": 5561
+          },
+          "gcs_eye": {
+            "loss": 0.8288005663545525,
+            "observations": 15230
+          },
+          "gcs_motor": {
+            "loss": 0.6366361741778217,
+            "observations": 15168
+          },
+          "gcs_verbal": {
+            "loss": 0.4394418396656726,
+            "observations": 15198
+          }
+        }
+      },
+      "forecast_24h": {
+        "reconstruction_error": 2.2724242791941944,
+        "sum_feature_mse": 0.17260559833373212,
+        "sum_feature_cce": 2.099818680860462,
+        "observed_scalars": 741896,
+        "per_field": {
+          "heart_rate": {
+            "loss": 0.00493569863999916,
+            "observations": 74470
+          },
+          "sbp": {
+            "loss": 0.00464054500403304,
+            "observations": 73985
+          },
+          "dbp": {
+            "loss": 0.002540340877898783,
+            "observations": 73974
+          },
+          "map": {
+            "loss": 0.002295677455321953,
+            "observations": 73993
+          },
+          "respiratory_rate": {
+            "loss": 0.005712498521680178,
+            "observations": 76137
+          },
+          "spo2": {
+            "loss": 0.0008407828358330947,
+            "observations": 74777
+          },
+          "temperature": {
+            "loss": 0.002923916678458166,
+            "observations": 30372
+          },
+          "fio2": {
+            "loss": 0.042711663327526316,
+            "observations": 14650
+          },
+          "weight": {
+            "loss": 0.010532750136061461,
+            "observations": 2176
+          },
+          "glucose": {
+            "loss": 0.0016574928608379324,
+            "observations": 11588
+          },
+          "urea_nitrogen": {
+            "loss": 0.007382551622295597,
+            "observations": 8770
+          },
+          "creatinine": {
+            "loss": 0.0021211378469910896,
+            "observations": 8805
+          },
+          "sodium": {
+            "loss": 0.004667494307059673,
+            "observations": 9328
+          },
+          "potassium": {
+            "loss": 0.006546472009769611,
+            "observations": 9466
+          },
+          "chloride": {
+            "loss": 0.005998372924472008,
+            "observations": 9179
+          },
+          "bicarbonate": {
+            "loss": 0.009403918144743364,
+            "observations": 8723
+          },
+          "calcium": {
+            "loss": 0.001547924416806689,
+            "observations": 7814
+          },
+          "magnesium": {
+            "loss": 0.0008079596315007302,
+            "observations": 8494
+          },
+          "phosphate": {
+            "loss": 0.0037341503968233106,
+            "observations": 7914
+          },
+          "wbc": {
+            "loss": 0.0014379509393274898,
+            "observations": 7894
+          },
+          "hemoglobin": {
+            "loss": 0.012788328558162199,
+            "observations": 8062
+          },
+          "hematocrit": {
+            "loss": 0.010840532963505078,
+            "observations": 9613
+          },
+          "platelets": {
+            "loss": 0.003519029219892864,
+            "observations": 8056
+          },
+          "lactate": {
+            "loss": 0.005402019860685326,
+            "observations": 6691
+          },
+          "blood_gas_ph": {
+            "loss": 0.005005756009047686,
+            "observations": 9914
+          },
+          "blood_gas_pco2": {
+            "loss": 0.003792287947712861,
+            "observations": 9219
+          },
+          "blood_gas_po2": {
+            "loss": 0.008818345197286467,
+            "observations": 9226
+          },
+          "gcs_eye": {
+            "loss": 0.8722243907444057,
+            "observations": 29594
+          },
+          "gcs_motor": {
+            "loss": 0.6677218860704917,
+            "observations": 29472
+          },
+          "gcs_verbal": {
+            "loss": 0.5598724040455647,
+            "observations": 29540
+          }
+        }
+      },
+      "patients": 4513,
+      "context_hours": 6,
+      "clinical_forecast": {
+        "heart_rate": {
+          "unit": "bpm",
+          "observations": 128419,
+          "mae": 14.420270485593155,
+          "rmse": 18.173729959584303,
+          "standardized_rmse": 0.992463172272691
+        },
+        "sbp": {
+          "unit": "mmHg",
+          "observations": 127136,
+          "mae": 16.411423927721074,
+          "rmse": 20.933646100563383,
+          "standardized_rmse": 1.0226988999659203
+        },
+        "dbp": {
+          "unit": "mmHg",
+          "observations": 127120,
+          "mae": 10.997730050378058,
+          "rmse": 13.985522399483242,
+          "standardized_rmse": 0.9858172838351849
+        },
+        "map": {
+          "unit": "mmHg",
+          "observations": 127102,
+          "mae": 11.050256466063072,
+          "rmse": 14.275099016462375,
+          "standardized_rmse": 0.9731045144743028
+        },
+        "respiratory_rate": {
+          "unit": "breaths/min",
+          "observations": 131044,
+          "mae": 4.12164394781487,
+          "rmse": 5.310090561877459,
+          "standardized_rmse": 0.9864733840972558
+        },
+        "spo2": {
+          "unit": "%",
+          "observations": 128697,
+          "mae": 2.156073493811242,
+          "rmse": 2.96189365944979,
+          "standardized_rmse": 1.0588395913135868
+        },
+        "temperature": {
+          "unit": "degC",
+          "observations": 51814,
+          "mae": 0.4710921202353812,
+          "rmse": 0.6447649862423983,
+          "standardized_rmse": 0.9523795538185914
+        },
+        "fio2": {
+          "unit": "fraction",
+          "observations": 23365,
+          "mae": 0.12249853283311309,
+          "rmse": 0.16677262062747258,
+          "standardized_rmse": 0.8731273569272212
+        },
+        "weight": {
+          "unit": "kg",
+          "observations": 4139,
+          "mae": 21.339161888474663,
+          "rmse": 27.27151477538833,
+          "standardized_rmse": 1.1409370615371304
+        },
+        "glucose": {
+          "unit": "mg/dL",
+          "observations": 18021,
+          "mae": 44.11480609173503,
+          "rmse": 66.0636767320149,
+          "standardized_rmse": 1.0284540025347637
+        },
+        "urea_nitrogen": {
+          "unit": "mg/dL",
+          "observations": 14212,
+          "mae": 17.07228828556867,
+          "rmse": 21.819628402921413,
+          "standardized_rmse": 0.953091224248034
+        },
+        "creatinine": {
+          "unit": "mg/dL",
+          "observations": 14282,
+          "mae": 0.946203623096807,
+          "rmse": 1.4632827380783042,
+          "standardized_rmse": 0.9419511548619773
+        },
+        "sodium": {
+          "unit": "mEq/L",
+          "observations": 15225,
+          "mae": 5.02404085949724,
+          "rmse": 6.563244155561034,
+          "standardized_rmse": 1.0997941864919227
+        },
+        "potassium": {
+          "unit": "mEq/L",
+          "observations": 15336,
+          "mae": 0.5167035799773091,
+          "rmse": 0.6826443765462838,
+          "standardized_rmse": 0.9937589776169353
+        },
+        "chloride": {
+          "unit": "mEq/L",
+          "observations": 14861,
+          "mae": 5.53842639142592,
+          "rmse": 7.218029836851136,
+          "standardized_rmse": 1.0373542943160394
+        },
+        "bicarbonate": {
+          "unit": "mEq/L",
+          "observations": 14134,
+          "mae": 3.5677635591776045,
+          "rmse": 4.699241339010154,
+          "standardized_rmse": 1.0012369624307793
+        },
+        "calcium": {
+          "unit": "mg/dL",
+          "observations": 12892,
+          "mae": 0.6371091212671977,
+          "rmse": 0.8540443422866377,
+          "standardized_rmse": 1.0251433839183393
+        },
+        "magnesium": {
+          "unit": "mg/dL",
+          "observations": 13955,
+          "mae": 0.32080463389984526,
+          "rmse": 0.4797315305462466,
+          "standardized_rmse": 1.075605442509401
+        },
+        "phosphate": {
+          "unit": "mg/dL",
+          "observations": 13029,
+          "mae": 1.1848494323879066,
+          "rmse": 1.5347043092418258,
+          "standardized_rmse": 1.0055615159101414
+        },
+        "wbc": {
+          "unit": "K/uL",
+          "observations": 12801,
+          "mae": 7.989295972840931,
+          "rmse": 14.173692771207872,
+          "standardized_rmse": 1.3851553730677726
+        },
+        "hemoglobin": {
+          "unit": "g/dL",
+          "observations": 13034,
+          "mae": 1.7639105686367162,
+          "rmse": 2.1792301335027897,
+          "standardized_rmse": 1.030214934129907
+        },
+        "hematocrit": {
+          "unit": "%",
+          "observations": 15222,
+          "mae": 5.158347247449324,
+          "rmse": 6.381993025118557,
+          "standardized_rmse": 1.0351848765895484
+        },
+        "platelets": {
+          "unit": "K/uL",
+          "observations": 13028,
+          "mae": 75.49535444008725,
+          "rmse": 104.32344667332205,
+          "standardized_rmse": 1.0171389787368383
+        },
+        "lactate": {
+          "unit": "mmol/L",
+          "observations": 9379,
+          "mae": 1.430975194647821,
+          "rmse": 2.219643039410064,
+          "standardized_rmse": 0.979882853499741
+        },
+        "blood_gas_ph": {
+          "unit": "pH",
+          "observations": 14562,
+          "mae": 0.08016425088401397,
+          "rmse": 0.1008822291672455,
+          "standardized_rmse": 1.1809679759456748
+        },
+        "blood_gas_pco2": {
+          "unit": "mmHg",
+          "observations": 13361,
+          "mae": 7.522450075045326,
+          "rmse": 10.569077924099103,
+          "standardized_rmse": 0.9894655094333109
+        },
+        "blood_gas_po2": {
+          "unit": "mmHg",
+          "observations": 13370,
+          "mae": 50.86003830701269,
+          "rmse": 70.44727304370956,
+          "standardized_rmse": 0.7620262870551765
+        },
+        "gcs_eye": {
+          "observations": 50036,
+          "accuracy": 0.6465344951634823
+        },
+        "gcs_motor": {
+          "observations": 49856,
+          "accuracy": 0.7504212130937099
+        },
+        "gcs_verbal": {
+          "observations": 49953,
+          "accuracy": 0.7746882069144996
+        }
+      },
+      "carry_forward": {
+        "heart_rate": {
+          "unit": "bpm",
+          "mae": 11.848879807961865,
+          "rmse": 16.20961392760979,
+          "standardized_rmse": 0.885203251929423
+        },
+        "sbp": {
+          "unit": "mmHg",
+          "mae": 16.06804573008584,
+          "rmse": 20.977081616636813,
+          "standardized_rmse": 1.024820912265849
+        },
+        "dbp": {
+          "unit": "mmHg",
+          "mae": 10.345323068094824,
+          "rmse": 13.88504833088331,
+          "standardized_rmse": 0.9787350261565789
+        },
+        "map": {
+          "unit": "mmHg",
+          "mae": 11.445257233679731,
+          "rmse": 15.577229791515691,
+          "standardized_rmse": 1.0618681254432385
+        },
+        "respiratory_rate": {
+          "unit": "breaths/min",
+          "mae": 4.232097211016108,
+          "rmse": 5.750177896020691,
+          "standardized_rmse": 1.0682298883887984
+        },
+        "spo2": {
+          "unit": "%",
+          "mae": 2.2388207740768573,
+          "rmse": 3.223339414657004,
+          "standardized_rmse": 1.152303148221198
+        },
+        "temperature": {
+          "unit": "degC",
+          "mae": 0.5730725669194545,
+          "rmse": 0.8137061949202222,
+          "standardized_rmse": 1.2019218775726155
+        },
+        "fio2": {
+          "unit": "fraction",
+          "mae": 0.1436959051929083,
+          "rmse": 0.2208361508173746,
+          "standardized_rmse": 1.1561735010920156
+        },
+        "weight": {
+          "unit": "kg",
+          "mae": 8.242704551164461,
+          "rmse": 14.267147806653018,
+          "standardized_rmse": 0.5968835185396049
+        },
+        "glucose": {
+          "unit": "mg/dL",
+          "mae": 46.037405444526485,
+          "rmse": 77.53606524597369,
+          "standardized_rmse": 1.2070517504874898
+        },
+        "urea_nitrogen": {
+          "unit": "mg/dL",
+          "mae": 8.792919907273287,
+          "rmse": 14.27429798409798,
+          "standardized_rmse": 0.6235077834379463
+        },
+        "creatinine": {
+          "unit": "mg/dL",
+          "mae": 0.5091342839910425,
+          "rmse": 1.0210271840119345,
+          "standardized_rmse": 0.6572603572079097
+        },
+        "sodium": {
+          "unit": "mEq/L",
+          "mae": 3.448349874606861,
+          "rmse": 4.882921543574175,
+          "standardized_rmse": 0.81822473755892
+        },
+        "potassium": {
+          "unit": "mEq/L",
+          "mae": 0.547874388141364,
+          "rmse": 0.7710363442561731,
+          "standardized_rmse": 1.1224355103459398
+        },
+        "chloride": {
+          "unit": "mEq/L",
+          "mae": 4.148816994334541,
+          "rmse": 5.674588762124846,
+          "standardized_rmse": 0.8155354236434907
+        },
+        "bicarbonate": {
+          "unit": "mEq/L",
+          "mae": 3.0446618898461084,
+          "rmse": 4.153299884987767,
+          "standardized_rmse": 0.8849167473882472
+        },
+        "calcium": {
+          "unit": "mg/dL",
+          "mae": 0.5696380121611143,
+          "rmse": 0.8352103592676966,
+          "standardized_rmse": 1.0025362051938678
+        },
+        "magnesium": {
+          "unit": "mg/dL",
+          "mae": 0.35520610179469486,
+          "rmse": 0.5620263139502476,
+          "standardized_rmse": 1.260118469657494
+        },
+        "phosphate": {
+          "unit": "mg/dL",
+          "mae": 1.003117511934882,
+          "rmse": 1.4220933814833756,
+          "standardized_rmse": 0.9317771298607037
+        },
+        "wbc": {
+          "unit": "K/uL",
+          "mae": 4.396026164775341,
+          "rmse": 9.17184205646575,
+          "standardized_rmse": 0.8963384850030046
+        },
+        "hemoglobin": {
+          "unit": "g/dL",
+          "mae": 1.4065677255893936,
+          "rmse": 1.846030567089901,
+          "standardized_rmse": 0.8726973025191433
+        },
+        "hematocrit": {
+          "unit": "%",
+          "mae": 4.167498629513663,
+          "rmse": 5.464748134844562,
+          "standardized_rmse": 0.8864040749177948
+        },
+        "platelets": {
+          "unit": "K/uL",
+          "mae": 46.76969177127891,
+          "rmse": 73.3222837171802,
+          "standardized_rmse": 0.7148819863312372
+        },
+        "lactate": {
+          "unit": "mmol/L",
+          "mae": 1.5684890163880945,
+          "rmse": 2.4903181664552534,
+          "standardized_rmse": 1.0993750020800541
+        },
+        "blood_gas_ph": {
+          "unit": "pH",
+          "mae": 0.07433400641843162,
+          "rmse": 0.09786947183449744,
+          "standardized_rmse": 1.1456994260866857
+        },
+        "blood_gas_pco2": {
+          "unit": "mmHg",
+          "mae": 7.497610216020832,
+          "rmse": 10.398254150538811,
+          "standardized_rmse": 0.9734731746863267
+        },
+        "blood_gas_po2": {
+          "unit": "mmHg",
+          "mae": 70.72127458206647,
+          "rmse": 104.39408214047961,
+          "standardized_rmse": 1.1292280221362825
+        },
+        "gcs_eye": {
+          "accuracy": 0.5770844991606043
+        },
+        "gcs_motor": {
+          "accuracy": 0.6897865853658537
+        },
+        "gcs_verbal": {
+          "accuracy": 0.732288351049987
+        }
+      },
+      "mean_standardized_numeric_mse": 1.0505135701407498,
+      "carry_forward_mean_standardized_numeric_mse": 0.9721541473392548,
+      "dynamics": {
+        "jacobian_frobenius_squared": 0.018063961845862675,
+        "states": 173462
+      }
+    },
+    "12": {
+      "interpolation": {
+        "reconstruction_error": 0.5109981095216702,
+        "sum_feature_mse": 0.1689962399995963,
+        "sum_feature_cce": 0.342001869522074,
+        "observed_scalars": 422484,
+        "per_field": {
+          "heart_rate": {
+            "loss": 0.005845646577772563,
+            "observations": 36701
+          },
+          "sbp": {
+            "loss": 0.004714072397538374,
+            "observations": 36395
+          },
+          "dbp": {
+            "loss": 0.0027508211466873785,
+            "observations": 36392
+          },
+          "map": {
+            "loss": 0.002553841356285511,
+            "observations": 36392
+          },
+          "respiratory_rate": {
+            "loss": 0.00517660512743642,
+            "observations": 37819
+          },
+          "spo2": {
+            "loss": 0.000767613647374386,
+            "observations": 36769
+          },
+          "temperature": {
+            "loss": 0.0036868097797554456,
+            "observations": 16158
+          },
+          "fio2": {
+            "loss": 0.038659226483267424,
+            "observations": 9192
+          },
+          "weight": {
+            "loss": 0.008495711534710026,
+            "observations": 4423
+          },
+          "glucose": {
+            "loss": 0.002206536999217567,
+            "observations": 9508
+          },
+          "urea_nitrogen": {
+            "loss": 0.006232804332297764,
+            "observations": 6063
+          },
+          "creatinine": {
+            "loss": 0.0019865448395712405,
+            "observations": 6068
+          },
+          "sodium": {
+            "loss": 0.00478117872282682,
+            "observations": 6019
+          },
+          "potassium": {
+            "loss": 0.007146869054427487,
+            "observations": 6157
+          },
+          "chloride": {
+            "loss": 0.006393054787150855,
+            "observations": 6232
+          },
+          "bicarbonate": {
+            "loss": 0.009430323390921286,
+            "observations": 6050
+          },
+          "calcium": {
+            "loss": 0.0018605149328371146,
+            "observations": 5254
+          },
+          "magnesium": {
+            "loss": 0.0009439420724717365,
+            "observations": 5457
+          },
+          "phosphate": {
+            "loss": 0.003306045692440245,
+            "observations": 5261
+          },
+          "wbc": {
+            "loss": 0.0013068728698353675,
+            "observations": 6416
+          },
+          "hemoglobin": {
+            "loss": 0.012101473412458501,
+            "observations": 6475
+          },
+          "hematocrit": {
+            "loss": 0.01031462628809431,
+            "observations": 7234
+          },
+          "platelets": {
+            "loss": 0.0039127307847656055,
+            "observations": 6525
+          },
+          "lactate": {
+            "loss": 0.004954727628618657,
+            "observations": 6191
+          },
+          "blood_gas_ph": {
+            "loss": 0.0035962461024488406,
+            "observations": 8670
+          },
+          "blood_gas_pco2": {
+            "loss": 0.0038861642604831738,
+            "observations": 8411
+          },
+          "blood_gas_po2": {
+            "loss": 0.01198523577790219,
+            "observations": 8413
+          },
+          "gcs_eye": {
+            "loss": 0.14373669764947594,
+            "observations": 15802
+          },
+          "gcs_motor": {
+            "loss": 0.12684599241591407,
+            "observations": 15723
+          },
+          "gcs_verbal": {
+            "loss": 0.07141169875440889,
+            "observations": 15778
+          },
+          "sex": {
+            "loss": 7.48070227506246e-06,
+            "observations": 4536
+          }
+        }
+      },
+      "forecast": {
+        "reconstruction_error": 2.1689271315992458,
+        "sum_feature_mse": 0.1662523356382494,
+        "sum_feature_cce": 2.0026747959609965,
+        "observed_scalars": 1054771,
+        "per_field": {
+          "heart_rate": {
+            "loss": 0.00496627302871036,
+            "observations": 109996
+          },
+          "sbp": {
+            "loss": 0.004724282261983913,
+            "observations": 108819
+          },
+          "dbp": {
+            "loss": 0.0025692590533862585,
+            "observations": 108805
+          },
+          "map": {
+            "loss": 0.002290955147729506,
+            "observations": 108789
+          },
+          "respiratory_rate": {
+            "loss": 0.005764444267476918,
+            "observations": 112102
+          },
+          "spo2": {
+            "loss": 0.0008913970445220311,
+            "observations": 110214
+          },
+          "temperature": {
+            "loss": 0.0026208495615010854,
+            "observations": 44124
+          },
+          "fio2": {
+            "loss": 0.04214079625089835,
+            "observations": 19186
+          },
+          "weight": {
+            "loss": 0.01073716988394094,
+            "observations": 3683
+          },
+          "glucose": {
+            "loss": 0.0015713827912830864,
+            "observations": 14367
+          },
+          "urea_nitrogen": {
+            "loss": 0.00652548137451908,
+            "observations": 11654
+          },
+          "creatinine": {
+            "loss": 0.0017915477105506542,
+            "observations": 11721
+          },
+          "sodium": {
+            "loss": 0.00423141830996551,
+            "observations": 12576
+          },
+          "potassium": {
+            "loss": 0.005584602729067489,
+            "observations": 12558
+          },
+          "chloride": {
+            "loss": 0.005533241412020776,
+            "observations": 12159
+          },
+          "bicarbonate": {
+            "loss": 0.009687042932487728,
+            "observations": 11580
+          },
+          "calcium": {
+            "loss": 0.0014427612937049825,
+            "observations": 10615
+          },
+          "magnesium": {
+            "loss": 0.0005667079248170198,
+            "observations": 11517
+          },
+          "phosphate": {
+            "loss": 0.0033692947448382164,
+            "observations": 10740
+          },
+          "wbc": {
+            "loss": 0.0010873333362571766,
+            "observations": 10380
+          },
+          "hemoglobin": {
+            "loss": 0.012086682545949327,
+            "observations": 10572
+          },
+          "hematocrit": {
+            "loss": 0.010354042813460999,
+            "observations": 12172
+          },
+          "platelets": {
+            "loss": 0.003375572604151941,
+            "observations": 10552
+          },
+          "lactate": {
+            "loss": 0.005846834816743379,
+            "observations": 7083
+          },
+          "blood_gas_ph": {
+            "loss": 0.004704419031445603,
+            "observations": 11266
+          },
+          "blood_gas_pco2": {
+            "loss": 0.0038551953756130104,
+            "observations": 10216
+          },
+          "blood_gas_po2": {
+            "loss": 0.007933347391224057,
+            "observations": 10224
+          },
+          "gcs_eye": {
+            "loss": 0.8080207631662464,
+            "observations": 42446
+          },
+          "gcs_motor": {
+            "loss": 0.5968289040257237,
+            "observations": 42283
+          },
+          "gcs_verbal": {
+            "loss": 0.597825128769026,
+            "observations": 42372
+          }
+        }
+      },
+      "overall": {
+        "reconstruction_error": 1.7191591138852007,
+        "sum_feature_mse": 0.16691523812591702,
+        "sum_feature_cce": 1.5522438757592838,
+        "observed_scalars": 1477255,
+        "per_field": {
+          "heart_rate": {
+            "loss": 0.005186276801467186,
+            "observations": 146697
+          },
+          "sbp": {
+            "loss": 0.004721723338783913,
+            "observations": 145214
+          },
+          "dbp": {
+            "loss": 0.0026147655541162323,
+            "observations": 145197
+          },
+          "map": {
+            "loss": 0.0023568519099594044,
+            "observations": 145181
+          },
+          "respiratory_rate": {
+            "loss": 0.0056161562688661374,
+            "observations": 149921
+          },
+          "spo2": {
+            "loss": 0.0008604316180258586,
+            "observations": 146983
+          },
+          "temperature": {
+            "loss": 0.0029065697625868235,
+            "observations": 60282
+          },
+          "fio2": {
+            "loss": 0.041013070809277415,
+            "observations": 28378
+          },
+          "weight": {
+            "loss": 0.009514128887194514,
+            "observations": 8106
+          },
+          "glucose": {
+            "loss": 0.001824327149940411,
+            "observations": 23875
+          },
+          "urea_nitrogen": {
+            "loss": 0.006425323260316947,
+            "observations": 17717
+          },
+          "creatinine": {
+            "loss": 0.0018580631198569571,
+            "observations": 17789
+          },
+          "sodium": {
+            "loss": 0.00440936982551548,
+            "observations": 18595
+          },
+          "potassium": {
+            "loss": 0.006098568721343705,
+            "observations": 18715
+          },
+          "chloride": {
+            "loss": 0.005824598972874269,
+            "observations": 18391
+          },
+          "bicarbonate": {
+            "loss": 0.009598945808965106,
+            "observations": 17630
+          },
+          "calcium": {
+            "loss": 0.0015810735871604187,
+            "observations": 15869
+          },
+          "magnesium": {
+            "loss": 0.0006879855772976152,
+            "observations": 16974
+          },
+          "phosphate": {
+            "loss": 0.0033484989609929012,
+            "observations": 16001
+          },
+          "wbc": {
+            "loss": 0.001171196506153078,
+            "observations": 16796
+          },
+          "hemoglobin": {
+            "loss": 0.012092300579751657,
+            "observations": 17047
+          },
+          "hematocrit": {
+            "loss": 0.010339349408463254,
+            "observations": 19406
+          },
+          "platelets": {
+            "loss": 0.003580816895068093,
+            "observations": 17077
+          },
+          "lactate": {
+            "loss": 0.0054307555937256925,
+            "observations": 13274
+          },
+          "blood_gas_ph": {
+            "loss": 0.004222483898514514,
+            "observations": 19936
+          },
+          "blood_gas_pco2": {
+            "loss": 0.0038691793028498233,
+            "observations": 18627
+          },
+          "blood_gas_po2": {
+            "loss": 0.009762426006849624,
+            "observations": 18637
+          },
+          "gcs_eye": {
+            "loss": 0.6278082753681675,
+            "observations": 58248
+          },
+          "gcs_motor": {
+            "loss": 0.46943620041814776,
+            "observations": 58006
+          },
+          "gcs_verbal": {
+            "loss": 0.4549919192706934,
+            "observations": 58150
+          },
+          "sex": {
+            "loss": 7.48070227506246e-06,
+            "observations": 4536
+          }
+        }
+      },
+      "prior": {
+        "reconstruction_error": 0.0,
+        "sum_feature_mse": 0.0,
+        "sum_feature_cce": 0.0,
+        "observed_scalars": 0,
+        "per_field": {}
+      },
+      "forecast_6h": {
+        "reconstruction_error": 1.661009696526812,
+        "sum_feature_mse": 0.1595646400832984,
+        "sum_feature_cce": 1.5014450564435136,
+        "observed_scalars": 189428,
+        "per_field": {
+          "heart_rate": {
+            "loss": 0.005220813611570828,
+            "observations": 18814
+          },
+          "sbp": {
+            "loss": 0.004416393528257243,
+            "observations": 18715
+          },
+          "dbp": {
+            "loss": 0.0025370047890288672,
+            "observations": 18708
+          },
+          "map": {
+            "loss": 0.002223421352280245,
+            "observations": 18727
+          },
+          "respiratory_rate": {
+            "loss": 0.005335592707925888,
+            "observations": 19275
+          },
+          "spo2": {
+            "loss": 0.0008241689807056323,
+            "observations": 18932
+          },
+          "temperature": {
+            "loss": 0.002897646167251017,
+            "observations": 7693
+          },
+          "fio2": {
+            "loss": 0.036692633630114074,
+            "observations": 3758
+          },
+          "weight": {
+            "loss": 0.009862945448050345,
+            "observations": 580
+          },
+          "glucose": {
+            "loss": 0.0014743034430204755,
+            "observations": 3056
+          },
+          "urea_nitrogen": {
+            "loss": 0.006471941369957586,
+            "observations": 2344
+          },
+          "creatinine": {
+            "loss": 0.0017294725633646498,
+            "observations": 2354
+          },
+          "sodium": {
+            "loss": 0.004627084165811539,
+            "observations": 2500
+          },
+          "potassium": {
+            "loss": 0.006574472236381283,
+            "observations": 2507
+          },
+          "chloride": {
+            "loss": 0.005932262775498499,
+            "observations": 2441
+          },
+          "bicarbonate": {
+            "loss": 0.008886041903106037,
+            "observations": 2336
+          },
+          "calcium": {
+            "loss": 0.001553612744177018,
+            "observations": 2038
+          },
+          "magnesium": {
+            "loss": 0.001009370123284866,
+            "observations": 2221
+          },
+          "phosphate": {
+            "loss": 0.0033363312549485576,
+            "observations": 2068
+          },
+          "wbc": {
+            "loss": 0.0012270356932725884,
+            "observations": 2154
+          },
+          "hemoglobin": {
+            "loss": 0.011560640921403914,
+            "observations": 2191
+          },
+          "hematocrit": {
+            "loss": 0.010043397768441424,
+            "observations": 2510
+          },
+          "platelets": {
+            "loss": 0.0036825698958662906,
+            "observations": 2183
+          },
+          "lactate": {
+            "loss": 0.004949285830181981,
+            "observations": 1773
+          },
+          "blood_gas_ph": {
+            "loss": 0.00427757292276337,
+            "observations": 2562
+          },
+          "blood_gas_pco2": {
+            "loss": 0.003985095894962638,
+            "observations": 2358
+          },
+          "blood_gas_po2": {
+            "loss": 0.008233528361671558,
+            "observations": 2360
+          },
+          "gcs_eye": {
+            "loss": 0.685315906120954,
+            "observations": 7446
+          },
+          "gcs_motor": {
+            "loss": 0.47791959871844397,
+            "observations": 7401
+          },
+          "gcs_verbal": {
+            "loss": 0.3382095516041156,
+            "observations": 7423
+          }
+        }
+      },
+      "forecast_12h": {
+        "reconstruction_error": 1.8559376774323781,
+        "sum_feature_mse": 0.16152174601969765,
+        "sum_feature_cce": 1.6944159314126805,
+        "observed_scalars": 367697,
+        "per_field": {
+          "heart_rate": {
+            "loss": 0.005152335739622922,
+            "observations": 37389
+          },
+          "sbp": {
+            "loss": 0.004477799208092776,
+            "observations": 37178
+          },
+          "dbp": {
+            "loss": 0.0025356080895430097,
+            "observations": 37168
+          },
+          "map": {
+            "loss": 0.002208269859280244,
+            "observations": 37190
+          },
+          "respiratory_rate": {
+            "loss": 0.00542111800024051,
+            "observations": 38212
+          },
+          "spo2": {
+            "loss": 0.0008327799291905767,
+            "observations": 37575
+          },
+          "temperature": {
+            "loss": 0.0028411648325043326,
+            "observations": 15255
+          },
+          "fio2": {
+            "loss": 0.03743719072579155,
+            "observations": 7256
+          },
+          "weight": {
+            "loss": 0.009548942064473234,
+            "observations": 1208
+          },
+          "glucose": {
+            "loss": 0.0015416364003513925,
+            "observations": 5501
+          },
+          "urea_nitrogen": {
+            "loss": 0.006651820140264187,
+            "observations": 4187
+          },
+          "creatinine": {
+            "loss": 0.0017930080524689084,
+            "observations": 4212
+          },
+          "sodium": {
+            "loss": 0.004629901883601878,
+            "observations": 4512
+          },
+          "potassium": {
+            "loss": 0.006369328114267443,
+            "observations": 4485
+          },
+          "chloride": {
+            "loss": 0.005987793255659455,
+            "observations": 4379
+          },
+          "bicarbonate": {
+            "loss": 0.00908356248656719,
+            "observations": 4190
+          },
+          "calcium": {
+            "loss": 0.0015806845956504892,
+            "observations": 3701
+          },
+          "magnesium": {
+            "loss": 0.0008203526915814049,
+            "observations": 4006
+          },
+          "phosphate": {
+            "loss": 0.0034343038317260904,
+            "observations": 3752
+          },
+          "wbc": {
+            "loss": 0.0011974736585629935,
+            "observations": 3705
+          },
+          "hemoglobin": {
+            "loss": 0.011841396313149786,
+            "observations": 3769
+          },
+          "hematocrit": {
+            "loss": 0.010249523082593295,
+            "observations": 4393
+          },
+          "platelets": {
+            "loss": 0.0034569078702346096,
+            "observations": 3767
+          },
+          "lactate": {
+            "loss": 0.005046301530075683,
+            "observations": 3206
+          },
+          "blood_gas_ph": {
+            "loss": 0.0044107185240789566,
+            "observations": 4679
+          },
+          "blood_gas_pco2": {
+            "loss": 0.003974023717568722,
+            "observations": 4321
+          },
+          "blood_gas_po2": {
+            "loss": 0.008997801422556012,
+            "observations": 4325
+          },
+          "gcs_eye": {
+            "loss": 0.7394914231863466,
+            "observations": 14768
+          },
+          "gcs_motor": {
+            "loss": 0.5299424303716739,
+            "observations": 14687
+          },
+          "gcs_verbal": {
+            "loss": 0.42498207785465997,
+            "observations": 14721
+          }
+        }
+      },
+      "forecast_24h": {
+        "reconstruction_error": 2.054091149416414,
+        "sum_feature_mse": 0.16507424928654024,
+        "sum_feature_cce": 1.889016900129874,
+        "observed_scalars": 720124,
+        "per_field": {
+          "heart_rate": {
+            "loss": 0.005087272340636256,
+            "observations": 74070
+          },
+          "sbp": {
+            "loss": 0.0046080240381795035,
+            "observations": 73466
+          },
+          "dbp": {
+            "loss": 0.0025640264476845505,
+            "observations": 73454
+          },
+          "map": {
+            "loss": 0.002276237631809463,
+            "observations": 73451
+          },
+          "respiratory_rate": {
+            "loss": 0.0056103815514141325,
+            "observations": 75592
+          },
+          "spo2": {
+            "loss": 0.0008573905765433311,
+            "observations": 74380
+          },
+          "temperature": {
+            "loss": 0.0027214206034812992,
+            "observations": 29881
+          },
+          "fio2": {
+            "loss": 0.03982359428570662,
+            "observations": 13533
+          },
+          "weight": {
+            "loss": 0.01119815886722759,
+            "observations": 2324
+          },
+          "glucose": {
+            "loss": 0.0015736771827489808,
+            "observations": 10242
+          },
+          "urea_nitrogen": {
+            "loss": 0.006608724876300693,
+            "observations": 8185
+          },
+          "creatinine": {
+            "loss": 0.0019157008375821722,
+            "observations": 8227
+          },
+          "sodium": {
+            "loss": 0.00440500928477778,
+            "observations": 8816
+          },
+          "potassium": {
+            "loss": 0.0059830575116319685,
+            "observations": 8828
+          },
+          "chloride": {
+            "loss": 0.005699274317345825,
+            "observations": 8543
+          },
+          "bicarbonate": {
+            "loss": 0.009537745350712416,
+            "observations": 8114
+          },
+          "calcium": {
+            "loss": 0.0014836715129318838,
+            "observations": 7386
+          },
+          "magnesium": {
+            "loss": 0.0006424499547053406,
+            "observations": 8040
+          },
+          "phosphate": {
+            "loss": 0.003419299660785719,
+            "observations": 7476
+          },
+          "wbc": {
+            "loss": 0.0011457065792520246,
+            "observations": 7274
+          },
+          "hemoglobin": {
+            "loss": 0.011979299242503235,
+            "observations": 7423
+          },
+          "hematocrit": {
+            "loss": 0.010307253275588932,
+            "observations": 8630
+          },
+          "platelets": {
+            "loss": 0.003482969610369497,
+            "observations": 7403
+          },
+          "lactate": {
+            "loss": 0.005467657239130627,
+            "observations": 5359
+          },
+          "blood_gas_ph": {
+            "loss": 0.004609445583494238,
+            "observations": 8225
+          },
+          "blood_gas_pco2": {
+            "loss": 0.003844030925038337,
+            "observations": 7501
+          },
+          "blood_gas_po2": {
+            "loss": 0.008222769998957826,
+            "observations": 7507
+          },
+          "gcs_eye": {
+            "loss": 0.7862449765209495,
+            "observations": 28991
+          },
+          "gcs_motor": {
+            "loss": 0.5729658763583113,
+            "observations": 28864
+          },
+          "gcs_verbal": {
+            "loss": 0.5298060472506133,
+            "observations": 28939
+          }
+        }
+      },
+      "patients": 4536,
+      "context_hours": 12,
+      "clinical_forecast": {
+        "heart_rate": {
+          "unit": "bpm",
+          "observations": 109996,
+          "mae": 14.683978574961513,
+          "rmse": 18.463608687978468,
+          "standardized_rmse": 1.0082933823064173
+        },
+        "sbp": {
+          "unit": "mmHg",
+          "observations": 108819,
+          "mae": 16.24979690730751,
+          "rmse": 20.826224578412695,
+          "standardized_rmse": 1.0174508952939958
+        },
+        "dbp": {
+          "unit": "mmHg",
+          "observations": 108805,
+          "mae": 10.998503388294013,
+          "rmse": 13.989849093208678,
+          "standardized_rmse": 0.9861222656109498
+        },
+        "map": {
+          "unit": "mmHg",
+          "observations": 108789,
+          "mae": 10.934328236508144,
+          "rmse": 14.167721278436712,
+          "standardized_rmse": 0.9657847921027582
+        },
+        "respiratory_rate": {
+          "unit": "breaths/min",
+          "observations": 112102,
+          "mae": 4.058568538091297,
+          "rmse": 5.238751679308497,
+          "standardized_rmse": 0.9732205199350599
+        },
+        "spo2": {
+          "unit": "%",
+          "observations": 110214,
+          "mae": 2.156712815630345,
+          "rmse": 2.955771038724148,
+          "standardized_rmse": 1.0566508316981886
+        },
+        "temperature": {
+          "unit": "degC",
+          "observations": 44124,
+          "mae": 0.46470621954103336,
+          "rmse": 0.635377261623151,
+          "standardized_rmse": 0.9385129866584303
+        },
+        "fio2": {
+          "unit": "fraction",
+          "observations": 19186,
+          "mae": 0.1173402332616834,
+          "rmse": 0.16217296746601845,
+          "standardized_rmse": 0.8490461678655389
+        },
+        "weight": {
+          "unit": "kg",
+          "observations": 3683,
+          "mae": 21.872233943992732,
+          "rmse": 27.801329512726447,
+          "standardized_rmse": 1.1631025068582368
+        },
+        "glucose": {
+          "unit": "mg/dL",
+          "observations": 14367,
+          "mae": 43.95015047162905,
+          "rmse": 64.92666209265765,
+          "standardized_rmse": 1.0107533943544005
+        },
+        "urea_nitrogen": {
+          "unit": "mg/dL",
+          "observations": 11654,
+          "mae": 15.99259648896704,
+          "rmse": 20.679795631497,
+          "standardized_rmse": 0.9033028139463504
+        },
+        "creatinine": {
+          "unit": "mg/dL",
+          "observations": 11721,
+          "mae": 0.890891556848028,
+          "rmse": 1.4010130896835489,
+          "standardized_rmse": 0.9018666478204199
+        },
+        "sodium": {
+          "unit": "mEq/L",
+          "observations": 12576,
+          "mae": 4.91385083210491,
+          "rmse": 6.439885935012511,
+          "standardized_rmse": 1.079123211803239
+        },
+        "potassium": {
+          "unit": "mEq/L",
+          "observations": 12558,
+          "mae": 0.5004863609985291,
+          "rmse": 0.6650987744684347,
+          "standardized_rmse": 0.9682169821334718
+        },
+        "chloride": {
+          "unit": "mEq/L",
+          "observations": 12159,
+          "mae": 5.4374792106411,
+          "rmse": 7.066647277421416,
+          "standardized_rmse": 1.0155980323361804
+        },
+        "bicarbonate": {
+          "unit": "mEq/L",
+          "observations": 11580,
+          "mae": 3.594304704419072,
+          "rmse": 4.724293271638809,
+          "standardized_rmse": 1.0065746157068332
+        },
+        "calcium": {
+          "unit": "mg/dL",
+          "observations": 10615,
+          "mae": 0.6391320998840027,
+          "rmse": 0.8546331696294691,
+          "standardized_rmse": 1.0258501767918307
+        },
+        "magnesium": {
+          "unit": "mg/dL",
+          "observations": 11517,
+          "mae": 0.3134641009895285,
+          "rmse": 0.45230695022804057,
+          "standardized_rmse": 1.014116826542861
+        },
+        "phosphate": {
+          "unit": "mg/dL",
+          "observations": 10740,
+          "mae": 1.146577375762593,
+          "rmse": 1.4859680801865143,
+          "standardized_rmse": 0.9736288002244642
+        },
+        "wbc": {
+          "unit": "K/uL",
+          "observations": 10380,
+          "mae": 7.913995641389069,
+          "rmse": 13.13054020918221,
+          "standardized_rmse": 1.2832109892333456
+        },
+        "hemoglobin": {
+          "unit": "g/dL",
+          "observations": 10572,
+          "mae": 1.7154846097085474,
+          "rmse": 2.121831369193608,
+          "standardized_rmse": 1.0030800926632675
+        },
+        "hematocrit": {
+          "unit": "%",
+          "observations": 12172,
+          "mae": 5.039008280974797,
+          "rmse": 6.237569971129447,
+          "standardized_rmse": 1.0117588777312019
+        },
+        "platelets": {
+          "unit": "K/uL",
+          "observations": 10552,
+          "mae": 74.61494093671317,
+          "rmse": 103.3012277968847,
+          "standardized_rmse": 1.0071724880084325
+        },
+        "lactate": {
+          "unit": "mmol/L",
+          "observations": 7083,
+          "mae": 1.4745725850509561,
+          "rmse": 2.213650125188586,
+          "standardized_rmse": 0.9772372236467166
+        },
+        "blood_gas_ph": {
+          "unit": "pH",
+          "observations": 11266,
+          "mae": 0.07803384049074033,
+          "rmse": 0.09808195850121135,
+          "standardized_rmse": 1.1481868805251534
+        },
+        "blood_gas_pco2": {
+          "unit": "mmHg",
+          "observations": 10216,
+          "mae": 7.629776680968941,
+          "rmse": 10.679517779007407,
+          "standardized_rmse": 0.9998047677946689
+        },
+        "blood_gas_po2": {
+          "unit": "mmHg",
+          "observations": 10224,
+          "mae": 49.8745396772111,
+          "rmse": 69.20687745561354,
+          "standardized_rmse": 0.7486089608246783
+        },
+        "gcs_eye": {
+          "observations": 42446,
+          "accuracy": 0.6795457758092636
+        },
+        "gcs_motor": {
+          "observations": 42283,
+          "accuracy": 0.7907196745737057
+        },
+        "gcs_verbal": {
+          "observations": 42372,
+          "accuracy": 0.8010006608137449
+        }
+      },
+      "carry_forward": {
+        "heart_rate": {
+          "unit": "bpm",
+          "mae": 10.940082724490873,
+          "rmse": 15.126827381374206,
+          "standardized_rmse": 0.8260725301149705
+        },
+        "sbp": {
+          "unit": "mmHg",
+          "mae": 15.266900488247932,
+          "rmse": 20.07358427020304,
+          "standardized_rmse": 0.9806811700593978
+        },
+        "dbp": {
+          "unit": "mmHg",
+          "mae": 9.722865397925434,
+          "rmse": 13.318398855840572,
+          "standardized_rmse": 0.938792803734204
+        },
+        "map": {
+          "unit": "mmHg",
+          "mae": 10.781308959723056,
+          "rmse": 14.908950197672311,
+          "standardized_rmse": 1.0163128624674722
+        },
+        "respiratory_rate": {
+          "unit": "breaths/min",
+          "mae": 4.028140588133463,
+          "rmse": 5.530201872905384,
+          "standardized_rmse": 1.02736420268831
+        },
+        "spo2": {
+          "unit": "%",
+          "mae": 2.0854608485769957,
+          "rmse": 3.078989809404384,
+          "standardized_rmse": 1.100699986661254
+        },
+        "temperature": {
+          "unit": "degC",
+          "mae": 0.48381935421868616,
+          "rmse": 0.6885894140556372,
+          "standardized_rmse": 1.0171124253263448
+        },
+        "fio2": {
+          "unit": "fraction",
+          "mae": 0.10298452367949576,
+          "rmse": 0.17323378167356832,
+          "standardized_rmse": 0.906954351104282
+        },
+        "weight": {
+          "unit": "kg",
+          "mae": 7.455478150309211,
+          "rmse": 13.332304427945486,
+          "standardized_rmse": 0.5577732063224564
+        },
+        "glucose": {
+          "unit": "mg/dL",
+          "mae": 40.85368654495063,
+          "rmse": 65.36757412223781,
+          "standardized_rmse": 1.0176173438652167
+        },
+        "urea_nitrogen": {
+          "unit": "mg/dL",
+          "mae": 6.436584100810009,
+          "rmse": 10.636140183065717,
+          "standardized_rmse": 0.4645914073859548
+        },
+        "creatinine": {
+          "unit": "mg/dL",
+          "mae": 0.3693169496891503,
+          "rmse": 0.7336279889725,
+          "standardized_rmse": 0.4722544136338584
+        },
+        "sodium": {
+          "unit": "mEq/L",
+          "mae": 3.040415347731523,
+          "rmse": 4.195544090763846,
+          "standardized_rmse": 0.7030418023201191
+        },
+        "potassium": {
+          "unit": "mEq/L",
+          "mae": 0.5033609221834652,
+          "rmse": 0.7173725018993309,
+          "standardized_rmse": 1.0443144169219523
+        },
+        "chloride": {
+          "unit": "mEq/L",
+          "mae": 3.683528692248385,
+          "rmse": 4.966760206311517,
+          "standardized_rmse": 0.7138083584180577
+        },
+        "bicarbonate": {
+          "unit": "mEq/L",
+          "mae": 2.6625755799249045,
+          "rmse": 3.6206327956715363,
+          "standardized_rmse": 0.7714248153892478
+        },
+        "calcium": {
+          "unit": "mg/dL",
+          "mae": 0.5023745204971196,
+          "rmse": 0.7225774164273168,
+          "standardized_rmse": 0.8673384052120547
+        },
+        "magnesium": {
+          "unit": "mg/dL",
+          "mae": 0.3433188537655381,
+          "rmse": 0.5322926135624207,
+          "standardized_rmse": 1.1934525785773842
+        },
+        "phosphate": {
+          "unit": "mg/dL",
+          "mae": 0.9194686591997211,
+          "rmse": 1.288786887335432,
+          "standardized_rmse": 0.8444326951517825
+        },
+        "wbc": {
+          "unit": "K/uL",
+          "mae": 3.751691629289633,
+          "rmse": 7.314832495936741,
+          "standardized_rmse": 0.7148581317791655
+        },
+        "hemoglobin": {
+          "unit": "g/dL",
+          "mae": 1.169966873683872,
+          "rmse": 1.5436213989249723,
+          "standardized_rmse": 0.7297356040405402
+        },
+        "hematocrit": {
+          "unit": "%",
+          "mae": 3.4325778162873006,
+          "rmse": 4.538493329495471,
+          "standardized_rmse": 0.7361618288683386
+        },
+        "platelets": {
+          "unit": "K/uL",
+          "mae": 36.98100504155996,
+          "rmse": 55.80296671216013,
+          "standardized_rmse": 0.5440711017709026
+        },
+        "lactate": {
+          "unit": "mmol/L",
+          "mae": 1.4162597101775007,
+          "rmse": 2.3314045985051894,
+          "standardized_rmse": 1.0292210729761564
+        },
+        "blood_gas_ph": {
+          "unit": "pH",
+          "mae": 0.0618070066070375,
+          "rmse": 0.08325718866988709,
+          "standardized_rmse": 0.9746421584657811
+        },
+        "blood_gas_pco2": {
+          "unit": "mmHg",
+          "mae": 6.477325736076083,
+          "rmse": 9.228134289827189,
+          "standardized_rmse": 0.8639278337974005
+        },
+        "blood_gas_po2": {
+          "unit": "mmHg",
+          "mae": 49.39315255399041,
+          "rmse": 76.07686864406263,
+          "standardized_rmse": 0.8229214735913184
+        },
+        "gcs_eye": {
+          "accuracy": 0.6246524996466098
+        },
+        "gcs_motor": {
+          "accuracy": 0.7525010051320862
+        },
+        "gcs_verbal": {
+          "accuracy": 0.7817662607382233
+        }
+      },
+      "mean_standardized_numeric_mse": 1.012062383673584,
+      "carry_forward_mean_standardized_numeric_mse": 0.7541263279845408,
+      "dynamics": {
+        "jacobian_frobenius_squared": 0.016681151190995492,
+        "states": 174203
+      }
+    }
+  }
+}

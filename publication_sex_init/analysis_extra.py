@@ -58,7 +58,7 @@ def noise_forecast(model,payload,dataset,sigma,out,label):
         if sigma:
             seed=int(hashlib.sha256(("noise/"+str(cpu["subject_ids"][0])+"/"+str(sigma)).encode()).hexdigest()[:12],16)
             generator=torch.Generator(device="cuda").manual_seed(seed)
-            perturb=torch.randn(batch["values"].shape,device="cuda",generator=generator)*torch.tensor(std,device="cuda")*sigma
+            perturb=torch.randn(batch["values"].shape,device="cuda",dtype=batch['values'].dtype,generator=generator)*torch.tensor(std,device="cuda",dtype=batch['values'].dtype)*sigma
             inputmask=batch["context_mask"]*selected[None,None,:]
             noisy={**batch,"values":batch["values"]+perturb*inputmask}
             pred=model(noisy,sample=False)["prediction"]
@@ -96,7 +96,7 @@ def noise_forecast(model,payload,dataset,sigma,out,label):
 
 
 def jacobian_utility(cfg):
-    from mimic_experiment.jacobian_utility_adni import tangent,field_jacobian
+    from .sensitivity import tangent,field_jacobian
     out=Path(cfg["output"]);dataset=cfg["dataset"];results={}
     for label,checkpoint in cfg["models"].items():
         model,saved=load({"checkpoint":checkpoint})
@@ -361,7 +361,7 @@ def cost(cfg):
 def stability(cfg):
     from .models import objective
     from .train import data_context
-    from mimic_experiment.jacobian_utility_adni import tangent
+    from .sensitivity import tangent
     out=Path(cfg["output"]);rows=[]
     checkpoints=dict(cfg["models"])
     for family,path in cfg["models"].items():
@@ -375,8 +375,11 @@ def stability(cfg):
         model,saved=load({"checkpoint":checkpoint})
         for p in model.parameters():p.requires_grad_(True)
         config=dict(saved["config"]);payload,schema,splits,batches,evaluate=data_context(config)
+        # Restore the same input-dropout draw for every frozen checkpoint.
+        from paper_odeae.train import seed_all
+        seed_all(config['seed'])
         batch=next(batches(1))
-        small={k:v[:8] if torch.is_tensor(v) else v for k,v in batch.items()}
+        small={k:v[:8] if torch.is_tensor(v) or isinstance(v,list) else v for k,v in batch.items()}
         small["max_context"]=int(small["cutoff"].max())
         before=[p.detach().clone() for p in model.parameters()]
         pred=model(small,sample=False);loss,parts=objective(model,pred,small,schema,config)
@@ -428,7 +431,12 @@ def stability(cfg):
                      "recursive_state_gains":recursive,"local_update_gains":update,
                      "gradient_normalization":"historical/future contributions share original full-batch field denominators",
                      "batch_kind":"fixed eight-patient diagnostic; no parameter update",
-                     "patient_ids":small.get("subject_ids",[])[:8],"physical_gpu":cfg["physical_gpu"]})
+                     "patient_ids":small.get("subject_ids",[])[:8],"physical_gpu":cfg["physical_gpu"],
+                     "checkpoint":checkpoint,"checkpoint_sha256":hashlib.sha256(Path(checkpoint).read_bytes()).hexdigest(),
+                     "cutoff":small['cutoff'].cpu().tolist(),"history_spans":spans.cpu().tolist(),
+                     "input_sha256":hashlib.sha256(small['context_mask'].cpu().numpy().tobytes()+small['values'].cpu().numpy().tobytes()).hexdigest(),
+                     "solver":"Tsit5","rtol":config['rtol'],"atol":config['atol'],
+                     "tangent_rtol":1e-8,"tangent_atol":1e-10,"parameter_updates":0})
     atomic(out/"metrics.json",rows);finish(cfg)
 
 

@@ -176,7 +176,7 @@ def summarize_forecasts(rows,out):
     return {'horizons':result,'sensitivity_quartiles':quartile_rows,'region_forecast_errors':region_rows}
 
 
-def plots(out,xy,meta,regions,C,D,J,projection,forecast_rows,summary):
+def plots(out,xy,meta,regions,C,D,J,projection,forecast_rows,summary,latent_dimensions=6):
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
@@ -190,16 +190,17 @@ def plots(out,xy,meta,regions,C,D,J,projection,forecast_rows,summary):
     fig,axes=plt.subplots(2,2,figsize=(13,10))
     axes[0,0].scatter(*xy[test].T,c=regions[test],cmap=ListedColormap(colors),vmin=0,vmax=6,s=9,alpha=.6,rasterized=True)
     for i,name in enumerate(REGIONS):axes[0,0].scatter([],[],c=colors[i],label=name)
-    axes[0,0].legend(fontsize=7);axes[0,0].set_title('Regions defined by training neighbors in full 6D')
-    for ax,value,title in [(axes[0,1],C,'6D direction consistency C'),(axes[1,0],D,'6D local sensitivity D'),(axes[1,1],J,'Exact Jacobian Frobenius norm')]:
+    full=f'{latent_dimensions}D'
+    axes[0,0].legend(fontsize=7);axes[0,0].set_title(f'Regions defined by training neighbors in full {full}')
+    for ax,value,title in [(axes[0,1],C,f'{full} direction consistency C'),(axes[1,0],D,f'{full} local sensitivity D'),(axes[1,1],J,'Exact Jacobian Frobenius norm')]:
         lo,hi=np.quantile(value[train],[.01,.99]);sc=ax.scatter(*xy[test].T,c=value[test],cmap='viridis',norm=Normalize(lo,hi),s=9,alpha=.65,rasterized=True)
         fig.colorbar(sc,ax=ax,extend='both');ax.set_title(title)
     for ax in axes.flat:ax.set(xlabel='Original state PC1',ylabel='Original state PC2')
     save(fig,'local_dynamics_map')
     fig,axes=plt.subplots(1,3,figsize=(17,5))
     metrics=[C[test],projection['C_2d_neighbors_full_velocity'][test],projection['C_2d_neighbors_projected_velocity'][test]]
-    axes[0].boxplot(metrics,tick_labels=['6D NN / 6D v','2D NN / 6D v','2D NN / 2D v'],showfliers=False);axes[0].set(title='Direction consistency under projection',ylabel='Mean cosine similarity')
-    axes[1].hist(projection['neighbor_patient_overlap'][test],bins=20,color='#4c78a8');axes[1].set(title='6D versus 2D neighbor patient overlap',xlabel='Fraction of common neighbors',ylabel='Test states')
+    axes[0].boxplot(metrics,tick_labels=[f'{full} NN / {full} v',f'2D NN / {full} v','2D NN / 2D v'],showfliers=False);axes[0].set(title='Direction consistency under projection',ylabel='Mean cosine similarity')
+    axes[1].hist(projection['neighbor_patient_overlap'][test],bins=20,color='#4c78a8');axes[1].set(title=f'{full} versus 2D neighbor patient overlap',xlabel='Fraction of common neighbors',ylabel='Test states')
     axes[2].scatter(C[test],projection['C_2d_neighbors_projected_velocity'][test],s=7,alpha=.3);axes[2].plot([-1,1],[-1,1],'k--',lw=1)
     axes[2].set(xlabel='Full-space C',ylabel='2D-neighbor / projected-velocity C',title='Projected versus full direction agreement')
     save(fig,'projection_consistency')
@@ -353,7 +354,7 @@ def main():
     summary['low_consistency_states']={'states':int(low.sum()),'fraction':float(low.sum()/test.sum()),
         'by_region':{name:int((low&(regions==i)).sum()) for i,name in enumerate(REGIONS) if (low&(regions==i)).any()}}
     (out/'metrics.json').write_text(json.dumps(summary,indent=2,allow_nan=False))
-    plots(out,a['coordinates'],meta,regions,C,D,jac,projection,queries,forecast)
+    plots(out,a['coordinates'],meta,regions,C,D,jac,projection,queries,forecast,latent_dimensions=z.shape[-1])
     provenance={'model_label':info.get('model_label','shared_matched'),'checkpoint_epoch':saved['epoch'],'state_source':str(source),'state_variance_retained_2d':info['state_variance_retained_2d'],
                 'checkpoint_sha256':info['checkpoint_sha256'],'dataset_sha256':info['dataset_sha256'],'physical_gpu':args.gpu,'gpu_name':torch.cuda.get_device_name(),
                 'model_device':str(next(model.parameters()).device),'knn_device':str(neighbors.device),'jacobian_device':str(J.device),'forecast_device':str(end.device),

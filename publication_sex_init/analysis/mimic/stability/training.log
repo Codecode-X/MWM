@@ -1,0 +1,18 @@
+
+Publication dispatch 2026-11-07T06:00:10.096599+00:00 physical GPU 2
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5/publication_sex_init/analysis.py", line 309, in <module>
+    main()
+  File "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5/publication_sex_init/analysis.py", line 305, in main
+    run(cfg)
+  File "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5/publication_sex_init/analysis_extra.py", line 463, in run
+    {"jacobian_utility":jacobian_utility,"clinical":mimic_clinical,"local":mimic_local,
+  File "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5/publication_sex_init/analysis_extra.py", line 364, in stability
+    from mimic_experiment.jacobian_utility_adni import tangent
+  File "/home/xjh/projects/LatentODE/publication_sex_init/source_snapshot/v5/mimic_experiment/jacobian_utility_adni.py", line 25, in <module>
+    from component_ablation_model import make_model
+ModuleNotFoundError: No module named 'component_ablation_model'
+
+Publication dispatch 2026-11-08T06:15:17.297501+00:00 physical GPU 2
