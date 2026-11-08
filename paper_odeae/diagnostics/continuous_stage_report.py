@@ -104,7 +104,7 @@ def summarize(out,arrays,states,cohorts,provenance):
     return summary
 
 
-def plots(out,a,states,cohorts,summary):
+def plots(out,a,states,cohorts,summary,only_space=False):
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
@@ -118,7 +118,8 @@ def plots(out,a,states,cohorts,summary):
     lim=max(float(np.max(abs(rate))),1e-8);norm=TwoSlopeNorm(vmin=-lim,vcenter=0,vmax=lim)
     fig,axes=plt.subplots(1,3,figsize=(18,5.7))
     dx=states.diagnosis.to_numpy();missing=~np.isfinite(dx)
-    axes[0].scatter(*xy[missing].T,c='#aaa',s=8,alpha=.4,label='Unrecorded')
+    axes[0].scatter(*xy[missing].T,marker='o',facecolors='none',edgecolors='#d0d0d0',
+                    linewidths=.6,s=12,alpha=.8,label='Unrecorded')
     for k,label in enumerate(LABELS):
         mask=dx==k;axes[0].scatter(*xy[mask].T,c=COLORS[k],s=9,alpha=.5,label=f'{label} (n={mask.sum()})',rasterized=True)
     axes[0].legend(fontsize=8);axes[0].set_title('Observed current diagnosis')
@@ -129,6 +130,8 @@ def plots(out,a,states,cohorts,summary):
     xlim=(float(xy[:,0].min())-.2,float(xy[:,0].max())+.2);ylim=(float(xy[:,1].min())-.2,float(xy[:,1].max())+.2)
     for ax in axes:ax.set(xlabel='Existing train PCA: PC1',ylabel='Existing train PCA: PC2',xlim=xlim,ylim=ylim)
     save(fig,'continuous_stage_space')
+    if only_space:
+        return
     fig,axes=plt.subplots(1,2,figsize=(13.5,6))
     for ax,values,cmap,kw,title in [(axes[0],stage,'viridis',{'clim':(0,2)},'Raw projected ODE field: colored by stage'),
                                    (axes[1],rate,'coolwarm',{'norm':norm},'Raw projected ODE field: colored by ds/dt')]:

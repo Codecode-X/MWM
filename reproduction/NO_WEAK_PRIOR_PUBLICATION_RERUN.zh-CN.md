@@ -470,7 +470,7 @@ L2 对两场独立参数求和，Jacobian 在相同有效生成状态上对两�
 
 ![图 8：ADNI 确定性 ODE-AE：状态分布、原始速度与平均速度](../publication_sex_init/analysis/adni/baseline_state/deterministic/state_and_velocity.png)
 
-**图 8｜ADNI 确定性 ODE-AE：状态分布、原始速度与平均速度。** 左图为测试状态，颜色表示CN=0、MCI=1、Dementia=2；−1 表示本次诊断缺失；中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 49.41% 状态方差和 12.90% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
+**图 8｜ADNI 确定性 ODE-AE：状态分布、原始速度与平均速度。** 左图为测试状态，实心点颜色表示CN、MCI、Dementia 诊断；本次标签缺失的状态用浅灰色空心圆单独标记，不参与色条。中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 49.41% 状态方差和 12.90% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
 
 ![图 9：ADNI HealthFlux-KL：患者状态和临床轨迹](../publication_sex_init/analysis/adni/baseline_state/healthflux/clinical_cases.png)
 
@@ -478,7 +478,7 @@ L2 对两场独立参数求和，Jacobian 在相同有效生成状态上对两�
 
 ![图 10：ADNI HealthFlux-KL：状态分布、原始速度与平均速度](../publication_sex_init/analysis/adni/baseline_state/healthflux/state_and_velocity.png)
 
-**图 10｜ADNI HealthFlux-KL：状态分布、原始速度与平均速度。** 左图为测试状态，颜色表示CN=0、MCI=1、Dementia=2；−1 表示本次诊断缺失；中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 51.54% 状态方差和 0.41% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
+**图 10｜ADNI HealthFlux-KL：状态分布、原始速度与平均速度。** 左图为测试状态，实心点颜色表示CN、MCI、Dementia 诊断；本次标签缺失的状态用浅灰色空心圆单独标记，不参与色条。中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 51.54% 状态方差和 0.41% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
 
 ![图 11：ADNI Latent ODE：患者状态和临床轨迹](../publication_sex_init/analysis/adni/baseline_state/latent_ode/clinical_cases.png)
 
@@ -486,7 +486,7 @@ L2 对两场独立参数求和，Jacobian 在相同有效生成状态上对两�
 
 ![图 12：ADNI Latent ODE：状态分布、原始速度与平均速度](../publication_sex_init/analysis/adni/baseline_state/latent_ode/state_and_velocity.png)
 
-**图 12｜ADNI Latent ODE：状态分布、原始速度与平均速度。** 左图为测试状态，颜色表示CN=0、MCI=1、Dementia=2；−1 表示本次诊断缺失；中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 80.09% 状态方差和 68.37% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
+**图 12｜ADNI Latent ODE：状态分布、原始速度与平均速度。** 左图为测试状态，实心点颜色表示CN、MCI、Dementia 诊断；本次标签缺失的状态用浅灰色空心圆单独标记，不参与色条。中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 80.09% 状态方差和 68.37% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
 
 ![图 13：ADNI 概率 ODE-AE：患者状态和临床轨迹](../publication_sex_init/analysis/adni/baseline_state/ode_ae/clinical_cases.png)
 
@@ -494,7 +494,7 @@ L2 对两场独立参数求和，Jacobian 在相同有效生成状态上对两�
 
 ![图 14：ADNI 概率 ODE-AE：状态分布、原始速度与平均速度](../publication_sex_init/analysis/adni/baseline_state/ode_ae/state_and_velocity.png)
 
-**图 14｜ADNI 概率 ODE-AE：状态分布、原始速度与平均速度。** 左图为测试状态，颜色表示CN=0、MCI=1、Dementia=2；−1 表示本次诊断缺失；中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 99.03% 状态方差和 99.88% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
+**图 14｜ADNI 概率 ODE-AE：状态分布、原始速度与平均速度。** 左图为测试状态，实心点颜色表示CN、MCI、Dementia 诊断；本次标签缺失的状态用浅灰色空心圆单独标记，不参与色条。中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 99.03% 状态方差和 99.88% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
 
 ![图 15：ADNI ODE-RNN：患者状态和临床轨迹](../publication_sex_init/analysis/adni/baseline_state/ode_rnn/clinical_cases.png)
 
@@ -502,7 +502,7 @@ L2 对两场独立参数求和，Jacobian 在相同有效生成状态上对两�
 
 ![图 16：ADNI ODE-RNN：状态分布、原始速度与平均速度](../publication_sex_init/analysis/adni/baseline_state/ode_rnn/state_and_velocity.png)
 
-**图 16｜ADNI ODE-RNN：状态分布、原始速度与平均速度。** 左图为测试状态，颜色表示CN=0、MCI=1、Dementia=2；−1 表示本次诊断缺失；中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 51.80% 状态方差和 15.84% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
+**图 16｜ADNI ODE-RNN：状态分布、原始速度与平均速度。** 左图为测试状态，实心点颜色表示CN、MCI、Dementia 诊断；本次标签缺失的状态用浅灰色空心圆单独标记，不参与色条。中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 51.80% 状态方差和 15.84% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
 
 ![图 17：ADNI M0：患者状态和临床轨迹](../publication_sex_init/analysis/adni/state/clinical_cases.png)
 
@@ -510,7 +510,7 @@ L2 对两场独立参数求和，Jacobian 在相同有效生成状态上对两�
 
 ![图 18：ADNI M0：状态分布、原始速度与平均速度](../publication_sex_init/analysis/adni/state/state_and_velocity.png)
 
-**图 18｜ADNI M0：状态分布、原始速度与平均速度。** 左图为测试状态，颜色表示CN=0、MCI=1、Dementia=2；−1 表示本次诊断缺失；中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 42.36% 状态方差和 15.60% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。 测试状态沿 PC1 呈现从 CN 到 Dementia 的顺序，右侧的投影运动整体更快。
+**图 18｜ADNI M0：状态分布、原始速度与平均速度。** 左图为测试状态，实心点颜色表示CN、MCI、Dementia 诊断；本次标签缺失的状态用浅灰色空心圆单独标记，不参与色条。中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 42.36% 状态方差和 15.60% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。 测试状态沿 PC1 呈现从 CN 到 Dementia 的顺序，右侧的投影运动整体更快。
 
 ![图 19：MIMIC 确定性 ODE-AE：患者状态和临床轨迹](../publication_sex_init/analysis/mimic/baseline_state/deterministic/clinical_cases.png)
 
@@ -518,7 +518,7 @@ L2 对两场独立参数求和，Jacobian 在相同有效生成状态上对两�
 
 ![图 20：MIMIC 确定性 ODE-AE：状态分布、原始速度与平均速度](../publication_sex_init/analysis/mimic/baseline_state/deterministic/state_and_velocity.png)
 
-**图 20｜MIMIC 确定性 ODE-AE：状态分布、原始速度与平均速度。** 左图为测试状态，颜色表示GCS-motor 类别；−1 表示本次记录缺失；中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 68.63% 状态方差和 38.75% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
+**图 20｜MIMIC 确定性 ODE-AE：状态分布、原始速度与平均速度。** 左图为测试状态，实心点颜色表示GCS-motor 类别编码（0–5）；本次标签缺失的状态用浅灰色空心圆单独标记，不参与色条。中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 68.63% 状态方差和 38.75% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
 
 ![图 21：MIMIC HealthFlux-KL：患者状态和临床轨迹](../publication_sex_init/analysis/mimic/baseline_state/healthflux/clinical_cases.png)
 
@@ -526,7 +526,7 @@ L2 对两场独立参数求和，Jacobian 在相同有效生成状态上对两�
 
 ![图 22：MIMIC HealthFlux-KL：状态分布、原始速度与平均速度](../publication_sex_init/analysis/mimic/baseline_state/healthflux/state_and_velocity.png)
 
-**图 22｜MIMIC HealthFlux-KL：状态分布、原始速度与平均速度。** 左图为测试状态，颜色表示GCS-motor 类别；−1 表示本次记录缺失；中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 52.27% 状态方差和 3.00% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
+**图 22｜MIMIC HealthFlux-KL：状态分布、原始速度与平均速度。** 左图为测试状态，实心点颜色表示GCS-motor 类别编码（0–5）；本次标签缺失的状态用浅灰色空心圆单独标记，不参与色条。中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 52.27% 状态方差和 3.00% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
 
 ![图 23：MIMIC Latent ODE：患者状态和临床轨迹](../publication_sex_init/analysis/mimic/baseline_state/latent_ode/clinical_cases.png)
 
@@ -534,7 +534,7 @@ L2 对两场独立参数求和，Jacobian 在相同有效生成状态上对两�
 
 ![图 24：MIMIC Latent ODE：状态分布、原始速度与平均速度](../publication_sex_init/analysis/mimic/baseline_state/latent_ode/state_and_velocity.png)
 
-**图 24｜MIMIC Latent ODE：状态分布、原始速度与平均速度。** 左图为测试状态，颜色表示GCS-motor 类别；−1 表示本次记录缺失；中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 99.28% 状态方差和 4.81% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
+**图 24｜MIMIC Latent ODE：状态分布、原始速度与平均速度。** 左图为测试状态，实心点颜色表示GCS-motor 类别编码（0–5）；本次标签缺失的状态用浅灰色空心圆单独标记，不参与色条。中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 99.28% 状态方差和 4.81% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
 
 ![图 25：MIMIC 概率 ODE-AE：患者状态和临床轨迹](../publication_sex_init/analysis/mimic/baseline_state/ode_ae/clinical_cases.png)
 
@@ -542,7 +542,7 @@ L2 对两场独立参数求和，Jacobian 在相同有效生成状态上对两�
 
 ![图 26：MIMIC 概率 ODE-AE：状态分布、原始速度与平均速度](../publication_sex_init/analysis/mimic/baseline_state/ode_ae/state_and_velocity.png)
 
-**图 26｜MIMIC 概率 ODE-AE：状态分布、原始速度与平均速度。** 左图为测试状态，颜色表示GCS-motor 类别；−1 表示本次记录缺失；中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 99.82% 状态方差和 99.73% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
+**图 26｜MIMIC 概率 ODE-AE：状态分布、原始速度与平均速度。** 左图为测试状态，实心点颜色表示GCS-motor 类别编码（0–5）；本次标签缺失的状态用浅灰色空心圆单独标记，不参与色条。中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 99.82% 状态方差和 99.73% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
 
 ![图 27：MIMIC ODE-RNN：患者状态和临床轨迹](../publication_sex_init/analysis/mimic/baseline_state/ode_rnn/clinical_cases.png)
 
@@ -550,11 +550,11 @@ L2 对两场独立参数求和，Jacobian 在相同有效生成状态上对两�
 
 ![图 28：MIMIC ODE-RNN：状态分布、原始速度与平均速度](../publication_sex_init/analysis/mimic/baseline_state/ode_rnn/state_and_velocity.png)
 
-**图 28｜MIMIC ODE-RNN：状态分布、原始速度与平均速度。** 左图为测试状态，颜色表示GCS-motor 类别；−1 表示本次记录缺失；中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 45.92% 状态方差和 36.27% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
+**图 28｜MIMIC ODE-RNN：状态分布、原始速度与平均速度。** 左图为测试状态，实心点颜色表示GCS-motor 类别编码（0–5）；本次标签缺失的状态用浅灰色空心圆单独标记，不参与色条。中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 45.92% 状态方差和 36.27% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
 
 ![图 29：MIMIC M0：状态分布、原始速度与平均速度](../publication_sex_init/analysis/mimic/state/state_and_velocity.png)
 
-**图 29｜MIMIC M0：状态分布、原始速度与平均速度。** 左图为测试状态，颜色表示GCS-motor 类别；−1 表示本次记录缺失；中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 37.88% 状态方差和 1.41% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
+**图 29｜MIMIC M0：状态分布、原始速度与平均速度。** 左图为测试状态，实心点颜色表示GCS-motor 类别编码（0–5）；本次标签缺失的状态用浅灰色空心圆单独标记，不参与色条。中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。三个面板沿用该模型训练 PCA，保留 37.88% 状态方差和 1.41% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。
 
 <!-- /publication-figures -->
 
@@ -831,7 +831,7 @@ ADNI 主要临床指标为 MMSE、补充 CDR-SB；MIMIC 主要连续指标为心
 
 ![图 49：ADNI 连续疾病阶段评分](../publication_sex_init/analysis/adni/stage/continuous_stage_space.png)
 
-**图 49｜ADNI 连续疾病阶段评分。** 颜色为已有诊断头得到的 s=p(MCI)+2p(Dementia)，范围 0–2，坐标沿用主模型训练 PCA。患者末次状态阶段评分与当前诊断的 Spearman 相关为 0.937936，体现连续诊断结构；未来转化的区分能力另见表 24。
+**图 49｜ADNI 连续疾病阶段评分。** 左图按真实诊断着色，本次诊断缺失的状态用浅灰色空心圆标记；中图颜色为已有诊断头得到的 s=p(MCI)+2p(Dementia)，范围 0–2；右图为瞬时阶段变化率，坐标沿用主模型训练 PCA。患者末次状态阶段评分与当前诊断的 Spearman 相关为 0.937936，体现连续诊断结构；未来转化的区分能力另见表 24。
 
 ![图 50：ADNI MCI 转化预测 PR](../publication_sex_init/analysis/adni/stage/conversion_precision_recall.png)
 
@@ -1084,13 +1084,14 @@ D-JAC 依赖 A-J0；D-STABILITY 的 α=1 比较等待 X-ALPHA 对应组，M0 诊
 
 机器可读入口：[任务、依赖和可复用数值来源](no_weak_prior_rerun_plan.json)。
 
+
 <!-- publication-caption -->
 本轮 89 项作业现已全部完成，failed=0。此前失败的两项 Jacobian 效用分析和一项 MIMIC 稳定性分析，已在物理 GPU 0、1、2 补跑，参数更新次数为零。详见 [修复与数值核验](../publication_sex_init/REPAIR.zh-CN.md)、[图表与产物检查](../publication_sex_init/validation.json)。权重与大型中间状态缓存保留本地。
 <!-- /publication-caption -->
 
 ## 七、实时执行进度
 
-更新时间（UTC）：2026-11-08T06:29:40.965248+00:00。控制器状态：complete。
+更新时间（UTC）：2026-11-08T07:12:11.455681+00:00。控制器状态：complete。
 
 旧 GPU 作业已中断，本轮独立目录保留配置、CUDA 预检、完整恢复状态和 SwanLab。下表展示实际进度；测试指标在完整评测后写入前文。
 

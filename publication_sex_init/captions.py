@@ -86,8 +86,8 @@ def figure_details(image, out):
         if name=='state_and_velocity':
             stat=read(image.parent/'statistics.json')
             state=100*stat.get('state_variance_retained_2d',0);speed=100*stat.get('velocity_energy_retained_2d',0)
-            labels='CN=0、MCI=1、Dementia=2；−1 表示本次诊断缺失' if dataset=='ADNI' else 'GCS-motor 类别；−1 表示本次记录缺失'
-            desc=(f'左图为测试状态，颜色表示{labels}；中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。'
+            labels='CN、MCI、Dementia 诊断' if dataset=='ADNI' else 'GCS-motor 类别编码（0–5）'
+            desc=(f'左图为测试状态，实心点颜色表示{labels}；本次标签缺失的状态用浅灰色空心圆单独标记，不参与色条。中图是各状态未经邻域平滑的速度投影，颜色表示投影速度大小；右图为训练邻域平均速度及测试位置。'
                   f'三个面板沿用该模型训练 PCA，保留 {state:.2f}% 状态方差和 {speed:.2f}% 速度能量。不同模型各用自己的 PCA，坐标数值不直接对齐。')
             if dataset=='ADNI' and key=='main':
                 desc+=' 测试状态沿 PC1 呈现从 CN 到 Dementia 的顺序，右侧的投影运动整体更快。'
@@ -109,7 +109,7 @@ def figure_details(image, out):
       'dementia_mechanism_vs_decline':('4.3','Dementia 下降幅度与动力学因素', '各面板将真实下降与潜在速度、Decoder 梯度及方向投影联系起来，单位由图内坐标标明。快速下降区间的真实 MMSE 年变化为 −8.795925，模型为 −2.531310；较大的潜在速度尚不足以覆盖这些极端变化。'),
       'mechanism_by_diagnosis':('4.3','三类诊断的 MMSE 速度分解', '按 CN、MCI、Dementia 分组比较速度范数、MMSE 梯度范数、夹角余弦与临床变化率。表 18 中 Dementia 三个因素共同指向更快的 MMSE 下降，仍存在约 0.382 分/年的平均偏慢。三个因素的均值分别报告，均值乘积不等于临床速度均值。'),
       'mechanism_state_space':('4.3','MMSE 速度分解在状态空间中的分布', '每个面板在相同训练 PCA 位置显示一个链式导数因素或最终 MMSE 速度。读图时将速度大小、Decoder 敏感性和方向共同考虑，临床变化率由三者逐状态相乘得到；表 18 提供诊断组定量比较。'),
-      'continuous_stage_space':('4.7','连续疾病阶段评分', '颜色为已有诊断头得到的 s=p(MCI)+2p(Dementia)，范围 0–2，坐标沿用主模型训练 PCA。患者末次状态阶段评分与当前诊断的 Spearman 相关为 0.937936，体现连续诊断结构；未来转化的区分能力另见表 24。'),
+      'continuous_stage_space':('4.7','连续疾病阶段评分', '左图按真实诊断着色，本次诊断缺失的状态用浅灰色空心圆标记；中图颜色为已有诊断头得到的 s=p(MCI)+2p(Dementia)，范围 0–2；右图为瞬时阶段变化率，坐标沿用主模型训练 PCA。患者末次状态阶段评分与当前诊断的 Spearman 相关为 0.937936，体现连续诊断结构；未来转化的区分能力另见表 24。'),
       'progression_velocity_field':('4.7','连续阶段的瞬时进展速度', '箭头为 ODE 在固定 PCA 上的投影，颜色按图中标尺表示 ṡ=∇sᵀf 或阶段评分。正速度表示阶段评分上升，负速度表示下降。测试 UPDATE 状态中，CN、MCI、Dementia 的正速度比例约为 91.3%、70.9%、95.4%；自由推演不执行未来 UPDATE。'),
       'mci_stage_evolution':('4.7','稳定与转化 MCI 的阶段演化', '三列按真实 12/24/36 个月转化分组，上排为预测平均 s(t)，下排为相对起点的增量；红色为转化组、蓝色为稳定组，阴影为患者均值的 95% bootstrap 区间，竖线标出评价窗口。两组都沿 ODE 上升，转化组的增量更大。真实随访只用于分组。'),
       'conversion_roc':('4.7','MCI 转化预测 ROC', '横轴是假阳性率，纵轴是真阳性率；各面板对应 12/24/36 个月，比较当前评分、瞬时速度、阶段增量与未来 Dementia 概率。后者在 24、36 个月分别达到 AUROC 0.818940、0.813660，高于当前评分。图例数值与表 24 对应。'),

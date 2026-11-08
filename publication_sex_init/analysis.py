@@ -137,7 +137,7 @@ def state_extract(cfg):
     finish(cfg,states=len(z))
 
 
-def plot_state(out,arrays,metadata,stats,dataset):
+def plot_state(out,arrays,metadata,stats,dataset,field=None):
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -146,23 +146,38 @@ def plot_state(out,arrays,metadata,stats,dataset):
     if dataset=="mimic":
         labels=np.array([r["gcs_motor"] if r["gcs_motor"] is not None else -1 for r in metadata])[test]
     fig,axes=plt.subplots(1,3,figsize=(17,5))
-    im=axes[0].scatter(*x.T,c=labels,cmap="viridis",s=7,alpha=.5);fig.colorbar(im,ax=axes[0],label="Diagnosis" if dataset=="adni" else "GCS motor")
+    known=np.isfinite(labels)&(labels>=0)
+    if (~known).any():
+        axes[0].scatter(*x[~known].T,marker='o',facecolors='none',edgecolors='#d0d0d0',
+                        linewidths=.6,s=12,alpha=.8,label=f'Not recorded (n={(~known).sum()})')
+        axes[0].legend(fontsize=8,frameon=False)
+    im=axes[0].scatter(*x[known].T,c=labels[known],cmap="viridis",s=7,alpha=.5,
+                       vmin=0,vmax=2 if dataset=='adni' else 5)
+    colorbar=fig.colorbar(im,ax=axes[0],label="Diagnosis" if dataset=="adni" else "GCS motor (class)")
+    if dataset=='adni':
+        colorbar.set_ticks([0,1,2],labels=['CN','MCI','Dementia'])
+    else:
+        colorbar.set_ticks(range(6))
     pick=np.arange(0,len(x),max(1,len(x)//1200))
     q=axes[1].quiver(*x[pick].T,*v[pick].T,np.linalg.norm(v[pick],axis=1),cmap="plasma",angles="xy",scale_units="xy")
     fig.colorbar(q,ax=axes[1],label="Projected speed")
-    from paper_odeae.diagnostics.state_space import local_field
-    train=np.array([r["split"]=="train" for r in metadata])
-    trainlabels=torch.tensor([-1 if r["diagnosis"] is None else int(r["diagnosis"]) for r in metadata],device="cuda")
-    field=local_field(torch.tensor(arrays["coordinates"][train],device="cuda"),
-                      torch.tensor(arrays["projected_velocities"][train],device="cuda"),trainlabels[torch.tensor(train,device="cuda")])
-    mask=field["supported"];grid=field["grid"][mask].cpu().numpy();vv=field["velocity"][mask].cpu().numpy()
+    reuse_field=field is not None
+    if field is None:
+        from paper_odeae.diagnostics.state_space import local_field
+        train=np.array([r["split"]=="train" for r in metadata])
+        trainlabels=torch.tensor([-1 if r["diagnosis"] is None else int(r["diagnosis"]) for r in metadata],device="cuda")
+        field=local_field(torch.tensor(arrays["coordinates"][train],device="cuda"),
+                          torch.tensor(arrays["projected_velocities"][train],device="cuda"),trainlabels[torch.tensor(train,device="cuda")])
+    to_numpy=lambda value:value.detach().cpu().numpy() if torch.is_tensor(value) else np.asarray(value)
+    mask=to_numpy(field["supported"]);grid=to_numpy(field["grid"])[mask];vv=to_numpy(field["velocity"])[mask]
     axes[2].scatter(*x.T,c="#aaa",s=2,alpha=.2)
     if len(grid):
         axes[2].quiver(*grid.T,*vv.T,angles="xy",scale_units="xy")
     for ax,title in zip(axes,["Test states","Raw per-state velocities","Training-neighborhood average"]):
         ax.set(xlabel="Training state PC1",ylabel="Training state PC2",title=title)
     fig.tight_layout();fig.savefig(out/"state_and_velocity.png",dpi=180);plt.close(fig)
-    np.savez_compressed(out/"projected_field.npz",**{k:x.cpu().numpy() if torch.is_tensor(x) else x for k,x in field.items()})
+    if not reuse_field:
+        np.savez_compressed(out/"projected_field.npz",**{k:to_numpy(x) for k,x in field.items()})
 
 
 @torch.no_grad()
